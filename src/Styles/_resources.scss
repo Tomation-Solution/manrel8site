@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+$background: #fff;
+$backgroundl: #f4f4f4;
+$textcolor1: #000;
+$textcolor2: #fb8122;
+$textcolor3: #000;
+$mobile-1: 1100px;
+$mobile-2: 700px;
+$mobile-3: 500px;
+$mobile-4: 360px;
+$mobile-5: 650px;
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin mobile-1 {
+  @media (max-width: $mobile-1) {
+    @content;
+  }
+}
+@mixin mobile-2 {
+  @media (max-width: $mobile-2) {
+    @content;
+  }
+}
+@mixin mobile-3 {
+  @media (max-width: $mobile-3) {
+    @content;
+  }
+}
+@mixin mobile-4 {
+  @media (max-width: $mobile-4) {
+    @content;
+  }
+}
+@mixin mobile-5 {
+  @media (min-height: $mobile-5) {
+    @content;
+  }
+}

@@ -10,23 +10,19 @@ import Section from '../../Component/About/Section/Index'
 import Wall from '../../Component/About/Wall/Index'
 import Footer from '../../Component/About/Footer/Index'
 
-
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
-
-    <div>
-      <UIProvider>
-        
-      <Appbar/>
-      <Banner/>
-      <Section/>
-      <Article/>
-      <Wall/>
-      <Footer/>
-      </UIProvider>
-    </div>
+      <div>
+        <UIProvider>
+          <Appbar />
+          <Banner />
+          <Section />
+          <Article />
+          <Wall />
+          <Footer />
+        </UIProvider>
+      </div>
     </ThemeProvider>
   )
 }
