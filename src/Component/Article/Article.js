@@ -1,69 +1,37 @@
 import React from 'react'
-import { Box, Divider, Typography } from '@mui/material'
-import { ArticleItemContainer, ArticleImg, ArticleContainer, MyButton, ArticleTitle, ArticleDescription } from '../../Styles/Article'
-import Articleimage from '../../images/Rectangle.png'
-import { Colors } from '../../Styles/theme/Theme'
-function Article () {
-  return (
-    <Box sx={{display:'flex', padding:'72px 72px 0px 82px', gap:'20px',   }}>
-        <ArticleContainer>
-          <ArticleImg src={Articleimage}/>
-        </ArticleContainer>
-        <ArticleContainer sx={{ paddingTop:'50px', width:'373px',  backgroundcolor:Colors.primary}}>
-          <Typography sx={{color:Colors.black, marginTop:'27px', marginLeft:'15px',}}>News</Typography>
+import './Article.scss'
+import Articleimage from '../../images/div8.png'
+import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 
-          <ArticleItemContainer>
-            <MyButton>
-              Publication
-            </MyButton>
-            <ArticleTitle sx={{color:Colors.black}}>
-            Manufacturing Outlook Q4 2022
-            </ArticleTitle>
-            <ArticleDescription>
-            January 03, 2023
-            </ArticleDescription>
-            <Divider></Divider>
-          </ArticleItemContainer>
-          <ArticleItemContainer>
-            <MyButton>
-              Publication
-            </MyButton>
-            <ArticleTitle sx={{color:Colors.black}}>
-            Manufacturing Outlook Q4 2022
-            </ArticleTitle>
-            <ArticleDescription>
-            January 03, 2023
-            </ArticleDescription>
-            <Divider></Divider>
-          </ArticleItemContainer>
-          <ArticleItemContainer>
-            <MyButton>
-              Publication
-            </MyButton>
-            <ArticleTitle sx={{color:Colors.black}}>
-            Manufacturing Outlook Q4 2022
-            </ArticleTitle>
-            <ArticleDescription>
-            January 03, 2023
-            </ArticleDescription>
-            <Divider></Divider>
-          </ArticleItemContainer>
-          <ArticleItemContainer>
-            <MyButton>
-              Publication
-            </MyButton>
-            <ArticleTitle sx={{color:Colors.black}}>
-            Manufacturing Outlook Q4 2022
-            </ArticleTitle>
-            <ArticleDescription>
-            January 03, 2023
-            </ArticleDescription>
-            <Divider></Divider>
-          </ArticleItemContainer>
-          <Typography>VIEW ALL</Typography>
-        </ArticleContainer>
-    </Box> 
-    )
+function Article() {
+  return (
+    <div className='article'>
+      <div className='news_main'>
+        <div className='cover'>
+          <div className='left'>
+            <img src={Articleimage} alt='' />
+          </div>
+          <div className='right'>
+            <div className='top'>
+              <h2>News</h2>
+            </div>
+            <div className='wrap'>
+              {[...Array(4)].map((item, i) => (
+                <div className='card' key={1 + i}>
+                  <button>Publication</button>
+                  <div className='flex'>
+                    <h3>Manufacturing Outlook Q4 2022</h3>
+                    <OpenInNewIcon />
+                  </div>
+                  <p>January 03, 2023</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Article

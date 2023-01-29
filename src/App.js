@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div>
         <UIProvider>
-         <NavBar location='/' />
+          <NavBar location='home' />
           <Banner />
           <Section />
           <InfoBoard />

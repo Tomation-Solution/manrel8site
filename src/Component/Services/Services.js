@@ -3,8 +3,8 @@ import { ThemeProvider } from '@emotion/react'
 import theme from '../../Styles/theme/Theme'
 import { UIProvider } from '../../Ui'
 import NavBar from '../NavBar/NavBar'
-import Footer from '../About/Footer/Index'
-import Wall from '../About/Wall/Index'
+import Footer from '../Footer/Footer'
+import Wall from '../Wall/Wall'
 import './Services.scss'
 
 function Services() {

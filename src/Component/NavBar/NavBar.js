@@ -36,7 +36,10 @@ function NavBar({ location }) {
         </div>
         <div className='nav-list'>
           <div className='nav-row'>
-            <Link className='list' to='/'>
+            <Link
+              className={location === 'about' ? 'list active' : 'list'}
+              to='/about'
+            >
               About Me
             </Link>
             <Link
@@ -45,7 +48,7 @@ function NavBar({ location }) {
             >
               Services
             </Link>
-            <Link className='list' to='/'>
+            <Link className='list' to='/insight'>
               Insights
             </Link>
             <Link
@@ -61,6 +64,12 @@ function NavBar({ location }) {
               to='/News'
             >
               News
+            </Link>
+            <Link
+              className={location === 'events' ? 'list active' : 'list'}
+              to='/events'
+            >
+              Events
             </Link>
             <Link className='list' to='/'>
               Sector

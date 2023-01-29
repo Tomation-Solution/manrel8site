@@ -23,6 +23,9 @@
         @include mobile-3 {
           font-size: 14px;
         }
+        @include mobile-1 {
+          padding-top: 30px;
+        }
       }
       h1 {
         color: #fff;

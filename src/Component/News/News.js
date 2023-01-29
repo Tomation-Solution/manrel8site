@@ -9,8 +9,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import EmailIcon from '@mui/icons-material/Email'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-import Footer from '../About/Footer/Index'
-import Wall from '../About/Wall/Index'
+import Footer from '../Footer/Footer'
+import Wall from '../Wall/Wall'
 
 function News() {
   return (
