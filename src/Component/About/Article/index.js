@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Divider, Typography } from '@mui/material'
-import { ArticleItemContainer, ArticleImg, ArticleContainer, MyButton, ArticleTitle, ArticleDescription } from '../../../Styles/About/Article'
+import { ArticleItemContainer, ArticleImg, ArticleContainer, MyButton, MyLink, ArticleTitle, ArticleDescription } from '../../../Styles/About/Article'
 import Articleimage from '../../../images/Rectangle.png'
 import { Colors } from '../../../Styles/theme/Theme'
 function Article () {
@@ -20,8 +20,9 @@ function Article () {
             <ArticleDescription>
             January 03, 2023
             </ArticleDescription>
-            <Divider></Divider>
+           
           </ArticleItemContainer>
+          <Divider></Divider>
           <ArticleItemContainer>
             <MyButton>
               Publication
@@ -32,8 +33,9 @@ function Article () {
             <ArticleDescription>
             January 03, 2023
             </ArticleDescription>
-            <Divider></Divider>
+           
           </ArticleItemContainer>
+          <Divider sx={{color: Colors.black , }}></Divider>
           <ArticleItemContainer>
             <MyButton>
               Publication
@@ -44,8 +46,9 @@ function Article () {
             <ArticleDescription>
             January 03, 2023
             </ArticleDescription>
-            <Divider></Divider>
+          
           </ArticleItemContainer>
+          <Divider></Divider>
           <ArticleItemContainer>
             <MyButton>
               Publication
@@ -56,9 +59,10 @@ function Article () {
             <ArticleDescription>
             January 03, 2023
             </ArticleDescription>
-            <Divider></Divider>
+            
           </ArticleItemContainer>
-          <Typography>VIEW ALL</Typography>
+          <Divider ></Divider>
+          <MyLink to='./Insight-more'><Typography >VIEW ALL</Typography></MyLink>
         </ArticleContainer>
         <ArticleContainer>
           <ArticleImg src={Articleimage}/>

@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles"
 import { Colors } from "../theme/Theme"
 import { Box } from "@mui/system";
 import { Button, Typography } from "@mui/material";
-
+import { Link } from "react-router-dom";
 export const ArticleImg = styled('img')(({src, theme})=>({
     src: `url(${src})`,
     width: '776px',
@@ -20,6 +20,13 @@ export const ArticleImg = styled('img')(({src, theme})=>({
  
     }
   }))
+
+  export const MyLink = styled (Link) (()=>({
+    width:100,
+    color: Colors.black,
+    textDecoration: 'none',
+
+}))
 
   export const ArticleContainer = styled(Box)(({ src, theme }) => ({
     [theme.breakpoints.up("md")]: {

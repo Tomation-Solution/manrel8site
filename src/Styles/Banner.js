@@ -13,6 +13,9 @@ export const BannerContainer = styled(Box)(({ matches, theme }) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       alignItems: "center",
+      padding:'0px',
+      textAlign:'center',
+      width:'391px'
     },
      backgroundImage: `url(${bannerimg})`,
      backgroundRepeat: "no-repeat",
@@ -37,10 +40,16 @@ export const BannerTitle = styled(Typography)(({theme})=>({
     marginTop:'105px',
     width:'883px',
     height:213,
-    color: Colors.white,
+    
     [theme.breakpoints.down('sm')]: {
-     fontSize:'2.5rem',
-     marginBottom: '20px'
+     fontSize:'29px',
+     marginBottom: '20px',
+     width:'331px',
+     height:'132px',
+     textAlign:'center',
+     marginTop:'26px',
+     lineHeight:'33px',
+     
     },
     
  }))
@@ -53,9 +62,11 @@ export const BannerTitle = styled(Typography)(({theme})=>({
     width:'988px',
     height:125,
     color: Colors.white,
+    display:'block',
     [theme.breakpoints.down('sm')]: {
      fontSize:'2.5rem',
-     marginBottom: '20px'
+     marginBottom: '20px',
+     display:'none',
     },
     
  }))
@@ -102,11 +113,17 @@ export const BannerImageContainer = styled(Box)(({ src, theme }) => ({
     justifyContent: 'left',
     gap:'30px',
     marginBottom:'126px',
+    [theme.breakpoints.down('sm')]: {
+      width: '389px',
+      height:'34px',
+      JustifyContent:'center',
+  
+     }
    
 }))
 
-export const MyButton = styled (Button)(() => ({
-    width: '174px',
+export const MyButton = styled (Button)(({theme}) => ({
+    
     color: Colors.black,
     textDecoration: 'none',
     padding: '8px 16px 8px 16px',
@@ -115,9 +132,11 @@ export const MyButton = styled (Button)(() => ({
     borderRadius: 500,
     fontSize: 16,
     border: '1px solid #000',
-    fontSize:'14px',
-    padding: '16px 20px',
     
+    padding: '16px 20px',
+    [theme.breakpoints.down('sm')]: {
+     fontSize:'11px',
+     }
 
  }));
 

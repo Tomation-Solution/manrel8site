@@ -14,13 +14,14 @@ import InfoBoard from './Component/InfoBoard/InfoBorad'
 import Article from './Component/Article/Article'
 import Wall from './Component/Wall/Wall'
 import Footer from './Component/Footer/Footer'
+import NavBar from './Component/NavBar/NavBar'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div>
         <UIProvider>
-          <Appbar />
+         <NavBar location='/' />
           <Banner />
           <Section />
           <InfoBoard />
