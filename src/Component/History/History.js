@@ -164,7 +164,7 @@ function History() {
                   </div>
                 </div>
                 <Swiper
-                  spaceBetween={50}
+                  spaceBetween={20}
                   slidesPerView={1}
                   onSlideChange={() => console.log('slide change')}
                   onSwiper={(swiper) => console.log(swiper)}
