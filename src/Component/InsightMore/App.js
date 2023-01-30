@@ -2,11 +2,11 @@ import { Button } from '@mui/material'
 import { ThemeProvider } from '@mui/system'
 import React from 'react'
 import Appbar from '../../Component'
-import Banner from '../../Component/Insights/Banner/Banner'
+// import Banner from '../../Component/Insights/Banner/Banner'
 import { UIProvider } from '../../Ui'
-import Article from '../../Component/InsightMore/Index'
+// import Article from '../../Component/InsightMore/Index'
 import theme from '../../Styles/theme/Theme'
-import Section from '../../Component/Insights/Section/Index'
+// import Section from '../../Component/Insights/Section/Index'
 // import Wall from '../../Component/About/Wall/Index'
 // import Footer from '../../Component/About/Footer/Index'
 
@@ -16,8 +16,8 @@ function App() {
       <div>
         <UIProvider>
           <Appbar />
-          <Banner />
-          <Article />
+          {/* <Banner />
+          <Article /> */}
           {/* <Wall/>
       <Footer/> */}
         </UIProvider>
