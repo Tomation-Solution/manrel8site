@@ -91,7 +91,7 @@ function Events() {
             </ul>
           </div>
           <div className='secwtap'>
-            {[...Array(49)].map((item) => (
+            {[...Array(45)].map((item) => (
               <div className='card'>
                 <img src={Image} alt='' />
                 <p className=''>March 15th, 2022 - 08:30 </p>

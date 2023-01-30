@@ -23,6 +23,7 @@ function App() {
         'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
       linkHead: 'Proccee to see Pubications',
     },
+
     {
       image: Image2,
       title: 'Information Bank',
@@ -49,6 +50,13 @@ function App() {
       title: 'Gallery',
       description: 'ABAs flagship magazine.',
       linkHead: 'Proceed to see Gallery',
+    },
+    {
+      image: Image1,
+      title: 'PublicationX',
+      description:
+        'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
+      linkHead: 'Proccee to see Pubications',
     },
   ]
   return (
