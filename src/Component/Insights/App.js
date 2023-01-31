@@ -13,8 +13,10 @@ import Image3 from '../../images/div-9.png'
 import Image4 from '../../images/div-10.png'
 import Image5 from '../../images/div-11.png'
 import './Insight.scss'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
+  const navigate = useNavigate()
   const AboutList = [
     {
       image: Image1,
@@ -36,7 +38,7 @@ function App() {
       title: 'Events',
       description:
         'Materials to support you in your daily work, including reference materials and ABA custom guides for a variety of issues.​​​​​​​​​​​',
-      linkHead: 'Listen Now',
+      linkHead: 'See more',
     },
     {
       image: Image4,
@@ -109,7 +111,11 @@ function App() {
                     {item.title === 'Vision' ? (
                       ''
                     ) : (
-                      <h3>
+                      <h3
+                        onClick={() =>
+                          item.title === 'Events' && navigate('/events')
+                        }
+                      >
                         {item.linkHead} {'>'}
                       </h3>
                     )}

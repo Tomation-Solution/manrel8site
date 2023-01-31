@@ -21,7 +21,7 @@ export const FooterItemsContainer = styled(Box)(({ matches, theme }) => ({
   alignContent: 'left',
   height: '100%',
   padding: '0px 0px',
-  width: '50%',
+  width: '23%',
 
   [theme.breakpoints.down('md')]: {
     width: '100%',

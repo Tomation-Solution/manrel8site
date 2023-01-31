@@ -32,9 +32,7 @@ function LatestMembers() {
                 <li>Existing Members</li>
               </Link>
               <Link to='/new-membership'>
-                <li>
-                  <li>New Members</li>
-                </li>
+                <li className='active'>New Members</li>
               </Link>
             </ul>
           </div>

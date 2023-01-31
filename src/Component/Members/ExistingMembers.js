@@ -58,12 +58,10 @@ function ExistingMembers() {
                 <li>Become A Member</li>
               </Link>
               <Link to='/existing-membership'>
-                <li>Existing Members</li>
+                <li className='active'>Existing Members</li>
               </Link>
               <Link to='/new-membership'>
-                <li>
-                  <li>New Members</li>
-                </li>
+                <li>New Members</li>
               </Link>
             </ul>
           </div>

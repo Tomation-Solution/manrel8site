@@ -4,9 +4,7 @@ import { Box } from '@mui/system'
 import { Button, Typography } from '@mui/material'
 
 export const InfoTitle = styled(Typography)(({ theme }) => ({
-  lineHeight: '71px',
   fontSize: '24px',
-  marginBottom: '32px',
   textAlign: 'center',
   color: Colors.white,
   [theme.breakpoints.down('sm')]: {

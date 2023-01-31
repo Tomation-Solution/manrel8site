@@ -24,7 +24,7 @@ function InfoBoard() {
         width: '100%',
         marginLeft: 0,
         marginRight: 0,
-        padding: 0,
+        padding: '50px 0',
       }}
     >
       <InfoTitle>Why our member love us</InfoTitle>

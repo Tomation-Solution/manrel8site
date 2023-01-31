@@ -199,16 +199,16 @@
       }
       .buttons {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         button {
-          padding: 6px 15px;
+          padding: 6px 20px;
           background: #717861;
           border-radius: 5px;
           border: 1px solid #717861;
           color: #fff;
           cursor: pointer;
+          margin-right: 10px;
           &.light {
             background: none;
             color: #717861;

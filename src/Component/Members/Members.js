@@ -26,15 +26,13 @@ function Members() {
           <div className='members_tab'>
             <ul>
               <Link to='/become-membership'>
-                <li>Become A Member</li>
+                <li className='active'>Become A Member</li>
               </Link>
               <Link to='/existing-membership'>
                 <li>Existing Members</li>
               </Link>
               <Link to='/new-membership'>
-                <li>
-                  <li>New Members</li>
-                </li>
+                <li>New Members</li>
               </Link>
             </ul>
           </div>

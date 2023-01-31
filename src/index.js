@@ -14,9 +14,11 @@ import Services from './Component/Services/Services'
 import InsightMore from './Component/InsightMore/App'
 import Events from './Component/Events/Events'
 import History from './Component/History/History'
+import ScrollToTop from './Scroll'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route path='/' element={<App />} />
       <Route path='About' element={<About />} />

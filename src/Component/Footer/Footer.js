@@ -7,10 +7,13 @@ import {
   MyButton,
 } from '../../Styles/Footer'
 import logoICon from '../../images/manlogo2.png'
+import theme from '../../Styles/theme/Theme'
 function Footer() {
   return (
     <FooterContainer>
-      <FooterItemsContainer>
+      <FooterItemsContainer
+        sx={{ width: '40%', [theme.breakpoints.down('md')]: { width: '100%' } }}
+      >
         <FooterImg src={logoICon} />
         <FooterDescription>
           01-4542700, 01-4542701 info@manufacturersnigeria.org
@@ -25,6 +28,8 @@ function Footer() {
         <FooterDescription>Sitemap</FooterDescription>
         <FooterDescription>Privacy Notice</FooterDescription>
         <FooterDescription>Modern Slavery Statement</FooterDescription>
+      </FooterItemsContainer>
+      <FooterItemsContainer>
         <FooterDescription>Terms & Conditions</FooterDescription>
         <FooterDescription>Website help</FooterDescription>
         <footerDescription>Webmail Login</footerDescription>

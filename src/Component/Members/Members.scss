@@ -58,6 +58,9 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      a {
+        text-decoration: none;
+      }
       li {
         list-style: none;
         color: #2b3513;
@@ -66,6 +69,12 @@
         line-height: 33px;
         font-weight: 500;
         padding-bottom: 10px;
+        &:hover {
+          color: #637a2e;
+        }
+        &.active {
+          color: #637a2e;
+        }
       }
     }
   }
