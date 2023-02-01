@@ -77,7 +77,7 @@ function NavBar({ location }) {
             <Link className='list' to='/'>
               Sign In
             </Link>
-            <Link className='list' to='/'>
+            <Link className='list' to='/become-membership'>
               <button>Become a Member</button>
             </Link>
           </div>

@@ -13,10 +13,9 @@ import Image3 from '../../images/div-9.png'
 import Image4 from '../../images/div-10.png'
 import Image5 from '../../images/div-11.png'
 import './Insight.scss'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function App() {
-  const navigate = useNavigate()
   const AboutList = [
     {
       image: Image1,
@@ -24,6 +23,7 @@ function App() {
       description:
         'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
       linkHead: 'Proccee to see Pubications',
+      location: 'news',
     },
 
     {
@@ -39,6 +39,7 @@ function App() {
       description:
         'Materials to support you in your daily work, including reference materials and ABA custom guides for a variety of issues.​​​​​​​​​​​',
       linkHead: 'See more',
+      location: 'events',
     },
     {
       image: Image4,
@@ -92,7 +93,12 @@ function App() {
                   ))}
                 </div>
                 <div className='bto'>
-                  <h3>View all {'>'}</h3>
+                  <Link
+                    to={'/insight-more'}
+                    style={{ textDecoration: 'none', color: '#2b3513' }}
+                  >
+                    <h3>View all {'>'}</h3>
+                  </Link>
                 </div>
               </div>
               <div className='left'>
@@ -111,13 +117,20 @@ function App() {
                     {item.title === 'Vision' ? (
                       ''
                     ) : (
-                      <h3
-                        onClick={() =>
-                          item.title === 'Events' && navigate('/events')
-                        }
-                      >
-                        {item.linkHead} {'>'}
-                      </h3>
+                      <>
+                        {' '}
+                        {Object.keys(item).includes('location') ? (
+                          <Link to={`/${item.location}`}>
+                            <h3>
+                              {item.linkHead} {'>'}
+                            </h3>
+                          </Link>
+                        ) : (
+                          <h3>
+                            {item.linkHead} {'>'}
+                          </h3>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>

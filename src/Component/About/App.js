@@ -14,6 +14,7 @@ import Image6 from '../../images/div-5.png'
 import Articleimage from '../../images/div8.png'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import './About.scss'
+import { Link } from 'react-router-dom'
 
 function App() {
   const AboutList = [
@@ -23,6 +24,7 @@ function App() {
       description:
         'A prospective member of MAN must be a manufacturer and have a manufacturing plant in Nigeria.Please view the Membership Requirement and confirm you are eligible.',
       linkHead: 'Explore benefits and join',
+      location: 'become-membership',
     },
     {
       image: Image2,
@@ -30,6 +32,7 @@ function App() {
       description:
         'The establishment of the Manufacturers Association of Nigeria was to provide a platform for the private sector to formulate and articulate policy suggestions that would be complementary to governments efforts at policy formulation.',
       linkHead: 'Learn the MAN Story',
+      location: 'history',
     },
     {
       image: Image3,
@@ -88,9 +91,19 @@ function App() {
                     {item.title === 'Vision' ? (
                       ''
                     ) : (
-                      <h3>
-                        {item.linkHead} {'>'}
-                      </h3>
+                      <>
+                        {Object.keys(item).includes('location') ? (
+                          <Link to={`/${item.location}`}>
+                            <h3>
+                              {item.linkHead} {'>'}
+                            </h3>
+                          </Link>
+                        ) : (
+                          <h3>
+                            {item.linkHead} {'>'}
+                          </h3>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
