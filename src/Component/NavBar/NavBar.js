@@ -40,7 +40,7 @@ function NavBar({ location }) {
               className={location === 'about' ? 'list active' : 'list'}
               to='/about'
             >
-              About Me
+              About 
             </Link>
             <Link
               className={location === 'services' ? 'list active' : 'list'}

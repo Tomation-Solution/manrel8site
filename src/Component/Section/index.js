@@ -7,6 +7,7 @@ import sectionpic2 from '../../images/div7.png'
 import iconimg from '../../images/technology-light.svg.png'
 import iconimg2 from '../../images/reports-light.png.png'
 import theme from '../../Styles/theme/Theme'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   MyButton,
   SectionDescription,
@@ -14,6 +15,7 @@ import {
   SectionItemContainer,
   SectionTitle,
   SectionMember,
+  
 } from '../../Styles/Section'
 function Section() {
   return (
@@ -120,7 +122,7 @@ function Section() {
               },
             }}
           >
-            <MyButton sx={{ color: Colors.white }}>Read More</MyButton>
+            <Link to='/history'><MyButton sx={{ color: Colors.white }}>Read More</MyButton></Link>
             <SectionImg src={iconimg2} sx={{ width: 116, height: 118 }} />
           </Container>
         </SectionItemContainer>
@@ -135,7 +137,7 @@ function Section() {
               manufacturing plant in Nigeria. Please view the Membership
               Requirement and confirm you are eligible.
             </SectionDescription>
-            <SectionMember> BECOME A MEMBER {'> '}</SectionMember>
+            <Link to='/become-membership' sx={{textDecoration:'none'}}><SectionMember> BECOME A MEMBER {'> '}</SectionMember></Link>
           </div>
         </SectionItemContainer>
       </Grid>

@@ -15,6 +15,7 @@ import Articleimage from '../../images/div8.png'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import './About.scss'
 import { Link } from 'react-router-dom'
+import { MyLink } from '../../Styles/Appbar'
 
 function App() {
   const AboutList = [
@@ -32,13 +33,14 @@ function App() {
       description:
         'The establishment of the Manufacturers Association of Nigeria was to provide a platform for the private sector to formulate and articulate policy suggestions that would be complementary to governments efforts at policy formulation.',
       linkHead: 'Learn the MAN Story',
-      location: 'history',
+      location: 'History',
     },
     {
       image: Image3,
       title: 'Vision',
       description:
         '“To be the key driver for Industrialization, sustainable Economic Growth and Development in Nigeria”',
+        
     },
     {
       image: Image4,
@@ -46,6 +48,7 @@ function App() {
       description:
         'MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector,',
       linkHead: 'Our Mission Statement',
+      location: 'History',
     },
     {
       image: Image5,
@@ -53,6 +56,7 @@ function App() {
       description:
         'Provide for manufacturers all over Nigeria the means of formulating, making known and influencing general policy in regard to industrial, labour, social, legal, training, and technical matters;',
       linkHead: 'Our Objectives',
+      location: 'History',
     },
     {
       image: Image6,
@@ -60,6 +64,7 @@ function App() {
       description:
         'The Executive Committee is a group of experienced professionals duly elected by MAN members and entrusted with the obligation to conduct the affairs of the Association according to its constitution',
       linkHead: 'Meet Out People',
+      location: 'History',
     },
   ]
   return (
@@ -129,7 +134,9 @@ function App() {
                   ))}
                 </div>
                 <div className='bto'>
+                  <MyLink to='/Insight-more' sx>
                   <h3>View all {'>'}</h3>
+                  </MyLink>
                 </div>
               </div>
               <div className='left'>

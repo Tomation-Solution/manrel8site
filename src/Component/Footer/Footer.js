@@ -8,6 +8,7 @@ import {
 } from '../../Styles/Footer'
 import logoICon from '../../images/manlogo2.png'
 import theme from '../../Styles/theme/Theme'
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <FooterContainer>
@@ -16,13 +17,13 @@ function Footer() {
       >
         <FooterImg src={logoICon} />
         <FooterDescription>
-          01-4542700, 01-4542701 info@manufacturersnigeria.org
+          01-4542700, 01-4542701 
         </FooterDescription>
         <FooterDescription>
-          77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria{' '}
+        info@manufacturersnigeria.org
         </FooterDescription>
-        <FooterDescription> vad lvl kido sggt sfg</FooterDescription>
-        <MyButton>REQUEST MAN SERVICES</MyButton>
+        <FooterDescription> 77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria{' '}</FooterDescription>
+        <Link to='/Services'><MyButton>REQUEST MAN SERVICES</MyButton></Link>
       </FooterItemsContainer>
       <FooterItemsContainer>
         <FooterDescription>Sitemap</FooterDescription>

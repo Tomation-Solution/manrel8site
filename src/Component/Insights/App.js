@@ -32,6 +32,7 @@ function App() {
       description:
         'Keep current on trends in banking and the issues affecting our industry, with email bulletins for ABA members tailored to your interests.',
       linkHead: 'Proceed to see Information Bank',
+      location: 'Insight-more',
     },
     {
       image: Image3,
@@ -47,19 +48,22 @@ function App() {
       description:
         'MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector,',
       linkHead: 'Proceed to see Reports',
+      location: 'Insight-more',
     },
     {
       image: Image5,
       title: 'Gallery',
       description: 'ABAs flagship magazine.',
       linkHead: 'Proceed to see Gallery',
+      location:'Gallery'
     },
     {
       image: Image1,
       title: 'PublicationX',
       description:
         'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
-      linkHead: 'Proccee to see Pubications',
+      linkHead: 'Procceed to see Pubications',
+      location: 'Insight-more',
     },
   ]
   return (

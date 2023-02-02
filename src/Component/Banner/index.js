@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   BannerButtonContainer,
   BannerContainer,
@@ -31,6 +32,8 @@ function Banner() {
           holding you back, MAN is here to help.
         </BannerDescription>
         <BannerButtonContainer>
+        <Link to='/become-membership'>
+
           <MyButton
             sx={{
               backgroundColor: Colors.primary,
@@ -39,6 +42,7 @@ function Banner() {
           >
             Become a Member
           </MyButton>
+          </Link>
           <MyButton
             sx={{
               color: Colors.white,
