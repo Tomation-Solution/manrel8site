@@ -38,26 +38,72 @@ function Members() {
           </div>
           <div className='new_member'>
             <div className='left'>
-              <h2>Membership Benefits</h2>
-              <p className=''>
-                Deriving from the set objectives of its establishment and
-                services rendered, MAN provides many benefits to its members,
-                which include:
-              </p>
-              <ul>
-                <li> CREDIBILITY AS MANUFACTURER</li>
-                <li> CAPACITY BUILDING FOR MEMBERS</li>
-                <li>
-                  RECOGNITION BY GOVERNMENT AGENCIES AND BUSINESS COMMUNITY
-                </li>
-                <li>
-                  PUBLIC POLICY ADVOCACY FOR FAVOURABLE INVESTMENT/INDUSTRIAL
-                  POLICIES
-                </li>
-                <li> DIRECT INTERVENTIONS ON MEMBERS’PROBLEMS </li>
-                <li> CONSULTANCY/ADVISORY SERVICES</li>
-                <li>PROMOTING MADE-IN- NIGERIA PRODUCTS</li>
-              </ul>
+              <div className='xard'>
+                <h2>Membership Benefits</h2>
+                <p className=''>
+                  Deriving from the set objectives of its establishment and
+                  services rendered, MAN provides many benefits to its members,
+                  which include:
+                </p>
+                <ul>
+                  <li> CREDIBILITY AS MANUFACTURER</li>
+                  <li> CAPACITY BUILDING FOR MEMBERS</li>
+                  <li>
+                    RECOGNITION BY GOVERNMENT AGENCIES AND BUSINESS COMMUNITY
+                  </li>
+                  <li>
+                    PUBLIC POLICY ADVOCACY FOR FAVOURABLE INVESTMENT/INDUSTRIAL
+                    POLICIES
+                  </li>
+                  <li> DIRECT INTERVENTIONS ON MEMBERS’PROBLEMS </li>
+                  <li> CONSULTANCY/ADVISORY SERVICES</li>
+                  <li>PROMOTING MADE-IN- NIGERIA PRODUCTS</li>
+                </ul>
+              </div>
+              <div className='xard'>
+                <h2>Membership Requirements</h2>
+                <p className=''>
+                  Deriving from the set objectives of its establishment and
+                  services rendered, MAN provides many benefits to its members,
+                  which include:
+                </p>
+                <ul>
+                  <li> CREDIBILITY AS MANUFACTURER</li>
+                  <li> CAPACITY BUILDING FOR MEMBERS</li>
+                  <li>
+                    RECOGNITION BY GOVERNMENT AGENCIES AND BUSINESS COMMUNITY
+                  </li>
+                  <li>
+                    PUBLIC POLICY ADVOCACY FOR FAVOURABLE INVESTMENT/INDUSTRIAL
+                    POLICIES
+                  </li>
+                  <li> DIRECT INTERVENTIONS ON MEMBERS’PROBLEMS </li>
+                  <li> CONSULTANCY/ADVISORY SERVICES</li>
+                  <li>PROMOTING MADE-IN- NIGERIA PRODUCTS</li>
+                </ul>
+              </div>
+              <div className='xard'>
+                <h2>Membership FAQs</h2>
+                <p className=''>
+                  Deriving from the set objectives of its establishment and
+                  services rendered, MAN provides many benefits to its members,
+                  which include:
+                </p>
+                <ul>
+                  <li> CREDIBILITY AS MANUFACTURER</li>
+                  <li> CAPACITY BUILDING FOR MEMBERS</li>
+                  <li>
+                    RECOGNITION BY GOVERNMENT AGENCIES AND BUSINESS COMMUNITY
+                  </li>
+                  <li>
+                    PUBLIC POLICY ADVOCACY FOR FAVOURABLE INVESTMENT/INDUSTRIAL
+                    POLICIES
+                  </li>
+                  <li> DIRECT INTERVENTIONS ON MEMBERS’PROBLEMS </li>
+                  <li> CONSULTANCY/ADVISORY SERVICES</li>
+                  <li>PROMOTING MADE-IN- NIGERIA PRODUCTS</li>
+                </ul>
+              </div>
             </div>
             <div className='right'>
               <div className='top'>

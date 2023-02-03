@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import Image2 from '../../images/Vector.png'
 
 function History() {
   return (
@@ -66,6 +67,92 @@ function History() {
                   manufacturers’ collective interests.
                 </p>
               </div>
+              <div className='core_values'>
+                <h2>Core Values</h2>
+                <ul>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Service</p>
+                      <p>Deliver quintessential membership services.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Engagement</p>
+                      <p>
+                        Engage internal and external public to drive the growth
+                        of the manufacturing sector.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Resilience</p>
+                      <p>
+                        Exceed the expectation of members despite inclement
+                        operating environment.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Value addition</p>
+                      <p>
+                        Promote value addition along the manufacturing value
+                        chain.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Integrity</p>
+                      <p>
+                        Uphold integrity, professionalism and transparency in
+                        our activities.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Commitment</p>
+                      <p>
+                        Ensure collaboration and commitment to the attainment of
+                        the Vision and Mission of MAN.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='left'>
+                      <img src={Image2} alt='' />
+                    </div>
+                    <div className='right'>
+                      <p>Excellence</p>
+                      <p>
+                        Enable service-oriented system driven by excellent
+                        performance.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
               <div className='section-divs'>
                 <div className='card'>
                   <div className='overlay'>
@@ -85,11 +172,32 @@ function History() {
                       international economic actors in Government, Organized
                       Private Sector, host communities and other stakeholders to
                       foster its proactive role in policy formulation and
-                      implementation. ” 2. "MAN promotes manufacturing sector
-                      competitiveness, contribution to job creation and Gross
-                      Domestic Product through commitment to research and
-                      development, new technologies and environmental
-                      sustainability. ”
+                      implementation. ”
+                    </p>
+                    <p>
+                      2. "MAN promotes manufacturing sector competitiveness,
+                      contribution to job creation and Gross Domestic Product
+                      through commitment to research and development, new
+                      technologies and environmental sustainability. ”
+                    </p>
+                  </div>
+                </div>
+                <div className='card'>
+                  <div className='overlay'>
+                    <h1>Policy & Advocacy</h1>
+                    <p>
+                      "1. MAN promotes the interest of manufacturers by
+                      deepening its advocacy and partnership with national and
+                      international economic actors in Government, Organized
+                      Private Sector, host communities and other stakeholders to
+                      foster its proactive role in policy formulation and
+                      implementation. ”
+                    </p>
+                    <p>
+                      2. "MAN promotes manufacturing sector competitiveness,
+                      contribution to job creation and Gross Domestic Product
+                      through commitment to research and development, new
+                      technologies and environmental sustainability. ”
                     </p>
                   </div>
                 </div>
@@ -172,15 +280,12 @@ function History() {
                   modules={[Navigation]}
                   breakpoints={{
                     640: {
-                      width: 640,
                       slidesPerView: 1,
                     },
                     768: {
-                      width: 768,
                       slidesPerView: 2,
                     },
                     900: {
-                      width: 900,
                       slidesPerView: 3,
                     },
                   }}
