@@ -11,12 +11,14 @@ import EmailIcon from '@mui/icons-material/Email'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
+import Subscribe from '../Subscribe/Subscribe'
 
 function News() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className='news'>
+          <Subscribe/>
           <NavBar location='news' />
           <div className='hero_Image'>
             <div className='cover'>

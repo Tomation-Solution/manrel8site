@@ -14,6 +14,7 @@ import Image4 from '../../images/div-10.png'
 import Image5 from '../../images/div-11.png'
 import './Insight.scss'
 import { Link } from 'react-router-dom'
+import Subscribe from '../Subscribe/Subscribe'
 
 function App() {
   const AboutList = [
@@ -55,7 +56,7 @@ function App() {
       title: 'Gallery',
       description: 'ABAs flagship magazine.',
       linkHead: 'Proceed to see Gallery',
-      location:'Gallery'
+      location: 'Gallery',
     },
     {
       image: Image1,
@@ -70,6 +71,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='insight'>
         <UIProvider>
+          <Subscribe />
           <NavBar location='insight' />
           <div className='hero_Image'>
             <div className='cover'>

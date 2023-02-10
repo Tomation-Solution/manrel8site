@@ -15,41 +15,21 @@ import Wall from './Component/Wall/Wall'
 import Footer from './Component/Footer/Footer'
 import NavBar from './Component/NavBar/NavBar'
 import Image from './images/div-sub.png'
+import Subscribe from './Component/Subscribe/Subscribe'
 
 function App() {
-  const [subscribe, setSubscribe] = useState(false)
-  console.log(subscribe)
   return (
     <ThemeProvider theme={theme}>
       <div>
         <UIProvider>
           <div className='home'>
-            {subscribe && (
-              <div className='modal'>
-                <div className='cover'>
-                  <div className='left'>
-                    <img src={Image} alt='' />
-                  </div>
-                  <div className='right'>
-                    <div className='huo'>
-                      <h1>Subscribe to our Newsletter</h1>
-                      <div>
-                        <input type='email' placeholder='Email Address' />
-                      </div>
-                      <button onClick={() => setSubscribe(false)}>
-                        SUBMIT
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+            <Subscribe />
             <NavBar location='home' />
             <Banner />
             <Section />
             <InfoBoard />
             <Article />
-            <Wall setSubscribe={setSubscribe} />
+            <Wall />
             <Footer />
           </div>
         </UIProvider>

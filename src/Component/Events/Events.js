@@ -8,6 +8,7 @@ import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
 import { Link } from 'react-router-dom'
+import Subscribe from '../Subscribe/Subscribe'
 
 function Events() {
   const [ShowFree, setShowFree] = useState(false)
@@ -74,6 +75,7 @@ function Events() {
               </div>
             </div>
           )}
+          <Subscribe />
           <NavBar location='events' />
           <div className='hero_image'>
             <div className='cover'>
@@ -86,8 +88,15 @@ function Events() {
           </div>
           <div className='members_tab'>
             <ul>
-              <li onClick={() => setShowFree(true)}>Free Events</li>
-              <li onClick={() => setShowPaid(true)}>Paid Events</li>
+              <li className='active'>Free Events</li>
+              <li
+                onClick={() => {
+                  setShowPaid(true)
+                  setShowFree(false)
+                }}
+              >
+                Paid Events
+              </li>
             </ul>
           </div>
           <div className='secwtap'>
@@ -97,7 +106,14 @@ function Events() {
                 <p className=''>March 15th, 2022 - 08:30 </p>
                 <h2>Meeting With Team Members</h2>
                 <div className='buttons'>
-                  <button>Accept</button>
+                  <button
+                    onClick={() => {
+                      setShowFree(true)
+                      setShowPaid(false)
+                    }}
+                  >
+                    Accept
+                  </button>
                   <button className='light'>Reject</button>
                 </div>
               </div>

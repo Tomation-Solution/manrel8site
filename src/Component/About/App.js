@@ -16,6 +16,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import './About.scss'
 import { Link } from 'react-router-dom'
 import { MyLink } from '../../Styles/Appbar'
+import Subscribe from '../Subscribe/Subscribe'
 
 function App() {
   const AboutList = [
@@ -40,7 +41,6 @@ function App() {
       title: 'Vision',
       description:
         '“To be the key driver for Industrialization, sustainable Economic Growth and Development in Nigeria”',
-        
     },
     {
       image: Image4,
@@ -71,6 +71,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='abouts'>
         <UIProvider>
+          <Subscribe />
           <NavBar location='about' />
           <div className='hero_image'>
             <div className='cover'>
@@ -135,7 +136,7 @@ function App() {
                 </div>
                 <div className='bto'>
                   <MyLink to='/Insight-more' sx>
-                  <h3>View all {'>'}</h3>
+                    <h3>View all {'>'}</h3>
                   </MyLink>
                 </div>
               </div>

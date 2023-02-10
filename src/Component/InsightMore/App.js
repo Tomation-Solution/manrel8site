@@ -15,6 +15,7 @@ import Image5 from '../../images/div-11.png'
 import { Link } from 'react-router-dom'
 import Wall from '../../Component/Wall/Wall'
 import Footer from '../../Component/Footer/Footer'
+import Subscribe from '../Subscribe/Subscribe'
 
 function App() {
   const AboutList = [
@@ -52,6 +53,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='insight-more'>
         <UIProvider>
+          <Subscribe />
           <NavBar location='insight' />
           <div className='hero_Image'>
             <div className='cover'>

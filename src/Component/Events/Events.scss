@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
     .cover {
       background-color: #fff;
       width: 90%;
@@ -158,12 +159,16 @@
       li {
         list-style: none;
         color: #2b3513;
+        opacity: 0.7;
         padding-right: 70px;
         font-size: 22px;
         line-height: 33px;
         font-weight: 500;
         padding-bottom: 10px;
         cursor: pointer;
+        &.active {
+          opacity: 1;
+        }
       }
     }
   }

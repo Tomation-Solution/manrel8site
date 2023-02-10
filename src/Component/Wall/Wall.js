@@ -6,8 +6,9 @@ import {
   WallItemContainer,
   WallTitle,
 } from '../../Styles/Wall'
-
-function Wall({ setSubscribe }) {
+import { useUIContext } from '../../Ui'
+function Wall() {
+  const { setSubscribe } = useUIContext()
   return (
     <WallContainer>
       <WallItemContainer>

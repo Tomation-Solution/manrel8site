@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
+import Subscribe from '../Subscribe/Subscribe'
 
 function ExistingMembers() {
   const alphabet = [
@@ -42,6 +43,7 @@ function ExistingMembers() {
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className='members'>
+          <Subscribe />
           <NavBar location='membership' />
           <div className='hero_image exist'>
             <div className='cover'>

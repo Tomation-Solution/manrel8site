@@ -16,14 +16,15 @@ function Footer() {
         sx={{ width: '40%', [theme.breakpoints.down('md')]: { width: '100%' } }}
       >
         <FooterImg src={logoICon} />
+        <FooterDescription>01-4542700, 01-4542701</FooterDescription>
+        <FooterDescription>info@manufacturersnigeria.org</FooterDescription>
         <FooterDescription>
-          01-4542700, 01-4542701 
+          {' '}
+          77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria{' '}
         </FooterDescription>
-        <FooterDescription>
-        info@manufacturersnigeria.org
-        </FooterDescription>
-        <FooterDescription> 77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria{' '}</FooterDescription>
-        <Link to='/Services'><MyButton>REQUEST MAN SERVICES</MyButton></Link>
+        <Link to='/Services'>
+          <MyButton>REQUEST MAN SERVICES</MyButton>
+        </Link>
       </FooterItemsContainer>
       <FooterItemsContainer>
         <FooterDescription>Sitemap</FooterDescription>
@@ -33,7 +34,7 @@ function Footer() {
       <FooterItemsContainer>
         <FooterDescription>Terms & Conditions</FooterDescription>
         <FooterDescription>Website help</FooterDescription>
-        <footerDescription>Webmail Login</footerDescription>
+        <FooterDescription>Webmail Login</FooterDescription>
       </FooterItemsContainer>
     </FooterContainer>
   )

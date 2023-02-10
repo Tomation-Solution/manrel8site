@@ -7,12 +7,14 @@ import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
 import { Link } from 'react-router-dom'
+import Subscribe from '../Subscribe/Subscribe'
 
 function LatestMembers() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className='members'>
+          <Subscribe/>
           <NavBar location='membership' />
           <div className='hero_image latest'>
             <div className='cover'>

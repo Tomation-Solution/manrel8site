@@ -12,12 +12,14 @@ import { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import Image2 from '../../images/Vector.png'
+import Subscribe from '../Subscribe/Subscribe'
 
 function History() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className='history'>
+          <Subscribe />
           <NavBar location='about' />
           <div className='hero_image'>
             <div className='cover'>

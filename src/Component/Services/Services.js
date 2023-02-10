@@ -6,12 +6,14 @@ import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
 import './Services.scss'
+import Subscribe from '../Subscribe/Subscribe'
 
 function Services() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className='services'>
+          <Subscribe />
           <NavBar location='services' />
           <div className='hero_image'>
             <div className='cover'>
