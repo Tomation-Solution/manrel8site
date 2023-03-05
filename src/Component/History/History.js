@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './History.scss'
 import { ThemeProvider } from '@emotion/react'
 import theme from '../../Styles/theme/Theme'
@@ -12,9 +12,13 @@ import { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import Image2 from '../../images/Vector.png'
+import Otunba from '../../images/otuba.png'
 import Subscribe from '../Subscribe/Subscribe'
+import { MyButton } from '../../Styles/Section'
+import { Link } from 'react-router-dom'
 
 function History() {
+  const [showPremium, setShowPremium] = useState(false)
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -23,22 +27,24 @@ function History() {
           <NavBar location='about' />
           <div className='hero_image'>
             <div className='cover'>
-              <div className='tag'>
+              {/* <div className='tag'>
                 <h2>Our History</h2>
-              </div>
+              </div> */}
               <h1>
                 MAN is the best way to successadvanceprogresssuccess in the
                 manufacturing industry
               </h1>
               <p>
-                The Manufacturers Association of Nigeria (MAN) was established
-                in May, 1971 as a company limited by guarantee. The
-                establishment of the Association was motivated by the desire to
-                have a focal point of communication and consultation between
-                industry on the one hand, and the government and general public
-                on the other. Hitherto, there was no institutional organ whose
-                central focus was to give meaning to the interests, problems and
-                aspirations of the manufacturing sector.
+                MAN is the best way to success, advance, progress, success in
+                the manufacturing industry The Manufacturers Association of
+                Nigeria (MAN) was established in May, 1971 as a company limited
+                by guarantee. The establishment of the Association was motivated
+                by the desire to have a focal point of communication and
+                consultation between industry on the one hand, and the
+                government and general public on the other. Hitherto, there was
+                no institutional organ whose central focus was to give meaning
+                to the interests, problems and aspirations of the manufacturing
+                sector.
               </p>
             </div>
           </div>
@@ -234,9 +240,11 @@ function History() {
                     </li>
                     <li>
                       To encourage the patronage of members’ products by
-                      Nigerians and by consumers in foreign countries; To
-                      communicate and liaise with kindred and other bodies, in
-                      the accomplishment of the objectives of the Association
+                      Nigerians and by consumers in foreign countries;
+                    </li>
+                    <li>
+                      To communicate and liaise with kindred and other bodies,
+                      in the accomplishment of the objectives of the Association
                       and on subjects of common interest.
                     </li>
                   </ul>
@@ -253,6 +261,17 @@ function History() {
                     between industry on the one hand, and the government and
                     general public on the other.
                   </p>
+
+                  <MyButton
+                    onClick={() => setShowPremium(true)}
+                    sx={{
+                      color: '#000',
+                      borderColor: '#000',
+                      marginTop: '21px',
+                    }}
+                  >
+                    Read More
+                  </MyButton>
                 </div>
                 <div className='right'>
                   <h2>Need to contact us?</h2>
@@ -261,10 +280,253 @@ function History() {
                   <p>Email:info@manufacturersnigeria.org</p>
                 </div>
               </div>
+              {showPremium && (
+                <div className='premium'>
+                  <div className='covert'>
+                    <h1>How we Work</h1>
+                  </div>
+                  <div className='premium-body'>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>OUR MANDATE COMES FROM OUR MEMBERS</h2>
+                        <p>
+                          Manufacturers Association of Nigeria (MAN) receives
+                          its mandate from the National Council, sixteen (16)
+                          Branch Councils across the country, and ten (10)
+                          Sectoral Groups. In addition, five (5) Standing
+                          Committees, nine (9) Ad-Hoc Committee and seventy-six
+                          (76) Sub-Sectoral Groups. <br /> This engagement
+                          process reaches over 3000 MAN members who have a
+                          direct say in what we do and how we do it, from
+                          renewing our work strategies to discussing the key
+                          business issues of the day and re-tooling our
+                          influence.
+                          <br /> Each national council and branch council
+                          members are elected to a term of office. Our standing
+                          committee members are invited to join voluntarily
+                          based on their sector experience and technical
+                          expertise.
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>
+                          THE NATIONAL COUNCIL IS THE FORMAL GOVERNING BOARD OF
+                          THE ASSOCIATION
+                        </h2>
+                        <p>
+                          The Association has a National Council, made up of a
+                          President, 8 Vice President, Treasurer, Chairmen of
+                          Branches, Chairmen of Sectoral Groups and elected
+                          members.
+                          <br /> Past Presidents of the Association are life
+                          members representing special interest on the Council.{' '}
+                          <br />
+                          In directing MAN’s affairs and determining its policy
+                          options, the National Council is served by an
+                          Executive Committee and 5 Standing Committees namely;
+                        </p>
+                        <ul className='one'>
+                          <li>Economic Policy Committee,</li>
+                          <li>Finance & Establishment Committee</li>
+                          <li>Small and Medium Industries Committee,</li>
+                          <li>
+                            Corporate Affairs and Strategic Planning Committee,
+                          </li>
+                          <li>Infrastructure Committee</li>
+                        </ul>
+                        <p>
+                          These committees, as well as other adhoc committees
+                          assist in evolving vital policy framework needed for
+                          the realization of the objectives of the Association
+                          in areas of transport, energy, communication,
+                          taxation, exports, consultancy, research, economic
+                          matters, education and training as well as
+                          consultation with various existing specialized bodies.
+                          The National Council meets 4 times in a year. The
+                          Secretary to the National Council is the Director
+                          General.
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>
+                          THE NATIONAL COUNCIL IS COMPRISED OF ONE EXECUTIVE
+                          COMMITTEE
+                        </h2>
+                        <p>
+                          In order to make the National Council more responsive
+                          to the yearnings of members’ expectations and
+                          aspirations, the Association has an Executive
+                          Committee which is composed of the President, Vice
+                          President, the Hon. Treasurer, Chairmen Standing
+                          Committees and two other members appointed on merit to
+                          represent special interest. The Director General is
+                          the secretary to the committee.
+                        </p>
+                        <p>
+                          Essentially, the Executive Committee is empowered to
+                          perform the usual functions of the National Council,
+                          subject to the ratification of the National Council
+                          except the following issues which must be referred to
+                          Council for approval.
+                        </p>
+                        <ol className='two'>
+                          <li>
+                            All matters affecting top management staff
+                            (appointment, promotion, and discipline)
+                          </li>
+                          <li>
+                            All financial matters including budget, borrowing,
+                            membership subscription, levies, etc.
+                          </li>
+                          <li>National Economic Policies</li>
+                          <li>Issues relation to National Budget</li>
+                          <li>
+                            Creation of zones, branches, and Sub-Sectoral groups
+                          </li>
+                          <li>Nomination to National Council</li>
+                        </ol>
+                        <p>
+                          The Executive Committee also operates as a lobby group
+                          that liaises with the National Council. Members of the
+                          Committee are expected from time to time, to identify
+                          industrialists among Federal Legislators who would
+                          constitute contacts for effective lobbing. The
+                          Executive Committee meets 4 time a year.
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>STANDING COMMITTEE</h2>
+                        <p>
+                          In addition to the Executive Committee, the
+                          Association has 5 Standing Committees, namely:
+                        </p>
+                        <ul className='one'>
+                          <li>Economic Policy Committee,</li>
+                          <li>Finance & Establishment Committee</li>
+                          <li>Small and Medium Industries Committee,</li>
+                          <li>
+                            Corporate Affairs and Strategic Planning Committee,
+                          </li>
+                          <li>Infrastructure Committee</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>AD-HOC COMMITTEE</h2>
+                        <p>
+                          Ad-hoc Committees are however constituted to deal with
+                          specific and usually temporary issues as circumstances
+                          may demand. There are also Study Groups that deal with
+                          subjects of special interests to the Association as
+                          they arise, such as transport, energy, communication,
+                          fuel, taxation, exports, consultation with various
+                          existing specialized bodies.
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>MAN EXPORT GROUP AND GAS USERS GROUP</h2>
+                        <p>
+                          To promote export of Nigerian goods, MAN has an Export
+                          Group. MAN also has a Gas Users Group.
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>ANNUAL GENERAL MEETING</h2>
+                        <p>
+                          Every year, our members are invited to attend our
+                          Annual General Meeting. The Annual General Meeting is
+                          used to elect the Auditors, elect or re-elect council
+                          members and MAN President and vote on wide variety of
+                          resolutions.
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>ANNUAL REPORT</h2>
+                        <p>
+                          Every year, Manufacturers Association of Nigeria (MAN)
+                          publishes its Annual Reports which contains empirical
+                          based information, key highlights from the years’
+                          activites and details on our financial information.{' '}
+                          <br /> *** Place some AGM reports for download ****
+                        </p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='left'>
+                        <img src={Image2} alt='' />
+                      </div>
+                      <div className='right'>
+                        <h2>MAN CODE OF CONDUCT</h2>
+                        <p>
+                          In order to promote and develop meaningful
+                          contribution of manufacturers to the national economy,
+                          the National Council laid down the following code of
+                          conduct for members of the Association: <br /> ·
+                          Endeavour to maintain in all aspects of their
+                          operations, a high level of business ethics and
+                          recognized standards, thus refraining from all
+                          business dealings of questionable nature, which could
+                          bring the Association or the manufacturing sector as a
+                          whole into disrepute. <br /> · Demonstrate transparent
+                          commitment to Nigeria’s industrial objectives and
+                          policies; placing Nigeria’s best interest above all
+                          others and increasing the contribution of the
+                          manufacturing sector to the economy, and towards the
+                          improvement of the quality of life of Nigerians.{' '}
+                          <br /> · Promote, encourage and improve quality
+                          standards and process control in all their
+                          manufacturing operations. <br /> · Refer to the
+                          National Council of the Association, any disagreement
+                          between members of the Association for arbitration
+                          before either party can pursue such a matter further
+                          (if necessary) after Council’s intervention.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
               <div className='slidertd'>
                 <div className='top'>
                   <div className='covert'>
-                    <h1>Who We Are</h1>
+                    <h1>Our Executives</h1>
                     <p>
                       The Executive Committee is a group of experienced
                       professionals duly elected by MAN members and entrusted
@@ -294,7 +556,7 @@ function History() {
                 >
                   <SwiperSlide>
                     <div className='card'>
-                      <img src={Image} alt='' />
+                      <img src={Otunba} alt='' />
                       <p>Otunba Francis Meshioye </p>
                       <p>President</p>
                     </div>

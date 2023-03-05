@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import { ThemeProvider } from '@mui/system'
-import React from 'react'
+import React, { useState } from 'react'
 import { UIProvider } from '../../Ui'
 import theme from '../../Styles/theme/Theme'
 import NavBar from '../../Component/NavBar/NavBar'
@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom'
 import Wall from '../../Component/Wall/Wall'
 import Footer from '../../Component/Footer/Footer'
 import Subscribe from '../Subscribe/Subscribe'
+import Premium from '../Subscribe/Premium'
 
 function App() {
   const AboutList = [
@@ -49,10 +50,13 @@ function App() {
       linkHead: 'Proceed to see Gallery',
     },
   ]
+  const [showPremiummodal, setShowPremiummodal] = useState(false)
+
   return (
     <ThemeProvider theme={theme}>
       <div className='insight-more'>
         <UIProvider>
+          {showPremiummodal && <Premium setPremium={setShowPremiummodal} />}
           <Subscribe />
           <NavBar location='insight' />
           <div className='hero_Image'>
@@ -71,7 +75,9 @@ function App() {
                 <div className='wrap'>
                   {[...Array(12)].map((item, i) => (
                     <div className='card' key={1 + i}>
-                      <button>Publication</button>
+                      <button onClick={() => setShowPremiummodal(true)}>
+                        Publication
+                      </button>
                       <div className='flex'>
                         <h3>Manufacturing Outlook Q4 2022</h3>
                         <OpenInNewIcon />

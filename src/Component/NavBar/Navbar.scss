@@ -1,4 +1,4 @@
-@import '../resources';
+@import '../../Styles/resources';
 .navBar {
   background: $background;
   min-height: 10vh;
@@ -72,6 +72,20 @@
   }
   & .nav-list {
     padding: 15px 0;
+    .nav-row {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      .listd {
+        height: fit-content;
+      }
+      .ai {
+        border-left: 2px solid #000;
+        margin-left: 15px;
+        padding-left: 15px;
+        cursor: pointer;
+      }
+    }
     @include mobile-1 {
       width: 100%;
       .nav-row {
@@ -79,7 +93,18 @@
         flex-wrap: wrap;
         flex-direction: column;
         text-align: center;
+        .listd {
+          padding-bottom: 30px;
+        }
+        .ai {
+          border: none;
+        }
       }
+    }
+
+    .list2 {
+      color: #717861;
+      font-size: 16px;
     }
     & .list {
       padding-left: 30px;

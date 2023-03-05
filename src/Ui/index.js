@@ -1,19 +1,21 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from 'react'
 
-export const UIContext = createContext();
-export const  useUIContext = () => useContext(UIContext);
+export const UIContext = createContext()
+export const useUIContext = () => useContext(UIContext)
 
-export const UIProvider = ({children}) => {
+export const UIProvider = ({ children }) => {
+  const [drawerOpen, setDrawerOpen] = useState(false)
+  const [subscribe, setSubscribe] = useState(false)
+  const [premium, setPremium] = useState(false)
 
-    const [drawerOpen, setDrawerOpen] = useState(false);
-     const [subscribe, setSubscribe] = useState(false)
+  const value = {
+    drawerOpen,
+    setDrawerOpen,
+    subscribe,
+    setSubscribe,
+    premium,
+    setPremium,
+  }
 
-    const value = {
-      drawerOpen,
-      setDrawerOpen,
-      subscribe,
-      setSubscribe,
-    }
-
-    return <UIContext.Provider value ={value} >{children}</UIContext.Provider>
+  return <UIContext.Provider value={value}>{children}</UIContext.Provider>
 }

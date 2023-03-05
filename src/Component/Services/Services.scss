@@ -47,7 +47,7 @@
   }
   .new_member {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 50px 50px;
     @include mobile-3 {
@@ -105,7 +105,7 @@
       }
     }
     .right {
-      width: 35%;
+      width: 70%;
       border-top: 5px solid #2b3513;
       padding: 30px;
       @include mobile-1 {
@@ -183,6 +183,91 @@
           padding-top: 10px;
           color: #717861;
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .newservices {
+    padding: 50px 50px;
+    .head {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+      h1 {
+        font-size: 30px;
+        color: #2b3513;
+        width: 60%;
+        padding-bottom: 20px;
+      }
+      p {
+        width: 80%;
+        color: #343334;
+        font-size: 20px;
+      }
+    }
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-bottom: 50px;
+
+      .card {
+        width: 32%;
+        margin-bottom: 30px;
+        min-height: inherit;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+          url('../../images/div2.png');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        &:nth-child(2) {
+          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('../../images/div3.png');
+          background-size: cover;
+        }
+        &:nth-child(3) {
+          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('../../images/div4.png');
+          background-size: cover;
+        }
+        &:nth-child(4) {
+          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('../../images/div5.png');
+          background-size: cover;
+        }
+        .overlay {
+          width: 80%;
+          background: rgba(113, 120, 97, 0.7);
+          margin-bottom: 30px;
+          padding: 30px;
+          color: #fff;
+          @include mobile-3 {
+            padding: 30px 20px;
+            width: 100%;
+            margin-bottom: 0;
+          }
+          h1 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 12px;
+            font-weight: 300;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      &.diff {
+        .card {
+          width: 24%;
+          .overlay {
+            height: fit-content;
+            h1 {
+              font-size: 14px;
+              padding-bottom: 0px;
+            }
+          }
         }
       }
     }

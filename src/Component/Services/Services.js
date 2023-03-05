@@ -17,18 +17,20 @@ function Services() {
           <NavBar location='services' />
           <div className='hero_image'>
             <div className='cover'>
-              <div className='tag'>
-                <h2>Home {'>'} Service</h2>
-              </div>
               <h1>Our Services</h1>
-              <p>
-                MAN was created to promote and protect manufacturers collective
-                interest.
-              </p>
+              <p>See our Services</p>
             </div>
           </div>
-          <div className='new_member'>
-            <div className='left'>
+          <div className='newservices'>
+            <div className='head'>
+              <h1>Manufacturers Resource Centre (MRC) Services</h1>
+              <p>
+                Manufacturers Resource Centre (MRC) is the only professional
+                service organization structured to render business solutions for
+                the Manufacturing sector and affiliated.
+              </p>
+            </div>
+            <div className='wrap'>
               <div className='card'>
                 <div className='overlay'>
                   <h1>Business Consulting Retainer ship Service</h1>
@@ -37,14 +39,8 @@ function Services() {
                     in growing turnover volume, company customer base and
                     production capacity, companies engage us as their Business
                     Consultant to aid them better their business strategizes and
-                    attain targeted business growth. In addition, micro
-                    manufacturers enjoy discounted fee.
+                    attain targeted business growth.
                   </p>
-                  <p>This service covers:</p>
-                  <p>TBusiness Evaluations.</p>
-                  <p>TBusiness Advisory.</p>
-                  <p>TAccess to MRC available Business Leverages.</p>
-                  <p>TBusiness Referrals.</p>
                 </div>
               </div>
               <div className='card'>
@@ -56,10 +52,6 @@ function Services() {
                     you a whole new learning experience through our In-plant and
                     General Trainings.
                   </p>
-                  <p>This service covers:</p>
-                  <p>Training (In-Plant and General).</p>
-                  <p>Workforce Recruitment.</p>
-                  <p>Pre-Retirement Training.</p>
                 </div>
               </div>
               <div className='card'>
@@ -71,40 +63,165 @@ function Services() {
                     Intervention Fund and other Venture Capital investments,
                     that would suit your funding need.
                   </p>
-                  <p>This service covers:</p>
-                  <p>Intervention Funds.</p>
-                  <p>Grants and Loan.</p>
-                  <p>Facilitiess.</p>
-                  <p>Loan Facilitation.</p>
+                </div>
+              </div>
+            </div>
+            <div className='head'>
+              <h1>MAN Power Development Company Limited (MPDCL).</h1>
+            </div>
+            <div className='wrap'>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>MAN Independent Power Project (IPP)</h1>
+                  <p>
+                    MPDCL has just completed the Phase I of the 2MW Power Plant
+                    for members at the Ogba/Acme Industrial Cluster. MPDCL
+                    Project 2 and 3 proposed for Amuwo Odofin industrial cluster
+                    and the Lagos Ibadan Expressway industrial corridor
+                    underway.
+                  </p>
                 </div>
               </div>
               <div className='card'>
                 <div className='overlay'>
-                  <h1>Consulting Services</h1>
+                  <h1>Facilitation of The MAN-SUNREF Funds</h1>
                   <p>
-                    Leveraging on the expertise and experience of skilled
-                    consultants and professionals we evaluate, implement and
-                    deploy custom solutions tailored to address your business
-                    challenges.
+                    MPDCL currently provides facilitation services for members
+                    to seamlessly access the MAN-SUNREF $USD70million funds
+                    targeted for industries to improve their power energy
+                    projects so as to achieve energy resource optimization and
+                    energy efficiency.
                   </p>
-                  <p>This service covers:</p>
-                  <p>Feasibility and Viability Appraisals .</p>
-                  <p>Product Authentication Solutions.</p>
-                  <p>Joint Venture Business Propositions.</p>
-                  <p>Financial Management Services.</p>
-                  <p>Business Research.</p>
-                  <p>Business Plan .</p>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Eligible Customer (EC) Appliction To NERC</h1>
                   <p>
-                    IT Consulting (Website Building, SMP Management, Marketing)
-                    .
-                  </p>
-                  <p>
-                    Production Process Re-Engineering (Lean Manufacturing,
-                    Production Optimization) Etc .
+                    MPDCL currently provides facilitations service for members
+                    whose power off-take is 2MWh/h to process EC Approval. The
+                    facilitation involves providing accurate documentations for
+                    application to NERC
                   </p>
                 </div>
               </div>
             </div>
+            <div className='head'>
+              <h1>Other Services</h1>
+            </div>
+            <div className='wrap diff'>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>BUSINESS DEVELOPMENT SERVICES</h1>
+                  <p>
+                    Identify possible problems affecting SME‘s by preparing a
+                    detailed technical due diligence report through review of
+                    their operations
+                  </p>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>BUSINESS INFORMATION SERVICES</h1>
+                  <p>
+                    Sourcing of raw materials, Machinery and equipment, Markets,
+                    Model business profiles etc
+                  </p>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>BUSINESS CONSULTANCY</h1>
+                  <p>
+                    Investment and financial advisory services, Local and
+                    international business linkages
+                  </p>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>ECONOMIC RESEARCH AND ANALYSIS</h1>
+                  <p>
+                    Provision of Economic research and analysis for
+                    manufacturers, government and the organized private sector
+                  </p>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Public Policy Advocacy</h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Monitoring and analysing of government policies</h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>
+                    Preparation of memoranda on topical industrial and economic
+                    issues
+                  </h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Capacity building and manpower development</h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Liaison activities for members</h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Seminars and Conferences</h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>
+                    Information and Communication Technology based Services
+                  </h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>
+                    Promotion and organization of trade missions and exhibitions
+                  </h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Promotion of Made-in-Nigeria products</h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>
+                    Reconciliation and harmonization of diverse interests of
+                    members
+                  </h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>
+                    Specific intervention on members and sectoral problems
+                  </h1>
+                </div>
+              </div>
+              <div className='card'>
+                <div className='overlay'>
+                  <h1>Publications</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='new_member'>
             <div className='right'>
               <div className='top'>
                 <h2>Request Service</h2>

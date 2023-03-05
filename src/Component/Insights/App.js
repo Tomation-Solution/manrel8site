@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@mui/system'
-import React from 'react'
+import React, { useState } from 'react'
 import { UIProvider } from '../../Ui'
 import theme from '../../Styles/theme/Theme'
 import Wall from '../../Component/Wall/Wall'
@@ -15,6 +15,7 @@ import Image5 from '../../images/div-11.png'
 import './Insight.scss'
 import { Link } from 'react-router-dom'
 import Subscribe from '../Subscribe/Subscribe'
+import Premium from '../Subscribe/Premium'
 
 function App() {
   const AboutList = [
@@ -67,10 +68,13 @@ function App() {
       location: 'Insight-more',
     },
   ]
+  const [showPremiummodal, setShowPremiummodal] = useState(false)
+
   return (
     <ThemeProvider theme={theme}>
       <div className='insight'>
         <UIProvider>
+          {showPremiummodal && <Premium setPremium={setShowPremiummodal} />}
           <Subscribe />
           <NavBar location='insight' />
           <div className='hero_Image'>
@@ -89,7 +93,9 @@ function App() {
                 <div className='wrap'>
                   {[...Array(4)].map((item, i) => (
                     <div className='card' key={1 + i}>
-                      <button>Publication</button>
+                      <button onClick={() => setShowPremiummodal(true)}>
+                        Publication
+                      </button>
                       <div className='flex'>
                         <h3>Manufacturing Outlook Q4 2022</h3>
                         <OpenInNewIcon />

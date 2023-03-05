@@ -17,7 +17,7 @@ function Banner() {
   return (
     <BannerContainer>
       <BannerContent>
-        <BannerTitle sx={{ color: Colors.primary }}>
+        <BannerTitle sx={{ color: '#fff' }}>
           MAN was created to promote and protect manufacturers collective
           interest
         </BannerTitle>
@@ -32,25 +32,17 @@ function Banner() {
           holding you back, MAN is here to help.
         </BannerDescription>
         <BannerButtonContainer>
-        <Link to='/become-membership'>
-
-          <MyButton
-            sx={{
-              backgroundColor: Colors.primary,
-              color: Colors.white,
-            }}
-          >
-            Become a Member
-          </MyButton>
+          <Link to='/become-membership' style={{ textDecoration: 'none' }}>
+            <MyButton
+              sx={{
+                backgroundColor: Colors.primary,
+                color: Colors.white,
+              }}
+              style={{ border: 'none' }}
+            >
+              Join Now
+            </MyButton>
           </Link>
-          <MyButton
-            sx={{
-              color: Colors.white,
-              border: '1px solid #fff',
-            }}
-          >
-            Login For already existing members
-          </MyButton>
         </BannerButtonContainer>
       </BannerContent>
     </BannerContainer>
