@@ -7,7 +7,7 @@ $textcolor3: #000;
 $mobile-1: 1100px;
 $mobile-2: 700px;
 $mobile-3: 600px;
-$mobile-4: 360px;
+$mobile-4: 420px;
 $mobile-5: 650px;
 
 @mixin flex {
@@ -39,6 +39,11 @@ $mobile-5: 650px;
 }
 @mixin mobile-5 {
   @media (min-height: $mobile-5) {
+    @content;
+  }
+}
+@mixin mobile-1120px {
+  @media (max-width: 1120px) {
     @content;
   }
 }

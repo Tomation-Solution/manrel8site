@@ -9,6 +9,7 @@ import Wall from '../Wall/Wall'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
 import Subscribe from '../Subscribe/Subscribe'
+import Image from '../../images/logor.png'
 
 function ExistingMembers() {
   const alphabet = [
@@ -62,9 +63,9 @@ function ExistingMembers() {
               <Link to='/existing-membership'>
                 <li className='active'>Existing Members</li>
               </Link>
-              <Link to='/new-membership'>
+              {/* <Link to='/new-membership'>
                 <li>New Members</li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
           <div className='wrapper'>
@@ -77,7 +78,17 @@ function ExistingMembers() {
                 </div>
               </div>
               <div className='main_body'>
-                <div className='left'></div>
+                <div className='left'>
+                  <div className='flex'>
+                    {[...Array(24)].map((item) => (
+                      <div className='card'>
+                        <img src={Image} alt='' />
+                        <p>African Paints Nigeria Plc</p>
+                        <p>MAN/GML/00002</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 <div className='right'>
                   <ul>
                     {alphabet.map((item) => (

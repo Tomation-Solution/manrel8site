@@ -12,9 +12,15 @@ import ExistingMembers from './Component/Members/ExistingMembers'
 import LatestMembers from './Component/Members/LatestMembers'
 import Services from './Component/Services/Services'
 import InsightMore from './Component/InsightMore/App'
+import Gallery from './Component/Gallery/App'
 import Events from './Component/Events/Events'
 import History from './Component/History/History'
 import ScrollToTop from './Scroll'
+import MembRequire from './Component/Members/MembRequire'
+import Sectoral from './Component/Sectoral/Sectoral'
+import Operate from './Component/Sectoral/Operate'
+import Mrc from './Component/Sectoral/Mrc'
+import Mpdcl from './Component/Sectoral/Mpdcl'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
@@ -28,9 +34,15 @@ root.render(
       <Route path='events' element={<Events />} />
       <Route path='history' element={<History />} />
       <Route path='become-membership' element={<Members />} />
+      <Route path='membership-requirement' element={<MembRequire />} />
       <Route path='existing-membership' element={<ExistingMembers />} />
       <Route path='new-membership' element={<LatestMembers />} />
       <Route path='Insight-more' element={<InsightMore />} />
+      <Route path='gallery' element={<Gallery />} />
+      <Route path='sectoral' element={<Sectoral />} />
+      <Route path='operate' element={<Operate />} />
+      <Route path='mrc' element={<Mrc />} />
+      <Route path='mpdcl' element={<Mpdcl />} />
     </Routes>
   </BrowserRouter>
 )

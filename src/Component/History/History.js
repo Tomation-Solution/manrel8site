@@ -13,10 +13,121 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import Image2 from '../../images/Vector.png'
 import Otunba from '../../images/otuba.png'
+import alhaji from '../../images/alhaji.png'
+import dangote from '../../images/dangote.png'
+import illaysu from '../../images/illaysu.png'
+import massari from '../../images/massari.png'
+import nzewi from '../../images/nzewi.png'
+import Prince from '../../images/Prince.png'
+import rev from '../../images/rev.png'
+import blank1 from '../../images/blank1.png'
+import blank2 from '../../images/blank2.png'
 import Subscribe from '../Subscribe/Subscribe'
 import { MyButton } from '../../Styles/Section'
 import { Link } from 'react-router-dom'
 
+const Exco = [
+  {
+    image: Otunba,
+    name: 'Otunba Francis Meshioye',
+    post: 'President ',
+  },
+  {
+    image: Prince,
+    name: 'Prince Oba Okojie',
+    post: 'Vice President, Lagos',
+  },
+  {
+    image: massari,
+    name: 'Engr (Chief) G. Massari,',
+    post: 'Vice President, Eastern Zone ',
+  },
+  {
+    image: illaysu,
+    name: 'Engr Ilyasu Saleh',
+    post: 'Vice President (Kaduna North West Zone) ',
+  },
+  {
+    image: blank1,
+    name: 'Alhaji (Dr) Kamorudeen Yusuf',
+    post: 'Vice President (Western Zone) ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. Mhir Iyenge',
+    post: 'Vice President (North East Zone) ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. Pannagiotis Katsis',
+    post: 'Vice President (Multinational) ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. Carl Cruz',
+    post: 'Vice President (Multinational) ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. Samuel Kolawole',
+    post: 'Vice President (SMI) ',
+  },
+  {
+    image: dangote,
+    name: 'Alhaji Aliko Dangote, GCON',
+    post: 'Vice President (MLCG) ',
+  },
+  {
+    image: rev,
+    name: 'Rev I.A. Agoye',
+    post: 'National Treasurer ',
+  },
+  {
+    image: alhaji,
+    name: 'Alhaji Ali S. Madugu, mni',
+    post: 'F & E Chairman ',
+  },
+  {
+    image: blank2,
+    name: 'Mrs. Kofo Akinkugbe',
+    post: 'Chairman Corporate Affairs Planning Committee ',
+  },
+  {
+    image: nzewi,
+    name: 'Engr Chukwuemeka Nzewi ',
+    post: 'Chairman Infrastructure Committee ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. Boye Olusanya',
+    post: 'Chairman Economic Policy Committee ',
+  },
+  {
+    image: blank1,
+    name: 'Alhaji Adamu Ahmed Abdlukadir',
+    post: 'EXCO Member ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. John Aluya',
+    post: 'EXCO Member ',
+  },
+  {
+    image: blank2,
+    name: 'Dr Waslat Shittu-Titilola',
+    post: 'EXCO Member ',
+  },
+  {
+    image: blank2,
+    name: 'Lady Ada Chukwudozie',
+    post: 'EXCO Member ',
+  },
+  {
+    image: blank1,
+    name: 'Mr. Segun Ajayi-Kadir, mni',
+    post: 'Director General ',
+  },
+]
 function History() {
   const [showPremium, setShowPremium] = useState(false)
   return (
@@ -554,34 +665,15 @@ function History() {
                     },
                   }}
                 >
-                  <SwiperSlide>
-                    <div className='card'>
-                      <img src={Otunba} alt='' />
-                      <p>Otunba Francis Meshioye </p>
-                      <p>President</p>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className='card'>
-                      <img src={Image} alt='' />
-                      <p>Mr. John Aluya </p>
-                      <p>Vice President, Lagos</p>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className='card'>
-                      <img src={Image} alt='' />
-                      <p>ENGR Chukwuemeka Nzewi </p>
-                      <p>Vice President, Eastern Zone</p>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className='card'>
-                      <img src={Image} alt='' />
-                      <p>President</p>
-                      <p>President</p>
-                    </div>
-                  </SwiperSlide>
+                  {Exco.map((item) => (
+                    <SwiperSlide>
+                      <div className='card'>
+                        <img src={item.image} alt='' />
+                        <p>{item.name}</p>
+                        <p>{item.post}</p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>

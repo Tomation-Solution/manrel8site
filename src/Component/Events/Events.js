@@ -9,6 +9,9 @@ import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
 import { Link } from 'react-router-dom'
 import Subscribe from '../Subscribe/Subscribe'
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+import PaymentsIcon from '@mui/icons-material/Payments'
 
 function Events() {
   const [ShowFree, setShowFree] = useState(false)
@@ -103,8 +106,23 @@ function Events() {
             {[...Array(45)].map((item) => (
               <div className='card'>
                 <img src={Image} alt='' />
-                <p className=''>March 15th, 2022 - 08:30 </p>
-                <h2>Meeting With Team Members</h2>
+                <h2>
+                  Identifying Capable Importers & Registering Manufactured
+                  Products in the ECOWAS, AfCFTA &Global Markets, for
+                  Sustainable Export.
+                </h2>
+                <div className='icons'>
+                  <CalendarMonthIcon />
+                  <p>25th - 26th January</p>
+                </div>
+                <div className='icons'>
+                  <LocationOnIcon />
+                  <p>MAN HOUSE IKEJA</p>
+                </div>
+                <div className='icons'>
+                  <PaymentsIcon />
+                  <p>NGN 70,000</p>
+                </div>
                 <div className='buttons'>
                   <button
                     onClick={() => {
@@ -112,9 +130,8 @@ function Events() {
                       setShowPaid(false)
                     }}
                   >
-                    Accept
+                    Register
                   </button>
-                  <button className='light'>Reject</button>
                 </div>
               </div>
             ))}
