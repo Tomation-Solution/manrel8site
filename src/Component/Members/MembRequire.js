@@ -25,19 +25,6 @@ function MembRequire() {
               <p>See our esteemed members across the country</p>
             </div>
           </div>
-          <div className='members_tab'>
-            <ul>
-              <Link to='/become-membership'>
-                <li className='active'>Become A Member</li>
-              </Link>
-              <Link to='/existing-membership'>
-                <li>Existing Members</li>
-              </Link>
-              {/* <Link to='/new-membership'>
-                <li>New Members</li>
-              </Link> */}
-            </ul>
-          </div>
           <div className='new_member'>
             <div className='left' style={{ width: '100%' }}>
               <div className='xard she'>
