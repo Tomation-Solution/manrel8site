@@ -69,7 +69,7 @@ function Services() {
             <div className='head'>
               <h1>MAN Power Development Company Limited (MPDCL).</h1>
             </div>
-            <div className='wrap'>
+            <div className='wrap dit'>
               <div className='card'>
                 <div className='overlay'>
                   <h1>MAN Independent Power Project (IPP)</h1>
