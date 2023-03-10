@@ -27,22 +27,22 @@ root.render(
     <ScrollToTop />
     <Routes>
       <Route path='/' element={<App />} />
-      <Route path='About' element={<About />} />
-      <Route path='Insight' element={<Insight />} />
-      <Route path='Services' element={<Services />} />
-      <Route path='News' element={<News />} />
-      <Route path='events' element={<Events />} />
-      <Route path='history' element={<History />} />
-      <Route path='become-membership' element={<Members />} />
-      <Route path='membership-requirement' element={<MembRequire />} />
-      <Route path='existing-membership' element={<ExistingMembers />} />
-      <Route path='new-membership' element={<LatestMembers />} />
-      <Route path='Insight-more' element={<InsightMore />} />
-      <Route path='gallery' element={<Gallery />} />
-      <Route path='sectoral' element={<Sectoral />} />
-      <Route path='operate' element={<Operate />} />
-      <Route path='mrc' element={<Mrc />} />
-      <Route path='mpdcl' element={<Mpdcl />} />
+      {/* <Route path='About' element={<About />} /> */}
+      <Route path='/about' element={<History />} />
+      <Route path='/insight' element={<Insight />} />
+      <Route path='/services' element={<Services />} />
+      <Route path='/news' element={<News />} />
+      <Route path='/events' element={<Events />} />
+      <Route path='/become-membership' element={<Members />} />
+      <Route path='/membership-requirement' element={<MembRequire />} />
+      <Route path='/existing-membership' element={<ExistingMembers />} />
+      <Route path='/new-membership' element={<LatestMembers />} />
+      <Route path='/insight-more' element={<InsightMore />} />
+      <Route path='/gallery' element={<Gallery />} />
+      <Route path='/sectoral' element={<Sectoral />} />
+      <Route path='/operate' element={<Operate />} />
+      <Route path='/mrc' element={<Mrc />} />
+      <Route path='/mpdcl' element={<Mpdcl />} />
     </Routes>
   </BrowserRouter>
 )

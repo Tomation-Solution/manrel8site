@@ -161,7 +161,7 @@ function History() {
           </div>
           <div className='section_history'>
             <div className='cover'>
-              <div className='about_details'>
+              <div className='about_details' id='history'>
                 <h2>OUR HISTORY</h2>
                 <p>
                   The establishment of the Manufacturers Association of Nigeria
@@ -186,7 +186,7 @@ function History() {
                   manufacturers’ collective interests.
                 </p>
               </div>
-              <div className='core_values'>
+              <div className='core_values' id='core'>
                 <h2>Core Values</h2>
                 <ul>
                   <li>
@@ -321,7 +321,7 @@ function History() {
                   </div>
                 </div>
               </div>
-              <div className='section_objects'>
+              <div className='section_objects' id='object'>
                 <div className='left'>
                   <img src={Image} alt='' />
                 </div>
@@ -361,7 +361,7 @@ function History() {
                   </ul>
                 </div>
               </div>
-              <div className='how_we'>
+              <div className='how_we' id='work'>
                 <div className='left'>
                   <h2>How We Work?</h2>
                   <p>
@@ -634,7 +634,7 @@ function History() {
                   </div>
                 </div>
               )}
-              <div className='slidertd'>
+              <div className='slidertd' id='exco'>
                 <div className='top'>
                   <div className='covert'>
                     <h1>Our Executives</h1>
