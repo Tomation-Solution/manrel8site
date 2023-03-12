@@ -115,15 +115,20 @@ function NavBar({ location }) {
         <div className='nav-list'>
           <div className='nav-row'>
             <div className='listd'>
-              <div
-                className='head'
-                onClick={() => {
-                  setshowAbout(!showAbout)
-                  closeOthers1()
-                }}
-              >
-                <p>About Us</p>
-                <KeyboardArrowDownIcon />
+              <div className='head'>
+                <p
+                  onClick={() => {
+                    navigate('/about')
+                  }}
+                >
+                  About Us
+                </p>
+                <KeyboardArrowDownIcon
+                  onClick={() => {
+                    setshowAbout(!showAbout)
+                    closeOthers1()
+                  }}
+                />
               </div>
               {!showAbout && (
                 <div className='lest-body'>
@@ -189,47 +194,73 @@ function NavBar({ location }) {
               )}
             </div>
             <div className='listd'>
-              <div
-                className='head'
-                onClick={() => {
-                  setshowServices(!showServices)
-                  closeOthers4()
-                }}
-              >
-                <p>Services</p>
-                <KeyboardArrowDownIcon />
+              <div className='head'>
+                <p
+                  onClick={() => {
+                    navigate('/services')
+                  }}
+                >
+                  Services
+                </p>
+                <KeyboardArrowDownIcon
+                  onClick={() => {
+                    setshowServices(!showServices)
+                    closeOthers4()
+                  }}
+                />
               </div>
               {!showServices && (
                 <div className='lest-body'>
                   <ul onClick={() => setshowServices(!showServices)}>
-                    <Link to='/mrc'>
-                      <li>MRC</li>
-                    </Link>
-                    <Link to='/mpdcl'>
-                      <li>MPCDL</li>
-                    </Link>
-                    <Link to='/services'>
-                      <li>Other Services</li>
-                    </Link>
+                    {location === 'services' ? (
+                      <>
+                        <a href='#mrc'>
+                          <li>MRC</li>
+                        </a>
+                        <a href='#mpdcl'>
+                          <li>MPCDL</li>
+                        </a>
+                        <a href='#services'>
+                          <li>Other Services</li>
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <Link to='/mrc'>
+                          <li>MRC</li>
+                        </Link>
+                        <Link to='/mpdcl'>
+                          <li>MPCDL</li>
+                        </Link>
+                        <Link to='/services'>
+                          <li>Other Services</li>
+                        </Link>
+                      </>
+                    )}
                   </ul>
                 </div>
               )}
             </div>
             <div className='listd'>
-              <div
-                className='head'
-                onClick={() => {
-                  setshowInsight(!showInsight)
-                  closeOthers2()
-                }}
-              >
-                <p>Insights</p>
-                <KeyboardArrowDownIcon />
+              <div className='head'>
+                <p
+                  onClick={() => {
+                    navigate('/insight')
+                  }}
+                >
+                  Insights
+                </p>
+                <KeyboardArrowDownIcon
+                  onClick={() => {
+                    setshowInsight(!showInsight)
+                    closeOthers2()
+                  }}
+                />
               </div>
               {!showInsight && (
                 <div className='lest-body'>
                   <ul onClick={() => setshowInsight(!showInsight)}>
-                    <Link to='/insight'>
+                    <Link to='/free-publication'>
                       <li>Publications</li>
                     </Link>
                     <Link to='/news'>
@@ -241,7 +272,7 @@ function NavBar({ location }) {
                     <Link to='/events'>
                       <li>Event</li>
                     </Link>
-                    <Link to='/insight'>
+                    <Link to='/reports'>
                       <li>Reports</li>
                     </Link>
                   </ul>
@@ -249,15 +280,20 @@ function NavBar({ location }) {
               )}
             </div>
             <div className='listd'>
-              <div
-                className='head'
-                onClick={() => {
-                  setshowMember(!showMember)
-                  closeOthers3()
-                }}
-              >
-                <p>Membership</p>
-                <KeyboardArrowDownIcon />
+              <div className='head'>
+                <p
+                  onClick={() => {
+                    navigate('/become-membership')
+                  }}
+                >
+                  Membership
+                </p>
+                <KeyboardArrowDownIcon
+                  onClick={() => {
+                    setshowMember(!showMember)
+                    closeOthers3()
+                  }}
+                />
               </div>
               {!showMember && (
                 <div className='lest-body'>
@@ -276,15 +312,20 @@ function NavBar({ location }) {
               )}
             </div>
             <div className='listd'>
-              <div
-                className='head'
-                onClick={() => {
-                  setshowStructure(!showStructure)
-                  closeOthers5()
-                }}
-              >
-                <p>Our Structure</p>
-                <KeyboardArrowDownIcon />
+              <div className='head'>
+                <p
+                  onClick={() => {
+                    navigate('/sectoral')
+                  }}
+                >
+                  Our Structure
+                </p>
+                <KeyboardArrowDownIcon
+                  onClick={() => {
+                    setshowStructure(!showStructure)
+                    closeOthers5()
+                  }}
+                />
               </div>
               {!showStructure && (
                 <div className='lest-body'>

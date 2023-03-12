@@ -18,7 +18,7 @@ import Footer from '../../Component/Footer/Footer'
 import Subscribe from '../Subscribe/Subscribe'
 import Premium from '../Subscribe/Premium'
 
-function App() {
+function Report() {
   const AboutList = [
     {
       image: Image1,
@@ -38,11 +38,11 @@ function App() {
     },
     {
       image: Image4,
-      title: 'Reports',
+      title: 'Gallery',
       description:
         'MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector,',
-      linkHead: 'Proceed to see Reports',
-      location: 'reports',
+      linkHead: 'Proceed to see Gallery',
+      location: 'gallery',
     },
     {
       image: Image5,
@@ -66,12 +66,12 @@ function App() {
             <div className='cover'>
               <div className='right'>
                 <div className='top'>
-                  <h2>Gallery</h2>
+                  <h2>Reports</h2>
                 </div>
                 <div className='wrap'>
                   {[...Array(12)].map((item, i) => (
                     <div className='card' key={1 + i}>
-                      <button>Gallery</button>
+                      <button>Report</button>
                       <div className='flex'>
                         <h3>Manufacturing Outlook Q4 2022</h3>
                         <OpenInNewIcon />
@@ -118,4 +118,4 @@ function App() {
   )
 }
 
-export default App
+export default Report

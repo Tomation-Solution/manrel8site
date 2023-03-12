@@ -7,8 +7,10 @@ import Footer from '../Footer/Footer'
 import Wall from '../Wall/Wall'
 import './Services.scss'
 import Subscribe from '../Subscribe/Subscribe'
+import { useNavigate } from 'react-router-dom'
 
 function Services() {
+  const navigate = useNavigate()
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -22,7 +24,7 @@ function Services() {
             </div>
           </div>
           <div className='newservices'>
-            <div className='head'>
+            <div className='head' id='mrc'>
               <h1>Manufacturers Resource Centre (MRC) Services</h1>
               <p>
                 Manufacturers Resource Centre (MRC) is the only professional
@@ -65,8 +67,11 @@ function Services() {
                   </p>
                 </div>
               </div>
+              <div className='button'>
+                <button onClick={() => navigate('/mrc')}>View More</button>
+              </div>
             </div>
-            <div className='head'>
+            <div className='head' id='mpdcl'>
               <h1>MAN Power Development Company Limited (MPDCL).</h1>
             </div>
             <div className='wrap dit'>
@@ -105,8 +110,11 @@ function Services() {
                   </p>
                 </div>
               </div>
+              <div className='button'>
+                <button onClick={() => navigate('/mpdcl')}>View More</button>
+              </div>
             </div>
-            <div className='head'>
+            <div className='head' id='services'>
               <h1>Other Services</h1>
             </div>
             <div className='wrap diff'>

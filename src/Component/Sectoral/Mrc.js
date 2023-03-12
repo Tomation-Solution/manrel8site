@@ -37,7 +37,7 @@ function Mrc() {
       <UIProvider>
         <div className='sectoral'>
           <Subscribe />
-          <NavBar location='about' />
+          <NavBar location='mrc' />
           <div className='hero_image'>
             <div className='cover'>
               <h1>Manufacturers Resource Centre (MRC)</h1>

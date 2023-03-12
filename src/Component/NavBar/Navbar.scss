@@ -84,7 +84,7 @@
         .head {
           display: flex;
           align-items: center;
-          padding-right: 20px;
+          padding-right: 40px;
           cursor: pointer;
           p {
             padding-right: 5px;
@@ -113,9 +113,9 @@
             }
             li {
               list-style: none;
-              padding-bottom: 10px;
+              padding-bottom: 20px;
               text-align: left;
-              font-size: 12px;
+              font-size: 15px;
               color: #2b3513;
               cursor: pointer;
             }

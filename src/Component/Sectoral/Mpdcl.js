@@ -33,7 +33,7 @@ function Mpdcl() {
       <UIProvider>
         <div className='sectoral'>
           <Subscribe />
-          <NavBar location='about' />
+          <NavBar location='mpdcl' />
           <div className='hero_image'>
             <div className='cover'>
               <h1>MAN Power Development Company Limited (MPDCL).</h1>

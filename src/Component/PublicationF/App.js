@@ -12,13 +12,13 @@ import Image2 from '../../images/div-8.png'
 import Image3 from '../../images/div-9.png'
 import Image4 from '../../images/div-10.png'
 import Image5 from '../../images/div-11.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Wall from '../../Component/Wall/Wall'
 import Footer from '../../Component/Footer/Footer'
 import Subscribe from '../Subscribe/Subscribe'
 import Premium from '../Subscribe/Premium'
 
-function App() {
+function Publicationf() {
   const AboutList = [
     {
       image: Image1,
@@ -28,6 +28,7 @@ function App() {
       linkHead: 'Proccee to see Pubications',
       location: 'news',
     },
+
     {
       image: Image2,
       title: 'Event',
@@ -46,32 +47,46 @@ function App() {
     },
     {
       image: Image5,
-      title: 'Publication',
+      title: 'Gallery',
       description: 'ABAs flagship magazine.',
-      linkHead: 'Proceed to see Publication',
-      location: 'free-publication',
+      linkHead: 'Proceed to see Gallery',
+      location: 'gallery',
     },
   ]
+  const navigate = useNavigate()
+  const [showPremiummodal, setShowPremiummodal] = useState(false)
 
   return (
     <ThemeProvider theme={theme}>
       <div className='insight-more'>
         <UIProvider>
+          {showPremiummodal && <Premium setPremium={setShowPremiummodal} />}
           <Subscribe />
           <NavBar location='insight' />
           <div className='hero_Image'>
-            <div className='cover'></div>
+            <div className='cover'>
+              <h1>Publication</h1>
+              <p>Read our latest reports, blogs and publications</p>
+              <button>Learn More</button>
+            </div>
           </div>
           <div className='news_main'>
             <div className='cover'>
               <div className='right'>
                 <div className='top'>
-                  <h2>Gallery</h2>
+                  <h3>
+                    Publication -{' '}
+                    <span onClick={() => navigate('/paid-publication')}>
+                      click to see paid publications
+                    </span>
+                  </h3>
                 </div>
                 <div className='wrap'>
                   {[...Array(12)].map((item, i) => (
                     <div className='card' key={1 + i}>
-                      <button>Gallery</button>
+                      <button onClick={() => setShowPremiummodal(true)}>
+                        Publication
+                      </button>
                       <div className='flex'>
                         <h3>Manufacturing Outlook Q4 2022</h3>
                         <OpenInNewIcon />
@@ -118,4 +133,4 @@ function App() {
   )
 }
 
-export default App
+export default Publicationf

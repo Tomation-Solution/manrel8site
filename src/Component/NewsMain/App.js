@@ -12,21 +12,21 @@ import Image2 from '../../images/div-8.png'
 import Image3 from '../../images/div-9.png'
 import Image4 from '../../images/div-10.png'
 import Image5 from '../../images/div-11.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Wall from '../../Component/Wall/Wall'
 import Footer from '../../Component/Footer/Footer'
 import Subscribe from '../Subscribe/Subscribe'
 import Premium from '../Subscribe/Premium'
 
-function App() {
+function NewsMain() {
   const AboutList = [
     {
       image: Image1,
-      title: 'News',
+      title: 'Report',
       description:
         'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
-      linkHead: 'Proccee to see Pubications',
-      location: 'news',
+      linkHead: 'Proccee to see Report',
+      location: 'reports',
     },
     {
       image: Image2,
@@ -38,11 +38,11 @@ function App() {
     },
     {
       image: Image4,
-      title: 'Reports',
+      title: 'Gallery',
       description:
         'MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector,',
-      linkHead: 'Proceed to see Reports',
-      location: 'reports',
+      linkHead: 'Proceed to see Gallery',
+      location: 'gallery',
     },
     {
       image: Image5,
@@ -52,6 +52,7 @@ function App() {
       location: 'free-publication',
     },
   ]
+  const navigate = useNavigate()
 
   return (
     <ThemeProvider theme={theme}>
@@ -66,15 +67,15 @@ function App() {
             <div className='cover'>
               <div className='right'>
                 <div className='top'>
-                  <h2>Gallery</h2>
+                  <h2>News</h2>
                 </div>
                 <div className='wrap'>
                   {[...Array(12)].map((item, i) => (
                     <div className='card' key={1 + i}>
-                      <button>Gallery</button>
+                      <button>News</button>
                       <div className='flex'>
                         <h3>Manufacturing Outlook Q4 2022</h3>
-                        <OpenInNewIcon />
+                        <OpenInNewIcon onClick={() => navigate('/news-page')} />
                       </div>
                       <p>January 03, 2023</p>
                     </div>
@@ -118,4 +119,4 @@ function App() {
   )
 }
 
-export default App
+export default NewsMain

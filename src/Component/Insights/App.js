@@ -5,7 +5,7 @@ import theme from '../../Styles/theme/Theme'
 import Wall from '../../Component/Wall/Wall'
 import Footer from '../../Component/Footer/Footer'
 import NavBar from '../../Component/NavBar/NavBar'
-import Articleimage from '../../images/div8.png'
+import Articleimage from '../../images/newt.png'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import Image1 from '../../images/div-7.png'
 import Image2 from '../../images/div-8.png'
@@ -30,7 +30,7 @@ function App() {
 
     {
       image: Image2,
-      title: 'Information Bank',
+      title: 'Reports',
       description:
         'Keep current on trends in banking and the issues affecting our industry, with email bulletins for ABA members tailored to your interests.',
       linkHead: 'Proceed to see Information Bank',
@@ -59,14 +59,6 @@ function App() {
       linkHead: 'Proceed to see Gallery',
       location: 'Gallery',
     },
-    {
-      image: Image1,
-      title: 'PublicationX',
-      description:
-        'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
-      linkHead: 'Procceed to see Pubications',
-      location: 'Insight-more',
-    },
   ]
   const [showPremiummodal, setShowPremiummodal] = useState(false)
 
@@ -88,13 +80,16 @@ function App() {
             <div className='cover'>
               <div className='right'>
                 <div className='top'>
-                  <h2>News</h2>
+                  <h2>Insight</h2>
                 </div>
                 <div className='wrap'>
                   {[...Array(4)].map((item, i) => (
                     <div className='card' key={1 + i}>
                       <button onClick={() => setShowPremiummodal(true)}>
-                        Publication
+                        {i === 0 && 'Publication'}
+                        {i === 1 && 'News'}
+                        {i === 2 && 'Gallery'}
+                        {i > 2 && 'Report'}
                       </button>
                       <div className='flex'>
                         <h3>Manufacturing Outlook Q4 2022</h3>
