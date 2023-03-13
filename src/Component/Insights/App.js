@@ -25,16 +25,16 @@ function App() {
       description:
         'Find reports and data from ABAs research, as well as analysis of banking industry trends.',
       linkHead: 'Proccee to see Pubications',
-      location: 'news',
+      location: 'free-publication',
     },
 
     {
       image: Image2,
-      title: 'Reports',
+      title: 'News',
       description:
         'Keep current on trends in banking and the issues affecting our industry, with email bulletins for ABA members tailored to your interests.',
-      linkHead: 'Proceed to see Information Bank',
-      location: 'Insight-more',
+      linkHead: 'Proceed to see News',
+      location: 'news',
     },
     {
       image: Image3,
@@ -50,14 +50,14 @@ function App() {
       description:
         'MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector,',
       linkHead: 'Proceed to see Reports',
-      location: 'Insight-more',
+      location: 'reports',
     },
     {
       image: Image5,
       title: 'Gallery',
       description: 'ABAs flagship magazine.',
       linkHead: 'Proceed to see Gallery',
-      location: 'Gallery',
+      location: 'gallery',
     },
   ]
   const [showPremiummodal, setShowPremiummodal] = useState(false)
