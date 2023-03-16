@@ -47,7 +47,7 @@ const ExecutiveCommitee = () => {
                     options === "branch" ? "option_item_active" : "option_item"
                   }
                 >
-                  Branch Chairmen
+                  Branch Chairmen Branch Secretary
                 </span>
                 <span
                   onClick={() => setOptions("sectoral")}

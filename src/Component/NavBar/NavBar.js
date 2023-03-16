@@ -135,25 +135,25 @@ function NavBar({ location }) {
                     {location === "about" ? (
                       <>
                         <a
-                          href="#history"
+                          href="/about#history"
                           onClick={() => setHandleToggle(!handleToggle)}
                         >
                           <li>Our History</li>
                         </a>
                         <a
-                          href="#core"
+                          href="/about#core"
                           onClick={() => setHandleToggle(!handleToggle)}
                         >
                           <li>Our Core Values</li>
                         </a>
                         <a
-                          href="#object"
+                          href="/about#object"
                           onClick={() => setHandleToggle(!handleToggle)}
                         >
                           <li>Our Objectives</li>
                         </a>
                         <a
-                          href="#work"
+                          href="/about#work"
                           onClick={() => setHandleToggle(!handleToggle)}
                         >
                           <li>How We Work</li>
@@ -167,16 +167,16 @@ function NavBar({ location }) {
                       </>
                     ) : (
                       <>
-                        <Link to="/about">
+                        <Link to="/about#history">
                           <li>Our History</li>
                         </Link>
-                        <Link to="/about">
+                        <Link to="/about#core">
                           <li>Our Core Values</li>
                         </Link>
-                        <Link to="/about">
+                        <Link to="/about#object">
                           <li>Our Objectives</li>
                         </Link>
-                        <Link to="/about">
+                        <Link to="/about#work">
                           <li>How We Work</li>
                         </Link>
                         <Link to="/exec-committee">

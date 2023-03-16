@@ -23,6 +23,8 @@ import Mrc from "./Component/Sectoral/Mrc";
 import Mpdcl from "./Component/Sectoral/Mpdcl";
 import ExecutiveCommitee from "./Component/ExecutiveCommitee/ExecutiveCommitee";
 import Publications from "./Component/Publications/Publications";
+import PublicationDetails from "./Component/Publications/PublicationDetails";
+import NewsDetails from "./Component/News/NewsDetails";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -32,6 +34,11 @@ root.render(
       {/* <Route path='About' element={<About />} /> */}
       <Route path="/exec-committee" element={<ExecutiveCommitee />} />
       <Route path="/publications" element={<Publications />} />
+      <Route
+        path="/publications-details/:id"
+        element={<PublicationDetails />}
+      />
+      <Route path="/news-details/:id" element={<NewsDetails />} />
 
       <Route path="/about" element={<History />} />
       <Route path="/insight" element={<Insight />} />
