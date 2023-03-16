@@ -230,6 +230,9 @@ function NavBar({ location }) {
                 <div className="lest-body">
                   <ul onClick={() => setshowInsight(!showInsight)}>
                     <Link to="/insight">
+                      <li>Insight</li>
+                    </Link>
+                    <Link to="/publications">
                       <li>Publications</li>
                     </Link>
                     <Link to="/news">

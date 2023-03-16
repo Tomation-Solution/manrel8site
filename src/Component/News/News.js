@@ -1,35 +1,35 @@
-import React from 'react'
-import { ThemeProvider } from '@emotion/react'
-import theme from '../../Styles/theme/Theme'
-import { UIProvider } from '../../Ui'
-import NavBar from '../NavBar/NavBar'
-import './News.scss'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import EmailIcon from '@mui/icons-material/Email'
-import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-import Footer from '../Footer/Footer'
-import Wall from '../Wall/Wall'
-import Subscribe from '../Subscribe/Subscribe'
+import React from "react";
+import { ThemeProvider } from "@emotion/react";
+import theme from "../../Styles/theme/Theme";
+import { UIProvider } from "../../Ui";
+import NavBar from "../NavBar/NavBar";
+import "./News.scss";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import EmailIcon from "@mui/icons-material/Email";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import Footer from "../Footer/Footer";
+import Wall from "../Wall/Wall";
+import Subscribe from "../Subscribe/Subscribe";
 
 function News() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <div className='news'>
-          <Subscribe/>
-          <NavBar location='news' />
-          <div className='hero_Image'>
-            <div className='cover'>
+        <div className="news">
+          <Subscribe />
+          <NavBar location="news" />
+          <div className="hero_Image">
+            <div className="cover">
               <h1>Insight</h1>
               <p>DISCLAIMER ON NME/mPAD</p>
               <button>Learn More</button>
             </div>
           </div>
-          <div className='news_main'>
-            <div className='cover'>
-              <div className='left'>
+          <div className="news_main">
+            <div className="cover">
+              <div className="left">
                 <h2>DISCLAIMER ON NME/mPAD</h2>
                 <p>
                   The Manufacturers Association of Nigeria (MAN) wishes to
@@ -70,20 +70,20 @@ function News() {
                 </p>
                 <br />
                 <p>15th August 2019</p>
-                <div className='botom'>
+                <div className="botom">
                   <FacebookIcon />
                   <LinkedInIcon />
                   <TwitterIcon />
                   <EmailIcon />
                 </div>
               </div>
-              <div className='right'>
+              <div className="right">
                 <h2>Other News</h2>
-                <div className='wrap'>
+                <div className="wrap">
                   {[...Array(10)].map((item, i) => (
-                    <div className='card' key={1 + i}>
+                    <div className="card" key={1 + i}>
                       <button>Publication</button>
-                      <div className='flex'>
+                      <div className="flex">
                         <h3>Manufacturing Outlook Q4 2022</h3>
                         <OpenInNewIcon />
                       </div>
@@ -99,7 +99,7 @@ function News() {
         </div>
       </UIProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default News
+export default News;
