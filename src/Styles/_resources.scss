@@ -47,3 +47,8 @@ $mobile-5: 650px;
     @content;
   }
 }
+@mixin mobile-900px {
+  @media (max-width: 1120px) {
+    @content;
+  }
+}

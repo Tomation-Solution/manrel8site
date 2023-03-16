@@ -1,128 +1,127 @@
-import React, { useState } from 'react'
-import { FaPlus, FaMinus } from 'react-icons/fa'
-import './Members.scss'
-import { ThemeProvider } from '@emotion/react'
-import theme from '../../Styles/theme/Theme'
-import { UIProvider } from '../../Ui'
-import NavBar from '../NavBar/NavBar'
-import Footer from '../Footer/Footer'
-import Wall from '../Wall/Wall'
-import { Link, useNavigate } from 'react-router-dom'
-import Subscribe from '../Subscribe/Subscribe'
-import ThumbUpIcon from '@mui/icons-material/ThumbUp'
-import Image from '../../images/hand.png'
-import Image2 from '../../images/Vector.png'
-import Point1 from '../../images/Frame 44-1.png'
-import Point2 from '../../images/Frame 44.png'
-import Point3 from '../../images/Frame 45.png'
-import Point4 from '../../images/Frame 46-1.png'
-import Point5 from '../../images/Group 6.png'
-import Point6 from '../../images/Frame 46.png'
+import React, { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import "./Members.scss";
+import { ThemeProvider } from "@emotion/react";
+import theme from "../../Styles/theme/Theme";
+import { UIProvider } from "../../Ui";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
+import Wall from "../Wall/Wall";
+import { useNavigate } from "react-router-dom";
+import Subscribe from "../Subscribe/Subscribe";
+import Image from "../../images/hand.png";
+import Image2 from "../../images/Vector.png";
+import Point1 from "../../images/Frame 44-1.png";
+import Point2 from "../../images/Frame 44.png";
+import Point3 from "../../images/Frame 45.png";
+import Point4 from "../../images/Frame 46-1.png";
+import Point5 from "../../images/Group 6.png";
+import Point6 from "../../images/Frame 46.png";
 
 function Members() {
   const [selectedQuest, setSelectedQuest] = useState({
-    header: '',
-    content: '',
-  })
-  const navigate = useNavigate()
+    header: "",
+    content: "",
+  });
+  const navigate = useNavigate();
   const FaqList = [
     {
-      header: ' How do I become a member of MAN?',
+      header: " How do I become a member of MAN?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
-      header: ' How long does it take to become a member?',
+      header: " How long does it take to become a member?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
-      header: ' What are the benefits of being a member of MAN?',
+      header: " What are the benefits of being a member of MAN?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
-      header: ' What is the cost of registration?',
+      header: " What is the cost of registration?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
-    },
-    {
-      header:
-        ' If I make a subscription at the middle of the existing year, do I still need to pay another subscription for the following year?',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
-    },
-    {
-      header: ' What is the duration of one subscription?',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
-    },
-    {
-      header: ' How long will it take to complete my registration?',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
-    },
-    {
-      header: ' What are the requirements for change of name?',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
       header:
-        ' What do we need to do if our company is replacing his representative to the association.',
+        " If I make a subscription at the middle of the existing year, do I still need to pay another subscription for the following year?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
-      header: ' How do we get our lost certificate replaced?',
+      header: " What is the duration of one subscription?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
-      header: ' How often do we renew our membership certificate?',
+      header: " How long will it take to complete my registration?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
-      header: ' How do we discontinue our membership with the association?',
+      header: " What are the requirements for change of name?",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
     {
       header:
-        ' What may delay the reissuance of the new membership certificate?',
+        " What do we need to do if our company is replacing his representative to the association.",
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.',
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
     },
-  ]
+    {
+      header: " How do we get our lost certificate replaced?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
+    },
+    {
+      header: " How often do we renew our membership certificate?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
+    },
+    {
+      header: " How do we discontinue our membership with the association?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
+    },
+    {
+      header:
+        " What may delay the reissuance of the new membership certificate?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
+    },
+  ];
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <div className='members'>
+        <div className="members">
           <Subscribe />
-          <NavBar location='membership' />
-          <div className='hero_image'>
-            <div className='cover'>
-              <div className='tag'>
-                <h2>Home {'>'} Membership</h2>
+          <NavBar location="membership" />
+          <div className="hero_image">
+            <div className="cover">
+              <div className="tag">
+                <h2>Home {">"} Membership</h2>
               </div>
               <h1>Membership</h1>
               <p>See our esteemed members across the country</p>
             </div>
           </div>
 
-          <div className='why'>
-            <div className='man'>
+          <div className="why">
+            <div className="man">
               <h1>Why Join MAN?</h1>
-              <img src={Image} alt='' />
+              <img src={Image} alt="" />
               <p>Here are five (5) cardinal points why you should join MAN.</p>
             </div>
-            <div className='point'>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+            <div className="point">
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>RECOGNITION</h1>
                   <p>
                     Recognition by government agencies, private sectors, and
@@ -130,11 +129,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>INFLUENCE</h1>
                   <p>
                     MAN is working day and night on behalf of members,
@@ -149,11 +148,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>INSIGHT TO FIRST-HAND INFORMATION</h1>
                   <p>
                     Whether you are planning your next business move, or
@@ -167,11 +166,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>OPPORTUNITY IN POLICY FORMULATION</h1>
                   <p>
                     Members view are well represented in policy formulation
@@ -179,11 +178,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>DIRECT INTERVENTION ON MEMBERS’ PROBLEMS</h1>
                   <p>
                     MAN work restlessly to intervening on members’ regulatory
@@ -192,45 +191,45 @@ function Members() {
                 </div>
               </div>
             </div>
-            <div className='benefits'>
-              <div className='top'>
+            <div className="benefits">
+              <div className="top">
                 <h1>MEMBERSHIP BENEFITS</h1>
               </div>
-              <div className='row1'>
-                <div className='card up'>
-                  <img src={Point1} alt='' />
+              <div className="row1">
+                <div className="card up">
+                  <img src={Point1} alt="" />
                   <p>CREDIBILITY AS MANUFACTURER</p>
                 </div>
-                <div className='card'>
-                  <img src={Point2} alt='' />
+                <div className="card">
+                  <img src={Point2} alt="" />
                   <p>DIRECT INTERVENTION ON MEMBERS’ PROBLEMS</p>
                 </div>
-                <div className='card up'>
-                  <img src={Point3} alt='' />
+                <div className="card up">
+                  <img src={Point3} alt="" />
                   <p>CONSULTANCY/ADVISORY SERVICES</p>
                 </div>
               </div>
-              <div className='row2'>
-                <div className='card up'>
-                  <img src={Point4} alt='' />
+              <div className="row2">
+                <div className="card up">
+                  <img src={Point4} alt="" />
                   <p>
                     PUBLIC POLICY ADVOCACY FOR FAVOURABLE INVESTMENT/INDUSTRIAL
                     POLICIES
                   </p>
                 </div>
-                <div className='card'>
-                  <img src={Point5} alt='' />
+                <div className="card">
+                  <img src={Point5} alt="" />
                   <p>
                     RECOGNITION BY GOVERNMENT AGENCIES AND BUSINESS COMMUNITY
                   </p>
                 </div>
-                <div className='card up'>
-                  <img src={Point6} alt='' />
+                <div className="card up">
+                  <img src={Point6} alt="" />
                   <p>PROMOTING MADE-IN-NIGERIA PRODUCTS</p>
                 </div>
               </div>
             </div>
-            <div className='respo'>
+            <div className="respo">
               <h1>RESPONSIBILITIES OF MEMBERS</h1>
               <p>
                 To effectively discharge its role as an effective Business
@@ -238,12 +237,12 @@ function Members() {
                 following responsibilities and obligations:
               </p>
             </div>
-            <div className='acrds'>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+            <div className="acrds">
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>RECOGNITION</h1>
                   <p>
                     Every member should: <br /> Endeavour to maintain in all
@@ -255,7 +254,7 @@ function Members() {
                     Nigeria’s industrial objectives and policies; placing
                     Nigeria’s best interest above all others and increasing the
                     contribution of the manufacturing sector to the economy, and
-                    towards the improvement of the quality of life of Nigerians.{' '}
+                    towards the improvement of the quality of life of Nigerians.{" "}
                     <br />
                     Promote, encourage and improve quality standards and process
                     control in all their manufacturing operations. <br /> Refer
@@ -266,11 +265,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>Payment of Subscription</h1>
                   <p>
                     Every member is bound to further, to the best of its
@@ -311,11 +310,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>General Financial Support of the Association</h1>
                   <p>
                     Members are required to give financial support including
@@ -324,11 +323,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>Supply of Data</h1>
                   <p>
                     Members should support the Association in all its
@@ -339,11 +338,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>Capacity Building for Members</h1>
                   <p>
                     Members are expected to participate in MAN training
@@ -352,11 +351,11 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className='card'>
-                <div className='left'>
-                  <img src={Image2} alt='' />
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
                 </div>
-                <div className='right'>
+                <div className="right">
                   <h1>Corporate Social Responsibility</h1>
                   <p>
                     Members of MAN should demonstrate responsible corporate
@@ -371,27 +370,27 @@ function Members() {
               </div>
             </div>
           </div>
-          <div className='rquire'>
-            <div className='over'>
+          <div className="rquire">
+            <div className="over">
               <h1>Check Out our membership requirements</h1>
-              <button onClick={() => navigate('/membership-requirement')}>
+              <button onClick={() => navigate("/membership-requirement")}>
                 Membership requirements
               </button>
             </div>
           </div>
-          <div className='faq' id='faq'>
-            <div className='faq-wrap'>
-              <div className='top'>
+          <div className="faq" id="faq">
+            <div className="faq-wrap">
+              <div className="top">
                 <h1> Frequently Asked Questions (FAQ)</h1>
               </div>
-              <div className='listt'>
-                <div className='list'>
+              <div className="listt">
+                <div className="list">
                   {FaqList.map((item) => (
                     <div
                       className={
                         selectedQuest.header === item.header
-                          ? 'card active'
-                          : 'card'
+                          ? "card active"
+                          : "card"
                       }
                       key={item.header}
                     >
@@ -415,7 +414,7 @@ function Members() {
         </div>
       </UIProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default Members
+export default Members;
