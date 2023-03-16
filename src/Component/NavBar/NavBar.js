@@ -229,9 +229,6 @@ function NavBar({ location }) {
               {!showInsight && (
                 <div className="lest-body">
                   <ul onClick={() => setshowInsight(!showInsight)}>
-                    <Link to="/insight">
-                      <li>Insight</li>
-                    </Link>
                     <Link to="/publications">
                       <li>Publications</li>
                     </Link>
@@ -244,7 +241,7 @@ function NavBar({ location }) {
                     <Link to="/events">
                       <li>Event</li>
                     </Link>
-                    <Link to="/insight">
+                    <Link to="/reports">
                       <li>Reports</li>
                     </Link>
                   </ul>

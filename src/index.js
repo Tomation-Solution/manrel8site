@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import About from "./Component/About/App";
-import Insight from "./Component/Insights/App";
+import Reports from "./Component/Reports/Reports";
 import reportWebVitals from "./reportWebVitals";
 import News from "./Component/News/News";
 import Members from "./Component/Members/Members";
@@ -25,6 +25,8 @@ import ExecutiveCommitee from "./Component/ExecutiveCommitee/ExecutiveCommitee";
 import Publications from "./Component/Publications/Publications";
 import PublicationDetails from "./Component/Publications/PublicationDetails";
 import NewsDetails from "./Component/News/NewsDetails";
+import GalleryDetails from "./Component/Gallery/GalleryDetails/GalleryDetails";
+import ReportsDetails from "./Component/Reports/ReportsDetails";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -39,9 +41,13 @@ root.render(
         element={<PublicationDetails />}
       />
       <Route path="/news-details/:id" element={<NewsDetails />} />
+      <Route path="/gallery-details/:id" element={<GalleryDetails />} />
+
+      <Route path="/report-details/:id" element={<ReportsDetails />} />
+      <Route path="/reports" element={<Reports />} />
+      <Route path="/gallery" element={<Gallery />} />
 
       <Route path="/about" element={<History />} />
-      <Route path="/insight" element={<Insight />} />
       <Route path="/services" element={<Services />} />
       <Route path="/news" element={<News />} />
       <Route path="/events" element={<Events />} />
@@ -50,7 +56,6 @@ root.render(
       <Route path="/existing-membership" element={<ExistingMembers />} />
       <Route path="/new-membership" element={<LatestMembers />} />
       <Route path="/insight-more" element={<InsightMore />} />
-      <Route path="/gallery" element={<Gallery />} />
       <Route path="/sectoral" element={<Sectoral />} />
       <Route path="/operate" element={<Operate />} />
       <Route path="/mrc" element={<Mrc />} />

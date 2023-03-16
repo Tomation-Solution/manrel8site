@@ -1,9 +1,9 @@
-@import '../../Styles//resources';
+@import '../../Styles/resources';
 .news {
   .hero_Image {
     height: 40vh;
     max-height: 424px;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url('../../images/new-images/NewsBgImg.png');
     background-size: cover;
     background-position: center;

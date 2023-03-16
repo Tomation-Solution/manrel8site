@@ -11,6 +11,8 @@ import ArtNature2 from "../../images/new-images/ArtNature2.png";
 import ArtNature3 from "../../images/new-images/ArtNature3.png";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { newsdata } from "../News/NewsData";
+import { Link } from "react-router-dom";
 
 function Article() {
   const [imageIndex, setImageIndex] = useState(0); // Set initial index to 0
@@ -40,14 +42,16 @@ function Article() {
               <h2>News</h2>
             </div>
             <div className="wrap">
-              {[...Array(4)].map((item, i) => (
-                <div className="card" key={1 + i}>
-                  <button>Publication</button>
+              {newsdata.map((item) => (
+                <div className="card" key={item.id}>
+                  <button>News</button>
                   <div className="flex">
-                    <h3>Manufacturing Outlook Q4 2022</h3>
-                    <OpenInNewIcon />
+                    <h3>{item.name}</h3>
+                    <Link to={`/news-details/${item.id}`}>
+                      <OpenInNewIcon />
+                    </Link>
                   </div>
-                  <p>January 03, 2023</p>
+                  <p>{item?.date}</p>
                 </div>
               ))}
             </div>
