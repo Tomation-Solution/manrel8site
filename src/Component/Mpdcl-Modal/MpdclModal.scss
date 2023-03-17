@@ -1,0 +1,28 @@
+.modal{
+  background-color: #fff;
+  padding: 20px;
+  width: 500px;
+  border-radius: 10px;
+  h1{
+    font-weight: 700;
+    color: #343334;
+    margin: 20px 0px;
+  }
+  p{
+    margin: 10px 0px;
+  }
+
+  .btn-container{
+    display: flex;
+    margin: 50px 0px;
+    justify-content: center;
+    align-items: center;
+    button{
+        border-radius: 10px;
+        border: 1px solid #555d42;
+        padding: 10px 20px;
+        color:#555d42;
+        cursor: pointer;
+    }
+  }
+}
