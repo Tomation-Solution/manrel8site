@@ -26,7 +26,6 @@ function App() {
       linkHead: "Proccee to see Pubications",
       location: "publications",
     },
-
     {
       image: Image2,
       title: "Information Bank",

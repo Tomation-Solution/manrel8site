@@ -9,6 +9,7 @@ import "./Services.scss";
 import Subscribe from "../Subscribe/Subscribe";
 
 function Services() {
+  const navigate = useNavigate();
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -65,6 +66,9 @@ function Services() {
                   </p>
                 </div>
               </div>
+              <div className="button">
+                <button onClick={() => navigate("/mrc")}>View More</button>
+              </div>
             </div>
             <div className="head">
               <h1>MAN Power Development Company Limited (MPDCL).</h1>
@@ -104,6 +108,9 @@ function Services() {
                     application to NERC
                   </p>
                 </div>
+              </div>
+              <div className="button">
+                <button onClick={() => navigate("/mpdcl")}>View More</button>
               </div>
             </div>
             <div className="head">

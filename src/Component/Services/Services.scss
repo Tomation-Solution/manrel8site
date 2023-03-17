@@ -259,6 +259,20 @@
           }
         }
       }
+      .button {
+        width: 100%;
+        text-align: center;
+        button {
+          width: 100%;
+          background: #2b3513;
+          border-radius: 500px;
+          padding: 15px 20px;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          width: fit-content;
+        }
+      }
       &.diff {
         .card {
           width: 24%;
