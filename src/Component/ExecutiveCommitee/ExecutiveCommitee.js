@@ -11,6 +11,7 @@ import Sectoral from "./ExecCom-Components/Sectoral";
 import Branch from "./ExecCom-Components/Branch";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
+import Secetary from "./ExecCom-Components/Secetary";
 
 const ExecutiveCommitee = () => {
   const [options, setOptions] = useState("executive");
@@ -47,7 +48,17 @@ const ExecutiveCommitee = () => {
                     options === "branch" ? "option_item_active" : "option_item"
                   }
                 >
-                  Branch Chairmen Branch Secretary
+                  Branch Chairmen
+                </span>
+                <span
+                  onClick={() => setOptions("secretary")}
+                  className={
+                    options === "secretary"
+                      ? "option_item_active"
+                      : "option_item"
+                  }
+                >
+                  Branch Secretary
                 </span>
                 <span
                   onClick={() => setOptions("sectoral")}
@@ -64,6 +75,8 @@ const ExecutiveCommitee = () => {
               {options === "executive" && <Executive />}
 
               {options === "branch" && <Branch />}
+
+              {options === "secretary" && <Secetary />}
 
               {options === "sectoral" && <Sectoral />}
             </div>

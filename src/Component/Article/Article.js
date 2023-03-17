@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./Article.scss";
-// import Articleimage1 from '../../images/div8.png'
-// import Articleimage2 from '../../images/art (1).png'
-// import Articleimage3 from '../../images/art (2).png'
-// import Articleimage4 from '../../images/art (3).png'
 
 import Manufacturing from "../../images/new-images/Manufacturing.png";
 import ArtNature1 from "../../images/new-images/ArtNature1.png";
@@ -16,7 +12,9 @@ import { Link } from "react-router-dom";
 
 function Article() {
   const [imageIndex, setImageIndex] = useState(0); // Set initial index to 0
-  const images = [Manufacturing, ArtNature1, ArtNature2, ArtNature3];
+  const images = useMemo(() => {
+    return [Manufacturing, ArtNature1, ArtNature2, ArtNature3];
+  }, []);
   useEffect(() => {
     // Use setInterval to change the image every 5 seconds
     const interval = setInterval(() => {

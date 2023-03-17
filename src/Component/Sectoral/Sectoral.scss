@@ -274,6 +274,9 @@
           @include mobile-3 {
             width: 100%;
           }
+          button{
+            cursor: pointer;
+          }
           .flex {
             display: flex;
             padding-bottom: 20px;
