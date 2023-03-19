@@ -1,0 +1,229 @@
+@import "../../Styles/resources";
+
+.member-require {
+  .topBg {
+    min-height: 50vh;
+    min-height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("../../images/new-images/MemberRequirement.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
+    @include mobile-3 {
+      padding: 50px 20px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+    h1 {
+      font-size: 50px;
+      margin: 30px 0px;
+      font-weight: 400;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+  .membreq-header {
+    text-align: center;
+    font-weight: 400;
+    color: #2b3513;
+    margin: 30px 0px;
+  }
+  .membreq-subheader {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0px;
+    text-align: center;
+  }
+
+  .membreq-steps {
+    margin: 30px 0px;
+    padding: 0px 40px;
+
+    @include mobile-2 {
+      padding: 0px 20px;
+    }
+    h1 {
+      color: #2b3513;
+      margin: 20px 0px;
+    }
+
+    .steps-items {
+      position: relative;
+      border-left: 1px solid #d3d3d3;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 30px;
+      padding: 30px;
+      @include mobile-2 {
+        grid-template-columns: auto;
+        padding: 10px;
+      }
+
+      .step-item {
+        position: relative;
+        padding: 60px 30px 30px 30px;
+        .circled-num {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 0;
+          right: 0;
+          top: -30px;
+          margin-left: auto;
+          margin-right: auto;
+          p {
+            color: #2b3513;
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+        .step-item-text {
+          color: #fff;
+          text-align: center;
+        }
+      }
+      .gray-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #2b3513;
+        position: absolute;
+        top: 0;
+        left: -25px;
+      }
+    }
+
+    .steps-items2 {
+      position: relative;
+      border-left: 1px solid #d3d3d3;
+      padding: 30px;
+
+      .gray-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #2b3513;
+        position: absolute;
+        top: 0;
+        left: -25px;
+      }
+
+      span {
+        display: block;
+        font-weight: 700;
+        margin: 40px 0px;
+        a {
+          text-decoration: none;
+          color: #2b3513;
+        }
+      }
+    }
+  }
+  .join-us {
+    color: #fff;
+    background-color: #343a40;
+    padding: 30px 50px;
+    margin: 50px 0px;
+
+    h1 {
+      font-weight: 400;
+      margin: 30px 0px;
+    }
+    p {
+      line-height: 25px;
+    }
+  }
+  .eligibilty {
+    padding: 30px;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-weight: 400;
+      color: #2b3513;
+      margin: 20px 0px;
+    }
+    h4 {
+      font-weight: 400;
+      color: #2b3513;
+      margin: 10px 0px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      label {
+        input {
+          margin-right: 10px;
+        }
+      }
+
+      button {
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: #2b3513;
+        outline: none;
+        margin: 30px 0px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+  .prospective {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #343a40;
+    margin: 50px 0px;
+    color: #fff;
+    padding: 30px;
+    h1 {
+      font-weight: 400;
+      margin: 30px 0px;
+    }
+    p {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        padding: 20px;
+        outline: none;
+        border: 1px solid #fff;
+        margin: 20px 0px;
+        color: #fff;
+        background-color: transparent;
+        &::placeholder {
+          color: #fff;
+        }
+      }
+      button {
+        border-radius: 20px;
+        padding: 10px 20px;
+        background-color: #2b3513;
+        outline: none;
+        margin: 30px 0px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

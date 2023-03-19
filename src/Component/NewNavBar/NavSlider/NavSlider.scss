@@ -1,0 +1,64 @@
+.nav-slider {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 600px;
+  overflow-y: auto;
+
+  .nav-slider-item {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    span {
+      font-size: 18px;
+      color: #1f260d;
+      font-weight: 500;
+    }
+    .items {
+      margin-left: 10px;
+      margin-top: 10px;
+      border-top: 1px solid #1f260d;
+      display: flex;
+      flex-direction: column;
+      .items-span {
+        font-size: 16px;
+        margin: 5px 0px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: #383f48;
+          padding: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+  .nav-slider-translate {
+    margin: 20px 0px;
+    margin-right: 10px;
+  }
+  .nav-slider-join {
+    margin: 20px 0px;
+    button {
+      padding: 10px 30px;
+      outline: none;
+      border: 1px solid #1f260d;
+      color: #1f260d;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

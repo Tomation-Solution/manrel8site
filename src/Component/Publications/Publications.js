@@ -3,7 +3,6 @@ import { ThemeProvider } from "@emotion/react";
 import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
 import Subscribe from "../Subscribe/Subscribe";
-import NavBar from "../NavBar/NavBar";
 
 import "./Publications.scss";
 import Wall from "../Wall/Wall";
@@ -13,6 +12,8 @@ import Articleimage from "../../images/new-images/PublicationImg.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { pubdata } from "./PublicationsData";
 import { Link } from "react-router-dom";
+import { InsightQuickNavigation } from "../Gallery/App";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 const Publications = () => {
   return (
@@ -21,7 +22,7 @@ const Publications = () => {
         <UIProvider>
           <div className="publications">
             <Subscribe />
-            <NavBar location="about" />
+            <NewNavBar />
 
             <div className="hero_image">
               <div className="cover">
@@ -63,6 +64,7 @@ const Publications = () => {
                 </div>
                 <div className="left">
                   <img src={Articleimage} alt="" />
+                  <InsightQuickNavigation />
                 </div>
               </div>
             </div>

@@ -1,35 +1,34 @@
-import React from 'react'
-import './Members.scss'
-import { ThemeProvider } from '@emotion/react'
-import theme from '../../Styles/theme/Theme'
-import { UIProvider } from '../../Ui'
-import NavBar from '../NavBar/NavBar'
-import Footer from '../Footer/Footer'
-import Wall from '../Wall/Wall'
-import Subscribe from '../Subscribe/Subscribe'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./Members.scss";
+import { ThemeProvider } from "@emotion/react";
+import theme from "../../Styles/theme/Theme";
+import { UIProvider } from "../../Ui";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
+import Wall from "../Wall/Wall";
+import Subscribe from "../Subscribe/Subscribe";
 
 function MembRequire() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <div className='members'>
+        <div className="members">
           <Subscribe />
-          <NavBar location='membership' />
-          <div className='hero_image'>
-            <div className='cover'>
-              <div className='tag'>
-                <h2>Home {'>'} Membership</h2>
+          <NavBar location="membership" />
+          <div className="hero_image">
+            <div className="cover">
+              <div className="tag">
+                <h2>Home {">"} Membership</h2>
               </div>
               <h1>Membership</h1>
               <p>See our esteemed members across the country</p>
             </div>
           </div>
-          <div className='new_member'>
-            <div className='left' style={{ width: '100%' }}>
-              <div className='xard she'>
+          <div className="new_member">
+            <div className="left" style={{ width: "100%" }}>
+              <div className="xard she">
                 <h2>Membership Requirements</h2>
-                <p className=''>
+                <p className="">
                   The membership requirement steps below detail the process to
                   becoming a member of MAN
                 </p>
@@ -114,8 +113,8 @@ function MembRequire() {
                 </ul>
               </div>
             </div>
-            <div className='left' style={{ width: '100%' }}>
-              <div className='join'>
+            <div className="left" style={{ width: "100%" }}>
+              <div className="join">
                 <h2>JOIN US!</h2>
                 <p>
                   You have made a great choice for your company by deciding to
@@ -146,7 +145,7 @@ function MembRequire() {
         </div>
       </UIProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default MembRequire
+export default MembRequire;

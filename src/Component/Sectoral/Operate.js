@@ -1,43 +1,44 @@
-import React from 'react'
-import { ThemeProvider } from '@mui/system'
-import { UIProvider } from '../../Ui'
-import theme from '../../Styles/theme/Theme'
-import Wall from '../Wall/Wall'
-import Footer from '../Footer/Footer'
-import NavBar from '../NavBar/NavBar'
-import Subscribe from '../Subscribe/Subscribe'
-import './Sectoral.scss'
-import Vector from '../../images/Vector.png'
+import React from "react";
+import { ThemeProvider } from "@mui/system";
+import { UIProvider } from "../../Ui";
+import theme from "../../Styles/theme/Theme";
+import Wall from "../Wall/Wall";
+import Footer from "../Footer/Footer";
+import Subscribe from "../Subscribe/Subscribe";
+import "./Sectoral.scss";
+import Vector from "../../images/Vector.png";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 function Operate() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <div className='sectoral'>
+        <div className="sectoral">
           <Subscribe />
-          <NavBar location='about' />
-          <div className='hero_image diff'>
-            <div className='cover'>
+          <NewNavBar />
+          <div className="hero_image diff">
+            <div className="cover">
               <h1>WHERE WE OPERATE</h1>
               <p>Contact information of our different offices</p>
             </div>
           </div>
           <iframe
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3720436839126!2d3.3411232144587806!3d6.600601624094209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93d0020d7c01%3A0xaa96f6bac823fb29!2sManufacturers%20Association%20Of%20Nigeria!5e0!3m2!1sen!2sng!4v1678197308053!5m2!1sen!2sng'
-            width='100%'
-            height='450'
-            style={{ border: '0' }}
-            allowFullScreen=''
-            loading='lazy'
-            referrerPolicy='no-referrer-when-downgrade'
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3720436839126!2d3.3411232144587806!3d6.600601624094209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93d0020d7c01%3A0xaa96f6bac823fb29!2sManufacturers%20Association%20Of%20Nigeria!5e0!3m2!1sen!2sng!4v1678197308053!5m2!1sen!2sng"
+            width="100%"
+            title="title1"
+            height="450"
+            style={{ border: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <div className='sect-body'>
-            <div className='cover'>
+          <div className="sect-body">
+            <div className="cover">
               <div>
-                <h1 className='head-h1'>
+                <h1 className="head-h1">
                   The Association has one National Secretariat
                 </h1>
-                <p className='head'>
+                <p className="head">
                   In order to cater for members who have near homogenous or
                   sector-specific products, MAN has ten (10) Sectoral Groups and
                   seventy seven (77) Sub-Sectoral Groups. The Groups are
@@ -45,9 +46,9 @@ function Operate() {
                   National Secretariat of the Association.
                 </p>
               </div>
-              <div className='corpor'>
-                <div className='flex'>
-                  <img src={Vector} alt='' />
+              <div className="corpor">
+                <div className="flex">
+                  <img src={Vector} alt="" />
                   <h2>MAN Corporate Offices</h2>
                 </div>
                 <p>
@@ -59,8 +60,8 @@ function Operate() {
                   Ogbeni-Oja of Ijebu-Ode.
                 </p>
               </div>
-              <div className='house'>
-                <div className='card'>
+              <div className="house">
+                <div className="card">
                   <h1>MAN House</h1>
                   <p>
                     77, Obafemi Awolowo Way Ikeja, Lagos State, Nigeria
@@ -70,7 +71,7 @@ function Operate() {
                     www.manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Abuja Liaison Office</h1>
                   <p>
                     Suit 202, Adamawa Plaza, Central Business District 1, Abuja
@@ -80,9 +81,9 @@ function Operate() {
                   </p>
                 </div>
               </div>
-              <div className='corpor'>
-                <div className='flex'>
-                  <img src={Vector} alt='' />
+              <div className="corpor">
+                <div className="flex">
+                  <img src={Vector} alt="" />
                   <h2>Branch Offices</h2>
                 </div>
                 <p>
@@ -97,8 +98,8 @@ function Operate() {
                   full-time Executive Secretaries and a compliment of staff.
                 </p>
               </div>
-              <div className='house'>
-                <div className='card'>
+              <div className="house">
+                <div className="card">
                   <h1>MAN Abuja</h1>
                   <p>
                     Suite 202, Adamawa Plaza, Central Business District 1, Abuja
@@ -108,7 +109,7 @@ function Operate() {
                     sunday.adejoh@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Anambra/Enugu/Ebonyi</h1>
                   <p>
                     18 (Formerly 2A) Chime Avenue, New Haven P.O.Box 9536,
@@ -119,7 +120,7 @@ function Operate() {
                     sunday.sotomi@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Ikeja</h1>
                   <p>
                     2A, Akilo Road Ogba, Lagos <br />
@@ -129,7 +130,7 @@ function Operate() {
                     oluchi.odimuko@manufacturersnigeria.org manikeja1@yahoo.com
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Apapa</h1>
                   <p>
                     3, Shalom Street, beside Brian Premier School By Lagoon
@@ -140,7 +141,7 @@ function Operate() {
                     manapapabranch@gmail.com
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Ogun</h1>
                   <p>
                     Km.4, (Beside Oba T. Dada Market) Ota, Idiroko Road, Sango
@@ -150,7 +151,7 @@ function Operate() {
                     manogun25@gmail.com
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Edo/Delta </h1>
                   <p>
                     Plot 4, AlexandarOgun Road, Evboriria Industrial Estate, Km
@@ -160,7 +161,7 @@ function Operate() {
                     lucky.amachree@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Bauchi/Benue/Plateau</h1>
                   <p>
                     7, Suzi Garden, TafawaBalewa Street P.O.Box 862, Jos <br />
@@ -170,7 +171,7 @@ function Operate() {
                     augustine.egili@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Kano Bompai</h1>
                   <p>
                     Kano Foundation Building 15, B.U.K. Road, Kano <br /> Tel:
@@ -179,7 +180,7 @@ function Operate() {
                     attahir.gwazo@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Kano Sharada/Challawa</h1>
                   <p>
                     Kano Foundation Building 15, B.U.K. Road, Kano. <br />
@@ -187,7 +188,7 @@ function Operate() {
                     E-mail: attahir.gwarzo@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Imo/Abia </h1>
                   <p>
                     15A (19A) Wetheral Road, Flat No.2 P.O.Box 973, Owerri
@@ -197,7 +198,7 @@ function Operate() {
                     cyprian.nnadozie@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Oyo/Ondo/Osun/Ekiti</h1>
                   <p>
                     5, Ighodaro Road, Jericho P.O.Box 16159, Ibadan <br />
@@ -206,7 +207,7 @@ function Operate() {
                     man.ibadan@yahoo.com
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Rivers </h1>
                   <p>
                     Plot 26, Danjuma Drive, Behind Savannah Bank P.M.B. 082,
@@ -216,7 +217,7 @@ function Operate() {
                     manrivers23@yahoo.com; chibuzo.eze@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Kaduna North</h1>
                   <p>
                     No.1, KeffiClose Opp. BOC Gases Nig. Plc P.O.Box 4361,
@@ -226,7 +227,7 @@ function Operate() {
                     Muhammad.muhammad@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Kaduna South </h1>
                   <p>
                     No.1, KeffiClose Opp. BOC Gases Nig. Plc P.O.Box 4361,
@@ -236,7 +237,7 @@ function Operate() {
                     Muhammad.muhammad@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1>MAN Crossriver/Akwa-Ibom</h1>
                   <p>
                     Tel: 07064372015, 08097393470, <br /> E-mail:
@@ -244,7 +245,7 @@ function Operate() {
                     offiong.essien@manufacturersnigeria.org
                   </p>
                 </div>
-                <div className='card'>
+                <div className="card">
                   <h1> MAN Kwara/Kogi </h1>
                   <p>
                     Plot 1, Irewolede Road, Along Yidi Road, Ilorin, Kwara
@@ -263,7 +264,7 @@ function Operate() {
         </div>
       </UIProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default Operate
+export default Operate;

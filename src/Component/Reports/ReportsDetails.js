@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 import React from "react";
 import { UIProvider } from "../../Ui";
-import NavBar from "../NavBar/NavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import theme from "../../Styles/theme/Theme";
 
@@ -18,6 +17,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Link, useParams } from "react-router-dom";
 import { reportdata } from "./ReportData";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 const ReportsDetails = () => {
   const { id } = useParams();
@@ -31,7 +31,7 @@ const ReportsDetails = () => {
         <UIProvider>
           <div className="publications-details">
             <Subscribe />
-            <NavBar location="about" />
+            <NewNavBar />
 
             <div className="hero_image">
               <div className="cover">
@@ -52,6 +52,7 @@ const ReportsDetails = () => {
                     <a
                       className="readmore-link"
                       href={renderdata.link}
+                      rel="noreferrer"
                       target="_blank"
                     >
                       Read More...

@@ -2,11 +2,11 @@ import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../Styles/theme/Theme";
 import { UIProvider } from "../../Ui";
-import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import "./Services.scss";
 import Subscribe from "../Subscribe/Subscribe";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 function Services() {
   return (
@@ -14,7 +14,7 @@ function Services() {
       <UIProvider>
         <div className="services">
           <Subscribe />
-          <NavBar location="services" />
+          <NewNavBar />
           <div className="hero_image">
             <div className="cover">
               <h1>Services</h1>

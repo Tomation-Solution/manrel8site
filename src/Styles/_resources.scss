@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 $background: #fff;
 $backgroundl: #f4f4f4;
 $textcolor1: #000;
@@ -8,7 +8,7 @@ $mobile-1: 1100px;
 $mobile-2: 700px;
 $mobile-3: 600px;
 $mobile-4: 420px;
-$mobile-5: 650px;
+$mobile-5: 650px; //
 $mobile-6: 800px;
 
 @mixin flex {
@@ -55,6 +55,6 @@ $mobile-6: 800px;
 }
 @mixin mobile-6 {
   @media (max-width: $mobile-6) {
-    @content
+    @content;
   }
 }

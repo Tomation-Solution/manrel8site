@@ -4,7 +4,6 @@ import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import NavBar from "../NavBar/NavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import "./Sectoral.scss";
 import Vector from "../../images/Vector.png";
@@ -18,6 +17,7 @@ import PaymentsIcon from "@mui/icons-material/Payments";
 import Image from "../../images/Rectangle 224.png";
 
 import MrcImg1 from "../../images/new-images/MrcImg1.png";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 function Mrc() {
   const sectoralList = [
@@ -43,7 +43,7 @@ function Mrc() {
       <UIProvider>
         <div className="sectoral">
           <Subscribe />
-          <NavBar location="about" />
+          <NewNavBar />
           <div className="hero_image">
             <div className="cover">
               <h1>Manufacturers Resource Centre (MRC)</h1>

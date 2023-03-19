@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import theme from "../../../Styles/theme/Theme";
 import { UIProvider } from "../../../Ui";
 import Footer from "../../Footer/Footer";
-import NavBar from "../../NavBar/NavBar";
+import NewNavBar from "../../NewNavBar/NewNavBar";
 import Subscribe from "../../Subscribe/Subscribe";
 import Wall from "../../Wall/Wall";
 import { gallerydata } from "./GalleryData";
@@ -22,7 +22,7 @@ const GalleryDetails = () => {
         <UIProvider>
           <div className="gallery-details">
             <Subscribe />
-            <NavBar location="about" />
+            <NewNavBar />
 
             <div className="hero_Image">
               <div className="cover">
