@@ -27,7 +27,7 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Otunba Francis Meshioye President</p>
-          <p className="detail">Director</p>
+          {/* <p className="detail">Director</p>
           <p className="detail">
             JMG Limited Plot 15, Block A Gbagada Industrial Scheme, Gbagada,
             Lagos
@@ -35,7 +35,7 @@ const ManualRenders = () => {
           <p className="detail">
             E-mail: francismesh@hotmail.com; francish@jmglimited.com
           </p>
-          <p className="detail">Tel: 08055444999, 08034911111</p>
+          <p className="detail">Tel: 08055444999, 08034911111</p> */}
         </div>
       </div>
 
@@ -45,15 +45,14 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Prince Oba Okojie Vice President, Lagos</p>
-          Director
-          <p className="detail">Director</p>
+          {/* <p className="detail">Director</p>
           <p className="detail">
             Ikorodu Steel Mill Ltd. Ikorodu Industrial Estate Odogunyan, Ikorodu
           </p>
           <p className="detail">Email: onose359@gmail.com</p>
           <p className="detail">
             Tel: 08033026968, 08072181217, 08053349846, 07032853841
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -66,7 +65,7 @@ const ManualRenders = () => {
             Engr Ilyasu Saleh Vice President (Kaduna North West Zone)
           </p>
 
-          <p className="detail">Managing Director</p>
+          {/* <p className="detail">Managing Director</p>
           <p className="detail">
             Zaria Industries Limited Zaria Old Jos Road, Kaduna.
           </p>
@@ -74,7 +73,7 @@ const ManualRenders = () => {
             E-mail :premier_tarpaulin@yahoo.com siazinternational@yahoo.com
             ilyasaleh59@yahoo.com
           </p>
-          <p className="detail">Tel :08037016789; 08023218081</p>
+          <p className="detail">Tel :08037016789; 08023218081</p> */}
         </div>
       </div>
 
@@ -88,13 +87,13 @@ const ManualRenders = () => {
             Eastern Zone
           </p>
 
-          <p className="detail">Managing Director</p>
+          {/* <p className="detail">Managing Director</p>
           <p className="detail">
             Danelec Limited, Plot 278, Trans Amadi Industrial Layout Trans
             Amadi, Port Harcourt
           </p>
           <p className="detail">Email: gmassari@danelec-ltd.com</p>
-          <p className="detail">Tel: 08033103102, 08034070540, 08055029301</p>
+          <p className="detail">Tel: 08033103102, 08034070540, 08055029301</p> */}
         </div>
       </div>
 
@@ -107,14 +106,14 @@ const ManualRenders = () => {
             Alhaji (Dr) Kamorudeen Yusuf Vice President (Western Zone)
           </p>
 
-          <p className="detail">GMD/CEO </p>
+          {/* <p className="detail">GMD/CEO </p>
           <p className="detail">
             Kam Industries Nigeria Limited Asa Dam Road Ilorin, Kwara State
           </p>
           <p className="detail">
             Email: yusuf@kamholding.net kamwire@yahoo.com
           </p>
-          <p className="detail">Tel:08038133830</p>
+          <p className="detail">Tel:08038133830</p> */}
         </div>
       </div>
 
@@ -127,12 +126,12 @@ const ManualRenders = () => {
             Mr. Mhir Iyenge Vice President (North East Zone)
           </p>
 
-          <p className="detail">Managing Directorr</p>
+          {/* <p className="detail">Managing Directorr</p>
           <p className="detail">
             Green Source Farm Produce Ltd No. 42, J. S. Tarka Road Markudi
           </p>
           <p className="detail">Email: thereturnpress@gmail.com</p>
-          <p className="detail">Tel: 08036177895, 08028228159</p>
+          <p className="detail">Tel: 08036177895, 08028228159</p> */}
         </div>
       </div>
 
@@ -144,14 +143,14 @@ const ManualRenders = () => {
           <p className="header">
             Mr. Pannagiotis Katsis Vice President (Multinational)
           </p>
-
+          {/* 
           <p className="detail">Managing Director</p>
           <p className="detail">
             PZ Cussons Plc. 45/47, Town Planning Way, Ilupeju Ind. Estate,
             Ilupeju, Lagos
           </p>
           <p className="detail">E-mail:Panagiotis.Katsis@pzcussons.com</p>
-          <p className="detail">Tel;09062897577</p>
+          <p className="detail">Tel;09062897577</p> */}
         </div>
       </div>
 
@@ -162,12 +161,12 @@ const ManualRenders = () => {
         <div className="right">
           <p className="header">Mr. Carl Cruz Vice President (Multinational)</p>
 
-          <p className="detail">Managing Director</p>
+          {/* <p className="detail">Managing Director</p>
           <p className="detail">
             Unilever Nigeria Plc. Billings Way, Oregun, Lagos.
           </p>
           <p className="detail">E-mail: carl.cruz@unilever.com</p>
-          <p className="detail">Tel: 09010988888</p>
+          <p className="detail">Tel: 09010988888</p> */}
         </div>
       </div>
 
@@ -178,13 +177,13 @@ const ManualRenders = () => {
         <div className="right">
           <p className="header">Mr. Samuel Kolawole Vice President (SMI)</p>
 
-          <p className="detail">Managing Director/CEO</p>
+          {/* <p className="detail">Managing Director/CEO</p>
           <p className="detail">
             University Press Plc. Three Crowns Building, Jericho P. M. B. 5095,
             Ibadan
           </p>
           <p className="detail">Email: samkolawole@gmail.com</p>
-          <p className="detail">Tel: 08023421333</p>
+          <p className="detail">Tel: 08023421333</p> */}
         </div>
       </div>
 
@@ -196,14 +195,14 @@ const ManualRenders = () => {
           <p className="header">
             Alhaji Aliko Dangote, GCON Vice President (MLCG)
           </p>
-
+          {/* 
           <p className="detail">Dangote Group</p>
           <p className="detail">
             Marble House. 3, Osborne Road Falomo, Ikoyi Lagos.
           </p>
           <p className="detail">
             Email : aliko.dangote@dangote.com; aliko.dangote@dangote-group.com
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -214,13 +213,13 @@ const ManualRenders = () => {
         <div className="right">
           <p className="header">Rev. Isaac Agoye National Treasurer</p>
 
-          <p className="detail">Director</p>
+          {/* <p className="detail">Director</p>
           <p className="detail">
             Friesland Food WAMCO Nig. Plc, 7B, ACME Road, Ikeja, Industrial
             Estate, Ogba, Ikeja.
           </p>
           <p className="detail">Email:ombolawosanma@gmail.com</p>
-          <p className="detail">Tel:08034021309, 08059268260</p>
+          <p className="detail">Tel:08034021309, 08059268260</p> */}
         </div>
       </div>
 
@@ -233,12 +232,12 @@ const ManualRenders = () => {
             Mr. Omoboyede Olusanya Chairman Economic Policy Committee
           </p>
 
-          <p className="detail">Managing Director</p>
+          {/* <p className="detail">Managing Director</p>
           <p className="detail">
             Flour Mills Nigeria Plc 1, Golden Penny Place, Apapa, Lagos.
           </p>
           <p className="detail">Email: bolusanya@fmnplc.com</p>
-          <p className="detail">Tel: 08022220007</p>
+          <p className="detail">Tel: 08022220007</p> */}
         </div>
       </div>
 
@@ -252,7 +251,7 @@ const ManualRenders = () => {
             Planning Committee
           </p>
 
-          <p className="detail">CEO/Managing Director</p>
+          {/* <p className="detail">CEO/Managing Director</p>
           <p className="detail">
             Secure ID Nigeria Limited Plot K9, Apapa/Oshodi Expressway,
             Iyana-Isolo Lagos.
@@ -260,7 +259,7 @@ const ManualRenders = () => {
           <p className="detail">
             Email: kakinkugbe@secureidltd.com info@secureidltd.com
           </p>
-          <p className="detail">Tel: 08167548090; 08033017721</p>
+          <p className="detail">Tel: 08167548090; 08033017721</p> */}
         </div>
       </div>
 
@@ -273,7 +272,7 @@ const ManualRenders = () => {
             Engr. Chukwuemeka Nzewi Chairman, Infrastructure Committee
           </p>
 
-          <p className="detail">Managing Director</p>
+          {/* <p className="detail">Managing Director</p>
           <p className="detail">
             Adswitch Plc. 1, MetuNzodike Street, OkpunoOtolo, P O Box 1139,
             Nnewi, Anambra
@@ -281,7 +280,7 @@ const ManualRenders = () => {
           <p className="detail">
             E-mail: chukwuemekanzewi@yahoo.com, aadswitchplc@yahoo.com
           </p>
-          <p className="detail">Tel: 08034025576</p>
+          <p className="detail">Tel: 08034025576</p> */}
         </div>
       </div>
 
@@ -295,14 +294,14 @@ const ManualRenders = () => {
             Committee
           </p>
 
-          <p className="detail">Managing Director/CEO</p>
+          {/* <p className="detail">Managing Director/CEO</p>
           <p className="detail">
             Dala Foods Nigeria Limited 85, Sharada Ind. Estate, Phase III, Kano.
           </p>
           <p className="detail">E-mail:alimadugu@yahoo.com</p>
           <p className="detail">
             Tel : 08023045770 08044121234, 090800496 064-660999, 064-660715
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -313,9 +312,9 @@ const ManualRenders = () => {
         <div className="right">
           <p className="header">Mr. Segun Ajayi-Kadir Director General</p>
 
-          <p className="detail">Director General</p>
+          {/* <p className="detail">Director General</p>
           <p className="detail">Manufacturers Association of Nigeria</p>
-          <p className="detail">Tel: 08037861532</p>
+          <p className="detail">Tel: 08037861532</p> */}
         </div>
       </div>
 
@@ -326,12 +325,12 @@ const ManualRenders = () => {
         <div className="right">
           <p className="header">Dr. Michael Adebayo Chairman, MAN Gas Users</p>
 
-          <p className="detail">Executive Director</p>
+          {/* <p className="detail">Executive Director</p>
           <p className="detail">
             Haffar Industries Ltd. 361, Agege Motor Road, Mushin, Lagos.
           </p>
           <p className="detail">Email: madebayo2010@gmail.com </p>
-          <p className="detail">Tel: 08023175695</p>
+          <p className="detail">Tel: 08023175695</p> */}
         </div>
       </div>
     </div>

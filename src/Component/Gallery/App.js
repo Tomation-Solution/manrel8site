@@ -24,29 +24,30 @@ const AboutList = [
     image: Image1,
     title: "News",
     description:
-      "Find reports and data from ABAs research, as well as analysis of banking industry trends.",
+      "Catch up on details of latest activities of the association, press releases and position documents shared for your information purposes. Explore our news page (The image should be a generic free graphics that simply says news)",
     linkHead: "Proccee to see Pubications",
     location: "publications",
   },
   {
     image: Image2,
-    title: "Information Bank",
+    title: "Trainings",
     description:
-      "Keep current on trends in banking and the issues affecting our industry, with email bulletins for ABA members tailored to your interests.",
+      "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
     linkHead: "Proceed to see Information Bank",
   },
   {
     image: Image4,
     title: "Reports",
     description:
-      "MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector,",
+      "For all reports of our Annual General Meetings, Click here (The image should be a generic free graphics that simply says reports)- Reason is, we have different covers for the previous editions of our Annual Reports),",
     linkHead: "Proceed to see Reports",
     location: "reports",
   },
   {
     image: Image5,
     title: "Gallery",
-    description: "ABAs flagship magazine.",
+    description:
+      "Explore photos of our events and various activities. See more (Use the ribbon cutting image of Made in Nigeria exhibition)",
     linkHead: "Proceed to see Gallery",
     location: "gallery",
   },

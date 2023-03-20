@@ -22,6 +22,7 @@ const PastPresident = () => {
                 </div>
                 <div className="right">
                   <p className="header">{item?.name}</p>
+                  <p className="header">{item?.title}</p>
                 </div>
               </div>
             );

@@ -23,10 +23,10 @@ const NewConExecutive = () => {
                 </div>
                 <div className="right">
                   <p className="header">{item?.name}</p>
-                  <p className="detail">{item?.title}</p>
-                  <p className="detail">{item?.address}</p>
-                  <p className="detail">{item?.email}</p>
-                  <p className="detail">{item?.phone}</p>
+                  {/* <p className="detail">{item?.title}</p> */}
+                  {/* <p className="detail">{item?.address}</p> */}
+                  {/* <p className="detail">{item?.email}</p>
+                  <p className="detail">{item?.phone}</p> */}
                 </div>
               </div>
             );
@@ -39,9 +39,9 @@ const NewConExecutive = () => {
           {memberData.map((item, index) => {
             return (
               <div className="member_item" key={index}>
-                <div className="left">
+                {/* <div className="left">
                   <img alt="" src={item?.image || NoPicture} />
-                </div>
+                </div> */}
                 <div className="right">
                   <p className="header">{item?.name}</p>
                   <p className="header">{item?.title}</p>

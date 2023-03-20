@@ -169,6 +169,18 @@ const NewAbout = () => {
           <div className="missvis">
             <div className="missvis-item">
               <div className="top">
+                <img alt="" src={OurVision} />
+              </div>
+              <div className="bottom">
+                <h1>Our Vision</h1>
+                <p>
+                  To be the key driver for industrialization, sustainable
+                  economic growth and development in Nigeria
+                </p>
+              </div>
+            </div>
+            <div className="missvis-item">
+              <div className="top">
                 <img alt="" src={OurMission} />
               </div>
               <div className="bottom">
@@ -186,18 +198,6 @@ const NewAbout = () => {
                   contribution to job creation and Gross Domestic Product
                   through commitment to research and development, new
                   technologies and environmental sustainability.
-                </p>
-              </div>
-            </div>
-            <div className="missvis-item">
-              <div className="top">
-                <img alt="" src={OurVision} />
-              </div>
-              <div className="bottom">
-                <h1>Our Vision</h1>
-                <p>
-                  To be the key driver for industrialization, sustainable
-                  economic growth and development in Nigeria
                 </p>
               </div>
             </div>

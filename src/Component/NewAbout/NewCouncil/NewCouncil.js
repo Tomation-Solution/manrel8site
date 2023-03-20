@@ -7,7 +7,6 @@ import Wall from "../../Wall/Wall";
 import "./NewCouncil.scss";
 import NewConExecutive from "./NewCouncilComp/NewConExecutive";
 import PastPresident from "./NewCouncilComp/PastPresident";
-import Branch from "../../ExecutiveCommitee/ExecCom-Components/Secetary";
 
 const NewCouncil = () => {
   const [options, setOptions] = useState("executive");
@@ -50,21 +49,21 @@ const NewCouncil = () => {
             >
               Past Presidents
             </span>
-            <span
+            {/* <span
               onClick={() => setOptions("branch")}
               className={
                 options === "branch" ? "option_item_active" : "option_item"
               }
             >
               Branch Secetary
-            </span>
+            </span> */}
           </div>
 
           {options === "executive" && <NewConExecutive />}
 
           {options === "past-presidents" && <PastPresident />}
 
-          {options === "branch" && <Branch />}
+          {/* {options === "branch" && <Branch />} */}
         </div>
         <Wall />
         <Footer />

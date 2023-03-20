@@ -552,10 +552,18 @@ export const memberData = [
   },
 ];
 export const pastData = [
-  { image: "", name: "Alhaji (Dr) Hassan Adamu, CON Life Member" },
-  { image: "", name: "Engr. C. C. Ugwuh Life Member" },
-  { image: "", name: "Alhaji Bashir M. Borodo Life Member" },
-  { image: PastPresident1, name: "Chief Kola Jamodu, CFR Life Member" },
-  { image: PastPresident2, name: "Dr. Frank Udemba Jacobs, MON Life Member" },
-  { image: PastPresident3, name: "Engr. Mansur Ahmed Life Member" },
+  { image: "", name: "Alhaji (Dr) Hassan Adamu, CON", title: "Life Member" },
+  { image: "", name: "Engr. C. C. Ugwuh ", title: "Life Member" },
+  { image: "", name: "Alhaji Bashir M. Borodo", title: "Life Member" },
+  {
+    image: PastPresident1,
+    name: "Chief Kola Jamodu, CFR",
+    title: "Life Member",
+  },
+  {
+    image: PastPresident2,
+    name: "Dr. Frank Udemba Jacobs, MON",
+    title: "Life Member",
+  },
+  { image: PastPresident3, name: "Engr. Mansur Ahmed", title: "Life Member" },
 ];

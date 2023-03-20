@@ -7,6 +7,7 @@ import Wall from "../Wall/Wall";
 import "./Services.scss";
 import Subscribe from "../Subscribe/Subscribe";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import { Link } from "react-router-dom";
 
 function Services() {
   return (
@@ -66,6 +67,11 @@ function Services() {
                 </div>
               </div>
             </div>
+            <div className="btn-center">
+              <Link to="/mrc-services">
+                <button>See More</button>
+              </Link>
+            </div>
             <div className="head">
               <h1>MAN Power Development Company Limited (MPDCL).</h1>
             </div>
@@ -105,6 +111,11 @@ function Services() {
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="btn-center">
+              <Link to="/mpdcl">
+                <button>See More</button>
+              </Link>
             </div>
             <div className="head">
               <h1>Other Services</h1>

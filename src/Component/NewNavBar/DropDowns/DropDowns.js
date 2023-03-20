@@ -100,7 +100,7 @@ export const InsightDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to="/event-training">Events & Training</Link>
+          <Link to="/event-training">Events & Trainings</Link>
         </span>
       </div>
     </div>

@@ -183,7 +183,10 @@ function Section() {
               manufacturing plant in Nigeria. Please view the Membership
               Requirement and confirm you are eligible.
             </SectionDescription>
-            <Link to="/become-membership" style={{ textDecoration: "none" }}>
+            <Link
+              to="/membership-requirement"
+              style={{ textDecoration: "none" }}
+            >
               <SectionMember> Join now {"> "}</SectionMember>
             </Link>
           </div>
@@ -234,6 +237,17 @@ function Section() {
                 restlessly to intervening on members’ regulatory and operational
                 issues
               </SectionDescription>
+              <Link to="/become-membership" style={{ textDecoration: "none" }}>
+                <MyButton
+                  sx={{
+                    color: "#fff",
+                    borderColor: "#fff",
+                    marginTop: "21px",
+                  }}
+                >
+                  See More
+                </MyButton>
+              </Link>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
           </div>

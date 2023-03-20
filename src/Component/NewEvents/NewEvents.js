@@ -17,7 +17,7 @@ const NewEvents = () => {
       <UIProvider>
         <NewNavBar />
         <div className="topBg">
-          <h1>Events & Traning</h1>
+          <h1>Events & Tranings</h1>
           <p>
             Conferences, seminars, workshops, certified courses and more for
             manufacturers at all levels in every role.
