@@ -10,7 +10,7 @@ export const Colors = {
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Roboto"].join(","),
+    fontFamily: ["Poppins"].join(","),
   },
   breakpoints: {
     values: {

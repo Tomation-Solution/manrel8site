@@ -31,7 +31,7 @@ function InfoBoard() {
       <InfoContainer>
         <InfoItemContainer>
           <InfoItemImg src={itemIcon} />
-          <InfoItemTitle>Training & Events</InfoItemTitle>
+          <InfoItemTitle>Trainings & Events</InfoItemTitle>
           <InfoItemDescription>
             Conferences, trainings, certifications and more for manufacturers at
             all levels in every role.

@@ -29,7 +29,8 @@ import PastPresident3 from "../../../../images/new-images/PastPresident (3).png"
 export const renderData = [
   {
     image: Sect1,
-    name: "Mr. Patrick Anegbe Chairman, Food, Beverages & Tobacco Sectoral Group",
+    name: "Mr. Patrick Anegbe Chairman ",
+    name2: "Food, Beverages & Tobacco Sectoral Group",
     title: "MD/CEO",
     address:
       "Intercontinental Distilleries Limited Chelsea House, Ladipo Oluwole Ind. Estate, Ikeja, Lagos",
@@ -38,7 +39,8 @@ export const renderData = [
   },
   {
     image: Sect2,
-    name: "Mr. Rotimi Aluko Chairman, Chemical &Pharmaceuticals Sectoral Group",
+    name: "Mr. Rotimi Aluko Chairman",
+    name2: "Chemical &Pharmaceuticals Sectoral Group",
     title: "MD/CEO",
     address:
       "Voda Paints Limited Km 33, Lagos-Ibadan Exp. Way, Magboro Ind. Area. Magboro, Ogun State",
@@ -48,8 +50,9 @@ export const renderData = [
 
   {
     image: Sect3,
-    name: "Chief Evarist Uba Chairman, Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
+    name: "Chief Evarist Uba Chairman",
     title: "Managing Director",
+    name2: "Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
     address:
       "Group Enterprises Nigeria Limited (Polly Foam) 2C Uba Close, Niger Bridge Head Ind. Layout, Near Ogboefere Market Onitsha, Anambra State",
     email: "Email: polyfoam@yahoo.com, evarist.uba@pollyfoam.com",
@@ -57,7 +60,8 @@ export const renderData = [
   },
   {
     image: Sect4,
-    name: "Alhaji (Dr.) Kamorudeen Yusuf Chairman, Basic Metal, Iron & Steel& Fabricated Metal Product Sectoral Group",
+    name: "Alhaji (Dr.) Kamorudeen Yusuf Chairman",
+    name2: "Basic Metal, Iron & Steel& Fabricated Metal Product Sectoral Group",
     title: "GMD/CEO",
     address: "Kam Industries Nigeria Limited Asa Dam Road, Ilorin, Kwara State",
     email: "Email: yusuf@kamholding.net, kamwire@yahoo.com",
@@ -66,7 +70,9 @@ export const renderData = [
 
   {
     image: Sect5,
-    name: "Engr. Ilyasu Saleh Chairman, Textiles, Wearing Apparel, Carpet Leather & Leather Footwear Products Sectoral Group",
+    name: "Engr. Ilyasu Saleh Chairman",
+    name2:
+      "Textiles, Wearing Apparel, Carpet Leather & Leather Footwear Products Sectoral Group",
     title: "Managing Director",
     address: "Zaria Industries Limited Old Jos Road, Zaria, Kaduna.",
     email:
@@ -76,7 +82,8 @@ export const renderData = [
 
   {
     image: Sect6,
-    name: "Mr. N. S. Kedarnath Chairman, Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
+    name: "Mr. N. S. Kedarnath Chairman",
+    name2: "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
     title: "Managing Director/CEO",
     address:
       "Veevee Paper Products Ltd Km 2, Ijoko Road, Sango Otta, Ogun State",
@@ -86,7 +93,8 @@ export const renderData = [
 
   {
     image: Sect7,
-    name: "Mrs. Ijeoma Oduonye Chairman, Electrical/ Electronic Sectoral Group",
+    name: "Mrs. Ijeoma Oduonye Chairman",
+    name2: " Electrical/ Electronic Sectoral Group",
     title: "MD/CEO",
     address: "Cutix Plc No, 17 Osita Onyejianya Street, Umuanuka Otolo Nnewi",
     email: "Email: ijeoma.oduonye@cutixplc.com.ng",
@@ -95,7 +103,8 @@ export const renderData = [
 
   {
     image: Sect8,
-    name: "Mrs. Ngozi Oyewole Chairman, Wood, Wood Products &Furniture Sectoral Group",
+    name: "Mrs. Ngozi Oyewole Chairman",
+    name2: "Wood, Wood Products &Furniture Sectoral Group",
     title: "MD/CEO",
     address: "Noxie Limited",
     email: "Email: ngozi.oyewole@noxielimited.com",
@@ -104,7 +113,8 @@ export const renderData = [
 
   {
     image: Sect9,
-    name: "Mr. Mallinson Afam Ukatu Chairman, Non-Metallic Minerals Sectoral Group",
+    name: "Mr. Mallinson Afam Ukatu Chairman",
+    name2: "Non-Metallic Minerals Sectoral Group",
     title: "MD/CEO",
     address:
       "NISPO Porcelain Company Limited 3B, Ashimowu Jibowu Street, Off Johnson Street, Off Coker Road, Ilupeju, Lagos",
@@ -114,7 +124,8 @@ export const renderData = [
 
   {
     image: Sect10,
-    name: "Mr. Robert Ugbaja Chairman, Motor Vehicle & Miscellaneous Assembly Sectoral Group",
+    name: "Mr. Robert Ugbaja Chairman",
+    name2: "NMotor Vehicle & Miscellaneous Assembly Sectoral Group",
     title: "",
     address: "Boulos Enterprises Ltd. Plot 10, Acme Road, Ogba, Ikeja",
     email: "Email: r.ugbaja@bel.groupboulos.com, ugbajarobert@hotmail.com",
@@ -123,7 +134,8 @@ export const renderData = [
 
   {
     image: Sect11,
-    name: "Mrs. Soromidayo George Chairman, MAN Export Group",
+    name: "Mrs. Soromidayo George Chairman",
+    name2: " MAN Export Group",
     title: "Director",
     address: "Unilever Nigeria Plc Billings Way, Oregun-Ikeja, Lagos",
     email: "Email: soromidayo.george@unilever.com",
@@ -131,7 +143,8 @@ export const renderData = [
   },
   {
     image: Sect12,
-    name: "Mr. Vassily Barberopoulos Chairman, MANLOC Group",
+    name: "Mr. Vassily Barberopoulos Chairman",
+    name2: " MANLOC Group",
     title: "Managing Director",
     address:
       "Nigerian Foundaries 1, Adeyemi Bero Crescent, Ilupeju Industrial Estate, Anthony, Oshodi, Ilupeju",
@@ -140,7 +153,8 @@ export const renderData = [
   },
   {
     image: Branch1,
-    name: "Engr. Frank OnyebuChairman, Apapa Branch",
+    name: "Engr. Frank OnyebuChairman",
+    name2: " Apapa Branch",
     title: "",
     address: "Universal Luggages Ltd. C33, AmuwoOdofin Ind. Zone Lagos.",
     email: "Email:ike_onyebu@yahoo.com nocchairman@yahoo.com",
@@ -148,7 +162,8 @@ export const renderData = [
   },
   {
     image: Branch2,
-    name: "Mr. George Onafowokan Chairman, Ogun State Branch",
+    name: "Mr. George Onafowokan Chairman",
+    name2: "Ogun State Branch",
     title: "Managing Director",
     address:
       "Coleman Wires and cables Km 34, Lagos Ibadan Expressway, Arepo, Ogun State",
@@ -157,7 +172,8 @@ export const renderData = [
   },
   {
     image: Branch3,
-    name: "Mr. Robert Ugbaja Chairman Ikeja Branch",
+    name: "Mr. Robert Ugbaja Chairman",
+    name2: " Ikeja Branch",
     title: "Chairman",
     address: "Boulos Enterprises Ltd. Plot 10, Acme Road Ogba, Ikeja",
     email: "Email: r.ugbaja@boulos.ng",
@@ -165,7 +181,8 @@ export const renderData = [
   },
   {
     image: Branch4,
-    name: "Alhaji Ahmad Adamu Chairman, Kano, Sharada/Challawa Branch",
+    name: "Alhaji Ahmad Adamu Chairman",
+    name2: " Kano, Sharada/Challawa Branch",
     title: "Managing Director",
     address: "African Textile Ltd. Kano",
     email: "Email: ahmadmohammadadam@gmail.com, amirah196533@gmail.com",
@@ -173,7 +190,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Alhaji Muhammed Umar Chairman, Kano Bompai Branch",
+    name: "Alhaji Muhammed Umar Chairman",
+    name2: "Kano Bompai Branch",
     title: "",
     address: "Tofa Textile Limited 5, independence Road, Bompai Ind. Area Kano",
     email: "Email: bellom007@hotmail.com",
@@ -181,7 +199,8 @@ export const renderData = [
   },
   {
     image: Branch5,
-    name: "Mr. Raymond Anyanwu Chairman, Kaduna South-East Branch",
+    name: "Mr. Raymond Anyanwu Chairman",
+    name2: " Kaduna South-East Branch",
     title: "",
     address:
       "Arewa Metal Containers Ltd. 1, Mohammed Ladan Road, P. O. Box 270 Kaduna",
@@ -190,7 +209,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Alh. Umar Mala Chairman, Kaduna North-West Branch",
+    name: "Alh. Umar Mala Chairman",
+    name2: "Kaduna North-West Branch",
     title: "",
     address:
       "Falhum Investment Ltd Km 1, Kaduna International Airport Road, Kaduna State, Kaduna",
@@ -199,7 +219,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Mr. Vincent Okuku Chairman, Rivers/Bayelsa States Branch",
+    name: "Mr. Vincent Okuku Chairman",
+    name2: "Rivers/Bayelsa States Branch",
     title: "",
     address:
       "Eastern Enamelware Factory Ltd. Plot 31, Trans Amadi Ind. Estate. Port Harcourt",
@@ -209,7 +230,8 @@ export const renderData = [
 
   {
     image: "",
-    name: "Mr. Lanre Popoola Chairman, Oyo/Osun/Ekiti/OndoStates Branch",
+    name: "Mr. Lanre Popoola Chairman",
+    name2: "Oyo/Osun/Ekiti/OndoStates Branch",
     title: "General Manager",
     address:
       "Extreme Manufacturing Nig. Ltd. Essuso Village, Ibadan-Ijebu Ode Road,Oluyola LGA, Ibadan, Oyo State.",
@@ -218,7 +240,8 @@ export const renderData = [
   },
   {
     image: Branch6,
-    name: "Alh. Shehu Sule Nyelum Chairman, Bauchi/Benue/Plateau/G/N/Branch",
+    name: "Alh. Shehu Sule Nyelum Chairman",
+    name2: "Bauchi/Benue/Plateau/G/N/Branch",
     title: "GM Admin/Human Resource",
     address: "Nasco Foods Ltd, Makurdi.",
     email: "Email: shehu@nasco.net",
@@ -226,7 +249,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Engr. Okwara Udensi Chairman, Edo/Delta Branch",
+    name: "Engr. Okwara Udensi Chairman",
+    name2: "Edo/Delta Branch",
     title: "Managing Director/CEO",
     address:
       "Equitax Integrated Oil Ltd. DSC Road before Orhunwhorun Junction Warri",
@@ -235,7 +259,8 @@ export const renderData = [
   },
   {
     image: Branch7,
-    name: "Pharm. Bioku Rahmon Chairman, Kwara/ Kogi Branch",
+    name: "Pharm. Bioku Rahmon Chairman",
+    name2: " Kwara/ Kogi Branch",
     title: "Managing Director",
     address:
       "Bioraj Pharmaceutical Ltd. Okolowo Road, Beside WAEC Office, Ilorin, Kwara State",
@@ -244,7 +269,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Alhaji Abubakare Minjibir Chairman, Abuja Branch",
+    name: "Alhaji Abubakare Minjibir Chairman",
+    name2: "Abuja Branch",
     title: "CEO",
     address: "Tawada Limited Plot 862, Area 11, Abuja",
     email: "Email: aminjibir@yahoo.com",
@@ -252,7 +278,8 @@ export const renderData = [
   },
   {
     image: Branch8,
-    name: "Mr. Akin Oyediran Chairman, Cross River/Akwa Ibom Branch",
+    name: "Mr. Akin Oyediran Chairman",
+    name2: "Cross River/Akwa Ibom Branch",
     title: "Managing Director",
     address:
       "Syringe Manufacturing Co. 1, Jubilee Close, Off Jubilee Road Awa, Onna",
@@ -261,7 +288,8 @@ export const renderData = [
   },
   {
     image: Branch9,
-    name: "Lady Ada Chukwudozie Chairman, Anambra/Enugu Branch",
+    name: "Lady Ada Chukwudozie Chairman,",
+    name2: "Anambra/Enugu Branch",
     title: "Managing Director",
     address:
       "Dozzy Oil & Gas Limited Plot 1, Niger Bridge Head, Industrial Layout, Onitsha.",
@@ -270,7 +298,8 @@ export const renderData = [
   },
   {
     image: Branch10,
-    name: "Dr. Jude O. Eluma Chairman, Imo/Abia Branch",
+    name: "Dr. Jude O. Eluma Chairman",
+    name2: "Imo/Abia Branch",
     title: "CEO",
     address:
       "Elchem Limited 15, Industrial Road, P. O. Box 395, Mgbidi, Imo State",

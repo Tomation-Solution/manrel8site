@@ -30,10 +30,11 @@ const AboutList = [
   },
   {
     image: Image2,
-    title: "Trainings",
+    title: "Events & Trainings",
     description:
       "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
-    linkHead: "Proceed to see Information Bank",
+    linkHead: "Proceed to see Events & Trainings",
+    location: "event-training",
   },
   {
     image: Image4,

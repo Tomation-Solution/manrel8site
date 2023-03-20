@@ -14,6 +14,8 @@ const NewConExecutive = () => {
           the affairs of the Association according to its constitution.
         </p>
 
+        <ManualRenders />
+
         <div className="member_items">
           {renderData.map((item, index) => {
             return (
@@ -23,6 +25,7 @@ const NewConExecutive = () => {
                 </div>
                 <div className="right">
                   <p className="header">{item?.name}</p>
+                  <p className="header">{item?.name2}</p>
                   {/* <p className="detail">{item?.title}</p> */}
                   {/* <p className="detail">{item?.address}</p> */}
                   {/* <p className="detail">{item?.email}</p>
@@ -32,8 +35,6 @@ const NewConExecutive = () => {
             );
           })}
         </div>
-
-        <ManualRenders />
 
         <div className="member_items">
           {memberData.map((item, index) => {

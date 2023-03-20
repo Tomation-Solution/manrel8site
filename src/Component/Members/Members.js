@@ -36,7 +36,7 @@ function Members() {
           <div className="why">
             <div className="man">
               <h1>Why Join MAN?</h1>
-              <p>Here are five (5) cardinal points why you should join MAN.</p>
+              <p>Here are cardinal points why you should join MAN.</p>
             </div>
             <div className="point">
               <div className="card">
@@ -44,10 +44,12 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>RECOGNITION</h1>
+                  <h1>CREDIBLITY/IDENTITY</h1>
                   <p>
-                    Recognition by government agencies, private sectors, and
-                    financial institutions both home and abroad..
+                    The Association provides credibility and identity to
+                    member-companies as bonafide Manufacturers that can be
+                    traced and not fake manufacturers hiding to clone or fake
+                    products.
                   </p>
                 </div>
               </div>
@@ -56,17 +58,11 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>INFLUENCE</h1>
+                  <h1>POLICY FORMULATION</h1>
                   <p>
-                    MAN is working day and night on behalf of members,
-                    leveraging on our established relationships with the
-                    government to ensure the voice of manufacturers is heard
-                    where and when it matters. With business leaders of great
-                    minds steering our agenda, and a vibrant membership giving
-                    their views, government actively seek our input when
-                    legislative or policy decisions are about to be made. We are
-                    driven by the issues that matters to manufacturers; if there
-                    is something holding you back, MAN is here to help.
+                    MAN provides a platform for member companies to contribute
+                    to the formulation of an emerging Government policy or
+                    amendment of an existing one.
                   </p>
                 </div>
               </div>
@@ -75,16 +71,11 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>INSIGHT TO FIRST-HAND INFORMATION</h1>
+                  <h1>SECTORAL MEETINGS</h1>
                   <p>
-                    Whether you are planning your next business move, or
-                    managing the impact of legislative or political change,
-                    knowledge is power. Our market leading economic surveys,
-                    forecast and analysis help you plan ahead. Reports;
-                    briefings; emails and web updates; seminars, training and
-                    workshop; consultative forums give you valuable intelligence
-                    on the latest policy and economic developments, business
-                    trends and best practice.
+                    MAN provides a platform for member-companies in similar
+                    production line to interact in a very friendly and frank
+                    manner on subsector/sector specific issues and challenges.
                   </p>
                 </div>
               </div>
@@ -93,10 +84,11 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>OPPORTUNITY IN POLICY FORMULATION</h1>
+                  <h1>INFORMATION DISEMINATION</h1>
                   <p>
-                    Members view are well represented in policy formulation
-                    especially policies that affects manufacturers
+                    The Association provides member-companies with a platform
+                    that ensures that they are the first to know about a new
+                    government circular or memo that will affect manufacturers.
                   </p>
                 </div>
               </div>
@@ -105,10 +97,26 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>DIRECT INTERVENTION ON MEMBERS’ PROBLEMS</h1>
+                  <h1>CONCESSIONS</h1>
                   <p>
-                    MAN work restlessly to intervening on members’ regulatory
-                    and operational issues.
+                    Member-companies enjoy concessions and considerations
+                    approved by the Federal Government Agencies and Parastatals
+                    to encourage bonafide manufacturers. Such as the Standards
+                    Organisation of Nigeria (SON), National Agency for Food and
+                    Drug Administration and Control (NAFDAC), Nigeria Customs
+                    Service (NCS) and Bank of Industry (BOI)
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>CONFIRMATION OF MEMBERSHIP</h1>
+                  <p>
+                    The Association provides confirmation of membership to
+                    enquiries from foreign and local Organizations.
                   </p>
                 </div>
               </div>
