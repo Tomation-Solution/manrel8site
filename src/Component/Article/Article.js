@@ -8,6 +8,9 @@ import ArtNature2 from "../../images/new-images/PublicationImg.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "react-router-dom";
 import { newPubData } from "../Publications/PublicationsData";
+import { gallerydata } from "../Gallery/GalleryDetails/GalleryData";
+import { newReportData } from "../Reports/ReportData";
+import { newsdata } from "../News/NewsData";
 
 function Article() {
   const [imageIndex, setImageIndex] = useState(0); // Set initial index to 0
@@ -39,18 +42,53 @@ function Article() {
               <h2>News</h2>
             </div>
             <div className="wrap">
-              {newPubData.map((item) => (
-                <div className="card" key={item.id}>
-                  <button>News</button>
+              {gallerydata[0] && (
+                <div className="card" key={gallerydata[0].id}>
+                  <button>Gallery</button>
                   <div className="flex">
-                    <h3>{item.name}</h3>
-                    <Link to={`/news-details/${item.id}`}>
+                    <h3>{gallerydata[0].name}</h3>
+                    <Link to={`/gallery-details/${gallerydata[0].id}`}>
                       <OpenInNewIcon />
                     </Link>
                   </div>
-                  <p>{item?.date}</p>
                 </div>
-              ))}
+              )}
+
+              {newPubData[0] && (
+                <div className="card" key={pubdata[0].id}>
+                  <button>Publications</button>
+                  <div className="flex">
+                    <h3>{pubdata[0].name}</h3>
+                    <Link to={`/publications-details/${pubdata[0].id}`}>
+                      <OpenInNewIcon />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {newReportData[0] && (
+                <div className="card" key={reportdata[0].id}>
+                  <button>Report</button>
+                  <div className="flex">
+                    <h3>{reportdata[0].name}</h3>
+                    <Link to={`/report-details/${reportdata[0].id}`}>
+                      <OpenInNewIcon />
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {newsdata[0] && (
+                <div className="card" key={newsdata[0].id}>
+                  <button>News</button>
+                  <div className="flex">
+                    <h3>{newsdata[0].name}</h3>
+                    <Link to={`/news-details/${newsdata[0].id}`}>
+                      <OpenInNewIcon />
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
