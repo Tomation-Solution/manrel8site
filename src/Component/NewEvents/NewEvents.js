@@ -6,8 +6,9 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import "./NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import { RegisterModal, SingleEvent } from "./Modals";
+import { RegisterModal, SingleEvent, SingleTraining } from "./Modals";
 import { Link } from "react-router-dom";
+import { trainingData } from "../Training/TrainingData";
 
 const NewEvents = () => {
   const [register, setRegister] = useState(false);
@@ -46,11 +47,12 @@ const NewEvents = () => {
         <div className="event-container">
           <h1 className="events-header">Trainings</h1>
           <div className="event-items">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <SingleEvent
+            {trainingData.map((item, index) => (
+              <SingleTraining
                 image={Image}
                 registerfn={() => setRegister(!register)}
-                key={item}
+                data={item}
+                key={index}
               />
             ))}
           </div>

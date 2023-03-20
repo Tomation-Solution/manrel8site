@@ -34,7 +34,7 @@ const Training = () => {
         </div>
 
         <div className="event-options">
-          <span className="span-active">Free Trainings</span>
+          <span className="span-active">Trainings</span>
           {/* <span className="span-inactive" onClick={() => setPay(!pay)}>
             Paid Trainings
           </span> */}
