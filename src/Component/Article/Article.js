@@ -6,8 +6,8 @@ import ArtNature1 from "../../images/new-images/Manoffice.png";
 import ArtNature2 from "../../images/new-images/PublicationImg.png";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { newsdata } from "../News/NewsData";
 import { Link } from "react-router-dom";
+import { newPubData } from "../Publications/PublicationsData";
 
 function Article() {
   const [imageIndex, setImageIndex] = useState(0); // Set initial index to 0
@@ -39,7 +39,7 @@ function Article() {
               <h2>News</h2>
             </div>
             <div className="wrap">
-              {newsdata.map((item) => (
+              {newPubData.map((item) => (
                 <div className="card" key={item.id}>
                   <button>News</button>
                   <div className="flex">
