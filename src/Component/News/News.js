@@ -2,7 +2,6 @@ import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../Styles/theme/Theme";
 import { UIProvider } from "../../Ui";
-import NavBar from "../NavBar/NavBar";
 import "./News.scss";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
@@ -13,6 +12,8 @@ import { newsdata } from "./NewsData";
 import { Link } from "react-router-dom";
 
 import Articleimage from "../../images/new-images/PublicationImg.png";
+import { InsightQuickNavigation } from "../Gallery/App";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 function News() {
   return (
@@ -20,7 +21,7 @@ function News() {
       <UIProvider>
         <div className="news">
           <Subscribe />
-          <NavBar location="news" />
+          <NewNavBar />
           <div className="hero_Image">
             <div className="cover">
               <h1>News</h1>
@@ -61,6 +62,7 @@ function News() {
               </div>
               <div className="left">
                 <img src={Articleimage} alt="" />
+                <InsightQuickNavigation />
               </div>
             </div>
           </div>

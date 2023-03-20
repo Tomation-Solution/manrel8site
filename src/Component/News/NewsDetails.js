@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 import React from "react";
 import { UIProvider } from "../../Ui";
-import NavBar from "../NavBar/NavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import theme from "../../Styles/theme/Theme";
 
@@ -17,6 +16,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Link, useParams } from "react-router-dom";
 import { newsdata } from "./NewsData";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 const NewsDetails = () => {
   const { id } = useParams();
@@ -30,7 +30,7 @@ const NewsDetails = () => {
         <UIProvider>
           <div className="publications-details">
             <Subscribe />
-            <NavBar location="about" />
+            <NewNavBar />
 
             <div className="hero_image">
               <div className="cover">

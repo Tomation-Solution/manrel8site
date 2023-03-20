@@ -2,11 +2,12 @@ import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../Styles/theme/Theme";
 import { UIProvider } from "../../Ui";
-import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import "./Services.scss";
 import Subscribe from "../Subscribe/Subscribe";
+import NewNavBar from "../NewNavBar/NewNavBar";
+import { Link } from "react-router-dom";
 
 function Services() {
   return (
@@ -14,7 +15,7 @@ function Services() {
       <UIProvider>
         <div className="services">
           <Subscribe />
-          <NavBar location="services" />
+          <NewNavBar />
           <div className="hero_image">
             <div className="cover">
               <h1>Services</h1>
@@ -66,6 +67,11 @@ function Services() {
                 </div>
               </div>
             </div>
+            <div className="btn-center">
+              <Link to="/mrc-services">
+                <button>See More</button>
+              </Link>
+            </div>
             <div className="head">
               <h1>MAN Power Development Company Limited (MPDCL).</h1>
             </div>
@@ -105,6 +111,11 @@ function Services() {
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="btn-center">
+              <Link to="/mpdcl">
+                <button>See More</button>
+              </Link>
             </div>
             <div className="head">
               <h1>Other Services</h1>

@@ -4,7 +4,6 @@ import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import NavBar from "../NavBar/NavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import "./Sectoral.scss";
 import Vector from "../../images/Vector.png";
@@ -30,6 +29,7 @@ import CapacityProg1 from "../../images/new-images/mpdcl/CapacityProg (1).png";
 import CapacityProg2 from "../../images/new-images/mpdcl/CapacityProg (2).png";
 import CapacityProg3 from "../../images/new-images/mpdcl/CapacityProg (3).png";
 import MpdclModal from "../Mpdcl-Modal/MpdclModal";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 function Mpdcl() {
   const sectoralList = [
@@ -172,7 +172,7 @@ function Mpdcl() {
         <UIProvider>
           <div className="sectoral">
             <Subscribe />
-            <NavBar location="about" />
+            <NewNavBar />
             <div className="hero_image">
               <div className="cover">
                 <h1>MAN Power Development Company Limited (MPDCL).</h1>

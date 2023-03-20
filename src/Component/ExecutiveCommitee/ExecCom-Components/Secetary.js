@@ -64,12 +64,13 @@ const renderData = [
   },
   {
     image: "",
-    name: "Mr. Goodluck Amachree Executive Secretary, MAN, Edo/Delta States Branch",
+    name: "Luck Amachree Executive Secretary, MAN, Edo/Delta States Branch",
     title: "",
     address:
       "Plot 4, Alexandra Ogun Road Evboriaria Indl. Estate Opp. Palm Garden Km. 7, Sapele Road, Benin CityEdo State.",
-    email: "",
-    phone: "",
+    email:
+      "EMAIL: manedodeltas@gmail.com, manedodelta@manufacturersnigeria.org, lucky.amachree@manufacturersnigeria.org",
+    phone: "TEL: 07055887107, 09152800179",
   },
   {
     image: "",
@@ -85,8 +86,8 @@ const renderData = [
     title: "",
     address:
       "MAN Abuja Liaison Office Room 202, 2nd Floor, Adamawa Plaza Opposite The Statement Hotel By Abia House Central Area Abuja.Chairm",
-    email: "",
-    phone: "",
+    email: "E-mail : lekan.edunjobi@manufacturersnigeria.org",
+    phone: "Phone : 0802-767-9963;  090-628-74869",
   },
   {
     image: "",

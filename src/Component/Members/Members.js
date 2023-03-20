@@ -1,15 +1,12 @@
-import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import React from "react";
 import "./Members.scss";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../Styles/theme/Theme";
 import { UIProvider } from "../../Ui";
-import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import { useNavigate } from "react-router-dom";
 import Subscribe from "../Subscribe/Subscribe";
-import Image from "../../images/hand.png";
 import Image2 from "../../images/Vector.png";
 import Point1 from "../../images/Frame 44-1.png";
 import Point2 from "../../images/Frame 44.png";
@@ -17,94 +14,20 @@ import Point3 from "../../images/Frame 45.png";
 import Point4 from "../../images/Frame 46-1.png";
 import Point5 from "../../images/Group 6.png";
 import Point6 from "../../images/Frame 46.png";
+import NewNavBar from "../NewNavBar/NewNavBar";
 
 function Members() {
-  const [selectedQuest, setSelectedQuest] = useState({
-    header: "",
-    content: "",
-  });
   const navigate = useNavigate();
-  const FaqList = [
-    {
-      header: " How do I become a member of MAN?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " How long does it take to become a member?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " What are the benefits of being a member of MAN?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " What is the cost of registration?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header:
-        " If I make a subscription at the middle of the existing year, do I still need to pay another subscription for the following year?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " What is the duration of one subscription?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " How long will it take to complete my registration?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " What are the requirements for change of name?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header:
-        " What do we need to do if our company is replacing his representative to the association.",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " How do we get our lost certificate replaced?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " How often do we renew our membership certificate?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header: " How do we discontinue our membership with the association?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-    {
-      header:
-        " What may delay the reissuance of the new membership certificate?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatem fugiat voluptas ea ab corporis quam, architecto laboriosam aperiam minus.",
-    },
-  ];
+
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className="members">
           <Subscribe />
-          <NavBar location="membership" />
+          <NewNavBar />
           <div className="hero_image">
             <div className="cover">
-              <div className="tag">
-                <h2>Home {">"} Membership</h2>
-              </div>
+              <div className="tag"></div>
               <h1>Membership</h1>
               <p>See our esteemed members across the country</p>
             </div>
@@ -113,7 +36,6 @@ function Members() {
           <div className="why">
             <div className="man">
               <h1>Why Join MAN?</h1>
-              <img src={Image} alt="" />
               <p>Here are five (5) cardinal points why you should join MAN.</p>
             </div>
             <div className="point">
@@ -378,37 +300,7 @@ function Members() {
               </button>
             </div>
           </div>
-          <div className="faq" id="faq">
-            <div className="faq-wrap">
-              <div className="top">
-                <h1> Frequently Asked Questions (FAQ)</h1>
-              </div>
-              <div className="listt">
-                <div className="list">
-                  {FaqList.map((item) => (
-                    <div
-                      className={
-                        selectedQuest.header === item.header
-                          ? "card active"
-                          : "card"
-                      }
-                      key={item.header}
-                    >
-                      <header onClick={() => setSelectedQuest(item)}>
-                        <h2>{item.header}</h2>
-                        {selectedQuest.header === item.header ? (
-                          <FaMinus />
-                        ) : (
-                          <FaPlus />
-                        )}
-                      </header>
-                      <article>{item.content}</article>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+
           <Wall />
           <Footer />
         </div>
