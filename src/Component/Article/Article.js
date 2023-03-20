@@ -38,9 +38,9 @@ function Article() {
             <img src={images[imageIndex]} alt="" />
           </div>
           <div className="right">
-            <div className="top">
+            {/* <div className="top">
               <h2>News</h2>
-            </div>
+            </div> */}
             <div className="wrap">
               {gallerydata[0] && (
                 <div className="card" key={gallerydata[0].id}>
