@@ -9,8 +9,9 @@ import Footer from "../Footer/Footer";
 import {
   PayTrainingModal,
   RegisterTrainingModal,
-  SingleEvent,
+  SingleTraining,
 } from "../NewEvents/Modals";
+import { trainingData } from "./TrainingData";
 
 const Training = () => {
   // const [options , setOptions] = useState("free")
@@ -34,21 +35,22 @@ const Training = () => {
 
         <div className="event-options">
           <span className="span-active">Free Trainings</span>
-          <span className="span-inactive" onClick={() => setPay(!pay)}>
+          {/* <span className="span-inactive" onClick={() => setPay(!pay)}>
             Paid Trainings
-          </span>
-          <span className="span-inactive" onClick={() => setPay(!pay)}>
+          </span> */}
+          {/* <span className="span-inactive" onClick={() => setPay(!pay)}>
             Special Trainings
-          </span>
+          </span> */}
         </div>
 
         <div className="event-container">
           <div className="event-items">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <SingleEvent
+            {trainingData.map((item, index) => (
+              <SingleTraining
                 image={Image}
                 registerfn={() => setRegister(!register)}
-                key={item}
+                data={item}
+                key={index}
               />
             ))}
           </div>

@@ -10,7 +10,7 @@ import "./Reports.scss";
 import { Link } from "react-router-dom";
 import Subscribe from "../Subscribe/Subscribe";
 import Premium from "../Subscribe/Premium";
-import { reportdata } from "./ReportData";
+import { newReportData } from "./ReportData";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
 
@@ -37,7 +37,7 @@ function App() {
                   <h2>Reports</h2>
                 </div>
                 <div className="wrap">
-                  {reportdata.map((item) => (
+                  {newReportData.map((item) => (
                     <div className="card" key={item}>
                       <button>Report</button>
                       <div className="flex">

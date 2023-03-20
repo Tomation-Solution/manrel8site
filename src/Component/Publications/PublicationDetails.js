@@ -13,16 +13,16 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { pubdata } from "./PublicationsData";
+import { newPubData } from "./PublicationsData";
 import { Link, useParams } from "react-router-dom";
 import NewNavBar from "../NewNavBar/NewNavBar";
 
 const PublicationDetails = () => {
   const { id } = useParams();
 
-  const renderdata = pubdata.find((item) => item.id === id);
+  const renderdata = newPubData.find((item) => item.id === id);
 
-  const otherPub = pubdata.filter((item) => item.id !== id);
+  const otherPub = newPubData.filter((item) => item.id !== id);
   return (
     <div>
       <ThemeProvider theme={theme}>
@@ -44,9 +44,17 @@ const PublicationDetails = () => {
                   <div className="left">
                     <h2>{renderdata.title}</h2>
                     <p className="pub-paragraph">Date: {renderdata?.date}</p>
-                    {renderdata?.paragraphs.map((item) => (
+                    {renderdata?.freetext.map((item) => (
                       <p className="pub-paragraph">{item}</p>
                     ))}
+                    <a
+                      className="readmore-link"
+                      href={renderdata.link}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Read More or Download
+                    </a>
 
                     <div className="botom">
                       <FacebookIcon />

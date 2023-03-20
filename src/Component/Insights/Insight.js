@@ -10,8 +10,8 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import Articleimage from "../../images/new-images/PublicationImg.png";
 import { UIProvider } from "../../Ui";
 import { newsdata } from "../News/NewsData";
-import { pubdata } from "../Publications/PublicationsData";
-import { reportdata } from "../Reports/ReportData";
+import { newPubData, pubdata } from "../Publications/PublicationsData";
+import { newReportData, reportdata } from "../Reports/ReportData";
 
 const Insight = () => {
   return (
@@ -43,7 +43,7 @@ const Insight = () => {
                   </div>
                 )}
 
-                {pubdata[0] && (
+                {newPubData[0] && (
                   <div className="card" key={pubdata[0].id}>
                     <button>Publications</button>
                     <div className="flex">
@@ -55,7 +55,7 @@ const Insight = () => {
                   </div>
                 )}
 
-                {reportdata[0] && (
+                {newReportData[0] && (
                   <div className="card" key={reportdata[0].id}>
                     <button>Report</button>
                     <div className="flex">
