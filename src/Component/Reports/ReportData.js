@@ -32,3 +32,17 @@ export const reportdata = [
     ],
   },
 ];
+
+export const newReportData = [
+  {
+    id: "1",
+    name: "MAN ANNUAL REPORTS",
+    title: "MAN CEO’s Confidence Index Report: Highlights of Findings",
+    link: "https://drive.google.com/file/d/1uji7NpNlK6oX-j7lp-_0Ah7VNfbFvB-Z/view?usp=share_link",
+    freetext: [
+      "1.0 INTRODUCTION",
+      "The Manufacturers Association of Nigeria (MAN) was established in 1971 as a company limited by guarantee.",
+      "The establishment of the Association was motivated by the desire to have a focal point of communication and consultation between industry on the one hand, the government and general public on the other. Hitherto, there was no institutional organ whose central focus was to give meaning to the interests, problems and aspirations of the manufacturing sector",
+    ],
+  },
+];

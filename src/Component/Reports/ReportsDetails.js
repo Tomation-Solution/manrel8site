@@ -16,15 +16,15 @@ import EmailIcon from "@mui/icons-material/Email";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Link, useParams } from "react-router-dom";
-import { reportdata } from "./ReportData";
+import { newReportData } from "./ReportData";
 import NewNavBar from "../NewNavBar/NewNavBar";
 
 const ReportsDetails = () => {
   const { id } = useParams();
 
-  const renderdata = reportdata.find((item) => item.id === id);
+  const renderdata = newReportData.find((item) => item.id === id);
 
-  const otherPub = reportdata.filter((item) => item.id !== id);
+  const otherPub = newReportData.filter((item) => item.id !== id);
   return (
     <div>
       <ThemeProvider theme={theme}>
@@ -55,7 +55,7 @@ const ReportsDetails = () => {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      Read More...
+                      Read More or Download
                     </a>
 
                     <div className="botom">

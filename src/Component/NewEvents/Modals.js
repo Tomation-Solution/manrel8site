@@ -167,3 +167,37 @@ export const SingleEvent = ({ image, registerfn }) => {
     </div>
   );
 };
+
+export const PublicationPayModal = ({ closefn }) => {
+  return (
+    <BackDrop>
+      <div className="modal-cover">
+        <div className="top">
+          <h2>Pay for Publication</h2>
+          <p>Let's start by entering your information</p>
+          <p>All fields are required unless otherwise indicated.</p>
+        </div>
+        <form action="">
+          <div className="card">
+            <h4>Full name</h4>
+            <input type="text" />
+          </div>
+          <div className="card">
+            <h4>Email Address</h4>
+            <input type="email" />
+          </div>
+          <div className="card">
+            <h4>Company Name</h4>
+            <input type="text" />
+          </div>
+          <div className="card">
+            <button>Proceed To Pay</button>
+          </div>
+        </form>
+        <div className="closebtn" onClick={closefn}>
+          <CloseIcon />
+        </div>
+      </div>
+    </BackDrop>
+  );
+};
