@@ -55,11 +55,11 @@ function Article() {
               )}
 
               {newPubData[0] && (
-                <div className="card" key={pubdata[0].id}>
+                <div className="card" key={newPubData[0].id}>
                   <button>Publications</button>
                   <div className="flex">
-                    <h3>{pubdata[0].name}</h3>
-                    <Link to={`/publications-details/${pubdata[0].id}`}>
+                    <h3>{newPubData[0].name}</h3>
+                    <Link to={`/publications-details/${newPubData[0].id}`}>
                       <OpenInNewIcon />
                     </Link>
                   </div>
@@ -67,11 +67,11 @@ function Article() {
               )}
 
               {newReportData[0] && (
-                <div className="card" key={reportdata[0].id}>
+                <div className="card" key={newReportData[0].id}>
                   <button>Report</button>
                   <div className="flex">
-                    <h3>{reportdata[0].name}</h3>
-                    <Link to={`/report-details/${reportdata[0].id}`}>
+                    <h3>{newReportData[0].name}</h3>
+                    <Link to={`/report-details/${newReportData[0].id}`}>
                       <OpenInNewIcon />
                     </Link>
                   </div>
