@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import { InsightQuickNavigation } from "../Gallery/App";
+import { AboutList } from "../Gallery/App";
 import { gallerydata } from "../Gallery/GalleryDetails/GalleryData";
 import "../Gallery/Insmore.scss";
 import Wall from "../Wall/Wall";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import Articleimage from "../../images/new-images/PublicationImg.png";
+import Articleimage from "../../images/new-images/PublicationsDropImg.png";
 import { UIProvider } from "../../Ui";
 import { newsdata } from "../News/NewsData";
 import { newPubData } from "../Publications/PublicationsData";
@@ -83,9 +83,33 @@ const Insight = () => {
 
             <div className="left">
               <img className="img" src={Articleimage} alt="" />
-              <InsightQuickNavigation />
+
+              {/* <InsightQuickNavigation /> */}
             </div>
           </div>
+        </div>
+
+        <div className="insight-below">
+          {AboutList.map((item) => (
+            <div className="insight-below-item" key={item.title}>
+              <img src={item.image} alt="" />
+              <div className="text">
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                {Object.keys(item).includes("location") ? (
+                  <Link to={`/${item.location}`}>
+                    <h3 style={{ fontWeight: 500 }}>
+                      {item.linkHead} {">"}
+                    </h3>
+                  </Link>
+                ) : (
+                  <h3 style={{ fontWeight: 500 }}>
+                    {item.linkHead} {">"}
+                  </h3>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <Wall />

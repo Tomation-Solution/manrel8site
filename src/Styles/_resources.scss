@@ -58,3 +58,8 @@ $mobile-6: 800px;
     @content;
   }
 }
+@mixin mobile-1300 {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}

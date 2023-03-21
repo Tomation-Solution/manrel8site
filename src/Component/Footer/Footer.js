@@ -27,14 +27,14 @@ function Footer() {
         </Link>
       </FooterItemsContainer>
       <FooterItemsContainer>
-        <FooterDescription>Sitemap</FooterDescription>
-        <FooterDescription>Privacy Notice</FooterDescription>
-        <FooterDescription>Modern Slavery Statement</FooterDescription>
+        {/* <FooterDescription>Sitemap</FooterDescription> */}
+        <FooterDescription>Privacy Policy</FooterDescription>
+        <FooterDescription>Webmail Login</FooterDescription>
+        {/* <FooterDescription>Modern Slavery Statement</FooterDescription> */}
       </FooterItemsContainer>
       <FooterItemsContainer>
-        <FooterDescription>Terms & Conditions</FooterDescription>
-        <FooterDescription>Website help</FooterDescription>
-        <FooterDescription>Webmail Login</FooterDescription>
+        {/* <FooterDescription>Terms & Conditions</FooterDescription>
+        <FooterDescription>Website help</FooterDescription> */}
       </FooterItemsContainer>
     </FooterContainer>
   );

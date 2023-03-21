@@ -5,6 +5,7 @@ import { Button, Typography } from "@mui/material";
 
 export const FooterContainer = styled(Box)(({ matches, theme }) => ({
   display: "flex",
+  fontFamily: "Poppins",
   alignItems: "center",
   justifyContent: "space-between",
   flexWrap: "wrap",
@@ -22,6 +23,7 @@ export const FooterItemsContainer = styled(Box)(({ matches, theme }) => ({
   height: "100%",
   padding: "0px 0px",
   width: "23%",
+  fontFamily: "Poppins",
 
   [theme.breakpoints.down("md")]: {
     width: "100%",
@@ -48,6 +50,7 @@ export const MyButton = styled(Button)(() => ({
   borderRadius: 500,
   border: "1px solid #000",
   fontSize: "14px",
+  fontFamily: "Poppins",
   // padding: '16px 20px',
 }));
 
@@ -57,4 +60,5 @@ export const FooterDescription = styled(Typography)(({ theme }) => ({
   cursor: "pointer",
   color: Colors.black,
   paddingBottom: "10px",
+  fontFamily: "Poppins",
 }));

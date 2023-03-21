@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
-import sectionpic from "../../images/div20.png";
+// import sectionpic from "../../images/div20.png";
+import sectionpic from "../../images/new-images/LookingIntoDistance.jpg";
 import sectionpic2 from "../../images/div21.png";
 import sectionpic3 from "../../images/div22.png";
 import Before from "../../images/div_before.png";
@@ -32,11 +33,11 @@ function Section() {
       >
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
-            <SectionImg src={sectionpic} />
+            <SectionImg src={sectionpic} style={{ objectFit: "cover" }} />
             <SectionTitle>Our Vision</SectionTitle>
             <SectionDescription sx={{ color: "#000" }}>
-              “To be the key driver for Industrialization, sustainable Economic
-              Growth and Development in Nigeria”
+              To be the key driver for Industrialization, sustainable Economic
+              Growth and Development in Nigeria
             </SectionDescription>
           </div>
         </SectionItemContainer>
@@ -69,19 +70,19 @@ function Section() {
               <SectionDescription
                 sx={{
                   color: Colors.white,
-                  fontFamily: "Arial",
                   fontSize: "14px",
+                  fontFamily: "Poppins",
                 }}
               >
-                1. "MAN promotes the interest of manufacturers by deepening its
+                1. MAN promotes the interest of manufacturers by deepening its
                 advocacy and partnership with national and international
                 economic actors in Government, Organized Private Sector, host
                 communities and other stakeholders to foster its proactive role
-                in policy formulation and implementation.” <br /> 2. "MAN
-                promotes manufacturing sector competitiveness, contribution to
-                job creation and Gross Domestic Product through commitment to
+                in policy formulation and implementation. <br /> 2. MAN promotes
+                manufacturing sector competitiveness, contribution to job
+                creation and Gross Domestic Product through commitment to
                 research and development, new technologies and environmental
-                sustainability.”
+                sustainability.
               </SectionDescription>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
@@ -112,23 +113,23 @@ function Section() {
             />
             <div style={{ padding: "30px 0" }}>
               <SectionTitle sx={{ color: Colors.white }}>
-                Policy & Advocacy
+                Advocacy & Achievements
               </SectionTitle>
               <SectionDescription
                 sx={{
                   color: Colors.white,
-                  fontFamily: "Arial",
                   fontSize: "14px",
+                  fontFamily: "Poppins",
                 }}
               >
-                The Manufacturers Association of Nigeria (MAN) was established
-                in May, 1971 as a company limited by guarantee. The
-                establishment of the Association was motivated by the desire to
-                have a focal point of communication and consultation between
-                industry on the one hand, and the government and general public
-                on the other.
+                Through its continuous advocacy programmes, MAN has recorded
+                remarkable achievements in a wide range of areas.
               </SectionDescription>
-              <Link to="/about" style={{ textDecoration: "none" }}>
+              <Link
+                to={"/about/code-of-conduct"}
+                state={{ from: "home" }}
+                style={{ textDecoration: "none" }}
+              >
                 <MyButton
                   sx={{
                     color: "#fff",
@@ -214,15 +215,15 @@ function Section() {
               alt=""
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
-            <div style={{ padding: "30px 0" }}>
+            <div style={{ padding: "30px 0", fontFamily: "Poppins" }}>
               <SectionTitle sx={{ color: Colors.white }}>
                 Why Join MAN?
               </SectionTitle>
               <SectionDescription
                 sx={{
                   color: Colors.white,
-                  fontFamily: "Arial",
                   fontSize: "14px",
+                  fontFamily: "Poppins",
                 }}
               >
                 Whether you are planning your next business move, or managing

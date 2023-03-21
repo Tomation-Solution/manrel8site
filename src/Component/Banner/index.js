@@ -25,7 +25,7 @@ const Banner = () => {
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         grabCursor={true}

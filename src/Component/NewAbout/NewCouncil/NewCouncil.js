@@ -6,7 +6,6 @@ import Wall from "../../Wall/Wall";
 
 import "./NewCouncil.scss";
 import NewConExecutive from "./NewCouncilComp/NewConExecutive";
-import PastPresident from "./NewCouncilComp/PastPresident";
 
 const NewCouncil = () => {
   const [options, setOptions] = useState("executive");
@@ -16,9 +15,9 @@ const NewCouncil = () => {
         <NewNavBar />
         {options === "executive" ? (
           <div className="hero_image">
-            <div className="cover">
+            {/* <div className="cover">
               <h1>National Council Members</h1>
-            </div>
+            </div> */}
           </div>
         ) : (
           <div className="hero_image2">
@@ -37,9 +36,9 @@ const NewCouncil = () => {
                 options === "executive" ? "option_item_active" : "option_item"
               }
             >
-              Executive Commitee Members
+              National Council Members
             </span>
-            <span
+            {/* <span
               onClick={() => setOptions("past-presidents")}
               className={
                 options === "past-presidents"
@@ -48,7 +47,7 @@ const NewCouncil = () => {
               }
             >
               Past Presidents
-            </span>
+            </span> */}
             {/* <span
               onClick={() => setOptions("branch")}
               className={
@@ -61,7 +60,7 @@ const NewCouncil = () => {
 
           {options === "executive" && <NewConExecutive />}
 
-          {options === "past-presidents" && <PastPresident />}
+          {/* {options === "past-presidents" && <PastPresident />} */}
 
           {/* {options === "branch" && <Branch />} */}
         </div>

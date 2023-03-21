@@ -17,11 +17,12 @@ const PrivateSector = () => {
 
         <div className="private-sector-content">
           <div className="overlapModal">
-            <h1>Organized Private Sector (OPS) Bodies</h1>
+            <h1>Organized Private Sector (OPS) of Nigeria</h1>
             <p>
-              The Organized Private Sector (OPS) is an umbrella organization of
-              Business Membership Organizations representing the interest of the
-              private sector in Nigeria. OPS member organizations are the
+              The Organized Private Sector (OPS) of Nigeria is an umbrella
+              organization of Business Membership Organizations representing the
+              interest of the private sector in Nigeria. OPS member
+              organizations are the
             </p>
           </div>
 
@@ -39,7 +40,7 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#DC3545" }}
+                style={{ backgroundColor: "#2E8B57" }}
               >
                 <h3>2</h3>
                 <div className="right">
@@ -72,7 +73,7 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#17A2B8" }}
+                style={{ backgroundColor: "	#006400" }}
               >
                 <h3>5</h3>
                 <div className="right">
@@ -86,7 +87,7 @@ const PrivateSector = () => {
         </div>
 
         <div className="achievements">
-          <h1>International Agencies & Partners</h1>
+          <h1>Continental / International Partners</h1>
           <p>
             MAN has successfully cultivated and continues to nurture
             relationships with the following:
@@ -132,7 +133,7 @@ const PrivateSector = () => {
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>v European Union Commission Pro-Invest</h5>
+              <h5>European Union Commission Pro-Invest</h5>
             </div>
 
             <div className="achievements-item">
@@ -194,12 +195,12 @@ const PrivateSector = () => {
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>v Enable 2</h5>
+              <h5>Enable 2</h5>
             </div>
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>v Agence Francaise De Development (AFD)</h5>
+              <h5>Agence Francaise De Development (AFD)</h5>
             </div>
           </div>
         </div>

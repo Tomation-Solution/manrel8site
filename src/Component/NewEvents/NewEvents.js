@@ -6,15 +6,26 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import "./NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import { RegisterModal, SingleEvent, SingleTraining } from "./Modals";
+import {
+  RegisterModal,
+  RegisterTrainingModal,
+  SingleEvent,
+  SingleTraining,
+} from "./Modals";
 import { Link } from "react-router-dom";
 import { trainingData } from "../Training/TrainingData";
 
 const NewEvents = () => {
   const [register, setRegister] = useState(false);
+  const [registerTraining, setRegisterTraining] = useState(false);
   return (
     <div className="new-events">
       {register && <RegisterModal closefn={() => setRegister(!register)} />}
+      {registerTraining && (
+        <RegisterTrainingModal
+          closefn={() => setRegisterTraining(!registerTraining)}
+        />
+      )}
       <UIProvider>
         <NewNavBar />
         <div className="topBg">
@@ -50,7 +61,7 @@ const NewEvents = () => {
             {trainingData.map((item, index) => (
               <SingleTraining
                 image={Image}
-                registerfn={() => setRegister(!register)}
+                registerfn={() => setRegisterTraining(!registerTraining)}
                 data={item}
                 key={index}
               />

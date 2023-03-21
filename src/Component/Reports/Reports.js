@@ -4,7 +4,7 @@ import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import Articleimage from "../../images/new-images/PublicationImg.png";
+import Articleimage from "../../images/new-images/GalLinkImg (3).png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import "./Reports.scss";
 import { Link } from "react-router-dom";

@@ -84,9 +84,7 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Engr. (Chief) Giandomenico Massari</p>
-          <p className="header">
-            JP, FNSE, SMIEEE Vice President, Eastern Zone
-          </p>
+          <p className="header">Vice President, Eastern Zone</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -303,20 +301,6 @@ const ManualRenders = () => {
 
       <div className="member_item">
         <div className="left">
-          <img alt="" src={Exec16} />
-        </div>
-        <div className="right">
-          <p className="header">Mr. Segun Ajayi-Kadir</p>
-          <p className="header">Director General</p>
-
-          {/* <p className="detail">Director General</p>
-          <p className="detail">Manufacturers Association of Nigeria</p>
-          <p className="detail">Tel: 08037861532</p> */}
-        </div>
-      </div>
-
-      <div className="member_item">
-        <div className="left">
           <img alt="" src={Sect13} />
         </div>
         <div className="right">
@@ -329,6 +313,20 @@ const ManualRenders = () => {
           </p>
           <p className="detail">Email: madebayo2010@gmail.com </p>
           <p className="detail">Tel: 08023175695</p> */}
+        </div>
+      </div>
+
+      <div className="member_item">
+        <div className="left">
+          <img alt="" src={Exec16} />
+        </div>
+        <div className="right">
+          <p className="header">Mr. Segun Ajayi-Kadir</p>
+          <p className="header">Director General</p>
+
+          {/* <p className="detail">Director General</p>
+          <p className="detail">Manufacturers Association of Nigeria</p>
+          <p className="detail">Tel: 08037861532</p> */}
         </div>
       </div>
     </div>

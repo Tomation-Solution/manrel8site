@@ -2,6 +2,8 @@
 
 .modal-cover {
   position: relative;
+  height: 600px;
+  overflow-y: auto;
   .closebtn {
     position: absolute;
     top: 10px;

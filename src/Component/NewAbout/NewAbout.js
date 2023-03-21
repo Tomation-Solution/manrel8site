@@ -1,7 +1,7 @@
 import React from "react";
-import OurHistory from "../../images/new-images/OurHistory.png";
-import OurMission from "../../images/new-images/OurMission.png";
-import OurVision from "../../images/new-images/OurVision.png";
+import ZumaRock from "../../images/new-images/ZumaRock.jfif";
+import GuraraFalls from "../../images/new-images/GuraraFalls.jpg";
+import IjeshFalls from "../../images/new-images/IjeshFalls.jpg";
 import BullerStar from "../../images/new-images/BullerStar.png";
 
 import "./NewAbout.scss";
@@ -17,7 +17,7 @@ const NewAbout = () => {
         <NewNavBar />
         <div className="topBg"></div>
         <div className="new-about-content">
-          <div className="overlapModal">
+          {/* <div className="overlapModal">
             <h1>
               MAN is the best way to success advance progress success in the
               manufacturing industry
@@ -33,10 +33,10 @@ const NewAbout = () => {
               whose central focus was to give meaning to the interests, problems
               and aspirations of the manufacturing sector.
             </p>
-          </div>
+          </div> */}
           <div className="history" id="history">
             <div className="left">
-              <img alt="" src={OurHistory} />
+              <img alt="" src={ZumaRock} />
             </div>
             <div className="right">
               <h3>Our History</h3>
@@ -75,7 +75,7 @@ const NewAbout = () => {
                 className="core-values-item"
                 style={{ backgroundColor: "#2C3513" }}
               >
-                <h3>1</h3>
+                <h3>S</h3>
                 <div className="right">
                   <h5>Service</h5>
                   <p>Deliver quintessential membership services.</p>
@@ -84,9 +84,9 @@ const NewAbout = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#DC3545" }}
+                style={{ backgroundColor: "	#454B1B" }}
               >
-                <h3>2</h3>
+                <h3>E</h3>
                 <div className="right">
                   <h5>Engagement</h5>
                   <p>
@@ -100,7 +100,7 @@ const NewAbout = () => {
                 className="core-values-item"
                 style={{ backgroundColor: "#038B49" }}
               >
-                <h3>3</h3>
+                <h3>R</h3>
                 <div className="right">
                   <h5>Resilience</h5>
                   <p>
@@ -114,7 +114,7 @@ const NewAbout = () => {
                 className="core-values-item"
                 style={{ backgroundColor: "#86742A" }}
               >
-                <h3>4</h3>
+                <h3>V</h3>
                 <div className="right">
                   <h5>Value addition</h5>
                   <p>
@@ -125,9 +125,9 @@ const NewAbout = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#17A2B8" }}
+                style={{ backgroundColor: "#6B8E23" }}
               >
-                <h3>5</h3>
+                <h3>I</h3>
                 <div className="right">
                   <h5>Integrity</h5>
                   <p>
@@ -139,9 +139,9 @@ const NewAbout = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#6C757D" }}
+                style={{ backgroundColor: "#228B22" }}
               >
-                <h3>6</h3>
+                <h3>C</h3>
                 <div className="right">
                   <h5>Commitment</h5>
                   <p>
@@ -151,17 +151,24 @@ const NewAbout = () => {
                 </div>
               </div>
 
-              <div
-                className="core-values-item"
-                style={{ backgroundColor: "#2C3513" }}
-              >
-                <h3>7</h3>
-                <div className="right">
-                  <h5>Excellence</h5>
-                  <p>
-                    Enable service-oriented system driven by excellent
-                    performance.
-                  </p>
+              <div className="core-values-item centered">
+                <div
+                  className=""
+                  style={{
+                    backgroundColor: "#2C3513",
+                    padding: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 style={{ marginRight: "20px" }}>E</h3>
+                  <div className="right">
+                    <h5>Excellence</h5>
+                    <p>
+                      Enable service-oriented system driven by excellent
+                      performance.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -169,7 +176,7 @@ const NewAbout = () => {
           <div className="missvis">
             <div className="missvis-item">
               <div className="top">
-                <img alt="" src={OurVision} />
+                <img alt="" src={IjeshFalls} />
               </div>
               <div className="bottom">
                 <h1>Our Vision</h1>
@@ -181,7 +188,7 @@ const NewAbout = () => {
             </div>
             <div className="missvis-item">
               <div className="top">
-                <img alt="" src={OurMission} />
+                <img alt="" src={GuraraFalls} />
               </div>
               <div className="bottom">
                 <h1>Our Mission</h1>
@@ -220,7 +227,7 @@ const NewAbout = () => {
               </div>
               <div
                 className="our-obj-item"
-                style={{ backgroundColor: "#DC3545" }}
+                style={{ backgroundColor: "#006400" }}
               >
                 <p>
                   To develop and promote the contribution of manufacturers to
@@ -248,15 +255,14 @@ const NewAbout = () => {
                   and by consumers in foreign countries;
                 </p>
               </div>
-              <div
-                className="our-obj-item"
-                style={{ backgroundColor: "#038E4B" }}
-              >
-                <p>
-                  To communicate and liaise with kindred and other bodies, in
-                  the accomplishment of the objectives of the Association and on
-                  subjects of common interest.
-                </p>
+              <div className="our-obj-item centered">
+                <div className="" style={{ backgroundColor: "#038E4B" }}>
+                  <p>
+                    To communicate and liaise with kindred and other bodies, in
+                    the accomplishment of the objectives of the Association and
+                    on subjects of common interest.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -278,20 +284,14 @@ const NewAbout = () => {
             </p>
           </div>
           <div className="how-work">
-            <h1>How We Work</h1>
+            <h1>How we Work</h1>
             <div className="how-work-con">
               <p>
                 The Manufacturers Association of Nigeria (MAN) receives its
-                mandate from the National Council, fourteen (14) Branch Councils
-                across the country, and ten (10) Sectoral Groups. In addition,
-                five (5) Standing Committees, Nine (9) Ad-Hoc Committees and
-                Seventy-four (74) sub-sectoral Groups.
-              </p>
-              <p>
-                Each of our National Council and Branch Council members are
-                elected to a term of office. Our Standing Committee members are
-                invited to join voluntarily based on their sector experience and
-                technical expertise.
+                mandate from the National Council, fourteen Branch Councils
+                across the country, and ten Sectoral Groups. In addition, five
+                Standing Committees, Nine Ad-Hoc Committees and Seventy-four
+                sub-sectoral Groups.
               </p>
               <p>
                 This engagement process reaches over 3000 MAN members who have a
@@ -299,9 +299,12 @@ const NewAbout = () => {
                 work strategies to discussing the key business issues of the day
                 and re-tooling our influence.
               </p>
-              <div>
-                <img src={OurVision} alt="" />
-              </div>
+              <p>
+                Each of our National Council and Branch Council members are
+                elected to a term of office. Our Standing Committee members are
+                invited to join voluntarily based on their sector experience and
+                technical expertise.
+              </p>
             </div>
           </div>
           <div className="nat-council">
@@ -332,7 +335,7 @@ const NewAbout = () => {
               </div>
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#DC3545" }}
+                style={{ backgroundColor: "#006400" }}
               >
                 <h3>2</h3>
                 <div className="right">
@@ -359,7 +362,7 @@ const NewAbout = () => {
               </div>
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#17A2B8" }}
+                style={{ backgroundColor: "#2E8B57" }}
               >
                 <h3>5</h3>
                 <div className="right">
