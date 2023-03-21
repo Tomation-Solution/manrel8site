@@ -25,7 +25,7 @@ const NewMemberRequire = () => {
           </h1>
 
           <div className="steps-items">
-            <div className="step-item" style={{ backgroundColor: "#2C3513" }}>
+            <div className="step-item" style={{ backgroundColor: "#6B8E23" }}>
               <div className="circled-num">
                 <p>1</p>
               </div>
@@ -33,7 +33,7 @@ const NewMemberRequire = () => {
                 MUST HAVE A MANUFACTURING PLANT IN NIGERIA
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#DC3545" }}>
+            <div className="step-item" style={{ backgroundColor: "#2E8B57" }}>
               <div className="circled-num">
                 <p>2</p>
               </div>
@@ -41,7 +41,7 @@ const NewMemberRequire = () => {
                 MUST BE A MANUFACTURER OF AT LEAST ONE PRODUCT
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#4ECB71" }}>
+            <div className="step-item" style={{ backgroundColor: "#006400" }}>
               <div className="circled-num">
                 <p>3</p>
               </div>
@@ -49,7 +49,7 @@ const NewMemberRequire = () => {
                 THE MANUFACTURING PLANT MUST BE IN PRODUCTION.
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#A14792" }}>
+            <div className="step-item" style={{ backgroundColor: "#228B22" }}>
               <div className="circled-num">
                 <p>4</p>
               </div>
@@ -58,7 +58,7 @@ const NewMemberRequire = () => {
                 REGULATORY BODY (SON, NAFDAC, ETC)
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#FABB05" }}>
+            <div className="step-item" style={{ backgroundColor: "#556B2F" }}>
               <div className="circled-num">
                 <p>5</p>
               </div>
@@ -99,7 +99,7 @@ const NewMemberRequire = () => {
                 COMPANY’S CERTIFICATE OF INCORPORATION
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#DC3545" }}>
+            <div className="step-item" style={{ backgroundColor: "#556B2F" }}>
               <div className="circled-num">
                 <p>2</p>
               </div>
@@ -116,7 +116,7 @@ const NewMemberRequire = () => {
                 PROCEEDING TWO (2) YEARS OR BUSINESS PLAN FOR NEW COMPANIES
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#A14792" }}>
+            <div className="step-item" style={{ backgroundColor: "#3CB371" }}>
               <div className="circled-num">
                 <p>4</p>
               </div>
@@ -140,7 +140,7 @@ const NewMemberRequire = () => {
               </div>
               <p className="step-item-text">REGISTRATION FEE [N10,000.00]</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#DC3545" }}>
+            <div className="step-item" style={{ backgroundColor: "#2E8B57" }}>
               <div className="circled-num">
                 <p>2</p>
               </div>
@@ -152,7 +152,7 @@ const NewMemberRequire = () => {
               </div>
               <p className="step-item-text">SPECIAL DEVELOPMENT LEVY</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#A14792" }}>
+            <div className="step-item" style={{ backgroundColor: "#006400" }}>
               <div className="circled-num">
                 <p>4</p>
               </div>
@@ -165,28 +165,21 @@ const NewMemberRequire = () => {
                 <p>5</p>
               </div>
               <p className="step-item-text">
-                BUY MADE-IN-NIGERIA PRODUCTS ADVERT LEVY [N10,000.00
+                BUY MADE-IN-NIGERIA PRODUCTS ADVERT LEVY [N10,000.00]
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#05667C" }}>
+            <div className="step-item" style={{ backgroundColor: "#228B22" }}>
               <div className="circled-num">
                 <p>6</p>
               </div>
               <p className="step-item-text">LEGAL LEVY [N10,000.00]</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#1D71B8" }}>
+            <div className="step-item" style={{ backgroundColor: "	#556B2F" }}>
               <div className="circled-num">
                 <p>7</p>
               </div>
-              <p className="step-item-text">AGM LEVY [N10,000.00</p>
+              <p className="step-item-text">AGM LEVY [N10,000.00]</p>
             </div>
-            <div className="gray-circle"></div>
-          </div>
-        </section>
-        <section className="membreq-steps">
-          <h1>Step 6 : Await Confirmation of Approval from MAN</h1>
-          <div className="steps-items2">
-            <h1>Await Confirmation of Ah1proval From MAN</h1>
             <div className="gray-circle"></div>
           </div>
         </section>
@@ -194,6 +187,13 @@ const NewMemberRequire = () => {
           <h1>Step 5 : Await Schedule of Inspection Visit From MAN</h1>
           <div className="steps-items2">
             <h1>Await Schedule of Factory Inspection visit from MAN</h1>
+            <div className="gray-circle"></div>
+          </div>
+        </section>
+        <section className="membreq-steps">
+          <h1>Step 6 : Await Confirmation of Approval from MAN</h1>
+          <div className="steps-items2">
+            <h1>Await Confirmation of Approval From MAN</h1>
             <div className="gray-circle"></div>
           </div>
         </section>

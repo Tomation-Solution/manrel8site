@@ -37,6 +37,7 @@ import NewMemberRequire from "./Component/NewMemberRequire/NewMemberRequire";
 import NewMRC from "./Component/NewMRC/NewMRC";
 import MRCServices from "./Component/NewMRC/MRCServices";
 import MRCContact from "./Component/NewMRC/MRCContact";
+import JoinNowForm from "./Component/JoinNowForm/JoinNowForm";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -61,6 +62,7 @@ root.render(
       <Route path="/about/code-of-conduct" element={<CodeofConduct />} />
       <Route path="/about/private-sector" element={<PrivateSector />} />
       <Route path="/about/council-members" element={<NewCouncil />} />
+      <Route path="/join-now-form" element={<JoinNowForm />} />
 
       <Route path="/insight" element={<Insight />} />
       <Route path="/event-training" element={<NewEvents />} />

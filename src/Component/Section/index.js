@@ -15,7 +15,6 @@ import {
   SectionImg,
   SectionItemContainer,
   SectionTitle,
-  SectionMember,
 } from "../../Styles/Section";
 function Section() {
   return (
@@ -113,7 +112,7 @@ function Section() {
             />
             <div style={{ padding: "30px 0" }}>
               <SectionTitle sx={{ color: Colors.white }}>
-                Advocacy & Achievements
+                Advocacy Achievements
               </SectionTitle>
               <SectionDescription
                 sx={{
@@ -184,12 +183,29 @@ function Section() {
               manufacturing plant in Nigeria. Please view the Membership
               Requirement and confirm you are eligible.
             </SectionDescription>
-            <Link
-              to="/membership-requirement"
-              style={{ textDecoration: "none" }}
-            >
-              <SectionMember> Join now {"> "}</SectionMember>
-            </Link>
+            {/* 
+            <SectionMember> */}
+            <div style={{ margin: "60px 20px" }}>
+              <Link
+                to="/join-now-form"
+                style={{
+                  textDecoration: "none",
+                  color: "#2c3513",
+                  fontWeight: "600",
+                }}
+              >
+                <span
+                  style={{
+                    padding: "10px 20px",
+                    border: "1px solid #d3d3d3",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Join now {"> "}
+                </span>
+              </Link>
+            </div>
+            {/* </SectionMember> */}
           </div>
         </SectionItemContainer>
 

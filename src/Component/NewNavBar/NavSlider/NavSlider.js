@@ -125,7 +125,9 @@ const NavSlider = ({ clickfn }) => {
           <Translate />
         </div>
         <div className="nav-slider-join">
-          <button>JOIN NOW</button>
+          <Link to={"/join-now-form"}>
+            <button>JOIN NOW</button>
+          </Link>
         </div>
 
         <div className="closeButton" onClick={clickfn}>

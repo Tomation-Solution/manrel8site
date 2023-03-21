@@ -117,7 +117,9 @@ const NewNavBar = () => {
             <Translate />
           </div>
           <div className="join-now">
-            <button>JOIN NOW</button>
+            <Link to={"/join-now-form"}>
+              <button>JOIN NOW</button>
+            </Link>
           </div>
 
           {showAbout && <AboutDropdown />}

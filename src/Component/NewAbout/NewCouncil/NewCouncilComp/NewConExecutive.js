@@ -31,9 +31,9 @@ const NewConExecutive = () => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.name}</p>
                     <p className="header">{item?.title2}</p>
                     <p className="header">{item?.name2}</p>
+                    <p className="header">{item?.name}</p>
                     {/* <p className="detail">{item?.title}</p> */}
                     {/* <p className="detail">{item?.address}</p> */}
                     {/* <p className="detail">{item?.email}</p>
@@ -58,8 +58,8 @@ const NewConExecutive = () => {
                   <img alt="" src={item?.image || NoPicture} />
                 </div> */}
                   <div className="right">
-                    <p className="header">{item?.name}</p>
                     <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
                   </div>
                 </div>
               );

@@ -25,9 +25,10 @@ const Banner = () => {
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 10000,
+          delay: 30000,
           disableOnInteraction: false,
         }}
+        loop={true}
         grabCursor={true}
         modules={[Autoplay]}
         className="mySwiper"
@@ -52,10 +53,7 @@ const Banner = () => {
                 manufacturer, MAN is here to help.
               </BannerDescription>
               <BannerButtonContainer>
-                <Link
-                  to="/become-membership"
-                  style={{ textDecoration: "none" }}
-                >
+                <Link to="/join-now-form" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       backgroundColor: Colors.primary,
@@ -90,10 +88,7 @@ const Banner = () => {
                 sustainability.
               </BannerDescription>
               <BannerButtonContainer>
-                <Link
-                  to="/become-membership"
-                  style={{ textDecoration: "none" }}
-                >
+                <Link to="/join-now-form" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       backgroundColor: Colors.primary,
@@ -119,10 +114,7 @@ const Banner = () => {
                 growth and development in Nigeria
               </BannerDescription>
               <BannerButtonContainer>
-                <Link
-                  to="/become-membership"
-                  style={{ textDecoration: "none" }}
-                >
+                <Link to="/join-now-form" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       backgroundColor: Colors.primary,

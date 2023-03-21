@@ -26,8 +26,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec1} />
         </div>
         <div className="right">
-          <p className="header">Otunba Francis Meshioye</p>
           <p className="header">President</p>
+          <p className="header">Otunba Francis Meshioye</p>
           {/* <p className="detail">Director</p>
           <p className="detail">
             JMG Limited Plot 15, Block A Gbagada Industrial Scheme, Gbagada,
@@ -45,8 +45,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec2} />
         </div>
         <div className="right">
-          <p className="header">Prince Oba Okojie </p>
           <p className="header">Vice President, Lagos</p>
+          <p className="header">Prince Oba Okojie </p>
           {/* <p className="detail">Director</p>
           <p className="detail">
             Ikorodu Steel Mill Ltd. Ikorodu Industrial Estate Odogunyan, Ikorodu
@@ -63,8 +63,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec3} />
         </div>
         <div className="right">
-          <p className="header">Engr Ilyasu Saleh</p>
           <p className="header">Vice President (Kaduna North West Zone)</p>
+          <p className="header">Engr Ilyasu Saleh</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -83,8 +83,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec4} />
         </div>
         <div className="right">
-          <p className="header">Engr. (Chief) Giandomenico Massari</p>
           <p className="header">Vice President, Eastern Zone</p>
+          <p className="header">Engr. (Chief) Giandomenico Massari</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -101,8 +101,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec5} />
         </div>
         <div className="right">
-          <p className="header">Alhaji (Dr) Kamorudeen Yusuf</p>
           <p className="header">Vice President (Western Zone)</p>
+          <p className="header">Alhaji (Dr) Kamorudeen Yusuf</p>
 
           {/* <p className="detail">GMD/CEO </p>
           <p className="detail">
@@ -120,8 +120,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec6} />
         </div>
         <div className="right">
-          <p className="header">Mr. Mhir Iyenge</p>
           <p className="header">Vice President (North East Zone)</p>
+          <p className="header">Mr. Mhir Iyenge</p>
 
           {/* <p className="detail">Managing Directorr</p>
           <p className="detail">
@@ -137,8 +137,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec7} />
         </div>
         <div className="right">
-          <p className="header">Mr. Pannagiotis Katsis</p>
           <p className="header">Vice President (Multinational)</p>
+          <p className="header">Mr. Pannagiotis Katsis</p>
           {/* 
           <p className="detail">Managing Director</p>
           <p className="detail">
@@ -155,8 +155,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec8} />
         </div>
         <div className="right">
-          <p className="header">Mr. Carl Cruz</p>
           <p className="header">Vice President (Multinational)</p>
+          <p className="header">Mr. Carl Cruz</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -172,8 +172,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec9} />
         </div>
         <div className="right">
-          <p className="header">Mr. Samuel Kolawole</p>
           <p className="header">Vice President (SMI)</p>
+          <p className="header">Mr. Samuel Kolawole</p>
 
           {/* <p className="detail">Managing Director/CEO</p>
           <p className="detail">
@@ -190,8 +190,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec10} />
         </div>
         <div className="right">
-          <p className="header">Alhaji Aliko Dangote</p>
           <p className="header">GCON Vice President (MLCG)</p>
+          <p className="header">Alhaji Aliko Dangote</p>
           {/* 
           <p className="detail">Dangote Group</p>
           <p className="detail">
@@ -208,8 +208,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec11} />
         </div>
         <div className="right">
-          <p className="header">Rev. Isaac Agoye</p>
           <p className="header">National Treasurer</p>
+          <p className="header">Rev. Isaac Agoye</p>
 
           {/* <p className="detail">Director</p>
           <p className="detail">
@@ -226,8 +226,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec12} />
         </div>
         <div className="right">
-          <p className="header">Mr. Omoboyede Olusanya</p>
           <p className="header">Chairman Economic Policy Committee</p>
+          <p className="header">Mr. Omoboyede Olusanya</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -243,10 +243,10 @@ const ManualRenders = () => {
           <img alt="" src={Exec13} />
         </div>
         <div className="right">
-          <p className="header">Mrs. Kofo Akinkugbe Chairperson</p>
           <p className="header">
             Corporate Affairs and Strategic Planning Committee
           </p>
+          <p className="header">Mrs. Kofo Akinkugbe Chairperson</p>
 
           {/* <p className="detail">CEO/Managing Director</p>
           <p className="detail">
@@ -265,8 +265,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec14} />
         </div>
         <div className="right">
-          <p className="header">Engr. Chukwuemeka Nzewi Chairman</p>
           <p className="header">Infrastructure Committee</p>
+          <p className="header">Engr. Chukwuemeka Nzewi Chairman</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -285,8 +285,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec15} />
         </div>
         <div className="right">
-          <p className="header">Alhaji Ali S. Madugu, mni Chairman</p>
           <p className="header">Finance and Establishment Committee</p>
+          <p className="header">Alhaji Ali S. Madugu, mni Chairman</p>
 
           {/* <p className="detail">Managing Director/CEO</p>
           <p className="detail">
@@ -304,8 +304,8 @@ const ManualRenders = () => {
           <img alt="" src={Sect13} />
         </div>
         <div className="right">
-          <p className="header">Dr. Michael Adebayo Chairman</p>
           <p className="header">MAN Gas Users</p>
+          <p className="header">Dr. Michael Adebayo </p>
 
           {/* <p className="detail">Executive Director</p>
           <p className="detail">
@@ -321,8 +321,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec16} />
         </div>
         <div className="right">
-          <p className="header">Mr. Segun Ajayi-Kadir</p>
           <p className="header">Director General</p>
+          <p className="header">Mr. Segun Ajayi-Kadir</p>
 
           {/* <p className="detail">Director General</p>
           <p className="detail">Manufacturers Association of Nigeria</p>

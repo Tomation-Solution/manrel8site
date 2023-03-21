@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "./Article.scss";
 
-import Manufacturing from "../../images/new-images/Manufacturing.png";
-import ArtNature1 from "../../images/new-images/Manoffice.png";
-import ArtNature2 from "../../images/new-images/PublicationImg.png";
+import Manufacturing from "../../images/new-images/ManHouseMainImg.jpeg";
+import ArtNature1 from "../../images/new-images/ManHouseMainImg.jpeg";
+import ArtNature2 from "../../images/new-images/ManHouseMainImg.jpeg";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "react-router-dom";

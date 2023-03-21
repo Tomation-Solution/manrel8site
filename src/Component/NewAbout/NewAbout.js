@@ -112,7 +112,7 @@ const NewAbout = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#86742A" }}
+                style={{ backgroundColor: "#6B8E23" }}
               >
                 <h3>V</h3>
                 <div className="right">

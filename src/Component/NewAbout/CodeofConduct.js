@@ -79,7 +79,7 @@ const CodeofConduct = () => {
         </div>
 
         <div className="achievements">
-          <h1> Advocacy & Achievements</h1>
+          <h1> Advocacy Achievements</h1>
           <p>
             Through its continuous advocacy programmes, MAN has recorded
             remarkable achievements in a wide range of areas which include:
