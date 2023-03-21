@@ -22,8 +22,8 @@ const PastPresident = () => {
                   <img alt="" src={item?.image || NoPicture} />
                 </div>
                 <div className="right">
-                  <p className="header">{item?.name}</p>
                   <p className="header">{item?.title}</p>
+                  <p className="header">{item?.name}</p>
                 </div>
               </div>
             );
