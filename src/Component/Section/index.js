@@ -187,7 +187,7 @@ function Section() {
             <SectionMember> */}
             <div style={{ margin: "60px 20px" }}>
               <Link
-                to="/join-now-form"
+                to="/membership-requirement"
                 style={{
                   textDecoration: "none",
                   color: "#2c3513",
@@ -201,7 +201,7 @@ function Section() {
                     borderRadius: "10px",
                   }}
                 >
-                  Join now {"> "}
+                  See More {"> "}
                 </span>
               </Link>
             </div>
@@ -254,17 +254,19 @@ function Section() {
                 restlessly to intervening on members’ regulatory and operational
                 issues
               </SectionDescription>
-              <Link to="/become-membership" style={{ textDecoration: "none" }}>
-                <MyButton
-                  sx={{
-                    color: "#fff",
-                    borderColor: "#fff",
-                    marginTop: "21px",
-                  }}
-                >
-                  See More
-                </MyButton>
-              </Link>
+              <div style={{ marginLeft: "30px" }}>
+                <Link to="/join-now-form" style={{ textDecoration: "none" }}>
+                  <MyButton
+                    sx={{
+                      color: "#fff",
+                      borderColor: "#fff",
+                      marginTop: "21px",
+                    }}
+                  >
+                    Join Now
+                  </MyButton>
+                </Link>
+              </div>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
           </div>
