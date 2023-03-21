@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
 // import sectionpic from "../../images/div20.png";
-import sectionpic from "../../images/new-images/LookingIntoDistance.jpg";
+import sectionpic from "../../images/new-images/VisionImg.jfif";
 import sectionpic2 from "../../images/div21.png";
 import sectionpic3 from "../../images/div22.png";
 import Before from "../../images/div_before.png";
