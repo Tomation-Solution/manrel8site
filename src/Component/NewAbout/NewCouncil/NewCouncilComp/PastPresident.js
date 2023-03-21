@@ -7,10 +7,11 @@ const PastPresident = () => {
     <>
       <article>
         <h1 className="article-header">Past President</h1>
-        <p className="article-desc">
-          The Executive Committee is a group of experienced professionals duly
+        <p className="article-desc" style={{ fontSize: "16px" }}>
+          {/* The Executive Committee is a group of experienced professionals duly
           elected by MAN members and entrusted with the obligation to conduct
-          the affairs of the Association according to its constitution
+          the affairs of the Association according to its constitution */}
+          See our esteemed across the country
         </p>
 
         <div className="member_items">

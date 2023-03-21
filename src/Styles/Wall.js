@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import { Button, Typography } from "@mui/material";
 
 export const WallContainer = styled(Box)(({ theme }) => ({
+  fontFamily: "Poppins",
   display: "flex",
   justifyContent: "space-between",
   alignContent: "center",
@@ -26,6 +27,7 @@ export const WallDescription = styled(Typography)(({ theme }) => ({
   fontSize: "16px",
   color: Colors.white,
   marginBottom: "20px",
+  fontFamily: "Poppins",
 }));
 
 export const MyButton = styled(Button)(({ theme }) => ({

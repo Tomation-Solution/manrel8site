@@ -20,6 +20,14 @@ export const RegisterModal = ({ closefn }) => {
             <input type="text" />
           </div>
           <div className="card">
+            <h4>Phone Number</h4>
+            <input type={"text"} />
+          </div>
+          <div className="card">
+            <h4>Phone Number</h4>
+            <input type={"text"} />
+          </div>
+          <div className="card">
             <h4>Email Address</h4>
             <input type="email" />
           </div>
@@ -52,6 +60,10 @@ export const RegisterTrainingModal = ({ closefn }) => {
           <div className="card">
             <h4>Full name</h4>
             <input type="text" />
+          </div>
+          <div className="card">
+            <h4>Phone Number</h4>
+            <input type={"text"} />
           </div>
           <div className="card">
             <h4>Email Address</h4>
@@ -88,6 +100,10 @@ export const PayTrainingModal = ({ closefn }) => {
             <input type="text" />
           </div>
           <div className="card">
+            <h4>Phone Number</h4>
+            <input type={"text"} />
+          </div>
+          <div className="card">
             <h4>Email Address</h4>
             <input type="email" />
           </div>
@@ -120,6 +136,10 @@ export const PayModal = ({ closefn }) => {
           <div className="card">
             <h4>Full name</h4>
             <input type="text" />
+          </div>
+          <div className="card">
+            <h4>Phone Number</h4>
+            <input type={"text"} />
           </div>
           <div className="card">
             <h4>Email Address</h4>
@@ -205,6 +225,10 @@ export const PublicationPayModal = ({ closefn }) => {
           <div className="card">
             <h4>Full name</h4>
             <input type="text" />
+          </div>
+          <div className="card">
+            <h4>Phone Number</h4>
+            <input type={"text"} />
           </div>
           <div className="card">
             <h4>Email Address</h4>

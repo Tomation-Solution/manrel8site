@@ -11,7 +11,7 @@ import Subscribe from "../Subscribe/Subscribe";
 import { newsdata } from "./NewsData";
 import { Link } from "react-router-dom";
 
-import Articleimage from "../../images/new-images/PublicationImg.png";
+import Articleimage from "../../images/new-images/GalLinkImg (1).png";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
 

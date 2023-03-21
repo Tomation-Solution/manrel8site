@@ -8,7 +8,7 @@ import "./Publications.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 
-import Articleimage from "../../images/new-images/PublicationImg.png";
+import Articleimage from "../../images/new-images/PublicationsDropImg.png";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { newPubData } from "./PublicationsData";
 import { Link } from "react-router-dom";

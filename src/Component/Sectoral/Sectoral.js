@@ -82,11 +82,11 @@ function Sectoral() {
           </div>
           <div className="sect-body">
             <div className="cover">
-              <div className="head">
+              <div className="head" style={{ margin: "20px 0px" }}>
                 In order to cater for members who have near homogenous or
-                sector-specific products, MAN has ten (10) Sectoral Groups and
-                seventy seven (77) Sub-Sectoral Groups. The Groups are serviced
-                by full-time Sectoral Executives located at the National
+                sector-specific products, MAN has ten Sectoral Groups and
+                seventy seven Sub-Sectoral Groups. The Groups are serviced by
+                full-time Sectoral Executives located at the National
                 Secretariat of the Association.
               </div>
               <div className="wrap-g">

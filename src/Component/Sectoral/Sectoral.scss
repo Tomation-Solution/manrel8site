@@ -1,11 +1,11 @@
-@import '../../Styles//resources';
+@import "../../Styles//resources";
 .sectoral {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   .hero_image {
-    height: 60vh;
-    max-height: 424px;
+    // height: 60vh;
+    // max-height: 424px;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url('../../images/Group\ 61.png');
+      url("../../images/Group\ 61.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -16,7 +16,7 @@
     }
     &.diff {
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url('../../images/Group\ 62.png');
+        url("../../images/Group\ 62.png");
       background-size: cover;
       background-position: center;
     }
@@ -63,35 +63,35 @@
         padding: 50px 20px;
       }
 
-      .about{
-        h1{
+      .about {
+        h1 {
           font-weight: 400;
           margin: 20px 0px;
         }
 
-        p{
+        p {
           margin: 10px 0px;
           font-size: 20px;
         }
       }
 
-      .objectives{
-        padding: 50px ;
-        background-color: #2B3513;
+      .objectives {
+        padding: 50px;
+        background-color: #2b3513;
         color: #fff;
         margin: 50px -50px;
         width: 100vw;
 
-        @include mobile-2{
+        @include mobile-2 {
           margin: 50px 0px;
         }
 
-        .obj-left-text{
+        .obj-left-text {
           margin: 30px 0px;
           font-size: 18px;
         }
 
-        h1{
+        h1 {
           font-weight: 40px;
           font-size: 40px;
           text-align: center;
@@ -100,145 +100,144 @@
           margin: 20px 0px;
         }
 
-        .obj-items{
+        .obj-items {
           display: grid;
           grid-template-columns: auto auto;
           gap: 40px;
 
-          .flex{
+          .flex {
             display: flex;
             align-items: center;
 
-            img{
+            img {
               margin-right: 10px;
 
-              @include mobile-4{
+              @include mobile-4 {
                 display: none;
               }
             }
 
-            p{
+            p {
               line-height: 25px;
             }
           }
 
-          @include mobile-2{
-            grid-template-columns: auto
+          @include mobile-2 {
+            grid-template-columns: auto;
           }
         }
       }
 
-      .thrust{
+      .thrust {
         margin: 50px 0px;
 
-        h1{
+        h1 {
           margin: 20px 0px 50px 0px;
         }
 
-        h3{
+        h3 {
           margin: 20px 0px;
         }
 
-        p{
+        p {
           margin: 20px 0px;
         }
       }
 
-      .the-board{
+      .the-board {
         margin: 50px 0px;
-        
-        @include mobile-4{
+
+        @include mobile-4 {
           overflow-x: auto;
         }
 
-        .board-header{
+        .board-header {
           margin: 20px 0px;
         }
 
-        .board-items{
+        .board-items {
           display: grid;
           grid-template-columns: auto auto;
           gap: 30px;
           margin: 60px 0px;
 
-          @include mobile-6{
+          @include mobile-6 {
             grid-template-columns: auto;
           }
 
-          .board-item{
+          .board-item {
             display: flex;
             align-items: center;
 
-            .board-img{
+            .board-img {
               width: 200px;
               height: 200px;
               margin-right: 10px;
-              img{
+              img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
               }
             }
 
-            .board-text{
-              h1{
+            .board-text {
+              h1 {
                 font-weight: 400;
-                color: #2B3513;
+                color: #2b3513;
                 margin: 10px 0px;
               }
-              p{
+              p {
                 font-size: 16px;
               }
             }
           }
         }
-
       }
 
-      .benefits{
+      .benefits {
         margin: 40px 0px;
 
-        h1{
+        h1 {
           font-size: 35px;
           margin: 30px 0px;
           font-weight: 500;
           text-align: center;
         }
 
-        .benefit-items{
+        .benefit-items {
           display: grid;
           grid-template-columns: auto auto;
           gap: 40px;
 
-          .flex{
+          .flex {
             display: flex;
             align-items: center;
 
-            img{
+            img {
               margin-right: 10px;
 
-              @include mobile-4{
+              @include mobile-4 {
                 display: none;
               }
             }
           }
 
-          @include mobile-2{
-            grid-template-columns: auto
+          @include mobile-2 {
+            grid-template-columns: auto;
           }
 
-          .cycle{
+          .cycle {
             display: flex;
             justify-content: center;
             align-items: center;
-            img{
+            img {
               width: 200px;
             }
           }
 
-          .benefit-blue-p{
+          .benefit-blue-p {
             margin: 10px 0px;
-            color: #09444D;
+            color: #09444d;
             font-weight: 500;
             text-align: center;
           }
@@ -250,15 +249,15 @@
         line-height: 140%;
         padding-bottom: 20px;
       }
-      .services-header{
+      .services-header {
         font-weight: 400;
         margin: 20px 0px;
         text-align: center;
         width: 100%;
       }
-      .service-header{
+      .service-header {
         margin: 30px 0px;
-        color: #2B3513;
+        color: #2b3513;
       }
       .wrap-g {
         display: flex;
@@ -274,7 +273,7 @@
           @include mobile-3 {
             width: 100%;
           }
-          button{
+          button {
             cursor: pointer;
           }
           .flex {
@@ -313,7 +312,7 @@
           line-height: 30px;
         }
       }
-      .events{
+      .events {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -371,7 +370,7 @@
           }
         }
       }
-      .extras{
+      .extras {
         margin: 30px 0px;
         font-size: 14px;
       }

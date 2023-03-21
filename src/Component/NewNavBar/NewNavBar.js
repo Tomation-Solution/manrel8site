@@ -47,6 +47,17 @@ const NewNavBar = () => {
         </Link>
 
         <div className="navlist">
+          {/* <div className="toggle-navitem">
+            <span>
+              <Link
+                to={"/"}
+                style={{ textDecoration: "none", color: "#2B3513" }}
+              >
+                Home
+              </Link>
+            </span>
+          </div> */}
+
           <div
             className="toggle-navitem"
             onClick={() => {

@@ -19,106 +19,15 @@ function Services() {
           <div className="hero_image">
             <div className="cover">
               <h1>Services</h1>
-              <p>See our Services</p>
+              <p>
+                The only professional service organization structured to render
+                business solutions for the Manufacturing sector and affiliated.
+              </p>
             </div>
           </div>
           <div className="newservices">
             <div className="head">
-              <h1>Manufacturers Resource Centre (MRC) Services</h1>
-              <p>
-                Manufacturers Resource Centre (MRC) is the only professional
-                service organization structured to render business solutions for
-                the Manufacturing sector and affiliated.
-              </p>
-            </div>
-            <div className="wrap">
-              <div className="card">
-                <div className="overlay">
-                  <h1>Business Consulting Retainer ship Service</h1>
-                  <p>
-                    With our brand, expertise and business leverages, valuable
-                    in growing turnover volume, company customer base and
-                    production capacity, companies engage us as their Business
-                    Consultant to aid them better their business strategizes and
-                    attain targeted business growth.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="overlay">
-                  <h1>Human Capacity Building</h1>
-                  <p>
-                    We understand that Learning and Development leads to
-                    increased performance, better lives and work. We bring to
-                    you a whole new learning experience through our In-plant and
-                    General Trainings.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="overlay">
-                  <h1>Financial Solutions</h1>
-                  <p>
-                    It’s now possible to expand your Business and Operations.
-                    Come take advantage of available funding windows,
-                    Intervention Fund and other Venture Capital investments,
-                    that would suit your funding need.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="btn-center">
-              <Link to="/mrc-services">
-                <button>See More</button>
-              </Link>
-            </div>
-            <div className="head">
-              <h1>MAN Power Development Company Limited (MPDCL).</h1>
-            </div>
-            <div className="wrap dit">
-              <div className="card">
-                <div className="overlay">
-                  <h1>MAN Independent Power Project (IPP)</h1>
-                  <p>
-                    MPDCL has just completed the Phase I of the 2MW Power Plant
-                    for members at the Ogba/Acme Industrial Cluster. MPDCL
-                    Project 2 and 3 proposed for Amuwo Odofin industrial cluster
-                    and the Lagos Ibadan Expressway industrial corridor
-                    underway.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="overlay">
-                  <h1>Facilitation of The MAN-SUNREF Funds</h1>
-                  <p>
-                    MPDCL currently provides facilitation services for members
-                    to seamlessly access the MAN-SUNREF $USD70million funds
-                    targeted for industries to improve their power energy
-                    projects so as to achieve energy resource optimization and
-                    energy efficiency.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="overlay">
-                  <h1>Eligible Customer (EC) Appliction To NERC</h1>
-                  <p>
-                    MPDCL currently provides facilitations service for members
-                    whose power off-take is 2MWh/h to process EC Approval. The
-                    facilitation involves providing accurate documentations for
-                    application to NERC
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="btn-center">
-              <Link to="/mpdcl">
-                <button>See More</button>
-              </Link>
-            </div>
-            <div className="head">
-              <h1>Other Services</h1>
+              <h1>Core Services</h1>
             </div>
             <div className="wrap diff">
               <div className="card">
@@ -230,6 +139,100 @@ function Services() {
                   <h1>Publications</h1>
                 </div>
               </div>
+            </div>
+            <div className="head">
+              <h1>Manufacturers Resource Centre (MRC) Services</h1>
+              <p>
+                Manufacturers Resource Centre (MRC) is the only professional
+                service organization structured to render business solutions for
+                the Manufacturing sector and affiliated.
+              </p>
+            </div>
+            <div className="wrap">
+              <div className="card">
+                <div className="overlay">
+                  <h1>Business Consulting Retainer ship Service</h1>
+                  <p>
+                    With our brand, expertise and business leverages, valuable
+                    in growing turnover volume, company customer base and
+                    production capacity, companies engage us as their Business
+                    Consultant to aid them better their business strategizes and
+                    attain targeted business growth.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="overlay">
+                  <h1>Human Capacity Building</h1>
+                  <p>
+                    We understand that Learning and Development leads to
+                    increased performance, better lives and work. We bring to
+                    you a whole new learning experience through our In-plant and
+                    General Trainings.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="overlay">
+                  <h1>Financial Solutions</h1>
+                  <p>
+                    It’s now possible to expand your Business and Operations.
+                    Come take advantage of available funding windows,
+                    Intervention Fund and other Venture Capital investments,
+                    that would suit your funding need.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="btn-center">
+              <Link to="/mrc-services">
+                <button>See More</button>
+              </Link>
+            </div>
+            <div className="head">
+              <h1>MAN Power Development Company Limited (MPDCL).</h1>
+            </div>
+            <div className="wrap dit">
+              <div className="card">
+                <div className="overlay">
+                  <h1>MAN Independent Power Project (IPP)</h1>
+                  <p>
+                    MPDCL has just completed the Phase I of the 2MW Power Plant
+                    for members at the Ogba/Acme Industrial Cluster. MPDCL
+                    Project 2 and 3 proposed for Amuwo Odofin industrial cluster
+                    and the Lagos Ibadan Expressway industrial corridor
+                    underway.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="overlay">
+                  <h1>Facilitation of The MAN-SUNREF Funds</h1>
+                  <p>
+                    MPDCL currently provides facilitation services for members
+                    to seamlessly access the MAN-SUNREF $USD70million funds
+                    targeted for industries to improve their power energy
+                    projects so as to achieve energy resource optimization and
+                    energy efficiency.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="overlay">
+                  <h1>Eligible Customer (EC) Appliction To NERC</h1>
+                  <p>
+                    MPDCL currently provides facilitations service for members
+                    whose power off-take is 2MWh/h to process EC Approval. The
+                    facilitation involves providing accurate documentations for
+                    application to NERC
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="btn-center">
+              <Link to="/mpdcl">
+                <button>See More</button>
+              </Link>
             </div>
           </div>
           <div className="new_member">

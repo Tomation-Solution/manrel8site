@@ -32,45 +32,56 @@ export const AboutDropdown = () => {
 
 export const ServicesDropdown = () => {
   const [serviceShow, setShowService] = useState(false);
+  const [specialised, setSpecialised] = useState(false);
   return (
     <div className="service-dropdown">
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/services"}>Core Services</Link>
+        </span>
+      </div>
       <div
         className="dropdown-item"
-        onClick={() => setShowService(!serviceShow)}
+        onClick={() => setSpecialised(!specialised)}
       >
-        <span>MRC</span>
+        <span style={{ fontSize: "13px" }}>Specialized Services</span>
         <KeyboardArrowDown />
       </div>
-      {serviceShow && (
-        <div className="extra">
+      {specialised && (
+        <>
+          <div
+            className="dropdown-item"
+            onClick={() => setShowService(!serviceShow)}
+          >
+            <span>MRC</span>
+            <KeyboardArrowDown />
+          </div>
+          {serviceShow && (
+            <div className="extra">
+              <div className="dropdown-item">
+                <span>
+                  <Link to={"/about-mrc"}>About MRC</Link>
+                </span>
+              </div>
+              <div className="dropdown-item">
+                <span>
+                  <Link to={"/mrc-services"}>MRC SERVICES</Link>
+                </span>
+              </div>
+              <div className="dropdown-item">
+                <span>
+                  <Link to={"/mrc-contact"}>Contact Us</Link>
+                </span>
+              </div>
+            </div>
+          )}
           <div className="dropdown-item">
             <span>
-              <Link to={"/about-mrc"}>About MRC</Link>
+              <Link to={"/mpdcl"}>MPDCL</Link>
             </span>
           </div>
-          <div className="dropdown-item">
-            <span>
-              <Link to={"/mrc-services"}>MRC SERVICES</Link>
-            </span>
-          </div>
-          <div className="dropdown-item">
-            <span>
-              <Link to={"/mrc-contact"}>Contact Us</Link>
-            </span>
-          </div>
-        </div>
+        </>
       )}
-
-      <div className="dropdown-item">
-        <span>
-          <Link to={"/mpdcl"}>MPDCL</Link>
-        </span>
-      </div>
-      <div className="dropdown-item">
-        <span>
-          <Link to={"/services"}>Other Services</Link>
-        </span>
-      </div>
     </div>
   );
 };

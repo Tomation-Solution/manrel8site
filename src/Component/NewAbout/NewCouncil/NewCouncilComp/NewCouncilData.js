@@ -29,7 +29,8 @@ import PastPresident3 from "../../../../images/new-images/PastPresident (3).png"
 export const renderData = [
   {
     image: Sect1,
-    name: "Mr. Patrick Anegbe Chairman ",
+    name: "Mr. Patrick Anegbe  ",
+    title2: "Chairman",
     name2: "Food, Beverages & Tobacco Sectoral Group",
     title: "MD/CEO",
     address:
@@ -39,7 +40,8 @@ export const renderData = [
   },
   {
     image: Sect2,
-    name: "Mr. Rotimi Aluko Chairman",
+    name: "Mr. Rotimi Aluko ",
+    title2: "Chairman",
     name2: "Chemical &Pharmaceuticals Sectoral Group",
     title: "MD/CEO",
     address:
@@ -50,7 +52,8 @@ export const renderData = [
 
   {
     image: Sect3,
-    name: "Chief Evarist Uba Chairman",
+    name: "Chief Evarist Uba ",
+    title2: "Chairman",
     title: "Managing Director",
     name2: "Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
     address:
@@ -60,7 +63,8 @@ export const renderData = [
   },
   {
     image: Sect4,
-    name: "Alhaji (Dr.) Kamorudeen Yusuf Chairman",
+    name: "Alhaji (Dr.) Kamorudeen Yusuf ",
+    title2: "Chairman",
     name2: "Basic Metal, Iron & Steel& Fabricated Metal Product Sectoral Group",
     title: "GMD/CEO",
     address: "Kam Industries Nigeria Limited Asa Dam Road, Ilorin, Kwara State",
@@ -70,7 +74,8 @@ export const renderData = [
 
   {
     image: Sect5,
-    name: "Engr. Ilyasu Saleh Chairman",
+    name: "Engr. Ilyasu Saleh ",
+    title2: "Chairman",
     name2:
       "Textiles, Wearing Apparel, Carpet Leather & Leather Footwear Products Sectoral Group",
     title: "Managing Director",
@@ -82,7 +87,8 @@ export const renderData = [
 
   {
     image: Sect6,
-    name: "Mr. N. S. Kedarnath Chairman",
+    name: "Mr. N. S. Kedarnath ",
+    title2: "Chairman",
     name2: "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
     title: "Managing Director/CEO",
     address:
@@ -93,7 +99,8 @@ export const renderData = [
 
   {
     image: Sect7,
-    name: "Mrs. Ijeoma Oduonye Chairman",
+    name: "Mrs. Ijeoma Oduonye ",
+    title2: "Chairman",
     name2: " Electrical/ Electronic Sectoral Group",
     title: "MD/CEO",
     address: "Cutix Plc No, 17 Osita Onyejianya Street, Umuanuka Otolo Nnewi",
@@ -103,7 +110,8 @@ export const renderData = [
 
   {
     image: Sect8,
-    name: "Mrs. Ngozi Oyewole Chairman",
+    name: "Mrs. Ngozi Oyewole ",
+    title2: "Chairman",
     name2: "Wood, Wood Products &Furniture Sectoral Group",
     title: "MD/CEO",
     address: "Noxie Limited",
@@ -113,7 +121,8 @@ export const renderData = [
 
   {
     image: Sect9,
-    name: "Mr. Mallinson Afam Ukatu Chairman",
+    name: "Mr. Mallinson Afam Ukatu ",
+    title2: "Chairman",
     name2: "Non-Metallic Minerals Sectoral Group",
     title: "MD/CEO",
     address:
@@ -124,7 +133,8 @@ export const renderData = [
 
   {
     image: Sect10,
-    name: "Mr. Robert Ugbaja Chairman",
+    name: "Mr. Robert Ugbaja ",
+    title2: "Chairman",
     name2: "NMotor Vehicle & Miscellaneous Assembly Sectoral Group",
     title: "",
     address: "Boulos Enterprises Ltd. Plot 10, Acme Road, Ogba, Ikeja",
@@ -134,7 +144,8 @@ export const renderData = [
 
   {
     image: Sect11,
-    name: "Mrs. Soromidayo George Chairman",
+    name: "Mrs. Soromidayo George ",
+    title2: "Chairman",
     name2: " MAN Export Group",
     title: "Director",
     address: "Unilever Nigeria Plc Billings Way, Oregun-Ikeja, Lagos",
@@ -143,7 +154,8 @@ export const renderData = [
   },
   {
     image: Sect12,
-    name: "Mr. Vassily Barberopoulos Chairman",
+    name: "Mr. Vassily Barberopoulos ",
+    title2: "Chairman",
     name2: " MANLOC Group",
     title: "Managing Director",
     address:
@@ -153,16 +165,18 @@ export const renderData = [
   },
   {
     image: Branch1,
-    name: "Engr. Frank OnyebuChairman",
+    name: "Engr. Frank Onyebu",
+    title2: "Chairman",
     name2: " Apapa Branch",
     title: "",
     address: "Universal Luggages Ltd. C33, AmuwoOdofin Ind. Zone Lagos.",
-    email: "Email:ike_onyebu@yahoo.com nocchairman@yahoo.com",
+    email: "Email:ike_onyebu@yahoo.com @ynocchairmanahoo.com",
     phone: "Tel: 08121647278",
   },
   {
     image: Branch2,
-    name: "Mr. George Onafowokan Chairman",
+    name: "Mr. George Onafowokan ",
+    title2: "Chairman",
     name2: "Ogun State Branch",
     title: "Managing Director",
     address:
@@ -172,16 +186,18 @@ export const renderData = [
   },
   {
     image: Branch3,
-    name: "Mr. Robert Ugbaja Chairman",
+    name: "Mr. Robert Ugbaja ",
+    title2: "Chairman",
     name2: " Ikeja Branch",
-    title: "Chairman",
+    title: "",
     address: "Boulos Enterprises Ltd. Plot 10, Acme Road Ogba, Ikeja",
     email: "Email: r.ugbaja@boulos.ng",
     phone: "Tel: 08033005566",
   },
   {
     image: Branch4,
-    name: "Alhaji Ahmad Adamu Chairman",
+    name: "Alhaji Ahmad Adamu ",
+    title2: "Chairman",
     name2: " Kano, Sharada/Challawa Branch",
     title: "Managing Director",
     address: "African Textile Ltd. Kano",
@@ -190,7 +206,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Alhaji Muhammed Umar Chairman",
+    name: "Alhaji Muhammed Umar ",
+    title2: "Chairman",
     name2: "Kano Bompai Branch",
     title: "",
     address: "Tofa Textile Limited 5, independence Road, Bompai Ind. Area Kano",
@@ -199,7 +216,8 @@ export const renderData = [
   },
   {
     image: Branch5,
-    name: "Mr. Raymond Anyanwu Chairman",
+    name: "Mr. Raymond Anyanwu ",
+    title2: "Chairman",
     name2: " Kaduna South-East Branch",
     title: "",
     address:
@@ -209,7 +227,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Alh. Umar Mala Chairman",
+    name: "Alh. Umar Mala ",
+    title2: "Chairman",
     name2: "Kaduna North-West Branch",
     title: "",
     address:
@@ -219,7 +238,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Mr. Vincent Okuku Chairman",
+    name: "Mr. Vincent Okuku ",
+    title2: "Chairman",
     name2: "Rivers/Bayelsa States Branch",
     title: "",
     address:
@@ -230,7 +250,8 @@ export const renderData = [
 
   {
     image: "",
-    name: "Mr. Lanre Popoola Chairman",
+    name: "Mr. Lanre Popoola ",
+    title2: "Chairman",
     name2: "Oyo/Osun/Ekiti/OndoStates Branch",
     title: "General Manager",
     address:
@@ -240,7 +261,8 @@ export const renderData = [
   },
   {
     image: Branch6,
-    name: "Alh. Shehu Sule Nyelum Chairman",
+    name: "Alh. Shehu Sule Nyelum ",
+    title2: "Chairman",
     name2: "Bauchi/Benue/Plateau/G/N/Branch",
     title: "GM Admin/Human Resource",
     address: "Nasco Foods Ltd, Makurdi.",
@@ -249,7 +271,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Engr. Okwara Udensi Chairman",
+    name: "Engr. Okwara Udensi ",
+    title2: "Chairman",
     name2: "Edo/Delta Branch",
     title: "Managing Director/CEO",
     address:
@@ -259,7 +282,8 @@ export const renderData = [
   },
   {
     image: Branch7,
-    name: "Pharm. Bioku Rahmon Chairman",
+    name: "Pharm. Bioku Rahmon ",
+    title2: "Chairman",
     name2: " Kwara/ Kogi Branch",
     title: "Managing Director",
     address:
@@ -269,7 +293,8 @@ export const renderData = [
   },
   {
     image: "",
-    name: "Alhaji Abubakare Minjibir Chairman",
+    name: "Alhaji Abubakare Minjibir ",
+    title2: "Chairman",
     name2: "Abuja Branch",
     title: "CEO",
     address: "Tawada Limited Plot 862, Area 11, Abuja",
@@ -278,7 +303,8 @@ export const renderData = [
   },
   {
     image: Branch8,
-    name: "Mr. Akin Oyediran Chairman",
+    name: "Mr. Akin Oyediran ",
+    title2: "Chairman",
     name2: "Cross River/Akwa Ibom Branch",
     title: "Managing Director",
     address:
@@ -288,7 +314,8 @@ export const renderData = [
   },
   {
     image: Branch9,
-    name: "Lady Ada Chukwudozie Chairman,",
+    name: "Lady Ada Chukwudozie",
+    title2: "Chairman",
     name2: "Anambra/Enugu Branch",
     title: "Managing Director",
     address:
@@ -298,7 +325,8 @@ export const renderData = [
   },
   {
     image: Branch10,
-    name: "Dr. Jude O. Eluma Chairman",
+    name: "Dr. Jude O. Eluma ",
+    title2: "Chairman",
     name2: "Imo/Abia Branch",
     title: "CEO",
     address:
