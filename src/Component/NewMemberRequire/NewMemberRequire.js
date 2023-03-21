@@ -5,6 +5,7 @@ import { UIProvider } from "../../Ui";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import { Link } from "react-router-dom";
 
 const NewMemberRequire = () => {
   return (
@@ -216,8 +217,18 @@ const NewMemberRequire = () => {
               <input type={"checkbox"} />I hereby Confirm that i am Eligible to
               be a Member of MAN.
             </label>
-
-            <button>pay for the application form</button>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: "20px 0px",
+              }}
+            >
+              <Link to="/join-now-form">
+                <button>pay for the application form</button>
+              </Link>
+            </div>
           </form>
         </div>
         <div className="prospective">
