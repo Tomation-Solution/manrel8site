@@ -3,8 +3,6 @@ import Translate from "@mui/icons-material/Translate";
 import React, { useState } from "react";
 import Logo from "../../images/manlogo2.png";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
-
 import "./NewNavBar.scss";
 import NavSlider from "./NavSlider/NavSlider";
 import {
@@ -48,17 +46,6 @@ const NewNavBar = () => {
         </Link>
 
         <div className="navlist">
-          {/* <div className="toggle-navitem">
-            <span>
-              <Link
-                to={"/"}
-                style={{ textDecoration: "none", color: "#2B3513" }}
-              >
-                Home
-              </Link>
-            </span>
-          </div> */}
-
           <div
             className="toggle-navitem"
             onClick={() => {
@@ -115,11 +102,20 @@ const NewNavBar = () => {
             <KeyboardArrowDown />
           </div>
           <div className="translate-icon">
-            <a
-              href="https://man.rel8membership.com/"
-              style={{ color: "#1f260d" }}
-            >
-              <AccountCircleRoundedIcon />
+            <a href="https://man.rel8membership.com/">
+              <button
+                style={{
+                  padding: "5px 10px",
+                  cursor: "pointer",
+                  backgroundColor: "#1f260d",
+                  color: "#fff",
+                  borderRadius: "10px",
+                  outline: "none",
+                  border: "none",
+                }}
+              >
+                LOGIN
+              </button>
             </a>
           </div>
           <div className="translate-icon">

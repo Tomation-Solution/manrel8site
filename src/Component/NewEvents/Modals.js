@@ -161,25 +161,22 @@ export const PayModal = ({ closefn }) => {
   );
 };
 
-export const SingleEvent = ({ image, registerfn }) => {
+export const SingleEvent = ({ data, image, registerfn }) => {
   return (
     <div className="event-card">
       <img src={image} alt="" />
-      <h2>
-        Identifying Capable Importers & Registering Manufactured Products in the
-        ECOWAS, AfCFTA &Global Markets, for Sustainable Export.
-      </h2>
+      <h2>{data.name}</h2>
       <div className="icons">
         <CalendarMonthIcon />
-        <p>25th - 26th January</p>
+        <p>{data.date}</p>
       </div>
       <div className="icons">
         <LocationOnIcon />
-        <p>MAN HOUSE IKEJA</p>
+        <p>{data.location}</p>
       </div>
       <div className="icons">
         <PaymentsIcon />
-        <p>NGN 70,000</p>
+        <p>{data.amount}</p>
       </div>
       <div className="buttons">
         <button onClick={registerfn}>Register</button>

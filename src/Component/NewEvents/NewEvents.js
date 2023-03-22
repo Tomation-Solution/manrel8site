@@ -14,6 +14,7 @@ import {
 } from "./Modals";
 import { Link } from "react-router-dom";
 import { trainingData } from "../Training/TrainingData";
+import { eventData } from "../Events/EventData";
 
 const NewEvents = () => {
   const [register, setRegister] = useState(false);
@@ -39,11 +40,12 @@ const NewEvents = () => {
         <div className="event-container">
           <h1 className="events-header">Events</h1>
           <div className="event-items">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+            {eventData.map((item) => (
               <SingleEvent
                 image={Image}
                 registerfn={() => setRegister(!register)}
                 key={item}
+                data={item}
               />
             ))}
           </div>
