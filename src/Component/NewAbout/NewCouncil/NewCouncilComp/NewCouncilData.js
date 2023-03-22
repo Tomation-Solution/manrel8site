@@ -1,7 +1,7 @@
 import Branch1 from "../../../../images/new-images/executivesImg/Branch1.png";
 import Branch2 from "../../../../images/new-images/executivesImg/Branch2.png";
 import Branch3 from "../../../../images/new-images/executivesImg/Branch3.png";
-import Branch4 from "../../../../images/new-images/executivesImg/Branch4.png";
+import Branch4 from "../../../../images/new-images/executivesImg/Adamu.jpeg";
 import Branch5 from "../../../../images/new-images/executivesImg/Branch5.png";
 import Branch6 from "../../../../images/new-images/executivesImg/Branch6.png";
 import Branch7 from "../../../../images/new-images/executivesImg/Branch7.png";
@@ -9,7 +9,7 @@ import Branch8 from "../../../../images/new-images/executivesImg/Branch8.png";
 import Branch9 from "../../../../images/new-images/executivesImg/Branch9.png";
 import Branch10 from "../../../../images/new-images/executivesImg/Branch10.png";
 
-import Sect1 from "../../../../images/new-images/executivesImg/Sect1.png";
+import Sect1 from "../../../../images/new-images/executivesImg/EngrPatrick Anegbe.webp";
 import Sect2 from "../../../../images/new-images/executivesImg/Sect2.png";
 import Sect3 from "../../../../images/new-images/executivesImg/Sect3.png";
 import Sect4 from "../../../../images/new-images/executivesImg/Sect4.png";
@@ -196,9 +196,9 @@ export const renderData = [
   },
   {
     image: Branch4,
-    name: "Alhaji Ahmad Adamu ",
-    title2: "Chairman",
-    name2: " Kano, Sharada/Challawa Branch",
+    name: "Alhaji Nura Madugu",
+    title2: "Ag.Chairman",
+    name2: " Kano Sharada/ Challawa Branch",
     title: "Managing Director",
     address: "African Textile Ltd. Kano",
     email: "Email: ahmadmohammadadam@gmail.com, amirah196533@gmail.com",

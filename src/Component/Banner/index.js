@@ -53,7 +53,7 @@ const Banner = () => {
                 manufacturer, MAN is here to help.
               </BannerDescription>
               <BannerButtonContainer>
-                <Link to="/join-now-form" style={{ textDecoration: "none" }}>
+                <Link to="/join-now-page" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       backgroundColor: Colors.primary,
