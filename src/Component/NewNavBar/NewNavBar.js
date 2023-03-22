@@ -3,6 +3,7 @@ import Translate from "@mui/icons-material/Translate";
 import React, { useState } from "react";
 import Logo from "../../images/manlogo2.png";
 import MenuIcon from "@mui/icons-material/Menu";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 import "./NewNavBar.scss";
 import NavSlider from "./NavSlider/NavSlider";
@@ -114,8 +115,17 @@ const NewNavBar = () => {
             <KeyboardArrowDown />
           </div>
           <div className="translate-icon">
+            <a
+              href="https://man.rel8membership.com/"
+              style={{ color: "#1f260d" }}
+            >
+              <AccountCircleRoundedIcon />
+            </a>
+          </div>
+          <div className="translate-icon">
             <Translate />
           </div>
+
           <div className="join-now">
             <Link to={"/join-now-page"}>
               <button>JOIN NOW</button>

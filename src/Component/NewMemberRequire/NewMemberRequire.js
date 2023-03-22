@@ -5,7 +5,7 @@ import { UIProvider } from "../../Ui";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 const NewMemberRequire = () => {
@@ -228,8 +228,8 @@ const NewMemberRequire = () => {
         <div className="eligibilty">
           <h1>Confirm Eligibility</h1>
           <h4>
-            A prospective member of MAN must be a manufacturer and have a
-            manufacturing plant in Nigeria.
+            To become a member of MAN, please confirm that you meet the{" "}
+            <Link to={"/membership-requirement"}>the requirements</Link>
           </h4>
           <form>
             <label>

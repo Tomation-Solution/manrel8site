@@ -146,6 +146,11 @@ export const MembershipDropdown = () => {
           <Link to={"/faq"}>Frequently Asked Questions (FAQs)</Link>
         </span>
       </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/join-now-page"}>Join Now</Link>
+        </span>
+      </div>
     </div>
   );
 };
