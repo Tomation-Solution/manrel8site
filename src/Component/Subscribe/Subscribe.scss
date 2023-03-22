@@ -1,6 +1,7 @@
-@import '../../Styles/resources';
+@import "../../Styles/resources";
 .Subscribe {
   position: fixed;
+
   height: 100vh;
   background: rgba(2, 2, 2, 0.3);
   width: 100%;
@@ -9,6 +10,7 @@
   align-items: center;
   z-index: 2;
   .cover {
+    position: relative;
     background-color: #fff;
     width: 90%;
     margin: 30px;

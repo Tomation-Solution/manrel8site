@@ -4,15 +4,23 @@ import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Wall from "../Wall/Wall";
 import "./JoinUsPage.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import Subscribe from "../Subscribe/Subscribe";
 
 const JoinUsPage = () => {
   const [check, setCheck] = useState("");
   const navigate = useNavigate();
 
+  const { register, handleSubmit } = useForm();
+
+  const loginSubmitHandler = () => {
+    //   navigate("/join-now-form");
+    navigate("/app-portal");
+  };
+
   const submitHandler = () => {
     if (check === "agree") {
-      //   navigate("/join-now-form");
       navigate("/purchase-application");
     } else {
       alert("Please check the box");
@@ -21,6 +29,7 @@ const JoinUsPage = () => {
   return (
     <div className="join-new-page">
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <div className="join-us">
           <h1>Join Us!</h1>
@@ -66,9 +75,19 @@ const JoinUsPage = () => {
             know the status of a previous purchase, kindly login with your
             company information.
           </p>
-          <form>
-            <input type={"text"} placeholder="Email Address" />
-            <input type={"text"} placeholder="CAC Registration Number" />
+          <form onSubmit={handleSubmit(loginSubmitHandler)}>
+            <input
+              type={"email"}
+              {...register("email", { required: true })}
+              required
+              placeholder="Email Address"
+            />
+            <input
+              type={"text"}
+              {...register("cac_register", { required: true })}
+              required
+              placeholder="CAC Registration Number"
+            />
 
             <button>LOGIN</button>
           </form>

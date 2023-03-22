@@ -1,13 +1,32 @@
 import "./NewMemberRequire.scss";
 
-import React from "react";
+import React, { useState } from "react";
 import { UIProvider } from "../../Ui";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const NewMemberRequire = () => {
+  const [check, setCheck] = useState("");
+  const navigate = useNavigate();
+
+  const { register, handleSubmit } = useForm();
+
+  const loginSubmitHandler = () => {
+    navigate("/app-portal");
+  };
+
+  const submitHandler = () => {
+    if (check === "agree") {
+      //   navigate("/join-now-form");
+      navigate("/purchase-application");
+    } else {
+      alert("Please check the box");
+    }
+  };
+
   return (
     <div className="member-require">
       <UIProvider>
@@ -214,8 +233,13 @@ const NewMemberRequire = () => {
           </h4>
           <form>
             <label>
-              <input type={"checkbox"} />I hereby Confirm that i am Eligible to
-              be a Member of MAN.
+              <input
+                type={"checkbox"}
+                value="agree"
+                required
+                onClick={(e) => setCheck(e.target.value)}
+              />
+              I hereby Confirm that i am Eligible to be a Member of MAN.
             </label>
             <div
               style={{
@@ -225,9 +249,9 @@ const NewMemberRequire = () => {
                 margin: "20px 0px",
               }}
             >
-              <Link to="/join-now-form">
-                <button>pay for the application form</button>
-              </Link>
+              <button onClick={submitHandler}>
+                pay for the application form
+              </button>
             </div>
           </form>
         </div>
@@ -238,9 +262,19 @@ const NewMemberRequire = () => {
             know the status of a previous purchase, kindly login with your
             company information.
           </p>
-          <form>
-            <input type={"text"} placeholder="Email Address" />
-            <input type={"text"} placeholder="CAC Registration Number" />
+          <form onSubmit={handleSubmit(loginSubmitHandler)}>
+            <input
+              type={"email"}
+              {...register("email", { required: true })}
+              required
+              placeholder="Email Address"
+            />
+            <input
+              type={"text"}
+              {...register("cac_register", { required: true })}
+              required
+              placeholder="CAC Registration Number"
+            />
 
             <button>LOGIN</button>
           </form>

@@ -42,6 +42,7 @@ import JoinUsPage from "./Component/JoinUsPage/JoinUsPage";
 import PurchaseApplication from "./Component/PurchaseApplication/PurchaseApplication";
 import MakePayment from "./Component/PurchaseApplication/MakePayment";
 import ApplicationPortal from "./Component/ApplicationPortal/ApplicationPortal";
+import ApplicationStatus from "./Component/ApplicationPortal/ApplicationStatus";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -68,6 +69,7 @@ root.render(
       <Route path="/about/council-members" element={<NewCouncil />} />
       <Route path="/join-now-form" element={<JoinNowForm />} />
       <Route path="/purchase-application" element={<PurchaseApplication />} />
+      <Route path="/application-status" element={<ApplicationStatus />} />
 
       {/*
       New Join Page

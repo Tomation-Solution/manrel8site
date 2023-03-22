@@ -25,6 +25,9 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/about/council-members"}>Our Executives</Link>
             </span>
+            <span className="items-span">
+              <Link to={"/operate"}>Where we Operate</Link>
+            </span>
           </div>
         </div>
         <div className="nav-slider-item">
@@ -125,7 +128,7 @@ const NavSlider = ({ clickfn }) => {
           <Translate />
         </div>
         <div className="nav-slider-join">
-          <Link to={"/join-now-form"}>
+          <Link to={"/join-now-page"}>
             <button>JOIN NOW</button>
           </Link>
         </div>

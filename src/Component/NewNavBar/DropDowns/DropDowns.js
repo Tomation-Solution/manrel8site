@@ -26,6 +26,11 @@ export const AboutDropdown = () => {
           <Link to={"/about/council-members"}>Our Executives</Link>
         </span>
       </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/operate"}>Where we Operate</Link>
+        </span>
+      </div>
     </div>
   );
 };
@@ -154,11 +159,7 @@ export const StructureDropdown = () => {
           <Link to={"/sectoral"}>Sectoral Group</Link>
         </span>
       </div>
-      <div className="dropdown-item">
-        <span>
-          <Link to={"/operate"}>Where We Operate</Link>
-        </span>
-      </div>
+      <div className="dropdown-item"></div>
       <div
         className="dropdown-item"
         onClick={() => setShowService(!serviceShow)}
