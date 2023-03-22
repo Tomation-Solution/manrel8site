@@ -179,9 +179,8 @@ function Section() {
             <SectionDescription
               sx={{ color: "#010001", fontSize: "17px", fontWeight: "500" }}
             >
-              A prospective member of MAN must be a manufacturer and have a
-              manufacturing plant in Nigeria. Please view the Membership
-              Requirement and confirm you are eligible.
+              The membership requirement steps below detail the process to
+              becoming a member of MAN
             </SectionDescription>
             {/* 
             <SectionMember> */}

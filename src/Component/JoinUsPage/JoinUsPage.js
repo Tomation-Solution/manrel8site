@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Wall from "../Wall/Wall";
 import "./JoinUsPage.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Subscribe from "../Subscribe/Subscribe";
 
@@ -15,7 +15,6 @@ const JoinUsPage = () => {
   const { register, handleSubmit } = useForm();
 
   const loginSubmitHandler = () => {
-    //   navigate("/join-now-form");
     navigate("/app-portal");
   };
 
@@ -41,8 +40,8 @@ const JoinUsPage = () => {
         <div className="eligibilty">
           <h1>Confirm Eligibility</h1>
           <h4>
-            A prospective member of MAN must be a manufacturer and have a
-            manufacturing plant in Nigeria.
+            To become a member of MAN, please confirm that you meet the{" "}
+            <Link to={"/membership-requirement"}>the requirements</Link>
           </h4>
           <form>
             <label>

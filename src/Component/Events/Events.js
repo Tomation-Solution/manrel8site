@@ -7,6 +7,7 @@ import "../NewEvents/NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import { PayModal, RegisterModal, SingleEvent } from "../NewEvents/Modals";
+import { eventData } from "./EventData";
 
 const Events = () => {
   // const [options , setOptions] = useState("free")
@@ -38,13 +39,16 @@ const Events = () => {
 
         <div className="event-container">
           <div className="event-items">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <SingleEvent
-                image={Image}
-                registerfn={() => setRegister(!register)}
-                key={item}
-              />
-            ))}
+            {eventData
+              .filter((event) => event.type === "free")
+              .map((item) => (
+                <SingleEvent
+                  image={Image}
+                  registerfn={() => setRegister(!register)}
+                  key={item}
+                  data={item}
+                />
+              ))}
           </div>
         </div>
 

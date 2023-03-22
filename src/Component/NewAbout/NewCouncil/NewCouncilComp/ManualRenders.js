@@ -16,7 +16,9 @@ import Exec13 from "../../../../images/new-images/executivesImg/Exec13.png";
 import Exec14 from "../../../../images/new-images/executivesImg/Exec14.png";
 import Exec15 from "../../../../images/new-images/executivesImg/Exec15.png";
 import Exec16 from "../../../../images/new-images/executivesImg/Exec16.png";
-import Sect13 from "../../../../images/new-images/executivesImg/Sect13.png";
+
+import NoPicture from "../../../../images/new-images/executivesImg/NoPicture.png";
+import Branch9 from "../../../../images/new-images/executivesImg/Branch9.png";
 
 const ManualRenders = () => {
   return (
@@ -45,7 +47,7 @@ const ManualRenders = () => {
           <img alt="" src={Exec2} />
         </div>
         <div className="right">
-          <p className="header">Vice President, Lagos</p>
+          <p className="header">Vice President (Lagos Zone), </p>
           <p className="header">Prince Oba Okojie </p>
           {/* <p className="detail">Director</p>
           <p className="detail">
@@ -63,7 +65,7 @@ const ManualRenders = () => {
           <img alt="" src={Exec3} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Kaduna North West Zone)</p>
+          <p className="header">Vice President (Kaduna North West Zone), </p>
           <p className="header">Engr Ilyasu Saleh</p>
 
           {/* <p className="detail">Managing Director</p>
@@ -84,7 +86,7 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Vice President, Eastern Zone</p>
-          <p className="header">Engr. (Chief) Giandomenico Massari</p>
+          <p className="header">Engr Giandomenico Massari, FNSE </p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -102,7 +104,7 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Vice President (Western Zone)</p>
-          <p className="header">Alhaji (Dr) Kamorudeen Yusuf</p>
+          <p className="header">Alhaji Kamorudeen Yusuf</p>
 
           {/* <p className="detail">GMD/CEO </p>
           <p className="detail">
@@ -121,7 +123,7 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Vice President (North East Zone)</p>
-          <p className="header">Mr. Mhir Iyenge</p>
+          <p className="header">Dr Mhir Iyenge</p>
 
           {/* <p className="detail">Managing Directorr</p>
           <p className="detail">
@@ -172,7 +174,7 @@ const ManualRenders = () => {
           <img alt="" src={Exec9} />
         </div>
         <div className="right">
-          <p className="header">Vice President (SMI)</p>
+          <p className="header">Vice President (Small and Medium Industries)</p>
           <p className="header">Mr. Samuel Kolawole</p>
 
           {/* <p className="detail">Managing Director/CEO</p>
@@ -190,8 +192,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec10} />
         </div>
         <div className="right">
-          <p className="header">GCON Vice President (MLCG)</p>
-          <p className="header">Alhaji Aliko Dangote</p>
+          <p className="header">Vice President (MAN Large Corporation Group)</p>
+          <p className="header">Alhaji Aliko Dangote, GCON</p>
           {/* 
           <p className="detail">Dangote Group</p>
           <p className="detail">
@@ -208,7 +210,7 @@ const ManualRenders = () => {
           <img alt="" src={Exec11} />
         </div>
         <div className="right">
-          <p className="header">National Treasurer</p>
+          <p className="header">Honorary Treasurer</p>
           <p className="header">Rev. Isaac Agoye</p>
 
           {/* <p className="detail">Director</p>
@@ -226,8 +228,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec12} />
         </div>
         <div className="right">
-          <p className="header">Chairman Economic Policy Committee</p>
-          <p className="header">Mr. Omoboyede Olusanya</p>
+          <p className="header">Chairman, Economic Policy Committee</p>
+          <p className="header">Mr Boye Olusanya</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -244,9 +246,9 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">
-            Corporate Affairs and Strategic Planning Committee
+            Chairman, Corporate Affairs Planning Committee
           </p>
-          <p className="header">Mrs. Kofo Akinkugbe Chairperson</p>
+          <p className="header">Mrs. Kofo Akinkugbe</p>
 
           {/* <p className="detail">CEO/Managing Director</p>
           <p className="detail">
@@ -265,8 +267,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec14} />
         </div>
         <div className="right">
-          <p className="header">Infrastructure Committee</p>
-          <p className="header">Engr. Chukwuemeka Nzewi Chairman</p>
+          <p className="header">Chairman, Infrastructure Committee</p>
+          <p className="header">Engr Chukwuemeka Nzewi</p>
 
           {/* <p className="detail">Managing Director</p>
           <p className="detail">
@@ -285,8 +287,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec15} />
         </div>
         <div className="right">
-          <p className="header">Finance and Establishment Committee</p>
-          <p className="header">Alhaji Ali S. Madugu, mni Chairman</p>
+          <p className="header">Chairman, Finance & Establishment Committee</p>
+          <p className="header">Alhaji Ali Madugu, mni</p>
 
           {/* <p className="detail">Managing Director/CEO</p>
           <p className="detail">
@@ -301,18 +303,41 @@ const ManualRenders = () => {
 
       <div className="member_item">
         <div className="left">
-          <img alt="" src={Sect13} />
+          <img alt="" src={NoPicture} />
         </div>
         <div className="right">
-          <p className="header">MAN Gas Users</p>
-          <p className="header">Dr. Michael Adebayo </p>
+          <p className="header">EXCO Member</p>
+          <p className="header">Dr Waslat Shittu-Titilola</p>
+        </div>
+      </div>
 
-          {/* <p className="detail">Executive Director</p>
-          <p className="detail">
-            Haffar Industries Ltd. 361, Agege Motor Road, Mushin, Lagos.
-          </p>
-          <p className="detail">Email: madebayo2010@gmail.com </p>
-          <p className="detail">Tel: 08023175695</p> */}
+      <div className="member_item">
+        <div className="left">
+          <img alt="" src={NoPicture} />
+        </div>
+        <div className="right">
+          <p className="header">EXCO Member</p>
+          <p className="header">Alhaji Adamu Abdlukadir</p>
+        </div>
+      </div>
+
+      <div className="member_item">
+        <div className="left">
+          <img alt="" src={NoPicture} />
+        </div>
+        <div className="right">
+          <p className="header">EXCO Member</p>
+          <p className="header">Chief John Aluya</p>
+        </div>
+      </div>
+
+      <div className="member_item">
+        <div className="left">
+          <img alt="" src={Branch9} />
+        </div>
+        <div className="right">
+          <p className="header">EXCO Member</p>
+          <p className="header">Lady Ada Chukwudozie</p>
         </div>
       </div>
 
@@ -322,11 +347,7 @@ const ManualRenders = () => {
         </div>
         <div className="right">
           <p className="header">Director General</p>
-          <p className="header">Mr. Segun Ajayi-Kadir</p>
-
-          {/* <p className="detail">Director General</p>
-          <p className="detail">Manufacturers Association of Nigeria</p>
-          <p className="detail">Tel: 08037861532</p> */}
+          <p className="header">Mr. Segun Ajayi-Kadir, mni</p>
         </div>
       </div>
     </div>

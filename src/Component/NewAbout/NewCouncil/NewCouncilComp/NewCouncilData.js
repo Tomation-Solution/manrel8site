@@ -21,148 +21,15 @@ import Sect9 from "../../../../images/new-images/executivesImg/Sect9.png";
 import Sect10 from "../../../../images/new-images/executivesImg/Sect10.png";
 import Sect11 from "../../../../images/new-images/executivesImg/Sect11.png";
 import Sect12 from "../../../../images/new-images/executivesImg/Sect12.png";
+import Sect13 from "../../../../images/new-images/executivesImg/Sect13.png";
+
+import Exec11 from "../../../../images/new-images/executivesImg/Exec11.png";
 
 import PastPresident1 from "../../../../images/new-images/PastPresident (1).png";
 import PastPresident2 from "../../../../images/new-images/PastPresident (2).png";
 import PastPresident3 from "../../../../images/new-images/PastPresident (3).png";
 
 export const renderData = [
-  {
-    image: Sect1,
-    name: "Mr. Patrick Anegbe  ",
-    title2: "Chairman",
-    name2: "Food, Beverages & Tobacco Sectoral Group",
-    title: "MD/CEO",
-    address:
-      "Intercontinental Distilleries Limited Chelsea House, Ladipo Oluwole Ind. Estate, Ikeja, Lagos",
-    email: "Email: anegbe.patrick@idlng.com, anegbe.patrick@yahoo.com",
-    phone: "Tel: 08034030185",
-  },
-  {
-    image: Sect2,
-    name: "Mr. Rotimi Aluko ",
-    title2: "Chairman",
-    name2: "Chemical &Pharmaceuticals Sectoral Group",
-    title: "MD/CEO",
-    address:
-      "Voda Paints Limited Km 33, Lagos-Ibadan Exp. Way, Magboro Ind. Area. Magboro, Ogun State",
-    email: "Email: rotimialuko@hotmail.com",
-    phone: "Tel: 08036551445",
-  },
-
-  {
-    image: Sect3,
-    name: "Chief Evarist Uba ",
-    title2: "Chairman",
-    title: "Managing Director",
-    name2: "Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
-    address:
-      "Group Enterprises Nigeria Limited (Polly Foam) 2C Uba Close, Niger Bridge Head Ind. Layout, Near Ogboefere Market Onitsha, Anambra State",
-    email: "Email: polyfoam@yahoo.com, evarist.uba@pollyfoam.com",
-    phone: "Tel: 08033278827",
-  },
-  {
-    image: Sect4,
-    name: "Alhaji (Dr.) Kamorudeen Yusuf ",
-    title2: "Chairman",
-    name2: "Basic Metal, Iron & Steel& Fabricated Metal Product Sectoral Group",
-    title: "GMD/CEO",
-    address: "Kam Industries Nigeria Limited Asa Dam Road, Ilorin, Kwara State",
-    email: "Email: yusuf@kamholding.net, kamwire@yahoo.com",
-    phone: "Tel:08038133830",
-  },
-
-  {
-    image: Sect5,
-    name: "Engr. Ilyasu Saleh ",
-    title2: "Chairman",
-    name2:
-      "Textiles, Wearing Apparel, Carpet Leather & Leather Footwear Products Sectoral Group",
-    title: "Managing Director",
-    address: "Zaria Industries Limited Old Jos Road, Zaria, Kaduna.",
-    email:
-      "E-mail: premier_tarpaulin@yahoo.com, siazinternational@yahoo.com, ilyasaleh59@yahoo.com",
-    phone: "Tel :08037016789; 08023218081",
-  },
-
-  {
-    image: Sect6,
-    name: "Mr. N. S. Kedarnath ",
-    title2: "Chairman",
-    name2: "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
-    title: "Managing Director/CEO",
-    address:
-      "Veevee Paper Products Ltd Km 2, Ijoko Road, Sango Otta, Ogun State",
-    email: "Email:nsk.md@veeveepaper.com, nskedar@gmail.com",
-    phone: "Tel: 08105434965",
-  },
-
-  {
-    image: Sect7,
-    name: "Mrs. Ijeoma Oduonye ",
-    title2: "Chairman",
-    name2: " Electrical/ Electronic Sectoral Group",
-    title: "MD/CEO",
-    address: "Cutix Plc No, 17 Osita Onyejianya Street, Umuanuka Otolo Nnewi",
-    email: "Email: ijeoma.oduonye@cutixplc.com.ng",
-    phone: "Tel: 08035423787",
-  },
-
-  {
-    image: Sect8,
-    name: "Mrs. Ngozi Oyewole ",
-    title2: "Chairman",
-    name2: "Wood, Wood Products &Furniture Sectoral Group",
-    title: "MD/CEO",
-    address: "Noxie Limited",
-    email: "Email: ngozi.oyewole@noxielimited.com",
-    phone: "Tel: 08029991111",
-  },
-
-  {
-    image: Sect9,
-    name: "Mr. Mallinson Afam Ukatu ",
-    title2: "Chairman",
-    name2: "Non-Metallic Minerals Sectoral Group",
-    title: "MD/CEO",
-    address:
-      "NISPO Porcelain Company Limited 3B, Ashimowu Jibowu Street, Off Johnson Street, Off Coker Road, Ilupeju, Lagos",
-    email: "Email: afam65mail@yahoo.com",
-    phone: "Tel: 08022243755",
-  },
-
-  {
-    image: Sect10,
-    name: "Mr. Robert Ugbaja ",
-    title2: "Chairman",
-    name2: "NMotor Vehicle & Miscellaneous Assembly Sectoral Group",
-    title: "",
-    address: "Boulos Enterprises Ltd. Plot 10, Acme Road, Ogba, Ikeja",
-    email: "Email: r.ugbaja@bel.groupboulos.com, ugbajarobert@hotmail.com",
-    phone: "Tel: 08033005566",
-  },
-
-  {
-    image: Sect11,
-    name: "Mrs. Soromidayo George ",
-    title2: "Chairman",
-    name2: " MAN Export Group",
-    title: "Director",
-    address: "Unilever Nigeria Plc Billings Way, Oregun-Ikeja, Lagos",
-    email: "Email: soromidayo.george@unilever.com",
-    phone: "Tel: 08022238659",
-  },
-  {
-    image: Sect12,
-    name: "Mr. Vassily Barberopoulos ",
-    title2: "Chairman",
-    name2: " MANLOC Group",
-    title: "Managing Director",
-    address:
-      "Nigerian Foundaries 1, Adeyemi Bero Crescent, Ilupeju Industrial Estate, Anthony, Oshodi, Ilupeju",
-    email: "Email: vassily@manlocgroup.com",
-    phone: "Tel: 08034026011",
-  },
   {
     image: Branch1,
     name: "Engr. Frank Onyebu",
@@ -261,9 +128,9 @@ export const renderData = [
   },
   {
     image: Branch6,
-    name: "Alh. Shehu Sule Nyelum ",
+    name: "Alhaji Shehu Nyalu",
     title2: "Chairman",
-    name2: "Bauchi/Benue/Plateau/G/N/Branch",
+    name2: "Bauchi/Benue/Plateau/Gombe/Nasarawa States Branch",
     title: "GM Admin/Human Resource",
     address: "Nasco Foods Ltd, Makurdi.",
     email: "Email: shehu@nasco.net",
@@ -273,7 +140,7 @@ export const renderData = [
     image: "",
     name: "Engr. Okwara Udensi ",
     title2: "Chairman",
-    name2: "Edo/Delta Branch",
+    name2: "Edo/Delta States Branch",
     title: "Managing Director/CEO",
     address:
       "Equitax Integrated Oil Ltd. DSC Road before Orhunwhorun Junction Warri",
@@ -284,7 +151,7 @@ export const renderData = [
     image: Branch7,
     name: "Pharm. Bioku Rahmon ",
     title2: "Chairman",
-    name2: " Kwara/ Kogi Branch",
+    name2: " Kwara/ Kogi States Branch",
     title: "Managing Director",
     address:
       "Bioraj Pharmaceutical Ltd. Okolowo Road, Beside WAEC Office, Ilorin, Kwara State",
@@ -305,7 +172,7 @@ export const renderData = [
     image: Branch8,
     name: "Mr. Akin Oyediran ",
     title2: "Chairman",
-    name2: "Cross River/Akwa Ibom Branch",
+    name2: "Cross River/Akwa Ibom States Branch",
     title: "Managing Director",
     address:
       "Syringe Manufacturing Co. 1, Jubilee Close, Off Jubilee Road Awa, Onna",
@@ -316,7 +183,7 @@ export const renderData = [
     image: Branch9,
     name: "Lady Ada Chukwudozie",
     title2: "Chairman",
-    name2: "Anambra/Enugu Branch",
+    name2: "Anambra/Enugu States Branch",
     title: "Managing Director",
     address:
       "Dozzy Oil & Gas Limited Plot 1, Niger Bridge Head, Industrial Layout, Onitsha.",
@@ -325,9 +192,9 @@ export const renderData = [
   },
   {
     image: Branch10,
-    name: "Dr. Jude O. Eluma ",
+    name: "Dr. Jude Eluma ",
     title2: "Chairman",
-    name2: "Imo/Abia Branch",
+    name2: "Imo/Abia States Branch",
     title: "CEO",
     address:
       "Elchem Limited 15, Industrial Road, P. O. Box 395, Mgbidi, Imo State",
@@ -335,7 +202,178 @@ export const renderData = [
     phone: "Tel: 07036710525; 08117674482",
   },
 ];
+export const SectoralData = [
+  {
+    image: Sect1,
+    name: "Mr. Patrick Anegbe  ",
+    title2: "Chairman",
+    name2: "Food, Beverages & Tobacco Sectoral Group",
+    title: "MD/CEO",
+    address:
+      "Intercontinental Distilleries Limited Chelsea House, Ladipo Oluwole Ind. Estate, Ikeja, Lagos",
+    email: "Email: anegbe.patrick@idlng.com, anegbe.patrick@yahoo.com",
+    phone: "Tel: 08034030185",
+  },
+  {
+    image: Sect2,
+    name: "Mr. Rotimi Aluko ",
+    title2: "Chairman",
+    name2: "Chemical &Pharmaceuticals Sectoral Group",
+    title: "MD/CEO",
+    address:
+      "Voda Paints Limited Km 33, Lagos-Ibadan Exp. Way, Magboro Ind. Area. Magboro, Ogun State",
+    email: "Email: rotimialuko@hotmail.com",
+    phone: "Tel: 08036551445",
+  },
 
+  {
+    image: Sect3,
+    name: "Chief Evarist Uba ",
+    title2: "Chairman",
+    title: "Managing Director",
+    name2: "Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
+    address:
+      "Group Enterprises Nigeria Limited (Polly Foam) 2C Uba Close, Niger Bridge Head Ind. Layout, Near Ogboefere Market Onitsha, Anambra State",
+    email: "Email: polyfoam@yahoo.com, evarist.uba@pollyfoam.com",
+    phone: "Tel: 08033278827",
+  },
+  {
+    image: Sect4,
+    name: "Alhaji (Dr.) Kamorudeen Yusuf ",
+    title2: "Chairman",
+    name2: "Basic Metal, Iron & Steel& Fabricated Metal Product Sectoral Group",
+    title: "GMD/CEO",
+    address: "Kam Industries Nigeria Limited Asa Dam Road, Ilorin, Kwara State",
+    email: "Email: yusuf@kamholding.net, kamwire@yahoo.com",
+    phone: "Tel:08038133830",
+  },
+
+  {
+    image: Sect5,
+    name: "Engr. Ilyasu Saleh ",
+    title2: "Chairman",
+    name2:
+      "Textiles, Wearing Apparel, Carpet Leather & Leather Footwear Products Sectoral Group",
+    title: "Managing Director",
+    address: "Zaria Industries Limited Old Jos Road, Zaria, Kaduna.",
+    email:
+      "E-mail: premier_tarpaulin@yahoo.com, siazinternational@yahoo.com, ilyasaleh59@yahoo.com",
+    phone: "Tel :08037016789; 08023218081",
+  },
+
+  {
+    image: Sect6,
+    name: "Mr. Nath Kedarnath",
+    title2: "Chairman",
+    name2: "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
+    title: "Managing Director/CEO",
+    address:
+      "Veevee Paper Products Ltd Km 2, Ijoko Road, Sango Otta, Ogun State",
+    email: "Email:nsk.md@veeveepaper.com, nskedar@gmail.com",
+    phone: "Tel: 08105434965",
+  },
+  {
+    image: Sect7,
+    name: "Mrs. Ijeoma Oduonye ",
+    title2: "Chairman",
+    name2: " Electrical/ Electronic Sectoral Group",
+    title: "MD/CEO",
+    address: "Cutix Plc No, 17 Osita Onyejianya Street, Umuanuka Otolo Nnewi",
+    email: "Email: ijeoma.oduonye@cutixplc.com.ng",
+    phone: "Tel: 08035423787",
+  },
+
+  {
+    image: Sect8,
+    name: "Mrs. Ngozi Oyewole ",
+    title2: "Chairman",
+    name2: "Wood, Wood Products &Furniture Sectoral Group",
+    title: "MD/CEO",
+    address: "Noxie Limited",
+    email: "Email: ngozi.oyewole@noxielimited.com",
+    phone: "Tel: 08029991111",
+  },
+
+  {
+    image: Sect9,
+    name: "Mr. Mallinson Afam Ukatu ",
+    title2: "Chairman",
+    name2: "Non-Metallic Minerals Sectoral Group",
+    title: "MD/CEO",
+    address:
+      "NISPO Porcelain Company Limited 3B, Ashimowu Jibowu Street, Off Johnson Street, Off Coker Road, Ilupeju, Lagos",
+    email: "Email: afam65mail@yahoo.com",
+    phone: "Tel: 08022243755",
+  },
+
+  {
+    image: Sect10,
+    name: "Elder. Robert Ugbaja ",
+    title2: "Chairman",
+    name2: "NMotor Vehicle & Miscellaneous Assembly Sectoral Group",
+    title: "",
+    address: "Boulos Enterprises Ltd. Plot 10, Acme Road, Ogba, Ikeja",
+    email: "Email: r.ugbaja@bel.groupboulos.com, ugbajarobert@hotmail.com",
+    phone: "Tel: 08033005566",
+  },
+];
+export const SpecialPur = [
+  {
+    image: Sect13,
+    name: "Dr Michael Adebayo",
+    title2: "Chairman",
+    name2: " MAN Gas Users Group",
+    title: "",
+    address: "",
+    email: "",
+    phone: "",
+  },
+  {
+    image: Sect11,
+    name: "Mrs. Soromidayo George ",
+    title2: "Chairman",
+    name2: " MAN Export Group",
+    title: "Director",
+    address: "Unilever Nigeria Plc Billings Way, Oregun-Ikeja, Lagos",
+    email: "Email: soromidayo.george@unilever.com",
+    phone: "Tel: 08022238659",
+  },
+  {
+    image: Sect12,
+    name: "Mr. Vassily Barberopoulos ",
+    title2: "Chairman",
+    name2: "MAN Local Content Group",
+    title: "Managing Director",
+    address:
+      "Nigerian Foundaries 1, Adeyemi Bero Crescent, Ilupeju Industrial Estate, Anthony, Oshodi, Ilupeju",
+    email: "Email: vassily@manlocgroup.com",
+    phone: "Tel: 08034026011",
+  },
+];
+export const PurposeVeh = [
+  {
+    image: Exec11,
+    name: "Rev. Isaac Agoye",
+    title2: "Board Chairman",
+    name2: " Manufacturers Resource Centre",
+    title: "Honorary Treasurer",
+    address:
+      "Nigerian Foundaries 1, Adeyemi Bero Crescent, Ilupeju Industrial Estate, Anthony, Oshodi, Ilupeju",
+    email: "Email: vassily@manlocgroup.com",
+    phone: "Tel: 08034026011",
+  },
+  {
+    image: "",
+    name: "Engr Ibrahim Usman",
+    title2: "Board Chairman",
+    name2: "Manufacturers Power Development Company",
+    title: "Honorary Treasurer",
+    address:
+      "Nigerian Foundaries 1, Adeyemi Bero Crescent, Ilupeju Industrial Estate, Anthony, Oshodi, Ilupeju",
+    email: "Email: vassily@manlocgroup.com",
+    phone: "Tel: 08034026011",
+  },
+];
 export const memberData = [
   { name: "Dr. Okey Akpa", title: "Member" },
   { name: "Chief Oluyinka Kufile", title: "Member" },
@@ -383,10 +421,10 @@ export const memberData = [
     name: "Alhaji Abdullahi Halilu",
     title: "Member",
   },
-  {
-    name: "Dr. Waslat Shittu-Titilola",
-    title: "Member",
-  },
+  // {
+  //   name: "Dr. Waslat Shittu-Titilola",
+  //   title: "Member",
+  // },
   {
     name: "Mrs. Kofo Akinkugbe",
     title: "Member",
@@ -535,10 +573,8 @@ export const memberData = [
     name: "Mr. Segun Ajayi-Kadir",
     title: "Member",
   },
-  {
-    name: "Engr. Ibrahim Usman",
-    title: "Strategic Member",
-  },
+];
+export const StrategicMemb = [
   {
     name: "Mr. J. O. Onigbinde",
     title: "Strategic Member",
@@ -576,19 +612,11 @@ export const memberData = [
     title: "Strategic Member",
   },
   {
-    name: "Mr. John Aluya",
-    title: "Strategic Member",
-  },
-  {
     name: "Dr. D.V.C. Obi",
     title: "Strategic Member",
   },
   {
     name: "Dr. Abdullahi Bashir",
-    title: "Strategic Member",
-  },
-  {
-    name: "Alhaji Adamu Ahmed Abdulkadir",
     title: "Strategic Member",
   },
   {

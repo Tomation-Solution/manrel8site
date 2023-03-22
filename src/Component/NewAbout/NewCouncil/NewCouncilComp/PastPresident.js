@@ -6,13 +6,7 @@ const PastPresident = () => {
   return (
     <>
       <article>
-        <h1 className="article-header">Past President</h1>
-        <p className="article-desc" style={{ fontSize: "16px" }}>
-          {/* The Executive Committee is a group of experienced professionals duly
-          elected by MAN members and entrusted with the obligation to conduct
-          the affairs of the Association according to its constitution */}
-          See our esteemed across the country
-        </p>
+        <h1 className="article-header">LIFE MEMBERS</h1>
 
         <div className="member_items">
           {pastData.map((item, index) => {

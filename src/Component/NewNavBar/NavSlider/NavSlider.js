@@ -116,9 +116,7 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/mrc-contact"}>Contact Us</Link>
             </span>
-            <span className="items-span">
-              <Link to={"/operate"}>Where We Operate</Link>
-            </span>
+
             <span className="items-span">
               <Link to={"/mpdcl"}>MPDCL</Link>
             </span>
@@ -126,6 +124,17 @@ const NavSlider = ({ clickfn }) => {
         </div>
         <div className="nav-slider-translate">
           <Translate />
+        </div>
+        <div className="nav-slider-join">
+          <Link
+            target={"_blank"}
+            rel="noreferrer"
+            to={"https://man.rel8membership.com/"}
+          >
+            <button style={{ backgroundColor: "#1f260d", color: "#fff" }}>
+              LOGIN
+            </button>
+          </Link>
         </div>
         <div className="nav-slider-join">
           <Link to={"/join-now-page"}>
