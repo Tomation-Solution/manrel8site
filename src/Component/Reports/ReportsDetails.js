@@ -46,8 +46,10 @@ const ReportsDetails = () => {
                   <div className="left">
                     <h2>{renderdata.title}</h2>
                     <p className="pub-paragraph">Date: {renderdata?.date}</p>
-                    {renderdata?.freetext.map((item) => (
-                      <p className="pub-paragraph">{item}</p>
+                    {renderdata?.freetext.map((item, index) => (
+                      <p className="pub-paragraph" key={index}>
+                        {item}
+                      </p>
                     ))}
                     <a
                       className="readmore-link"

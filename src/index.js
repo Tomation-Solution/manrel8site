@@ -37,7 +37,6 @@ import NewMemberRequire from "./Component/NewMemberRequire/NewMemberRequire";
 import NewMRC from "./Component/NewMRC/NewMRC";
 import MRCServices from "./Component/NewMRC/MRCServices";
 import MRCContact from "./Component/NewMRC/MRCContact";
-import JoinNowForm from "./Component/JoinNowForm/JoinNowForm";
 import JoinUsPage from "./Component/JoinUsPage/JoinUsPage";
 import PurchaseApplication from "./Component/PurchaseApplication/PurchaseApplication";
 import MakePayment from "./Component/PurchaseApplication/MakePayment";
@@ -67,7 +66,6 @@ root.render(
       <Route path="/about/code-of-conduct" element={<CodeofConduct />} />
       <Route path="/about/private-sector" element={<PrivateSector />} />
       <Route path="/about/council-members" element={<NewCouncil />} />
-      <Route path="/join-now-form" element={<JoinNowForm />} />
       <Route path="/purchase-application" element={<PurchaseApplication />} />
       <Route path="/application-status" element={<ApplicationStatus />} />
 

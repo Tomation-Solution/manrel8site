@@ -12,9 +12,8 @@ const MRCContact = () => {
     <div className="mrc-contact">
       <UIProvider>
         <NewNavBar />
-        {/* <div className="google-map"> */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3720436839126!2d3.3411232144587806!3d6.600601624094209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93d0020d7c01%3A0xaa96f6bac823fb29!2sManufacturers%20Association%20Of%20Nigeria!5e0!3m2!1sen!2sng!4v1678197308053!5m2!1sen!2sng"
+          src="https://www.google.com/maps/d/u/0/embed?mid=1i8PKHSJGjNyfmq3QGwNNPyg_O34AXHw&ehbc=2E312F"
           width="100%"
           title="title1"
           height="450"
@@ -23,7 +22,6 @@ const MRCContact = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        {/* </div> */}
         <div className="contact-us">
           <div className="left">
             <h1 className="header">
@@ -110,7 +108,7 @@ const MRCContact = () => {
               </div>
               <div className="obj-item">
                 <div></div>
-                <span>Phone: 01-4542700, 01-4542701, 01-4542702</span>
+                <span>Phone: 01-4542700, 01-4542701, 01-4542702, 081 666 75412</span>
               </div>
               <div className="obj-item">
                 <div></div>

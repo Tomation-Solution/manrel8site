@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "./Article.scss";
 
-import Manufacturing from "../../images/new-images/ManHouseMainImg.jpeg";
-import ArtNature1 from "../../images/new-images/ManHouseMainImg.jpeg";
-import ArtNature2 from "../../images/new-images/ManHouseMainImg.jpeg";
+import Manufacturing from "../../images/new-images/NewHomeAllimg.png";
+import ArtNature1 from "../../images/new-images/NewHomeAllimg.png";
+import ArtNature2 from "../../images/new-images/NewHomeAllimg.png";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ import { newsdata } from "../News/NewsData";
 function Article() {
   const [imageIndex, setImageIndex] = useState(0); // Set initial index to 0
   const images = useMemo(() => {
-    return [Manufacturing, ArtNature1, ArtNature2];
+    return [Manufacturing];
   }, []);
   useEffect(() => {
     // Use setInterval to change the image every 5 seconds
@@ -38,12 +38,9 @@ function Article() {
             <img src={images[imageIndex]} alt="" />
           </div>
           <div className="right">
-            {/* <div className="top">
-              <h2>News</h2>
-            </div> */}
             <div className="wrap">
               {gallerydata[0] && (
-                <div className="card" key={gallerydata[0].id}>
+                <div className="card">
                   <button>Gallery</button>
                   <div className="flex">
                     <h3>{gallerydata[0].name}</h3>
@@ -55,7 +52,7 @@ function Article() {
               )}
 
               {newPubData[0] && (
-                <div className="card" key={newPubData[0].id}>
+                <div className="card">
                   <button>Publications</button>
                   <div className="flex">
                     <h3>{newPubData[0].name}</h3>
@@ -67,7 +64,7 @@ function Article() {
               )}
 
               {newReportData[0] && (
-                <div className="card" key={newReportData[0].id}>
+                <div className="card">
                   <button>Report</button>
                   <div className="flex">
                     <h3>{newReportData[0].name}</h3>
@@ -79,7 +76,7 @@ function Article() {
               )}
 
               {newsdata[0] && (
-                <div className="card" key={newsdata[0].id}>
+                <div className="card">
                   <button>News</button>
                   <div className="flex">
                     <h3>{newsdata[0].name}</h3>

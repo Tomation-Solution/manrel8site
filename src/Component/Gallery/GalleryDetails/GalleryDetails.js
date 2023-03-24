@@ -34,9 +34,9 @@ const GalleryDetails = () => {
               {/* <p className="gallery-header">{renderdata.name}</p> */}
 
               <div className="gallery-items">
-                {renderdata.image.map((item) => {
+                {renderdata.image.map((item, index) => {
                   return (
-                    <div className="gallery-item">
+                    <div className="gallery-item" key={index}>
                       <div className="top">
                         <img alt="" src={item.image} />
                       </div>

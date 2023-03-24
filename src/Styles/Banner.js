@@ -29,10 +29,10 @@ export const BannerContent = styled(Box)(({ theme }) => ({
 
 export const BannerTitle = styled(Typography)(({ theme }) => ({
   lineHeight: "71px",
-  fontSize: "60px",
+  fontSize: "50px",
   marginBottom: "32px",
   fontWeight: "bold",
-  width: "883px",
+  textAlign: "center",
   [theme.breakpoints.down("lg")]: {
     marginTop: "12vh",
   },
@@ -49,8 +49,9 @@ export const BannerTitle = styled(Typography)(({ theme }) => ({
 
 export const BannerDescription = styled(Typography)(({ theme }) => ({
   lineHeight: "30px",
-  fontSize: "20px",
+  fontSize: "24px",
   width: "988px",
+  textAlign: "center",
   color: Colors.white,
   display: "block",
   paddingBottom: "20px",
@@ -101,6 +102,8 @@ export const BannerButtonContainer = styled(Box)(({ theme }) => ({
   alignItems: "center",
   flexWrap: "wrap",
   paddingTop: "30px",
+  justifyContent: "center",
+
   [theme.breakpoints.down("md")]: {
     justifyContent: "center",
   },

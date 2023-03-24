@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { useForm } from "react-hook-form";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
@@ -9,13 +8,48 @@ import PlusIcon from "../../images/new-images/PlusIcon.png";
 import NextPage from "./NextPage";
 import { Link } from "react-router-dom";
 import Subscribe from "../Subscribe/Subscribe";
+import { useFieldArray, useForm } from "react-hook-form";
 
 const ApplicationPortal = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const [next, setNext] = useState(false);
-  // const {register, handleSubmit} = useForm()
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      product_manufacturer: [{ name: "product name", value: "value info" }],
+      materails: [{ name: "materials_name", value: "materails_value" }],
+    },
+  });
+
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "product_manufacturer",
+    rules: {
+      required: "Please add atleast one manufactured product",
+    },
+  });
+
+  const {
+    fields: materailField,
+    append: materailAppend,
+    remove: materialRemove,
+  } = useFieldArray({
+    control,
+    name: "materails",
+    rules: {
+      required: "Please add atleast one material used",
+    },
+  });
+
+  const onSubmitHandler = (data) => {
+    console.log(data);
+  };
 
   const setNextHandler = () => {
     setNext(!next);
@@ -43,7 +77,7 @@ const ApplicationPortal = () => {
             </Link>
           </div>
           {!next ? (
-            <form>
+            <form onSubmit={handleSubmit(onSubmitHandler)}>
               <div className="status-track">
                 <div className="status-item">1</div>
                 <div className="status-separator"></div>
@@ -124,35 +158,93 @@ const ApplicationPortal = () => {
                   </select>
                 </label>
               </div>
-              <div className="half-input">
-                <label>
-                  Products Manufactured
-                  <input type={"text"} />
-                </label>
-                <label>
-                  SON/ ISON/NAFDAC Certificates (If Any)
-                  <input type={"text"} />
-                </label>
-              </div>
-
+              {fields.map((fields, index) => (
+                <section key={fields.id}>
+                  <div className="half-input">
+                    <label>
+                      Products Manufactured
+                      <input
+                        type={"text"}
+                        {...register(`product_manufacturer.${index}.name`, {
+                          required: true,
+                        })}
+                      />
+                    </label>
+                    <label>
+                      SON/ ISON/NAFDAC Certificates (If Any)
+                      <input
+                        type={"text"}
+                        {...register(`product_manufacturer.${index}.value`, {
+                          required: true,
+                        })}
+                      />
+                    </label>
+                  </div>
+                  <div className="delete-btn">
+                    <button onClick={() => remove(index)}>Delete</button>
+                  </div>
+                </section>
+              ))}
+              <h5 style={{ textAlign: "center" }}>
+                {errors?.product_manufacturer?.root?.message}
+              </h5>
               <div className="add-more">
-                <img src={PlusIcon} alt="" />
+                <img
+                  src={PlusIcon}
+                  alt=""
+                  onClick={() =>
+                    append({
+                      name: "New Product",
+                      value: "New Product Value",
+                    })
+                  }
+                />
                 <p>Add Product Manufactured</p>
               </div>
 
-              <div className="half-input">
-                <label>
-                  Major Raw Materials Used(Indicate if Impoted/HS Code)
-                  <input type={"text"} />
-                </label>
-                <label>
-                  % of Local Raw Materials
-                  <input type={"text"} />
-                </label>
-              </div>
-
+              {materailField.map((fields, index) => (
+                <section key={fields.id}>
+                  <div className="half-input">
+                    <label>
+                      Major Raw Materials Used(Indicate if Impoted/HS Code)
+                      <input
+                        type={"text"}
+                        {...register(`materails.${index}.name`, {
+                          required: true,
+                        })}
+                      />
+                    </label>
+                    <label>
+                      % of Local Raw Materials
+                      <input
+                        type={"text"}
+                        {...register(`materails.${index}.value`, {
+                          required: true,
+                        })}
+                      />
+                    </label>
+                  </div>
+                  <div className="delete-btn">
+                    <button onClick={() => materialRemove(index)}>
+                      Delete
+                    </button>
+                  </div>
+                </section>
+              ))}
+              <h5 style={{ textAlign: "center" }}>
+                {errors?.materails?.root?.message}
+              </h5>
               <div className="add-more">
-                <img src={PlusIcon} alt="" />
+                <img
+                  src={PlusIcon}
+                  alt=""
+                  onClick={() =>
+                    materailAppend({
+                      name: "New Material Name",
+                      value: "New Material Value",
+                    })
+                  }
+                />
                 <p>Add Raw Materials Used</p>
               </div>
 
@@ -247,7 +339,10 @@ const ApplicationPortal = () => {
               <div className="half-input">
                 <label>
                   Are your products exported?
-                  <input type={"text"} />
+                  <select>
+                    <option>yes</option>
+                    <option>no</option>
+                  </select>
                 </label>
                 <label>
                   Company’s contact information
@@ -276,6 +371,9 @@ const ApplicationPortal = () => {
                   <input type={"text"} />
                 </label>
               </div>
+              <h5 style={{ textAlign: "center" }}>
+                {errors?.materails?.root?.message}
+              </h5>
               <div className="btn-con align-center">
                 <button>Save & Continue Later</button>
                 <button onClick={setNextHandler}>Next</button>

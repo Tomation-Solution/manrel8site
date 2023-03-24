@@ -26,24 +26,38 @@ function InfoBoard() {
         padding: "50px 0",
       }}
     >
-      <InfoTitle>Why Our Members Prefer us</InfoTitle>
-      <InfoHeader>Members' Benefit</InfoHeader>
+      {/* <InfoTitle>Why We are Unique</InfoTitle> */}
+      <InfoHeader>Why We are Unique</InfoHeader>
       <InfoContainer>
         <InfoItemContainer>
           <InfoItemImg src={itemIcon} />
-          <InfoItemTitle>Trainings & Events</InfoItemTitle>
-          <InfoItemDescription>
-            Conferences, trainings, certifications and more for manufacturers at
-            all levels in every role.
-          </InfoItemDescription>
+          <InfoItemTitle>Policy Advocacy</InfoItemTitle>
+          <InfoItemDescription></InfoItemDescription>
         </InfoItemContainer>
+
         <InfoItemContainer>
           <InfoItemImg src={itemIcon2} />
-          <InfoItemTitle>Discussion Groups</InfoItemTitle>
+          <InfoItemTitle>Interactive & Networking Platform</InfoItemTitle>
           <InfoItemDescription>
             Get insights and share best practices with like-minded manufacturers
           </InfoItemDescription>
         </InfoItemContainer>
+
+        <InfoItemContainer>
+          <InfoItemImg src={itemIcon2} />
+          <InfoItemTitle>Sector-specific BMO</InfoItemTitle>
+          <InfoItemDescription>Exclusively Manufacturing</InfoItemDescription>
+        </InfoItemContainer>
+
+        <InfoItemContainer>
+          <InfoItemImg src={itemIcon} />
+          <InfoItemTitle>Consultancy, Trainings & Events</InfoItemTitle>
+          <InfoItemDescription>
+            Consultancy, conferences, trainings, certifications and more for
+            manufacturers at all levels
+          </InfoItemDescription>
+        </InfoItemContainer>
+
         <InfoItemContainer>
           <InfoItemImg src={itemIcon3} />
           <InfoItemTitle>Experts on Call</InfoItemTitle>
