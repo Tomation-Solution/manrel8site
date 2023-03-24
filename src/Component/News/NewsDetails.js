@@ -45,8 +45,10 @@ const NewsDetails = () => {
                   <div className="left">
                     <h2>{renderdata.title}</h2>
                     <p className="pub-paragraph">Date: {renderdata?.date}</p>
-                    {renderdata?.paragraphs.map((item) => (
-                      <p className="pub-paragraph">{item}</p>
+                    {renderdata?.paragraphs.map((item, index) => (
+                      <p className="pub-paragraph" key={index}>
+                        {item}
+                      </p>
                     ))}
 
                     <div className="botom">
@@ -61,8 +63,8 @@ const NewsDetails = () => {
                 <div className="right">
                   <h2>Other News</h2>
                   <div className="wrap">
-                    {otherPub.map((item) => (
-                      <div className="card" key={item.id}>
+                    {otherPub.map((item, index) => (
+                      <div className="card" key={index}>
                         <button>News</button>
                         <div className="flex">
                           <h3>{item.name}</h3>

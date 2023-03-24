@@ -6,7 +6,7 @@ import Branch5 from "../../../../images/new-images/executivesImg/Branch5.png";
 import Branch6 from "../../../../images/new-images/executivesImg/Branch6.png";
 import Branch7 from "../../../../images/new-images/executivesImg/Branch7.png";
 import Branch8 from "../../../../images/new-images/executivesImg/Branch8.png";
-import Branch9 from "../../../../images/new-images/executivesImg/Branch9.png";
+import Branch9 from "../../../../images/new-images/executivesImg/NewLadyAdaImg.jpeg";
 import Branch10 from "../../../../images/new-images/executivesImg/Branch10.png";
 
 import Sect1 from "../../../../images/new-images/executivesImg/EngrPatrick Anegbe.webp";

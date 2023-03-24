@@ -14,8 +14,8 @@ const NewMRC = () => {
         <div className="topBg">
           <h1>Manufacturers Resource Centre (MRC)</h1>
           <p>
-            The only professional service organization structured to render
-            business solutions for the Manufacturing sector and affiliated.
+            The Manufacturers Resource Centre is the Business Solution Arm of
+            Manufacturers Association of Nigeria (MAN).
           </p>
         </div>
 

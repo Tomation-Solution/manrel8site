@@ -33,8 +33,10 @@ function Section() {
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
             <SectionImg src={sectionpic} style={{ objectFit: "cover" }} />
-            <SectionTitle>Our Vision</SectionTitle>
-            <SectionDescription sx={{ color: "#000" }}>
+            <SectionTitle style={{ textAlign: "center" }}>
+              Our Vision
+            </SectionTitle>
+            <SectionDescription sx={{ color: "#000", textAlign: "center" }}>
               To be the key driver for Industrialization, sustainable Economic
               Growth and Development in Nigeria
             </SectionDescription>
@@ -62,26 +64,38 @@ function Section() {
               alt=""
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
-            <div style={{ padding: "30px 0" }}>
-              <SectionTitle sx={{ color: Colors.white }}>
+            <div style={{ padding: "30px 0px" }}>
+              <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
                 Our Mission
               </SectionTitle>
               <SectionDescription
                 sx={{
                   color: Colors.white,
-                  fontSize: "14px",
+                  fontSize: "16px",
+                  margin: "20px 0px",
                   fontFamily: "Poppins",
+                  textAlign: "center",
                 }}
               >
                 1. MAN promotes the interest of manufacturers by deepening its
                 advocacy and partnership with national and international
                 economic actors in Government, Organized Private Sector, host
                 communities and other stakeholders to foster its proactive role
-                in policy formulation and implementation. <br /> 2. MAN promotes
-                manufacturing sector competitiveness, contribution to job
-                creation and Gross Domestic Product through commitment to
-                research and development, new technologies and environmental
-                sustainability.
+                in policy formulation and implementation.
+              </SectionDescription>
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "16px",
+                  margin: "20px 0px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                2. MAN promotes manufacturing sector competitiveness,
+                contribution to job creation and Gross Domestic Product through
+                commitment to research and development, new technologies and
+                environmental sustainability.
               </SectionDescription>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
@@ -110,8 +124,8 @@ function Section() {
               alt=""
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
-            <div style={{ padding: "30px 0" }}>
-              <SectionTitle sx={{ color: Colors.white }}>
+            <div style={{ padding: "30px 0", textAlign: "center" }}>
+              <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
                 Advocacy Achievements
               </SectionTitle>
               <SectionDescription
@@ -119,6 +133,7 @@ function Section() {
                   color: Colors.white,
                   fontSize: "14px",
                   fontFamily: "Poppins",
+                  textAlign: "center",
                 }}
               >
                 Through its continuous advocacy programmes, MAN has recorded
@@ -147,8 +162,10 @@ function Section() {
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
             <SectionImg src={sectionpic2} />
-            <SectionTitle sx={{ color: "#8A8A8A" }}>Our History</SectionTitle>
-            <SectionDescription sx={{ color: "#8A8A8A" }}>
+            <SectionTitle sx={{ color: "#8A8A8A", textAlign: "center" }}>
+              Our History
+            </SectionTitle>
+            <SectionDescription sx={{ color: "#8A8A8A", textAlign: "center" }}>
               The Manufacturers Association of Nigeria (MAN) was established in
               May, 1971 as a company limited by guarantee. The establishment of
               the Association was motivated by the desire to have a focal point
@@ -158,33 +175,42 @@ function Section() {
               to give meaning to the interests, problems and aspirations of the
               manufacturing sector.
             </SectionDescription>
-            <Link to="/about" style={{ textDecoration: "none" }}>
-              <MyButton
-                sx={{
-                  color: "#8A8A8A",
-                  borderColor: "#8A8A8A",
-                  marginTop: "21px",
-                }}
-              >
-                See More
-              </MyButton>
-            </Link>
+            <div style={{ textAlign: "center" }}>
+              <Link to="/about" style={{ textDecoration: "none" }}>
+                <MyButton
+                  sx={{
+                    color: "#8A8A8A",
+                    borderColor: "#8A8A8A",
+                    marginTop: "21px",
+                  }}
+                >
+                  See More
+                </MyButton>
+              </Link>
+            </div>
           </div>
         </SectionItemContainer>
 
         <SectionItemContainer>
           <div>
             <SectionImg src={sectionpic3} />
-            <SectionTitle>Membership</SectionTitle>
+            <SectionTitle style={{ textAlign: "center" }}>
+              Membership
+            </SectionTitle>
             <SectionDescription
-              sx={{ color: "#010001", fontSize: "17px", fontWeight: "500" }}
+              sx={{
+                color: "#010001",
+                fontSize: "17px",
+                fontWeight: "500",
+                textAlign: "center",
+              }}
             >
               The membership requirement steps below detail the process to
               becoming a member of MAN
             </SectionDescription>
             {/* 
             <SectionMember> */}
-            <div style={{ margin: "60px 20px" }}>
+            <div style={{ margin: "60px 20px", textAlign: "center" }}>
               <Link
                 to="/membership-requirement"
                 style={{
@@ -231,7 +257,7 @@ function Section() {
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
             <div style={{ padding: "30px 0", fontFamily: "Poppins" }}>
-              <SectionTitle sx={{ color: Colors.white }}>
+              <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
                 Why Join MAN?
               </SectionTitle>
               <SectionDescription
@@ -239,6 +265,7 @@ function Section() {
                   color: Colors.white,
                   fontSize: "14px",
                   fontFamily: "Poppins",
+                  textAlign: "center",
                 }}
               >
                 Whether you are planning your next business move, or managing
@@ -253,7 +280,7 @@ function Section() {
                 restlessly to intervening on members’ regulatory and operational
                 issues
               </SectionDescription>
-              <div style={{ marginLeft: "30px" }}>
+              <div style={{ marginLeft: "30px", textAlign: "center" }}>
                 <Link to="/join-now-page" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{

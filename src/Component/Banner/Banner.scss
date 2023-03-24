@@ -2,46 +2,50 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../../images/new-images/ManHouseMainImg.jpeg");
   display: flex;
-  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 30px 72px;
   margin-bottom: 91px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: left;
+  // text-align: left;
   transition: background-image 2s ease-in-out;
 }
 .active2 {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../../images/new-images/ManHouseMainImg.jpeg");
   display: flex;
-  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 30px 72px;
   margin-bottom: 91px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: left;
   transition: background-image 2s ease-in-out;
 }
 .active3 {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../../images/new-images/ManHouseMainImg.jpeg");
   display: flex;
-  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 30px 72px;
   margin-bottom: 91px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: left;
   transition: background-image 2s ease-in-out;
 }
 .active4 {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../../images/new-images/ManHouseMainImg.jpeg");
   display: flex;
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 30px 72px;
   margin-bottom: 91px;
   background-size: cover;

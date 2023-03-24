@@ -102,7 +102,11 @@ const NewNavBar = () => {
             <KeyboardArrowDown />
           </div>
           <div className="translate-icon">
-            <a href="https://man.rel8membership.com/">
+            <a
+              href="https://man.rel8membership.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button
                 style={{
                   padding: "5px 10px",
@@ -119,7 +123,7 @@ const NewNavBar = () => {
             </a>
           </div>
           <div className="translate-icon">
-            <Translate />
+            <Translate style={{ color: "#fff" }} />
           </div>
 
           <div className="join-now">

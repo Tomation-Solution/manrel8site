@@ -81,6 +81,20 @@
         color: #fff;
       }
     }
+    .delete-btn {
+      margin: 20px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        outline: none;
+        background-color: #2c3513;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+      }
+    }
     form {
       flex: 2;
       .generic-text {

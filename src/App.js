@@ -23,8 +23,8 @@ function App() {
             <NewNavBar />
             <Banner />
             <Section />
-            <InfoBoard />
             <Article />
+            <InfoBoard />
             <Wall />
             <Footer />
           </div>
