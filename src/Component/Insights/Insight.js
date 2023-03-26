@@ -7,7 +7,7 @@ import "../Gallery/Insmore.scss";
 import Wall from "../Wall/Wall";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import Articleimage from "../../images/new-images/PublicationsDropImg.png";
+import Articleimage from "../../images/div-sub.png";
 import { UIProvider } from "../../Ui";
 import { newsdata } from "../News/NewsData";
 import { newPubData } from "../Publications/PublicationsData";
@@ -82,7 +82,13 @@ const Insight = () => {
             </div>
 
             <div className="left">
-              <img className="img" src={Articleimage} alt="" />
+              <img
+                className="img"
+                src={Articleimage}
+                alt=""
+                height={"500px"}
+                style={{ objectFit: "contain" }}
+              />
 
               {/* <InsightQuickNavigation /> */}
             </div>

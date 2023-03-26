@@ -11,7 +11,6 @@ import {
   InfoItemDescription,
   InfoItemImg,
   InfoItemTitle,
-  InfoTitle,
 } from "../../Styles/InfoBoard";
 
 function InfoBoard() {
