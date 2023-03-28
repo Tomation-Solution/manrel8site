@@ -94,8 +94,8 @@ export const getStatus = async () => {
 //BUY FORM
 export const buyForm = async (payload) => {
   try {
-    const res = await privateRequest.post(
-      "/tenant/prospectivemember/creation_of_prospective_member/",
+    const res = await axios.post(
+      "https://rel8backend-production.up.railway.app/tenant/man/tenant/prospectivemember/creation_of_prospective_member/",
       payload
     );
     return res.data;

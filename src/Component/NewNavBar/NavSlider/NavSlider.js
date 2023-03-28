@@ -79,7 +79,7 @@ const NavSlider = ({ clickfn }) => {
               <Link to={"/reports"}>Reports</Link>
             </span>
             <span className="items-span">
-              <Link to={"/event-training"}>Events & Training</Link>
+              <Link to={"/event-training"}>Consultancy,Events & Trainings</Link>
             </span>
           </div>
         </div>

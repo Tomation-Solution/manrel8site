@@ -48,15 +48,22 @@ const MakePayment = () => {
       });
     },
     onSuccess: (data) => {
-      console.log(data);
-      // toast.success("Validating Credentials", {
-      //   icon: false,
-      // });
+      toast.success("Paymet Successfull Redirecting", {
+        icon: false,
+      });
+      if (data.data?.payment_info?.data?.authorization_url) {
+        window.open(data.data?.payment_info?.data?.authorization_url, "_blank");
+      }
     },
-    onError: () => {
+    onError: (error) => {
       toast.error("Payment Cancelled", {
         icon: false,
       });
+      if (error?.message?.response?.data?.message?.error) {
+        toast.error(`${error?.message?.response?.data?.message?.error}`, {
+          icon: false,
+        });
+      }
     },
   });
 
@@ -139,7 +146,10 @@ const MakePayment = () => {
               <h1 className="header center">Select Payment Method </h1>
 
               <label className="image-label">
-                <img src={PaymentImg1} alt="" />
+                <div className="">
+                  <h5 style={{ textAlign: "center" }}>Not Available</h5>
+                  <img src={PaymentImg1} alt="" />
+                </div>
                 <input
                   name="payType"
                   type={"radio"}
@@ -148,7 +158,10 @@ const MakePayment = () => {
                 />
               </label>
               <label className="image-label">
-                <img src={PaymentImg2} alt="" />
+                <div className="">
+                  <h5 style={{ textAlign: "center" }}>Not Available</h5>
+                  <img src={PaymentImg2} alt="" />
+                </div>
                 <input
                   name="payType"
                   type={"radio"}
@@ -157,7 +170,10 @@ const MakePayment = () => {
                 />
               </label>
               <label className="image-label">
-                <img src={PaymentImg3} alt="" />
+                <div className="">
+                  <h5 style={{ textAlign: "center" }}>Available</h5>
+                  <img src={PaymentImg3} alt="" />
+                </div>
                 <input
                   name="payType"
                   type={"radio"}

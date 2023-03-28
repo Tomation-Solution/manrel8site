@@ -116,7 +116,7 @@ export const InsightDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to="/event-training">Events & Trainings</Link>
+          <Link to="/event-training">Consultancy,Events & Trainings</Link>
         </span>
       </div>
     </div>
