@@ -13,20 +13,57 @@ import {
 import PaymentImg1 from "../../images/new-images/PaymentImg (1).png";
 import PaymentImg2 from "../../images/new-images/PaymentImg (2).png";
 import PaymentImg3 from "../../images/new-images/PaymentImg (3).png";
+import { useMutation } from "react-query";
+import { buyForm } from "../../utils/api-calls";
+import { toast } from "react-toastify";
 
 const MakePayment = () => {
   const location = useLocation();
   const locationState = location.state;
-  const { setValue, register } = useForm();
+  const { setValue, register, handleSubmit } = useForm();
 
   useEffect(() => {
-    setValue("cac_reg_no", locationState.cac_reg_no);
-    setValue("company_name", locationState.company_name);
-    setValue("email", locationState.email);
-    setValue("office_address", locationState.office_address);
-    setValue("tele_no", locationState.tele_no);
-    setValue("web_address", locationState.web_address);
+    if (locationState?.from === "/purchase-application") {
+      setValue(
+        "cac_registration_number",
+        locationState.cac_registration_number
+      );
+      setValue("name_of_company", locationState.name_of_company);
+      setValue("email", locationState.email);
+      setValue(
+        "corporate_office_addresse",
+        locationState.corporate_office_addresse
+      );
+      setValue("telephone_number", locationState.telephone_number);
+      setValue("website", locationState.website);
+    }
   }, [locationState, setValue]);
+
+  const { from, ...locationTo } = locationState;
+
+  const { mutate, isLoading } = useMutation(buyForm, {
+    onMutate: () => {
+      toast.info("Validating Details", {
+        icon: false,
+      });
+    },
+    onSuccess: (data) => {
+      console.log(data);
+      // toast.success("Validating Credentials", {
+      //   icon: false,
+      // });
+    },
+    onError: () => {
+      toast.error("Payment Cancelled", {
+        icon: false,
+      });
+    },
+  });
+
+  const onSubmitHandler = (data) => {
+    mutate(data);
+    // console.log(data);
+  };
 
   return (
     <div className="purchase-application">
@@ -39,20 +76,20 @@ const MakePayment = () => {
             Kindly confirm that the your information are correct before making
             payment
           </PurchaseWarnBanner>
-          <form className="split-page">
+          <form className="split-page" onSubmit={handleSubmit(onSubmitHandler)}>
             <div className="each-half">
               <label>
                 Name of Company
                 <input
                   type={"text"}
-                  {...register("company_name", { disabled: true })}
+                  {...register("name_of_company", { disabled: true })}
                 />
               </label>
               <label>
                 CAC Registration Number
                 <input
                   type={"text"}
-                  {...register("cac_reg_no", { disabled: true })}
+                  {...register("cac_registration_number", { disabled: true })}
                 />
               </label>
 
@@ -60,7 +97,7 @@ const MakePayment = () => {
                 Telephone Number(s) Including Mobile
                 <input
                   type={"text"}
-                  {...register("tele_no", { disabled: true })}
+                  {...register("telephone_number", { disabled: true })}
                 />
               </label>
 
@@ -76,7 +113,7 @@ const MakePayment = () => {
                 Website Address
                 <input
                   type={"text"}
-                  {...register("web_address", { disabled: true })}
+                  {...register("website", { disabled: true })}
                 />
               </label>
 
@@ -84,14 +121,14 @@ const MakePayment = () => {
                 Corporate Office Address
                 <textarea
                   type={"text"}
-                  {...register("office_address", { disabled: true })}
+                  {...register("corporate_office_addresse", { disabled: true })}
                 />
               </label>
 
               <div className="btn-con">
                 <Link
                   to={"/purchase-application"}
-                  state={{ from: location.pathname, ...locationState }}
+                  state={{ from: location.pathname, ...locationTo }}
                 >
                   <button>Go Back to Edit</button>
                 </Link>
@@ -130,7 +167,7 @@ const MakePayment = () => {
               </label>
 
               <div className="btn-con">
-                <button>Proceed to Pay</button>
+                <button disabled={isLoading}>Proceed to Pay</button>
               </div>
             </div>
           </form>

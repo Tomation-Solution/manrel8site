@@ -22,7 +22,7 @@ export const FooterItemsContainer = styled(Box)(({ matches, theme }) => ({
   alignContent: "left",
   height: "100%",
   padding: "0px 0px",
-  width: "23%",
+  // width: "23%",
   fontFamily: "Poppins",
 
   [theme.breakpoints.down("md")]: {
@@ -56,7 +56,7 @@ export const MyButton = styled(Button)(() => ({
 
 export const FooterDescription = styled(Typography)(({ theme }) => ({
   lineHeight: "25px",
-  fontSize: "14px",
+  fontSize: "16px",
   cursor: "pointer",
   color: Colors.black,
   paddingBottom: "10px",

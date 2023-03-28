@@ -59,7 +59,7 @@ export const InfoItemImg = styled("img")(({ src, theme }) => ({
 export const InfoItemTitle = styled(Typography)(({ theme }) => ({
   lineHeight: "71px",
   fontSize: "22px",
-  marginBottom: "32px",
+  marginBottom: "10px",
 
   textAlign: "center",
   color: Colors.white,

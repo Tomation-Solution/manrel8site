@@ -4,13 +4,42 @@ import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import Logo from "../../images/manlogo2.png";
 import Wall from "../Wall/Wall";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Subscribe from "../Subscribe/Subscribe";
+import { useQuery } from "react-query";
+import { getStatus } from "../../utils/api-calls";
+import { toast } from "react-toastify";
 
 const ApplicationStatus = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const user_data = JSON.parse(localStorage.getItem("userdata"));
+
+  const { isLoading, isFetching, isError, data } = useQuery(
+    "get-status",
+    getStatus,
+    {
+      refetchOnWindowFocus: false,
+      select: (data) => data.data,
+    }
+  );
+
+  const deleteUseData = () => {
+    toast.info("User logged out", { icon: false });
+    localStorage.removeItem("userdata");
+  };
+
+  // if (data) {
+  //   console.log(data);
+  // }
+
+  if (!user_data || user_data.has_paid === false) {
+    toast.error("Login to access this page");
+    return <Navigate to={"/join-now-page"} />;
+  }
+
   return (
     <div className="applicationPortal">
       <UIProvider>
@@ -32,26 +61,52 @@ const ApplicationStatus = () => {
               </div>
             </Link>
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn">Log Out</div>
+              <div className="side-navigation-btn" onClick={deleteUseData}>
+                Log Out
+              </div>
             </Link>
           </div>
           <form>
-            <div className="status-track">
-              <div className="status-text-con">
-                <div className="status-item">1</div>
-                <p>Approval in Progress</p>
+            {isLoading || isFetching ? (
+              <h5>Loading...</h5>
+            ) : !isError ? (
+              <div className="status-track">
+                <div className="status-text-con">
+                  <div
+                    className={`status-item ${
+                      data === "approval_in_progress" ? "" : "dotted"
+                    }`}
+                  >
+                    1
+                  </div>
+                  <p>Approval in Progress</p>
+                </div>
+                <div className="status-separator"></div>
+                <div className="status-text-con">
+                  <div
+                    className={`status-item ${
+                      data === "approval_in_principle_granted" ? "" : "dotted"
+                    }`}
+                  >
+                    2
+                  </div>
+                  <p>Approval in Principle Granted</p>
+                </div>
+                <div className="status-separator"></div>
+                <div className="status-text-con">
+                  <div
+                    className={`status-item ${
+                      data === "final_apporval" ? "" : "dotted"
+                    }`}
+                  >
+                    3
+                  </div>
+                  <p>Final Approval</p>
+                </div>
               </div>
-              <div className="status-separator"></div>
-              <div className="status-text-con">
-                <div className="status-item dotted">2</div>
-                <p>Approval in Principle Granted</p>
-              </div>
-              <div className="status-separator"></div>
-              <div className="status-text-con">
-                <div className="status-item dotted">3</div>
-                <p>Final Approval</p>
-              </div>
-            </div>
+            ) : (
+              <h5>cant fetch status data</h5>
+            )}
           </form>
         </div>
         <Wall />

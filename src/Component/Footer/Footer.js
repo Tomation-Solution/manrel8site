@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Instagram, YouTube } from "@mui/icons-material";
 function Footer() {
   return (
     <FooterContainer>
@@ -26,8 +27,7 @@ function Footer() {
         <FooterDescription>info@manufacturersnigeria.org</FooterDescription>
         <FooterDescription>01-4542700, 01-4542701</FooterDescription>
       </FooterItemsContainer>
-      <FooterItemsContainer>
-        {/* <FooterDescription>Sitemap</FooterDescription> */}
+      <FooterItemsContainer style={{ textAlign: "center" }}>
         <FooterDescription>Privacy Policy</FooterDescription>
         <FooterDescription>Webmail Login</FooterDescription>
         <FooterDescription>
@@ -45,19 +45,15 @@ function Footer() {
           style={{
             display: "flex",
             gap: "10px",
-            margin: "20px ",
-            color: "#2B3513",
+            margin: "40px ",
           }}
         >
-          <FacebookIcon style={{ cursor: "pointer" }} />
-          <LinkedInIcon style={{ cursor: "pointer" }} />
-          <TwitterIcon style={{ cursor: "pointer" }} />
+          <FacebookIcon style={{ color: "blue", cursor: "pointer" }} />
+          <LinkedInIcon style={{ color: "skyblue", cursor: "pointer" }} />
+          <TwitterIcon style={{ color: "skyblue", cursor: "pointer" }} />
+          <Instagram style={{ color: "purple", cursor: "pointer" }} />
+          <YouTube style={{ color: "red", cursor: "pointer" }} />
         </div>
-        {/* <FooterDescription>Modern Slavery Statement</FooterDescription> */}
-      </FooterItemsContainer>
-      <FooterItemsContainer>
-        {/* <FooterDescription>Terms & Conditions</FooterDescription>
-        <FooterDescription>Website help</FooterDescription> */}
       </FooterItemsContainer>
     </FooterContainer>
   );

@@ -12,11 +12,12 @@ import "./Banner.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/bundle";
+import "swiper/css/navigation";
 
 const Banner = () => {
   return (
@@ -25,12 +26,13 @@ const Banner = () => {
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 30000,
+          delay: 25000,
           disableOnInteraction: false,
         }}
         loop={true}
         grabCursor={true}
-        modules={[Autoplay]}
+        modules={[Autoplay, Navigation]}
+        navigation={true}
         className="mySwiper"
       >
         <SwiperSlide>
