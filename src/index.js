@@ -45,7 +45,7 @@ import ApplicationStatus from "./Component/ApplicationPortal/ApplicationStatus";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+// import { ReactQueryDevtools } from "react-query/devtools";
 
 const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -114,7 +114,7 @@ root.render(
           <Route path="/mpdcl" element={<Mpdcl />} />
         </Routes>
       </BrowserRouter>
-      <ReactQueryDevtools position="bottom-right" />
+      {/* <ReactQueryDevtools position="bottom-right" /> */}
     </QueryClientProvider>
   </>
 );

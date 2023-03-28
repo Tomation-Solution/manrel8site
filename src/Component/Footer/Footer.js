@@ -29,7 +29,16 @@ function Footer() {
       </FooterItemsContainer>
       <FooterItemsContainer style={{ textAlign: "center" }}>
         <FooterDescription>Privacy Policy</FooterDescription>
-        <FooterDescription>Webmail Login</FooterDescription>
+        <FooterDescription>
+          <a
+            style={{ textDecoration: "none", color: "#000" }}
+            href="https://man.rel8membership.com/"
+            rel={"noreferrer"}
+            target="_blank"
+          >
+            Webmail Login
+          </a>
+        </FooterDescription>
         <FooterDescription>
           <Link
             to={"/operate"}
@@ -48,11 +57,29 @@ function Footer() {
             margin: "40px ",
           }}
         >
-          <FacebookIcon style={{ color: "blue", cursor: "pointer" }} />
-          <LinkedInIcon style={{ color: "skyblue", cursor: "pointer" }} />
-          <TwitterIcon style={{ color: "skyblue", cursor: "pointer" }} />
-          <Instagram style={{ color: "purple", cursor: "pointer" }} />
-          <YouTube style={{ color: "red", cursor: "pointer" }} />
+          <a
+            href="https://facebook.com/ManufacturersNigeria"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <FacebookIcon style={{ color: "blue", cursor: "pointer" }} />
+          </a>
+          <a href="/" target={"_blank"} rel={"noreferrer"}>
+            <LinkedInIcon style={{ color: "skyblue", cursor: "pointer" }} />
+          </a>
+          <a
+            href="https://twitter.com/MAN_NGR?ref_src=twsrc%5Etfw"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <TwitterIcon style={{ color: "skyblue", cursor: "pointer" }} />
+          </a>
+          <a href="/" target={"_blank"} rel={"noreferrer"}>
+            <Instagram style={{ color: "purple", cursor: "pointer" }} />
+          </a>
+          <a href="/" target={"_blank"} rel={"noreferrer"}>
+            <YouTube style={{ color: "red", cursor: "pointer" }} />
+          </a>
         </div>
       </FooterItemsContainer>
     </FooterContainer>

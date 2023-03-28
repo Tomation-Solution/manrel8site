@@ -29,7 +29,7 @@ const PurchaseApplication = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const locationState = location.state;
-  console.log(location);
+  // console.log(location);
 
   const {
     register,
