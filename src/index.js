@@ -45,6 +45,7 @@ import ApplicationStatus from "./Component/ApplicationPortal/ApplicationStatus";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { DashBoard } from "./Component/DashBoard/DashBoard";
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 const client = new QueryClient();
@@ -80,6 +81,7 @@ root.render(
             element={<PurchaseApplication />}
           />
           <Route path="/application-status" element={<ApplicationStatus />} />
+          <Route path="/dashboard" element={<DashBoard />} />
 
           {/*
       New Join Page

@@ -268,20 +268,69 @@ function Section() {
                   textAlign: "center",
                 }}
               >
-                Whether you are planning your next business move, or managing
-                the impact of legislative or political change, knowledge is
-                power. Our market leading economic surveys, forecast and
-                analysis help you plan ahead. Reports; briefings; emails and web
-                updates; seminars, training and workshop; consultative forums
-                give you valuable intelligence on the latest policy and economic
-                developments, business trends and best practice. <br /> <br />
-                Members view are well represented in policy formulation
-                especially policies that affects manufacturers. MAN work
-                restlessly to intervening on members’ regulatory and operational
-                issues
+                MAN is driven by issues that matter to manufacturers. If
+                anything is holding you back from joining MAN, do not fret, MAN
+                is here to help. Join us and enjoy the following privileges
+              </SectionDescription>
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                Recognized as a Credible Manufacturer ….
+              </SectionDescription>
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                Be among the members whose views are sought when policy
+                decisions are about to be made ….
+              </SectionDescription>
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                With our Economic Surveys, forecasts, and Analysis you gain
+                insight into Firsthand Information to help you plan ….
+              </SectionDescription>
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                Members’ views are well represented in policy formulation
+                primarily as it affects manufacturers ….
+              </SectionDescription>
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                MAN strives to intervene in members’ regulatory and operational
+                issues ….
               </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "center" }}>
-                <Link to="/join-now-page" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/become-membership"
+                  style={{ textDecoration: "none" }}
+                >
                   <MyButton
                     sx={{
                       color: "#fff",
@@ -289,7 +338,7 @@ function Section() {
                       marginTop: "21px",
                     }}
                   >
-                    Join Now
+                    Read More
                   </MyButton>
                 </Link>
               </div>

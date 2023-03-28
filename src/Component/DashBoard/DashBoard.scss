@@ -1,2 +1,12 @@
-// .dash-nav {
-// }
+.dashboard {
+  background-color: #d3d3d3;
+  min-height: 100vh;
+
+  display: flex;
+  gap: 30px;
+
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+}
