@@ -7,6 +7,9 @@ import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+import { toast } from "react-toastify";
+import { loginUser } from "../../utils/api-calls";
 
 const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
@@ -14,8 +17,32 @@ const NewMemberRequire = () => {
 
   const { register, handleSubmit } = useForm();
 
-  const loginSubmitHandler = () => {
-    navigate("/app-portal");
+  const { mutate, isLoading } = useMutation((data) => loginUser(data), {
+    onMutate: () => {
+      toast.info("Validating Credentials", {
+        icon: false,
+      });
+    },
+    onSuccess: (data) => {
+      console.log(data);
+      if (data.has_paid) {
+        toast.success("Successfully Logged In", {
+          icon: false,
+        });
+        localStorage.setItem("userdata", JSON.stringify(data));
+        navigate("/app-portal");
+        window.location.reload(true);
+      }
+    },
+    onError: (error) => {
+      toast.error(`${error.message}`, {
+        icon: false,
+      });
+    },
+  });
+
+  const loginSubmitHandler = (data) => {
+    mutate(data);
   };
 
   const submitHandler = () => {
@@ -271,12 +298,12 @@ const NewMemberRequire = () => {
             />
             <input
               type={"text"}
-              {...register("cac_register", { required: true })}
+              {...register("password", { required: true })}
               required
               placeholder="CAC Registration Number"
             />
 
-            <button>LOGIN</button>
+            <button disabled={isLoading}>LOGIN</button>
           </form>
         </div>
         <Wall />

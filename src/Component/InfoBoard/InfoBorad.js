@@ -1,9 +1,11 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
-import itemIcon from "../../images/training.svg";
-import itemIcon2 from "../../images/discussion-group-light.svg.png";
-import itemIcon3 from "../../images/customer-support-light.svg.png";
+import itemIcon from "../../images/new-images/HomeImg/Advocacy.jpeg";
+import Interact from "../../images/new-images/HomeImg/Interact.jpeg";
+import Sector from "../../images/new-images/HomeImg/Sector.jpeg";
+import Export from "../../images/new-images/HomeImg/Export.jpeg";
+import Consult from "../../images/new-images/HomeImg/Consult.jpeg";
 import {
   InfoContainer,
   InfoHeader,
@@ -31,11 +33,11 @@ function InfoBoard() {
         <InfoItemContainer>
           <InfoItemImg src={itemIcon} />
           <InfoItemTitle>Policy Advocacy</InfoItemTitle>
-          <InfoItemDescription></InfoItemDescription>
+          <InfoItemDescription>MANLOC, MANGAS</InfoItemDescription>
         </InfoItemContainer>
 
         <InfoItemContainer>
-          <InfoItemImg src={itemIcon2} />
+          <InfoItemImg src={Interact} />
           <InfoItemTitle>Interactive & Networking Platform</InfoItemTitle>
           <InfoItemDescription>
             Get insights and share best practices with like-minded manufacturers
@@ -43,25 +45,25 @@ function InfoBoard() {
         </InfoItemContainer>
 
         <InfoItemContainer>
-          <InfoItemImg src={itemIcon2} />
+          <InfoItemImg src={Sector} />
           <InfoItemTitle>Sector-specific BMO</InfoItemTitle>
           <InfoItemDescription>Exclusively Manufacturing</InfoItemDescription>
         </InfoItemContainer>
 
         <InfoItemContainer>
-          <InfoItemImg src={itemIcon} />
-          <InfoItemTitle>Consultancy, Trainings & Events</InfoItemTitle>
+          <InfoItemImg src={Export} />
+          <InfoItemTitle>Exports</InfoItemTitle>
           <InfoItemDescription>
-            Consultancy, conferences, trainings, certifications and more for
-            manufacturers at all levels
+            Export of manufactured products
           </InfoItemDescription>
         </InfoItemContainer>
 
         <InfoItemContainer>
-          <InfoItemImg src={itemIcon3} />
-          <InfoItemTitle>Experts on Call</InfoItemTitle>
+          <InfoItemImg src={Consult} />
+          <InfoItemTitle>Consultancy, Trainings & Events</InfoItemTitle>
           <InfoItemDescription>
-            Go-to-guidance from MAN staff experts, exclusively for MANmembers.
+            Experts on call, conferences, human capital development,
+            certifications and more, for manufacturers at all levels
           </InfoItemDescription>
         </InfoItemContainer>
       </InfoContainer>

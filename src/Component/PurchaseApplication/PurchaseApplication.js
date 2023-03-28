@@ -16,12 +16,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const schema = yup
   .object({
-    cac_reg_no: yup.string().required(),
-    company_name: yup.string().required(),
+    cac_registration_number: yup.string().required(),
+    name_of_company: yup.string().required(),
     email: yup.string().email().required(),
-    office_address: yup.string().required(),
-    tele_no: yup.number().positive().integer().required(),
-    web_address: yup.string(),
+    corporate_office_addresse: yup.string().required(),
+    telephone_number: yup.string().required(),
+    website: yup.string().url(),
   })
   .required();
 
@@ -31,7 +31,6 @@ const PurchaseApplication = () => {
   const locationState = location.state;
   console.log(location);
 
-  //   const locationState = location.state;
   const {
     register,
     handleSubmit,
@@ -43,17 +42,26 @@ const PurchaseApplication = () => {
 
   useEffect(() => {
     if (locationState?.from === "/make-payment") {
-      setValue("cac_reg_no", locationState.cac_reg_no);
-      setValue("company_name", locationState.company_name);
+      setValue(
+        "cac_registration_number",
+        locationState.cac_registration_number
+      );
+      setValue("name_of_company", locationState.name_of_company);
       setValue("email", locationState.email);
-      setValue("office_address", locationState.office_address);
-      setValue("tele_no", locationState.tele_no);
-      setValue("web_address", locationState.web_address);
+      setValue(
+        "corporate_office_addresse",
+        locationState.corporate_office_addresse
+      );
+      setValue("telephone_number", locationState.telephone_number);
+      setValue("website", locationState.website);
     }
   }, [locationState, setValue]);
 
   const onSubmitHandler = (data) => {
-    return navigate("/make-payment", { state: data });
+    // console.log(data);
+    return navigate("/make-payment", {
+      state: { from: location.pathname, ...data },
+    });
   };
 
   return (
@@ -72,22 +80,22 @@ const PurchaseApplication = () => {
             <div className="half-input">
               <label>
                 Name of Company
-                {errors.company_name && (
+                {errors.name_of_company && (
                   <ErrorMessage>Invalid Input</ErrorMessage>
                 )}
                 <input
                   type={"text"}
-                  {...register("company_name", { required: true })}
+                  {...register("name_of_company", { required: true })}
                 />
               </label>
               <label>
                 CAC Registration Number
-                {errors.cac_reg_no && (
+                {errors.cac_registration_number && (
                   <ErrorMessage>Invalid Input</ErrorMessage>
                 )}
                 <input
                   type={"text"}
-                  {...register("cac_reg_no", { required: true })}
+                  {...register("cac_registration_number", { required: true })}
                 />
               </label>
             </div>
@@ -95,17 +103,19 @@ const PurchaseApplication = () => {
             <div className="half-input">
               <label>
                 Telephone Number(s) Including Mobile
-                {errors.tele_no && <ErrorMessage>Invalid Input</ErrorMessage>}
+                {errors.telephone_number && (
+                  <ErrorMessage>Invalid Input</ErrorMessage>
+                )}
                 <input
                   type={"text"}
-                  {...register("tele_no", { required: true })}
+                  {...register("telephone_number", { required: true })}
                 />
               </label>
               <label>
                 Email Address
                 {errors.email && <ErrorMessage>Invalid Input</ErrorMessage>}
                 <input
-                  type={"text"}
+                  type={"email"}
                   {...register("email", { required: true })}
                 />
               </label>
@@ -114,24 +124,22 @@ const PurchaseApplication = () => {
             <div className="half-input">
               <label>
                 Website Address
-                {errors.web_address && (
-                  <ErrorMessage>Invalid Input</ErrorMessage>
-                )}
+                {errors.website && <ErrorMessage>Invalid Input</ErrorMessage>}
                 <input
                   type={"text"}
-                  {...register("web_address", { required: true })}
+                  {...register("website", { required: true })}
                 />
               </label>
             </div>
 
             <label>
               Corporate Office Address
-              {errors.office_address && (
+              {errors.corporate_office_addresse && (
                 <ErrorMessage>Invalid Input</ErrorMessage>
               )}
               <textarea
                 type={"text"}
-                {...register("office_address", { required: true })}
+                {...register("corporate_office_addresse", { required: true })}
               />
             </label>
 

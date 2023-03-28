@@ -42,62 +42,80 @@ import PurchaseApplication from "./Component/PurchaseApplication/PurchaseApplica
 import MakePayment from "./Component/PurchaseApplication/MakePayment";
 import ApplicationPortal from "./Component/ApplicationPortal/ApplicationPortal";
 import ApplicationStatus from "./Component/ApplicationPortal/ApplicationStatus";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <ScrollToTop />
-    <Routes>
-      <Route path="/" element={<App />} />
-      {/* <Route path='About' element={<About />} /> */}
-      {/* <Route path="/exec-committee" element={<ExecutiveCommitee />} /> */}
-      <Route path="/publications" element={<Publications />} />
-      <Route
-        path="/publications-details/:id"
-        element={<PublicationDetails />}
-      />
-      <Route path="/news-details/:id" element={<NewsDetails />} />
-      <Route path="/gallery-details/:id" element={<GalleryDetails />} />
+  <>
+    <QueryClientProvider client={client}>
+      <ToastContainer />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<App />} />
+          {/* <Route path='About' element={<About />} /> */}
+          {/* <Route path="/exec-committee" element={<ExecutiveCommitee />} /> */}
+          <Route path="/publications" element={<Publications />} />
+          <Route
+            path="/publications-details/:id"
+            element={<PublicationDetails />}
+          />
+          <Route path="/news-details/:id" element={<NewsDetails />} />
+          <Route path="/gallery-details/:id" element={<GalleryDetails />} />
 
-      <Route path="/report-details/:id" element={<ReportsDetails />} />
-      <Route path="/reports" element={<Reports />} />
-      <Route path="/gallery" element={<Gallery />} />
+          <Route path="/report-details/:id" element={<ReportsDetails />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/gallery" element={<Gallery />} />
 
-      <Route path="/about" element={<NewAbout />} />
-      <Route path="/about/code-of-conduct" element={<CodeofConduct />} />
-      <Route path="/about/private-sector" element={<PrivateSector />} />
-      <Route path="/about/council-members" element={<NewCouncil />} />
-      <Route path="/purchase-application" element={<PurchaseApplication />} />
-      <Route path="/application-status" element={<ApplicationStatus />} />
+          <Route path="/about" element={<NewAbout />} />
+          <Route path="/about/code-of-conduct" element={<CodeofConduct />} />
+          <Route path="/about/private-sector" element={<PrivateSector />} />
+          <Route path="/about/council-members" element={<NewCouncil />} />
+          <Route
+            path="/purchase-application"
+            element={<PurchaseApplication />}
+          />
+          <Route path="/application-status" element={<ApplicationStatus />} />
 
-      {/*
+          {/*
       New Join Page
       */}
-      <Route path="/join-now-page" element={<JoinUsPage />} />
-      <Route path="/make-payment" element={<MakePayment />} />
-      <Route path="/app-portal" element={<ApplicationPortal />} />
+          <Route path="/join-now-page" element={<JoinUsPage />} />
+          <Route path="/make-payment" element={<MakePayment />} />
+          <Route path="/app-portal" element={<ApplicationPortal />} />
 
-      <Route path="/insight" element={<Insight />} />
-      <Route path="/event-training" element={<NewEvents />} />
-      <Route path="/training" element={<Training />} />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="/about-mrc" element={<NewMRC />} />
-      <Route path="/mrc-services" element={<MRCServices />} />
-      <Route path="/mrc-contact" element={<MRCContact />} />
+          <Route path="/insight" element={<Insight />} />
+          <Route path="/event-training" element={<NewEvents />} />
+          <Route path="/training" element={<Training />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/about-mrc" element={<NewMRC />} />
+          <Route path="/mrc-services" element={<MRCServices />} />
+          <Route path="/mrc-contact" element={<MRCContact />} />
 
-      {/* <Route path="/about" element={<History />} /> */}
-      <Route path="/services" element={<Services />} />
-      <Route path="/news" element={<News />} />
-      <Route path="/events" element={<Events />} />
-      <Route path="/become-membership" element={<Members />} />
-      <Route path="/membership-requirement" element={<NewMemberRequire />} />
-      <Route path="/existing-membership" element={<ExistingMembers />} />
-      <Route path="/our-members" element={<LatestMembers />} />
-      <Route path="/insight-more" element={<InsightMore />} />
-      <Route path="/sectoral" element={<Sectoral />} />
-      <Route path="/operate" element={<Operate />} />
-      <Route path="/mrc" element={<Mrc />} />
-      <Route path="/mpdcl" element={<Mpdcl />} />
-    </Routes>
-  </BrowserRouter>
+          {/* <Route path="/about" element={<History />} /> */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/become-membership" element={<Members />} />
+          <Route
+            path="/membership-requirement"
+            element={<NewMemberRequire />}
+          />
+          <Route path="/existing-membership" element={<ExistingMembers />} />
+          <Route path="/our-members" element={<LatestMembers />} />
+          <Route path="/insight-more" element={<InsightMore />} />
+          <Route path="/sectoral" element={<Sectoral />} />
+          <Route path="/operate" element={<Operate />} />
+          <Route path="/mrc" element={<Mrc />} />
+          <Route path="/mpdcl" element={<Mpdcl />} />
+        </Routes>
+      </BrowserRouter>
+      <ReactQueryDevtools position="bottom-right" />
+    </QueryClientProvider>
+  </>
 );
 reportWebVitals();
