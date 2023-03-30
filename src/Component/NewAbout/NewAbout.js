@@ -1,8 +1,8 @@
 import React from "react";
 import ZumaRock from "../../images/new-images/ZumaRock.jfif";
 import GuraraFalls from "../../images/new-images/GuraraFalls.jpg";
-import IjeshFalls from "../../images/new-images/IjeshFalls.jpg";
-import BullerStar from "../../images/new-images/BullerStar.png";
+import sectionpic from "../../images/new-images/VisionImg.jfif";
+import BullerStar from "../../images/Vector.png";
 
 import "./NewAbout.scss";
 import Wall from "../Wall/Wall";
@@ -176,7 +176,7 @@ const NewAbout = () => {
           <div className="missvis">
             <div className="missvis-item">
               <div className="top">
-                <img alt="" src={IjeshFalls} />
+                <img alt="" src={sectionpic} />
               </div>
               <div className="bottom">
                 <h1>Our Vision</h1>
@@ -284,7 +284,7 @@ const NewAbout = () => {
             </p>
           </div>
           <div className="how-work">
-            <h1>How we Work</h1>
+            <h1>How We Work</h1>
             <div className="how-work-con">
               <p>
                 The Manufacturers Association of Nigeria (MAN) receives its
@@ -377,27 +377,38 @@ const NewAbout = () => {
               communication, taxation, exports, consultancy, research, economic
               matters, education and training as well as consultation with
               various existing specialized bodies. The National Council
-              statutorily meets four times in a year. The secretary to the
-              National Council is the Director General.
+              statutorily meets four times a year. The secretary to the National
+              Council is the Director General.
             </p>
           </div>
           <div className="ad-hoc">
             <h1>AD-HOC COMMITTEE</h1>
             <p>
-              Ad-hoc Committees are however constituted to deal with specific
-              and usually temporary issues as circumstances demand. There are
-              also study groups that deal with subjects of special interests to
-              the Association as they arise, such as transport, energy,
-              communication, fuel, taxation, exports, consultation with various
-              existing specialized bodies.
+              Ad-hoc Committees are constituted to deal with specific and
+              usually temporary issues as circumstances may demand. For example,
+              Sustainable Use of Natural Resources and Energy Finance (SUNREF)
+              committee, African Continental Free Trade Area (AfCFTA) committee,
+              Membership Review Committee etc. There are also Study Groups that
+              deal with subjects of special interests to the Association as they
+              arise, such as transport, energy, communication, fuel, taxation,
+              exports, consultation with various existing specialized bodies.
             </p>
           </div>
           <div className="other-groups">
-            <h1>OTHER GROUPS OF MAN</h1>
+            <h1>SPECIAL PURPOSE VEHICLES OF MAN</h1>
             <p>
-              To promote the activities of specific needs of manufacturers, MAN
-              has an Export Group (MANEG), a Gas Users Group and Local Content
-              Group (MANLOC)
+              As an extension of its service arm to members, MAN delivers
+              specialized services through the Manufacturers Resource Centre
+              (MRC) and the Manufacturers Power Development Company
+              Limited (MPDCL).
+            </p>
+          </div>
+          <div className="other-groups">
+            <h1>SPECIAL PURPOSE GROUPS OF MAN</h1>
+            <p>
+              To promote the activities of specific needs of manufacturers, the
+              following groups were created: MAN Export Group (MANEG), MAN Gas
+              Users Group (MANGAS) and MAN Local Content Group (MANLOC).
             </p>
           </div>
           <div className="exec-committe">

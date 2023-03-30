@@ -15,12 +15,14 @@ const NewConExecutive = () => {
   return (
     <>
       <article>
-        <h1 className="article-header">EXECUTIVE COMMITTEE MEMBERS</h1>
         <p className="article-desc">
-          The Executive Committee is a group of experienced professionals duly
+          The National Council is a group of experienced professionals duly
           elected by MAN members and entrusted with the obligation to conduct
           the affairs of the Association according to its constitution.
         </p>
+        <h1 className="article-header" style={{ marginTop: "30px" }}>
+          Executive Committee Members
+        </h1>
 
         <ManualRenders />
       </article>

@@ -194,25 +194,25 @@ function Section() {
         <SectionItemContainer>
           <div>
             <SectionImg src={sectionpic3} />
-            <SectionTitle style={{ textAlign: "center" }}>
-              Membership
+            <SectionTitle sx={{ color: "#2B3513", textAlign: "center" }}>
+              Why Join MAN?
             </SectionTitle>
             <SectionDescription
               sx={{
-                color: "#010001",
-                fontSize: "17px",
-                fontWeight: "500",
+                color: "#2B3513",
+                fontSize: "14px",
+                fontFamily: "Poppins",
                 textAlign: "center",
               }}
             >
-              The membership requirement steps below detail the process to
-              becoming a member of MAN
+              MAN is driven by issues that matter to manufacturers. If anything
+              is holding you back from joining MAN, do not fret, MAN is here to
+              help. Join us and enjoy these privileges
             </SectionDescription>
-            {/* 
-            <SectionMember> */}
+
             <div style={{ margin: "60px 20px", textAlign: "center" }}>
               <Link
-                to="/membership-requirement"
+                to="/become-membership"
                 style={{
                   textDecoration: "none",
                   color: "#2c3513",
@@ -226,11 +226,10 @@ function Section() {
                     borderRadius: "10px",
                   }}
                 >
-                  See More {"> "}
+                  Read More
                 </span>
               </Link>
             </div>
-            {/* </SectionMember> */}
           </div>
         </SectionItemContainer>
 
@@ -258,79 +257,10 @@ function Section() {
             />
             <div style={{ padding: "30px 0", fontFamily: "Poppins" }}>
               <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
-                Why Join MAN?
+                Our Members
               </SectionTitle>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                MAN is driven by issues that matter to manufacturers. If
-                anything is holding you back from joining MAN, do not fret, MAN
-                is here to help. Join us and enjoy the following privileges
-              </SectionDescription>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                Recognized as a Credible Manufacturer ….
-              </SectionDescription>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                Be among the members whose views are sought when policy
-                decisions are about to be made ….
-              </SectionDescription>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                With our Economic Surveys, forecasts, and Analysis you gain
-                insight into Firsthand Information to help you plan ….
-              </SectionDescription>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                Members’ views are well represented in policy formulation
-                primarily as it affects manufacturers ….
-              </SectionDescription>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                MAN strives to intervene in members’ regulatory and operational
-                issues ….
-              </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "center" }}>
-                <Link
-                  to="/become-membership"
-                  style={{ textDecoration: "none" }}
-                >
+                {/* <Link to="" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       color: "#fff",
@@ -340,7 +270,7 @@ function Section() {
                   >
                     Read More
                   </MyButton>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />

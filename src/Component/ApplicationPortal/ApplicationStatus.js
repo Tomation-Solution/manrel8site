@@ -15,7 +15,7 @@ const ApplicationStatus = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const user_data = JSON.parse(localStorage.getItem("userdata"));
+  const user_data = JSON.parse(localStorage.getItem("token"));
 
   const { isLoading, isFetching, isError, data } = useQuery(
     "get-status",
@@ -28,7 +28,7 @@ const ApplicationStatus = () => {
 
   const deleteUseData = () => {
     toast.info("User logged out", { icon: false });
-    localStorage.removeItem("userdata");
+    localStorage.removeItem("token");
   };
 
   // if (data) {

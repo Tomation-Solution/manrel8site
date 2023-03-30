@@ -23,10 +23,10 @@ const ApplicationPortal = () => {
 
   const deleteUseData = () => {
     toast.info("User logged out", { icon: false });
-    localStorage.removeItem("userdata");
+    localStorage.removeItem("token");
   };
 
-  const user_data = JSON.parse(localStorage.getItem("userdata"));
+  const user_data = JSON.parse(localStorage.getItem("token"));
 
   if (!user_data || user_data.has_paid === false) {
     toast.error("Login to access this page");

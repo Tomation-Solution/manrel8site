@@ -44,12 +44,13 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>CREDIBLITY/IDENTITY</h1>
+                  <h1>RECOGNITION</h1>
                   <p>
-                    The Association provides credibility and identity to
-                    member-companies as bonafide Manufacturers that can be
-                    traced and not fake manufacturers hiding to clone or fake
-                    products.
+                    Recognition as a credible manufacturer by government
+                    agencies, other organized private sectors, financial
+                    institutions, and the business community both at home and
+                    abroad. MAN provides confirmation of membership to inquiries
+                    from local and foreign institutions.
                   </p>
                 </div>
               </div>
@@ -58,11 +59,15 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>POLICY FORMULATION</h1>
+                  <h1>INFLUENCE</h1>
                   <p>
-                    MAN provides a platform for member companies to contribute
-                    to the formulation of an emerging Government policy or
-                    amendment of an existing one.
+                    On behalf of members, MAN leverages on established
+                    relationships with the government to ensure the voice of
+                    manufacturers is heard where and when it matters. With
+                    business leaders of great minds steering our agenda, and a
+                    vibrant membership giving their views, the government
+                    actively seeks our input when legislative or policy
+                    decisions are about to be made.
                   </p>
                 </div>
               </div>
@@ -71,11 +76,15 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>SECTORAL MEETINGS</h1>
+                  <h1>INSIGHT INTO FIRST-HAND INFORMATION</h1>
                   <p>
-                    MAN provides a platform for member-companies in similar
-                    production line to interact in a very friendly and frank
-                    manner on subsector/sector specific issues and challenges.
+                    Whether you are planning your next business move, or
+                    managing the impact of legislative or political change, our
+                    market-leading economic surveys, forecasts, and analysis
+                    help you plan. Reports, briefings, consultative forums,
+                    etc., give you valuable intelligence on the latest policy
+                    and economic developments, business trends, and best
+                    practices.
                   </p>
                 </div>
               </div>
@@ -97,14 +106,11 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>CONCESSIONS</h1>
+                  <h1>OPPORTUNITY IN POLICY FORMULATION</h1>
                   <p>
-                    Member-companies enjoy concessions and considerations
-                    approved by the Federal Government Agencies and Parastatals
-                    to encourage bonafide manufacturers. Such as the Standards
-                    Organisation of Nigeria (SON), National Agency for Food and
-                    Drug Administration and Control (NAFDAC), Nigeria Customs
-                    Service (NCS) and Bank of Industry (BOI)
+                    Members’ views are well represented in policy formulation,
+                    especially policies that affect manufacturers, for favorable
+                    investment.
                   </p>
                 </div>
               </div>
@@ -117,6 +123,60 @@ function Members() {
                   <p>
                     The Association provides confirmation of membership to
                     enquiries from foreign and local Organizations.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>DIRECT INTERVENTION ON MEMBERS’ PROBLEMS</h1>
+                  <p>
+                    MAN strives to intervene in members’ regulatory and
+                    operational issues.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>PROMOTING MADE-IN-NIGERIA PRODUCTS</h1>
+                  <p>
+                    Members are further encouraged by striving to ensure that
+                    the Government Agencies and their parastatals patronize
+                    members’ locally produced goods.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>CONCESSION</h1>
+                  <p>
+                    Members-Companies enjoy concessions approved by the Federal
+                    Government Agencies and their parastatals to encourage
+                    bonafide manufacturers. Such agencies as The Standards
+                    Organisation of Nigeria (SON), the National Agency for Food
+                    and Drug Administration and Control (NAFDAC), the Nigeria
+                    Customs Service (NCS), and the Bank of Industry (BOI).
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>SECTORAL GROUPS</h1>
+                  <p>
+                    MAN provides a conducive platform for member companies in a
+                    similar production line, to interact in a friendly manner on
+                    sector/sub-sector-specific issues and challenges.
                   </p>
                 </div>
               </div>

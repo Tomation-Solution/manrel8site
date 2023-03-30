@@ -29,16 +29,7 @@ function Footer() {
       </FooterItemsContainer>
       <FooterItemsContainer style={{ textAlign: "center" }}>
         <FooterDescription>Privacy Policy</FooterDescription>
-        <FooterDescription>
-          <a
-            style={{ textDecoration: "none", color: "#000" }}
-            href="https://man.rel8membership.com/"
-            rel={"noreferrer"}
-            target="_blank"
-          >
-            Webmail Login
-          </a>
-        </FooterDescription>
+        <FooterDescription>Webmail Login</FooterDescription>
         <FooterDescription>
           <Link
             to={"/operate"}
@@ -64,7 +55,11 @@ function Footer() {
           >
             <FacebookIcon style={{ color: "blue", cursor: "pointer" }} />
           </a>
-          <a href="/" target={"_blank"} rel={"noreferrer"}>
+          <a
+            href="https://ng.linkedin.com/company/manufacturersnigeria"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             <LinkedInIcon style={{ color: "skyblue", cursor: "pointer" }} />
           </a>
           <a
@@ -74,10 +69,18 @@ function Footer() {
           >
             <TwitterIcon style={{ color: "skyblue", cursor: "pointer" }} />
           </a>
-          <a href="/" target={"_blank"} rel={"noreferrer"}>
+          <a
+            href="https://www.instagram.com/manufacturersnigeria"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             <Instagram style={{ color: "purple", cursor: "pointer" }} />
           </a>
-          <a href="/" target={"_blank"} rel={"noreferrer"}>
+          <a
+            href="https://www.youtube.com/channel/UCGNEbq1LsuB9s4F4227zuUg"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             <YouTube style={{ color: "red", cursor: "pointer" }} />
           </a>
         </div>
