@@ -20,7 +20,16 @@ import { toast } from "react-toastify";
 const MakePayment = () => {
   const location = useLocation();
   const locationState = location.state;
-  const { setValue, register, handleSubmit } = useForm();
+  const { setValue, register, handleSubmit } = useForm({
+    defaultValues: {
+      cac_registration_number: "",
+      name_of_company: "",
+      email: "",
+      corporate_office_addresse: "",
+      telephone_number: "",
+      website: "",
+    },
+  });
 
   useEffect(() => {
     if (locationState?.from === "/purchase-application") {
@@ -70,6 +79,7 @@ const MakePayment = () => {
   });
 
   const onSubmitHandler = (data) => {
+    console.log(data);
     mutate(data);
     // console.log(data);
   };
