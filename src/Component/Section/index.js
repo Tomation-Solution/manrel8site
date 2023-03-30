@@ -194,25 +194,25 @@ function Section() {
         <SectionItemContainer>
           <div>
             <SectionImg src={sectionpic3} />
-            <SectionTitle style={{ textAlign: "center" }}>
-              Membership
+            <SectionTitle sx={{ color: "#2B3513", textAlign: "center" }}>
+              Why Join MAN?
             </SectionTitle>
             <SectionDescription
               sx={{
-                color: "#010001",
-                fontSize: "17px",
-                fontWeight: "500",
+                color: "#2B3513",
+                fontSize: "14px",
+                fontFamily: "Poppins",
                 textAlign: "center",
               }}
             >
-              The membership requirement steps below detail the process to
-              becoming a member of MAN
+              MAN is driven by issues that matter to manufacturers. If anything
+              is holding you back from joining MAN, do not fret, MAN is here to
+              help. Join us and enjoy these privileges
             </SectionDescription>
-            {/* 
-            <SectionMember> */}
+
             <div style={{ margin: "60px 20px", textAlign: "center" }}>
               <Link
-                to="/membership-requirement"
+                to="/become-membership"
                 style={{
                   textDecoration: "none",
                   color: "#2c3513",
@@ -226,11 +226,10 @@ function Section() {
                     borderRadius: "10px",
                   }}
                 >
-                  See More {"> "}
+                  Read More
                 </span>
               </Link>
             </div>
-            {/* </SectionMember> */}
           </div>
         </SectionItemContainer>
 
@@ -258,30 +257,10 @@ function Section() {
             />
             <div style={{ padding: "30px 0", fontFamily: "Poppins" }}>
               <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
-                Why Join MAN?
+                Our Members
               </SectionTitle>
-              <SectionDescription
-                sx={{
-                  color: Colors.white,
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "center",
-                }}
-              >
-                Whether you are planning your next business move, or managing
-                the impact of legislative or political change, knowledge is
-                power. Our market leading economic surveys, forecast and
-                analysis help you plan ahead. Reports; briefings; emails and web
-                updates; seminars, training and workshop; consultative forums
-                give you valuable intelligence on the latest policy and economic
-                developments, business trends and best practice. <br /> <br />
-                Members view are well represented in policy formulation
-                especially policies that affects manufacturers. MAN work
-                restlessly to intervening on members’ regulatory and operational
-                issues
-              </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "center" }}>
-                <Link to="/join-now-page" style={{ textDecoration: "none" }}>
+                {/* <Link to="" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       color: "#fff",
@@ -289,9 +268,9 @@ function Section() {
                       marginTop: "21px",
                     }}
                   >
-                    Join Now
+                    Read More
                   </MyButton>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />

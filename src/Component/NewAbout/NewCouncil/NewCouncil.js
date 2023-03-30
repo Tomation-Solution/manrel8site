@@ -31,6 +31,7 @@ const NewCouncil = () => {
         <div className="members">
           <div className="options">
             <span
+              style={{ fontSize: "50px" }}
               onClick={() => setOptions("executive")}
               className={
                 options === "executive" ? "option_item_active" : "option_item"
@@ -38,31 +39,9 @@ const NewCouncil = () => {
             >
               National Council Members
             </span>
-            {/* <span
-              onClick={() => setOptions("past-presidents")}
-              className={
-                options === "past-presidents"
-                  ? "option_item_active"
-                  : "option_item"
-              }
-            >
-              Past Presidents
-            </span> */}
-            {/* <span
-              onClick={() => setOptions("branch")}
-              className={
-                options === "branch" ? "option_item_active" : "option_item"
-              }
-            >
-              Branch Secetary
-            </span> */}
           </div>
 
           {options === "executive" && <NewConExecutive />}
-
-          {/* {options === "past-presidents" && <PastPresident />} */}
-
-          {/* {options === "branch" && <Branch />} */}
         </div>
         <Wall />
         <Footer />

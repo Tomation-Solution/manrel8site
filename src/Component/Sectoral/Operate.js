@@ -55,20 +55,20 @@ function Operate() {
                 <p>
                   The Head Office of MAN, named MAN House, is strategically
                   located at No. 77, Obafemi Awolowo Way, Ikeja, Lagos State,
-                  Nigeria, the twin-block edifice is on a plot of land measuring
-                  2,860.771sq meters benevolently leased to the Association for
-                  99 years by its first president, Chief T. Adeola Odutola, the
-                  Ogbeni-Oja of Ijebu-Ode.
+                  Nigeria, the edifice is on a plot of land measuring
+                  2,860.771sq meters benevolently donated to the Association for
+                  years by its first president, Chief Timothy. Adeola Odutola,
+                  the Ogbeni-Oja of Ijebu-Ode, Ogun State, Nigeria.
                 </p>
               </div>
               <div className="house">
                 <div className="card">
                   <h1>MAN House</h1>
                   <p>
-                    77, Obafemi Awolowo Way Ikeja, Lagos State, Nigeria
+                    77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria
                     <br />
                     Tel: 01-4542700, 01-4542701 <br />
-                    Email: man@manufacturersnigeria.org <br /> Website:
+                    Email: info@manufacturersnigeria.org <br /> Website:
                     www.manufacturersnigeria.org
                   </p>
                 </div>

@@ -17,13 +17,37 @@ const PrivateSector = () => {
 
         <div className="private-sector-content">
           <div className="overlapModal">
-            <h1>Organized Private Sector (OPS) of Nigeria</h1>
+            <h1>ORGANIZED PRIVATE SECTOR (OPS) BODIES</h1>
             <p>
-              The Organized Private Sector (OPS) of Nigeria is an umbrella
-              organization of Business Membership Organizations representing the
-              interest of the private sector in Nigeria. OPS member
-              organizations are the
+              The Organized Private Sector (OPS) is an umbrella organization of
+              Business Membership Organizations representing the interest of the
+              private sector in Nigeria. OPS member organizations are the
             </p>
+            <ul
+              style={{
+                margin: "20px 0px",
+                // display: "flex",
+                // flexDirection: "column",
+                // alignItems: "flex-start",
+              }}
+            >
+              <li style={{ listStyle: "inside" }}>
+                Manufacturers Association of Nigeria (MAN)
+              </li>
+              <li style={{ listStyle: "inside" }}>
+                Nigerian Association of Chambers of Commerce, Industry, Mines
+                and Agriculture (NACCIMA)
+              </li>
+              <li style={{ listStyle: "inside" }}>
+                Nigerian Association of Small-Scale Industries (NASSI)
+              </li>
+              <li style={{ listStyle: "inside" }}>
+                Nigerian Association of Small and Medium Enterprises (NASME)
+              </li>
+              <li style={{ listStyle: "inside" }}>
+                Nigeria Employers Consultative Association (NECA)
+              </li>
+            </ul>
           </div>
 
           <div className="core-values">
@@ -87,7 +111,7 @@ const PrivateSector = () => {
         </div>
 
         <div className="achievements">
-          <h1>Continental / International Partners</h1>
+          <h1>Continental & International Partners</h1>
           <p>
             MAN has successfully cultivated and continues to nurture
             relationships with the following:
@@ -101,19 +125,9 @@ const PrivateSector = () => {
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>Multilateral Investment Guarantee Agency (MIGA)</h5>
-            </div>
-
-            <div className="achievements-item">
-              <img alt="" src={AchieveBullet} />
               <h5>
                 United Nations Industrial Development Organization (UNIDO)
               </h5>
-            </div>
-
-            <div className="achievements-item">
-              <img alt="" src={AchieveBullet} />
-              <h5>Japanese External Trade Organization (JETRO)</h5>
             </div>
 
             <div className="achievements-item">
@@ -123,22 +137,89 @@ const PrivateSector = () => {
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>Fredrick Neumann Foundation</h5>
-            </div>
-
-            <div className="achievements-item">
-              <img alt="" src={AchieveBullet} />
               <h5>International Finance Corporation (IFC)</h5>
             </div>
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>European Union Commission Pro-Invest</h5>
+              <h5>African Project Development Facility (APDF)</h5>
             </div>
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>African Project Development Facility (APDF)</h5>
+              <h5>African Development Bank (AfDB)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>African Export-Import Bank (Afreximbank)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>African Union (AU)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Center for International Private Enterprise (CIPE)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>The Coalition for Dialogue on Africa (CoDA)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Economic Commission for Africa (ECA)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>
+                Federation of West African Manufacturers Associations (FEWAMA)
+              </h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Pan-African Manufacturers Association (PAMA)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>African Business Council</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>ECOWAS Business Council</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Japan International Cooperation Agency (JICA)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Multilateral Investment Guarantee Agency (MIGA)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Japanese External Trade Organization (JETRO)</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>Fredrick Neumann Foundation</h5>
+            </div>
+
+            <div className="achievements-item">
+              <img alt="" src={AchieveBullet} />
+              <h5>European Union Commission Pro-Invest</h5>
             </div>
 
             <div className="achievements-item">
@@ -185,22 +266,28 @@ const PrivateSector = () => {
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>SS-Gate, China</h5>
+              <h5>
+                The South-South Global Assets and Technology Exchange System
+                (SS-GATES,China)
+              </h5>
             </div>
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>GIZ</h5>
+              <h5>The German Agency for International Cooperation (GIZ)</h5>
             </div>
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>Enable 2</h5>
+              <h5>
+                Enhancing Nigerian Advocacy for a Better Business Environment II
+                (ENABLE2)
+              </h5>
             </div>
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>Agence Francaise De Development (AFD)</h5>
+              <h5>Agence Francaise De Development (AFD)</h5>
             </div>
           </div>
         </div>

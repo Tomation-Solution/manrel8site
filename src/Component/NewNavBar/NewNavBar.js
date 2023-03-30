@@ -123,7 +123,7 @@ const NewNavBar = () => {
             </a>
           </div>
           <div className="translate-icon">
-            <Translate style={{ color: "#fff" }} />
+            <Translate />
           </div>
 
           <div className="join-now">

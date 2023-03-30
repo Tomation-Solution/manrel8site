@@ -29,7 +29,7 @@ const JoinUsPage = () => {
         toast.success("Successfully Logged In", {
           icon: false,
         });
-        localStorage.setItem("userdata", JSON.stringify(data));
+        localStorage.setItem("token", JSON.stringify(data.token));
         navigate("/app-portal");
         window.location.reload(true);
       }

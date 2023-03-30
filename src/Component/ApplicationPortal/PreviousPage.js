@@ -52,7 +52,6 @@ const PreviousPage = ({ nextfn }) => {
     register,
     handleSubmit,
     control,
-    setValue,
     reset,
     formState: { errors },
   } = useForm({
@@ -179,14 +178,12 @@ const PreviousPage = ({ nextfn }) => {
         designation: formOneData?.designation,
         name_of_md_or_ceo_of_company: formOneData?.name_of_md_or_ceo_of_company,
         selectdate_of_registration: formOneData?.selectdate_of_registration,
-        // all_roduct_manufactured: JSON.parse(formOneData?.all_roduct_manufactured),
+        all_roduct_manufactured: formOneData?.all_roduct_manufactured,
+        all_raw_materials_used: formOneData?.all_raw_materials_used,
       };
-      // const datax = formOneData?.all_roduct_manufactured;
-      // console.log(JSON.parse(datax));
-      // setValue("all_roduct_manufactured", formOneData?.all_roduct_manufactured);
       reset(defualts);
     }
-  }, [reset, formOneData, setValue]);
+  }, [reset, formOneData]);
 
   const { mutate, isLoading } = useMutation((data) => submitFormOne(data), {
     onMutate: () => {
@@ -218,6 +215,14 @@ const PreviousPage = ({ nextfn }) => {
     const formData = new FormData();
     Object.keys(payload)?.forEach((key) => formData.append(key, payload[key]));
     formData.append("upload_signature", upload_signature);
+    formData.append(
+      "all_roduct_manufactured",
+      JSON.stringify(all_roduct_manufactured)
+    );
+    formData.append(
+      "all_raw_materials_used",
+      JSON.stringify(all_raw_materials_used)
+    );
 
     mutate(formData);
   };
