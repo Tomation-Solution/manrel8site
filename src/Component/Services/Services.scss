@@ -1,6 +1,6 @@
 @import "../../Styles/resources";
-.services {
-  .btn-center {
+.services-services {
+  .services-btn-center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,12 +16,11 @@
       cursor: pointer;
     }
   }
-  font-family: "Roboto";
-  .hero_image {
+  font-family: "Poppins";
+  .services-hero_image {
     height: 50vh;
     max-height: 424px;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url("../../images/new-images/Handshake.jpg");
+    background: url("../../images/new-images/MANHOUSE (2).png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -30,7 +29,7 @@
     @include mobile-3 {
       padding: 50px 20px;
     }
-    .cover {
+    .services-cover {
       h2 {
         color: #2b3513;
         font-weight: 500;
@@ -61,7 +60,7 @@
       }
     }
   }
-  .new_member {
+  .services-new_member {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -69,12 +68,12 @@
     @include mobile-3 {
       padding: 50px 0;
     }
-    .left {
+    .services-left {
       width: 50%;
       @include mobile-1 {
         width: 100%;
       }
-      .card {
+      .services-card {
         width: 100%;
         margin-bottom: 30px;
         background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -97,7 +96,7 @@
             url("../../images/div5.png");
           background-size: cover;
         }
-        .overlay {
+        .services-overlay {
           width: 80%;
           background: rgba(113, 120, 97, 0.7);
           margin-bottom: 150px;
@@ -120,7 +119,7 @@
         }
       }
     }
-    .right {
+    .services-right {
       width: 70%;
       border-top: 5px solid #2b3513;
       padding: 30px;
@@ -128,7 +127,7 @@
         width: 100%;
         padding: 30px 10px;
       }
-      .top {
+      .services-top {
         padding-bottom: 30px;
         h2 {
           color: #505050;
@@ -144,7 +143,7 @@
         }
       }
       form {
-        .card {
+        .services-card {
           width: 100%;
           margin-bottom: 24px;
           h4 {
@@ -194,7 +193,7 @@
           }
         }
       }
-      .bottom {
+      .services-bottom {
         p {
           padding-top: 10px;
           color: #717861;
@@ -203,9 +202,9 @@
       }
     }
   }
-  .newservices {
+  .services-newservices {
     padding: 50px 50px;
-    .head {
+    .services-head {
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -224,7 +223,7 @@
         font-size: 20px;
       }
     }
-    .wrap {
+    .services-wrap {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -236,7 +235,7 @@
         width: 100%;
       }
 
-      .card {
+      .services-card {
         width: 32%;
         @include mobile-6 {
           width: 100%;
@@ -263,7 +262,7 @@
             url("../../images/div5.png");
           background-size: cover;
         }
-        .overlay {
+        .services-overlay {
           width: 80%;
           background: rgba(113, 120, 97, 0.7);
           margin-bottom: 30px;
@@ -284,7 +283,7 @@
           }
         }
       }
-      .button {
+      .services-button {
         width: 100%;
         text-align: center;
         button {
@@ -299,7 +298,7 @@
         }
       }
       &.diff {
-        .card {
+        .services-card {
           width: 24%;
           @include mobile-6 {
             width: 100%;
@@ -385,7 +384,7 @@
             background-size: cover;
           }
           background-position: center;
-          .overlay {
+          .services-overlay {
             height: fit-content;
             h1 {
               font-size: 14px;
@@ -395,7 +394,7 @@
         }
       }
       &.dit {
-        .card {
+        .services-card {
           &:nth-child(1) {
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
               url("../../images/div5.png");

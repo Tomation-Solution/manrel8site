@@ -57,7 +57,7 @@ const ReportsDetails = () => {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      Read More or Download
+                      To download click here
                     </a>
 
                     <div className="botom">
@@ -74,7 +74,13 @@ const ReportsDetails = () => {
                   <div className="wrap">
                     {otherPub.map((item) => (
                       <div className="card" key={item.id}>
-                        <button>Report</button>
+                        <Link to={"/reports"}>
+                          <button
+                            style={{ color: "#2b3513", cursor: "pointer" }}
+                          >
+                            <b>Report</b>
+                          </button>
+                        </Link>
                         <div className="flex">
                           <h3>{item.name}</h3>
                           <Link to={`/report-details/${item.id}`}>

@@ -1,5 +1,3 @@
-import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./DropDowns.scss";
 
@@ -13,12 +11,17 @@ export const AboutDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to={"/about/code-of-conduct"}>Code of Conduct</Link>
+          <Link to={"/about/advocacy-achievements"}>Advocacy Achievements</Link>
         </span>
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to={"/about/private-sector"}>Our Affiliations</Link>
+          <Link to={"/about/private-sector"}>Our Affiliates</Link>
+        </span>
+      </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/about/how-we-work"}>How we Work</Link>
         </span>
       </div>
       <div className="dropdown-item">
@@ -31,13 +34,18 @@ export const AboutDropdown = () => {
           <Link to={"/operate"}>Where we Operate</Link>
         </span>
       </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/mrc-contact"}>Contact Us</Link>
+        </span>
+      </div>
     </div>
   );
 };
 
 export const ServicesDropdown = () => {
-  const [serviceShow, setShowService] = useState(false);
-  const [specialised, setSpecialised] = useState(false);
+  // const [serviceShow, setShowService] = useState(false);
+  // const [specialised, setSpecialised] = useState(false);
   return (
     <div className="service-dropdown">
       <div className="dropdown-item">
@@ -45,7 +53,7 @@ export const ServicesDropdown = () => {
           <Link to={"/services"}>Core Services</Link>
         </span>
       </div>
-      <div
+      {/* <div
         className="dropdown-item"
         onClick={() => setSpecialised(!specialised)}
       >
@@ -68,16 +76,6 @@ export const ServicesDropdown = () => {
                   <Link to={"/about-mrc"}>About MRC</Link>
                 </span>
               </div>
-              <div className="dropdown-item">
-                <span>
-                  <Link to={"/mrc-services"}>MRC SERVICES</Link>
-                </span>
-              </div>
-              <div className="dropdown-item">
-                <span>
-                  <Link to={"/mrc-contact"}>Contact Us</Link>
-                </span>
-              </div>
             </div>
           )}
           <div className="dropdown-item">
@@ -86,7 +84,7 @@ export const ServicesDropdown = () => {
             </span>
           </div>
         </>
-      )}
+      )} */}
     </div>
   );
 };
@@ -156,7 +154,7 @@ export const MembershipDropdown = () => {
 };
 
 export const StructureDropdown = () => {
-  const [serviceShow, setShowService] = useState(false);
+  // const [serviceShow, setShowService] = useState(false);
   return (
     <div className="structure-dropdown">
       <div className="dropdown-item">
@@ -164,8 +162,7 @@ export const StructureDropdown = () => {
           <Link to={"/sectoral"}>Sectoral Group</Link>
         </span>
       </div>
-      <div className="dropdown-item"></div>
-      <div
+      {/* <div
         className="dropdown-item"
         onClick={() => setShowService(!serviceShow)}
       >
@@ -196,7 +193,7 @@ export const StructureDropdown = () => {
         <span>
           <Link to={"/mpdcl"}>MPDCL</Link>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

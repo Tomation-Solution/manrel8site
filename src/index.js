@@ -26,7 +26,7 @@ import NewsDetails from "./Component/News/NewsDetails";
 import GalleryDetails from "./Component/Gallery/GalleryDetails/GalleryDetails";
 import ReportsDetails from "./Component/Reports/ReportsDetails";
 import NewAbout from "./Component/NewAbout/NewAbout";
-import CodeofConduct from "./Component/NewAbout/CodeofConduct";
+import AdvocacyAchievements from "./Component/NewAbout/AdvocacyAchievements";
 import PrivateSector from "./Component/NewAbout/PrivateSector";
 import NewCouncil from "./Component/NewAbout/NewCouncil/NewCouncil";
 import Insight from "./Component/Insights/Insight";
@@ -46,6 +46,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { DashBoard } from "./Component/DashBoard/DashBoard";
+import HowWeWork from "./Component/NewAbout/HowWeWork";
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 const client = new QueryClient();
@@ -73,9 +74,13 @@ root.render(
           <Route path="/gallery" element={<Gallery />} />
 
           <Route path="/about" element={<NewAbout />} />
-          <Route path="/about/code-of-conduct" element={<CodeofConduct />} />
+          <Route
+            path="/about/advocacy-achievements"
+            element={<AdvocacyAchievements />}
+          />
           <Route path="/about/private-sector" element={<PrivateSector />} />
           <Route path="/about/council-members" element={<NewCouncil />} />
+          <Route path="/about/how-we-work" element={<HowWeWork />} />
           <Route
             path="/purchase-application"
             element={<PurchaseApplication />}

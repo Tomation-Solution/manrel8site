@@ -22,6 +22,7 @@ import Sect10 from "../../../../images/new-images/executivesImg/Sect10.png";
 import Sect11 from "../../../../images/new-images/executivesImg/Sect11.png";
 import Sect12 from "../../../../images/new-images/executivesImg/Sect12.png";
 import Sect13 from "../../../../images/new-images/executivesImg/Sect13.png";
+import LanrePop from "../../../../images/new-images/executivesImg/LanrePop.jpg";
 
 import Exec11 from "../../../../images/new-images/executivesImg/Exec11.png";
 
@@ -116,10 +117,10 @@ export const renderData = [
   },
 
   {
-    image: "",
+    image: LanrePop,
     name: "Mr. Lanre Popoola ",
     title2: "Chairman",
-    name2: "Oyo/Osun/Ekiti/OndoStates Branch",
+    name2: "Oyo/Osun/Ekiti/Ondo States Branch",
     title: "General Manager",
     address:
       "Extreme Manufacturing Nig. Ltd. Essuso Village, Ibadan-Ijebu Ode Road,Oluyola LGA, Ibadan, Oyo State.",
@@ -205,7 +206,7 @@ export const renderData = [
 export const SectoralData = [
   {
     image: Sect1,
-    name: "Mr. Patrick Anegbe  ",
+    name: "Engr. Patrick Anegbe  ",
     title2: "Chairman",
     name2: "Food, Beverages & Tobacco Sectoral Group",
     title: "MD/CEO",
@@ -218,7 +219,7 @@ export const SectoralData = [
     image: Sect2,
     name: "Mr. Rotimi Aluko ",
     title2: "Chairman",
-    name2: "Chemical &Pharmaceuticals Sectoral Group",
+    name2: "Chemical & Pharmaceuticals Sectoral Products Group",
     title: "MD/CEO",
     address:
       "Voda Paints Limited Km 33, Lagos-Ibadan Exp. Way, Magboro Ind. Area. Magboro, Ogun State",
@@ -231,7 +232,8 @@ export const SectoralData = [
     name: "Chief Evarist Uba ",
     title2: "Chairman",
     title: "Managing Director",
-    name2: "Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
+    name2:
+      "Domestic & Industrial Plastics, Foam & Rubber Sectoral Products Group",
     address:
       "Group Enterprises Nigeria Limited (Polly Foam) 2C Uba Close, Niger Bridge Head Ind. Layout, Near Ogboefere Market Onitsha, Anambra State",
     email: "Email: polyfoam@yahoo.com, evarist.uba@pollyfoam.com",
@@ -241,7 +243,8 @@ export const SectoralData = [
     image: Sect4,
     name: "Alhaji (Dr.) Kamorudeen Yusuf ",
     title2: "Chairman",
-    name2: "Basic Metal, Iron & Steel& Fabricated Metal Product Sectoral Group",
+    name2:
+      "Basic Metal, Iron & Steel& Fabricated Metal Products Sectoral Group",
     title: "GMD/CEO",
     address: "Kam Industries Nigeria Limited Asa Dam Road, Ilorin, Kwara State",
     email: "Email: yusuf@kamholding.net, kamwire@yahoo.com",
@@ -265,7 +268,8 @@ export const SectoralData = [
     image: Sect6,
     name: "Mr. Nath Kedarnath",
     title2: "Chairman",
-    name2: "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
+    name2:
+      "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Products Group",
     title: "Managing Director/CEO",
     address:
       "Veevee Paper Products Ltd Km 2, Ijoko Road, Sango Otta, Ogun State",
@@ -276,7 +280,7 @@ export const SectoralData = [
     image: Sect7,
     name: "Mrs. Ijeoma Oduonye ",
     title2: "Chairman",
-    name2: " Electrical/ Electronic Sectoral Group",
+    name2: " Electrical/ Electronic Products Sectoral Group",
     title: "MD/CEO",
     address: "Cutix Plc No, 17 Osita Onyejianya Street, Umuanuka Otolo Nnewi",
     email: "Email: ijeoma.oduonye@cutixplc.com.ng",
@@ -287,7 +291,7 @@ export const SectoralData = [
     image: Sect8,
     name: "Mrs. Ngozi Oyewole ",
     title2: "Chairman",
-    name2: "Wood, Wood Products &Furniture Sectoral Group",
+    name2: "Wood, Wood Products & Furniture Products Sectoral Group",
     title: "MD/CEO",
     address: "Noxie Limited",
     email: "Email: ngozi.oyewole@noxielimited.com",
@@ -298,7 +302,7 @@ export const SectoralData = [
     image: Sect9,
     name: "Mr. Mallinson Afam Ukatu ",
     title2: "Chairman",
-    name2: "Non-Metallic Minerals Sectoral Group",
+    name2: "Non-Metallic Minerals Products Sectoral Group",
     title: "MD/CEO",
     address:
       "NISPO Porcelain Company Limited 3B, Ashimowu Jibowu Street, Off Johnson Street, Off Coker Road, Ilupeju, Lagos",
@@ -310,7 +314,7 @@ export const SectoralData = [
     image: Sect10,
     name: "Elder. Robert Ugbaja ",
     title2: "Chairman",
-    name2: "NMotor Vehicle & Miscellaneous Assembly Sectoral Group",
+    name2: "Motor Vehicle & Miscellaneous Assembly Products Sectoral Group",
     title: "",
     address: "Boulos Enterprises Ltd. Plot 10, Acme Road, Ogba, Ikeja",
     email: "Email: r.ugbaja@bel.groupboulos.com, ugbajarobert@hotmail.com",

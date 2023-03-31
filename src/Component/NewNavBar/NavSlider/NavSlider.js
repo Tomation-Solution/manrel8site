@@ -17,7 +17,12 @@ const NavSlider = ({ clickfn }) => {
               <Link to={"/about"}>Our History</Link>
             </span>
             <span className="items-span">
-              <Link to={"/about/code-of-conduct"}>Code of Conduct</Link>
+              <Link to={"/about/advocacy-achievements"}>
+                Advocacy Achievements
+              </Link>
+            </span>
+            <span className="items-span">
+              <Link to={"/about/how-we-work"}>How we Work</Link>
             </span>
             <span className="items-span">
               <Link to={"/about/private-sector"}>Organized Private Sector</Link>
@@ -27,6 +32,9 @@ const NavSlider = ({ clickfn }) => {
             </span>
             <span className="items-span">
               <Link to={"/operate"}>Where we Operate</Link>
+            </span>
+            <span className="items-span">
+              <Link to={"/mrc-contact"}>Contact Us</Link>
             </span>
           </div>
         </div>
@@ -40,7 +48,7 @@ const NavSlider = ({ clickfn }) => {
               Core Services
             </Link>
           </span>
-          <div className="items">
+          {/* <div className="items">
             <span>MRC</span>
             <span className="items-span">
               <Link to={"/about-mrc"}>About MRC</Link>
@@ -48,13 +56,11 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/mrc-services"}>MRC SERVICES</Link>
             </span>
-            <span className="items-span">
-              <Link to={"/mrc-contact"}>Contact Us</Link>
-            </span>
+
             <span className="items-span">
               <Link to={"/mpdcl"}>MPDCL</Link>
             </span>
-          </div>
+          </div> */}
         </div>
         <div className="nav-slider-item">
           <span>
@@ -106,7 +112,7 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/sectoral"}>Sectoral Group</Link>
             </span>
-            <span>MRC</span>
+            {/* <span>MRC</span>
             <span className="items-span">
               <Link to={"/about-mrc"}>About MRC</Link>
             </span>
@@ -119,7 +125,7 @@ const NavSlider = ({ clickfn }) => {
 
             <span className="items-span">
               <Link to={"/mpdcl"}>MPDCL</Link>
-            </span>
+            </span> */}
           </div>
         </div>
         <div className="nav-slider-translate">

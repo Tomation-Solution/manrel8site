@@ -15,7 +15,7 @@ import Exec12 from "../../../../images/new-images/executivesImg/Exec12.png";
 import Exec13 from "../../../../images/new-images/executivesImg/Exec13.png";
 import Exec14 from "../../../../images/new-images/executivesImg/Exec14.png";
 import Exec15 from "../../../../images/new-images/executivesImg/Exec15.png";
-import Exec16 from "../../../../images/new-images/executivesImg/NewDGImg.jpeg";
+import Exec16 from "../../../../images/new-images/executivesImg/NewDg.jpg";
 
 import NoPicture from "../../../../images/new-images/executivesImg/NoPicture.png";
 import Branch9 from "../../../../images/new-images/executivesImg/NewLadyAdaImg.jpeg";
@@ -38,7 +38,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec2} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Lagos Zone), </p>
+          <p className="header">Vice President</p>
+          <p className="header">Lagos Zone</p>
           <p className="header">Prince Oba Okojie </p>
         </div>
       </div>
@@ -48,7 +49,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec3} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Kaduna North West Zone), </p>
+          <p className="header">Vice President</p>
+          <p className="header">Kaduna North West Zone</p>
           <p className="header">Engr Ilyasu Saleh</p>
         </div>
       </div>
@@ -58,8 +60,9 @@ const ManualRenders = () => {
           <img alt="" src={Exec4} />
         </div>
         <div className="right">
-          <p className="header">Vice President, Eastern Zone</p>
-          <p className="header">Engr Giandomenico Massari, FNSE </p>
+          <p className="header">Vice President</p>
+          <p className="header">Eastern Zone</p>
+          <p className="header">Engr. Giandomenico Massari, FNSE </p>
         </div>
       </div>
 
@@ -68,7 +71,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec5} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Western Zone)</p>
+          <p className="header">Vice President</p>
+          <p className="header">Western Zone</p>
           <p className="header">Alhaji Kamorudeen Yusuf</p>
         </div>
       </div>
@@ -78,7 +82,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec6} />
         </div>
         <div className="right">
-          <p className="header">Vice President (North East Zone)</p>
+          <p className="header">Vice President</p>
+          <p className="header">North East Zone</p>
           <p className="header">Dr Mhir Iyenge</p>
         </div>
       </div>
@@ -88,7 +93,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec7} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Multinational)</p>
+          <p className="header">Vice President</p>
+          <p className="header">Multinational</p>
           <p className="header">Mr. Pannagiotis Katsis</p>
         </div>
       </div>
@@ -98,7 +104,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec8} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Multinational)</p>
+          <p className="header">Vice President</p>
+          <p className="header">Multinational</p>
           <p className="header">Mr. Carl Cruz</p>
         </div>
       </div>
@@ -108,7 +115,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec9} />
         </div>
         <div className="right">
-          <p className="header">Vice President (Small and Medium Industries)</p>
+          <p className="header">Vice President</p>
+          <p className="header">Small and Medium Industries</p>
           <p className="header">Mr. Samuel Kolawole</p>
         </div>
       </div>
@@ -118,7 +126,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec10} />
         </div>
         <div className="right">
-          <p className="header">Vice President (MAN Large Corporation Group)</p>
+          <p className="header">Vice President</p>
+          <p className="header">MAN Large Corporation Group</p>
           <p className="header">Alhaji Aliko Dangote, GCON</p>
         </div>
       </div>
@@ -138,7 +147,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec12} />
         </div>
         <div className="right">
-          <p className="header">Chairman, Economic Policy Committee</p>
+          <p className="header">Chairman</p>
+          <p className="header">Economic Policy Committee</p>
           <p className="header">Mr Boye Olusanya</p>
         </div>
       </div>
@@ -148,9 +158,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec13} />
         </div>
         <div className="right">
-          <p className="header">
-            Chairman, Corporate Affairs Planning Committee
-          </p>
+          <p className="header">Chairman</p>
+          <p className="header">Corporate Affairs Planning Committee</p>
           <p className="header">Mrs. Kofo Akinkugbe</p>
         </div>
       </div>
@@ -160,7 +169,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec14} />
         </div>
         <div className="right">
-          <p className="header">Chairman, Infrastructure Committee</p>
+          <p className="header">Chairman</p>
+          <p className="header">Infrastructure Committee</p>
           <p className="header">Engr Chukwuemeka Nzewi</p>
         </div>
       </div>
@@ -170,7 +180,8 @@ const ManualRenders = () => {
           <img alt="" src={Exec15} />
         </div>
         <div className="right">
-          <p className="header">Chairman, Finance & Establishment Committee</p>
+          <p className="header">Chairman</p>
+          <p className="header">Finance & Establishment Committee</p>
           <p className="header">Alhaji Ali Madugu, mni</p>
         </div>
       </div>

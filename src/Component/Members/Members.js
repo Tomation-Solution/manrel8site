@@ -29,7 +29,6 @@ function Members() {
             <div className="cover">
               <div className="tag"></div>
               <h1>Membership</h1>
-              <p>See our esteemed members across the country</p>
             </div>
           </div>
 

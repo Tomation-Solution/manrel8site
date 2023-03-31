@@ -17,7 +17,10 @@ function Wall() {
           Get the latest Manufacturers news and information delivered to your
           inbox.
         </WallDescription>
-        <MyButton onClick={() => setSubscribe(true)}>
+        <MyButton
+          onClick={() => setSubscribe(true)}
+          style={{ marginTop: "30px" }}
+        >
           SUBSCRIBE TO UPDATES
         </MyButton>
       </WallItemContainer>

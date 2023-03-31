@@ -71,16 +71,16 @@ export const InsightQuickNavigation = () => {
           <div className="card" key={item.title}>
             <img src={item.image} alt="" />
             <div className="text">
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
+              <h2 style={{ color: "#2b3513" }}>{item.title}</h2>
+              <p style={{ color: "#2b3513" }}>{item.description}</p>
               {Object.keys(item).includes("location") ? (
-                <Link to={`/${item.location}`}>
-                  <h3 style={{ fontWeight: 400 }}>
+                <Link to={`/${item.location}`} style={{ color: "#63c1cf" }}>
+                  <h3 style={{ fontWeight: 400, color: "#63c1cf" }}>
                     {item.linkHead} {">"}
                   </h3>
                 </Link>
               ) : (
-                <h3 style={{ fontWeight: 400 }}>
+                <h3 style={{ fontWeight: 400, color: "#63c1cf" }}>
                   {item.linkHead} {">"}
                 </h3>
               )}
@@ -114,7 +114,11 @@ function App() {
                 <div className="wrap">
                   {gallerydata.map((item) => (
                     <div className="card" key={item.id}>
-                      <button>Gallery</button>
+                      <Link to={"/gallery"}>
+                        <button style={{ color: "#2b3513", cursor: "pointer" }}>
+                          <b>Gallery</b>
+                        </button>
+                      </Link>
                       <div className="flex">
                         <h3>{item.name}</h3>
                         <Link to={`/gallery-details/${item.id}`}>

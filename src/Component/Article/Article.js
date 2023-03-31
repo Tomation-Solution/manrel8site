@@ -2,8 +2,6 @@ import React, { useState, useEffect, useMemo } from "react";
 import "./Article.scss";
 
 import Manufacturing from "../../images/new-images/NewHomeAllimg.png";
-// import ArtNature1 from "../../images/new-images/NewHomeAllimg.png";
-// import ArtNature2 from "../../images/new-images/NewHomeAllimg.png";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "react-router-dom";
@@ -38,10 +36,15 @@ function Article() {
             <img src={images[imageIndex]} alt="" />
           </div>
           <div className="right">
+            <h1 style={{ color: "#2b3513", marginBottom: "20px" }}>
+              Latest Updates
+            </h1>
             <div className="wrap">
               {gallerydata[0] && (
                 <div className="card">
-                  <button>Gallery</button>
+                  <Link to={"/gallery"}>
+                    <button>Gallery</button>
+                  </Link>
                   <div className="flex">
                     <h3>{gallerydata[0].name}</h3>
                     <Link to={`/gallery-details/${gallerydata[0].id}`}>
@@ -53,7 +56,9 @@ function Article() {
 
               {newPubData[0] && (
                 <div className="card">
-                  <button>Publications</button>
+                  <Link to={"/publications"}>
+                    <button>Publications</button>
+                  </Link>
                   <div className="flex">
                     <h3>{newPubData[0].name}</h3>
                     <Link to={`/publications-details/${newPubData[0].id}`}>
@@ -65,7 +70,9 @@ function Article() {
 
               {newReportData[0] && (
                 <div className="card">
-                  <button>Report</button>
+                  <Link to={"/reports"}>
+                    <button>Report</button>
+                  </Link>
                   <div className="flex">
                     <h3>{newReportData[0].name}</h3>
                     <Link to={`/report-details/${newReportData[0].id}`}>
@@ -77,7 +84,9 @@ function Article() {
 
               {newsdata[0] && (
                 <div className="card">
-                  <button>News</button>
+                  <Link to={"/news"}>
+                    <button>News</button>
+                  </Link>
                   <div className="flex">
                     <h3>{newsdata[0].name}</h3>
                     <Link to={`/news-details/${newsdata[0].id}`}>

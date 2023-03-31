@@ -39,7 +39,11 @@ function App() {
                 <div className="wrap">
                   {newReportData.map((item) => (
                     <div className="card" key={item}>
-                      <button>Report</button>
+                      <Link to={"/reports"}>
+                        <button style={{ color: "#2b3513", cursor: "pointer" }}>
+                          <b>Reports</b>
+                        </button>
+                      </Link>
                       <div className="flex">
                         <h3>{item.name}</h3>
                         <Link to={`/report-details/${item.id}`}>

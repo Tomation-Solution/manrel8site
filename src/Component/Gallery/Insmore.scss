@@ -2,11 +2,11 @@
 .insight-more {
   .insight-below {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     padding: 30px;
     gap: 30px;
     @include mobile-1300 {
-      grid-template-columns: auto auto;
+      grid-template-columns: auto auto auto;
     }
     @include mobile-6 {
       grid-template-columns: auto;
@@ -24,13 +24,20 @@
       padding: 20px;
 
       h2 {
-        color: #63c1cf;
+        color: #2b3513;
+        font-weight: 400;
         margin: 20px 0px;
+      }
+
+      h3 {
+        color: #63c1cf;
+        font-size: 14px;
+        font-weight: 400;
       }
 
       p {
         font-size: 16px;
-        color: #505050;
+        color: #2b3513;
         margin: 20px 0px 50px 0px;
       }
 

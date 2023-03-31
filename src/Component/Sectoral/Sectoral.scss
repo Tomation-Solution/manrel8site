@@ -105,6 +105,10 @@
           grid-template-columns: auto auto;
           gap: 40px;
 
+          &.centered {
+            grid-template-columns: auto;
+          }
+
           .flex {
             display: flex;
             align-items: center;
