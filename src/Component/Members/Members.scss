@@ -1,6 +1,17 @@
 @import "../../Styles//resources";
 .members {
   font-family: "Roboto";
+  .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+
+    input {
+      padding: 10px 20px;
+      width: 300px;
+    }
+  }
   .hero_image {
     height: 50vh;
     max-height: 424px;

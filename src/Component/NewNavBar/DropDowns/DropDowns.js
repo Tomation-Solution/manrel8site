@@ -114,7 +114,7 @@ export const InsightDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to="/event-training">Consultancy,Events & Trainings</Link>
+          <Link to="/event-training">Consultancy, Events & Trainings</Link>
         </span>
       </div>
     </div>
@@ -160,6 +160,16 @@ export const StructureDropdown = () => {
       <div className="dropdown-item">
         <span>
           <Link to={"/sectoral"}>Sectoral Group</Link>
+        </span>
+      </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/about-mrc"}>MRC</Link>
+        </span>
+      </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/mpdcl"}>MPDCL</Link>
         </span>
       </div>
       {/* <div

@@ -28,7 +28,7 @@ const MRCServices = () => {
           <h1 className="header">
             Our <span>Services</span>
           </h1>
-          <p>
+          <p style={{ color: "#2b3513" }}>
             Manufacturers Resource Centre is the only professional service
             organization structured to render business solutions for the
             Manufacturing sector and affiliated. With us is a pool of
@@ -48,7 +48,7 @@ const MRCServices = () => {
             Business Consulting <span>Retainership Service</span>
           </h1>
 
-          <p>
+          <p style={{ color: "#2b3513" }}>
             With our brand, expertise and business leverages, valuable in
             growing turnover volume, company customer base and production
             capacity, companies engage us as their Business Consultant to aid
@@ -79,7 +79,7 @@ const MRCServices = () => {
             Financial <span>Solutions</span>
           </h1>
 
-          <p>
+          <p style={{ color: "#2b3513" }}>
             It’s now possible to expand your Business and Operations. Come take
             advantage of available funding windows, Intervention Fund and other
             Venture Capital investments, that would suit your funding need.
@@ -108,7 +108,7 @@ const MRCServices = () => {
             Human <span>Capacity Building</span>
           </h1>
 
-          <p>
+          <p style={{ color: "#2b3513" }}>
             We understand that Learning and Development leads to increased
             performance, better lives and work. We bring to you a whole new
             learning experience through our In-plant and General Trainings.
@@ -133,7 +133,7 @@ const MRCServices = () => {
             Consulting <span>Services</span>
           </h1>
 
-          <p>
+          <p style={{ color: "#2b3513" }}>
             Leveraging on the expertise and experience of skilled consultants
             and professionals we evaluate, implement and deploy custom solutions
             tailored to address your business challenges.
@@ -182,14 +182,16 @@ const MRCServices = () => {
           <h1 className="header">
             We <span>Transform Businesses</span>
           </h1>
-          <p>
+          <p style={{ color: "#2b3513" }}>
             Through our services we advice and aid manufacturers in the growth
             and development of their businesses. We are constantly on the look
             out for rewarding opportunities to ensure their enterprise thrives
             and is sustainable.
           </p>
           <div className="text-btn">
-            <span>Let us help you "...become a major Industry Player"</span>
+            <span style={{ color: "#2b3513" }}>
+              Let us help you "...become a major Industry Player"
+            </span>
           </div>
         </div>
         <Wall />

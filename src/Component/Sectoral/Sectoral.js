@@ -84,7 +84,10 @@ function Sectoral() {
 
           <div className="sect-body">
             <div className="cover">
-              <div className="head" style={{ margin: "20px 0px" }}>
+              <div
+                className="head"
+                style={{ margin: "20px 0px", color: "#2b3513" }}
+              >
                 In order to cater for members who have near homogenous or
                 sector-specific products, MAN has ten Sectoral Groups and
                 seventy seven Sub-Sectoral Groups. The Groups are serviced by

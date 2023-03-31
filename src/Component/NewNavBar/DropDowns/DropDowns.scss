@@ -1,17 +1,20 @@
 .about-dropdown {
   position: absolute;
-  padding: 10px;
   background-color: #fff;
   z-index: 50;
+  border-top: 5px solid #1f260d;
+  border-radius: 5px;
+  overflow: hidden;
 
   width: 250px;
 
   top: 70px;
   left: -2%;
   .dropdown-item {
-    margin: 20px 0px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
     span {
       font-size: 14px;
@@ -32,9 +35,11 @@
 
 .service-dropdown {
   position: absolute;
-  padding: 10px;
   background-color: #fff;
   z-index: 50;
+  border-top: 5px solid #1f260d;
+  border-radius: 5px;
+  overflow: hidden;
 
   width: 200px;
 
@@ -45,9 +50,10 @@
     border-bottom: 1px solid #1f260d;
   }
   .dropdown-item {
-    margin: 20px 0px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
     span {
       font-size: 14px;
@@ -68,18 +74,21 @@
 
 .insight-dropdown {
   position: absolute;
-  padding: 10px;
   background-color: #fff;
   z-index: 50;
+  border-top: 5px solid #1f260d;
+  border-radius: 5px;
+  overflow: hidden;
 
-  width: 200px;
+  width: 250px;
 
   top: 70px;
   left: calc(100% - 78%);
   .dropdown-item {
-    margin: 20px 0px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
     span {
       font-size: 14px;
@@ -100,18 +109,21 @@
 
 .membership-dropdown {
   position: absolute;
-  padding: 10px;
   background-color: #fff;
   z-index: 50;
+  border-top: 5px solid #1f260d;
+  border-radius: 5px;
+  overflow: hidden;
 
   width: 300px;
 
   top: 70px;
   left: calc(100% - 67%);
   .dropdown-item {
-    margin: 20px 0px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
     span {
       font-size: 14px;
@@ -132,9 +144,11 @@
 
 .structure-dropdown {
   position: absolute;
-  padding: 10px;
   background-color: #fff;
   z-index: 50;
+  border-top: 5px solid #1f260d;
+  border-radius: 5px;
+  overflow: hidden;
 
   width: 200px;
 
@@ -146,9 +160,10 @@
     border-bottom: 1px solid #1f260d;
   }
   .dropdown-item {
-    margin: 20px 0px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
     span {
       font-size: 14px;

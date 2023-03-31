@@ -112,6 +112,12 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/sectoral"}>Sectoral Group</Link>
             </span>
+            <span className="items-span">
+              <Link to={"/about-mrc"}>MRC</Link>
+            </span>
+            <span className="items-span">
+              <Link to={"/mpdcl"}>MPDCL</Link>
+            </span>
             {/* <span>MRC</span>
             <span className="items-span">
               <Link to={"/about-mrc"}>About MRC</Link>

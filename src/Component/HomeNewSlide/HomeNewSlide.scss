@@ -1,50 +1,101 @@
 @import "../../Styles/resources";
 
 .home-new-slide {
-  .img-con {
-    border-bottom: 5px solid $seaweed-green;
-    border-top: 5px solid $seaweed-green;
-    height: 70vh;
-    background-color: #ddd;
+  margin-bottom: 80px;
+  border-bottom: 10px solid #2b3513;
+  .swiper {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
 
-    @media (min-width: $mobile-6) {
-      &:hover {
-        img {
-          object-fit: contain;
-
-          transform: scale(0.9);
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
-    img {
-      object-fit: cover;
-
-      width: 100%;
-      height: 100%;
-
-      transition: all 5s;
-      width: 100%;
+  .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    height: 500px !important;
+    @include mobile-6 {
+      padding: 20px 30px;
+      height: auto;
     }
   }
-  .under-text {
-    display: flex;
-    align-items: center;
-    margin: 0px 0px 50px 0px;
-    border-bottom: 5px solid $seaweed-green;
 
-    span {
-      border-right: 2px solid $seaweed-green;
-      font-size: 25px;
-      font-weight: 500;
-      color: $seaweed-green;
-      padding: 0px 20px;
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    // -webkit-background-size: cover;
+    // background-size: cover !important;
+    transition: all 1s ease-in-out !important;
+    background-size: 130% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background: url("../../images/new-images/ManHouseMainImg.jpeg");
+  }
+  &:hover {
+    @media (min-width: 800px) {
+      .parallax-bg {
+        background-repeat: repeat !important;
+        background-size: 50% !important;
+      }
     }
-    .caption {
+  }
+  .narration-con {
+    background-color: #fff;
+    color: #2b3513;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40%;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    opacity: 0.9;
+
+    @include mobile-4 {
+      left: 50px;
+      bottom: 100px;
+    }
+
+    @include mobile-6 {
+      width: 70%;
+    }
+
+    .narration-banner {
+      background-color: #2b3513;
+      color: #fff;
       font-size: 20px;
-      margin: 0px 10px;
+      padding: 5px;
+      text-align: center;
+    }
+    .narration-text {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      @include mobile-4 {
+        font-size: 12px;
+      }
+    }
+    .centered-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0px;
+      button {
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #000;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
     }
   }
 }
