@@ -6,14 +6,14 @@ import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import Subscribe from "../Subscribe/Subscribe";
 import "./Sectoral.scss";
-import Vector from "../../images/Vector.png";
+import Vector from "../../images/Vector3.png";
 
 import NoPicture from "../../images/new-images/executivesImg/NoPicture.png";
 
 import Board1 from "../../images/new-images/board/Board (1).png";
 import Board2 from "../../images/new-images/board/Board (2).png";
 import Board3 from "../../images/new-images/board/Board (3).png";
-import Board4 from "../../images/new-images/board/Board (4).png";
+import Board4 from "../../images/new-images/executivesImg/NewDg.jpg";
 
 import PowerFacilities1 from "../../images/new-images/mpdcl/PowerFacilities (1).png";
 import PowerFacilities2 from "../../images/new-images/mpdcl/PowerFacilities (2).png";
@@ -213,7 +213,7 @@ function Mpdcl() {
                     supply interventions to cushion the unabated power supply
                     challenges which has been perennial and some of them are;
                   </p>
-                  <div className="obj-items">
+                  <div className="obj-items centered">
                     <div className="flex">
                       <img src={Vector} alt="" />
                       <p>

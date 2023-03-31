@@ -2,9 +2,9 @@ import React from "react";
 import { Grid, Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
 // import sectionpic from "../../images/div20.png";
-import sectionpic from "../../images/new-images/VisionImg.jfif";
+import sectionpic from "../../images/new-images/VisionImgNobg.png";
 import sectionpic2 from "../../images/div21.png";
-import sectionpic3 from "../../images/div22.png";
+import sectionpic3 from "../../images/new-images/ContribNoBg.png";
 import Before from "../../images/div_before.png";
 import After from "../../images/div_after.png";
 import theme from "../../Styles/theme/Theme";
@@ -32,11 +32,14 @@ function Section() {
       >
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
-            <SectionImg src={sectionpic} style={{ objectFit: "cover" }} />
+            <SectionImg
+              src={sectionpic}
+              style={{ objectFit: "contain", backgroundColor: "#ddd" }}
+            />
             <SectionTitle style={{ textAlign: "center" }}>
               Our Vision
             </SectionTitle>
-            <SectionDescription sx={{ color: "#000", textAlign: "center" }}>
+            <SectionDescription sx={{ color: "#2b3513", textAlign: "center" }}>
               To be the key driver for Industrialization, sustainable Economic
               Growth and Development in Nigeria
             </SectionDescription>
@@ -77,7 +80,7 @@ function Section() {
                   textAlign: "center",
                 }}
               >
-                1. MAN promotes the interest of manufacturers by deepening its
+                MAN promotes the interest of manufacturers by deepening its
                 advocacy and partnership with national and international
                 economic actors in Government, Organized Private Sector, host
                 communities and other stakeholders to foster its proactive role
@@ -92,10 +95,10 @@ function Section() {
                   textAlign: "center",
                 }}
               >
-                2. MAN promotes manufacturing sector competitiveness,
-                contribution to job creation and Gross Domestic Product through
-                commitment to research and development, new technologies and
-                environmental sustainability.
+                MAN promotes manufacturing sector competitiveness, contribution
+                to job creation and Gross Domestic Product through commitment to
+                research and development, new technologies and environmental
+                sustainability.
               </SectionDescription>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
@@ -162,10 +165,10 @@ function Section() {
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
             <SectionImg src={sectionpic2} />
-            <SectionTitle sx={{ color: "#8A8A8A", textAlign: "center" }}>
+            <SectionTitle sx={{ color: "#2b3513", textAlign: "center" }}>
               Our History
             </SectionTitle>
-            <SectionDescription sx={{ color: "#8A8A8A", textAlign: "center" }}>
+            <SectionDescription sx={{ color: "##2b3513", textAlign: "center" }}>
               The Manufacturers Association of Nigeria (MAN) was established in
               May, 1971 as a company limited by guarantee. The establishment of
               the Association was motivated by the desire to have a focal point
@@ -179,8 +182,8 @@ function Section() {
               <Link to="/about" style={{ textDecoration: "none" }}>
                 <MyButton
                   sx={{
-                    color: "#8A8A8A",
-                    borderColor: "#8A8A8A",
+                    color: "#2b3513",
+                    borderColor: "#2b3513",
                     marginTop: "21px",
                   }}
                 >
@@ -193,7 +196,10 @@ function Section() {
 
         <SectionItemContainer>
           <div>
-            <SectionImg src={sectionpic3} />
+            <SectionImg
+              src={sectionpic3}
+              style={{ objectFit: "contain", backgroundColor: "#ddd" }}
+            />
             <SectionTitle sx={{ color: "#2B3513", textAlign: "center" }}>
               Why Join MAN?
             </SectionTitle>
@@ -259,18 +265,31 @@ function Section() {
               <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
                 Our Members
               </SectionTitle>
+              <SectionDescription
+                sx={{
+                  color: "#fff",
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                }}
+              >
+                Our members-companies cut across the six geo-political zones of
+                Nigeria. They are bonafide manufacturers with existing,
+                functional and production factories grouped in similar
+                production line.
+              </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "center" }}>
-                {/* <Link to="" style={{ textDecoration: "none" }}>
+                <Link to="/our-members" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       color: "#fff",
                       borderColor: "#fff",
-                      marginTop: "21px",
+                      marginTop: "30px",
                     }}
                   >
-                    Read More
+                    Meet Our Members
                   </MyButton>
-                </Link> */}
+                </Link>
               </div>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />

@@ -19,7 +19,7 @@ export const SectionItemContainer = styled(Box)(({ theme }) => ({
 export const SectionImg = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
   width: "100%",
-  height: "260px",
+  height: "200px",
   overFlow: "hidden",
   backgroundColor: Colors.primary,
   [theme.breakpoints.down("sm")]: {

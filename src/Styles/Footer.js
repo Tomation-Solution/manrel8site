@@ -35,7 +35,6 @@ export const FooterItemsContainer = styled(Box)(({ matches, theme }) => ({
 export const FooterImg = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
   width: "100px",
-  marginTop: "30px",
   overFlow: "hidden",
   paddingBottom: "20px",
 }));
@@ -57,8 +56,7 @@ export const MyButton = styled(Button)(() => ({
 export const FooterDescription = styled(Typography)(({ theme }) => ({
   lineHeight: "25px",
   fontSize: "16px",
-  cursor: "pointer",
-  color: Colors.black,
+  color: "#2b3513",
   paddingBottom: "10px",
   fontFamily: "Poppins",
 }));

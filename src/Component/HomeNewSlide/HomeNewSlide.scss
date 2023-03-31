@@ -1,0 +1,50 @@
+@import "../../Styles/resources";
+
+.home-new-slide {
+  .img-con {
+    border-bottom: 5px solid $seaweed-green;
+    border-top: 5px solid $seaweed-green;
+    height: 70vh;
+    background-color: #ddd;
+
+    @media (min-width: $mobile-6) {
+      &:hover {
+        img {
+          object-fit: contain;
+
+          transform: scale(0.9);
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    img {
+      object-fit: cover;
+
+      width: 100%;
+      height: 100%;
+
+      transition: all 5s;
+      width: 100%;
+    }
+  }
+  .under-text {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 50px 0px;
+    border-bottom: 5px solid $seaweed-green;
+
+    span {
+      border-right: 2px solid $seaweed-green;
+      font-size: 25px;
+      font-weight: 500;
+      color: $seaweed-green;
+      padding: 0px 20px;
+    }
+    .caption {
+      font-size: 20px;
+      margin: 0px 10px;
+    }
+  }
+}

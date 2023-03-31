@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
 import "./MRCServices.scss";
 
@@ -9,12 +11,13 @@ const MRCServices = () => {
   return (
     <div className="mrc-services">
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <div className="topBg">
           <h1>Manufacturers Resource Centre (MRC)</h1>
           <p>
-            The only professional service organization structured to render
-            business solutions for the Manufacturing sector and affiliated.
+            The only sector-specific Business Membership Organization (BMO)
+            structured to render advocacy services to its members
           </p>
         </div>
 
@@ -32,7 +35,9 @@ const MRCServices = () => {
           </p>
           <div className="text-btn">
             <span>We are "... the Manufacturers’ Solution Hub"</span>
-            <button>Contact Us</button>
+            <Link to={"/mrc-contact"}>
+              <button>Contact Us</button>
+            </Link>
           </div>
         </div>
         <div className="objectives">

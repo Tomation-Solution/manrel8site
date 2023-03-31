@@ -20,15 +20,13 @@ function InfoBoard() {
     <Box
       sx={{
         backgroundColor: Colors.primary,
-        marginTop: "184px",
         width: "100%",
         marginLeft: 0,
         marginRight: 0,
-        padding: "50px 0",
+        padding: "20px",
       }}
     >
-      {/* <InfoTitle>Why We are Unique</InfoTitle> */}
-      <InfoHeader>Why We are Unique</InfoHeader>
+      <InfoHeader>Why we are Unique</InfoHeader>
       <InfoContainer>
         <InfoItemContainer>
           <InfoItemImg src={itemIcon} />

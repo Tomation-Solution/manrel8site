@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
 
 import "./NewMRC.scss";
@@ -10,14 +13,19 @@ const NewMRC = () => {
   return (
     <div className="new-mrc">
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <div className="topBg">
           <h1>Manufacturers Resource Centre (MRC)</h1>
           <p>
             The Manufacturers Resource Centre is the Business Solution Arm of
-            Manufacturers Association of Nigeria (MAN).
+            Manufacturers Association of Nigeria (MAN). The Manufacturers
+            Resource Centre prides herself as an entity dedicated to proffering
+            Business Solutions to MAN Members thus develop their Businesses,
+            increase Market share and Production Excellence.
           </p>
         </div>
+        {/* <NewImageBanner />/ */}
 
         <div className="who-are">
           <h1 className="header">
@@ -34,7 +42,9 @@ const NewMRC = () => {
             <span>
               "Our Success is measured by the benefits of our clients"
             </span>
-            <button>Contact Us</button>
+            <Link to={"/mrc-contact"}>
+              <button>Contact Us</button>
+            </Link>
           </div>
         </div>
 
@@ -105,6 +115,20 @@ const NewMRC = () => {
               international business linkages
             </p>
           </div>
+        </div>
+
+        <div className="objectives">
+          <h1 className="header">
+            To View Services{" "}
+            <span style={{ cursor: "pointer" }}>
+              <Link
+                to={"/mrc-services"}
+                style={{ color: "#2b3513", textDecoration: "underline" }}
+              >
+                Click Here
+              </Link>
+            </span>
+          </h1>
         </div>
         <Wall />
         <Footer />

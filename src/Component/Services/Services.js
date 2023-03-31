@@ -13,25 +13,25 @@ function Services() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <div className="services">
+        <div className="services-services">
           <Subscribe />
           <NewNavBar />
-          <div className="hero_image">
-            <div className="cover">
+          <div className="services-hero_image">
+            <div className="services-cover">
               <h1>Services</h1>
               <p>
-                The only professional service organization structured to render
-                business solutions for the Manufacturing sector and affiliated.
+                The only sector-specific Business Membership Organization (BMO)
+                structured to render advocacy services to its members.
               </p>
             </div>
           </div>
-          <div className="newservices">
-            <div className="head">
+          <div className="services-newservices">
+            <div className="services-head">
               <h1>Core Services</h1>
             </div>
-            <div className="wrap diff">
-              <div className="card">
-                <div className="overlay">
+            <div className="services-wrap diff">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>BUSINESS DEVELOPMENT SERVICES</h1>
                   <p>
                     Identify possible problems affecting SME‘s by preparing a
@@ -40,8 +40,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>BUSINESS INFORMATION SERVICES</h1>
                   <p>
                     Sourcing of raw materials, Machinery and equipment, Markets,
@@ -49,8 +49,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>BUSINESS CONSULTANCY</h1>
                   <p>
                     Investment and financial advisory services, Local and
@@ -58,8 +58,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>ECONOMIC RESEARCH AND ANALYSIS</h1>
                   <p>
                     Provision of Economic research and analysis for
@@ -67,90 +67,92 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Public Policy Advocacy</h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Monitoring and analysing of government policies</h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>
                     Preparation of memoranda on topical industrial and economic
                     issues
                   </h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Capacity building and manpower development</h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Liaison activities for members</h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Seminars and Conferences</h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>
                     Information and Communication Technology based Services
                   </h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>
                     Promotion and organization of trade missions and exhibitions
                   </h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Promotion of Made-in-Nigeria products</h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>
                     Reconciliation and harmonization of diverse interests of
                     members
                   </h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>
                     Specific intervention on members and sectoral problems
                   </h1>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Publications</h1>
                 </div>
               </div>
             </div>
-            <div className="head">
+            <div className="services-head">
               <h1>Manufacturers Resource Centre (MRC) Services</h1>
               <p>
-                Manufacturers Resource Centre (MRC) is the only professional
-                service organization structured to render business solutions for
-                the Manufacturing sector and affiliated.
+                The Manufacturers Resource Centre is the Business Solution Arm
+                of Manufacturers Association of Nigeria (MAN). The Manufacturers
+                Resource Centre prides herself as an entity dedicated to
+                proffering Business Solutions to MAN Members thus develop their
+                Businesses, increase Market share and Production Excellence.
               </p>
             </div>
-            <div className="wrap">
-              <div className="card">
-                <div className="overlay">
+            <div className="services-wrap">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Business Consulting Retainer ship Service</h1>
                   <p>
                     With our brand, expertise and business leverages, valuable
@@ -161,8 +163,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Human Capacity Building</h1>
                   <p>
                     We understand that Learning and Development leads to
@@ -172,8 +174,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Financial Solutions</h1>
                   <p>
                     It’s now possible to expand your Business and Operations.
@@ -184,17 +186,17 @@ function Services() {
                 </div>
               </div>
             </div>
-            <div className="btn-center">
-              <Link to="/mrc-services">
+            <div className="services-btn-center">
+              <Link to="/about-mrc">
                 <button>See More</button>
               </Link>
             </div>
-            <div className="head">
+            <div className="services-head">
               <h1>MAN Power Development Company Limited (MPDCL).</h1>
             </div>
-            <div className="wrap dit">
-              <div className="card">
-                <div className="overlay">
+            <div className="services-wrap dit">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>MAN Independent Power Project (IPP)</h1>
                   <p>
                     MPDCL has just completed the Phase I of the 2MW Power Plant
@@ -205,8 +207,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Facilitation of The MAN-SUNREF Funds</h1>
                   <p>
                     MPDCL currently provides facilitation services for members
@@ -217,8 +219,8 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="overlay">
+              <div className="services-card">
+                <div className="services-overlay">
                   <h1>Eligible Customer (EC) Appliction To NERC</h1>
                   <p>
                     MPDCL currently provides facilitations service for members
@@ -229,37 +231,37 @@ function Services() {
                 </div>
               </div>
             </div>
-            <div className="btn-center">
+            <div className="services-btn-center">
               <Link to="/mpdcl">
                 <button>See More</button>
               </Link>
             </div>
           </div>
-          <div className="new_member">
-            <div className="right">
-              <div className="top">
+          <div className="services-new_member">
+            <div className="services-right">
+              <div className="services-top">
                 <h2>Request Service</h2>
                 <p>Let's start by entering your information</p>
                 <p>All fields are required unless otherwise indicated.</p>
               </div>
               <form action="">
-                <div className="card">
+                <div className="services-card">
                   <h4>Full name</h4>
                   <input type="text" />
                 </div>
-                <div className="card">
+                <div className="services-card">
                   <h4>Email Address</h4>
                   <input type="email" />
                 </div>
-                <div className="card">
+                <div className="services-card">
                   <h4>Company Name</h4>
                   <input type="text" />
                 </div>
-                <div className="card">
+                <div className="services-card">
                   <h4>Request Service</h4>
                   <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
-                <div className="card">
+                <div className="services-card">
                   <button>Request</button>
                 </div>
               </form>

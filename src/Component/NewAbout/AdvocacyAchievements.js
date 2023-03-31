@@ -30,61 +30,15 @@ const CodeofConduct = () => {
 
         <div className="code-conduct-content">
           <div className="overlapModal">
-            <h1>Code Of Conduct</h1>
+            <h1> Advocacy Achievements</h1>
             <p>
-              In order to promote and develop meaningful contribution of
-              manufacturers to the national economy, the National Council laid
-              down the following code of conduct for members of the Association:
+              Through its continuous advocacy programmes, MAN has recorded
+              remarkable achievements in a wide range of areas which include:
             </p>
-          </div>
-
-          <div className="endeavour-items">
-            <div className="endeavour-item">
-              <h1>1</h1>
-              <p>
-                Endeavour to maintain in all aspects of their operations, a high
-                level of business ethics and recognized standards, thus
-                refraining from all business dealings of questionable nature,
-                which could bring the Association or the manufacturing sector as
-                a whole into disrepute.
-              </p>
-            </div>
-            <div className="endeavour-item">
-              <h1>2</h1>
-              <p>
-                Demonstrate transparent commitment to Nigeria’s industrial
-                objectives and policies; placing Nigeria’s best interest above
-                all others and increasing the contribution of the manufacturing
-                sector to the economy, and towards the improvement of the
-                quality of life of Nigerians.
-              </p>
-            </div>
-            <div className="endeavour-item">
-              <h1>3</h1>
-              <p>
-                Promote, encourage and improve quality standards and process
-                control in all their manufacturing operations.
-              </p>
-            </div>
-            <div className="endeavour-item">
-              <h1>4</h1>
-              <p>
-                Refer to the National Council of the Association, any
-                disagreement between members of the Association for arbitration
-                before either party can pursue such a matter further (if
-                necessary) after Council’s intervention.
-              </p>
-            </div>
           </div>
         </div>
 
         <div className="achievements">
-          <h1> Advocacy Achievements</h1>
-          <p>
-            Through its continuous advocacy programmes, MAN has recorded
-            remarkable achievements in a wide range of areas which include:
-          </p>
-
           <div className="achievements-items">
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />

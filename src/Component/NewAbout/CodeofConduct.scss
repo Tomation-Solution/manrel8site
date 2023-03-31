@@ -4,8 +4,7 @@
   .topBg {
     min-height: 50vh;
     min-height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../../images/new-images/Peoplewithuhari.jpeg");
+    background: url("../../images/new-images/Peoplewithuhari.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,12 +38,16 @@
 
       h1 {
         font-weight: 400;
+        font-size: 50px;
+        color: #2b3513;
         margin: 20px 0px;
       }
 
       p {
         line-height: 25px;
+        color: #2b3513;
         margin: 10px 0px;
+        font-size: 20px;
       }
     }
 
@@ -72,7 +75,7 @@
   }
   .achievements {
     background-color: #343a40;
-    padding: 20px 30px;
+    padding: 20px 60px;
     color: #fff;
     margin: 0px 0px 80px 0px;
 

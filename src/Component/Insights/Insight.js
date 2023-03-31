@@ -7,15 +7,17 @@ import "../Gallery/Insmore.scss";
 import Wall from "../Wall/Wall";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import Articleimage from "../../images/div-sub.png";
+import Articleimage from "../../images/new-images/NewHomeAllimg.png";
 import { UIProvider } from "../../Ui";
 import { newsdata } from "../News/NewsData";
 import { newPubData } from "../Publications/PublicationsData";
 import { newReportData } from "../Reports/ReportData";
+import Subscribe from "../Subscribe/Subscribe";
 
 const Insight = () => {
   return (
     <UIProvider>
+      <Subscribe />
       <NewNavBar />
       <div className="insight-more">
         <div className="hero_Image">
@@ -33,7 +35,12 @@ const Insight = () => {
               <div className="wrap">
                 {gallerydata[0] && (
                   <div className="card" key={gallerydata[0].id}>
-                    <button>Gallery</button>
+                    <Link to={"/gallery"}>
+                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
+                        <b>Gallery</b>
+                      </button>
+                    </Link>
+
                     <div className="flex">
                       <h3>{gallerydata[0].name}</h3>
                       <Link to={`/gallery-details/${gallerydata[0].id}`}>
@@ -45,7 +52,12 @@ const Insight = () => {
 
                 {newPubData[0] && (
                   <div className="card" key={newPubData[0].id}>
-                    <button>Publications</button>
+                    <Link to={"/publications"}>
+                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
+                        <b>Publications</b>
+                      </button>
+                    </Link>
+
                     <div className="flex">
                       <h3>{newPubData[0].name}</h3>
                       <Link to={`/publications-details/${newPubData[0].id}`}>
@@ -57,7 +69,12 @@ const Insight = () => {
 
                 {newReportData[0] && (
                   <div className="card" key={newReportData[0].id}>
-                    <button>Report</button>
+                    <Link to={"/reports"}>
+                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
+                        <b>Report</b>
+                      </button>
+                    </Link>
+
                     <div className="flex">
                       <h3>{newReportData[0].name}</h3>
                       <Link to={`/report-details/${newReportData[0].id}`}>
@@ -69,7 +86,12 @@ const Insight = () => {
 
                 {newsdata[0] && (
                   <div className="card" key={newsdata[0].id}>
-                    <button>News</button>
+                    <Link to="/news">
+                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
+                        <b>News</b>
+                      </button>
+                    </Link>
+
                     <div className="flex">
                       <h3>{newsdata[0].name}</h3>
                       <Link to={`/news-details/${newsdata[0].id}`}>

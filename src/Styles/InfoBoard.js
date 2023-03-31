@@ -14,9 +14,8 @@ export const InfoTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const InfoHeader = styled(Typography)(({ theme }) => ({
-  lineHeight: "71px",
-  fontSize: "55px",
-  marginBottom: "32px",
+  fontSize: "50px",
+  marginBottom: "50px",
   textAlign: "center",
   color: Colors.white,
   [theme.breakpoints.down("sm")]: {
@@ -32,6 +31,7 @@ export const InfoContainer = styled(Box)(({ matches, theme }) => ({
   height: "100%",
   padding: "0px 0px",
   textAlign: "left",
+  gap: "30px",
   [theme.breakpoints.down("sm")]: {
     padding: "0px 20px",
   },
@@ -51,15 +51,15 @@ export const InfoItemContainer = styled(Box)(({ matches, theme }) => ({
 
 export const InfoItemImg = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
-  width: "82px",
-  marginTop: "30px",
+  width: "200px",
+  height: "100px",
+  objectFit: "contain",
   overFlow: "hidden",
 }));
 
 export const InfoItemTitle = styled(Typography)(({ theme }) => ({
-  lineHeight: "71px",
   fontSize: "22px",
-  marginBottom: "10px",
+  margin: "10px 0px",
 
   textAlign: "center",
   color: Colors.white,

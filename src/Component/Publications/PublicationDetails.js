@@ -72,7 +72,13 @@ const PublicationDetails = () => {
                   <div className="wrap">
                     {otherPub.map((item) => (
                       <div className="card" key={item.id}>
-                        <button>Publication</button>
+                        <Link to={"/publications"}>
+                          <button
+                            style={{ color: "#2b3513", cursor: "pointer" }}
+                          >
+                            <b>Publications</b>
+                          </button>
+                        </Link>
                         <div className="flex">
                           <h3>{item.name}</h3>
                           <Link to={`/publications-details/${item.id}`}>

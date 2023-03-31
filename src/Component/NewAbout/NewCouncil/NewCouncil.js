@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { UIProvider } from "../../../Ui";
 import Footer from "../../Footer/Footer";
 import NewNavBar from "../../NewNavBar/NewNavBar";
+import Subscribe from "../../Subscribe/Subscribe";
 import Wall from "../../Wall/Wall";
 
 import "./NewCouncil.scss";
@@ -12,21 +13,10 @@ const NewCouncil = () => {
   return (
     <div className="new-council">
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
-        {options === "executive" ? (
-          <div className="hero_image">
-            {/* <div className="cover">
-              <h1>National Council Members</h1>
-            </div> */}
-          </div>
-        ) : (
-          <div className="hero_image2">
-            <div className="cover">
-              <h1>Life Members</h1>
-              <p>See our esteemed across the country</p>
-            </div>
-          </div>
-        )}
+
+        <div className="hero_image"></div>
 
         <div className="members">
           <div className="options">

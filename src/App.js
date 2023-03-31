@@ -12,6 +12,7 @@ import Wall from "./Component/Wall/Wall";
 import Footer from "./Component/Footer/Footer";
 import Subscribe from "./Component/Subscribe/Subscribe";
 import NewNavBar from "./Component/NewNavBar/NewNavBar";
+import HomeNewSlide from "./Component/HomeNewSlide/HomeNewSlide";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <div className="home">
             <Subscribe />
             <NewNavBar />
-            <Banner />
+            <HomeNewSlide />
+            {/* <Banner /> */}
             <Section />
             <Article />
             <InfoBoard />

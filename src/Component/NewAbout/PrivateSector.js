@@ -7,47 +7,26 @@ import AchieveBullet from "../../images/new-images/AchieveBullet.png";
 
 import "./PrivateSector.scss";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import Subscribe from "../Subscribe/Subscribe";
 
 const PrivateSector = () => {
   return (
     <div className="private-sector">
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <div className="topBg"></div>
 
         <div className="private-sector-content">
           <div className="overlapModal">
-            <h1>ORGANIZED PRIVATE SECTOR (OPS) BODIES</h1>
-            <p>
+            <h1 style={{ color: "#2b3513" }}>
+              ORGANIZED PRIVATE SECTOR (OPS) BODIES
+            </h1>
+            <p style={{ color: "#2b3513" }}>
               The Organized Private Sector (OPS) is an umbrella organization of
               Business Membership Organizations representing the interest of the
               private sector in Nigeria. OPS member organizations are the
             </p>
-            <ul
-              style={{
-                margin: "20px 0px",
-                // display: "flex",
-                // flexDirection: "column",
-                // alignItems: "flex-start",
-              }}
-            >
-              <li style={{ listStyle: "inside" }}>
-                Manufacturers Association of Nigeria (MAN)
-              </li>
-              <li style={{ listStyle: "inside" }}>
-                Nigerian Association of Chambers of Commerce, Industry, Mines
-                and Agriculture (NACCIMA)
-              </li>
-              <li style={{ listStyle: "inside" }}>
-                Nigerian Association of Small-Scale Industries (NASSI)
-              </li>
-              <li style={{ listStyle: "inside" }}>
-                Nigerian Association of Small and Medium Enterprises (NASME)
-              </li>
-              <li style={{ listStyle: "inside" }}>
-                Nigeria Employers Consultative Association (NECA)
-              </li>
-            </ul>
           </div>
 
           <div className="core-values">
@@ -64,19 +43,9 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#2E8B57" }}
-              >
-                <h3>2</h3>
-                <div className="right">
-                  <p>Nigeria Employers Consultative Association (NECA)</p>
-                </div>
-              </div>
-
-              <div
-                className="core-values-item"
                 style={{ backgroundColor: "#038B49" }}
               >
-                <h3>3</h3>
+                <h3>2</h3>
                 <div className="right">
                   <p>
                     Nigeria Association of Chambers of Commerce, Industry, Mines
@@ -89,7 +58,7 @@ const PrivateSector = () => {
                 className="core-values-item"
                 style={{ backgroundColor: "#86742A" }}
               >
-                <h3>4</h3>
+                <h3>3</h3>
                 <div className="right">
                   <p>Nigeria Association of Small-Scale Industries (NASSI)</p>
                 </div>
@@ -99,11 +68,21 @@ const PrivateSector = () => {
                 className="core-values-item"
                 style={{ backgroundColor: "	#006400" }}
               >
-                <h3>5</h3>
+                <h3>4</h3>
                 <div className="right">
                   <p>
                     Nigeria Association of Small and Medium Enterprises (NASME)
                   </p>
+                </div>
+              </div>
+
+              <div
+                className="core-values-item"
+                style={{ backgroundColor: "#2E8B57" }}
+              >
+                <h3>5</h3>
+                <div className="right">
+                  <p>Nigeria Employers Consultative Association (NECA)</p>
                 </div>
               </div>
             </div>

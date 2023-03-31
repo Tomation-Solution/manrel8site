@@ -4,7 +4,6 @@ import {
   FooterDescription,
   FooterImg,
   FooterItemsContainer,
-  MyButton,
 } from "../../Styles/Footer";
 import logoICon from "../../images/manlogo2.png";
 import theme from "../../Styles/theme/Theme";
@@ -28,24 +27,37 @@ function Footer() {
         <FooterDescription>01-4542700, 01-4542701</FooterDescription>
       </FooterItemsContainer>
       <FooterItemsContainer style={{ textAlign: "center" }}>
-        <FooterDescription>Privacy Policy</FooterDescription>
-        <FooterDescription>Webmail Login</FooterDescription>
+        <FooterDescription>
+          <Link to={"/"} style={{ textDecoration: "none", color: "#2b3513" }}>
+            Privacy Policy
+          </Link>
+        </FooterDescription>
+        <FooterDescription>
+          <Link to={"/"} style={{ textDecoration: "none", color: "#2b3513" }}>
+            Webmail Login
+          </Link>
+        </FooterDescription>
         <FooterDescription>
           <Link
             to={"/operate"}
-            style={{ textDecoration: "none", color: "#000" }}
+            style={{ textDecoration: "none", color: "#2b3513" }}
           >
             Our Branch Network
           </Link>
         </FooterDescription>
-        <Link style={{ textDecoration: "none" }} to="/Services">
-          <MyButton>Our Services</MyButton>
-        </Link>
+
+        <FooterDescription>
+          <Link
+            style={{ textDecoration: "none", color: "#2b3513" }}
+            to="/Services"
+          >
+            Our Services
+          </Link>
+        </FooterDescription>
         <div
           style={{
             display: "flex",
             gap: "10px",
-            margin: "40px ",
           }}
         >
           <a

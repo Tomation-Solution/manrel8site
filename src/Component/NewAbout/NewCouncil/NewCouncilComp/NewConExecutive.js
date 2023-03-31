@@ -15,7 +15,7 @@ const NewConExecutive = () => {
   return (
     <>
       <article>
-        <p className="article-desc">
+        <p className="article-desc" style={{ color: "#2b3513" }}>
           The National Council is a group of experienced professionals duly
           elected by MAN members and entrusted with the obligation to conduct
           the affairs of the Association according to its constitution.
