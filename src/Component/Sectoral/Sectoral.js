@@ -18,6 +18,8 @@ import eight from "../../images/eight.png";
 import nine from "../../images/nine.png";
 import ten from "../../images/ten.png";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/Group 61.png";
 
 function Sectoral() {
   const sectoralList = [
@@ -71,15 +73,15 @@ function Sectoral() {
         <div className="sectoral">
           <Subscribe />
           <NewNavBar />
-          <div className="hero_image">
-            <div className="cover">
-              <h1>MAN Sectoral Group</h1>
-              <p>
-                The Groups are serviced by full-time Sectoral Executives located
-                at the National Secretariat of the Association.
-              </p>
-            </div>
-          </div>
+
+          <NewImageBanner
+            image={backImage}
+            header={"MAN Sectoral Group"}
+            details={[
+              " The Groups are serviced by full-time Sectoral Executives located at the National Secretariat of the Association.",
+            ]}
+          />
+
           <div className="sect-body">
             <div className="cover">
               <div className="head" style={{ margin: "20px 0px" }}>
@@ -94,7 +96,7 @@ function Sectoral() {
                   <div className="card" key={item.content}>
                     <div className="flex">
                       <img src={Vector} alt="" />
-                      <h2>{item.content}</h2>
+                      <h2 style={{ color: "#2b3513" }}>{item.content}</h2>
                     </div>
                     <img className="main-img" src={item.image} alt="" />
                   </div>

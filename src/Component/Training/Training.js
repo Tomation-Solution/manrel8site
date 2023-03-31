@@ -12,6 +12,8 @@ import {
   SingleTraining,
 } from "../NewEvents/Modals";
 import { trainingData } from "./TrainingData";
+import backImage from "../../images/new-images/EventBgImg.png";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 
 const Training = () => {
   // const [options , setOptions] = useState("free")
@@ -25,13 +27,13 @@ const Training = () => {
       {pay && <PayTrainingModal closefn={() => setPay(!pay)} />}
       <UIProvider>
         <NewNavBar />
-        <div className="topBg">
-          <h1>Trainings</h1>
-          <p>
-            Conferences, seminars, workshops, certified courses and more for
-            manufacturers at all levels in every role.
-          </p>
-        </div>
+        <NewImageBanner
+          image={backImage}
+          header={"Tranings"}
+          details={[
+            "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
+          ]}
+        />
 
         <div className="event-options">
           <span className="span-active">Trainings</span>

@@ -143,7 +143,7 @@ function Section() {
                 remarkable achievements in a wide range of areas.
               </SectionDescription>
               <Link
-                to={"/about/code-of-conduct"}
+                to={"/about/advocacy-achievements"}
                 state={{ from: "home" }}
                 style={{ textDecoration: "none" }}
               >

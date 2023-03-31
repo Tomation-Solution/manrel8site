@@ -30,6 +30,8 @@ import CapacityProg2 from "../../images/new-images/mpdcl/CapacityProg (2).png";
 import CapacityProg3 from "../../images/new-images/mpdcl/CapacityProg (3).png";
 import MpdclModal from "../Mpdcl-Modal/MpdclModal";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/Group 61.png";
 
 function Mpdcl() {
   const sectoralList = [
@@ -173,20 +175,18 @@ function Mpdcl() {
           <div className="sectoral">
             <Subscribe />
             <NewNavBar />
-            <div className="hero_image">
-              <div className="cover">
-                <h1>MAN Power Development Company Limited (MPDCL).</h1>
-                <p>
-                  The services below are offered by MAN Power Development
-                  Company Limited (MPDCL).
-                </p>
-              </div>
-            </div>
+            <NewImageBanner
+              image={backImage}
+              header={"MAN Power Development Company Limited (MPDCL)."}
+              details={[
+                "   The services below are offered by MAN Power Development Company Limited (MPDCL).",
+              ]}
+            />
             <div className="sect-body">
               <div className="cover">
                 <div className="about">
-                  <h1>About MPDCL</h1>
-                  <p>
+                  <h1 style={{ color: "#2b3513" }}>About MPDCL</h1>
+                  <p style={{ color: "#2b3513" }}>
                     The Manufacturers Power Development Company Limited (MPDCL)
                     is a 100% wholly owned SpecialPurpose Vehicle of the
                     Manufacturers Association of Nigeria (MAN), incorporated
@@ -197,7 +197,7 @@ function Mpdcl() {
                     members may be contending with.
                   </p>
 
-                  <p>
+                  <p style={{ color: "#2b3513" }}>
                     MPDCL also assist power project developers’ access members
                     for various power supply services and at thesame time
                     encourage the members’ transit from fossil fuel power supply
@@ -248,11 +248,11 @@ function Mpdcl() {
                 </div>
 
                 <div className="thrust">
-                  <h1>Corporate Thrust</h1>
+                  <h1 style={{ color: "#2b3513" }}>Corporate Thrust</h1>
 
-                  <h3>Vision</h3>
+                  <h3 style={{ color: "#2b3513" }}>Vision</h3>
 
-                  <p>
+                  <p style={{ color: "#2b3513" }}>
                     To be manufacturers channel for energy adequacy advocacy and
                     continuously promoteinitiatives that would guarantee energy
                     adequacy for manufacturing at all times through energy
@@ -262,7 +262,7 @@ function Mpdcl() {
 
                   <h3>Mission</h3>
 
-                  <p>
+                  <p style={{ color: "#2b3513" }}>
                     Engage with strategic partners that are leading energy
                     service providers to facilitate uninterrupted 24/7 power
                     supply and energy management service, and collaborate with
@@ -270,15 +270,17 @@ function Mpdcl() {
                     availability for capacity building for member industries.
                   </p>
 
-                  <h3>Core Values</h3>
-                  <p>
+                  <h3 style={{ color: "#2b3513" }}>Core Values</h3>
+                  <p style={{ color: "#2b3513" }}>
                     Integrity and Courtesy in providing services to MAN member
                     industries
                   </p>
                 </div>
 
                 <div className="the-board">
-                  <h1 className="board-header">The Board</h1>
+                  <h1 className="board-header" style={{ color: "#2b3513" }}>
+                    The Board
+                  </h1>
                   <div className="board-items">
                     {theBoard.map((item, i) => (
                       <div className="board-item" key={i}>
@@ -288,7 +290,7 @@ function Mpdcl() {
 
                         <div className="board-text">
                           <h1>{item.name}</h1>
-                          <p>{item.title}</p>
+                          <p style={{ color: "#2b3513" }}>{item.title}</p>
                         </div>
                       </div>
                     ))}
@@ -306,7 +308,7 @@ function Mpdcl() {
                     <div className="card" key={item.id}>
                       <div className="flex">
                         <img src={Vector} alt="" />
-                        <h2>{item.content}</h2>
+                        <h2 style={{ color: "#2b3513" }}>{item.content}</h2>
                       </div>
                       <img className="main-img" src={item.image} alt="" />
                       <button onClick={() => showModalHandler(item)}>
@@ -316,7 +318,7 @@ function Mpdcl() {
                   ))}
                 </div>
 
-                <h1 className="service-header">
+                <h1 className="service-header" style={{ color: "#2b3513" }}>
                   RENEWABLE ENERGY AS MEANS OF REDUCING MEMBERS CARBON FOOT
                   PRINT
                 </h1>
@@ -336,10 +338,10 @@ function Mpdcl() {
                   ))}
                 </div>
 
-                <div className="thrust">
+                <div className="thrust" style={{ color: "#2b3513" }}>
                   <h3>MAN ANNUAL ENERGY SECURITY SUMMIT</h3>
 
-                  <p>
+                  <p style={{ color: "#2b3513" }}>
                     This is MPDCL flagship annual event where players in NESI
                     (including other Captive Power Solutionproviders and
                     renewable energy solution provider and gas suppliers) will
@@ -350,9 +352,11 @@ function Mpdcl() {
                     support industriesaccess to steady and uninterrupted energy.
                   </p>
 
-                  <h3>CAPACITY BUILDING PROGRAMMES</h3>
+                  <h3 style={{ color: "#2b3513" }}>
+                    CAPACITY BUILDING PROGRAMMES
+                  </h3>
 
-                  <p>
+                  <p style={{ color: "#2b3513" }}>
                     Good energy and electricity housekeeping leads to energy
                     efficiency. To be up to speed with the latesttechnologies,
                     there is need to close the gaps that is creating poor energy

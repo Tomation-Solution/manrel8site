@@ -212,20 +212,26 @@ const HowWeWork = () => {
             </p>
           </div>
           <div className="ad-hoc">
-            <h1>
-              ANNUAL REPORT{" "}
-              <Link
-                to="/report-details/1"
-                style={{ fontSize: "14px", color: "skyblue" }}
-              >
-                click to view
-              </Link>
-            </h1>
+            <h1>ANNUAL REPORT </h1>
             <p>
               Every year, the Association publishes its Annual Report which
               contains empirical based information, key highlights from the
               years’ activities and details of MAN financial information.
             </p>
+            <Link to="/report-details/1" style={{ fontSize: "14px" }}>
+              <button
+                style={{
+                  backgroundColor: "#2b3513",
+                  padding: "10px 20px",
+                  outline: "none",
+                  border: "none",
+                  color: "#fff",
+                  cursor: "pointer",
+                }}
+              >
+                click to view
+              </button>
+            </Link>
           </div>
           <div className="other-groups">
             <h1>CODE OF CONDUCT</h1>

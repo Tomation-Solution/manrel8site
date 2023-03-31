@@ -8,6 +8,7 @@ import "./Services.scss";
 import Subscribe from "../Subscribe/Subscribe";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { Link } from "react-router-dom";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 
 function Services() {
   return (
@@ -16,15 +17,13 @@ function Services() {
         <div className="services-services">
           <Subscribe />
           <NewNavBar />
-          <div className="services-hero_image">
-            <div className="services-cover">
-              <h1>Services</h1>
-              <p>
-                The only sector-specific Business Membership Organization (BMO)
-                structured to render advocacy services to its members.
-              </p>
-            </div>
-          </div>
+          <NewImageBanner
+            header={"Services"}
+            details={[
+              "     The only sector-specific Business Membership Organization (BMO) structured to render advocacy services to its members.",
+            ]}
+          />
+
           <div className="services-newservices">
             <div className="services-head">
               <h1>Core Services</h1>

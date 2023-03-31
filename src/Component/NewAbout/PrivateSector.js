@@ -33,7 +33,7 @@ const PrivateSector = () => {
             <div className="core-values-items">
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#2C3513" }}
+                style={{ backgroundColor: "#596d27" }}
               >
                 <h3>1</h3>
                 <div className="right">
@@ -43,7 +43,7 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#038B49" }}
+                style={{ backgroundColor: "#506223" }}
               >
                 <h3>2</h3>
                 <div className="right">
@@ -56,7 +56,7 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#86742A" }}
+                style={{ backgroundColor: "#47571f" }}
               >
                 <h3>3</h3>
                 <div className="right">
@@ -66,7 +66,7 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "	#006400" }}
+                style={{ backgroundColor: "#3e4c1b" }}
               >
                 <h3>4</h3>
                 <div className="right">
@@ -78,7 +78,7 @@ const PrivateSector = () => {
 
               <div
                 className="core-values-item"
-                style={{ backgroundColor: "#2E8B57" }}
+                style={{ backgroundColor: "#354117" }}
               >
                 <h3>5</h3>
                 <div className="right">
