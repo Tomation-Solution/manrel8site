@@ -39,13 +39,13 @@ const NavSlider = ({ clickfn }) => {
           </div>
         </div>
         <div className="nav-slider-item">
-          <span>Services</span>
+          {/* <span></span> */}
           <span className="items-span">
             <Link
               to={"/services"}
-              style={{ color: "#383f48", textDecoration: "none" }}
+              style={{ textDecoration: "none", color: "skyblue" }}
             >
-              Core Services
+              Services
             </Link>
           </span>
           {/* <div className="items">

@@ -17,6 +17,7 @@ import { trainingData } from "../Training/TrainingData";
 import { eventData } from "../Events/EventData";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/EventBgImg.png";
+import Subscribe from "../Subscribe/Subscribe";
 
 const NewEvents = () => {
   const [register, setRegister] = useState(false);
@@ -30,6 +31,7 @@ const NewEvents = () => {
         />
       )}
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <NewImageBanner
           image={backImage}

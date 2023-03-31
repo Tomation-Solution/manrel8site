@@ -78,7 +78,7 @@ const NewMemberRequire = () => {
           </h1>
 
           <div className="steps-items">
-            <div className="step-item" style={{ backgroundColor: "#6B8E23" }}>
+            <div className="step-item" style={{ backgroundColor: "#596d27" }}>
               <div className="circled-num">
                 <p>1</p>
               </div>
@@ -86,7 +86,7 @@ const NewMemberRequire = () => {
                 MUST HAVE A MANUFACTURING PLANT IN NIGERIA
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#2E8B57" }}>
+            <div className="step-item" style={{ backgroundColor: "#506223" }}>
               <div className="circled-num">
                 <p>2</p>
               </div>
@@ -94,7 +94,7 @@ const NewMemberRequire = () => {
                 MUST BE A MANUFACTURER OF AT LEAST ONE PRODUCT
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#006400" }}>
+            <div className="step-item" style={{ backgroundColor: "#47571f" }}>
               <div className="circled-num">
                 <p>3</p>
               </div>
@@ -102,7 +102,7 @@ const NewMemberRequire = () => {
                 THE MANUFACTURING PLANT MUST BE IN PRODUCTION.
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#228B22" }}>
+            <div className="step-item" style={{ backgroundColor: "#3e4c1b" }}>
               <div className="circled-num">
                 <p>4</p>
               </div>
@@ -111,7 +111,7 @@ const NewMemberRequire = () => {
                 REGULATORY BODY (SON, NAFDAC, ETC)
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#556B2F" }}>
+            <div className="step-item" style={{ backgroundColor: "#354117" }}>
               <div className="circled-num">
                 <p>5</p>
               </div>
@@ -144,7 +144,7 @@ const NewMemberRequire = () => {
           </h1>
 
           <div className="steps-items">
-            <div className="step-item" style={{ backgroundColor: "#2C3513" }}>
+            <div className="step-item" style={{ backgroundColor: "#596d27" }}>
               <div className="circled-num">
                 <p>1</p>
               </div>
@@ -152,7 +152,7 @@ const NewMemberRequire = () => {
                 COMPANY’S CERTIFICATE OF INCORPORATION
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#556B2F" }}>
+            <div className="step-item" style={{ backgroundColor: "#506223" }}>
               <div className="circled-num">
                 <p>2</p>
               </div>
@@ -160,7 +160,7 @@ const NewMemberRequire = () => {
                 CORPORATE AFFAIRS COMMISSION (CAC) FORMS C02 AND C07
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#4ECB71" }}>
+            <div className="step-item" style={{ backgroundColor: "#47571f" }}>
               <div className="circled-num">
                 <p>3</p>
               </div>
@@ -169,7 +169,7 @@ const NewMemberRequire = () => {
                 PROCEEDING TWO (2) YEARS OR BUSINESS PLAN FOR NEW COMPANIES
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#3CB371" }}>
+            <div className="step-item" style={{ backgroundColor: "#3e4c1b" }}>
               <div className="circled-num">
                 <p>4</p>
               </div>
@@ -187,25 +187,25 @@ const NewMemberRequire = () => {
           </h1>
 
           <div className="steps-items">
-            <div className="step-item" style={{ backgroundColor: "#2C3513" }}>
+            <div className="step-item" style={{ backgroundColor: "#596d27" }}>
               <div className="circled-num">
                 <p>1</p>
               </div>
               <p className="step-item-text">REGISTRATION FEE [N10,000.00]</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#2E8B57" }}>
+            <div className="step-item" style={{ backgroundColor: "#506223" }}>
               <div className="circled-num">
                 <p>2</p>
               </div>
               <p className="step-item-text">ANNUAL SUBSCRIPTION</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#4ECB71" }}>
+            <div className="step-item" style={{ backgroundColor: "#47571f" }}>
               <div className="circled-num">
                 <p>3</p>
               </div>
               <p className="step-item-text">SPECIAL DEVELOPMENT LEVY</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#006400" }}>
+            <div className="step-item" style={{ backgroundColor: "#3e4c1b" }}>
               <div className="circled-num">
                 <p>4</p>
               </div>
@@ -213,7 +213,7 @@ const NewMemberRequire = () => {
                 LAND USE CHARGE LEVY FOR MEMBERS IN LAGOS ONLY [N20,000.00]
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#038E4B" }}>
+            <div className="step-item" style={{ backgroundColor: "#354117" }}>
               <div className="circled-num">
                 <p>5</p>
               </div>
@@ -221,13 +221,13 @@ const NewMemberRequire = () => {
                 BUY MADE-IN-NIGERIA PRODUCTS ADVERT LEVY [N10,000.00]
               </p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "#228B22" }}>
+            <div className="step-item" style={{ backgroundColor: "#2c3613" }}>
               <div className="circled-num">
                 <p>6</p>
               </div>
               <p className="step-item-text">LEGAL LEVY [N10,000.00]</p>
             </div>
-            <div className="step-item" style={{ backgroundColor: "	#556B2F" }}>
+            <div className="step-item" style={{ backgroundColor: "#232b0f" }}>
               <div className="circled-num">
                 <p>7</p>
               </div>

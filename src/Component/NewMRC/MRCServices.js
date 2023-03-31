@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
 import "./MRCServices.scss";
+import backImage from "../../images/Group 61.png";
 
 const MRCServices = () => {
   return (
@@ -13,13 +15,14 @@ const MRCServices = () => {
       <UIProvider>
         <Subscribe />
         <NewNavBar />
-        <div className="topBg">
-          <h1>Manufacturers Resource Centre (MRC)</h1>
-          <p>
-            The only sector-specific Business Membership Organization (BMO)
-            structured to render advocacy services to its members
-          </p>
-        </div>
+
+        <NewImageBanner
+          image={backImage}
+          header={"Manufacturers Resource Centre (MRC)"}
+          details={[
+            "The Manufacturers Resource Centre is the Business Solution Arm of Manufacturers Association of Nigeria (MAN). The Manufacturers Resource Centre prides herself as an entity dedicated to proffering Business Solutions to MAN Members thus develop their Businesses, increase Market share and Production Excellence.",
+          ]}
+        />
 
         <div className="who-are">
           <h1 className="header">
