@@ -37,10 +37,13 @@ function Operate() {
           <div className="sect-body">
             <div className="cover">
               <div>
-                <h1 className="head-h1">
+                <h1 className="head-h1" style={{ color: "#2b3513" }}>
                   The Association has a National Secretariat
                 </h1>
-                <p className="head" style={{ margin: "20px 0px" }}>
+                <p
+                  className="head"
+                  style={{ margin: "20px 0px", color: "#2b3513" }}
+                >
                   In order to cater for members who have near homogenous or
                   sector-specific products, MAN has ten (10) Sectoral Groups and
                   seventy four (74) Sub-Sectoral Groups. The Groups are serviced
@@ -51,9 +54,11 @@ function Operate() {
               <div className="corpor">
                 <div className="flex">
                   <img src={Vector} alt="" />
-                  <h2 style={{ margin: "20px 0px" }}>MAN Corporate Offices</h2>
+                  <h2 style={{ margin: "20px 0px", color: "#2b3513" }}>
+                    MAN Corporate Offices
+                  </h2>
                 </div>
-                <p>
+                <p style={{ color: "#2b3513" }}>
                   The Head Office of MAN, named MAN House, is strategically
                   located at No. 77, Obafemi Awolowo Way, Ikeja, Lagos State,
                   Nigeria, the edifice is on a plot of land measuring
@@ -75,7 +80,7 @@ function Operate() {
                 </div>
                 <div className="card">
                   <h1>MAN Abuja Liaison Office</h1>
-                  <p>
+                  <p style={{ wordBreak: "break-word" }}>
                     Suit 202, Adamawa Plaza, Central Business District 1, Abuja
                     <br />
                     Tel: 08062409324, 07089398541 <br />
@@ -86,9 +91,9 @@ function Operate() {
               <div className="corpor">
                 <div className="flex">
                   <img src={Vector} alt="" />
-                  <h2>Branch Offices</h2>
+                  <h2 style={{ color: "#2b3513" }}>Branch Offices</h2>
                 </div>
-                <p>
+                <p style={{ color: "#2b3513" }}>
                   As a result of developments in the political structure of the
                   country, Branches were planned for the 36 states of the
                   federation and Abuja, to ensure that the needs of
@@ -114,7 +119,9 @@ function Operate() {
                       <p key={index}>{item}</p>
                     ))}
                     {item.otherDetails.map((item, index) => (
-                      <p key={index}>{item}</p>
+                      <p key={index} style={{ wordBreak: "break-word" }}>
+                        {item}
+                      </p>
                     ))}
                   </div>
                 ))}

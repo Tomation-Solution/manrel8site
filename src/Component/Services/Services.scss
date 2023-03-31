@@ -204,6 +204,11 @@
   }
   .services-newservices {
     padding: 50px 50px;
+
+    @include mobile-6 {
+      padding: 20px;
+    }
+
     .services-head {
       text-align: center;
       display: flex;
@@ -214,7 +219,6 @@
       h1 {
         font-size: 30px;
         color: #2b3513;
-        width: 60%;
         padding-bottom: 20px;
       }
       p {

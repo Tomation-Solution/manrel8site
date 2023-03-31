@@ -14,6 +14,7 @@ import {
 import { trainingData } from "./TrainingData";
 import backImage from "../../images/new-images/EventBgImg.png";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import Subscribe from "../Subscribe/Subscribe";
 
 const Training = () => {
   // const [options , setOptions] = useState("free")
@@ -26,6 +27,7 @@ const Training = () => {
       )}
       {pay && <PayTrainingModal closefn={() => setPay(!pay)} />}
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <NewImageBanner
           image={backImage}
