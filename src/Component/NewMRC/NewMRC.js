@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
-import NewImageBanner from "../NewImageBanner/NewImageBanner";
+// import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
@@ -25,8 +25,7 @@ const NewMRC = () => {
             increase Market share and Production Excellence.
           </p>
         </div>
-        {/* <NewImageBanner />/ */}
-
+        {/* <NewImageBanner /> */}
         <div className="who-are">
           <h1 className="header">
             This is <span>Who We Are</span>
@@ -47,7 +46,6 @@ const NewMRC = () => {
             </Link>
           </div>
         </div>
-
         <div className="objectives">
           <h1 className="header">
             Our <span>Objectives</span>
@@ -79,7 +77,6 @@ const NewMRC = () => {
             <span>Build and increase Professional Capacity and Skills.</span>
           </div>
         </div>
-
         <div className="cards">
           <div className="card" style={{ borderTop: "2px solid aqua" }}>
             <div style={{ backgroundColor: "aqua" }}></div>
@@ -116,7 +113,6 @@ const NewMRC = () => {
             </p>
           </div>
         </div>
-
         <div className="objectives">
           <h1 className="header">
             To View Services{" "}
