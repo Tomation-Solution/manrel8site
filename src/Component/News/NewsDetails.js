@@ -8,15 +8,13 @@ import "./NewsDetails.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Link, useParams } from "react-router-dom";
 import { newsdata } from "./NewsData";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/NewsBgImg.png";
 
 const NewsDetails = () => {
   const { id } = useParams();
@@ -32,12 +30,11 @@ const NewsDetails = () => {
             <Subscribe />
             <NewNavBar />
 
-            <div className="hero_image">
-              <div className="cover">
-                <h1>News Details</h1>
-                <h5>{renderdata.title}</h5>
-              </div>
-            </div>
+            <NewImageBanner
+              image={backImage}
+              header={"News Details"}
+              details={[`${renderdata.title}`]}
+            />
 
             <div className="news_main">
               <div className="cover">
@@ -50,13 +47,7 @@ const NewsDetails = () => {
                         {item}
                       </p>
                     ))}
-
-                    <div className="botom">
-                      <FacebookIcon />
-                      <LinkedInIcon />
-                      <TwitterIcon />
-                      <EmailIcon />
-                    </div>
+                    ]
                   </div>
                 )}
 

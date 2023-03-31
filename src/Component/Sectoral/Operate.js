@@ -9,6 +9,8 @@ import "./Sectoral.scss";
 import Vector from "../../images/Vector.png";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { operateData } from "./OperateData";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/Group 62.png";
 
 function Operate() {
   return (
@@ -17,21 +19,20 @@ function Operate() {
         <div className="sectoral">
           <Subscribe />
           <NewNavBar />
-          <div className="hero_image diff">
-            <div className="cover">
-              <h1>WHERE WE OPERATE</h1>
-              <p>Contact information of our different offices</p>
-            </div>
-          </div>
+          <NewImageBanner
+            image={backImage}
+            header={"Where we Operate"}
+            details={["Contact information of our different offices"]}
+          />
           <iframe
-            src="https://www.google.com/maps/d/u/0/embed?mid=1i8PKHSJGjNyfmq3QGwNNPyg_O34AXHw&ehbc=2E312F"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.367310454374!2d3.3413191932367914!3d6.6011929240879645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228ce24bd1d%3A0x5388ca4742e701eb!2sMAN%20House%2C%20Obafemi%20Awolowo%20Way%2C%20Ikeja%20101233%2C%20Ikeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1680258368303!5m2!1sen!2sng"
             width="100%"
             title="title1"
             height="450"
             style={{ border: "0" }}
-            allowFullScreen=""
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
           <div className="sect-body">
             <div className="cover">

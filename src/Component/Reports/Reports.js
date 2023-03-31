@@ -13,6 +13,8 @@ import Premium from "../Subscribe/Premium";
 import { newReportData } from "./ReportData";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/InsightBgImg.png";
 
 function App() {
   const [showPremiummodal, setShowPremiummodal] = useState(false);
@@ -24,12 +26,13 @@ function App() {
           {showPremiummodal && <Premium setPremium={setShowPremiummodal} />}
           <Subscribe />
           <NewNavBar />
-          <div className="hero_Image">
-            <div className="cover">
-              <h1>Reports</h1>
-              <p>Read our latest reports, blogs and publications</p>
-            </div>
-          </div>
+
+          <NewImageBanner
+            image={backImage}
+            header={"Reports"}
+            details={["Read our latest reports, blogs and publications."]}
+          />
+
           <div className="news_main">
             <div className="cover">
               <div className="right">

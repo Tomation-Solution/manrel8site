@@ -9,15 +9,13 @@ import "./ReportsDetails.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 
-import FacebookIcon from "@mui/icons-material/Facebook";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Link, useParams } from "react-router-dom";
 import { newReportData } from "./ReportData";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/InsightBgImg.png";
 
 const ReportsDetails = () => {
   const { id } = useParams();
@@ -33,12 +31,11 @@ const ReportsDetails = () => {
             <Subscribe />
             <NewNavBar />
 
-            <div className="hero_image">
-              <div className="cover">
-                <h1>Report Details</h1>
-                <h5>{renderdata.title}</h5>
-              </div>
-            </div>
+            <NewImageBanner
+              image={backImage}
+              header={"Report Details"}
+              details={[`${renderdata.title}`]}
+            />
 
             <div className="news_main">
               <div className="cover">
@@ -59,13 +56,6 @@ const ReportsDetails = () => {
                     >
                       To download click here
                     </a>
-
-                    <div className="botom">
-                      <FacebookIcon />
-                      <LinkedInIcon />
-                      <TwitterIcon />
-                      <EmailIcon />
-                    </div>
                   </div>
                 )}
 

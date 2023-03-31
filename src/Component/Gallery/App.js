@@ -16,6 +16,8 @@ import Footer from "../../Component/Footer/Footer";
 import Subscribe from "../Subscribe/Subscribe";
 import { gallerydata } from "./GalleryDetails/GalleryData";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import backImage from "../../images/new-images/InsightBgImg.png";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 
 /**
  * THIS IS BEING USED IN THE PUBLICATIONS, REPORTS, NEWS PAGES
@@ -99,12 +101,12 @@ function App() {
         <UIProvider>
           <Subscribe />
           <NewNavBar />
-          <div className="hero_Image">
-            <div className="cover">
-              <h1>Gallery</h1>
-              <p>view images of past events at MAN</p>
-            </div>
-          </div>
+
+          <NewImageBanner
+            image={backImage}
+            header={"Gallery"}
+            details={["View images of past events at MAN"]}
+          />
           <div className="news_main">
             <div className="cover">
               <div className="right">

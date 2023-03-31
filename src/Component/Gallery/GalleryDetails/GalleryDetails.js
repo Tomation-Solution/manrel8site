@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import theme from "../../../Styles/theme/Theme";
 import { UIProvider } from "../../../Ui";
 import Footer from "../../Footer/Footer";
+import NewImageBanner from "../../NewImageBanner/NewImageBanner";
 import NewNavBar from "../../NewNavBar/NewNavBar";
 import Subscribe from "../../Subscribe/Subscribe";
 import Wall from "../../Wall/Wall";
 import { gallerydata } from "./GalleryData";
+import backImage from "../../../images/new-images/InsightBgImg.png";
 
 import "./GalleryDetails.scss";
 
@@ -24,11 +26,11 @@ const GalleryDetails = () => {
             <Subscribe />
             <NewNavBar />
 
-            <div className="hero_Image">
-              <div className="cover">
-                <h1>{renderdata.name}</h1>
-              </div>
-            </div>
+            <NewImageBanner
+              image={backImage}
+              header={"Gallery"}
+              details={[`${renderdata.name}`]}
+            />
 
             <div className="gallery-con">
               {/* <p className="gallery-header">{renderdata.name}</p> */}

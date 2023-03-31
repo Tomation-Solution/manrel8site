@@ -10,6 +10,8 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import { toast } from "react-toastify";
 import { loginUser } from "../../utils/api-calls";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/MemberRequirement.png";
 
 const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
@@ -58,15 +60,19 @@ const NewMemberRequire = () => {
     <div className="member-require">
       <UIProvider>
         <NewNavBar />
-        <div className="topBg">
-          <h1>Membership Requirement</h1>
-        </div>
-        <h1 className="membreq-header">Membership Requirments</h1>
+        <NewImageBanner
+          image={backImage}
+          header={"Membership Requirements"}
+          details={[
+            "The membership requirement steps below detail the process to becoming a member of MAN",
+          ]}
+        />
+        {/* <h1 className="membreq-header">Membership Requirments</h1>
         <h1 className="membreq-subheader">
           The membership requirement steps below detail the process to becoming
           a member of MAN
-        </h1>
-        <section className="membreq-steps">
+        </h1> */}
+        <section className="membreq-steps" style={{ marginTop: "50px" }}>
           <h1>
             Step 1 : Confirm Eligibility - A Prospective Member of MAN Must
           </h1>

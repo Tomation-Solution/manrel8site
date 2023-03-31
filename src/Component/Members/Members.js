@@ -15,6 +15,8 @@ import Point4 from "../../images/Frame 46-1.png";
 import Point5 from "../../images/Group 6.png";
 import Point6 from "../../images/Frame 46.png";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import backImage from "../../images/new-images/TeamworkImg.jpg";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 
 function Members() {
   const navigate = useNavigate();
@@ -25,12 +27,7 @@ function Members() {
         <div className="members">
           <Subscribe />
           <NewNavBar />
-          <div className="hero_image">
-            <div className="cover">
-              <div className="tag"></div>
-              <h1>Membership</h1>
-            </div>
-          </div>
+          <NewImageBanner image={backImage} header={"Membership"} />
 
           <div className="why">
             <div className="man">

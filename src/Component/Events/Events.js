@@ -8,6 +8,8 @@ import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import { PayModal, RegisterModal, SingleEvent } from "../NewEvents/Modals";
 import { eventData } from "./EventData";
+import backImage from "../../images/new-images/EventBgImg.png";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
 
 const Events = () => {
   // const [options , setOptions] = useState("free")
@@ -19,13 +21,13 @@ const Events = () => {
       {pay && <PayModal closefn={() => setPay(!pay)} />}
       <UIProvider>
         <NewNavBar />
-        <div className="topBg">
-          <h1>Events</h1>
-          <p>
-            Conferences, seminars, workshops, certified courses and more for
-            manufacturers at all levels in every role.
-          </p>
-        </div>
+        <NewImageBanner
+          image={backImage}
+          header={"Events"}
+          details={[
+            "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
+          ]}
+        />
 
         <div className="event-options">
           <span className="span-active">Free Events</span>

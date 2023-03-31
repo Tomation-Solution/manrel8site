@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { PublicationPayModal } from "../NewEvents/Modals";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/InsightBgImg.png";
 
 const Publications = () => {
   const [viewpaid, setViewPaid] = useState(false);
@@ -33,25 +35,15 @@ const Publications = () => {
               <Subscribe />
               <NewNavBar />
 
-              <div className="hero_image">
-                <div className="cover">
-                  <h1>Publications</h1>
-                  <p>Read our latest reports, blogs and publications</p>
-                </div>
-              </div>
+              <NewImageBanner
+                image={backImage}
+                header={"Publications"}
+                details={["Read our latest reports, blogs and publications."]}
+              />
 
               <div className="news_main">
                 <div className="cover">
                   <div className="right">
-                    {/* {viewpaid ? (
-                      <p className="view-paid" onClick={viewpaidHandler}>
-                        Click to view paid publications
-                      </p>
-                    ) : (
-                      <p className="view-paid" onClick={viewpaidHandler}>
-                        Click to view Free publications
-                      </p>
-                    )} */}
                     <p className="view-paid" onClick={viewpaidHandler}>
                       Click to view paid publications
                     </p>

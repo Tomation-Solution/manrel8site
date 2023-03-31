@@ -5,6 +5,8 @@ import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { listOfMembers } from "./OurMembersList";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/MemberRequirement.png";
 
 function LatestMembers() {
   //PAGINATION LOGIC
@@ -26,16 +28,15 @@ function LatestMembers() {
     <UIProvider>
       <div className="members">
         <NewNavBar />
-        <div className="hero_image latest">
-          <div className="cover">
-            <div className="tag"></div>
-            <h1>Our Members</h1>
-            <p>See our esteemed across the country</p>
-          </div>
-        </div>
+
+        <NewImageBanner
+          image={backImage}
+          header={"Our Members"}
+          details={["See our esteemed across the country"]}
+        />
         <div className="wrapper">
           <div className="cover">
-            <h1>Our Members</h1>
+            <h1> </h1>
             <div className="flex">
               {paginatedData.map((item, index) => (
                 <div className="card" key={index} id={item?.Column2}>

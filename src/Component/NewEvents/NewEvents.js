@@ -15,6 +15,8 @@ import {
 import { Link } from "react-router-dom";
 import { trainingData } from "../Training/TrainingData";
 import { eventData } from "../Events/EventData";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/EventBgImg.png";
 
 const NewEvents = () => {
   const [register, setRegister] = useState(false);
@@ -29,13 +31,13 @@ const NewEvents = () => {
       )}
       <UIProvider>
         <NewNavBar />
-        <div className="topBg">
-          <h1>Events & Tranings</h1>
-          <p>
-            Conferences, seminars, workshops, certified courses and more for
-            manufacturers at all levels in every role.
-          </p>
-        </div>
+        <NewImageBanner
+          image={backImage}
+          header={"Consultancy,Events & Trainings"}
+          details={[
+            "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
+          ]}
+        />
 
         <div className="event-container">
           <h1 className="events-header">Events</h1>

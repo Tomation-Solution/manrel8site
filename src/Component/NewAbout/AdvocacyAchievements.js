@@ -8,6 +8,7 @@ import AchieveBullet from "../../images/new-images/AchieveBullet.png";
 import "./CodeofConduct.scss";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { useLocation } from "react-router-dom";
+import Subscribe from "../Subscribe/Subscribe";
 
 const CodeofConduct = () => {
   const pageLocation = useLocation();
@@ -15,7 +16,7 @@ const CodeofConduct = () => {
 
   useEffect(() => {
     if (where) {
-      window.scrollTo(0, 1000);
+      window.scrollTo(0, 0);
     } else {
       window.scrollTo(0, 0);
     }
@@ -25,6 +26,7 @@ const CodeofConduct = () => {
   return (
     <div className="code-conduct">
       <UIProvider>
+        <Subscribe />
         <NewNavBar />
         <div className="topBg"></div>
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { ThemeProvider } from "@mui/system";
-import Banner from "./Component/Banner";
 import { UIProvider } from "./Ui";
 import "./App.scss";
 

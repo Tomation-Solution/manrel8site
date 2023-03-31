@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 import Articleimage from "../../images/new-images/GalLinkImg (1).png";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/NewsBgImg.png";
 
 function News() {
   return (
@@ -22,12 +24,12 @@ function News() {
         <div className="news">
           <Subscribe />
           <NewNavBar />
-          <div className="hero_Image">
-            <div className="cover">
-              <h1>News</h1>
-              <p>Read our latest reports, blogs and publications</p>
-            </div>
-          </div>
+
+          <NewImageBanner
+            image={backImage}
+            header={"News"}
+            details={["Read our latest reports, blogs and publications."]}
+          />
 
           <div className="news_main">
             <div className="cover">

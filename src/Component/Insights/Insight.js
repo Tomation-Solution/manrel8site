@@ -13,6 +13,8 @@ import { newsdata } from "../News/NewsData";
 import { newPubData } from "../Publications/PublicationsData";
 import { newReportData } from "../Reports/ReportData";
 import Subscribe from "../Subscribe/Subscribe";
+import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import backImage from "../../images/new-images/InsightBgImg.png";
 
 const Insight = () => {
   return (
@@ -20,12 +22,11 @@ const Insight = () => {
       <Subscribe />
       <NewNavBar />
       <div className="insight-more">
-        <div className="hero_Image">
-          <div className="cover">
-            <h1>Insight</h1>
-            <p>Read our latest reports, blogs and publications</p>
-          </div>
-        </div>
+        <NewImageBanner
+          image={backImage}
+          header={"Insight"}
+          details={["Read our latest reports, blogs and publications."]}
+        />
         <div className="news_main">
           <div className="cover">
             <div className="right">
