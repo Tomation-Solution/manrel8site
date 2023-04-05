@@ -11,11 +11,11 @@ import Subscribe from "../Subscribe/Subscribe";
 import { newsdata } from "./NewsData";
 import { Link } from "react-router-dom";
 
-import Articleimage from "../../images/new-images/GalLinkImg (1).png";
+import Articleimage from "../../images/new-images/InsightCardIMages (1).jpg";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/NewsBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (1).jpg";
 
 function News() {
   return (
@@ -28,7 +28,7 @@ function News() {
           <NewImageBanner
             image={backImage}
             header={"News"}
-            details={["Read our latest reports, blogs and publications."]}
+            details={["Read our latest news."]}
           />
 
           <div className="news_main">

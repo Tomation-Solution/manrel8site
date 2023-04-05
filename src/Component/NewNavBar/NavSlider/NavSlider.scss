@@ -6,8 +6,16 @@
   flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
-  height: 600px;
+  height: 500px;
   overflow-y: auto;
+  margin: 40px 0px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-500%);
+
+  &.come-in {
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+  }
 
   .nav-slider-item {
     margin: 20px 0px;

@@ -90,7 +90,7 @@ const JoinUsPage = () => {
               }}
             >
               <button type="submit" onClick={submitHandler}>
-                pay for the application form
+                Pay for Membership Application Form
               </button>
             </div>
           </form>

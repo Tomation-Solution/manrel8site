@@ -9,7 +9,7 @@ import NewNavBar from "../../NewNavBar/NewNavBar";
 import Subscribe from "../../Subscribe/Subscribe";
 import Wall from "../../Wall/Wall";
 import { gallerydata } from "./GalleryData";
-import backImage from "../../../images/new-images/InsightBgImg.png";
+import backImage from "../../../images/new-images/InsightCardIMages (3).jpg";
 
 import "./GalleryDetails.scss";
 

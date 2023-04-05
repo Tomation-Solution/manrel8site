@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import { trainingData } from "../Training/TrainingData";
 import { eventData } from "../Events/EventData";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/EventBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import Subscribe from "../Subscribe/Subscribe";
 
 const NewEvents = () => {

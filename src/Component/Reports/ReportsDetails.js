@@ -15,7 +15,8 @@ import { Link, useParams } from "react-router-dom";
 import { newReportData } from "./ReportData";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/InsightBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (2).jpg";
+import ReportsPreview from "./ReportsPreview/ReportsPreview";
 
 const ReportsDetails = () => {
   const { id } = useParams();
@@ -41,26 +42,12 @@ const ReportsDetails = () => {
               <div className="cover">
                 {renderdata && (
                   <div className="left">
-                    <h2>{renderdata.title}</h2>
-                    <p className="pub-paragraph">Date: {renderdata?.date}</p>
-                    {renderdata?.freetext.map((item, index) => (
-                      <p className="pub-paragraph" key={index}>
-                        {item}
-                      </p>
-                    ))}
-                    <a
-                      className="readmore-link"
-                      href={renderdata.link}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      To download click here
-                    </a>
+                    <ReportsPreview render_data={renderdata} />
                   </div>
                 )}
 
                 <div className="right">
-                  <h2>Other Report</h2>
+                  <h2>Other Annual Reports</h2>
                   <div className="wrap">
                     {otherPub.map((item) => (
                       <div className="card" key={item.id}>

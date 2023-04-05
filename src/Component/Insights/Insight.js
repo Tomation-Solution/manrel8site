@@ -14,7 +14,7 @@ import { newPubData } from "../Publications/PublicationsData";
 import { newReportData } from "../Reports/ReportData";
 import Subscribe from "../Subscribe/Subscribe";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/InsightBgImg.png";
+import backImage from "../../images/new-images/ManInsightImg.jpg";
 
 const Insight = () => {
   return (
@@ -25,7 +25,9 @@ const Insight = () => {
         <NewImageBanner
           image={backImage}
           header={"Insight"}
-          details={["Read our latest reports, blogs and publications."]}
+          details={[
+            "Read our latest reports, news, publications and view our gallery.",
+          ]}
         />
         <div className="news_main">
           <div className="cover">

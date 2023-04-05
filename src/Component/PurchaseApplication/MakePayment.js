@@ -92,7 +92,7 @@ const MakePayment = () => {
         <div className="purchase-container">
           <h1 className="header">Make Payment</h1>
           <PurchaseWarnBanner>
-            Kindly confirm that the your information are correct before making
+            Kindly confirm that your information are correct before making
             payment
           </PurchaseWarnBanner>
           <form className="split-page" onSubmit={handleSubmit(onSubmitHandler)}>

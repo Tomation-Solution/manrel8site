@@ -8,7 +8,7 @@ import "./Publications.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 
-import Articleimage from "../../images/new-images/PublicationsDropImg.png";
+import Articleimage from "../../images/new-images/InsightCardIMages (4).jpg";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { newPubData } from "./PublicationsData";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { PublicationPayModal } from "../NewEvents/Modals";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/InsightBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (4).jpg";
 
 const Publications = () => {
   const [viewpaid, setViewPaid] = useState(false);
@@ -38,7 +38,7 @@ const Publications = () => {
               <NewImageBanner
                 image={backImage}
                 header={"Publications"}
-                details={["Read our latest reports, blogs and publications."]}
+                details={["Read our latest publications."]}
               />
 
               <div className="news_main">
@@ -49,6 +49,9 @@ const Publications = () => {
                     </p>
                     <div className="top">
                       <h2>Publications</h2>
+                    </div>
+                    <div className="top">
+                      <h4>Manufacturers CEO Confidence Index (MCCI)</h4>
                     </div>
                     <div className="wrap">
                       {newPubData.map((item) => {
@@ -72,13 +75,13 @@ const Publications = () => {
                         );
                       })}
                     </div>
-                    <div className="bto">
-                      {/* <Link
-                      to={"/insight-more"}
-                      style={{ textDecoration: "none", color: "#2b3513" }}
-                    >
-                      <h3>View all {">"}</h3>
-                    </Link> */}
+                    <br />
+                    <br />
+                    <br />
+                    <div>
+                      <div className="top">
+                        <h4>MAN News Magazine</h4>
+                      </div>
                     </div>
                   </div>
                   <div className="left">

@@ -3,7 +3,7 @@ import "./PurchaseComp.scss";
 export const PurchaseBanner = () => {
   return (
     <div className="purchase-banner">
-      <h1>Purchase Application Form</h1>
+      <h1>APPLICATION FOR MEMBERSHIP</h1>
       <p>
         Returning prospective member? <span>Click here to login.</span>
       </p>

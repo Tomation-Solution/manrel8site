@@ -14,7 +14,7 @@ import { Link, useParams } from "react-router-dom";
 import { newsdata } from "./NewsData";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/NewsBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (1).jpg";
 
 const NewsDetails = () => {
   const { id } = useParams();
@@ -41,13 +41,33 @@ const NewsDetails = () => {
                 {renderdata && (
                   <div className="left">
                     <h2>{renderdata.title}</h2>
-                    <p className="pub-paragraph">Date: {renderdata?.date}</p>
+                    {renderdata?.date && (
+                      <p className="pub-paragraph">Date: {renderdata?.date}</p>
+                    )}
                     {renderdata?.paragraphs.map((item, index) => (
                       <p className="pub-paragraph" key={index}>
                         {item}
                       </p>
                     ))}
-                    ]
+                    <div>
+                      {renderdata?.links
+                        ? renderdata?.links.map((item, index) => (
+                            <a
+                              style={{
+                                display: "block",
+                                margin: "10px 0px",
+                                fontSize: "14px",
+                              }}
+                              key={index}
+                              href={`${item.value}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {item.name}
+                            </a>
+                          ))
+                        : null}
+                    </div>
                   </div>
                 )}
 
@@ -65,7 +85,7 @@ const NewsDetails = () => {
                         </Link>
                         <div className="flex">
                           <h3>{item.name}</h3>
-                          <Link to={`/publications-details/${item.id}`}>
+                          <Link to={`/news-details/${item.id}`}>
                             <OpenInNewIcon />
                           </Link>
                         </div>

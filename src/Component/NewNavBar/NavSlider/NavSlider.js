@@ -9,7 +9,7 @@ import BackDrop from "../../BackDrop/BackDrop";
 const NavSlider = ({ clickfn }) => {
   return (
     <BackDrop>
-      <div className="nav-slider">
+      <div className={`nav-slider ${clickfn ? "come-in" : ""}`}>
         <div className="nav-slider-item">
           <span>About Us</span>
           <div className="items">
@@ -39,7 +39,6 @@ const NavSlider = ({ clickfn }) => {
           </div>
         </div>
         <div className="nav-slider-item">
-          {/* <span></span> */}
           <span className="items-span">
             <Link
               to={"/services"}
@@ -48,19 +47,6 @@ const NavSlider = ({ clickfn }) => {
               Services
             </Link>
           </span>
-          {/* <div className="items">
-            <span>MRC</span>
-            <span className="items-span">
-              <Link to={"/about-mrc"}>About MRC</Link>
-            </span>
-            <span className="items-span">
-              <Link to={"/mrc-services"}>MRC SERVICES</Link>
-            </span>
-
-            <span className="items-span">
-              <Link to={"/mpdcl"}>MPDCL</Link>
-            </span>
-          </div> */}
         </div>
         <div className="nav-slider-item">
           <span>
@@ -118,20 +104,6 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/mpdcl"}>MPDCL</Link>
             </span>
-            {/* <span>MRC</span>
-            <span className="items-span">
-              <Link to={"/about-mrc"}>About MRC</Link>
-            </span>
-            <span className="items-span">
-              <Link to={"/mrc-services"}>MRC SERVICES</Link>
-            </span>
-            <span className="items-span">
-              <Link to={"/mrc-contact"}>Contact Us</Link>
-            </span>
-
-            <span className="items-span">
-              <Link to={"/mpdcl"}>MPDCL</Link>
-            </span> */}
           </div>
         </div>
         <div className="nav-slider-translate">
