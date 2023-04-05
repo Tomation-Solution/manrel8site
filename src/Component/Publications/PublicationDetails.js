@@ -12,7 +12,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { newPubData } from "./PublicationsData";
 import { Link, useParams } from "react-router-dom";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import backImage from "../../images/new-images/InsightBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (4).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 
 const PublicationDetails = () => {
@@ -40,7 +40,9 @@ const PublicationDetails = () => {
                 {renderdata && (
                   <div className="left">
                     <h2>{renderdata.title}</h2>
-                    <p className="pub-paragraph">Date: {renderdata?.date}</p>
+                    {renderdata?.date && (
+                      <p className="pub-paragraph">Date: {renderdata?.date}</p>
+                    )}
                     {renderdata?.freetext.map((item, index) => (
                       <p className="pub-paragraph" key={index}>
                         {item}

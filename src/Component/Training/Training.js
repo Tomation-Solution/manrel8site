@@ -12,7 +12,7 @@ import {
   SingleTraining,
 } from "../NewEvents/Modals";
 import { trainingData } from "./TrainingData";
-import backImage from "../../images/new-images/EventBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import Subscribe from "../Subscribe/Subscribe";
 

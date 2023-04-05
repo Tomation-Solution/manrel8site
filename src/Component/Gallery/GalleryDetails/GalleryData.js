@@ -21,7 +21,6 @@ import DSC_6107 from "../../../images/Photos for Gallery/OPSN  CIPPE EVENT/DSC_6
 import DSC_6155 from "../../../images/Photos for Gallery/OPSN  CIPPE EVENT/DSC_6155.jpg";
 
 import DSC_6476 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX/DSC_6476.jpg";
-import DSC_6519 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX/DSC_6519.jpg";
 import DSC_6548 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX/DSC_6548.jpg";
 import DSC_6540 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX/DSC_6540.jpg";
 import DSC_6489 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX/DSC_6489.jpg";
@@ -36,7 +35,7 @@ import DSC_6463 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX
 export const gallerydata = [
   {
     id: "1",
-    name: "COURTESY VISIT TO ITALIAN AMBASSDOR",
+    name: "THE COURTESY VISIT TO ITALIAN AMBASSADOR",
     image: [
       {
         caption:
@@ -45,14 +44,14 @@ export const gallerydata = [
       },
       {
         caption:
-          "MAN President engaging in economic discussion with Italian Ambassador joined by the Vice President MAN Eastern Zone, Engr. G. Massari at the Italian Embassy.",
+          "MAN President, Otunba Francis Meshioye engaging in economic discussion with Italian Ambassador joined by the Vice President MAN Eastern Zone, Engr. Giandomenico Massari at the Italian Embassy.",
         image: Photo2,
       },
     ],
   },
   {
     id: "2",
-    name: "ENGR AHMED SENDOFF PICTURES",
+    name: "ENGR MANSUR AHMED'S VALEDICTORY DINNER",
     image: [
       {
         caption:
@@ -113,7 +112,7 @@ export const gallerydata = [
   },
   {
     id: "3",
-    name: "OPSN CIPPE EVENT",
+    name: "OPSN / CIPE EVENT",
     image: [
       {
         caption:
@@ -149,14 +148,13 @@ export const gallerydata = [
   },
   {
     id: "4",
-    name: "MEDIA LUNCHEON PICTURES",
+    name: "2023 MEDIA LUNCHEON",
     image: [
       {
         caption:
           "LR: Director General of MAN, Mr. Segun Ajayi-Kadir, MAN President, Otunba Francis Meshioye and Chairperson, Corporate Affairs and Strategic Planning Committee, Mrs. Kofo Akinkugbe at the 7th edition of the MAN Reporter of the year award and presidential media luncheon held on Tuesday, March 7, 2023",
         image: DSC_6476,
       },
-      { caption: "Same caption as 1", image: DSC_6519 },
       {
         caption:
           "Group photograph of MAN management with first prize winners of the Television, Newspaper, Radio, Online and Photo journalist category of the 2022 MAN Reporter of the Year Award.",

@@ -283,7 +283,7 @@ const NewMemberRequire = () => {
               }}
             >
               <button onClick={submitHandler}>
-                pay for the application form
+                Pay for Membership Application Form
               </button>
             </div>
           </form>

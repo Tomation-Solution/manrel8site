@@ -31,6 +31,85 @@ function Services() {
             <div className="services-wrap diff">
               <div className="services-card">
                 <div className="services-overlay">
+                  <h1>Membership Services</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Public Policy Advocacy </h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>
+                    Specific intervention on Members and Sectoral Problems
+                  </h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Economic Research and Analysis</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Monitoring and Analysing of Government Policies</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>
+                    Preparation of Memoranda on Topical Industrial and Economic
+                    Issues
+                  </h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Liaising Activities for Members </h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Promotion and Organisaton of Trade Mission</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Promotion of Made-in-Nigeria Products</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>
+                    Reconciliation and Harmonisation of Diverse interest of
+                    Members
+                  </h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Industry Information Dissemination</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Seminars and Conferences</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1>Publications</h1>
+                </div>
+              </div>
+              <div className="services-card">
+                <div className="services-overlay">
+                  <h1> Membership Satisfaction and Monitoring</h1>
+                </div>
+              </div>
+              {/*
+                       <div className="services-card">
+                <div className="services-overlay">
                   <h1>BUSINESS DEVELOPMENT SERVICES</h1>
                   <p>
                     Identify possible problems affecting SME‘s by preparing a
@@ -39,7 +118,7 @@ function Services() {
                   </p>
                 </div>
               </div>
-              <div className="services-card">
+               <div className="services-card">
                 <div className="services-overlay">
                   <h1>BUSINESS INFORMATION SERVICES</h1>
                   <p>
@@ -137,7 +216,7 @@ function Services() {
                 <div className="services-overlay">
                   <h1>Publications</h1>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="services-head">
               <h1>Manufacturers Resource Centre (MRC) Services</h1>

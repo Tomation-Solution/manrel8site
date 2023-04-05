@@ -48,8 +48,8 @@ const PrivateSector = () => {
                 <h3>2</h3>
                 <div className="right">
                   <p>
-                    Nigeria Association of Chambers of Commerce, Industry, Mines
-                    and Agriculture (NACCIMA)
+                    Nigerian Association of Chambers of Commerce, Industry,
+                    Mines and Agriculture (NACCIMA)
                   </p>
                 </div>
               </div>
@@ -60,7 +60,7 @@ const PrivateSector = () => {
               >
                 <h3>3</h3>
                 <div className="right">
-                  <p>Nigeria Association of Small-Scale Industries (NASSI)</p>
+                  <p>Nigerian Association of Small-Scale Industries (NASSI)</p>
                 </div>
               </div>
 
@@ -71,7 +71,7 @@ const PrivateSector = () => {
                 <h3>4</h3>
                 <div className="right">
                   <p>
-                    Nigeria Association of Small and Medium Enterprises (NASME)
+                    Nigerian Association of Small and Medium Enterprises (NASME)
                   </p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const PrivateSector = () => {
               >
                 <h3>5</h3>
                 <div className="right">
-                  <p>Nigeria Employers Consultative Association (NECA)</p>
+                  <p>Nigerian Employeers Consultative Association (NECA)</p>
                 </div>
               </div>
             </div>

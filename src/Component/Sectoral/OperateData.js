@@ -36,7 +36,7 @@ export const operateData = [
   {
     id: "4",
     name: "MAN, Cross River/Akwa Ibom States Branch",
-    manager: [{ name: "Klinton Offiong", title: "Executive Secretary	" }],
+    manager: [{ name: "Mr. Klinton Offiong", title: "Executive Secretary	" }],
     mangerTitle: [""],
     otherDetails: [
       "Address: 45B, IBB Way, behind Stanbic IBTC Pension Managers, Calabar, Cross River State",
@@ -47,7 +47,7 @@ export const operateData = [
     id: "5",
     name: "MAN, Kaduna, Katsina,Sokoto,Kebbi States Branch",
     manager: [
-      { name: "Muhammad Bello Muhammad", title: "Executive Secretary" },
+      { name: "Mr. Muhammad Bello Muhammad", title: "Executive Secretary" },
     ],
     mangerTitle: [""],
     otherDetails: [
@@ -120,7 +120,7 @@ export const operateData = [
   {
     id: "12",
     name: "MAN, Kano State Branch",
-    manager: [{ name: "Ibrahim Garba", title: "Executive Secretary" }],
+    manager: [{ name: "Mr. Ibrahim Garba", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
       "Address: No. 500 Sheikh Nasiru Kabara City (Amana City), Zaria Road, Kano State",
