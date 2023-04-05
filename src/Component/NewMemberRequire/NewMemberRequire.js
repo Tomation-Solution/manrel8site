@@ -67,15 +67,8 @@ const NewMemberRequire = () => {
             "The membership requirement steps below detail the process to becoming a member of MAN",
           ]}
         />
-        {/* <h1 className="membreq-header">Membership Requirments</h1>
-        <h1 className="membreq-subheader">
-          The membership requirement steps below detail the process to becoming
-          a member of MAN
-        </h1> */}
         <section className="membreq-steps" style={{ marginTop: "50px" }}>
-          <h1>
-            Step 1 : Confirm Eligibility - A Prospective Member of MAN Must
-          </h1>
+          <h1>Step 1 : Confirm Eligibility</h1>
 
           <div className="steps-items">
             <div className="step-item" style={{ backgroundColor: "#596d27" }}>
@@ -123,7 +116,7 @@ const NewMemberRequire = () => {
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>Step 2 : Make Payment for Application Form</h1>
+          <h1>Step 2 : Purchase a Membership Application Form</h1>
           <div className="steps-items2">
             <p>
               An intending member of the Association, (being a manufacturer)
@@ -131,17 +124,14 @@ const NewMemberRequire = () => {
               Form.
             </p>
             <span>
-              <a href="/">Click Here to make payment</a>
+              <Link to={"/join-now-page"}>Click Here to make payment</Link>
             </span>
             <h1>APPLICATION FORM [N20,000.00]</h1>
             <div className="gray-circle"></div>
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>
-            Step 3 : Fill application form, upload necessary documents and save
-            - Documents required for upload include:
-          </h1>
+          <h1>Step 3 : Submit/upload the following documents</h1>
 
           <div className="steps-items">
             <div className="step-item" style={{ backgroundColor: "#596d27" }}>
@@ -149,12 +139,20 @@ const NewMemberRequire = () => {
                 <p>1</p>
               </div>
               <p className="step-item-text">
+                COMPLETED MEMBERSHIP APPLICATION FORM
+              </p>
+            </div>
+            <div className="step-item" style={{ backgroundColor: "#596d27" }}>
+              <div className="circled-num">
+                <p>2</p>
+              </div>
+              <p className="step-item-text">
                 COMPANY’S CERTIFICATE OF INCORPORATION
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#506223" }}>
               <div className="circled-num">
-                <p>2</p>
+                <p>3</p>
               </div>
               <p className="step-item-text">
                 CORPORATE AFFAIRS COMMISSION (CAC) FORMS C02 AND C07
@@ -162,7 +160,7 @@ const NewMemberRequire = () => {
             </div>
             <div className="step-item" style={{ backgroundColor: "#47571f" }}>
               <div className="circled-num">
-                <p>3</p>
+                <p>4</p>
               </div>
               <p className="step-item-text">
                 COPIES OF DULY CERTIFIED AUDITED FINANCIAL STATEMENT FOR
@@ -171,7 +169,7 @@ const NewMemberRequire = () => {
             </div>
             <div className="step-item" style={{ backgroundColor: "#3e4c1b" }}>
               <div className="circled-num">
-                <p>4</p>
+                <p>5</p>
               </div>
               <p className="step-item-text">
                 A COVERING LETTER ON THE LETTER HEAD OF YOUR COMPANY APPLYING TO
@@ -183,7 +181,8 @@ const NewMemberRequire = () => {
         </section>
         <section className="membreq-steps">
           <h1>
-            Step 4 :Make Payment for Annual Subscription, Levies and Submit
+            Step 4 : Make Payment for Annual Subscription, Levies and other
+            entry payments
           </h1>
 
           <div className="steps-items">
@@ -237,16 +236,41 @@ const NewMemberRequire = () => {
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>Step 5 : Await Schedule of Inspection Visit From MAN</h1>
+          <h1>Step 5 : Acknowledgement and Inspection of Factory</h1>
           <div className="steps-items2">
-            <h1>Await Schedule of Factory Inspection visit from MAN</h1>
+            {/* <h1>Await Schedule of Factory Inspection visit from MAN</h1> */}
+            <h3 style={{ color: "#2b3513" }}>
+              • Payments and documents submitted shall be acknowledged.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • The Branch shall schedule factory inspection visit.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Report of the factory inspection visit shall be forwarded to the
+              National Secretariat for processing.
+            </h3>
             <div className="gray-circle"></div>
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>Step 6 : Await Confirmation of Approval from MAN</h1>
+          <h1>Step 6 : Approval and Admission to Membership</h1>
           <div className="steps-items2">
-            <h1>Await Confirmation of Approval From MAN</h1>
+            <h3 style={{ color: "#2b3513" }}>
+              • Qualified applicant(s) shall be presented to the National
+              Council for consideration and approval.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Approval or rejection of Membership Application.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Issuance of admission or rejection letter.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Issuance of Membership Certificate to admitted members.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Induction of newly admitted members.
+            </h3>
             <div className="gray-circle"></div>
           </div>
         </section>
@@ -267,10 +291,10 @@ const NewMemberRequire = () => {
           <form>
             <label>
               <input
-                type={"checkbox"}
-                value="agree"
+                type={"radio"}
+                value={"agree"}
                 required
-                onClick={(e) => setCheck(e.target.value)}
+                onChange={(e) => setCheck(e.target.value)}
               />
               I hereby Confirm that i am Eligible to be a Member of MAN.
             </label>

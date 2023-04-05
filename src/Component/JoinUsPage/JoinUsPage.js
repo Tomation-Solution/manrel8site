@@ -74,7 +74,7 @@ const JoinUsPage = () => {
           <form>
             <label>
               <input
-                type={"checkbox"}
+                type={"radio"}
                 value="agree"
                 required
                 onClick={(e) => setCheck(e.target.value)}
