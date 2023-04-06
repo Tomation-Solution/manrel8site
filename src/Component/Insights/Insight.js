@@ -25,9 +25,7 @@ const Insight = () => {
         <NewImageBanner
           image={backImage}
           header={"Insight"}
-          details={[
-            "Read our latest reports, news, publications and view our gallery.",
-          ]}
+          details={["Read our latest news, reports and publications."]}
         />
         <div className="news_main">
           <div className="cover">

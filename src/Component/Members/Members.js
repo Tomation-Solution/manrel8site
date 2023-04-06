@@ -32,7 +32,7 @@ function Members() {
           <div className="why">
             <div className="man">
               <h1>Why Join MAN?</h1>
-              <p>Here are cardinal points why you should join MAN.</p>
+              <p>Here are reasons why you should join MAN.</p>
             </div>
             <div className="point">
               <div className="card">
@@ -40,12 +40,12 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>CREDIBLITY/IDENTITY</h1>
+                  <h1>RECOGNITION</h1>
                   <p>
-                    The Association provides credibility and identity to
-                    member-companies as bonafide Manufacturers that can be
-                    traced and not fake manufacturers hiding to clone or fake
-                    products.
+                    Recognition as a credible manufacturer by government
+                    agencies, other organized private sector groups, financial
+                    institutions, and the business community both at Nigeria and
+                    abroad.
                   </p>
                 </div>
               </div>
@@ -54,11 +54,15 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>POLICY FORMULATION</h1>
+                  <h1>INFLUENCE</h1>
                   <p>
-                    MAN provides a platform for member companies to contribute
-                    to the formulation of an emerging Government policy or
-                    amendment of an existing one.
+                    On behalf of members, MAN leverages on established
+                    relationships with the government to ensure the voice of
+                    manufacturing is heard where and when it matters. With
+                    business leaders of great minds steering our agenda, and a
+                    vibrant membership giving their views, the government
+                    actively seeks our input when legislative or policy
+                    decisions are about to be made.
                   </p>
                 </div>
               </div>
@@ -67,11 +71,15 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>SECTORAL MEETINGS</h1>
+                  <h1>INSIGHT INTO FIRST-HAND INFORMATION</h1>
                   <p>
-                    MAN provides a platform for member-companies in similar
-                    production line to interact in a very friendly and frank
-                    manner on subsector/sector specific issues and challenges.
+                    Whether you are planning your next business move, or
+                    managing the impact of legislative or political changes, our
+                    market-leading economic surveys, forecasts, and analysis
+                    helps you to plan. Reports, briefings, consultative forums,
+                    etc., gives you valuable intelligence on the latest policy
+                    and economic developments, business trends, and best
+                    practices.
                   </p>
                 </div>
               </div>
@@ -84,7 +92,8 @@ function Members() {
                   <p>
                     The Association provides member-companies with a platform
                     that ensures that they are the first to know about a new
-                    government circular or memo that will affect manufacturers.
+                    government circular or policy that will affect
+                    manufacturers.
                   </p>
                 </div>
               </div>
@@ -93,14 +102,10 @@ function Members() {
                   <img src={Image2} alt="" />
                 </div>
                 <div className="right">
-                  <h1>CONCESSIONS</h1>
+                  <h1>OPPORTUNITY IN POLICY FORMULATION</h1>
                   <p>
-                    Member-companies enjoy concessions and considerations
-                    approved by the Federal Government Agencies and Parastatals
-                    to encourage bonafide manufacturers. Such as the Standards
-                    Organisation of Nigeria (SON), National Agency for Food and
-                    Drug Administration and Control (NAFDAC), Nigeria Customs
-                    Service (NCS) and Bank of Industry (BOI)
+                    Members’ views are well represented in policy formulation,
+                    especially policies that affect manufacturers.
                   </p>
                 </div>
               </div>
@@ -116,6 +121,56 @@ function Members() {
                   </p>
                 </div>
               </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>DIRECT INTERVENTION ON MEMBERS’ PROBLEMS</h1>
+                  <p>
+                    MAN intervens in members’ regulatory and operational issues.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>PROMOTING MADE-IN-NIGERIA PRODUCTS</h1>
+                  <p>
+                    Members are further encouraged by the Association's Campaign
+                    for Ministries, Departments and Agencies of the government
+                    to patronize locally produced goods.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>CONCESSION</h1>
+                  <p>
+                    Member-Companies enjoy concessions approved by Federal
+                    Government agencies and parastatals to encourage bonafide
+                    manufacturers.
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="left">
+                  <img src={Image2} alt="" />
+                </div>
+                <div className="right">
+                  <h1>SECTORAL GROUPS</h1>
+                  <p>
+                    MAN provides a conducive platform for member companies in a
+                    similar production line, to interact in a collaborative
+                    manner on sector/sub-sector-specific issues and challenges.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="benefits">
               <div className="top">
@@ -124,11 +179,11 @@ function Members() {
               <div className="row1">
                 <div className="card up">
                   <img src={Point1} alt="" />
-                  <p>CREDIBILITY AS MANUFACTURER</p>
+                  <p>CREDIBILITY AS A MANUFACTURER</p>
                 </div>
                 <div className="card">
                   <img src={Point2} alt="" />
-                  <p>DIRECT INTERVENTION ON MEMBERS’ PROBLEMS</p>
+                  <p>DIRECT INTERVENTION TO RESOLVE MEMBERS’ CHALLENGES</p>
                 </div>
                 <div className="card up">
                   <img src={Point3} alt="" />
@@ -140,7 +195,7 @@ function Members() {
                   <img src={Point4} alt="" />
                   <p>
                     PUBLIC POLICY ADVOCACY FOR FAVOURABLE INVESTMENT/INDUSTRIAL
-                    POLICIES
+                    CLIMATE
                   </p>
                 </div>
                 <div className="card">
@@ -151,16 +206,16 @@ function Members() {
                 </div>
                 <div className="card up">
                   <img src={Point6} alt="" />
-                  <p>PROMOTING MADE-IN-NIGERIA PRODUCTS</p>
+                  <p>PROMOTION OF PATRONAGE OF MADE-IN-NIGERIA PRODUCTS</p>
                 </div>
               </div>
             </div>
             <div className="respo">
               <h1>RESPONSIBILITIES OF MEMBERS</h1>
               <p>
-                To effectively discharge its role as an effective Business
-                Association, MAN expects its members to loyally discharge the
-                following responsibilities and obligations:
+                To effectively discharge its role as a Business membership
+                organisation, MAN expects its members to unfaillingly discharge
+                the following responsibilities and obligations:
               </p>
             </div>
             <div className="acrds">
@@ -204,35 +259,6 @@ function Members() {
                     <br />
                     Each member will be required to pay an annual subscription
                     to meet the running expenses of the Association.
-                    <br />
-                    The subscription shall be calculated in accordance with the
-                    decision of the National Council and shall be paid annually
-                    at the commencement of each Association year or in the case
-                    of new members at the time of application for membership.
-                    <br />
-                    Each member shall submit to the Director General an annual
-                    return showing details required for the assessment of the
-                    subscriptions due.
-                    <br />
-                    Any member wishing to resign its membership of the
-                    Association may only do so by giving at least three months’
-                    notice in writing of its intention to resign.
-                    <br />
-                    Any member resigning shall pay all subscriptions due from it
-                    and shall cease, as from the end of the period of its
-                    notice, to have any claim on the Association in respect of
-                    its funds.
-                    <br />
-                    Any member who shall fail in observance of any of the
-                    Articles of the Association or act in any manner prejudicial
-                    to the interest of the Association may be excluded from the
-                    Association on the recommendation of the National Council
-                    and confirmed at a General Meeting.
-                    <br />A member so excluded shall forfeit all claims to a
-                    refund of the money paid by it to the Association on its
-                    admission as a member thereof, or by way of annual
-                    subscription as the case may be and shall cease to be a
-                    member of the Association.
                   </p>
                 </div>
               </div>
@@ -258,9 +284,8 @@ function Members() {
                   <p>
                     Members should support the Association in all its
                     undertakings by prompt provision of data/ information when
-                    requested and by constructive participation in
-                    representations and meetings with Government on behalf of
-                    the Association when required.
+                    requested and by effective participation in meetings with
+                    Government or its Agencies when required.
                   </p>
                 </div>
               </div>
@@ -273,7 +298,7 @@ function Members() {
                   <p>
                     Members are expected to participate in MAN training
                     programmes with a view to improving their product quality
-                    and manpower capacity.
+                    and human capital stock.
                   </p>
                 </div>
               </div>
@@ -286,11 +311,8 @@ function Members() {
                   <p>
                     Members of MAN should demonstrate responsible corporate
                     citizenship at all times. <br />
-                    Members should therefore endeavor to support the society in
-                    the provision of: <br />
-                    Utilities <br /> Maintenance of law and order <br />
-                    Other philanthropic activities to support the less
-                    privileged and the socially disadvantaged.
+                    Members are therefore encouraged to support their host
+                    communities to the best of their activities.
                   </p>
                 </div>
               </div>

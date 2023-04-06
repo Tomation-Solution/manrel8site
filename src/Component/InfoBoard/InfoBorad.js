@@ -38,7 +38,7 @@ function InfoBoard() {
           <InfoItemImg src={Interact} />
           <InfoItemTitle>Interactive & Networking Platform</InfoItemTitle>
           <InfoItemDescription>
-            Get insights and share best practices with like-minded manufacturers
+            Get insights and share ideas with like-minded manufacturers
           </InfoItemDescription>
         </InfoItemContainer>
 
@@ -52,7 +52,7 @@ function InfoBoard() {
           <InfoItemImg src={Export} />
           <InfoItemTitle>Exports</InfoItemTitle>
           <InfoItemDescription>
-            Export of manufactured products
+            Export of locally manufactured products
           </InfoItemDescription>
         </InfoItemContainer>
 

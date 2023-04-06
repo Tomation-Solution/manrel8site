@@ -20,12 +20,13 @@ const PrivateSector = () => {
         <div className="private-sector-content">
           <div className="overlapModal">
             <h1 style={{ color: "#2b3513" }}>
-              ORGANIZED PRIVATE SECTOR (OPS) BODIES
+              ORGANIZED PRIVATE SECTOR OF NIGERIA (OPSN) BODIES
             </h1>
             <p style={{ color: "#2b3513" }}>
-              The Organized Private Sector (OPS) is an umbrella organization of
-              Business Membership Organizations representing the interest of the
-              private sector in Nigeria. OPS member organizations are the
+              The Organized Private Sector of Nigeria (OPSN) is an umbrella
+              organization of Business Membership Organizations representing the
+              interest of the private sector in Nigeria. OPSN member
+              organizations are:
             </p>
           </div>
 
@@ -60,7 +61,9 @@ const PrivateSector = () => {
               >
                 <h3>3</h3>
                 <div className="right">
-                  <p>Nigerian Association of Small-Scale Industries (NASSI)</p>
+                  <p>
+                    Nigerian Association of Small Scale Industrialists (NASSI)
+                  </p>
                 </div>
               </div>
 
@@ -126,7 +129,7 @@ const PrivateSector = () => {
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
-              <h5>African Development Bank (AfDB)</h5>
+              <h5>African Development Bank (AfDB) Group</h5>
             </div>
 
             <div className="achievements-item">

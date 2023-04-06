@@ -27,7 +27,7 @@ export const AboutList = [
     image: Image1,
     title: "News",
     description:
-      "Catch up on details of latest activities of the association, press releases and position documents shared for your information purposes.",
+      "Catch up on details of latest activities of the Association, press releases and position documents shared for your information purposes.",
     linkHead: "Proccee to News",
     location: "news",
   },

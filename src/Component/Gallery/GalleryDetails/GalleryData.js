@@ -35,7 +35,7 @@ import DSC_6463 from "../../../images/Photos for Gallery/MEDIA LUCHEON EVENT PIX
 export const gallerydata = [
   {
     id: "1",
-    name: "THE COURTESY VISIT TO ITALIAN AMBASSADOR",
+    name: "THE COURTESY VISIT TO THE ITALIAN AMBASSADOR",
     image: [
       {
         caption:

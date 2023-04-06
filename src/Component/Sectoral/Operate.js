@@ -44,11 +44,11 @@ function Operate() {
                   className="head"
                   style={{ margin: "20px 0px", color: "#2b3513" }}
                 >
-                  In order to cater for members who have near homogenous or
-                  sector-specific products, MAN has ten (10) Sectoral Groups and
-                  seventy four (74) Sub-Sectoral Groups. The Groups are serviced
-                  by full-time Sectoral Executives located at the National
-                  Secretariat of the Association.
+                  In order to cater for members who have near homogenous
+                  products, MAN has ten (10) Sectoral Groups and seventy four
+                  (74) Sub-Sectoral Groups. The Groups are serviced by full-time
+                  Sectoral Executives located at the National Secretariat of the
+                  Association.
                 </p>
               </div>
               <div className="corpor">
@@ -61,10 +61,7 @@ function Operate() {
                 <p style={{ color: "#2b3513" }}>
                   The Head Office of MAN, named MAN House, is strategically
                   located at No. 77, Obafemi Awolowo Way, Ikeja, Lagos State,
-                  Nigeria, the edifice is on a plot of land measuring
-                  2,860.771sq meters benevolently donated to the Association for
-                  years by its first president, Chief Timothy. Adeola Odutola,
-                  the Ogbeni-Oja of Ijebu-Ode, Ogun State, Nigeria.
+                  Nigeria.
                 </p>
               </div>
               <div className="house">
@@ -73,18 +70,19 @@ function Operate() {
                   <p>
                     77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria
                     <br />
-                    Tel: 01-4542700, 01-4542701 <br />
-                    Email: info@manufacturersnigeria.org <br /> Website:
+                    01-4542700, 01-4542701 <br />
+                    info@manufacturersnigeria.org <br /> Website:
                     www.manufacturersnigeria.org
                   </p>
                 </div>
                 <div className="card">
                   <h1>MAN Abuja Liaison Office</h1>
                   <p style={{ wordBreak: "break-word" }}>
-                    Suit 202, Adamawa Plaza, Central Business District 1, Abuja
+                    Suit 202, Adamawa Plaza, Abogo Largema Street, Central
+                    Business District 1, Abuja
                     <br />
-                    Tel: 08062409324, 07089398541 <br />
-                    Email: manabujaliaison@manufacturersnigeria.org
+                    08062409324, 07089398541 <br />
+                    manabujaliaison@manufacturersnigeria.org
                   </p>
                 </div>
               </div>
@@ -94,15 +92,9 @@ function Operate() {
                   <h2 style={{ color: "#2b3513" }}>Branch Offices</h2>
                 </div>
                 <p style={{ color: "#2b3513" }}>
-                  As a result of developments in the political structure of the
-                  country, Branches were planned for the 36 states of the
-                  federation and Abuja, to ensure that the needs of
-                  manufacturers at both the State and Local Government levels
-                  are met. However, due to the rate of industrial development in
-                  some states, these states have been grouped together until
-                  such a time that there are enough member companies from each
-                  state to form a Branch. All Branch offices are headed by
-                  full-time Executive Secretaries and a compliment of staff.
+                  MAN covers our members operations across the country from our
+                  14 Branch offices. All Branch offices are headed by full-time
+                  Executive Secretaries and a compliment of staff.
                 </p>
               </div>
               <div className="house">

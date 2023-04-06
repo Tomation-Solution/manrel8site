@@ -7,8 +7,8 @@ export const operateData = [
     manager: [{ name: "Mr. Femi Gbadegun", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Email: femi.gbadegun@manufacturersnigeria.org, manikeja@manufacturersnigeria.org",
-      "Address: No. 2A, Akilo Road, Ogba, Ikeja, Lagos State",
+      "femi.gbadegun@manufacturersnigeria.org, manikeja@manufacturersnigeria.org",
+      "No. 2A, Akilo Road, Ogba, Ikeja, Lagos State",
     ],
   },
   {
@@ -17,8 +17,8 @@ export const operateData = [
     manager: [{ name: "Mr. Sunday Okpe", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: No. 3 Shalom Street by Lagoon Estate Ark, Amuwo-Odofin Industrial Estate off Okota Road, Shalom Bus stop, Amuwo-Odofin, Lagos State",
-      "Email: sunday.adejoh@manufacturersnigeria.org, manapapa@manufacturersnigeria.org",
+      "No. 3 Shalom Street by Lagoon Estate Ark, Amuwo-Odofin Industrial Estate off Okota Road, Shalom Bus stop, Amuwo-Odofin, Lagos State",
+      "sunday.adejoh@manufacturersnigeria.org, manapapa@manufacturersnigeria.org",
     ],
   },
   {
@@ -29,8 +29,8 @@ export const operateData = [
     ],
     mangerTitle: [""],
     otherDetails: [
-      "Address: Km. 4, beside Oba T. Dada Market, Ota-Idiroko Road, Sango Ota, Ogun State",
-      "Email: motunrayo.elegberun@manufacturersnigeria.org, manogun@manufacturersnigeria.org",
+      "Km. 4, beside Oba T. Dada Market, Ota-Idiroko Road, Sango Ota, Ogun State",
+      "motunrayo.elegberun@manufacturersnigeria.org, manogun@manufacturersnigeria.org",
     ],
   },
   {
@@ -39,20 +39,20 @@ export const operateData = [
     manager: [{ name: "Mr. Klinton Offiong", title: "Executive Secretary	" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: 45B, IBB Way, behind Stanbic IBTC Pension Managers, Calabar, Cross River State",
-      "Email: mancrossriverakwa-ibom@manufacturersnigeria.org, mancrsaks2019@gmail.com",
+      "45B, IBB Way, behind Stanbic IBTC Pension Managers, Calabar, Cross River State",
+      "mancrossriverakwa-ibom@manufacturersnigeria.org, mancrsaks2019@gmail.com",
     ],
   },
   {
     id: "5",
-    name: "MAN, Kaduna, Katsina,Sokoto,Kebbi States Branch",
+    name: "MAN, Kaduna North-West and Kaduna South-East Branches",
     manager: [
       { name: "Mr. Muhammad Bello Muhammad", title: "Executive Secretary" },
     ],
     mangerTitle: [""],
     otherDetails: [
-      "Address: No.1, Keffi Close, Opp. BOC Gases Nig. Plc,  Kaduna State",
-      "Email: muhammad.muhammad@manufacturersnigeria.org, mankaduna@manufacturersnigeria.org",
+      "No.1, Keffi Close, Opp. BOC Gases Nig. Plc,  Kaduna State",
+      "muhammad.muhammad@manufacturersnigeria.org, mankaduna@manufacturersnigeria.org",
     ],
   },
   {
@@ -61,8 +61,8 @@ export const operateData = [
     manager: [{ name: "Mr. Nanzing Rimdan", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: 5, Ighodaro Road Jericho, Ibadan, Oyo State",
-      "Email: nanzing.rimdan@manufacturersnigeria.org, manoyoondoekiti@manufacturersnigeria.org, manondoekiti@manufacturersnigeria.org",
+      "5, Ighodaro Road Jericho, Ibadan, Oyo State",
+      "nanzing.rimdan@manufacturersnigeria.org, manoyoondoekiti@manufacturersnigeria.org, manondoekiti@manufacturersnigeria.org",
     ],
   },
   {
@@ -71,8 +71,8 @@ export const operateData = [
     manager: [{ name: "Mr.  Adeola Gbenga", title: "" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: 1, New Yidi Road, P.O.Box 5644, Ilorin,Kwara State.",
-      "Email:gbenga.adeola@manufacturersnigeria.org, mankwarakogi@manufacturersnigeria.org",
+      "1, New Yidi Road, P.O.Box 5644, Ilorin,Kwara State.",
+      "benga.adeola@manufacturersnigeria.org, mankwarakogi@manufacturersnigeria.org",
     ],
   },
   {
@@ -83,8 +83,8 @@ export const operateData = [
     ],
     mangerTitle: [""],
     otherDetails: [
-      "Address: Plot 26, Danjuma Drive, behind Savannah Bank, Woji Housing Estate, P.M.B. 082, Trans-Amadi, Port Harcourt, Rivers State",
-      "Email: chibuzor.eze@manufacturersnigeria.org, manrivers@manufacturersnigeria.org ",
+      "Plot 26, Danjuma Drive, behind Savannah Bank, Woji Housing Estate, P.M.B. 082, Trans-Amadi, Port Harcourt, Rivers State",
+      "chibuzor.eze@manufacturersnigeria.org, manrivers@manufacturersnigeria.org ",
     ],
   },
   {
@@ -93,8 +93,8 @@ export const operateData = [
     manager: [{ name: "Mr. Goodluck Amachree", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: Plot 4, Alexandra Ogun Road, Evboriaria Indl. Estate, Opp. Palm Garden, Km. 7, Sapele Road, Benin City, Edo State.",
-      "Email: lucky.amachree@manufacturersnigeria.org, manedodelta@manufacturersnigeria.org",
+      "Plot 4, Alexandra Ogun Road, Evboriaria Indl. Estate, Opp. Palm Garden, Km. 7, Sapele Road, Benin City, Edo State.",
+      "lucky.amachree@manufacturersnigeria.org, manedodelta@manufacturersnigeria.org",
     ],
   },
   {
@@ -103,8 +103,8 @@ export const operateData = [
     manager: [{ name: "Mr. Sunday Sotomi", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: No.18 (Formerly 2A) Chime Avenue, New Haven, Uwani, Enugu State.",
-      "Email: sunday.sotomi@manufacturersnigeria.org, mananambraenugu@manufacturersnigeria.org ",
+      "No.18 (Formerly 2A) Chime Avenue, New Haven, Uwani, Enugu State.",
+      "sunday.sotomi@manufacturersnigeria.org, mananambraenugu@manufacturersnigeria.org ",
     ],
   },
   {
@@ -113,18 +113,18 @@ export const operateData = [
     manager: [{ name: "Mr. Lekan Edunjobi", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: MAN Abuja Liaison Office, Room 202, 2nd Floor, Adamawa Plaza, Opposite the Statement Hotel by Abia House Central Area, FCT, Abuja",
-      "Email: lekan.edunjobi@manufacturersnigeria.org, manabujabranch@manufacturersnigeria.org ",
+      "MAN Abuja Liaison Office, Room 202, 2nd Floor, Adamawa Plaza, Opposite the Statement Hotel by Abia House Central Area, FCT, Abuja",
+      "lekan.edunjobi@manufacturersnigeria.org, manabujabranch@manufacturersnigeria.org ",
     ],
   },
   {
     id: "12",
-    name: "MAN, Kano State Branch",
+    name: "MAN, Kano Bompai/ Sharada & Challawa Branches",
     manager: [{ name: "Mr. Ibrahim Garba", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "Address: No. 500 Sheikh Nasiru Kabara City (Amana City), Zaria Road, Kano State",
-      "Email: ibrahim.garba@manufacturersnigeria.org, mankanosharada@manufacturersnigeria.org",
+      "No. 500 Sheikh Nasiru Kabara City (Amana City), Zaria Road, Kano State",
+      "ibrahim.garba@manufacturersnigeria.org, mankanosharada@manufacturersnigeria.org",
     ],
   },
   {
@@ -134,7 +134,7 @@ export const operateData = [
     mangerTitle: [""],
     otherDetails: [
       "7, Suzi Garden, Tafawa Balewa Street, Bukara Road by Zaria Road, Jos, Plateau State.",
-      "Email: augustine.egili@manufacturersnigeria.org, manbauchibenue@manufacturersnigeria.org",
+      "augustine.egili@manufacturersnigeria.org, manbauchibenue@manufacturersnigeria.org",
     ],
   },
   {
@@ -145,8 +145,8 @@ export const operateData = [
     ],
     mangerTitle: [""],
     otherDetails: [
-      "Address: Flat No.2, No.15A (19A) Wetheral Road, Owerri, Imo State.",
-      "Email: cyprian.nnadozie@manufacturersnigeria.org, manimoabia@manufacturersnigeria.org ",
+      "Flat No.2, No.15A (19A) Wetheral Road, Owerri, Imo State.",
+      "cyprian.nnadozie@manufacturersnigeria.org, manimoabia@manufacturersnigeria.org ",
     ],
   },
 ];

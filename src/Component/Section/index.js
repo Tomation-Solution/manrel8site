@@ -1,8 +1,7 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
-// import sectionpic from "../../images/div20.png";
-import sectionpic from "../../images/new-images/VisionImgNobg.png";
+import sectionpic from "../../images/new-images/LookintoFuture.png";
 import sectionpic2 from "../../images/div21.png";
 import sectionpic3 from "../../images/new-images/ContribNoBg.png";
 import Before from "../../images/div_before.png";
@@ -95,8 +94,8 @@ function Section() {
                   textAlign: "center",
                 }}
               >
-                MAN promotes manufacturing sector competitiveness, contribution
-                to job creation and Gross Domestic Product through commitment to
+                MAN promotes manufacturing sector competitiveness to job
+                creation and Gross Domestic Product through commitment to
                 research and development, new technologies and environmental
                 sustainability.
               </SectionDescription>
@@ -175,8 +174,8 @@ function Section() {
               of communication and consultation between industry on the one
               hand, and the government and general public on the other.
               Hitherto, there was no institutional organ whose central focus was
-              to give meaning to the interests, problems and aspirations of the
-              manufacturing sector.
+              to give meaning to the interests, challenges and aspirations of
+              the manufacturing sector.
             </SectionDescription>
             <div style={{ textAlign: "center" }}>
               <Link to="/about" style={{ textDecoration: "none" }}>
@@ -211,9 +210,9 @@ function Section() {
                 textAlign: "center",
               }}
             >
-              MAN is driven by issues that matter to manufacturers. If anything
-              is holding you back from joining MAN, do not fret, MAN is here to
-              help. Join us and enjoy these privileges
+              MAN is driven by issues that matter to manufacturers. We provide a
+              forum where members come together to shre ideas and create
+              relationships. Join us and enjoy these privileges
             </SectionDescription>
 
             <div style={{ margin: "60px 20px", textAlign: "center" }}>
@@ -273,10 +272,10 @@ function Section() {
                   textAlign: "center",
                 }}
               >
-                Our members-companies cut across the six geo-political zones of
-                Nigeria. They are bonafide manufacturers with existing,
-                functional and production factories grouped in similar
-                production line.
+                Our member-companies cut across the six geo-political zones of
+                Nigeria. They are bonafide manufacturers with existing and
+                functional production plants. They grouped in sectors and
+                sub-sectors groups.
               </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "center" }}>
                 <Link to="/our-members" style={{ textDecoration: "none" }}>
@@ -287,7 +286,7 @@ function Section() {
                       marginTop: "30px",
                     }}
                   >
-                    Meet Our Members
+                    Meet Our Esteemed Members
                   </MyButton>
                 </Link>
               </div>

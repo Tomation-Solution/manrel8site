@@ -1,7 +1,7 @@
 import React from "react";
 import ZumaRock from "../../images/new-images/ZumaRock.jfif";
 import GuraraFalls from "../../images/new-images/IjeshFalls.jpg";
-import sectionpic from "../../images/new-images/VisionImg.jfif";
+import sectionpic from "../../images/new-images/LookintoFuture.png";
 
 import "./NewAbout.scss";
 import Wall from "../Wall/Wall";
@@ -37,7 +37,7 @@ const NewAbout = () => {
               </p>
               <p>
                 Hitherto, there was no institutional organ whose central focus
-                was to give meaning to the interests, problems and aspirations
+                was to give meaning to the interests, challenges and aspirations
                 of the manufacturing sector.
               </p>
               <p>
@@ -48,8 +48,8 @@ const NewAbout = () => {
               <p>
                 MAN is in business to create a climate of opinion in Nigeria in
                 which manufacturers can operate efficiently and profitably for
-                the benefit of all. As the collective voice of its members, MAN
-                was established to promote and protect manufacturers’ collective
+                the benefit of all. As the voice of manufacturers, MAN was
+                established to promote and protect manufacturers’ collective
                 interests.
               </p>
             </div>
@@ -63,7 +63,7 @@ const NewAbout = () => {
               />
               <ServiceHelper
                 details={
-                  "Engagement, engage internal and external public to drive the growth of the manufacturing sector."
+                  "Engagement, engage internal and external publics to drive the growth of the manufacturing sector."
                 }
                 color={"#222a0f"}
               />
@@ -127,10 +127,10 @@ const NewAbout = () => {
                 </p>
 
                 <p>
-                  MAN promotes manufacturing sector competitiveness,
-                  contribution to job creation and Gross Domestic Product
-                  through commitment to research and development, new
-                  technologies and environmental sustainability.
+                  MAN promotes manufacturing sector competitiveness to job
+                  creation and Gross Domestic Product through commitment to
+                  research and development, new technologies and environmental
+                  sustainability.
                 </p>
               </div>
             </div>
@@ -145,7 +145,7 @@ const NewAbout = () => {
                 style={{ backgroundColor: "#2b3513" }}
               >
                 <p>
-                  To Provide for manufacturers all over Nigeria the means of
+                  To provide for manufacturers all over Nigeria the means of
                   formulating, making known and influencing general policy in
                   regard to industrial, labour, social, legal, training, and
                   technical matters;
@@ -156,10 +156,10 @@ const NewAbout = () => {
                 style={{ backgroundColor: "#3a481a" }}
               >
                 <p>
-                  To develop and promote the contribution of manufacturers to
-                  the national economy through government and otherwise, whose
-                  work may affect directly or indirectly the interests of
-                  manufacturers;
+                  To promote the enhancement of manufaturing contribution of
+                  manufacturers to the national economy through government and
+                  otherwise, whose work may affect directly or indirectly the
+                  interests of manufacturers;
                 </p>
               </div>
               <div
@@ -167,7 +167,7 @@ const NewAbout = () => {
                 style={{ backgroundColor: "#495b20" }}
               >
                 <p>
-                  To encourage a high standard of quality of members’ products
+                  To encourage high quality standard of members’ products
                   through the collective and circulation of useful information
                   and the provision of advice;
                 </p>
@@ -177,8 +177,8 @@ const NewAbout = () => {
                 style={{ backgroundColor: "#596d27" }}
               >
                 <p>
-                  To encourage the patronage of members’ products by Nigerians
-                  and by consumers in foreign countries;
+                  To encourage the patronage of made in Nigeria products by
+                  Nigerians and by consumers in foreign countries;
                 </p>
               </div>
               <div className="our-obj-item centered">
