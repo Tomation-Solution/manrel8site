@@ -88,11 +88,10 @@ function Sectoral() {
                 className="head"
                 style={{ margin: "20px 0px", color: "#2b3513" }}
               >
-                In order to cater for members who have near homogenous or
-                sector-specific products, MAN has ten Sectoral Groups and
-                seventy seven Sub-Sectoral Groups. The Groups are serviced by
-                full-time Sectoral Executives located at the National
-                Secretariat of the Association.
+                In order to cater for members who have near homogenous products,
+                MAN has ten Sectoral Groups and seventy four Sub-Sectoral
+                Groups. The Groups are serviced by full-time Sectoral Executives
+                located at the National Secretariat of the Association.
               </div>
               <div className="wrap-g">
                 {sectoralList.map((item) => (

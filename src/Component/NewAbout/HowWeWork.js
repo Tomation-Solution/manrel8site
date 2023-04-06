@@ -4,8 +4,8 @@ import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
-import BullerStar from "../../images/Vector.png";
-import { Link } from "react-router-dom";
+// import BullerStar from "../../images/Vector.png";
+// import { Link } from "react-router-dom";
 import "./NewAbout.scss";
 
 const HowWeWork = () => {
@@ -20,11 +20,13 @@ const HowWeWork = () => {
             <h1>How we Work</h1>
             <div className="how-work-con">
               <p>
-                The Manufacturers Association of Nigeria (MAN) receives its
-                mandate from the National Council, fourteen Branch Councils
-                across the country, and ten Sectoral Groups. In addition, five
-                Standing Committees, Nine Ad-Hoc Committees and Seventy-four
-                sub-sectoral Groups.
+                The overall control of the Association and the management of its
+                affairs is vested in the National Council. The National Council
+                operates through the Executive committee, Five standing
+                commitees and Nine AD-HOC committe. The sixteen branches of the
+                Association, subject to the Authority of the National Council
+                provides control of Branch affairs. The Association operates ten
+                sectoral groups and seventy-four sub-sectoral groups.
               </p>
               <p>
                 This engagement process reaches over 3000 MAN members who have a
@@ -33,10 +35,10 @@ const HowWeWork = () => {
                 and re-tooling our influence.
               </p>
               <p>
-                Each of our National Council and Branch Council members are
-                elected to a term of office. Our Standing Committee members are
-                invited to join voluntarily based on their sector experience and
-                technical expertise.
+                Each of our National and Branch Council as well as Sectoral and
+                Sub-Sectoral Group Executives are elected to a term of office.
+                Our Standing Committee members are invited to join voluntarily
+                based on their sector experience and technical expertise.
               </p>
             </div>
           </div>
@@ -45,17 +47,18 @@ const HowWeWork = () => {
               The National Council, which is the Association’s Governing Board,
               is made up of a President, eight Vice Presidents, Honourary
               Treasurer, Chairmen of Branches, Chairmen of Sectoral Groups,
-              elected and strategic members and life members.
+              elected and strategic member's the Director General and life
+              members.
             </p>
             <p style={{ color: "#2b3513" }}>
-              Past Presidents of the Association are life members representing
-              special interest on the Council.
+              Past Presidents of the Association are life members of the
+              National Council.
             </p>
-            <p style={{ color: "#2b3513" }}>
+            {/* <p style={{ color: "#2b3513" }}>
               In directing MAN’s affairs and determining its policy options, the
               National Council is served by an Executive Committee and five
               Standing Committees namely;
-            </p>
+            </p> */}
             <div className="core-values-items">
               <div
                 className="core-values-item"
@@ -109,13 +112,13 @@ const HowWeWork = () => {
               objectives of the Association in areas of transport, energy,
               communication, taxation, exports, consultancy, research, economic
               matters, education and training as well as consultation with
-              various existing specialized bodies. The National Council
-              statutorily meets four times a year. The secretary to the National
-              Council is the Director General.
+              various specialized bodies. The National Council statutorily meets
+              four times a year. The secretary to the National Council is the
+              Director General.
             </p>
           </div>
           <div className="ad-hoc">
-            <h1>AD-HOC COMMITTEE</h1>
+            <h1>AD-HOC COMMITTEES</h1>
             <p>
               Ad-hoc Committees are constituted to deal with specific and
               usually temporary issues as circumstances may demand. For example,
@@ -139,12 +142,12 @@ const HowWeWork = () => {
           <div className="other-groups">
             <h1>SPECIAL PURPOSE GROUPS OF MAN</h1>
             <p>
-              To promote the activities of specific needs of manufacturers, the
+              In order to address some specific needs of manufacturers, the
               following groups were created: MAN Export Group (MANEG), MAN Gas
               Users Group (MANGAS) and MAN Local Content Group (MANLOC).
             </p>
           </div>
-          <div className="exec-committe">
+          {/* <div className="exec-committe">
             <h1>EXECUTIVE COMMITTEE</h1>
             <p>
               In order to make the National Council more responsive to the
@@ -232,21 +235,23 @@ const HowWeWork = () => {
                 click to view
               </button>
             </Link>
-          </div>
+          </div> */}
           <div className="other-groups">
             <h1>CODE OF CONDUCT</h1>
             <p>
-              In order to promote and develop meaningful contribution of
-              manufacturers to the national economy, the National Council laid
-              down the following code of conduct for members of the Association:
+              In order to ensure proper practices and promote the effective
+              contribution of members to the national economy, the National
+              Council laid down the following code of conduct for members of the
+              Association
             </p>
           </div>
+          <h2 style={{ color: "#2b3513" }}>Members shall:</h2>
           <div className="endeavour-items">
             <div className="endeavour-item">
               <h1>1</h1>
               <p>
-                Endeavour to maintain in all aspects of their operations, a high
-                level of business ethics and recognized standards, thus
+                Endeavour to maintain, in all aspects of their operations, a
+                high level of business ethics and recognized standards, thus
                 refraining from all business dealings of questionable nature,
                 which could bring the Association or the manufacturing sector as
                 a whole into disrepute.
@@ -256,10 +261,10 @@ const HowWeWork = () => {
               <h1>2</h1>
               <p>
                 Demonstrate transparent commitment to Nigeria’s industrial
-                objectives and policies; placing Nigeria’s best interest above
+                aspirations and policies; placing Nigeria’s best interest above
                 all others and increasing the contribution of the manufacturing
-                sector to the economy, and towards the improvement of the
-                quality of life of Nigerians.
+                sector to the economy, as well as the improvement of the quality
+                of life of Nigerians.
               </p>
             </div>
             <div className="endeavour-item">
@@ -273,9 +278,9 @@ const HowWeWork = () => {
               <h1>4</h1>
               <p>
                 Refer to the National Council of the Association, any
-                disagreement between members of the Association for arbitration
-                before either party can pursue such a matter further (if
-                necessary) after Council’s intervention.
+                disagreement or dispute between members of the Association for
+                arbitration before either party can pursue such a matter in the
+                law of court or any other such action.
               </p>
             </div>
           </div>

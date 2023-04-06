@@ -69,17 +69,17 @@ const JoinUsPage = () => {
           <h1>Confirm Eligibility</h1>
           <h4>
             To become a member of MAN, please confirm that you meet the{" "}
-            <Link to={"/membership-requirement"}>the requirements</Link>
+            <Link to={"/membership-requirement"}>requirements</Link>
           </h4>
           <form>
             <label>
               <input
-                type={"checkbox"}
+                type={"radio"}
                 value="agree"
                 required
                 onClick={(e) => setCheck(e.target.value)}
               />
-              I hereby Confirm that i am Eligible to be a Member of MAN.
+              I hereby Confirm that I am Eligible to be a Member of MAN.
             </label>
             <div
               style={{

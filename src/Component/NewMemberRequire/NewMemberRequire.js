@@ -64,17 +64,12 @@ const NewMemberRequire = () => {
           image={backImage}
           header={"Membership Requirements"}
           details={[
-            "The membership requirement steps below detail the process to becoming a member of MAN",
+            "The membership requirement steps below detail the process of becoming a member of MAN",
           ]}
         />
-        {/* <h1 className="membreq-header">Membership Requirments</h1>
-        <h1 className="membreq-subheader">
-          The membership requirement steps below detail the process to becoming
-          a member of MAN
-        </h1> */}
         <section className="membreq-steps" style={{ marginTop: "50px" }}>
           <h1>
-            Step 1 : Confirm Eligibility - A Prospective Member of MAN Must
+            Step 1 : Confirm Eligibility - A Prospective Member of MAN Should
           </h1>
 
           <div className="steps-items">
@@ -83,7 +78,7 @@ const NewMemberRequire = () => {
                 <p>1</p>
               </div>
               <p className="step-item-text">
-                MUST HAVE A MANUFACTURING PLANT IN NIGERIA
+                SHOULD HAVE A MANUFACTURING PLANT IN NIGERIA
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#506223" }}>
@@ -91,7 +86,7 @@ const NewMemberRequire = () => {
                 <p>2</p>
               </div>
               <p className="step-item-text">
-                MUST BE A MANUFACTURER OF AT LEAST ONE PRODUCT
+                SHOULD BE A MANUFACTURER OF AT LEAST ONE PRODUCT
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#47571f" }}>
@@ -99,7 +94,7 @@ const NewMemberRequire = () => {
                 <p>3</p>
               </div>
               <p className="step-item-text">
-                THE MANUFACTURING PLANT MUST BE IN PRODUCTION.
+                THE MANUFACTURING PLANT SHOULD BE IN PRODUCTION.
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#3e4c1b" }}>
@@ -107,8 +102,8 @@ const NewMemberRequire = () => {
                 <p>4</p>
               </div>
               <p className="step-item-text">
-                THE PRODUCT(S) MUST BE DULY REGISTERED WITH APPROPRAITE
-                REGULATORY BODY (SON, NAFDAC, ETC)
+                THE PRODUCT(S) SHOULD BE DULY REGISTERED WITH APPROPRIATE
+                REGULATORY BODIES
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#354117" }}>
@@ -123,15 +118,14 @@ const NewMemberRequire = () => {
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>Step 2 : Make Payment for Application Form</h1>
+          <h1>Step 2 : Purchase a Membership Application Form</h1>
           <div className="steps-items2">
             <p>
-              An intending member of the Association, (being a manufacturer)
-              will be required to obtain and complete a membership Application
-              Form.
+              An intending member of the Association (being a manufacturer) will
+              be required to obtain and complete a Membership Application Form.
             </p>
             <span>
-              <a href="/">Click Here to make payment</a>
+              <Link to={"/join-now-page"}>Click Here to make payment</Link>
             </span>
             <h1>APPLICATION FORM [N20,000.00]</h1>
             <div className="gray-circle"></div>
@@ -183,7 +177,7 @@ const NewMemberRequire = () => {
         </section>
         <section className="membreq-steps">
           <h1>
-            Step 4 :Make Payment for Annual Subscription, Levies and Submit
+            Step 4 : Make Payment for Annual Subscription, Levies and Submit
           </h1>
 
           <div className="steps-items">
@@ -237,16 +231,42 @@ const NewMemberRequire = () => {
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>Step 5 : Await Schedule of Inspection Visit From MAN</h1>
+          <h1>Step 5 : Acknowledgement and Inspection of Factory</h1>
           <div className="steps-items2">
             <h1>Await Schedule of Factory Inspection visit from MAN</h1>
+            {/* <h3 style={{ color: "#2b3513" }}>
+              • Payments and documents submitted shall be acknowledged.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • The Branch shall schedule factory inspection visit.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Report of the factory inspection visit shall be forwarded to the
+              National Secretariat for processing.
+            </h3> */}
             <div className="gray-circle"></div>
           </div>
         </section>
         <section className="membreq-steps">
-          <h1>Step 6 : Await Confirmation of Approval from MAN</h1>
+          <h1>Step 6 : Approval and Admission to Membership</h1>
           <div className="steps-items2">
             <h1>Await Confirmation of Approval From MAN</h1>
+            {/* <h3 style={{ color: "#2b3513" }}>
+              • Qualified applicant(s) shall be presented to the National
+              Council for consideration and approval.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Approval or rejection of Membership Application.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Issuance of admission or rejection letter.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Issuance of Membership Certificate to admitted members.
+            </h3>
+            <h3 style={{ color: "#2b3513" }}>
+              • Induction of newly admitted members.
+            </h3> */}
             <div className="gray-circle"></div>
           </div>
         </section>
@@ -262,17 +282,17 @@ const NewMemberRequire = () => {
           <h1>Confirm Eligibility</h1>
           <h4>
             To become a member of MAN, please confirm that you meet the{" "}
-            <Link to={"/membership-requirement"}>the requirements</Link>
+            <Link to={"/membership-requirement"}> requirements</Link>
           </h4>
           <form>
             <label>
               <input
-                type={"checkbox"}
-                value="agree"
+                type={"radio"}
+                value={"agree"}
                 required
-                onClick={(e) => setCheck(e.target.value)}
+                onChange={(e) => setCheck(e.target.value)}
               />
-              I hereby Confirm that i am Eligible to be a Member of MAN.
+              I hereby Confirm that I am Eligible to be a Member of MAN.
             </label>
             <div
               style={{

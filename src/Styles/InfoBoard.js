@@ -51,9 +51,9 @@ export const InfoItemContainer = styled(Box)(({ matches, theme }) => ({
 
 export const InfoItemImg = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
-  width: "200px",
+  width: "100px",
   height: "100px",
-  objectFit: "contain",
+  objectFit: "",
   overFlow: "hidden",
 }));
 

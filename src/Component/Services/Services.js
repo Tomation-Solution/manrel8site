@@ -36,7 +36,7 @@ function Services() {
               </div>
               <div className="services-card">
                 <div className="services-overlay">
-                  <h1>Public Policy Advocacy </h1>
+                  <h1>Policy Advocacy </h1>
                 </div>
               </div>
               <div className="services-card">
@@ -53,7 +53,7 @@ function Services() {
               </div>
               <div className="services-card">
                 <div className="services-overlay">
-                  <h1>Monitoring and Analysing of Government Policies</h1>
+                  <h1>Monitoring and Analysing Government Policies</h1>
                 </div>
               </div>
               <div className="services-card">
@@ -107,131 +107,21 @@ function Services() {
                   <h1> Membership Satisfaction and Monitoring</h1>
                 </div>
               </div>
-              {/*
-                       <div className="services-card">
-                <div className="services-overlay">
-                  <h1>BUSINESS DEVELOPMENT SERVICES</h1>
-                  <p>
-                    Identify possible problems affecting SME‘s by preparing a
-                    detailed technical due diligence report through review of
-                    their operations
-                  </p>
-                </div>
-              </div>
-               <div className="services-card">
-                <div className="services-overlay">
-                  <h1>BUSINESS INFORMATION SERVICES</h1>
-                  <p>
-                    Sourcing of raw materials, Machinery and equipment, Markets,
-                    Model business profiles etc
-                  </p>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>BUSINESS CONSULTANCY</h1>
-                  <p>
-                    Investment and financial advisory services, Local and
-                    international business linkages
-                  </p>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>ECONOMIC RESEARCH AND ANALYSIS</h1>
-                  <p>
-                    Provision of Economic research and analysis for
-                    manufacturers, government and the organized private sector
-                  </p>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Public Policy Advocacy</h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Monitoring and analysing of government policies</h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>
-                    Preparation of memoranda on topical industrial and economic
-                    issues
-                  </h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Capacity building and manpower development</h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Liaison activities for members</h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Seminars and Conferences</h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>
-                    Information and Communication Technology based Services
-                  </h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>
-                    Promotion and organization of trade missions and exhibitions
-                  </h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Promotion of Made-in-Nigeria products</h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>
-                    Reconciliation and harmonization of diverse interests of
-                    members
-                  </h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>
-                    Specific intervention on members and sectoral problems
-                  </h1>
-                </div>
-              </div>
-              <div className="services-card">
-                <div className="services-overlay">
-                  <h1>Publications</h1>
-                </div>
-              </div> */}
             </div>
             <div className="services-head">
               <h1>Manufacturers Resource Centre (MRC) Services</h1>
               <p>
                 The Manufacturers Resource Centre is the Business Solution Arm
                 of Manufacturers Association of Nigeria (MAN). The Manufacturers
-                Resource Centre prides herself as an entity dedicated to
-                proffering Business Solutions to MAN Members thus develop their
-                Businesses, increase Market share and Production Excellence.
+                Resource Centre is dedicated to proffering Business Solutions to
+                MAN Members, thus developing their Businesses, Increase their
+                Market share and enhancing Production Excellence.
               </p>
             </div>
             <div className="services-wrap">
               <div className="services-card">
                 <div className="services-overlay">
-                  <h1>Business Consulting Retainer ship Service</h1>
+                  <h1>Business Consulting Retainership Service</h1>
                   <p>
                     With our brand, expertise and business leverages, valuable
                     in growing turnover volume, company customer base and
@@ -247,8 +137,8 @@ function Services() {
                   <p>
                     We understand that Learning and Development leads to
                     increased performance, better lives and work. We bring to
-                    you a whole new learning experience through our In-plant and
-                    General Trainings.
+                    you a whole new learning experience through our in-plant and
+                    general trainings.
                   </p>
                 </div>
               </div>
@@ -256,10 +146,10 @@ function Services() {
                 <div className="services-overlay">
                   <h1>Financial Solutions</h1>
                   <p>
-                    It’s now possible to expand your Business and Operations.
-                    Come take advantage of available funding windows,
-                    Intervention Fund and other Venture Capital investments,
-                    that would suit your funding need.
+                    It is now possible to expand your business operations. Come
+                    take advantage of available funding windows, intervention
+                    fund and other venture capital investments, that would suit
+                    your funding need.
                   </p>
                 </div>
               </div>
@@ -299,7 +189,7 @@ function Services() {
               </div>
               <div className="services-card">
                 <div className="services-overlay">
-                  <h1>Eligible Customer (EC) Appliction To NERC</h1>
+                  <h1>Eligible Customer (EC) Appliction to NERC</h1>
                   <p>
                     MPDCL currently provides facilitations service for members
                     whose power off-take is 2MWh/h to process EC Approval. The
@@ -319,7 +209,7 @@ function Services() {
             <div className="services-right">
               <div className="services-top">
                 <h2>Request Service</h2>
-                <p>Let's start by entering your information</p>
+                <p>Let's start by entering your information.</p>
                 <p>All fields are required unless otherwise indicated.</p>
               </div>
               <form action="">

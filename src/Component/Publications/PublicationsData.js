@@ -166,7 +166,7 @@ export const pubdata = [
 export const newPubData = [
   {
     id: "3",
-    name: "REPORT OF MCCI Q4 2022 FINAL REPORT",
+    name: "REPORT OF MCCI Q4 2022 REPORT",
     title: "MAN CEOs CONFIDENCE INDEX",
     link: "https://drive.google.com/file/d/1T9Ie6y3GP3hIBorTpCy-cWwESbOVwyw1/view?usp=share_link",
     freetext: [
@@ -175,7 +175,7 @@ export const newPubData = [
   },
   {
     id: "1",
-    name: "HIGHLIGHT OF MCCI 2022 Q2 REPORT",
+    name: "HIGHLIGHTS OF MCCI 2022 Q2 REPORT",
     title: "MAN CEO’s Confidence Index Report: Highlights of Findings",
     link: "https://drive.google.com/file/d/1faUKnWCeIxbIwJTkVnzpEWdFfof_Xnj4/view?usp=share_link",
     freetext: [
@@ -185,12 +185,12 @@ export const newPubData = [
   },
   {
     id: "2",
-    name: "HIGHLIGHT OF MCCI 2022 Q1 REPORT",
+    name: "HIGHLIGHTS OF MCCI 2022 Q1 REPORT",
     title:
       "MAN CEO’s Confidence Index: Preliminary Report & Highlights of Findings",
     link: "https://drive.google.com/file/d/10fqFB_gqQh2aJsfLdOJeIeWysXqk34aY/view?usp=share_link",
     freetext: [
-      "1.0 INTRODUCTION0",
+      "1.0 INTRODUCTION",
       "The Manufacturers CEO’s Confidence Index (MCCI) of the Manufacturers Association of Nigeria (MAN) is a quarterly research and advocacy publication of the Association, which measures changes in pulse of operators and trends in the manufacturing sector quarterly, in response to movements in the macroeconomy and Government policies using primary data mined through direct survey on over 400 Chief Executive Officers of MAN member-Companies.",
     ],
   },
