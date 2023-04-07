@@ -22,11 +22,12 @@ const HowWeWork = () => {
               <p>
                 The overall control of the Association and the management of its
                 affairs is vested in the National Council. The National Council
-                operates through the Executive committee, Five standing
-                commitees and Nine AD-HOC committe. The sixteen branches of the
-                Association, subject to the Authority of the National Council
-                provides control of Branch affairs. The Association operates ten
-                sectoral groups and seventy-four sub-sectoral groups.
+                operates through the Executive committee, five standing
+                commitees and nine Ad-hoc committees. The Councils of the
+                sixteen branches of the Association, subject to the Authority of
+                the National Council, provides control of Branch affairs. The
+                Association operates ten Sectoral and seventy-four Sub-Sectoral
+                Groups.
               </p>
               <p>
                 This engagement process reaches over 3000 MAN members who have a
@@ -36,7 +37,7 @@ const HowWeWork = () => {
               </p>
               <p>
                 Each of our National and Branch Council as well as Sectoral and
-                Sub-Sectoral Group Executives are elected to a term of office.
+                Sub-Sectoral Group executives are elected to a term of office.
                 Our Standing Committee members are invited to join voluntarily
                 based on their sector experience and technical expertise.
               </p>
@@ -47,7 +48,7 @@ const HowWeWork = () => {
               The National Council, which is the Association’s Governing Board,
               is made up of a President, eight Vice Presidents, Honourary
               Treasurer, Chairmen of Branches, Chairmen of Sectoral Groups,
-              elected and strategic member's the Director General and life
+              elected and strategic members, the Director General and life
               members.
             </p>
             <p style={{ color: "#2b3513" }}>

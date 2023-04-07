@@ -104,8 +104,14 @@ function Members() {
                 <div className="right">
                   <h1>OPPORTUNITY IN POLICY FORMULATION</h1>
                   <p>
-                    Members’ views are well represented in policy formulation,
-                    especially policies that affect manufacturers.
+                    {/* Members’ views are well represented in policy formulation,
+                    especially policies that affect manufacturers. */}
+                    The mission of MAN is to ensure conducive operating
+                    environment for manufacturers in Nigeria. In this regard,
+                    MAN engages policy makers through evidence based policy
+                    advocacy that utilise various platforms such as dialogue,
+                    meetings, memoranda as well as internal structures such as
+                    MANLOC, MANGAS etc
                   </p>
                 </div>
               </div>
@@ -210,16 +216,16 @@ function Members() {
                 </div>
               </div>
             </div>
-            <div className="respo">
+            {/* <div className="respo">
               <h1>RESPONSIBILITIES OF MEMBERS</h1>
               <p>
                 To effectively discharge its role as a Business membership
                 organisation, MAN expects its members to unfaillingly discharge
                 the following responsibilities and obligations:
               </p>
-            </div>
+            </div> */}
             <div className="acrds">
-              <div className="card">
+              {/* <div className="card">
                 <div className="left">
                   <img src={Image2} alt="" />
                 </div>
@@ -245,7 +251,10 @@ function Members() {
                     after Council’s intervention.
                   </p>
                 </div>
-              </div>
+              </div> */}
+              <br />
+              <br />
+              <br />
               <div className="card">
                 <div className="left">
                   <img src={Image2} alt="" />

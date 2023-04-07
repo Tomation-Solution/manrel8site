@@ -33,9 +33,14 @@ function Footer() {
           </Link>
         </FooterDescription>
         <FooterDescription>
-          <Link to={"/"} style={{ textDecoration: "none", color: "#2b3513" }}>
+          <a
+            href="https://manufacturersnigeria.awsapps.com/mail"
+            target={"_blank"}
+            rel={"noreferrer"}
+            style={{ textDecoration: "none", color: "#2b3513" }}
+          >
             Webmail Login
-          </Link>
+          </a>
         </FooterDescription>
         <FooterDescription>
           <Link
