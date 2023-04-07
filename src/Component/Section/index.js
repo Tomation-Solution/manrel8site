@@ -94,10 +94,9 @@ function Section() {
                   textAlign: "center",
                 }}
               >
-                MAN promotes manufacturing sector competitiveness to job
-                creation and Gross Domestic Product through commitment to
-                research and development, new technologies and environmental
-                sustainability.
+                MAN promotes manufacturing sector competitiveness, job creation
+                and Gross Domestic Product through commitment to research and
+                development, new technologies and environmental sustainability.
               </SectionDescription>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
@@ -151,6 +150,7 @@ function Section() {
                     color: "#fff",
                     borderColor: "#fff",
                     marginTop: "21px",
+                    textTransform: "capitalize",
                   }}
                 >
                   Continue to page
@@ -184,6 +184,7 @@ function Section() {
                     color: "#2b3513",
                     borderColor: "#2b3513",
                     marginTop: "21px",
+                    textTransform: "capitalize",
                   }}
                 >
                   See More
@@ -210,9 +211,9 @@ function Section() {
                 textAlign: "center",
               }}
             >
-              MAN is driven by issues that matter to manufacturers. We provide a
-              forum where members come together to shre ideas and create
-              relationships. Join us and enjoy these privileges
+              MAN is driven by issues that matter to manufacturers. We provide
+              forum where members come together to share ideas and create
+              relationships. Join us and enjoy these and more privileges.
             </SectionDescription>
 
             <div style={{ margin: "60px 20px", textAlign: "center" }}>
@@ -229,9 +230,11 @@ function Section() {
                     padding: "10px 20px",
                     border: "1px solid #d3d3d3",
                     borderRadius: "10px",
+                    fontWeight: "400",
+                    textTransform: "capitalize",
                   }}
                 >
-                  Read More
+                  Read more
                 </span>
               </Link>
             </div>
@@ -274,8 +277,8 @@ function Section() {
               >
                 Our member-companies cut across the six geo-political zones of
                 Nigeria. They are bonafide manufacturers with existing and
-                functional production plants. They grouped in sectors and
-                sub-sectors groups.
+                functional production plants. They are grouped in sectors and
+                sub-sectoral groups.
               </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "center" }}>
                 <Link to="/our-members" style={{ textDecoration: "none" }}>
@@ -284,6 +287,7 @@ function Section() {
                       color: "#fff",
                       borderColor: "#fff",
                       marginTop: "30px",
+                      textTransform: "capitalize",
                     }}
                   >
                     Meet Our Esteemed Members

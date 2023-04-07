@@ -31,7 +31,10 @@ function InfoBoard() {
         <InfoItemContainer>
           <InfoItemImg src={itemIcon} />
           <InfoItemTitle>Policy Advocacy</InfoItemTitle>
-          <InfoItemDescription>MANLOC, MANGAS</InfoItemDescription>
+          <InfoItemDescription>
+            The mission of MAN is to ensure conducive operating environment for
+            manufacturers in Nigeria.
+          </InfoItemDescription>
         </InfoItemContainer>
 
         <InfoItemContainer>

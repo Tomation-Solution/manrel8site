@@ -58,42 +58,49 @@ const NewAbout = () => {
             <h1>Our Core Values</h1>
             <div className="core-values-items">
               <ServiceHelper
-                details={"Service, deliver quintessential membership services."}
+                others={"S"}
+                details={"ervice: Deliver quintessential membership services."}
                 color={"#1e250d"}
               />
               <ServiceHelper
+                others={"E"}
                 details={
-                  "Engagement, engage internal and external publics to drive the growth of the manufacturing sector."
+                  "ngagement: engage internal and external public to drive the growth of the manufacturing sector."
                 }
                 color={"#222a0f"}
               />
               <ServiceHelper
+                others={"R"}
                 details={
-                  "Resilience, exceed the expectation of members despite inclement operating environment."
+                  "esilience: exceed the expectation of members despite inclement operating environment."
                 }
                 color={"#2b3513"}
               />
               <ServiceHelper
+                others={"V"}
                 details={
-                  "Value addition, promote value addition along the manufacturing value chain."
+                  "alue addition: promote value addition along the manufacturing value chain."
                 }
                 color={"#2b3513"}
               />
               <ServiceHelper
+                others={"I"}
                 details={
-                  "Integrity, uphold integrity, professionalism and transparency in our activities."
+                  "ntegrity: uphold integrity, professionalism and transparency in our activities."
                 }
                 color={"#3a481a"}
               />
               <ServiceHelper
+                others={"C"}
                 details={
-                  "Commitment, ensure collaboration and commitment to the attainment of the vision and mission of MAN."
+                  "ommitment: ensure collaboration and commitment to the attainment of the vision and mission of MAN."
                 }
                 color={"#495b20"}
               />
               <ServiceHelperCentered
+                others={"E"}
                 details={
-                  "Excellence, enable service-oriented system driven by excellent performance."
+                  "xcellence: enable service-oriented system driven by excellent performance."
                 }
                 color={"#596d27"}
               />
@@ -127,7 +134,7 @@ const NewAbout = () => {
                 </p>
 
                 <p>
-                  MAN promotes manufacturing sector competitiveness to job
+                  MAN promotes manufacturing sector competitiveness, job
                   creation and Gross Domestic Product through commitment to
                   research and development, new technologies and environmental
                   sustainability.
@@ -145,7 +152,7 @@ const NewAbout = () => {
                 style={{ backgroundColor: "#2b3513" }}
               >
                 <p>
-                  To provide for manufacturers all over Nigeria the means of
+                  To provide for manufacturers all over Nigeria, the means of
                   formulating, making known and influencing general policy in
                   regard to industrial, labour, social, legal, training, and
                   technical matters;
@@ -164,32 +171,53 @@ const NewAbout = () => {
               </div>
               <div
                 className="our-obj-item"
-                style={{ backgroundColor: "#495b20" }}
+                style={{ backgroundColor: "#3a481a" }}
               >
                 <p>
-                  To encourage high quality standard of members’ products
-                  through the collective and circulation of useful information
-                  and the provision of advice;
+                  To encourage good manufacturing practices that will lead to a
+                  high standard of members' products through the collection and
+                  dissemination of information and the provision of advice;
                 </p>
               </div>
               <div
                 className="our-obj-item"
-                style={{ backgroundColor: "#596d27" }}
+                style={{ backgroundColor: "#3a481a" }}
               >
                 <p>
-                  To encourage the patronage of made in Nigeria products by
+                  To encourage the patronage of made-in-Nigeria products by
                   Nigerians and by consumers in foreign countries;
                 </p>
               </div>
-              <div className="our-obj-item centered">
+              <div
+                className="our-obj-item"
+                style={{ backgroundColor: "#3a481a" }}
+              >
+                <p>
+                  To promote the export of products of members' through constant
+                  enlightenment and appropriate industrial groups such as the
+                  MAN Export Group.
+                </p>
+              </div>
+              <div
+                className="our-obj-item"
+                style={{ backgroundColor: "#3a481a" }}
+              >
+                <p>
+                  To interact and liaise with kindred organizations and other
+                  bodies, in the accomplishment of the objectives of the
+                  Association and on subjects of common interest.
+                </p>
+              </div>
+
+              {/* <div className="our-obj-item centered">
                 <div className="" style={{ backgroundColor: "#506223" }}>
                   <p>
-                    To communicate and liaise with kindred and other bodies, in
+                    To communicate and liaise with kindred organisations and other bodies, in
                     the accomplishment of the objectives of the Association and
                     on subjects of common interest.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <p style={{ color: "#2b3513" }}>

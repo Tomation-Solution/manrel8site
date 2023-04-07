@@ -1,4 +1,4 @@
-export const ServiceHelper = ({ details, color }) => {
+export const ServiceHelper = ({ details, color, others }) => {
   return (
     <div
       className="core-values-item"
@@ -7,12 +7,21 @@ export const ServiceHelper = ({ details, color }) => {
       }}
     >
       <div className="right">
-        <p className="uppercase-first">{details}</p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <span style={{ fontSize: "60px" }}>{others}</span>
+          <p style={{ lineHeight: "20px", marginTop: "30px" }}>{details}</p>
+          {/* <p className="uppercase-first">{details}</p> */}
+        </div>
       </div>
     </div>
   );
 };
-export const ServiceHelperCentered = ({ details, color }) => {
+export const ServiceHelperCentered = ({ details, color, others }) => {
   return (
     <div
       className="core-values-item centered"
@@ -20,8 +29,15 @@ export const ServiceHelperCentered = ({ details, color }) => {
         backgroundColor: `${color}`,
       }}
     >
-      <div className="right">
-        <p className="uppercase-first">{details}</p>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <span style={{ fontSize: "60px" }}>{others}</span>
+        <p style={{ lineHeight: "20px", marginTop: "30px" }}>{details}</p>
+        {/* <p className="uppercase-first">{details}</p> */}
       </div>
     </div>
   );
