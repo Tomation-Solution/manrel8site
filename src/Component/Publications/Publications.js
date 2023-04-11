@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
@@ -14,20 +14,12 @@ import { newPubData } from "./PublicationsData";
 import { Link } from "react-router-dom";
 import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import { PublicationPayModal } from "../NewEvents/Modals";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (4).jpg";
 
 const Publications = () => {
-  const [viewpaid, setViewPaid] = useState(false);
-
-  const viewpaidHandler = () => {
-    setViewPaid(!viewpaid);
-  };
-
   return (
     <>
-      {viewpaid && <PublicationPayModal closefn={viewpaidHandler} />}
       <div>
         <ThemeProvider theme={theme}>
           <UIProvider>
@@ -44,8 +36,13 @@ const Publications = () => {
               <div className="news_main">
                 <div className="cover">
                   <div className="right">
-                    <p className="view-paid" onClick={viewpaidHandler}>
-                      Click to view paid publications
+                    <p className="view-paid">
+                      <Link
+                        to={"/paid-publications"}
+                        style={{ color: "#2b3513", textDecoration: "none" }}
+                      >
+                        Click to view paid publications
+                      </Link>
                     </p>
                     <div className="top">
                       <h2>Publications</h2>

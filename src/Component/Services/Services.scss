@@ -110,7 +110,7 @@
           h1 {
             font-size: 25px;
             padding-bottom: 30px;
-            text-transform: lowercase;
+            text-transform: capitalize;
           }
           p {
             font-size: 14px;
@@ -280,7 +280,7 @@
           }
           h1 {
             font-size: 20px;
-            text-transform: lowercase;
+            text-transform: capitalize;
           }
           p {
             font-size: 12px;
@@ -394,7 +394,7 @@
             height: fit-content;
             h1 {
               font-size: 14px;
-              text-transform: lowercase;
+              text-transform: capitalize;
               padding-bottom: 0px;
             }
           }

@@ -79,7 +79,7 @@ const JoinUsPage = () => {
                 required
                 onClick={(e) => setCheck(e.target.value)}
               />
-              I hereby Confirm that I am Eligible to be a Member of MAN.
+              I hereby Confirm that I am eligible to be a Member of MAN.
             </label>
             <div
               style={{

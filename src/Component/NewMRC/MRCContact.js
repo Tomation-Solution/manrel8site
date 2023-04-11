@@ -7,6 +7,7 @@ import "./MRCContact.scss";
 
 import MrcContactImg from "../../images/new-images/MrcContactImg.png";
 import Subscribe from "../Subscribe/Subscribe";
+import { Link } from "react-router-dom";
 
 const MRCContact = () => {
   return (
@@ -93,7 +94,14 @@ const MRCContact = () => {
               </div>
               <div className="obj-item">
                 <div></div>
-                <span className="span-bold">View Our Branches</span>
+                <span className="span-bold">
+                  <Link
+                    to={"/operate"}
+                    style={{ textDecoration: "none", color: "#2b3513" }}
+                  >
+                    View Our Branches
+                  </Link>
+                </span>
               </div>
             </div>
 
@@ -111,7 +119,7 @@ const MRCContact = () => {
               <div className="obj-item">
                 <div></div>
                 <span>
-                  Phone: 01-4542700, 01-4542701, 01-4542702, 081 666 75412
+                  Phone: 081 666 75412, 01-4542700, 01-4542701, 01-4542702
                 </span>
               </div>
               <div className="obj-item">

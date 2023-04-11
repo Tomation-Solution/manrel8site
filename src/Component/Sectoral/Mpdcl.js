@@ -141,7 +141,7 @@ function Mpdcl() {
     { image: Board1, name: "Engr. Ibrahim Usman", title: "Board Chairman" },
     { image: "", name: "Alhaji Ali Madugu (mni)", title: "" },
     { image: Board2, name: "Chief John Aluya", title: "" },
-    { image: Board3, name: "Chief John Aluya", title: "" },
+    { image: Board3, name: "Engr Chukwuemeka Nzewi", title: "" },
     { image: "", name: "Engr. Reginald Odiah", title: "" },
     { image: "", name: "Otunba Francis Meshioye", title: "" },
     {
