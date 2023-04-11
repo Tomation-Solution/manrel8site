@@ -163,10 +163,10 @@ const NewAbout = () => {
                 style={{ backgroundColor: "#3a481a" }}
               >
                 <p>
-                  To promote the enhancement of manufaturing contribution of
-                  manufacturers to the national economy through government and
+                  To promote the enhancement of manufacturing contribution
+                  economy to the national economy through government and
                   otherwise, whose work may affect directly or indirectly the
-                  interests of manufacturers;
+                  interests of manufacturers
                 </p>
               </div>
               <div

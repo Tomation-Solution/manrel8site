@@ -36,20 +36,30 @@ const Training = () => {
             "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
           ]}
         />
-
         <div className="event-options">
           <span className="span-active">Trainings</span>
-          {/* <span className="span-inactive" onClick={() => setPay(!pay)}>
-            Paid Trainings
-          </span> */}
-          {/* <span className="span-inactive" onClick={() => setPay(!pay)}>
-            Special Trainings
-          </span> */}
         </div>
 
         <div className="event-container">
           <div className="event-items">
             {trainingData.map((item, index) => (
+              <SingleTraining
+                image={Image}
+                registerfn={() => setRegister(!register)}
+                data={item}
+                key={index}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="event-options">
+          <span className="span-active">MPDCL Trainings</span>
+        </div>
+
+        <div className="event-container">
+          <div className="event-items">
+            {trainingData.slice(0, 3).map((item, index) => (
               <SingleTraining
                 image={Image}
                 registerfn={() => setRegister(!register)}

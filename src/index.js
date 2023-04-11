@@ -47,6 +47,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { DashBoard } from "./Component/DashBoard/DashBoard";
 import HowWeWork from "./Component/NewAbout/HowWeWork";
+import PaidPublications from "./Component/PaidPublications/PaidPublications";
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 const client = new QueryClient();
@@ -112,6 +113,7 @@ root.render(
             path="/membership-requirement"
             element={<NewMemberRequire />}
           />
+          <Route path="/paid-publications" element={<PaidPublications />} />
           <Route path="/existing-membership" element={<ExistingMembers />} />
           <Route path="/our-members" element={<LatestMembers />} />
           <Route path="/insight-more" element={<InsightMore />} />

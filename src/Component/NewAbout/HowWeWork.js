@@ -22,9 +22,9 @@ const HowWeWork = () => {
               <p>
                 The overall control of the Association and the management of its
                 affairs is vested in the National Council. The National Council
-                operates through the Executive committee, five standing
-                commitees and nine Ad-hoc committees. The Councils of the
-                sixteen branches of the Association, subject to the Authority of
+                operates through the Executive Committee, five Standing
+                Commitees and nine Ad-hoc Committees. The Councils of the
+                sixteen Branches of the Association, subject to the Authority of
                 the National Council, provides control of Branch affairs. The
                 Association operates ten Sectoral and seventy-four Sub-Sectoral
                 Groups.
@@ -134,7 +134,7 @@ const HowWeWork = () => {
           <div className="other-groups">
             <h1>SPECIAL PURPOSE VEHICLES OF MAN</h1>
             <p>
-              As an extension of its service arm to members, MAN delivers
+              As an extension of its service to members, MAN delivers
               specialized services through the Manufacturers Resource Centre
               (MRC) and the Manufacturers Power Development Company
               Limited (MPDCL).
@@ -264,7 +264,7 @@ const HowWeWork = () => {
                 Demonstrate transparent commitment to Nigeria’s industrial
                 aspirations and policies; placing Nigeria’s best interest above
                 all others and increasing the contribution of the manufacturing
-                sector to the economy, as well as the improvement of the quality
+                sector to the economy as well as the improvement of the quality
                 of life of Nigerians.
               </p>
             </div>

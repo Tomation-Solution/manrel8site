@@ -48,7 +48,7 @@ const NewEvents = () => {
               <SingleEvent
                 image={Image}
                 registerfn={() => setRegister(!register)}
-                key={item}
+                key={item.id}
                 data={item}
               />
             ))}
@@ -73,6 +73,8 @@ const NewEvents = () => {
               />
             ))}
           </div>
+
+          <h1 className="events-header">MPDCL Trainings</h1>
           <div className="btn-center">
             <Link to="/training">
               <button>See More Trainings</button>

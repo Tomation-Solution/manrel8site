@@ -166,7 +166,7 @@ export const pubdata = [
 export const newPubData = [
   {
     id: "3",
-    name: "REPORT OF MCCI Q4 2022 REPORT",
+    name: "REPORT OF MCCI Q4 2022",
     title: "MAN CEOs CONFIDENCE INDEX",
     link: "https://drive.google.com/file/d/1T9Ie6y3GP3hIBorTpCy-cWwESbOVwyw1/view?usp=share_link",
     freetext: [

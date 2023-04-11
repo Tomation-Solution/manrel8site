@@ -246,3 +246,27 @@ export const PublicationPayModal = ({ closefn }) => {
     </BackDrop>
   );
 };
+
+export const SinglePublication = ({ image, registerfn, data }) => {
+  return (
+    <div className="event-card">
+      <img src={image} alt="" />
+      <h2>{data.name}</h2>
+      <div className="icons">
+        <CalendarMonthIcon />
+        <p>{data.date}</p>
+      </div>
+      <div className="icons">
+        <LocationOnIcon />
+        {data.location ? <p>{data.location}</p> : <p>MAN HOUSE IKEJA</p>}
+      </div>
+      <div className="icons">
+        <PaymentsIcon />
+        {data.amount ? <p>{data.amount}</p> : <p>NGN 70,000</p>}
+      </div>
+      <div className="buttons">
+        <button onClick={registerfn}>Pay For Publication</button>
+      </div>
+    </div>
+  );
+};

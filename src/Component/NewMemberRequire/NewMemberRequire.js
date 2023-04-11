@@ -64,7 +64,7 @@ const NewMemberRequire = () => {
           image={backImage}
           header={"Membership Requirements"}
           details={[
-            "The membership requirement steps below detail the process of becoming a member of MAN",
+            "The membership requirement steps below details the process of becoming a member of MAN",
           ]}
         />
         <section className="membreq-steps" style={{ marginTop: "50px" }}>
@@ -78,7 +78,7 @@ const NewMemberRequire = () => {
                 <p>1</p>
               </div>
               <p className="step-item-text">
-                SHOULD HAVE A MANUFACTURING PLANT IN NIGERIA
+                HAVE A MANUFACTURING PLANT IN NIGERIA
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#506223" }}>
@@ -86,7 +86,7 @@ const NewMemberRequire = () => {
                 <p>2</p>
               </div>
               <p className="step-item-text">
-                SHOULD BE A MANUFACTURER OF AT LEAST ONE PRODUCT
+                BE A MANUFACTURER OF AT LEAST ONE PRODUCT
               </p>
             </div>
             <div className="step-item" style={{ backgroundColor: "#47571f" }}>
@@ -292,7 +292,7 @@ const NewMemberRequire = () => {
                 required
                 onChange={(e) => setCheck(e.target.value)}
               />
-              I hereby Confirm that I am Eligible to be a Member of MAN.
+              I hereby Confirm that I am eligible to be a Member of MAN.
             </label>
             <div
               style={{
