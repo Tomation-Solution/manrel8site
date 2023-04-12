@@ -22,9 +22,9 @@
     }
     h2 {
       color: #505050;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 22px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
       @include mobile-3 {
         padding-bottom: 10px;
         font-size: 16px;
@@ -32,7 +32,7 @@
     }
     p {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       color: #505050;
       line-height: 19px;
       @include mobile-3 {
@@ -49,7 +49,8 @@
       }
       h4 {
         color: #505050;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 500;
         padding-bottom: 5px;
       }
       input {
@@ -59,6 +60,16 @@
         border-radius: 5px;
         height: 50px;
         padding: 0 20px;
+        outline: none;
+      }
+      select {
+        width: 100%;
+        background: #ffffff;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        height: 50px;
+        padding: 0 20px;
+        outline: none;
       }
       textarea {
         width: 100%;
@@ -67,6 +78,7 @@
         border-radius: 5px;
         padding: 10px 20px;
         resize: none;
+        outline: none;
       }
       p {
         padding-bottom: 5px;
@@ -87,17 +99,54 @@
         width: 100%;
         background: #2b3513;
         border-radius: 500px;
-        padding: 15px 0;
+        padding: 5px 0;
         color: #fff;
         border: none;
         cursor: pointer;
         text-transform: uppercase;
       }
     }
+    .remove-btn {
+      padding: 5px;
+      background-color: #d3d3d3;
+      color: #2b3513;
+      outline: none;
+      border: 1px solid #2b3513;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .participant-section {
+      margin: 20px 0px;
+      background-color: #ddd;
+      padding: 20px 0px;
+    }
+
+    .diff-btn {
+      margin: 20px 0px;
+      justify-content: center;
+      align-items: center;
+      div {
+        text-align: center;
+        cursor: pointer;
+        img {
+          width: 15px;
+          height: 15px;
+          object-fit: contain;
+        }
+        p {
+          font-size: 14px;
+          color: #2b3513;
+        }
+      }
+    }
   }
 }
 
 .event-card {
+  box-shadow: 0px 10px 20px #d3d3d3;
+  border-radius: 10px;
+  overflow: hidden;
   margin-bottom: 20px;
   width: 30%;
   @include mobile-3 {
@@ -108,6 +157,8 @@
   }
   img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
   p {
     color: #000022;

@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import { UIProvider } from "../../Ui";
-import Image from "../../images/Rectangle 224.png";
 
 import NewNavBar from "../NewNavBar/NewNavBar";
 import "../NewEvents/NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import { PayModal, RegisterModal, SingleEvent } from "../NewEvents/Modals";
-import { eventData } from "./EventData";
 import backImage from "../../images/new-images/EventBgImg.png";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import {
+  FreeEvents,
+  PaidEvents,
+  SpecialEvents,
+} from "../PaidEvents/PaidEvents";
 
 const Events = () => {
-  // const [options , setOptions] = useState("free")
-  const [register, setRegister] = useState(false);
-  const [pay, setPay] = useState(false);
+  const [options, setOptions] = useState("free");
+
   return (
     <div className="new-events">
-      {register && <RegisterModal closefn={() => setRegister(!register)} />}
-      {pay && <PayModal closefn={() => setPay(!pay)} />}
       <UIProvider>
         <NewNavBar />
         <NewImageBanner
@@ -30,29 +29,29 @@ const Events = () => {
         />
 
         <div className="event-options">
-          <span className="span-active">Free Events</span>
-          <span className="span-inactive" onClick={() => setPay(!pay)}>
+          <span
+            className={options === "free" ? "span-active" : "span-inactive"}
+            onClick={() => setOptions("free")}
+          >
+            Free Events
+          </span>
+          <span
+            className={options === "paid" ? "span-active" : "span-inactive"}
+            onClick={() => setOptions("paid")}
+          >
             Paid Events
           </span>
-          <span className="span-inactive" onClick={() => setPay(!pay)}>
-            Special Events
+          <span
+            className={options === "special" ? "span-active" : "span-inactive"}
+            onClick={() => setOptions("special")}
+          >
+            Annual General Meeting
           </span>
         </div>
 
-        <div className="event-container">
-          <div className="event-items">
-            {eventData
-              .filter((event) => event.type === "free")
-              .map((item) => (
-                <SingleEvent
-                  image={Image}
-                  registerfn={() => setRegister(!register)}
-                  key={item}
-                  data={item}
-                />
-              ))}
-          </div>
-        </div>
+        {options === "free" ? <FreeEvents /> : null}
+        {options === "paid" ? <PaidEvents /> : null}
+        {options === "special" ? <SpecialEvents /> : null}
 
         <Wall />
         <Footer />

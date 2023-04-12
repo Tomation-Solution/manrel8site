@@ -44,14 +44,16 @@ const NewEvents = () => {
         <div className="event-container">
           <h1 className="events-header">Events</h1>
           <div className="event-items">
-            {eventData.map((item) => (
-              <SingleEvent
-                image={Image}
-                registerfn={() => setRegister(!register)}
-                key={item.id}
-                data={item}
-              />
-            ))}
+            {eventData
+              .filter((item) => item.type === "free")
+              .map((item) => (
+                <SingleEvent
+                  image={Image}
+                  registerfn={() => setRegister(!register)}
+                  key={item.id}
+                  data={item}
+                />
+              ))}
           </div>
 
           <div className="btn-center">
@@ -64,7 +66,7 @@ const NewEvents = () => {
         <div className="event-container">
           <h1 className="events-header">Trainings</h1>
           <div className="event-items">
-            {trainingData.map((item, index) => (
+            {trainingData.slice(0, 4).map((item, index) => (
               <SingleTraining
                 image={Image}
                 registerfn={() => setRegisterTraining(!registerTraining)}
