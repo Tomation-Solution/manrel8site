@@ -29,10 +29,6 @@ export const RegisterModal = ({ closefn }) => {
             <input type={"text"} />
           </div>
           <div className="card">
-            <h4>Phone Number</h4>
-            <input type={"text"} />
-          </div>
-          <div className="card">
             <h4>Email Address</h4>
             <input type="email" />
           </div>
