@@ -129,28 +129,28 @@ export const newsdata = [
   },
   {
     id: "7",
-    name: "Special Strategic Unit",
-    title: "Special Strategic Unit",
+    name: "SPECIAL STRATEGIC UNIT",
+    title: "SPECIAL STRATEGIC UNIT",
     date: "",
     paragraphs: [
-      "......to achieve these, below are new structures created or deployed to improve services rendered to members of the Association",
+      "Below are new structures created to improve services rendered to members of the Association",
     ],
     links: [
       { name: "1) International Cooperation and Advocacy Division", value: "" },
       {
         name: "2) Creativity and Innovation Management Unit",
-        value:
-          "https://docs.google.com/document/d/1oNJ-WLop4v1e3vOQP6HFxG-KgqaJEv9Z/edit?usp=sharing&ouid=107891646319599945778&rtpof=true&sd=true",
+        value: "/single-news/1",
+        // "https://docs.google.com/document/d/1oNJ-WLop4v1e3vOQP6HFxG-KgqaJEv9Z/edit?usp=sharing&ouid=107891646319599945778&rtpof=true&sd=true",
       },
       {
         name: "3) Environment and Green Manufacturing Unit",
-        value:
-          "https://docs.google.com/document/d/10nEZOYpdKMW8WuIh-_pssSPu13dHO93s/edit?usp=sharing&ouid=107891646319599945778&rtpof=true&sd=true ",
+        value: "/single-news/2",
+        // "https://docs.google.com/document/d/10nEZOYpdKMW8WuIh-_pssSPu13dHO93s/edit?usp=sharing&ouid=107891646319599945778&rtpof=true&sd=true ",
       },
       {
         name: "4) Membership Satisfaction and Monitoring Unit",
-        value:
-          "https://docs.google.com/document/d/1zXa7kjG93MO7HNr8Uo1DgpyonvMCuAUB/edit?usp=sharing&ouid=107891646319599945778&rtpof=true&sd=true ",
+        value: "/single-news/3",
+        // "https://docs.google.com/document/d/1zXa7kjG93MO7HNr8Uo1DgpyonvMCuAUB/edit?usp=sharing&ouid=107891646319599945778&rtpof=true&sd=true ",
       },
       { name: "5) Legal and Compliance Unit", value: "" },
     ],

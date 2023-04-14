@@ -42,7 +42,7 @@ const ReportsDetails = () => {
               <div className="cover">
                 {renderdata && (
                   <div className="left">
-                    <ReportsPreview render_data={renderdata} />
+                    <ReportsPreview isImage={true} render_data={renderdata} />
                   </div>
                 )}
 

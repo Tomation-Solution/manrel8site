@@ -48,6 +48,8 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { DashBoard } from "./Component/DashBoard/DashBoard";
 import HowWeWork from "./Component/NewAbout/HowWeWork";
 import PaidPublications from "./Component/PaidPublications/PaidPublications";
+import ProspectiveMemberLogin from "./Component/ProspectiveMemberLogin/ProspectiveMemberLogin";
+import SingleNews from "./Component/SingleNews/SingleNews";
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 const client = new QueryClient();
@@ -113,6 +115,12 @@ root.render(
             path="/membership-requirement"
             element={<NewMemberRequire />}
           />
+          <Route
+            path="/prospective-member-login"
+            element={<ProspectiveMemberLogin />}
+          />
+          <Route path="/single-news/:id" element={<SingleNews />} />
+
           <Route path="/paid-publications" element={<PaidPublications />} />
           <Route path="/existing-membership" element={<ExistingMembers />} />
           <Route path="/our-members" element={<LatestMembers />} />

@@ -1,12 +1,14 @@
 import React from "react";
 import "./ReportsPreview.scss";
 
-const ReportsPreview = ({ render_data }) => {
+const ReportsPreview = ({ render_data, isImage }) => {
   return (
     <div className="reports-preview">
-      <div className="preview-image">
-        <img alt="" src={render_data?.image} />
-      </div>
+      {isImage ? (
+        <div className="preview-image">
+          <img alt="" src={render_data?.image} />
+        </div>
+      ) : null}
       <div className="preview-text">
         <h2>{render_data.title}</h2>
         {render_data?.date && (
@@ -19,9 +21,11 @@ const ReportsPreview = ({ render_data }) => {
             ))}
           </>
         ) : null}
-        <a href={`${render_data.link}`} rel="noreferrer" target="_blank">
-          Click here to download or Read more
-        </a>
+        {render_data.link ? (
+          <a href={`${render_data.link}`} rel="noreferrer" target="_blank">
+            Click here to download or Read more
+          </a>
+        ) : null}
       </div>
     </div>
   );

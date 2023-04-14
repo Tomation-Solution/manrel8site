@@ -329,9 +329,9 @@ function Members() {
           </div>
           <div className="rquire">
             <div className="over">
-              <h1>Check Out our membership requirements</h1>
+              <h1>Check Membership Requirements</h1>
               <button onClick={() => navigate("/membership-requirement")}>
-                Membership requirements
+                Membership Requirements
               </button>
             </div>
           </div>
