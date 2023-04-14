@@ -47,7 +47,7 @@ function LatestMembers() {
         <NewImageBanner
           image={backImage}
           header={"Our Members"}
-          details={["See our esteemed across the country"]}
+          details={["See our esteemed members across the country"]}
         />
 
         <div className="wrapper">
@@ -65,10 +65,24 @@ function LatestMembers() {
                 {paginatedData.map((item, index) => (
                   <div className="card" key={index} id={item?.Column2}>
                     <div className="card-item">
-                      <span className="bold">Name:</span>
+                      {/* <span className="bold">Name:</span> */}
                       <span className="light">{item?.Column2}</span>
                     </div>
                     <div className="card-item">
+                      <span className="light">
+                        {" "}
+                        <a
+                          href={
+                            item?.Column12 ? `https://${item?.Column12}` : ""
+                          }
+                          target={"_blank"}
+                          rel={"noreferrer"}
+                        >
+                          {item?.Column12 ? `${item?.Column12}` : ""}
+                        </a>
+                      </span>
+                    </div>
+                    {/* <div className="card-item">
                       <span className="bold">MAN Registration Number:</span>
                       <span className="light"> {item?.Column3}</span>
                     </div>
@@ -93,7 +107,7 @@ function LatestMembers() {
                           {item?.Column12 ? `${item?.Column12}` : ""}
                         </a>
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 ))}
               </div>

@@ -49,17 +49,27 @@ const HowWeWork = () => {
               is made up of a President, eight Vice Presidents, Honourary
               Treasurer, Chairmen of Branches, Chairmen of Sectoral Groups,
               elected and strategic members, the Director General and life
-              members.
+              members. Past Presidents of the Association are life members of
+              the National Council.
             </p>
-            <p style={{ color: "#2b3513" }}>
-              Past Presidents of the Association are life members of the
-              National Council.
-            </p>
+            {/* <p style={{ color: "#2b3513" }}>
+           
+            </p> */}
             {/* <p style={{ color: "#2b3513" }}>
               In directing MAN’s affairs and determining its policy options, the
               National Council is served by an Executive Committee and five
               Standing Committees namely;
             </p> */}
+            <h3
+              style={{
+                color: "#2b3513",
+                fontWeight: "500",
+                textAlign: "center",
+                fontSize: "25px",
+              }}
+            >
+              The Standing Committees
+            </h3>
             <div className="core-values-items">
               <div
                 className="core-values-item"

@@ -136,6 +136,11 @@ export const MembershipDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
+          <Link to={"/prospective-member-login"}>Prospective Members</Link>
+        </span>
+      </div>
+      <div className="dropdown-item">
+        <span>
           <Link to={"/our-members"}>Our Members</Link>
         </span>
       </div>

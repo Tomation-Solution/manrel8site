@@ -6,46 +6,12 @@ import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { Link, useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
-import { toast } from "react-toastify";
-import { loginUser } from "../../utils/api-calls";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/MemberRequirement.png";
 
 const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
   const navigate = useNavigate();
-
-  const { register, handleSubmit } = useForm();
-
-  const { mutate, isLoading } = useMutation((data) => loginUser(data), {
-    onMutate: () => {
-      toast.info("Validating Credentials", {
-        icon: false,
-      });
-    },
-    onSuccess: (data) => {
-      console.log(data);
-      if (data.has_paid) {
-        toast.success("Successfully Logged In", {
-          icon: false,
-        });
-        localStorage.setItem("userdata", JSON.stringify(data));
-        navigate("/app-portal");
-        window.location.reload(true);
-      }
-    },
-    onError: (error) => {
-      toast.error(`${error.message}`, {
-        icon: false,
-      });
-    },
-  });
-
-  const loginSubmitHandler = (data) => {
-    mutate(data);
-  };
 
   const submitHandler = () => {
     if (check === "agree") {
@@ -124,9 +90,9 @@ const NewMemberRequire = () => {
               An intending member of the Association (being a manufacturer) will
               be required to obtain and complete a Membership Application Form.
             </p>
-            <span>
+            {/* <span>
               <Link to={"/join-now-page"}>Click Here to make payment</Link>
-            </span>
+            </span> */}
             <h1>APPLICATION FORM [N20,000.00]</h1>
             <div className="gray-circle"></div>
           </div>
@@ -168,8 +134,8 @@ const NewMemberRequire = () => {
                 <p>4</p>
               </div>
               <p className="step-item-text">
-                A COVERING LETTER ON THE LETTER HEAD OF YOUR COMPANY APPLYING TO
-                BE REGISTERED AS A MEMBER OF MAN
+                LETTER OF INTRODUCTION ON THE COMPANY'S LETTER-HEAD, APPLYING
+                FOR MEMBERSHIP OF THE ASSOCIATION
               </p>
             </div>
             <div className="gray-circle"></div>
@@ -275,7 +241,7 @@ const NewMemberRequire = () => {
           <h1>Join Us!</h1>
           <p>
             You have made a great choice for your company by deciding to join
-            the league of Manufacturers with credibility in Nigeria!
+            the league of Manufacturers with credibility in Nigeria
           </p>
         </div>
         <div className="eligibilty">
@@ -308,30 +274,7 @@ const NewMemberRequire = () => {
             </div>
           </form>
         </div>
-        <div className="prospective">
-          <h1>Prospective Member</h1>
-          <p>
-            If you have already purchased the application form, or you want to
-            know the status of a previous purchase, kindly login with your
-            company information.
-          </p>
-          <form onSubmit={handleSubmit(loginSubmitHandler)}>
-            <input
-              type={"email"}
-              {...register("email", { required: true })}
-              required
-              placeholder="Email Address"
-            />
-            <input
-              type={"text"}
-              {...register("password", { required: true })}
-              required
-              placeholder="CAC Registration Number"
-            />
 
-            <button disabled={isLoading}>LOGIN</button>
-          </form>
-        </div>
         <Wall />
         <Footer />
       </UIProvider>

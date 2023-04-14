@@ -160,7 +160,7 @@ const PrivateSector = () => {
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
               <h5>
-                Federation of West African Manufacturers Associations (FEWAMA)
+                Federation of West African Manufacturers Association (FEWAMA)
               </h5>
             </div>
 
@@ -179,10 +179,10 @@ const PrivateSector = () => {
               <h5>ECOWAS Business Council</h5>
             </div>
 
-            <div className="achievements-item">
+            {/* <div className="achievements-item">
               <img alt="" src={AchieveBullet} />
               <h5>Japan International Cooperation Agency (JICA)</h5>
-            </div>
+            </div> */}
 
             <div className="achievements-item">
               <img alt="" src={AchieveBullet} />

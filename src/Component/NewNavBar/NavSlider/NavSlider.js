@@ -25,7 +25,7 @@ const NavSlider = ({ clickfn }) => {
               <Link to={"/about/how-we-work"}>How we Work</Link>
             </span>
             <span className="items-span">
-              <Link to={"/about/private-sector"}>Organized Private Sector</Link>
+              <Link to={"/about/private-sector"}>Our Affiliates</Link>
             </span>
             <span className="items-span">
               <Link to={"/about/council-members"}>Our Executives</Link>
@@ -85,6 +85,9 @@ const NavSlider = ({ clickfn }) => {
               <Link to="/membership-requirement">Membership Requirements</Link>
             </span>
             <span className="items-span">
+              <Link to={"/prospective-member-login"}>Prospective Members</Link>
+            </span>
+            <span className="items-span">
               <Link to={"/our-members"}>Our Members</Link>
             </span>
             <span className="items-span">
@@ -107,7 +110,8 @@ const NavSlider = ({ clickfn }) => {
           </div>
         </div>
         <div className="nav-slider-translate">
-          <Translate />
+          Language(
+          <Translate />)
         </div>
         <div className="nav-slider-join">
           <Link

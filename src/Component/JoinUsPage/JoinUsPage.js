@@ -62,7 +62,7 @@ const JoinUsPage = () => {
           <h1>Join Us!</h1>
           <p>
             You have made a great choice for your company by deciding to join
-            the league of Manufacturers with credibility in Nigeria!
+            the league of Manufacturers with credibility in Nigeria
           </p>
         </div>
         <div className="eligibilty">
