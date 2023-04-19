@@ -7,13 +7,14 @@ import "./NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import {
+  MpdclTrainings,
   RegisterModal,
   RegisterTrainingModal,
   SingleEvent,
   SingleTraining,
 } from "./Modals";
 import { Link } from "react-router-dom";
-import { trainingData } from "../Training/TrainingData";
+import { mpdclTrainings, trainingData } from "../Training/TrainingData";
 import { eventData } from "../Events/EventData";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
@@ -64,7 +65,7 @@ const NewEvents = () => {
         </div>
 
         <div className="event-container">
-          <h1 className="events-header">Trainings</h1>
+          <h1 className="events-header">MRC Trainings</h1>
           <div className="event-items">
             {trainingData.slice(0, 4).map((item, index) => (
               <SingleTraining
@@ -77,6 +78,17 @@ const NewEvents = () => {
           </div>
 
           <h1 className="events-header">MPDCL Trainings</h1>
+          <div className="event-items">
+            {mpdclTrainings.slice(0, 4).map((item, index) => (
+              <MpdclTrainings
+                image={Image}
+                registerfn={() => setRegisterTraining(!registerTraining)}
+                data={item}
+                key={index}
+              />
+            ))}
+          </div>
+
           <div className="btn-center">
             <Link to="/training">
               <button>See More Trainings</button>

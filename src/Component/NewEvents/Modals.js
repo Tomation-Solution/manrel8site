@@ -218,6 +218,36 @@ export const SingleTraining = ({ image, registerfn, data }) => {
   );
 };
 
+export const MpdclTrainings = ({ image, registerfn, data }) => {
+  return (
+    <div className="event-card">
+      <img src={image} alt="" />
+      <div style={{ margin: "10px" }}>
+        <h2>{data.name}</h2>
+        <div className="icons">
+          <CalendarMonthIcon />
+          <p>{data.date}</p>
+        </div>
+        <div className="icons">
+          <LocationOnIcon />
+          {Array.isArray(data.location) ? (
+            data.location.map((item, index) => <p key={index}>{item}</p>)
+          ) : (
+            <p>{data.location}</p>
+          )}
+        </div>
+        <div className="icons">
+          <PaymentsIcon />
+          {data.amount ? <p>{data.amount}</p> : <p>NGN 70,000</p>}
+        </div>
+        <div className="buttons">
+          <button onClick={registerfn}>Register</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const PublicationPayModal = ({ closefn }) => {
   return (
     <BackDrop>

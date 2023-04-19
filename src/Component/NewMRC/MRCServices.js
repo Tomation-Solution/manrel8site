@@ -31,7 +31,7 @@ const MRCServices = () => {
           <p style={{ color: "#2b3513" }}>
             Manufacturers Resource Centre is the only professional service
             organization structured to render business solutions for the
-            Manufacturing sector and affiliated. With us is a pool of
+            Manufacturing sector and affiliates. With us is a pool of
             well-seasoned consultants and added service outfits, geared at
             delivering solutions with high level of expertise and at very
             subsidized rates.
