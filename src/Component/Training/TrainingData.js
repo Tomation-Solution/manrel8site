@@ -114,3 +114,125 @@ export const trainingData = [
     amount: "",
   },
 ];
+
+export const mpdclTrainings = [
+  {
+    id: "1",
+    name: "Export by Sea, Road and Air Made Easy- ECOWAS, AfCFTA and Diaspora Markets.",
+    location: [
+      `LAGOS
+    148/150, Bode Thomas Street, Surulere, Lagos.
+    `,
+      `PORT HARCOURT
+    Plot 6, Road, Federal House Estate, Woji, 
+    Port Harcourt.`,
+    ],
+    date: "May 15th - 18th, 2023 | (Lagos & P/H)",
+    amount: "250,000",
+  },
+  {
+    id: "2",
+    name: "ENERGY LOSSES, AUDIT AND MANAGEMENT COURSE",
+    location: [
+      "NAPTIN Regional Training Centre Ijora Opposite Ijora Olopa, beside old Power Station, Lagos",
+    ],
+    date: "May 22nd – 26th, 2023 | (Lagos)",
+    amount: "150,000",
+  },
+  {
+    id: "3",
+    name: "STRATEGIC MAINTENANCE MANAGEMENT",
+    location: [
+      `LAGOS
+      148/150, Bode Thomas Street, Surulere, Lagos.
+      `,
+      `
+      PORT HARCOURT
+      Plot 6, Road, Federal House Estate, Woji, 
+      Port Harcourt.
+      `,
+    ],
+    date: "June 21st - 23rd, 2023 | (Lagos & P/H)",
+    amount: "230,000",
+  },
+  {
+    id: "4",
+    name: "BASIC PLC PROGRAMMING TROUBLESHOOTING & MAINTENANCE – ALLEN BRADLEY –(RS LOGIX 5 & 500)",
+    location: [
+      `
+      OTTA
+      KM 7, Idiroko Road, Davor Bus stop, Iyana Iyesi, Otta, Ogun State
+      `,
+    ],
+    date: "July 3rd – 7th, 2023 | (Otta & Kano)",
+    amount: "270,000",
+  },
+  {
+    id: "5",
+    name: "SHIFT MANAGEMENT",
+    location: [
+      `
+      LAGOS
+      148/150, Bode Thomas Street, Surulere, Lagos.      
+      `,
+      `
+      PORT HARCOURT
+      Plot 6, Road, Federal House Estate, Woji, Port Harcourt.
+      `,
+    ],
+    date: "July 17th – 19th, 2023 | (Otta & Kano)",
+    amount: "230,000",
+  },
+  {
+    id: "6",
+    name: "ADVANCED PLC – PROGRAMMABLE LOGIC CONTROLLER ALLEN BRADLEY (RS LOGIX 5 & 500)",
+    location: [
+      `
+      OTTA
+      KM 7, Idiroko Road, Davor Bus stop, Iyana Iyesi, Otta, Ogun State      
+      `,
+    ],
+    date: "August 1st – 5th, 2023 | (Otta & Kano)",
+    amount: "270,000",
+  },
+  {
+    id: "7",
+    name: "QUALITY CONTROL MANAGEMENT",
+    location: [
+      `
+      LAGOS
+148/150, Bode Thomas Street, Surulere, Lagos.
+      `,
+      `
+      PORT HARCOURT
+Plot 6, Road, Federal House Estate, Woji, Port Harcourt.`,
+    ],
+    date: "August 26th – 29th, 2023 | (Lagos & P/H)",
+    amount: "250,000",
+  },
+  {
+    id: "8",
+    name: "DISTRIBUTED CONTROL SYSTEM (DCS) – ABB FREELANCE",
+    location: [
+      `
+      OTTA
+KM 7, Idiroko Road, Davor Bus stop, Iyana Iyesi, Otta, Ogun State
+
+      `,
+    ],
+    date: "September 11th – 15th, 2023 | (Otta & Kano)",
+    amount: "270,000",
+  },
+  {
+    id: "9",
+    name: "SCADA / HMI: SIEMENS WINCC FLEXIBLE",
+    location: [
+      `
+      OTTA
+      KM 7, Idiroko Road, Davor Bus stop, Iyana Iyesi, Otta, Ogun State
+      `,
+    ],
+    date: "October 25th – 29th, 2023 | (Otta & Kano)",
+    amount: "270,000",
+  },
+];

@@ -19,9 +19,6 @@ const NewMRC = () => {
         <NewImageBanner
           image={backImage}
           header={"Manufacturers Resource Centre (MRC)"}
-          details={[
-            "The Manufacturers Resource Centre is the Business Solution Arm of Manufacturers Association of Nigeria (MAN). The Manufacturers Resource Centre prides herself as an entity dedicated to proffering Business Solutions to MAN Members thus develop their Businesses, increase Market share and Production Excellence.",
-          ]}
         />
         <div className="who-are">
           <h1 className="header">
