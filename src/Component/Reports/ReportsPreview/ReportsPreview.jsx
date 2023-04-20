@@ -1,7 +1,7 @@
 import React from "react";
 import "./ReportsPreview.scss";
 
-const ReportsPreview = ({ render_data, isImage }) => {
+const ReportsPreview = ({ render_data, isImage, no_title }) => {
   return (
     <div className="reports-preview">
       {isImage ? (
@@ -10,7 +10,7 @@ const ReportsPreview = ({ render_data, isImage }) => {
         </div>
       ) : null}
       <div className="preview-text">
-        <h2>{render_data.title}</h2>
+        {no_title ? <h2>{render_data.title}</h2> : null}
         {render_data?.date && (
           <p className="pub-paragraph">Date: {render_data?.date}</p>
         )}

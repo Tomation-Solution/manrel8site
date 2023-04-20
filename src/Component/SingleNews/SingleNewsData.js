@@ -2,8 +2,7 @@ export const strategicNews = [
   {
     id: "1",
     name: "Creativity and Innovation Management Unit",
-    title:
-      "INNOVATION AND CREATIVITY AND HOW IT FEEDS INTO MANUFACTURING – FOR MAN WEBSITE",
+    title: "INNOVATION AND CREATIVITY AND HOW IT FEEDS INTO MANUFACTURING",
     link: "",
     image: "",
     freetext: [
@@ -28,9 +27,6 @@ export const strategicNews = [
       "The Association hopes to explore these areas further through the newly created Innovation and Creativity Management Unit in other to bring about an excellent service delivery to its members.",
       "The Unit wishes to achieve these through awareness creation, information sharing, organizing interactive workshop/roundtables, collaboration, Partnership (locally and internationally), Exchange programme, Mentorship and Internship programmes with relevant organizations that will be of value addition to members companies.",
       "Please, ride along with us as we look forward to supporting the new, dynamic, resilient and formidable manufacturing industry emerging in Nigeria, Africa and globally.",
-      "Oluwaseyi Adegbite",
-      "Head, Creativity and Innovation Management Unit",
-      "For: The Manufacturers Association of Nigeria (MAN)",
     ],
   },
   {
@@ -56,14 +52,7 @@ export const strategicNews = [
       "1. Using survey instrument e.g. questionnaire to get the pulse of members on their level of awareness and preparedness on environmental and climate issues;",
       "2. Organizing Quarterly Dialogue session to discuss topical and burning environmental and climate issues with members while bringing in relevant MDA’s, private organization, international and local agencies covering environmental and climate issues;",
       "3. Conducting standard trainings specifically for Desk Officers of member-companies on Environmental and Climate issues;",
-      "4. Creating a network/platform for all Environmental Desk Officers of member-companies for continuous exchange of ideas, knowledge and information;",
-      "For further inquiries/information about the Unit, kindly contact: ",
-      "The Unit Head,",
-      "Environment and Green Manufacturing ",
-      "Victoria Onuoha (Mrs)",
-      "Email: victoria.onuoha@manufacturersnigeria.org;",
-      "Phone No: 08034307581; Whatsapp 07084063330",
-      "THANK YOU!",
+      "4. Creating a network/platform for all Environmental Desk Officers of member-companies for continuous exchange of ideas, knowledge and information.",
     ],
   },
   {
@@ -78,14 +67,6 @@ export const strategicNews = [
       "The Association will relentlessly address the challenges of the harsh business environment and put in untiring efforts to provide solutions to its members ",
       "To immensely boost the Association's advocacy and serve the members better, MAN has established a new unit named 'Membership Satisfaction and Monitoring'. The Unit is entrusted with the key responsibility of providing quick responses to issues that concern our members.",
       "However, members are encouraged to channel all their complaints and concern both recent and old to the Unit for prompt attention.",
-      "Thank you",
-      "Ibegbulam Nwakaego (Mrs.)",
-      "Unit Head",
-      "Membership Satisfaction and Monitoring ",
-      "M: 08023011380; 09062874847",
-      "Skype ID: Ego Ibegbulam",
-      "Ego.ibegbulam@manufacturersnigeria.org",
-      "ibegbulamego@yahoo.com",
     ],
   },
 ];
