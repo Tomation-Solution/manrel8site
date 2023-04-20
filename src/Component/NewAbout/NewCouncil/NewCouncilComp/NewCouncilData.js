@@ -16,7 +16,7 @@ import Sect4 from "../../../../images/new-images/executivesImg/Sect4.png";
 import Sect5 from "../../../../images/new-images/executivesImg/Sect5.png";
 import Sect6 from "../../../../images/new-images/executivesImg/Sect6.png";
 import Sect7 from "../../../../images/new-images/executivesImg/Sect7.png";
-import Sect8 from "../../../../images/new-images/executivesImg/Sect8.png";
+import Sect8 from "../../../../images/new-images/executivesImg/OyewoleNgozi.jpeg";
 import Sect9 from "../../../../images/new-images/executivesImg/Sect9.png";
 import Sect10 from "../../../../images/new-images/executivesImg/Sect10.png";
 import Sect11 from "../../../../images/new-images/executivesImg/Sect11.png";
@@ -574,17 +574,17 @@ export const memberData = [
     title: "Member",
   },
   {
-    name: "Mr. Segun Ajayi-Kadir",
+    name: "Mr. Segun Ajayi-Kadir mni",
     title: "Member",
   },
 ];
 export const StrategicMemb = [
   {
-    name: "Mr. J. O. Onigbinde",
+    name: "Mr. Jonathan O. Onigbinde",
     title: "Strategic Member",
   },
   {
-    name: "Mrs. E. E. Akpan",
+    name: "Mrs. Ekama E. Akpan",
     title: "Strategic Member",
   },
   {
@@ -616,7 +616,7 @@ export const StrategicMemb = [
     title: "Strategic Member",
   },
   {
-    name: "Dr. D.V.C. Obi",
+    name: "Dr. David V.C. Obi",
     title: "Strategic Member",
   },
   {
@@ -642,7 +642,7 @@ export const StrategicMemb = [
 ];
 export const pastData = [
   { image: "", name: "Alhaji (Dr) Hassan Adamu, CON", title: "Life Member" },
-  { image: "", name: "Engr. C. C. Ugwuh ", title: "Life Member" },
+  { image: "", name: "Engr. Charles C. Ugwuh ", title: "Life Member" },
   { image: "", name: "Alhaji Bashir M. Borodo", title: "Life Member" },
   {
     image: PastPresident1,

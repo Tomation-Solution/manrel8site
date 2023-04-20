@@ -20,6 +20,8 @@ import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import Subscribe from "../Subscribe/Subscribe";
 
+import MpdclTrainingImage from "../../images/new-images/MpdclTraining.jpeg";
+
 const NewEvents = () => {
   const [register, setRegister] = useState(false);
   const [registerTraining, setRegisterTraining] = useState(false);
@@ -81,7 +83,7 @@ const NewEvents = () => {
           <div className="event-items">
             {mpdclTrainings.slice(0, 4).map((item, index) => (
               <MpdclTrainings
-                image={Image}
+                image={MpdclTrainingImage}
                 registerfn={() => setRegisterTraining(!registerTraining)}
                 data={item}
                 key={index}

@@ -8,7 +8,7 @@ export const operateData = [
     mangerTitle: [""],
     otherDetails: [
       "femi.gbadegun@manufacturersnigeria.org, manikeja@manufacturersnigeria.org",
-      "No. 2A, Akilo Road, Ogba, Ikeja, Lagos State",
+      " 2A, Akilo Road, Ogba, Ikeja, Lagos State",
     ],
   },
   {
@@ -17,7 +17,7 @@ export const operateData = [
     manager: [{ name: "Mr. Sunday Okpe", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "No. 3 Shalom Street by Lagoon Estate Ark, Amuwo-Odofin Industrial Estate off Okota Road, Shalom Bus stop, Amuwo-Odofin, Lagos State",
+      " 3 Shalom Street by Lagoon Estate Ark, Amuwo-Odofin Industrial Estate off Okota Road, Shalom Bus stop, Amuwo-Odofin, Lagos State",
       "sunday.adejoh@manufacturersnigeria.org, manapapa@manufacturersnigeria.org",
     ],
   },
@@ -40,7 +40,7 @@ export const operateData = [
     mangerTitle: [""],
     otherDetails: [
       "45B, IBB Way, behind Stanbic IBTC Pension Managers, Calabar, Cross River State",
-      "mancrossriverakwa-ibom@manufacturersnigeria.org, mancrsaks2019@gmail.com",
+      "mancrossriverakwa-ibom@manufacturersnigeria.org",
     ],
   },
   {
@@ -51,7 +51,7 @@ export const operateData = [
     ],
     mangerTitle: [""],
     otherDetails: [
-      "No.1, Keffi Close, Opp. BOC Gases Nig. Plc,  Kaduna State",
+      "1, Keffi Close, Opp. BOC Gases Nig. Plc,  Kaduna State",
       "muhammad.muhammad@manufacturersnigeria.org, mankaduna@manufacturersnigeria.org",
     ],
   },
@@ -62,7 +62,7 @@ export const operateData = [
     mangerTitle: [""],
     otherDetails: [
       "5, Ighodaro Road Jericho, Ibadan, Oyo State",
-      "nanzing.rimdan@manufacturersnigeria.org, manoyoondoekiti@manufacturersnigeria.org, manondoekiti@manufacturersnigeria.org",
+      "nanzing.rimdan@manufacturersnigeria.org, manoyoondoekiti@manufacturersnigeria.org",
     ],
   },
   {
@@ -103,7 +103,7 @@ export const operateData = [
     manager: [{ name: "Mr. Sunday Sotomi", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "No.18 (Formerly 2A) Chime Avenue, New Haven, Uwani, Enugu State.",
+      "18 (Formerly 2A) Chime Avenue, New Haven, Uwani, Enugu State.",
       "sunday.sotomi@manufacturersnigeria.org, mananambraenugu@manufacturersnigeria.org ",
     ],
   },
@@ -123,7 +123,7 @@ export const operateData = [
     manager: [{ name: "Mr. Ibrahim Garba", title: "Executive Secretary" }],
     mangerTitle: [""],
     otherDetails: [
-      "No. 500 Sheikh Nasiru Kabara City (Amana City), Zaria Road, Kano State",
+      " 500 Sheikh Nasiru Kabara City (Amana City), Zaria Road, Kano State",
       "ibrahim.garba@manufacturersnigeria.org, mankanosharada@manufacturersnigeria.org",
     ],
   },
@@ -145,7 +145,7 @@ export const operateData = [
     ],
     mangerTitle: [""],
     otherDetails: [
-      "Flat No.2, No.15A (19A) Wetheral Road, Owerri, Imo State.",
+      "Flat 2, 15A (19A) Wetheral Road, Owerri, Imo State.",
       "cyprian.nnadozie@manufacturersnigeria.org, manimoabia@manufacturersnigeria.org ",
     ],
   },

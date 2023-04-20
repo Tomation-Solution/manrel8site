@@ -75,7 +75,7 @@ export const gallerydata = [
       },
       {
         caption:
-          "Outgone President of MAN, Engr. Mansur Ahmed appreciates well wishers and the leadership of MAN for the valedictory dinner held in his honour.",
+          "Former President of MAN, Engr. Mansur Ahmed appreciates well wishers and the leadership of MAN for the valedictory dinner held in his honour.",
         image: Dsc_3060,
       },
       {

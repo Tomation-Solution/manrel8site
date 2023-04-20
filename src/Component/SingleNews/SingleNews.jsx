@@ -38,7 +38,11 @@ const SingleNews = () => {
           <div className="cover">
             {renderdata && (
               <div className="left">
-                <ReportsPreview isImage={false} render_data={renderdata} />
+                <ReportsPreview
+                  isImage={false}
+                  render_data={renderdata}
+                  no_title={false}
+                />
               </div>
             )}
 

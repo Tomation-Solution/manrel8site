@@ -16,7 +16,7 @@ export const RegisterModal = ({ closefn }) => {
       <div className="modal-cover">
         <div className="top">
           <h2>Register for Events</h2>
-          <p>Let's start by entering your information</p>
+          <p>Let's start by entering your information.</p>
           <p>All fields are required unless otherwise indicated.</p>
         </div>
         <form action="">
@@ -54,7 +54,7 @@ export const RegisterTrainingModal = ({ closefn }) => {
       <div className="modal-cover">
         <div className="top">
           <h2>Register for Training</h2>
-          <p>Let's start by entering your information</p>
+          <p>Let's start by entering your information.</p>
           <p>All fields are required unless otherwise indicated.</p>
         </div>
         <form action="">
@@ -92,7 +92,7 @@ export const PayTrainingModal = ({ closefn }) => {
       <div className="modal-cover">
         <div className="top">
           <h2>Pay for Training</h2>
-          <p>Let's start by entering your information</p>
+          <p>Let's start by entering your information.</p>
           <p>All fields are required unless otherwise indicated.</p>
         </div>
         <form action="">
@@ -130,7 +130,7 @@ export const PayModal = ({ closefn, price }) => {
       <div className="modal-cover">
         <div className="top">
           <h2>Pay for Events</h2>
-          <p>Let's start by entering your information</p>
+          <p>Let's start by entering your information.</p>
           <p>All fields are required unless otherwise indicated.</p>
         </div>
         <form action="">
@@ -254,7 +254,7 @@ export const PublicationPayModal = ({ closefn }) => {
       <div className="modal-cover">
         <div className="top">
           <h2>Pay for Publication</h2>
-          <p>Let's start by entering your information</p>
+          <p>Let's start by entering your information.</p>
           <p>All fields are required unless otherwise indicated.</p>
         </div>
         <form action="">
@@ -368,7 +368,7 @@ export const AnnualGeneralMeeting = ({ closefn, price }) => {
       <div className="modal-cover">
         <div className="top">
           <h2>Annual General Meeting Registration</h2>
-          <p>Let's start by entering your information</p>
+          <p>Let's start by entering your information.</p>
           <p>All fields are required unless otherwise indicated.</p>
         </div>
         <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -411,7 +411,7 @@ export const AnnualGeneralMeeting = ({ closefn, price }) => {
                     ? "invalid input"
                     : null}
                 </FormError>
-                <h4>Participant Designation</h4>
+                <h4>Class of Participant</h4>
                 <select
                   defaultValue={""}
                   {...register(`participant.${index}.designation`)}
