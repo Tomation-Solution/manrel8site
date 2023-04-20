@@ -41,7 +41,8 @@ const JoinUsPage = () => {
     },
   });
 
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     if (check === "agree") {
       navigate("/purchase-application");
     } else {
@@ -89,7 +90,7 @@ const JoinUsPage = () => {
                 margin: "20px 0px",
               }}
             >
-              <button type="submit" onClick={submitHandler}>
+              <button type="submit" onClick={(e) => submitHandler(e)}>
                 Pay for Membership Application Form
               </button>
             </div>

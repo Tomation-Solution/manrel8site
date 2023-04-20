@@ -13,7 +13,8 @@ const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
   const navigate = useNavigate();
 
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     if (check === "agree") {
       //   navigate("/join-now-form");
       navigate("/purchase-application");
@@ -268,7 +269,7 @@ const NewMemberRequire = () => {
                 margin: "20px 0px",
               }}
             >
-              <button onClick={submitHandler}>
+              <button onClick={(e) => submitHandler(e)}>
                 Pay for Membership Application Form
               </button>
             </div>
