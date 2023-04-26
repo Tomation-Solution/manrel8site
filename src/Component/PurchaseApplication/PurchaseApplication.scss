@@ -67,6 +67,20 @@
         small {
           font-weight: 700;
         }
+        .padded-text {
+          display: flex;
+          align-items: center;
+          border: 1px solid #a0a0a0;
+          padding: 0px 0px 0px 20px;
+          margin: 20px 0px;
+          border-radius: 10px;
+
+          input {
+            margin: 0px;
+            width: 100%;
+            border: none;
+          }
+        }
         input {
           padding: 10px 20px;
           outline: none;

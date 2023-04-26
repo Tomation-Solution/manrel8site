@@ -15,7 +15,18 @@ const NextPage = ({ backfn }) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({ defaultValues: {} });
+
+  // const {
+  //   isLoading: formTwoLoading,
+  //   isFetching,
+  //   isError,
+  //   data,
+  // } = useQuery("formtwo-details", getFormTwo, { refetchOnWindowFocus: false });
+
+  // if (data) {
+  //   console.log(data);
+  // }
 
   const { mutate, isLoading } = useMutation((data) => submitFormTwo(data), {
     onMutate: () => {
@@ -168,10 +179,10 @@ const NextPage = ({ backfn }) => {
         </div>
       </div>
 
-      <h5>
+      <h4 style={{ color: "#2b3513" }}>
         On receipt of the above, the company will be inspected for verification
         of claims on the Application Form.
-      </h5>
+      </h4>
 
       <h1>Special Notice</h1>
       <p className="generic-text">

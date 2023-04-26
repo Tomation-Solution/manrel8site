@@ -12,10 +12,28 @@ import { toast } from "react-toastify";
 import { loginUser } from "../../utils/api-calls";
 import { useForm } from "react-hook-form";
 
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+const schema = yup.object({
+  email: yup.string().email().required(),
+  password: yup.number().positive().integer().required(),
+});
+
 const ProspectiveMemberLogin = () => {
   const navigate = useNavigate();
 
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
   const { mutate, isLoading } = useMutation((data) => loginUser(data), {
     onMutate: () => {
@@ -24,7 +42,6 @@ const ProspectiveMemberLogin = () => {
       });
     },
     onSuccess: (data) => {
-      console.log(data);
       if (data.has_paid) {
         toast.success("Successfully Logged In", {
           icon: false,
@@ -42,7 +59,14 @@ const ProspectiveMemberLogin = () => {
   });
 
   const loginSubmitHandler = (data) => {
-    mutate(data);
+    const rewrittenPassword = `RC${data.password}`;
+    data.password = rewrittenPassword;
+
+    if (data.password.startsWith("RC")) {
+      mutate(data);
+    } else {
+      toast.error(`CAC registration number must start with RC`);
+    }
   };
 
   return (
@@ -58,18 +82,32 @@ const ProspectiveMemberLogin = () => {
             company information.
           </p>
           <form onSubmit={handleSubmit(loginSubmitHandler)}>
+            <br />
+
+            <small style={{ color: "red", textAlign: "center" }}>
+              {errors?.email?.message}
+            </small>
             <input
               type={"email"}
               {...register("email", { required: true })}
-              required
               placeholder="Email Address"
             />
-            <input
-              type={"text"}
-              {...register("password", { required: true })}
-              required
-              placeholder="CAC Registration Number"
-            />
+
+            <small style={{ color: "red", textAlign: "center" }}>
+              {errors?.password?.message
+                ? "Invalid Registration Number, positive numbers only"
+                : null}
+            </small>
+            <div className="padded-form-container">
+              <p className="padded-text-left">RC</p>
+              <input
+                className="padded-input"
+                type={"number"}
+                min={0}
+                {...register("password", { required: true })}
+                placeholder="CAC Registration Number"
+              />
+            </div>
 
             <button disabled={isLoading}>LOGIN</button>
           </form>

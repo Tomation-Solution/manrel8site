@@ -259,7 +259,7 @@ const NewMemberRequire = () => {
                 required
                 onChange={(e) => setCheck(e.target.value)}
               />
-              I hereby Confirm that I am eligible to be a Member of MAN.
+              Confirm you have read the requirements and check the checkbox.
             </label>
             <div
               style={{

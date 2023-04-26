@@ -13,6 +13,7 @@ import {
 import PaymentImg1 from "../../images/new-images/PaymentImg (1).png";
 import PaymentImg2 from "../../images/new-images/PaymentImg (2).png";
 import PaymentImg3 from "../../images/new-images/PaymentImg (3).png";
+import InterswitchImg from "../../images/new-images/InterswitchImg.jpeg";
 import { useMutation } from "react-query";
 import { buyForm } from "../../utils/api-calls";
 import { toast } from "react-toastify";
@@ -35,7 +36,7 @@ const MakePayment = () => {
     if (locationState?.from === "/purchase-application") {
       setValue(
         "cac_registration_number",
-        locationState.cac_registration_number
+        locationState.cac_registration_number.replace("RC", "")
       );
       setValue("name_of_company", locationState.name_of_company);
       setValue("email", locationState.email);
@@ -79,9 +80,9 @@ const MakePayment = () => {
   });
 
   const onSubmitHandler = (data) => {
-    console.log(data);
+    const rewrittenRegno = `RC${data.cac_registration_number}`;
+    data.cac_registration_number = rewrittenRegno;
     mutate(data);
-    // console.log(data);
   };
 
   return (
@@ -106,10 +107,13 @@ const MakePayment = () => {
               </label>
               <label>
                 CAC Registration Number
-                <input
-                  type={"text"}
-                  {...register("cac_registration_number", { disabled: true })}
-                />
+                <div className="padded-text">
+                  <p>RC</p>
+                  <input
+                    type={"text"}
+                    {...register("cac_registration_number", { disabled: true })}
+                  />
+                </div>
               </label>
 
               <label>
@@ -169,6 +173,20 @@ const MakePayment = () => {
                   className="image-radio"
                 />
               </label>
+
+              <label className="image-label">
+                <div className="">
+                  <h5 style={{ textAlign: "center" }}>Not Available</h5>
+                  <img src={InterswitchImg} alt="" />
+                </div>
+                <input
+                  name="payType"
+                  type={"radio"}
+                  value="interswitch"
+                  className="image-radio"
+                />
+              </label>
+
               <label className="image-label">
                 <div className="">
                   <h5 style={{ textAlign: "center" }}>Not Available</h5>
