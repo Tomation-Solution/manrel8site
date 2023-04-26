@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import "./Article.scss";
 
-import Manufacturing from "../../images/new-images/NewHomeAllimg.png";
+import Manufacturing from "../../images/new-images/NewHomeInsightImg.jpeg";
 
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "react-router-dom";
@@ -11,29 +11,12 @@ import { newReportData } from "../Reports/ReportData";
 import { newsdata } from "../News/NewsData";
 
 function Article() {
-  const [imageIndex, setImageIndex] = useState(0); // Set initial index to 0
-  const images = useMemo(() => {
-    return [Manufacturing];
-  }, []);
-  useEffect(() => {
-    // Use setInterval to change the image every 5 seconds
-    const interval = setInterval(() => {
-      // Calculate the index of the next image, wrapping around to the start of the array if necessary
-      const nextIndex = (imageIndex + 1) % images.length;
-
-      // Update the imageIndex state with the next index
-      setImageIndex(nextIndex);
-    }, 5000);
-
-    // Clear the interval when the component unmounts
-    return () => clearInterval(interval);
-  }, [imageIndex, images]);
   return (
     <div className="article">
       <div className="news_main">
         <div className="cover">
           <div className="left">
-            <img src={images[imageIndex]} alt="" />
+            <img src={Manufacturing} alt="" />
           </div>
           <div className="right">
             <h1 style={{ color: "#2b3513", marginBottom: "20px" }}>

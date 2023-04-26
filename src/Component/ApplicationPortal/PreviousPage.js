@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { useMutation, useQuery } from "react-query";
 import { toast } from "react-toastify";
@@ -30,16 +30,34 @@ const schema = yup.object({
   number_of_male_permanent_staff: yup.number().positive().integer().required(),
   number_of_male_expatriates: yup.number().positive().integer().required(),
   number_of_female_expatriates: yup.number().positive().integer().required(),
-  local_share_capital: yup.string().required(),
-  foreign_share_capital: yup.string().required(),
-  ownership_structure_equity_local: yup.string().required(),
-  ownership_structure_equity_foregin: yup.string().required(),
-  total_value_of_land_asset: yup.string().required(),
-  total_value_of_building_asset: yup.string().required(),
-  total_value_of_other_asset: yup.string().required(),
-  installed_capacity: yup.string().required(),
-  current_sales_turnover: yup.string().required(),
-  projected_sales_turnover: yup.string().required(),
+  local_share_capital: yup.number().positive().integer().required(),
+  foreign_share_capital: yup.number().positive().integer().required(),
+  ownership_structure_equity_local: yup
+    .number()
+    .positive()
+    .integer()
+    .min(0)
+    .max(100)
+    .required(),
+  ownership_structure_equity_foregin: yup
+    .number()
+    .positive()
+    .integer()
+    .min(0)
+    .max(100)
+    .required(),
+  total_value_of_land_asset: yup.number().positive().integer().required(),
+  total_value_of_building_asset: yup.number().positive().integer().required(),
+  total_value_of_other_asset: yup.number().positive().integer().required(),
+  installed_capacity: yup
+    .number()
+    .positive()
+    .integer()
+    .min(0)
+    .max(100)
+    .required(),
+  current_sales_turnover: yup.number().positive().integer().required(), //only one should be choosen
+  projected_sales_turnover: yup.number().positive().integer().required(), //only one should be choosen
   are_your_product_exported: yup.string().required(),
   company_contact_infomation: yup.string().required(),
   designation: yup.string().required(),
@@ -48,6 +66,8 @@ const schema = yup.object({
 });
 
 const PreviousPage = ({ nextfn }) => {
+  const [salesTurnover, setSalesTurnover] = useState("current");
+
   const {
     register,
     handleSubmit,
@@ -90,12 +110,15 @@ const PreviousPage = ({ nextfn }) => {
       name_of_md_or_ceo_of_company: "",
       selectdate_of_registration: "",
       all_roduct_manufactured: [
-        { product_manufactured: "product name", certificates: "value info" },
+        {
+          product_manufactured: "New Product Name",
+          certificates: "New Product Value",
+        },
       ],
       all_raw_materials_used: [
         {
-          major_raw_materials: "materials_name",
-          major_raw_materials2: "materails_value",
+          major_raw_materials: "New Material Name",
+          major_raw_materials2: "New Material Value",
         },
       ],
     },
@@ -283,7 +306,7 @@ const PreviousPage = ({ nextfn }) => {
           <div className="half-input">
             <label>
               {errors?.office_bus_stop && <h5>Invalid input</h5>}
-              Office Bus stop
+              Nearest Bus Stop/ Community
               <input
                 type={"text"}
                 {...register("office_bus_stop", { required: true })}
@@ -535,7 +558,8 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.local_share_capital && <h5>Invalid input</h5>}
               Local Share Capital
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
                 {...register("local_share_capital", { required: true })}
               />
             </label>
@@ -543,7 +567,8 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.foreign_share_capital && <h5>Invalid input</h5>}
               Foreign Share Capital
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
                 {...register("foreign_share_capital", { required: true })}
               />
             </label>
@@ -554,9 +579,11 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.ownership_structure_equity_local && (
                 <h5>Invalid input</h5>
               )}
-              Ownership Structure Equity(local)
+              Ownership Structure Equity(local; range:0-100)
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
+                max={100}
                 {...register("ownership_structure_equity_local", {
                   required: true,
                 })}
@@ -566,9 +593,11 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.ownership_structure_equity_foregin && (
                 <h5>Invalid input</h5>
               )}
-              Ownership Structure Equity(Foreign)
+              Ownership Structure Equity(Foreign; range:0-100)
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
+                max={100}
                 {...register("ownership_structure_equity_foregin", {
                   required: true,
                 })}
@@ -581,7 +610,8 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.total_value_of_land_asset && <h5>Invalid input</h5>}
               Total Value of Land Asset
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
                 {...register("total_value_of_land_asset", {
                   required: true,
                 })}
@@ -591,11 +621,27 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.total_value_of_building_asset && <h5>Invalid input</h5>}
               Total Value of Building Asset
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
                 {...register("total_value_of_building_asset", {
                   required: true,
                 })}
               />
+            </label>
+          </div>
+
+          <h4 style={{ color: "#2b3513", textAlign: "center" }}>
+            Select Installed Capacity Type
+          </h4>
+          <div className="installed-style">
+            <label>
+              KG
+              <input type="radio" value={"kg"} name="installed_type" />
+            </label>
+
+            <label>
+              TON
+              <input type="radio" value={"ton"} name="installed_type" />
             </label>
           </div>
 
@@ -604,18 +650,47 @@ const PreviousPage = ({ nextfn }) => {
               {errors?.total_value_of_other_asset && <h5>Invalid input</h5>}
               Total Value of Other Asset
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
                 {...register("total_value_of_other_asset", {
                   required: true,
                 })}
               />
             </label>
+
             <label>
               {errors?.installed_capacity && <h5>Invalid input</h5>}
-              Installed capacity(In tons, Kg, etc)
+              Installed capacity(In tons, Kg; range:0-100)
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
+                max={100}
                 {...register("installed_capacity", { required: true })}
+              />
+            </label>
+          </div>
+
+          <h4 style={{ color: "#2b3513", textAlign: "center" }}>
+            Select a Sales Turnover Type
+          </h4>
+          <div className="installed-style">
+            <label>
+              Current
+              <input
+                type="radio"
+                value={"current"}
+                name="installed_type"
+                onChange={(e) => setSalesTurnover(e.target.value)}
+              />
+            </label>
+
+            <label>
+              Projected
+              <input
+                type="radio"
+                value={"projected"}
+                name="installed_type"
+                onChange={(e) => setSalesTurnover(e.target.value)}
               />
             </label>
           </div>
@@ -623,17 +698,21 @@ const PreviousPage = ({ nextfn }) => {
           <div className="half-input">
             <label>
               {errors?.current_sales_turnover && <h5>Invalid input</h5>}
-              Current Sales Turnover
+              Current Sales Turnover (As stated in your lastest audited account)
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
+                disabled={salesTurnover === "current" ? false : true}
                 {...register("current_sales_turnover", { required: true })}
               />
             </label>
             <label>
               {errors?.projected_sales_turnover && <h5>Invalid input</h5>}
-              Projected Sales Turnover
+              Projected Sales Turnover (As stated in your business plan)
               <input
-                type={"text"}
+                type={"number"}
+                min={0}
+                disabled={salesTurnover === "projected" ? false : true}
                 {...register("projected_sales_turnover", {
                   required: true,
                 })}
@@ -641,26 +720,27 @@ const PreviousPage = ({ nextfn }) => {
             </label>
           </div>
 
+          <label>
+            {errors?.are_your_product_exported && <h5>Invalid input</h5>}
+            Are your products exported?
+            <select
+              defaultValue=""
+              {...register("are_your_product_exported", {
+                required: true,
+              })}
+            >
+              <option disabled value="">
+                select an option
+              </option>
+              <option value="yes">yes</option>
+              <option value="no">no</option>
+            </select>
+          </label>
+
           <div className="half-input">
             <label>
-              {errors?.are_your_product_exported && <h5>Invalid input</h5>}
-              Are your products exported?
-              <select
-                defaultValue=""
-                {...register("are_your_product_exported", {
-                  required: true,
-                })}
-              >
-                <option disabled value="">
-                  select an option
-                </option>
-                <option value="yes">yes</option>
-                <option value="no">no</option>
-              </select>
-            </label>
-            <label>
               {errors?.company_contact_infomation && <h5>Invalid input</h5>}
-              Company’s contact information
+              Company’s Contact (Representative)
               <input
                 type={"text"}
                 {...register("company_contact_infomation", {
@@ -668,9 +748,7 @@ const PreviousPage = ({ nextfn }) => {
                 })}
               />
             </label>
-          </div>
 
-          <div className="half-input">
             <label>
               {errors?.designation && <h5>Invalid input</h5>}
               Designation
@@ -679,17 +757,29 @@ const PreviousPage = ({ nextfn }) => {
                 {...register("designation", { required: true })}
               />
             </label>
-            <label>
-              {errors?.name_of_md_or_ceo_of_company && <h5>Invalid input</h5>}
-              Name of MD/CEO of Comoany
-              <input
-                type={"text"}
-                {...register("name_of_md_or_ceo_of_company", {
-                  required: true,
-                })}
-              />
-            </label>
           </div>
+
+          <h1 style={{ textDecoration: "underline" }}>Undertaking</h1>
+          <p style={{ color: "#2b3513" }}>
+            We undertake to pay promptly our annual subscriptions which is due
+            on 1st January of each year and is based on our annual turnover as
+            reflected in Audited Accounts, copy (to be submitted to the
+            Association) for the preceding year; and also such levies as may be
+            approved by the National or Branch Council of the Association
+          </p>
+          <br />
+          <br />
+
+          <label>
+            {errors?.name_of_md_or_ceo_of_company && <h5>Invalid input</h5>}
+            Name of MD/CEO of Comoany
+            <input
+              type={"text"}
+              {...register("name_of_md_or_ceo_of_company", {
+                required: true,
+              })}
+            />
+          </label>
 
           <div className="half-input">
             <label>

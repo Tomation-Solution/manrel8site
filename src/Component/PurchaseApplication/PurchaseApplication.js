@@ -16,12 +16,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const schema = yup
   .object({
-    cac_registration_number: yup.string().required(),
+    cac_registration_number: yup.number().positive().integer().required(),
     name_of_company: yup.string().required(),
     email: yup.string().email().required(),
     corporate_office_addresse: yup.string().required(),
     telephone_number: yup.string().required(),
-    website: yup.string().url(),
+    website: yup.string().url().required(),
   })
   .required();
 
@@ -29,7 +29,6 @@ const PurchaseApplication = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const locationState = location.state;
-  // console.log(location);
 
   const {
     register,
@@ -37,6 +36,14 @@ const PurchaseApplication = () => {
     setValue,
     formState: { errors },
   } = useForm({
+    defaultValues: {
+      cac_registration_number: "",
+      name_of_company: "",
+      email: "",
+      corporate_office_addresse: "",
+      telephone_number: "",
+      website: "",
+    },
     resolver: yupResolver(schema),
   });
 
@@ -58,7 +65,9 @@ const PurchaseApplication = () => {
   }, [locationState, setValue]);
 
   const onSubmitHandler = (data) => {
-    // console.log(data);
+    const rewrittenRegno = `RC${data.cac_registration_number}`;
+    data.cac_registration_number = rewrittenRegno;
+
     return navigate("/make-payment", {
       state: { from: location.pathname, ...data },
     });
@@ -93,10 +102,15 @@ const PurchaseApplication = () => {
                 {errors.cac_registration_number && (
                   <ErrorMessage>Invalid Input</ErrorMessage>
                 )}
-                <input
-                  type={"text"}
-                  {...register("cac_registration_number", { required: true })}
-                />
+                <div className="padded-text">
+                  <p>RC</p>
+                  <input
+                    type={"number"}
+                    min={0}
+                    placeholder="CAC Registration Number"
+                    {...register("cac_registration_number", { required: true })}
+                  />
+                </div>
               </label>
             </div>
 
@@ -123,7 +137,7 @@ const PurchaseApplication = () => {
 
             <div className="half-input">
               <label>
-                Website Address
+                Website Address. No website? use our offical sites url
                 {errors.website && <ErrorMessage>Invalid Input</ErrorMessage>}
                 <input
                   type={"text"}

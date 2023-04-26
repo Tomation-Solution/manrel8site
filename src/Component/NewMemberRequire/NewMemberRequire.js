@@ -13,7 +13,8 @@ const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
   const navigate = useNavigate();
 
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     if (check === "agree") {
       //   navigate("/join-now-form");
       navigate("/purchase-application");
@@ -258,7 +259,7 @@ const NewMemberRequire = () => {
                 required
                 onChange={(e) => setCheck(e.target.value)}
               />
-              I hereby Confirm that I am eligible to be a Member of MAN.
+              Confirm you have read the requirements and check the checkbox.
             </label>
             <div
               style={{
@@ -268,7 +269,7 @@ const NewMemberRequire = () => {
                 margin: "20px 0px",
               }}
             >
-              <button onClick={submitHandler}>
+              <button onClick={(e) => submitHandler(e)}>
                 Pay for Membership Application Form
               </button>
             </div>
