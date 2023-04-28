@@ -230,9 +230,10 @@
     }
     .services-wrap {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-evenly;
       flex-wrap: wrap;
       padding-bottom: 50px;
+      gap: 5px;
 
       @include mobile-6 {
         display: grid;
