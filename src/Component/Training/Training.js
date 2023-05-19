@@ -1,34 +1,54 @@
 import React, { useState } from "react";
 import { UIProvider } from "../../Ui";
-import Image from "../../images/Rectangle 224.png";
 
 import NewNavBar from "../NewNavBar/NewNavBar";
 import "../NewEvents/NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import {
-  MpdclTrainings,
-  PayTrainingModal,
-  RegisterTrainingModal,
-  SingleTraining,
-} from "../NewEvents/Modals";
-import { mpdclTrainings, trainingData } from "./TrainingData";
+
 import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import Subscribe from "../Subscribe/Subscribe";
 
-import MpdclTrainingImage from "../../images/new-images/MpdclTraining.jpeg";
+import {
+  SingleTraining,
+  RegisterTrainingModal,
+} from "../Modals/TrainingModals";
+import { FormError } from "../NewEvents/FormComponents";
+import Loader from "../Loader/Loader";
+import { useQuery } from "react-query";
+import { getTrainings } from "../../utils/csm-api-calls";
+import { groupTrainings } from "../../utils/groupby-value";
 
 const Training = () => {
-  // const [options , setOptions] = useState("free")
-  const [register, setRegister] = useState(false);
-  const [pay, setPay] = useState(false);
+  const [registerTraining, setRegisterTraining] = useState(false);
+  const [trainingObject, setTrainingObject] = useState(null);
+
+  const {
+    isLoading: trainingLoading,
+    isError: trainingError,
+    isFetching: trainingFetching,
+    data: trainingFetchData,
+  } = useQuery("all-trainings", getTrainings, {
+    refetchOnWindowFocus: false,
+    select: (data) => {
+      return groupTrainings(data.data);
+    },
+  });
+
+  const trainingRegister = (data) => {
+    setTrainingObject(data);
+    setRegisterTraining(!registerTraining);
+  };
   return (
     <div className="new-events">
-      {register && (
-        <RegisterTrainingModal closefn={() => setRegister(!register)} />
+      {registerTraining && (
+        <RegisterTrainingModal
+          data={trainingObject}
+          closefn={() => setRegisterTraining(!registerTraining)}
+        />
       )}
-      {pay && <PayTrainingModal closefn={() => setPay(!pay)} />}
+
       <UIProvider>
         <Subscribe />
         <NewNavBar />
@@ -39,39 +59,28 @@ const Training = () => {
             "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
           ]}
         />
-        <div className="event-options">
-          <span className="span-active">MRC Trainings</span>
-        </div>
-
-        <div className="event-container">
-          <div className="event-items">
-            {trainingData.map((item, index) => (
-              <SingleTraining
-                image={Image}
-                registerfn={() => setRegister(!register)}
-                data={item}
-                key={index}
-              />
+        {trainingLoading || trainingFetching ? (
+          <Loader loading={trainingLoading || trainingFetching} />
+        ) : !trainingError ? (
+          <div className="event-container">
+            {trainingFetchData.map((item, index) => (
+              <section key={index}>
+                <h1 className="events-header">{item.group_name}</h1>
+                <div className="event-items">
+                  {item.items.slice(0, 3).map((item, index) => (
+                    <SingleTraining
+                      registerfn={trainingRegister}
+                      data={item}
+                      key={index}
+                    />
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
-        </div>
-
-        <div className="event-options">
-          <span className="span-active">MPDCL Trainings</span>
-        </div>
-
-        <div className="event-container">
-          <div className="event-items">
-            {mpdclTrainings.map((item, index) => (
-              <MpdclTrainings
-                image={MpdclTrainingImage}
-                registerfn={() => setRegister(!register)}
-                data={item}
-                key={index}
-              />
-            ))}
-          </div>
-        </div>
+        ) : (
+          <FormError>Can't Fetch Trainings</FormError>
+        )}
 
         <Wall />
         <Footer />

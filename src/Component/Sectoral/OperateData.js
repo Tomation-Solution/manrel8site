@@ -72,7 +72,7 @@ export const operateData = [
     mangerTitle: [""],
     otherDetails: [
       "1, New Yidi Road, P.O.Box 5644, Ilorin,Kwara State.",
-      "benga.adeola@manufacturersnigeria.org, mankwarakogi@manufacturersnigeria.org",
+      "gbenga.adeola@manufacturersnigeria.org, mankwarakogi@manufacturersnigeria.org",
     ],
   },
   {

@@ -42,6 +42,7 @@ const ProspectiveMemberLogin = () => {
       });
     },
     onSuccess: (data) => {
+      console.log(data);
       if (data.has_paid) {
         toast.success("Successfully Logged In", {
           icon: false,

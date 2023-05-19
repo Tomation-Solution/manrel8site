@@ -8,7 +8,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import Subscribe from "../Subscribe/Subscribe";
-import { newsdata } from "./NewsData";
+// import { newsdata } from "./NewsData";
 import { Link } from "react-router-dom";
 
 import Articleimage from "../../images/new-images/InsightCardIMages (1).jpg";
@@ -16,8 +16,22 @@ import { InsightQuickNavigation } from "../Gallery/App";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (1).jpg";
+import { useQuery } from "react-query";
+import { getNews } from "../../utils/csm-api-calls";
+import Loader from "../Loader/Loader";
+import { FormError } from "../NewEvents/FormComponents";
+import { dateformatter } from "../../utils/date-formatter";
 
 function News() {
+  const { isLoading, isFetching, isError, data } = useQuery(
+    "all-news",
+    getNews,
+    {
+      refetchOnWindowFocus: false,
+      select: (data) => data.data,
+    }
+  );
+
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -38,9 +52,38 @@ function News() {
                   <h2>News</h2>
                 </div>
                 <div className="wrap">
-                  {newsdata.map((item) => {
+                  {isLoading || isFetching ? (
+                    <Loader loading={isLoading || isFetching} />
+                  ) : !isError ? (
+                    <>
+                      {data.map((item) => {
+                        return (
+                          <div className="card" key={item.id}>
+                            <Link to={"/news"}>
+                              <button
+                                style={{ color: "#2b3513", cursor: "pointer" }}
+                              >
+                                <b>News</b>
+                              </button>
+                            </Link>
+                            <div className="flex">
+                              <h3>{item.name}</h3>
+                              <Link to={`/news-details/${item.id}`}>
+                                <OpenInNewIcon />
+                              </Link>
+                            </div>
+                            <p>{dateformatter(new Date(item.created_at))}</p>
+                          </div>
+                        );
+                      })}
+                    </>
+                  ) : (
+                    <FormError>Can't Fetch News Data</FormError>
+                  )}
+
+                  {/* {newsdata.map((item) => {
                     return (
-                      <div className="card">
+                      <div className="card" key={item.id}>
                         <Link to={"/news"}>
                           <button
                             style={{ color: "#2b3513", cursor: "pointer" }}
@@ -57,16 +100,9 @@ function News() {
                         <p>{item.date}</p>
                       </div>
                     );
-                  })}
+                  })} */}
                 </div>
-                <div className="bto">
-                  {/* <Link
-                      to={"/insight-more"}
-                      style={{ textDecoration: "none", color: "#2b3513" }}
-                    >
-                      <h3>View all {">"}</h3>
-                    </Link> */}
-                </div>
+                <div className="bto"></div>
               </div>
               <div className="left">
                 <img src={Articleimage} alt="" />

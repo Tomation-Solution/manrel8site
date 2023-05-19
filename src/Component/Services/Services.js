@@ -9,8 +9,52 @@ import Subscribe from "../Subscribe/Subscribe";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { Link } from "react-router-dom";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { FormError } from "../NewEvents/FormComponents";
+import { useMutation } from "react-query";
+import { postServiceRequest } from "../../utils/csm-api-calls";
+import Loader from "../Loader/Loader";
+import { toast } from "react-toastify";
 
 function Services() {
+  const schema = yup.object({
+    name: yup.string().required("fullname is a required field"),
+    email: yup.string().email().required(),
+    company_name: yup.string().required("company name is a required field"),
+    message: yup.string().required(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company_name: "",
+      message: "",
+    },
+  });
+
+  const { mutate, isLoading } = useMutation(postServiceRequest, {
+    onMutate: () => {
+      toast.info("submitting service request");
+    },
+    onSuccess: () => {
+      toast.success("service request submitted");
+    },
+    onError: () => {
+      toast.error("failed to submit service request");
+    },
+  });
+
+  const onSubmitHandler = (data) => {
+    mutate(data);
+  };
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -23,6 +67,7 @@ function Services() {
               "     The only sector-specific Business Membership Organization (BMO) structured to render advocacy services to its members.",
             ]}
           />
+          <Loader loading={isLoading} />
 
           <div className="services-newservices">
             <div className="services-head">
@@ -212,22 +257,33 @@ function Services() {
                 <p>Let's start by entering your information.</p>
                 <p>All fields are required unless otherwise indicated.</p>
               </div>
-              <form action="">
+
+              <form onSubmit={handleSubmit(onSubmitHandler)}>
                 <div className="services-card">
+                  <FormError>{errors.name?.message}</FormError>
                   <h4>Full name</h4>
-                  <input type="text" />
+                  <input type="text" {...register("name")} />
                 </div>
                 <div className="services-card">
+                  <FormError>{errors.email?.message}</FormError>
                   <h4>Email Address</h4>
-                  <input type="email" />
+                  <input type="email" {...register("email")} />
                 </div>
                 <div className="services-card">
+                  <FormError>{errors.company_name?.message}</FormError>
                   <h4>Company Name</h4>
-                  <input type="text" />
+                  <input type="text" {...register("company_name")} />
                 </div>
                 <div className="services-card">
+                  <FormError>{errors.message?.message}</FormError>
                   <h4>Request Service</h4>
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    {...register("message")}
+                  ></textarea>
                 </div>
                 <div className="services-card">
                   <button>Request</button>

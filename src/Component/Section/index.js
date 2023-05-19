@@ -33,7 +33,7 @@ function Section() {
           <div>
             <SectionImg
               src={sectionpic}
-              style={{ objectFit: "contain", backgroundColor: "#ddd" }}
+              style={{ objectFit: "contain", backgroundColor: "#2b3513" }}
             />
             <SectionTitle style={{ textAlign: "center" }}>
               Our Vision

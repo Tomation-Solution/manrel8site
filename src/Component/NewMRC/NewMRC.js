@@ -6,7 +6,7 @@ import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
-import backImage from "../../images/Group 61.png";
+import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 
 import "./NewMRC.scss";
 

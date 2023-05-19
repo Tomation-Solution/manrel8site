@@ -1,5 +1,6 @@
 import React from "react";
 import "./ReportsPreview.scss";
+import { dateformatter } from "../../../utils/date-formatter";
 
 const ReportsPreview = ({ render_data, isImage, no_title }) => {
   return (
@@ -10,14 +11,19 @@ const ReportsPreview = ({ render_data, isImage, no_title }) => {
         </div>
       ) : null}
       <div className="preview-text">
-        {no_title ? <h2>{render_data.title}</h2> : null}
-        {render_data?.date && (
-          <p className="pub-paragraph">Date: {render_data?.date}</p>
+        {!no_title ? <h2 className="title-text">{render_data.title}</h2> : null}
+        {render_data?.created_at && (
+          <p className="pub-paragraph date-text">
+            Date: {dateformatter(new Date(render_data?.created_at))}
+          </p>
         )}
-        {render_data.freetext ? (
+        {render_data.details ? (
           <>
-            {render_data.freetext.map((item, index) => (
-              <p key={index}>{item}</p>
+            {render_data.details.map((item, index) => (
+              <section key={index}>
+                <h4 className="details-header">{item.header}</h4>
+                <p>{item.value}</p>
+              </section>
             ))}
           </>
         ) : null}

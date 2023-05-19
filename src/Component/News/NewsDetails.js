@@ -11,17 +11,37 @@ import Footer from "../Footer/Footer";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import { Link, useParams } from "react-router-dom";
-import { newsdata } from "./NewsData";
+// import { newsdata } from "./NewsData";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (1).jpg";
+import { useQuery } from "react-query";
+import { getNews } from "../../utils/csm-api-calls";
+import Loader from "../Loader/Loader";
+import { FormError } from "../NewEvents/FormComponents";
+import NewsPreivew from "./NewsPreivew";
 
 const NewsDetails = () => {
   const { id } = useParams();
 
-  const renderdata = newsdata.find((item) => item.id === id);
+  const { isLoading, isFetching, isError, data } = useQuery(
+    "all-news",
+    getNews,
+    {
+      refetchOnWindowFocus: false,
+      select: (data) => data.data,
+    }
+  );
 
-  const otherPub = newsdata.filter((item) => item.id !== id);
+  let renderdata = null;
+  let otherPub = null;
+
+  if (data) {
+    renderdata = data.find((item) => item.id === Number(id));
+
+    otherPub = data.filter((item) => item.id !== Number(id));
+  }
+
   return (
     <div>
       <ThemeProvider theme={theme}>
@@ -30,70 +50,64 @@ const NewsDetails = () => {
             <Subscribe />
             <NewNavBar />
 
-            <NewImageBanner
-              image={backImage}
-              header={"News Details"}
-              details={[`${renderdata.title}`]}
-            />
+            {renderdata ? (
+              <NewImageBanner
+                image={backImage}
+                header={"News Details"}
+                details={[`${renderdata.title}`]}
+              />
+            ) : null}
 
             <div className="news_main">
               <div className="cover">
-                {renderdata && (
-                  <div className="left">
-                    <h2>{renderdata.title}</h2>
-                    {renderdata?.date && (
-                      <p className="pub-paragraph">Date: {renderdata?.date}</p>
+                {isLoading || isFetching ? (
+                  <Loader loading={isLoading || isFetching} />
+                ) : !isError ? (
+                  <>
+                    {renderdata ? (
+                      <div className="left">
+                        <NewsPreivew
+                          isImage={true}
+                          no_title={false}
+                          render_data={renderdata}
+                        />
+                      </div>
+                    ) : (
+                      <FormError>Can't Fetch News Details</FormError>
                     )}
-                    {renderdata?.paragraphs.map((item, index) => (
-                      <p className="pub-paragraph" key={index}>
-                        {item}
-                      </p>
-                    ))}
-                    <div>
-                      {renderdata?.links
-                        ? renderdata?.links.map((item, index) => (
-                            <a
-                              style={{
-                                display: "block",
-                                margin: "10px 0px",
-                                fontSize: "14px",
-                              }}
-                              key={index}
-                              href={`${item.value}`}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {item.name}
-                            </a>
-                          ))
-                        : null}
-                    </div>
-                  </div>
+                  </>
+                ) : (
+                  <FormError>Can't Fetch News Details</FormError>
                 )}
 
-                <div className="right">
-                  <h2>Other News</h2>
-                  <div className="wrap">
-                    {otherPub.map((item, index) => (
-                      <div className="card" key={index}>
-                        <Link to={"/news"}>
-                          <button
-                            style={{ color: "#2b3513", cursor: "pointer" }}
-                          >
-                            <b>News</b>
-                          </button>
-                        </Link>
-                        <div className="flex">
-                          <h3>{item.name}</h3>
-                          <Link to={`/news-details/${item.id}`}>
-                            <OpenInNewIcon />
+                {otherPub ? (
+                  <div className="right">
+                    <h2>Other News</h2>
+                    <div className="wrap">
+                      {otherPub.map((item, index) => (
+                        <div className="card" key={index}>
+                          <Link to={"/news"}>
+                            <button
+                              style={{
+                                color: "#2b3513",
+                                cursor: "pointer",
+                              }}
+                            >
+                              <b>News</b>
+                            </button>
                           </Link>
+                          <div className="flex">
+                            <h3>{item.name}</h3>
+                            <Link to={`/news-details/${item.id}`}>
+                              <OpenInNewIcon />
+                            </Link>
+                          </div>
+                          <p>{item.date}</p>
                         </div>
-                        <p>{item.date}</p>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </div>
             </div>
           </div>
