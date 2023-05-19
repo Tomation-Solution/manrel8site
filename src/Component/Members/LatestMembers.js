@@ -4,12 +4,16 @@ import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import { listOfMembers } from "./OurMembersList";
+// import { listOfMembers } from "./OurMembersList";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/MemberRequirement.png";
 import Subscribe from "../Subscribe/Subscribe";
+import { useQuery } from "react-query";
+import { getMembersApi } from "../../utils/api-calls2";
 
 function LatestMembers() {
+  const {isLoading,data} = useQuery('getMembersApi',getMembersApi)
+
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
@@ -18,7 +22,7 @@ function LatestMembers() {
   let pages = [];
 
   //SEARCH BAR
-
+  const [listOfMembers,setListOfMembers] = useState([])
   for (let i = 1; i <= Math.ceil(listOfMembers?.length / postsPerPage); i++) {
     pages.push(i);
   }
@@ -29,7 +33,7 @@ function LatestMembers() {
   const searchHandler = () => {
     const searchPattern = new RegExp(searchValue, "i");
     const result = listOfMembers?.filter(
-      (item) => item?.Column2.search(searchPattern) >= 0
+      (item) => item?.name.search(searchPattern) >= 0
     );
     return result;
   };
@@ -37,7 +41,12 @@ function LatestMembers() {
   const searchResult = searchHandler();
 
   const paginatedData = searchResult?.slice(firstPostIndex, lastPostIndex);
-
+  useState(()=>{
+    if(data){
+      console.log(data)
+      setListOfMembers(data)
+    }
+  },[data])
   return (
     <UIProvider>
       <div className="members">
@@ -63,22 +72,22 @@ function LatestMembers() {
             {paginatedData.length > 0 ? (
               <div className="flex">
                 {paginatedData.map((item, index) => (
-                  <div className="card" key={index} id={item?.Column2}>
+                  <div className="card" key={index} id={item?.name}>
                     <div className="card-item">
                       {/* <span className="bold">Name:</span> */}
-                      <span className="light">{item?.Column2}</span>
+                      <span className="light">{item?.name}</span>
                     </div>
                     <div className="card-item">
                       <span className="light">
                         {" "}
                         <a
                           href={
-                            item?.Column12 ? `https://${item?.Column12}` : ""
+                            item?.website
                           }
                           target={"_blank"}
                           rel={"noreferrer"}
                         >
-                          {item?.Column12 ? `${item?.Column12}` : ""}
+                          {item?.website}
                         </a>
                       </span>
                     </div>

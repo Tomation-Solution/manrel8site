@@ -17,3 +17,9 @@ export const faqApi = async()=>{
     return resp.data.data
 
 }
+
+export const getMembersApi = async()=>{
+    const resp = await publicCmsRequest.get('membership/our-members/public')
+    return resp.data.data
+
+}
