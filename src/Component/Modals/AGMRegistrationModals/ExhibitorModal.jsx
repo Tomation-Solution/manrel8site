@@ -90,8 +90,8 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
   const onSubmitHandler = (data) => {
     let { boot, ...payload } = data;
     boot = boot.map((item) => {
-      const [id, _price] = item.split(",");
-      return id;
+      const bootdata = item.split(",");
+      return bootdata.id;
     });
     mutate({ event: eventId, boot, ...payload });
   };
@@ -103,8 +103,8 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
   let bootprice = 0;
   if (!(bootWatch.length <= 0)) {
     bootWatch.forEach((item) => {
-      const [_id, price] = item.split(",");
-      bootprice = bootprice + parseFloat(price);
+      const bootinfo = item.split(",");
+      bootprice = bootprice + parseFloat(bootinfo.price);
     });
   }
 

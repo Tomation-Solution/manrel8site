@@ -1,7 +1,6 @@
 import axios, { AxiosError } from "axios";
 import { privateRequest } from "./axios-utils";
 
-// const BASE_URL = `https://rel8backend-production.up.railway.app/tenant/man/`;
 const BASE_URL = `https://rel8-corporate-backend-production.up.railway.app/tenant/man/`;
 
 //LOGIN
@@ -25,14 +24,6 @@ export const loginUser = async (payload) => {
     }
   }
 };
-
-// {
-//NOT PAID
-//     "email":"propective1@gmail.com",
-//     "password":"killer mood"
-// }
-
-//propective_paid@gmail.com
 
 //FORM ONE
 export const submitFormOne = async (payload) => {
@@ -98,7 +89,7 @@ export const getStatus = async () => {
 export const buyForm = async (payload) => {
   try {
     const res = await axios.post(
-      "https://rel8backend-production.up.railway.app/tenant/man/tenant/prospectivemember/creation_of_prospective_member/",
+      `${BASE_URL}tenant/prospectivemember/creation_of_prospective_member/`,
       payload
     );
     return res.data;
