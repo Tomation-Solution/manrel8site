@@ -7,8 +7,8 @@ import Footer from "../Footer/Footer";
 import Subscribe from "../Subscribe/Subscribe";
 import "./Sectoral.scss";
 import Vector from "../../images/Vector.png";
-import One from "../../images/one.png";
-import Two from "../../images/two.png";
+import One from "../../images/NewSectoralImage (1).jpeg";
+import Two from "../../images/NewSectoralImage (2).jpeg";
 import Three from "../../images/three.png";
 import Four from "../../images/four.png";
 import five from "../../images/five.png";
@@ -16,10 +16,10 @@ import six from "../../images/six.png";
 import seven from "../../images/seven.png";
 import eight from "../../images/eight.png";
 import nine from "../../images/nine.png";
-import ten from "../../images/ten.png";
+import ten from "../../images/NewSectoralImage.jpeg";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/Group 61.png";
+import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 
 function Sectoral() {
   const sectoralList = [

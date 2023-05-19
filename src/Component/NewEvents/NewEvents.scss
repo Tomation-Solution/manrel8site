@@ -56,8 +56,10 @@
   }
   .events-header {
     font-size: 40px;
-    margin: 20px 0px;
+    margin: 20px 0px 40px 0px;
     font-weight: 400;
+    text-align: center;
+    color: #2b3513;
   }
 
   .event-container {
@@ -68,7 +70,7 @@
   }
   .event-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 

@@ -30,6 +30,10 @@ import PastPresident1 from "../../../../images/new-images/PastPresident (1).png"
 import PastPresident2 from "../../../../images/new-images/PastPresident (2).png";
 import PastPresident3 from "../../../../images/new-images/PastPresident (3).png";
 
+import ChairmanImage1 from "../../../../images/new-images/ChairmanImage (1).jpeg";
+import ChairmanImage2 from "../../../../images/new-images/ChairmanImage (2).jpeg";
+import ChairmanImage3 from "../../../../images/new-images/ChairmanImage (3).jpeg";
+
 export const renderData = [
   {
     image: Branch1,
@@ -94,7 +98,7 @@ export const renderData = [
     phone: "Tel: 08036974299",
   },
   {
-    image: "",
+    image: ChairmanImage3,
     name: "Alh. Umar Mala ",
     title2: "Chairman",
     name2: "Kaduna North-West Branch",
@@ -138,7 +142,7 @@ export const renderData = [
     phone: "Tel: 08037150514",
   },
   {
-    image: "",
+    image: ChairmanImage1,
     name: "Engr. Okwara Udensi ",
     title2: "Chairman",
     name2: "Edo/Delta States Branch",
@@ -160,7 +164,7 @@ export const renderData = [
     phone: "Tel : 08038099594",
   },
   {
-    image: "",
+    image: ChairmanImage2,
     name: "Alhaji Abubakare Minjibir ",
     title2: "Chairman",
     name2: "Abuja Branch",

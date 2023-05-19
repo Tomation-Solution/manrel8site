@@ -63,7 +63,7 @@ const JoinUsPage = () => {
     if (check === "agree") {
       navigate("/purchase-application");
     } else {
-      alert("Please check the box");
+      alert("Confirm you have read the requirements and check the checkbox.");
     }
   };
 

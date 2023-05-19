@@ -40,6 +40,37 @@
       }
     }
   }
+  .agm {
+    margin: 30px 0px;
+    .agm-select-card {
+      width: 100%;
+      margin-bottom: 24px;
+      @include mobile-3 {
+        margin-bottom: 10px;
+      }
+      small {
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      h4 {
+        color: #505050;
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 5px;
+      }
+
+      select {
+        width: 100%;
+        background: #ffffff;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        height: 50px;
+        padding: 0 20px;
+        outline: none;
+      }
+    }
+  }
   form {
     .card {
       width: 100%;
@@ -150,10 +181,13 @@
   margin-bottom: 20px;
   width: 30%;
   @include mobile-3 {
-    width: 43%;
+    width: 100%;
   }
   @include mobile-4 {
     width: 100%;
+  }
+  @include mobile-6 {
+    width: 45%;
   }
   img {
     width: 100%;

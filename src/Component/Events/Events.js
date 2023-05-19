@@ -5,16 +5,30 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import "../NewEvents/NewEvents.scss";
 import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
-import backImage from "../../images/new-images/EventBgImg.png";
+import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import {
   FreeEvents,
   PaidEvents,
   SpecialEvents,
 } from "../PaidEvents/PaidEvents";
+import { getEvents } from "../../utils/csm-api-calls";
+import { useQuery } from "react-query";
+import Loader from "../Loader/Loader";
+import { FormError } from "../NewEvents/FormComponents";
 
 const Events = () => {
   const [options, setOptions] = useState("free");
+
+  const {
+    isLoading: eventLoading,
+    isError: eventError,
+    isFetching: eventFetching,
+    data: eventFetchData,
+  } = useQuery("all-events", getEvents, {
+    refetchOnWindowFocus: false,
+    select: (data) => data.data,
+  });
 
   return (
     <div className="new-events">
@@ -49,9 +63,35 @@ const Events = () => {
           </span>
         </div>
 
-        {options === "free" ? <FreeEvents /> : null}
-        {options === "paid" ? <PaidEvents /> : null}
-        {options === "special" ? <SpecialEvents /> : null}
+        {eventFetching || eventLoading ? (
+          <Loader loading={eventFetching || eventLoading} />
+        ) : !eventError ? (
+          <>
+            {options === "free" ? (
+              <FreeEvents
+                data={eventFetchData.filter(
+                  (item) => item.is_paid === false && item.is_agm === false
+                )}
+              />
+            ) : null}
+            {options === "paid" ? (
+              <PaidEvents
+                data={eventFetchData.filter(
+                  (item) => item.is_paid === true && item.is_agm === false
+                )}
+              />
+            ) : null}
+            {options === "special" ? (
+              <SpecialEvents
+                data={eventFetchData.filter(
+                  (item) => item.is_agm === true && item.is_paid === false
+                )}
+              />
+            ) : null}
+          </>
+        ) : (
+          <FormError>Can't Fetch Event Data</FormError>
+        )}
 
         <Wall />
         <Footer />

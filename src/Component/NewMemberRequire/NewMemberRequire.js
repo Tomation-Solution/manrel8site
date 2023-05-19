@@ -16,10 +16,9 @@ const NewMemberRequire = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (check === "agree") {
-      //   navigate("/join-now-form");
       navigate("/purchase-application");
     } else {
-      alert("Please check the box");
+      alert("Confirm you have read the requirements and check the checkbox");
     }
   };
 
