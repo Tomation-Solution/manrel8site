@@ -189,7 +189,7 @@ function Services() {
               </div>
               <div className="services-card">
                 <div className="services-overlay">
-                  <h1>Financial Solutions</h1>
+                  <h1></h1>
                   <p>
                     It is now possible to expand your business operations. Come
                     take advantage of available funding windows, intervention

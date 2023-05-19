@@ -29,3 +29,9 @@ export const getSectoralApi = async()=>{
  const resp = await publicCmsRequest.get('structure/sectoral-group/public')
  return resp.data.data
 }
+
+export const getMrcApi =async ()=>{
+
+    const resp = await publicCmsRequest.get('structure/mrc-service/public')
+    return resp.data.data
+}
