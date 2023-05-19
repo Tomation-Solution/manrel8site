@@ -20,7 +20,9 @@ import ten from "../../images/NewSectoralImage.jpeg";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
-
+import { useQuery } from "react-query";
+import { getSectoralApi } from "../../utils/api-calls2";
+import Preloader from '../Preloader/Preloader'
 function Sectoral() {
   const sectoralList = [
     {
@@ -67,13 +69,14 @@ function Sectoral() {
       content: "Motor Vehicle & Miscellaneous Assembly Sectoral Group",
     },
   ];
+  const {isLoading,data} = useQuery('getSectoralApi',getSectoralApi)
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className="sectoral">
           <Subscribe />
           <NewNavBar />
-
+        <Preloader loading={isLoading}/>
           <NewImageBanner
             image={backImage}
             header={"MAN Sectoral Group"}
@@ -94,11 +97,11 @@ function Sectoral() {
                 located at the National Secretariat of the Association.
               </div>
               <div className="wrap-g">
-                {sectoralList.map((item) => (
-                  <div className="card" key={item.content}>
+                {data?.map((item,index) => (
+                  <div className="card" key={item.header}>
                     <div className="flex">
                       <img src={Vector} alt="" />
-                      <h2 style={{ color: "#2b3513" }}>{item.content}</h2>
+                      <h2 style={{ color: "#2b3513" }}>{item.header}</h2>
                     </div>
                     <img className="main-img" src={item.image} alt="" />
                   </div>

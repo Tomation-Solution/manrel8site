@@ -23,3 +23,9 @@ export const getMembersApi = async()=>{
     return resp.data.data
 
 }
+
+
+export const getSectoralApi = async()=>{
+ const resp = await publicCmsRequest.get('structure/sectoral-group/public')
+ return resp.data.data
+}
