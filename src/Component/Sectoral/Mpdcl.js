@@ -24,8 +24,12 @@ import CapacityProg3 from "../../images/new-images/mpdcl/CapacityProg (3).png";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
-
+import { useQuery } from "react-query";
+import { getMPDCLApi } from "../../utils/api-calls2";
+import  Preloader from '../Preloader/Preloader'
 function Mpdcl() {
+  const {isLoading,data} = useQuery('getMPDCLApi',getMPDCLApi)
+  
   const sectoralList = [
     {
       image: PowerFacilities1,
@@ -116,6 +120,7 @@ function Mpdcl() {
     <>
       <ThemeProvider theme={theme}>
         <UIProvider>
+          <Preloader loading={isLoading}/>
           <div className="sectoral">
             <Subscribe />
             <NewNavBar />
@@ -194,13 +199,13 @@ function Mpdcl() {
                 </h1>
                 <h2>Power Facilitation Activities</h2>
                 <div className="wrap-g">
-                  {sectoralList.map((item) => (
+                  {data?.filter((d=>d.type==='POWER_FACILITATION')).map((item) => (
                     <div className="card" key={item.id}>
                       <div className="flex">
                         <img src={Vector} alt="" />
-                        <h2 style={{ color: "#2b3513" }}>{item.content}</h2>
+                        <h2 style={{ color: "#2b3513" }}>{item.header}</h2>
                       </div>
-                      <p>{item.details}</p>
+                      <p>{item.description}</p>
                       <img className="main-img" src={item.image} alt="" />
                     </div>
                   ))}
@@ -286,13 +291,13 @@ function Mpdcl() {
                   </p>
                 </div>
                 <div className="wrap-g">
-                  {capacityProg.map((item) => (
+                  {data?.filter((d=>d.type==='RENEWABLE_ENERGY')).map((item) => (
                     <div className="card" key={item.id}>
                       <div className="flex">
                         <img src={Vector} alt="" />
-                        <h2>{item.content}</h2>
+                        <h2>{item.header}</h2>
                       </div>
-                      <p>{item.details}</p>
+                      <p>{item.description}</p>
                       <img className="main-img" src={item.image} alt="" />
                     </div>
                   ))}

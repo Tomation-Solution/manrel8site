@@ -35,3 +35,9 @@ export const getMrcApi =async ()=>{
     const resp = await publicCmsRequest.get('structure/mrc-service/public')
     return resp.data.data
 }
+
+export const getMPDCLApi =async ()=>{
+
+    const resp = await publicCmsRequest.get('structure/mpdcl-service/public')
+    return resp.data.data
+}
