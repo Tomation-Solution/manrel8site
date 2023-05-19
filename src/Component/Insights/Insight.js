@@ -1,22 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { AboutList } from "../Gallery/App";
-import { gallerydata } from "../Gallery/GalleryDetails/GalleryData";
+// import { gallerydata } from "../Gallery/GalleryDetails/GalleryData";
+// import { newsdata } from "../News/NewsData";
+// import { newPubData } from "../Publications/PublicationsData";
+// import { newReportData } from "../Reports/ReportData";
 import "../Gallery/Insmore.scss";
 import Wall from "../Wall/Wall";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import Articleimage from "../../images/new-images/NewHomeAllimg.png";
 import { UIProvider } from "../../Ui";
-import { newsdata } from "../News/NewsData";
-import { newPubData } from "../Publications/PublicationsData";
-import { newReportData } from "../Reports/ReportData";
 import Subscribe from "../Subscribe/Subscribe";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/ManInsightImg.jpg";
+import { useEffect } from "react";
+import {
+  getFreePublication,
+  getNews,
+  getReports,
+  getGallery,
+} from "../../utils/csm-api-calls";
+import Loader from "../Loader/Loader";
 
 const Insight = () => {
+  const [insightData, setInsightData] = useState(null);
+  useEffect(() => {
+    Promise.all([
+      getGallery(),
+      getNews(),
+      getReports(),
+      getFreePublication(),
+    ]).then((res) => {
+      const alldata = res.map((item) => {
+        return { type: item?.message, data: item?.data[0] };
+      });
+      setInsightData(alldata);
+    });
+  }, []);
+
   return (
     <UIProvider>
       <Subscribe />
@@ -34,72 +57,53 @@ const Insight = () => {
                 <h2>Insight</h2>
               </div>
               <div className="wrap">
-                {gallerydata[0] && (
-                  <div className="card" key={gallerydata[0].id}>
-                    <Link to={"/gallery"}>
-                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
-                        <b>Gallery</b>
-                      </button>
-                    </Link>
+                {!insightData ? (
+                  <Loader loading={true} />
+                ) : (
+                  <>
+                    {insightData.map((item, index) => {
+                      return (
+                        <div className="card" key={index}>
+                          <Link
+                            to={`/${
+                              item.type === "free publications"
+                                ? "publications"
+                                : item.type
+                            }`}
+                          >
+                            <button
+                              style={{ color: "#2b3513", cursor: "pointer" }}
+                            >
+                              <b>
+                                {item.type === "free publications"
+                                  ? "publications"
+                                  : item.type}
+                              </b>
+                            </button>
+                          </Link>
 
-                    <div className="flex">
-                      <h3>{gallerydata[0].name}</h3>
-                      <Link to={`/gallery-details/${gallerydata[0].id}`}>
-                        <OpenInNewIcon />
-                      </Link>
-                    </div>
-                  </div>
-                )}
-
-                {newPubData[0] && (
-                  <div className="card" key={newPubData[0].id}>
-                    <Link to={"/publications"}>
-                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
-                        <b>Publications</b>
-                      </button>
-                    </Link>
-
-                    <div className="flex">
-                      <h3>{newPubData[0].name}</h3>
-                      <Link to={`/publications-details/${newPubData[0].id}`}>
-                        <OpenInNewIcon />
-                      </Link>
-                    </div>
-                  </div>
-                )}
-
-                {newReportData[0] && (
-                  <div className="card" key={newReportData[0].id}>
-                    <Link to={"/reports"}>
-                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
-                        <b>Report</b>
-                      </button>
-                    </Link>
-
-                    <div className="flex">
-                      <h3>{newReportData[0].name}</h3>
-                      <Link to={`/report-details/${newReportData[0].id}`}>
-                        <OpenInNewIcon />
-                      </Link>
-                    </div>
-                  </div>
-                )}
-
-                {newsdata[0] && (
-                  <div className="card" key={newsdata[0].id}>
-                    <Link to="/news">
-                      <button style={{ color: "#2b3513", cursor: "pointer" }}>
-                        <b>News</b>
-                      </button>
-                    </Link>
-
-                    <div className="flex">
-                      <h3>{newsdata[0].name}</h3>
-                      <Link to={`/news-details/${newsdata[0].id}`}>
-                        <OpenInNewIcon />
-                      </Link>
-                    </div>
-                  </div>
+                          <div className="flex">
+                            <h3>{item?.data.name}</h3>
+                            {item.type === "free publications" ? (
+                              <Link
+                                to={`/publications-details/${item?.data.id}`}
+                              >
+                                <OpenInNewIcon />
+                              </Link>
+                            ) : (
+                              <Link
+                                to={`/${
+                                  item.type === "reports" ? "report" : item.type
+                                }-details/${item?.data.id}`}
+                              >
+                                <OpenInNewIcon />
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </>
                 )}
               </div>
             </div>

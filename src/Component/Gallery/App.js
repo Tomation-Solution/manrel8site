@@ -14,10 +14,14 @@ import { Link, useLocation } from "react-router-dom";
 import Wall from "../../Component/Wall/Wall";
 import Footer from "../../Component/Footer/Footer";
 import Subscribe from "../Subscribe/Subscribe";
-import { gallerydata } from "./GalleryDetails/GalleryData";
+// import { gallerydata } from "./GalleryDetails/GalleryData";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import backImage from "../../images/new-images/InsightCardIMages (3).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import { useQuery } from "react-query";
+import { getGallery } from "../../utils/csm-api-calls";
+import Loader from "../Loader/Loader";
+import { FormError } from "../NewEvents/FormComponents";
 
 /**
  * THIS IS BEING USED IN THE PUBLICATIONS, REPORTS, NEWS PAGES
@@ -95,6 +99,15 @@ export const InsightQuickNavigation = () => {
 };
 
 function App() {
+  const { isLoading, isError, isFetching, data } = useQuery(
+    "all-gallery",
+    getGallery,
+    {
+      select: (data) => data.data,
+      refetchOnWindowFocus: false,
+    }
+  );
+
   return (
     <ThemeProvider theme={theme}>
       <div className="insight-more">
@@ -113,24 +126,32 @@ function App() {
                 <div className="top">
                   <h2>Gallery</h2>
                 </div>
-                <div className="wrap">
-                  {gallerydata.map((item) => (
-                    <div className="card" key={item.id}>
-                      <Link to={"/gallery"}>
-                        <button style={{ color: "#2b3513", cursor: "pointer" }}>
-                          <b>Gallery</b>
-                        </button>
-                      </Link>
-                      <div className="flex">
-                        <h3>{item.name}</h3>
-                        <Link to={`/gallery-details/${item.id}`}>
-                          <OpenInNewIcon />
+
+                {isLoading || isFetching ? (
+                  <Loader loading={isLoading || isFetching} />
+                ) : !isError ? (
+                  <div className="wrap">
+                    {data.map((item) => (
+                      <div className="card" key={item.id}>
+                        <Link to={"/gallery"}>
+                          <button
+                            style={{ color: "#2b3513", cursor: "pointer" }}
+                          >
+                            <b>Gallery</b>
+                          </button>
                         </Link>
+                        <div className="flex">
+                          <h3>{item.name}</h3>
+                          <Link to={`/gallery-details/${item.id}`}>
+                            <OpenInNewIcon />
+                          </Link>
+                        </div>
                       </div>
-                      {/* <p>January 03, 2023</p> */}
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <FormError>Can't Fetch Gallery Data</FormError>
+                )}
               </div>
 
               <div className="left">

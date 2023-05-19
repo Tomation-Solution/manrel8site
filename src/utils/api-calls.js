@@ -1,10 +1,13 @@
 import axios, { AxiosError } from "axios";
 import { privateRequest } from "./axios-utils";
 
+// const BASE_URL = `https://rel8backend-production.up.railway.app/tenant/man/`;
+const BASE_URL = `https://rel8-corporate-backend-production.up.railway.app/tenant/man/`;
+
 //LOGIN
 export const loginUser = async (payload) => {
   try {
-    const loginURL = `https://rel8backend-production.up.railway.app/tenant/man/tenant/auth/login/`;
+    const loginURL = `${BASE_URL}tenant/auth/login/`;
     const res = await axios.post(loginURL, payload);
     return res.data;
   } catch (error) {

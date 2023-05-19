@@ -8,15 +8,31 @@ import NewImageBanner from "../../NewImageBanner/NewImageBanner";
 import NewNavBar from "../../NewNavBar/NewNavBar";
 import Subscribe from "../../Subscribe/Subscribe";
 import Wall from "../../Wall/Wall";
-import { gallerydata } from "./GalleryData";
+// import { gallerydata } from "./GalleryData";
 import backImage from "../../../images/new-images/InsightCardIMages (3).jpg";
 
 import "./GalleryDetails.scss";
+import { useQuery } from "react-query";
+import { getGallery } from "../../../utils/csm-api-calls";
+import Loader from "../../Loader/Loader";
+import { FormError } from "../../NewEvents/FormComponents";
 
 const GalleryDetails = () => {
   const { id } = useParams();
 
-  const renderdata = gallerydata.find((item) => item.id === id);
+  const { isLoading, isError, isFetching, data } = useQuery(
+    "all-gallery",
+    getGallery,
+    {
+      select: (data) => data.data,
+      refetchOnWindowFocus: false,
+    }
+  );
+
+  let renderdata = null;
+  if (data) {
+    renderdata = data.find((item) => item.id === Number(id));
+  }
 
   return (
     <div>
@@ -26,30 +42,42 @@ const GalleryDetails = () => {
             <Subscribe />
             <NewNavBar />
 
-            <NewImageBanner
-              image={backImage}
-              header={"Gallery"}
-              details={[`${renderdata.name}`]}
-            />
+            {renderdata ? (
+              <NewImageBanner
+                image={backImage}
+                header={"Gallery"}
+                details={[`${renderdata.name}`]}
+              />
+            ) : null}
 
             <div className="gallery-con">
-              {/* <p className="gallery-header">{renderdata.name}</p> */}
+              {isLoading || isFetching ? (
+                <Loader loading={isLoading || isFetching} />
+              ) : !isError ? (
+                <div className="gallery-items">
+                  {renderdata ? (
+                    <>
+                      {renderdata.gallery_images.map((item, index) => {
+                        return (
+                          <div className="gallery-item" key={index}>
+                            <div className="top">
+                              <img alt="" src={item.image} />
+                            </div>
 
-              <div className="gallery-items">
-                {renderdata.image.map((item, index) => {
-                  return (
-                    <div className="gallery-item" key={index}>
-                      <div className="top">
-                        <img alt="" src={item.image} />
-                      </div>
-
-                      <div className="bottom">
-                        <p>{item.caption}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+                            <div className="bottom">
+                              <p>{item.caption}</p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </>
+                  ) : (
+                    <FormError>Can't Fetch Gallery Data</FormError>
+                  )}
+                </div>
+              ) : (
+                <FormError>Can't Fetch Gallery Data</FormError>
+              )}
             </div>
           </div>
 

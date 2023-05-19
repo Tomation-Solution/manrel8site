@@ -8,22 +8,70 @@ import "./MRCContact.scss";
 import MrcContactImg from "../../images/new-images/MrcContactImg.png";
 import Subscribe from "../Subscribe/Subscribe";
 import { Link } from "react-router-dom";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+import { postContactRequest } from "../../utils/csm-api-calls";
+import Loader from "../Loader/Loader";
+import { toast } from "react-toastify";
+import { FormError } from "../NewEvents/FormComponents";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const MRCContact = () => {
+  const schema = yup.object({
+    name: yup.string().required(),
+    phone_no: yup.string().required("phone number is a required field"),
+    email: yup.string().email().required(),
+    subject: yup.string().required(),
+    message: yup.string().required(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      name: "",
+      phone_no: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const { mutate, isLoading } = useMutation(postContactRequest, {
+    onMutate: () => {
+      toast.info("submitting contact message");
+    },
+    onSuccess: () => {
+      toast.success("contact message submitted");
+    },
+    onError: () => {
+      toast.error("failed to submit contact message");
+    },
+  });
+
+  const onSubmitHandler = (data) => {
+    mutate(data);
+  };
+
   return (
     <div className="mrc-contact">
       <UIProvider>
         <Subscribe />
         <NewNavBar />
+        <Loader loading={isLoading} />
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.367310454374!2d3.3413191932367914!3d6.6011929240879645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228ce24bd1d%3A0x5388ca4742e701eb!2sMAN%20House%2C%20Obafemi%20Awolowo%20Way%2C%20Ikeja%20101233%2C%20Ikeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1680258368303!5m2!1sen!2sng"
           width="100%"
           title="title1"
           height="450"
           style={{ border: "0" }}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <div className="contact-us">
           <div className="left">
@@ -31,28 +79,33 @@ const MRCContact = () => {
               <span>Contact </span> Us
             </h1>
 
-            <form>
+            <form onSubmit={handleSubmit(onSubmitHandler)}>
               <div className="half-input">
                 <label>
+                  <FormError>{errors?.name?.message}</FormError>
                   Your Name
-                  <input type={"text"} />
+                  <input type={"text"} {...register("name")} />
                 </label>
                 <label>
+                  <FormError>{errors?.phone_no?.message}</FormError>
                   Your Phone Number
-                  <input type={"text"} />
+                  <input type={"text"} {...register("phone_no")} />
                 </label>
               </div>
               <label>
+                <FormError>{errors?.email?.message}</FormError>
                 Your Email Address
-                <input type={"text"} />
+                <input type={"text"} {...register("email")} />
               </label>
               <label>
+                <FormError>{errors?.subject?.message}</FormError>
                 Subject
-                <input type={"text"} />
+                <input type={"text"} {...register("subject")} />
               </label>
               <label>
+                <FormError>{errors?.message?.message}</FormError>
                 Message
-                <textarea />
+                <textarea {...register("message")} />
               </label>
               <label>
                 Kindly solve this to confirm you are not a robot: 5 + 40

@@ -1,101 +1,97 @@
 import React, { useState } from "react";
 import "../PaidPublications/PaidPublications.scss";
-import {
-  AnnualGeneralMeeting,
-  PayModal,
-  RegisterModal,
-} from "../NewEvents/Modals";
+import { RegisterModal, SingleEvent } from "../Modals/EventModals";
+import { AGMRegistrationModal } from "../Modals/AGMRegistrationModals/AGMModal";
 
-import { SingleEvent } from "../NewEvents/Modals";
-import Image from "../../images/new-images/EventBgImg.png";
-import Image2 from "../../images/new-images/GalLinkImg (3).png";
 import Image3 from "../../images/new-images/InsightCardIMages (3).jpg";
-import { eventData } from "../Events/EventData";
 
-export const PaidEvents = () => {
+export const PaidEvents = ({ data }) => {
   const [register, setRegister] = useState(false);
+  const [eventObject, setEventObject] = useState(null);
 
-  const viewpaidHandler = () => {
-    setRegister(!register);
-  };
-
-  return (
-    <>
-      {register && <PayModal price={70000} closefn={viewpaidHandler} />}
-
-      <div className="paid-publications">
-        {/* <h1 className="header">Paid Event</h1> */}
-        <div className="paid-publication-items">
-          {eventData
-            .filter((item) => item.type === "paid")
-            .map((item) => (
-              <SingleEvent
-                image={Image}
-                registerfn={() => setRegister(!register)}
-                key={item.id}
-                data={item}
-              />
-            ))}
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const FreeEvents = () => {
-  const [register, setRegister] = useState(false);
-
-  const viewpaidHandler = () => {
-    setRegister(!register);
-  };
-
-  return (
-    <>
-      {register && <RegisterModal closefn={viewpaidHandler} />}
-
-      <div className="paid-publications">
-        <div className="paid-publication-items">
-          {eventData
-            .filter((item) => item.type === "free")
-            .map((item) => (
-              <SingleEvent
-                image={Image2}
-                registerfn={() => setRegister(!register)}
-                key={item.id}
-                data={item}
-              />
-            ))}
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const SpecialEvents = () => {
-  const [register, setRegister] = useState(false);
-
-  const viewpaidHandler = () => {
+  const eventRegister = (data) => {
+    setEventObject(data);
     setRegister(!register);
   };
 
   return (
     <>
       {register && (
-        <AnnualGeneralMeeting price={70000} closefn={viewpaidHandler} />
+        <RegisterModal
+          data={eventObject}
+          closefn={() => setRegister(!register)}
+        />
       )}
 
       <div className="paid-publications">
         <div className="paid-publication-items">
-          {eventData
-            .filter((item) => item.type === "special")
-            .map((item) => (
-              <SingleEvent
-                image={Image3}
-                registerfn={() => setRegister(!register)}
-                key={item.id}
-                data={item}
-              />
-            ))}
+          {data.map((item) => (
+            <SingleEvent registerfn={eventRegister} key={item.id} data={item} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const FreeEvents = ({ data }) => {
+  const [register, setRegister] = useState(false);
+  const [eventObject, setEventObject] = useState(null);
+
+  const eventRegister = (data) => {
+    setEventObject(data);
+    setRegister(!register);
+  };
+
+  return (
+    <>
+      {register && (
+        <RegisterModal
+          data={eventObject}
+          closefn={() => setRegister(!register)}
+        />
+      )}
+
+      <div className="paid-publications">
+        <div className="paid-publication-items">
+          {data.map((item) => (
+            <SingleEvent registerfn={eventRegister} key={item.id} data={item} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const SpecialEvents = ({ data }) => {
+  const [register, setRegister] = useState(false);
+  const [eventId, setEventId] = useState(0);
+
+  const viewpaidHandler = () => {
+    setRegister(!register);
+  };
+
+  const registerfn = (data) => {
+    setEventId(data.id);
+    setRegister(!register);
+  };
+
+  return (
+    <>
+      {register && (
+        <AGMRegistrationModal closefn={viewpaidHandler} eventId={eventId} />
+      )}
+
+      <div className="paid-publications">
+        <div className="paid-publication-items">
+          {data.map((item) => (
+            <SingleEvent
+              image={Image3}
+              registerfn={registerfn}
+              key={item.id}
+              data={item}
+            />
+          ))}
         </div>
       </div>
     </>

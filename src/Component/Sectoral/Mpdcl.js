@@ -23,7 +23,7 @@ import CapacityProg2 from "../../images/new-images/mpdcl/CapacityProg (2).png";
 import CapacityProg3 from "../../images/new-images/mpdcl/CapacityProg (3).png";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/Group 61.png";
+import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 
 function Mpdcl() {
   const sectoralList = [

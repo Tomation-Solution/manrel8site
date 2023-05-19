@@ -19,7 +19,7 @@ import nine from "../../images/nine.png";
 import ten from "../../images/NewSectoralImage.jpeg";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/Group 61.png";
+import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 
 function Sectoral() {
   const sectoralList = [

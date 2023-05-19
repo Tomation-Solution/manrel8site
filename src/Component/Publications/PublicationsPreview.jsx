@@ -1,8 +1,8 @@
 import React from "react";
-import "./ReportsPreview.scss";
-import { dateformatter } from "../../../utils/date-formatter";
+import "../Reports/ReportsPreview/ReportsPreview.scss";
+import { dateformatter } from "../../utils/date-formatter";
 
-const ReportsPreview = ({ render_data, isImage, no_title }) => {
+const PublicationsPreview = ({ render_data, isImage, no_title }) => {
   return (
     <div className="reports-preview">
       {isImage ? (
@@ -37,4 +37,4 @@ const ReportsPreview = ({ render_data, isImage, no_title }) => {
   );
 };
 
-export default ReportsPreview;
+export default PublicationsPreview;
