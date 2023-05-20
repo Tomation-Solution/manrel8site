@@ -13,6 +13,7 @@ export const privateRequest = axios.create({
   headers: { Authorization: `Token ${TOKEN}` },
 });
 
+
 export const publicCmsRequest = axios.create({
   baseURL: CMS_BASE_URL,
 });

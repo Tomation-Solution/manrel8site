@@ -17,13 +17,20 @@ import Point6 from "../../images/Frame 46.png";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import backImage from "../../images/new-images/TeamworkImg.jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
+import { useQuery } from "react-query";
+import { whyJoinManApi } from "../../utils/api-calls2";
+import Preloader from "../Preloader/Preloader";
 
 function Members() {
   const navigate = useNavigate();
-
+  const {data,isLoading} = useQuery('whyJoinManApi',whyJoinManApi,)
+  console.log(data)
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
+        <Preloader 
+        loading={isLoading}
+        />
         <div className="members">
           <Subscribe />
           <NewNavBar />
@@ -35,6 +42,23 @@ function Members() {
               <p>Here are reasons why you should join MAN.</p>
             </div>
             <div className="point">
+            {
+                data?.map((d,index)=>(
+                  <div className="card" key={index}>
+                  <div className="left">
+                    <img src={Image2} alt="" />
+                  </div>
+                  <div className="right">
+                    <h1>{d.header}</h1>
+                    <p>{d.description}
+                    </p>
+                  </div>
+                </div>
+                ))
+              }
+            </div>
+            {/* <div className="point">
+              
               <div className="card">
                 <div className="left">
                   <img src={Image2} alt="" />
@@ -104,8 +128,7 @@ function Members() {
                 <div className="right">
                   <h1>OPPORTUNITY IN POLICY FORMULATION</h1>
                   <p>
-                    {/* Members’ views are well represented in policy formulation,
-                    especially policies that affect manufacturers. */}
+                  
                     The mission of MAN is to ensure conducive operating
                     environment for manufacturers in Nigeria. In this regard,
                     MAN engages policy makers through evidence based policy
@@ -177,7 +200,7 @@ function Members() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="benefits">
               <div className="top">
                 <h1>MEMBERSHIP BENEFITS</h1>

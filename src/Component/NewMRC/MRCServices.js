@@ -8,8 +8,11 @@ import Subscribe from "../Subscribe/Subscribe";
 import Wall from "../Wall/Wall";
 import "./MRCServices.scss";
 import backImage from "../../images/Group 61.png";
+import { useQuery } from "react-query";
+import { getMrcApi } from "../../utils/api-calls2";
 
 const MRCServices = () => {
+  const {isLoading,data} = useQuery('getMrcApi',getMrcApi)
   return (
     <div className="mrc-services">
       <UIProvider>
@@ -43,141 +46,44 @@ const MRCServices = () => {
             </Link>
           </div>
         </div>
-        <div className="objectives">
-          <h1 className="header">
-            Business Consulting <span>Retainership Service</span>
-          </h1>
+        
+        {
+          data?.map((d,index)=>(
+            <div className="objectives" key={index}>
+              <h1 className="header">
+                 <span>{d.name}</span>
+              </h1>
 
-          <p style={{ color: "#2b3513" }}>
-            With our brand, expertise and business leverages, valuable in
-            growing turnover volume, company customer base and production
-            capacity, companies engage us as their Business Consultant to aid
-            them better their business strategizes and attain targeted business
-            growth. In addition, micro manufacturers enjoy discounted fee.
-          </p>
-          <p>This service covers:</p>
+              <p style={{ color: "#2b3513" }}>
+                {d.description}
+                {/* With our brand, expertise and business leverages, valuable in
+                growing turnover volume, company customer base and production
+                capacity, companies engage us as their Business Consultant to aid
+                them better their business strategizes and attain targeted business
+                growth. In addition, micro manufacturers enjoy discounted fee. */}
+              </p>
+              <p>This service covers:</p>
+                {
+                  d.items.map((item,i)=>(
+                    <div className="obj-item" key={i}>
+                      <div></div>
+                      <span>{item}</span>
+                    </div>
+                  ))
+                }
+          <div className="who-are">
+              <div className="text-btn">
+                <span style={{ color: "#2b3513" }}>
+                  {d.small_text}
+                </span>
+              </div>
+          </div>
+            </div>
 
-          <div className="obj-item">
-            <div></div>
-            <span>Business Evaluations.</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Business Advisory.</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Access to MRC available Business Leverages.</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Business Referrals.</span>
-          </div>
-        </div>
-        <div className="objectives">
-          <h1 className="header">
-            Financial <span>Solutions</span>
-          </h1>
+          ))
+        }
 
-          <p style={{ color: "#2b3513" }}>
-            It’s now possible to expand your Business and Operations. Come take
-            advantage of available funding windows, Intervention Fund and other
-            Venture Capital investments, that would suit your funding need.
-          </p>
-          <p>This service covers:</p>
 
-          <div className="obj-item">
-            <div></div>
-            <span>Intervention Funds</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Grants and Loan</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Facilities .</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Loan Facilitation</span>
-          </div>
-        </div>
-        <div className="objectives">
-          <h1 className="header">
-            Human <span>Capacity Building</span>
-          </h1>
-
-          <p style={{ color: "#2b3513" }}>
-            We understand that Learning and Development leads to increased
-            performance, better lives and work. We bring to you a whole new
-            learning experience through our In-plant and General Trainings.
-          </p>
-          <p>This service covers:</p>
-
-          <div className="obj-item">
-            <div></div>
-            <span>Training (In-Plant and General)</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Workforce Recruitment</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Pre-Retirement Training</span>
-          </div>
-        </div>
-        <div className="objectives">
-          <h1 className="header">
-            Consulting <span>Services</span>
-          </h1>
-
-          <p style={{ color: "#2b3513" }}>
-            Leveraging on the expertise and experience of skilled consultants
-            and professionals we evaluate, implement and deploy custom solutions
-            tailored to address your business challenges.
-          </p>
-          <p>This service covers:</p>
-
-          <div className="obj-item">
-            <div></div>
-            <span>Feasibility and Viability Appraisals</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Product Authentication Solutions</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Joint Venture Business Propositions</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Financial Management Services</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Business Research</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>Business Plan</span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>
-              IT Consulting (Website Building, SMP Management, Marketing)
-            </span>
-          </div>
-          <div className="obj-item">
-            <div></div>
-            <span>
-              Production Process Re-Engineering (Lean Manufacturing, Production
-              Optimization) Etc.
-            </span>
-          </div>
-        </div>
         <div className="who-are">
           <h1 className="header">
             We <span>Transform Businesses</span>
