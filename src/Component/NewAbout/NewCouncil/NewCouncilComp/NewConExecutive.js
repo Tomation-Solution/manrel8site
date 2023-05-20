@@ -1,17 +1,17 @@
 import React from "react";
 import NoPicture from "../../../../images/new-images/executivesImg/NoPicture.png";
-import ManualRenders from "./ManualRenders";
-import {
-  memberData,
-  PurposeVeh,
-  renderData,
-  SectoralData,
-  SpecialPur,
-  StrategicMemb,
-} from "./NewCouncilData";
-import PastPresident from "./PastPresident";
+// import ManualRenders from "./ManualRenders";
+// import {
+//   memberData,
+//   PurposeVeh,
+//   renderData,
+//   SectoralData,
+//   SpecialPur,
+//   StrategicMemb,
+// } from "./NewCouncilData";
+// import PastPresident from "./PastPresident";
 
-const NewConExecutive = () => {
+const NewConExecutive = ({ data }) => {
   return (
     <>
       <article>
@@ -24,27 +24,52 @@ const NewConExecutive = () => {
           Executive Committee Members
         </h1>
 
-        <ManualRenders />
+        {/* <ManualRenders /> */}
+        <div className="member_items">
+          {data
+            .filter((item) => item.type === "EXECUTIVE")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </article>
 
       <article>
         <h1 className="article-header">CHAIRMEN OF BRANCHES</h1>
         <p className="article-desc"></p>
         <div className="member_items">
-          {renderData.map((item, index) => {
-            return (
-              <div className="member_item" key={index}>
-                <div className="left">
-                  <img alt="" src={item?.image || NoPicture} />
-                </div>
-                <div className="right">
-                  <p className="header">{item?.title2}</p>
-                  <p className="header">{item?.name2}</p>
-                  <p className="header">{item?.name}</p>
-                </div>
-              </div>
-            );
-          })}
+          {/*renderData */}
+          <div className="member_items">
+            {data
+              .filter((item) => item.type === "BRANCH")
+              .map((item, index) => {
+                return (
+                  <div className="member_item" key={index}>
+                    <div className="left">
+                      <img alt="" src={item?.image || NoPicture} />
+                    </div>
+                    <div className="right">
+                      <p className="header">{item?.title}</p>
+                      <p className="header">{item?.name}</p>
+                      <p className="header">{item?.extra_title1}</p>
+                      <p className="header">{item?.extra_title2}</p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </article>
 
@@ -52,20 +77,24 @@ const NewConExecutive = () => {
         <h1 className="article-header">CHAIRMEN OF SECTORAL GROUPS</h1>
         <p className="article-desc"></p>
         <div className="member_items">
-          {SectoralData.map((item, index) => {
-            return (
-              <div className="member_item" key={index}>
-                <div className="left">
-                  <img alt="" src={item?.image || NoPicture} />
+          {/*SectoralData */}
+          {data
+            .filter((item) => item.type === "SECTORAL")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
                 </div>
-                <div className="right">
-                  <p className="header">{item?.title2}</p>
-                  <p className="header">{item?.name2}</p>
-                  <p className="header">{item?.name}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </article>
 
@@ -74,20 +103,24 @@ const NewConExecutive = () => {
           CHAIRMEN OF SPECIAL PURPOSE VEHICLES OF MAN
         </h1>
         <div className="member_items">
-          {PurposeVeh.map((item, index) => {
-            return (
-              <div className="member_item" key={index}>
-                <div className="left">
-                  <img alt="" src={item?.image || NoPicture} />
+          {/* PurposeVeh */}
+          {data
+            .filter((item) => item.type === "SPECIAL_PURPOSE_VEHICLES")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
                 </div>
-                <div className="right">
-                  <p className="header">{item?.title2}</p>
-                  <p className="header">{item?.name2}</p>
-                  <p className="header">{item?.name}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </article>
 
@@ -96,54 +129,96 @@ const NewConExecutive = () => {
           CHAIRMEN OF SPECIAL PURPOSE GROUPS OF MAN
         </h1>
         <div className="member_items">
-          {SpecialPur.map((item, index) => {
-            return (
-              <div className="member_item" key={index}>
-                <div className="left">
-                  <img alt="" src={item?.image || NoPicture} />
+          {/* SpecialPur */}
+          {data
+            .filter((item) => item.type === "SPECIAL_PURPOSE_GROUPS")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
                 </div>
-                <div className="right">
-                  <p className="header">{item?.title2}</p>
-                  <p className="header">{item?.name2}</p>
-                  <p className="header">{item?.name}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </article>
 
-      <PastPresident />
+      <article>
+        <h1 className="article-header">LIFE MEMBERS</h1>
+        <div className="member_items">
+          {/* <PastPresident /> */}
+          {data
+            .filter((item) => item.type === "LIFE_MEMBERS")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      </article>
 
       <article>
         <h1 className="article-header">ELECTED MEMBERS</h1>
         <div className="member_items">
-          {memberData.map((item, index) => {
-            return (
-              <div className="member_item" key={index}>
-                <div className="right">
-                  <p className="header">{item?.title}</p>
-                  <p className="header">{item?.name}</p>
+          {/* memberData */}
+          {data
+            .filter((item) => item.type === "ELECTED_MEMBERS")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </article>
 
       <article>
         <h1 className="article-header">STRATEGIC MEMBERS</h1>
         <div className="member_items">
-          {StrategicMemb.map((item, index) => {
-            return (
-              <div className="member_item" key={index}>
-                <div className="right">
-                  <p className="header">{item?.title}</p>
-                  <p className="header">{item?.name}</p>
+          {/* StrategicMemb */}
+          {data
+            .filter((item) => item.type === "STRATEGIC_MEMBERS")
+            .map((item, index) => {
+              return (
+                <div className="member_item" key={index}>
+                  <div className="left">
+                    <img alt="" src={item?.image || NoPicture} />
+                  </div>
+                  <div className="right">
+                    <p className="header">{item?.title}</p>
+                    <p className="header">{item?.name}</p>
+                    <p className="header">{item?.extra_title1}</p>
+                    <p className="header">{item?.extra_title2}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </article>
     </>

@@ -210,3 +210,121 @@ export const InvitationVerification = async (payload) => {
     throw new AxiosError(e);
   }
 };
+
+//PVC-Services
+export const getAllServicesPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`services/all-services/public`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//PVC-Homepage
+export const getHomepagePVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/membership/home-main/`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//PVC-Why we are unique
+export const getWhyWeAreUnique = async () => {
+  try {
+    const res = await publicCmsRequest.get(
+      `/membership/why-we-are-unique/public`
+    );
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//PVC-AboutUs
+
+//history
+export const getAboutHistoryPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/aboutus/history`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//advocacy
+export const getAboutAdvocacyPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/aboutus/advocacy`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//sector
+export const getAboutSectorPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/aboutus/affilliate`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//Our Executives
+export const getAboutOurExecutivesPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/aboutus/our-executives/public`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//how we work
+export const getAboutHowWeWorkPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/aboutus/how-we-work`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//where we operate
+export const getAboutWhereWeOperatePVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/aboutus/how-we-operate`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//where we operate branch
+export const getAboutWhereWeOperateBranchesPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(
+      `/aboutus/how-we-operate/branch/public`
+    );
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//where we operate office
+export const getAboutWhereWeOfficesPVC = async () => {
+  try {
+    const res = await publicCmsRequest.get(
+      `/aboutus/how-we-operate/office/public`
+    );
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};

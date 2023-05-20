@@ -73,52 +73,6 @@
       @include mobile-1 {
         width: 100%;
       }
-      .services-card {
-        width: 100%;
-        margin-bottom: 30px;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-          url("../../images/div2.png");
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        &:nth-child(2) {
-          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url("../../images/div3.png");
-          background-size: cover;
-        }
-        &:nth-child(3) {
-          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url("../../images/div4.png");
-          background-size: cover;
-        }
-        &:nth-child(4) {
-          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url("../../images/div5.png");
-          background-size: cover;
-        }
-        .services-overlay {
-          width: 80%;
-          background: rgba(113, 120, 97, 0.7);
-          margin-bottom: 150px;
-          padding: 30px;
-          color: #fff;
-          @include mobile-3 {
-            padding: 30px 20px;
-            width: 100%;
-            margin-bottom: 0;
-          }
-          h1 {
-            font-size: 25px;
-            padding-bottom: 30px;
-            text-transform: capitalize;
-          }
-          p {
-            font-size: 14px;
-            font-weight: 300;
-            padding-bottom: 10px;
-          }
-        }
-      }
     }
     .services-right {
       width: 70%;
@@ -248,26 +202,10 @@
         }
         margin-bottom: 30px;
         min-height: inherit;
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-          url("../../images/div2.png");
         background-size: cover;
         display: flex;
         justify-content: center;
-        &:nth-child(2) {
-          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url("../../images/div3.png");
-          background-size: cover;
-        }
-        &:nth-child(3) {
-          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url("../../images/div4.png");
-          background-size: cover;
-        }
-        &:nth-child(4) {
-          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            url("../../images/div5.png");
-          background-size: cover;
-        }
+
         .services-overlay {
           width: 80%;
           background: rgba(113, 120, 97, 0.7);
@@ -302,122 +240,6 @@
           border: none;
           cursor: pointer;
           width: fit-content;
-        }
-      }
-      &.diff {
-        .services-card {
-          width: 24%;
-          @include mobile-6 {
-            width: 100%;
-          }
-          &:nth-child(1) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (1).png");
-            background-size: cover;
-          }
-          &:nth-child(2) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (2).png");
-            background-size: cover;
-          }
-          &:nth-child(3) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (3).png");
-            background-size: cover;
-          }
-          &:nth-child(4) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (4).png");
-            background-size: cover;
-          }
-          &:nth-child(5) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (5).png");
-            background-size: cover;
-          }
-          &:nth-child(6) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (6).png");
-            background-size: cover;
-          }
-          &:nth-child(7) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (7).png");
-            background-size: cover;
-          }
-          &:nth-child(8) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (8).png");
-            background-size: cover;
-          }
-          &:nth-child(9) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (16).png");
-            background-size: cover;
-          }
-          &:nth-child(10) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (10).png");
-            background-size: cover;
-          }
-          &:nth-child(11) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (11).png");
-            background-size: cover;
-          }
-          &:nth-child(3) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (3).png");
-            background-size: cover;
-          }
-          &:nth-child(12) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (12).png");
-            background-size: cover;
-          }
-          &:nth-child(16) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (9).png");
-            background-size: cover;
-          }
-          &:nth-child(14) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (14).png");
-            background-size: cover;
-          }
-          &:nth-child(15) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (15).png");
-            background-size: cover;
-          }
-          background-position: center;
-          .services-overlay {
-            height: fit-content;
-            h1 {
-              font-size: 14px;
-              text-transform: capitalize;
-              padding-bottom: 0px;
-            }
-          }
-        }
-      }
-      &.dit {
-        .services-card {
-          &:nth-child(1) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div5.png");
-            background-size: cover;
-          }
-          &:nth-child(2) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (2).png");
-            background-size: cover;
-          }
-          &:nth-child(3) {
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url("../../images/div20 (15).png");
-            background-size: cover;
-          }
         }
       }
     }

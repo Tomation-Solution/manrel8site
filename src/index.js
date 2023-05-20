@@ -50,6 +50,7 @@ import HowWeWork from "./Component/NewAbout/HowWeWork";
 import PaidPublications from "./Component/PaidPublications/PaidPublications";
 import ProspectiveMemberLogin from "./Component/ProspectiveMemberLogin/ProspectiveMemberLogin";
 import SingleNews from "./Component/SingleNews/SingleNews";
+import MembershipAdmission from "./Component/ApplicationPortal/MembershipAdmission";
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 const client = new QueryClient();
@@ -89,6 +90,10 @@ root.render(
             element={<PurchaseApplication />}
           />
           <Route path="/application-status" element={<ApplicationStatus />} />
+          <Route
+            path="/membership-admission"
+            element={<MembershipAdmission />}
+          />
           <Route path="/dashboard" element={<DashBoard />} />
 
           {/*

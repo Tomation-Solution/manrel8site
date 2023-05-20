@@ -107,10 +107,7 @@ const MRCContact = () => {
                 Message
                 <textarea {...register("message")} />
               </label>
-              <label>
-                Kindly solve this to confirm you are not a robot: 5 + 40
-                <input type={"text"} />
-              </label>
+
               <button>Send Message</button>
             </form>
           </div>

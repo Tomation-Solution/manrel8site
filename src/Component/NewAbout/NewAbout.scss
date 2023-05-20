@@ -4,10 +4,6 @@
   .topBg {
     min-height: 50vh;
     min-height: 50vh;
-    background: url("../../images/new-images/Peoplewithuhari.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 50px;
     @include mobile-3 {
       padding: 50px 20px;

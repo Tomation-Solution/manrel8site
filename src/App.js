@@ -12,23 +12,41 @@ import Footer from "./Component/Footer/Footer";
 import Subscribe from "./Component/Subscribe/Subscribe";
 import NewNavBar from "./Component/NewNavBar/NewNavBar";
 import HomeNewSlide from "./Component/HomeNewSlide/HomeNewSlide";
+import { useQuery } from "react-query";
+import { getHomepagePVC } from "./utils/csm-api-calls";
+import Loader from "./Component/Loader/Loader";
+import { FormError } from "./Component/NewEvents/FormComponents";
 
 function App() {
+  const { isLoading, isError, isFetching, data } = useQuery(
+    "all-homepage",
+    getHomepagePVC,
+    {
+      refetchOnWindowFocus: false,
+      select: (data) => data.data,
+    }
+  );
+
   return (
     <ThemeProvider theme={theme}>
       <div>
         <UIProvider>
-          <div className="home">
-            <Subscribe />
-            <NewNavBar />
-            <HomeNewSlide />
-            {/* <Banner /> */}
-            <Section />
-            <Article />
-            <InfoBoard />
-            <Wall />
-            <Footer />
-          </div>
+          {isLoading || isFetching ? (
+            <Loader loading={isLoading || isFetching} />
+          ) : !isError ? (
+            <div className="home">
+              <Subscribe />
+              <NewNavBar />
+              <HomeNewSlide data={data} />
+              <Section renderdata={data} />
+              <Article data={data} />
+              <InfoBoard />
+              <Wall />
+              <Footer />
+            </div>
+          ) : (
+            <FormError>Can't Fetch Homepage Data</FormError>
+          )}
         </UIProvider>
       </div>
     </ThemeProvider>

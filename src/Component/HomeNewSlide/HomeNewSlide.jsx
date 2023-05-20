@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import { Parallax, Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
 
-const HomeNewSlide = () => {
+const HomeNewSlide = ({ data }) => {
   return (
     <div className="home-new-slide">
       <Swiper
@@ -33,6 +33,7 @@ const HomeNewSlide = () => {
           slot="container-start"
           className="parallax-bg"
           data-swiper-parallax="-23%"
+          style={{ background: `url(${data.slider_image1})` }}
         ></div>
         <SwiperSlide>
           <div className="narration-con">
@@ -40,10 +41,7 @@ const HomeNewSlide = () => {
               <p>Welcome To MAN</p>
             </div>
             <div className="narration-text">
-              <p>
-                MAN was established to promote and protect manufacturers’
-                collective interest.
-              </p>
+              <p>{data.slider_welcome_message}</p>
             </div>
           </div>
         </SwiperSlide>
@@ -53,10 +51,7 @@ const HomeNewSlide = () => {
               <p>Our Vision</p>
             </div>
             <div className="narration-text">
-              <p>
-                To be the key driver for Industrialization, sustainable Economic
-                Growth and Development in Nigeria
-              </p>
+              <p>{data.slider_vision_message}</p>
             </div>
             <div className="centered-button">
               <Link to={"/about"}>
@@ -71,10 +66,7 @@ const HomeNewSlide = () => {
               <p>Our Mission</p>
             </div>
             <div className="narration-text">
-              <p>
-                MAN promotes the interest of manufacturers by deepening its
-                advocacy and partnership with...
-              </p>
+              <p>{data.slider_mission_message}</p>
             </div>
             <div className="centered-button">
               <Link to={"/about"}>
