@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import UploadIcon from "../../images/new-images/UploadIcon.png";
 import SubscriptionRates from "../../images/new-images/SubscriptionRates.png";
 import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
-import { submitFormTwo } from "../../utils/api-calls";
+import { useMutation, useQuery } from "react-query";
+import { getFormTwo, submitFormTwo } from "../../utils/api-calls";
 import { toast } from "react-toastify";
+import { ViewSubmittedDocument } from "../../utils/ExtraComponents";
+import Loader from "../Loader/Loader";
 
 const NextPage = ({ backfn }) => {
   useEffect(() => {
@@ -17,16 +19,14 @@ const NextPage = ({ backfn }) => {
     formState: { errors },
   } = useForm({ defaultValues: {} });
 
-  // const {
-  //   isLoading: formTwoLoading,
-  //   isFetching,
-  //   isError,
-  //   data,
-  // } = useQuery("formtwo-details", getFormTwo, { refetchOnWindowFocus: false });
+  const {
+    isLoading: formTwoLoading,
+    isFetching,
+    isError,
+    data,
+  } = useQuery("formtwo-details", getFormTwo, { refetchOnWindowFocus: false });
 
-  // if (data) {
-  //   console.log(data);
-  // }
+  console.log(data);
 
   const { mutate, isLoading } = useMutation((data) => submitFormTwo(data), {
     onMutate: () => {
@@ -78,6 +78,14 @@ const NextPage = ({ backfn }) => {
     mutate(formData);
   };
 
+  const corporateDocument = data?.corporate_affairs_commision;
+  const letterOfBreakdownDocument =
+    data?.letter_of_breakdown_of_payment_and_docs_attached;
+  const firstYearDocument = data?.first_year_of_buisness_plan;
+  const secondYearDocument = data?.second_year_of_buisness_plan;
+  const photocopyDocument =
+    data?.photocopy_of_your_reciept_issued_on_purchase_of_applicant_form;
+
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className="status-track">
@@ -85,99 +93,117 @@ const NextPage = ({ backfn }) => {
         <div className="status-separator"></div>
         <div className="status-item">2</div>
       </div>
-      <div className="half-input spaced">
-        <div className="upload-img-con">
-          {errors?.corporate_affairs_commision && (
-            <h5 style={{ textAlign: "center" }}>invalid input</h5>
-          )}
-          Corporate Affairs Commission (CAC) Forms C02 and C07
-          <label className="upload-btn" htmlFor="file-input1">
-            <img alt="" src={UploadIcon} />
-          </label>
-          <input
-            type="file"
-            id="file-input1"
-            hidden
-            {...register("corporate_affairs_commision", { required: true })}
-          />
-        </div>
+      {isLoading || isFetching || formTwoLoading ? (
+        <Loader loading={isLoading || formTwoLoading || isFetching} />
+      ) : !isError ? (
+        <>
+          <div className="half-input spaced">
+            <div className="upload-img-con">
+              <ViewSubmittedDocument link={corporateDocument} />
+              {errors?.corporate_affairs_commision && (
+                <h5 style={{ textAlign: "center" }}>invalid input</h5>
+              )}
+              Corporate Affairs Commission (CAC) Forms C02 and C07
+              <label className="upload-btn" htmlFor="file-input1">
+                <img alt="" src={UploadIcon} />
+              </label>
+              <input
+                type="file"
+                id="file-input1"
+                hidden
+                {...register("corporate_affairs_commision", { required: true })}
+              />
+            </div>
 
-        <div className="upload-img-con">
-          {errors?.first_year_of_buisness_plan && (
-            <h5 style={{ textAlign: "center" }}>invalid input</h5>
-          )}
-          Company’s Certificate of Incorporation
-          <label className="upload-btn" htmlFor="file-input2">
-            <img alt="" src={UploadIcon} />
-          </label>
-          <input
-            type="file"
-            id="file-input2"
-            hidden
-            {...register("first_year_of_buisness_plan", { required: true })}
-          />
-        </div>
-      </div>
+            <div className="upload-img-con">
+              <ViewSubmittedDocument link={firstYearDocument} />
+              {errors?.first_year_of_buisness_plan && (
+                <h5 style={{ textAlign: "center" }}>invalid input</h5>
+              )}
+              Company’s Certificate of Incorporation
+              <label className="upload-btn" htmlFor="file-input2">
+                <img alt="" src={UploadIcon} />
+              </label>
+              <input
+                type="file"
+                id="file-input2"
+                hidden
+                {...register("first_year_of_buisness_plan", { required: true })}
+              />
+            </div>
+          </div>
 
-      <div className="half-input spaced">
-        <div className="upload-img-con">
-          {errors?.letter_of_breakdown_of_payment_and_docs_attached && (
-            <h5 style={{ textAlign: "center" }}>invalid input</h5>
-          )}
-          A Covering Letter on the letter head of your company applying to be
-          registered as a member of MAN, stating the breakdown of payments made
-          and documents attached.
-          <label className="upload-btn" htmlFor="file-input3">
-            <img alt="" src={UploadIcon} />
-          </label>
-          <input
-            type="file"
-            id="file-input3"
-            hidden
-            {...register("letter_of_breakdown_of_payment_and_docs_attached", {
-              required: true,
-            })}
-          />
-        </div>
+          <div className="half-input spaced">
+            <div className="upload-img-con">
+              <ViewSubmittedDocument link={letterOfBreakdownDocument} />
+              {errors?.letter_of_breakdown_of_payment_and_docs_attached && (
+                <h5 style={{ textAlign: "center" }}>invalid input</h5>
+              )}
+              A Covering Letter on the letter head of your company applying to
+              be registered as a member of MAN, stating the breakdown of
+              payments made and documents attached.
+              <label className="upload-btn" htmlFor="file-input3">
+                <img alt="" src={UploadIcon} />
+              </label>
+              <input
+                type="file"
+                id="file-input3"
+                hidden
+                {...register(
+                  "letter_of_breakdown_of_payment_and_docs_attached",
+                  {
+                    required: true,
+                  }
+                )}
+              />
+            </div>
 
-        <div className="upload-img-con">
-          {errors?.second_year_of_buisness_plan && (
-            <h5 style={{ textAlign: "center" }}>invalid input</h5>
-          )}
-          Copies of Duly Certified Audited Financial Statement for proceeding
-          two (2) years or Business Plan for new companies
-          <label className="upload-btn" htmlFor="file-input4">
-            <img alt="" src={UploadIcon} />
-          </label>
-          <input
-            type="file"
-            id="file-input4"
-            hidden
-            {...register("second_year_of_buisness_plan", { required: true })}
-          />
-        </div>
-      </div>
+            <div className="upload-img-con">
+              <ViewSubmittedDocument link={secondYearDocument} />
+              {errors?.second_year_of_buisness_plan && (
+                <h5 style={{ textAlign: "center" }}>invalid input</h5>
+              )}
+              Copies of Duly Certified Audited Financial Statement for
+              proceeding two (2) years or Business Plan for new companies
+              <label className="upload-btn" htmlFor="file-input4">
+                <img alt="" src={UploadIcon} />
+              </label>
+              <input
+                type="file"
+                id="file-input4"
+                hidden
+                {...register("second_year_of_buisness_plan", {
+                  required: true,
+                })}
+              />
+            </div>
+          </div>
 
-      <div className="half-input spaced">
-        <div className="upload-img-con">
-          {errors?.photocopy_of_your_reciept_issued_on_purchase_of_applicant_form && (
-            <h5 style={{ textAlign: "center" }}>invalid input</h5>
-          )}
-          Photocopy of your receipt issued on purchase of Application Form.
-          <label className="upload-btn" htmlFor="file-input5">
-            <img alt="" src={UploadIcon} />
-          </label>
-          <input
-            type="file"
-            id="file-input5"
-            hidden
-            {...register(
-              "photocopy_of_your_reciept_issued_on_purchase_of_applicant_form",
-              { required: true }
-            )}
-          />
-        </div>
-      </div>
+          <div className="half-input spaced">
+            <div className="upload-img-con">
+              <ViewSubmittedDocument link={photocopyDocument} />
+              {errors?.photocopy_of_your_reciept_issued_on_purchase_of_applicant_form && (
+                <h5 style={{ textAlign: "center" }}>invalid input</h5>
+              )}
+              Photocopy of your receipt issued on purchase of Application Form.
+              <label className="upload-btn" htmlFor="file-input5">
+                <img alt="" src={UploadIcon} />
+              </label>
+              <input
+                type="file"
+                id="file-input5"
+                hidden
+                {...register(
+                  "photocopy_of_your_reciept_issued_on_purchase_of_applicant_form",
+                  { required: true }
+                )}
+              />
+            </div>
+          </div>
+        </>
+      ) : (
+        <h5>cant fetch application data kindly refresh</h5>
+      )}
 
       <h4 style={{ color: "#2b3513" }}>
         On receipt of the above, the company will be inspected for verification

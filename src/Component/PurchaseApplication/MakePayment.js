@@ -58,8 +58,6 @@ const MakePayment = () => {
       });
     },
     onSuccess: (data) => {
-      console.log(data);
-      window.localStorage.setItem("token", JSON.stringify(data.data.token));
       toast.success("Paymet Successfull Redirecting", {
         icon: false,
       });

@@ -9,13 +9,15 @@ import Subscribe from "../Subscribe/Subscribe";
 import { useQuery } from "react-query";
 import { getStatus } from "../../utils/api-calls";
 import { toast } from "react-toastify";
+import ApplicationNavBar from "./ApplicationNavBar";
+import Loader from "../Loader/Loader";
 
 const ApplicationStatus = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const user_data = JSON.parse(localStorage.getItem("token"));
+  const user_data = JSON.parse(localStorage.getItem("userdata"));
 
   const { isLoading, isFetching, isError, data } = useQuery(
     "get-status",
@@ -25,15 +27,6 @@ const ApplicationStatus = () => {
       select: (data) => data.data,
     }
   );
-
-  const deleteUseData = () => {
-    toast.info("User logged out", { icon: false });
-    localStorage.removeItem("token");
-  };
-
-  // if (data) {
-  //   console.log(data);
-  // }
 
   if (!user_data || user_data.has_paid === false) {
     toast.error("Login to access this page");
@@ -51,24 +44,10 @@ const ApplicationStatus = () => {
         </div>
         <h1 className="header">Application Status</h1>
         <div className="application-container">
-          <div className="side-navigation">
-            <Link to={"/app-portal"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn">Application</div>
-            </Link>
-            <Link to={"/application-status"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn green">
-                Application Status
-              </div>
-            </Link>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn" onClick={deleteUseData}>
-                Log Out
-              </div>
-            </Link>
-          </div>
+          <ApplicationNavBar isStatusPage={true} />
           <form>
             {isLoading || isFetching ? (
-              <h5>Loading...</h5>
+              <Loader loading={isLoading || isFetching} />
             ) : !isError ? (
               <div className="status-track">
                 <div className="status-text-con">

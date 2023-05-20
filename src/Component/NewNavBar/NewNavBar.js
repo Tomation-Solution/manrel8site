@@ -13,6 +13,8 @@ import {
   StructureDropdown,
 } from "./DropDowns/DropDowns";
 import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
+import { getHomepagePVC } from "../../utils/csm-api-calls";
 
 const NewNavBar = () => {
   const [showSlide, setShowSlide] = useState(false);
@@ -22,6 +24,11 @@ const NewNavBar = () => {
   const [showMember, setshowMember] = useState(false);
   const [showServices, setshowServices] = useState(false);
   const [showStructure, setshowStructure] = useState(false);
+
+  const { data } = useQuery("all-homepage-logo", getHomepagePVC, {
+    refetchOnWindowFocus: false,
+    select: (data) => data.data.Logo,
+  });
 
   const showSlideHandler = () => {
     setShowSlide(!showSlide);
@@ -41,7 +48,7 @@ const NewNavBar = () => {
       <div className="navbar">
         <Link to={"/"}>
           <div className="logo">
-            <img src={Logo} alt="MAN LOGO" />
+            <img src={data ? data : Logo} alt="MAN LOGO" />
           </div>
         </Link>
 

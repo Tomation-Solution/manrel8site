@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { UIProvider } from "../../../Ui";
 import Footer from "../../Footer/Footer";
 import NewNavBar from "../../NewNavBar/NewNavBar";
@@ -7,32 +7,49 @@ import Wall from "../../Wall/Wall";
 
 import "./NewCouncil.scss";
 import NewConExecutive from "./NewCouncilComp/NewConExecutive";
+import { getAboutOurExecutivesPVC } from "../../../utils/csm-api-calls";
+import { useQuery } from "react-query";
+import Loader from "../../Loader/Loader";
+import { FormError } from "../../NewEvents/FormComponents";
 
 const NewCouncil = () => {
-  const [options, setOptions] = useState("executive");
+  const { isLoading, isError, isFetching, data } = useQuery(
+    "all-about-our-executives",
+    getAboutOurExecutivesPVC,
+    {
+      select: (data) => data.data,
+      refetchOnWindowFocus: false,
+    }
+  );
+
   return (
     <div className="new-council">
       <UIProvider>
         <Subscribe />
         <NewNavBar />
 
-        <div className="hero_image"></div>
+        {isLoading || isFetching ? (
+          <Loader loading={isLoading || isFetching} />
+        ) : !isError ? (
+          <>
+            <div className="hero_image"></div>
 
-        <div className="members">
-          <div className="options">
-            <span
-              style={{ fontSize: "50px" }}
-              onClick={() => setOptions("executive")}
-              className={
-                options === "executive" ? "option_item_active" : "option_item"
-              }
-            >
-              National Council Members
-            </span>
-          </div>
+            <div className="members">
+              <div className="options">
+                <span
+                  style={{ fontSize: "50px" }}
+                  className="option_item_active"
+                >
+                  National Council Members
+                </span>
+              </div>
 
-          {options === "executive" && <NewConExecutive />}
-        </div>
+              <NewConExecutive data={data} />
+            </div>
+          </>
+        ) : (
+          <FormError>Can't Fetch Data</FormError>
+        )}
         <Wall />
         <Footer />
       </UIProvider>

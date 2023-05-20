@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
-import { useMutation, useQuery } from "react-query";
+import { useMutation, useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import PlusIcon from "../../images/new-images/PlusIcon.png";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { getFormOne, submitFormOne } from "../../utils/api-calls";
+import { SelectImage } from "../../utils/ExtraComponents";
+import Loader from "../Loader/Loader";
 
 const schema = yup.object({
+  capacity_type: yup.string().required(),
   name_of_company: yup.string().required(),
   cac_registration_number: yup.string().required(),
   tax_identification_number: yup.string().required(),
@@ -17,7 +20,7 @@ const schema = yup.object({
   office_lga: yup.string().required(),
   office_state: yup.string().required(),
   postal_addresse: yup.string().required(),
-  telephone: yup.string().required(),
+  telephone: yup.string().max(13).required(),
   email_addresse: yup.string().email().required(),
   website: yup.string().url().required(),
   factoru_details: yup.string().required(),
@@ -56,17 +59,34 @@ const schema = yup.object({
     .min(0)
     .max(100)
     .required(),
-  current_sales_turnover: yup.number().positive().integer().required(), //only one should be choosen
-  projected_sales_turnover: yup.number().positive().integer().required(), //only one should be choosen
   are_your_product_exported: yup.string().required(),
   company_contact_infomation: yup.string().required(),
   designation: yup.string().required(),
   name_of_md_or_ceo_of_company: yup.string().required(),
   selectdate_of_registration: yup.string().required(),
+  all_roduct_manufactured: yup
+    .array()
+    .of(
+      yup.object().shape({
+        product_manufactured: yup.string().required(),
+        certificates: yup.string().required(),
+      })
+    )
+    .min(1, "Please add atleast one manufactured product"),
+  all_raw_materials_used: yup
+    .array()
+    .of(
+      yup.object().shape({
+        major_raw_materials: yup.string().required(),
+        major_raw_materials2: yup.string().required(),
+      })
+    )
+    .min(1, "Please add atleast one material used"),
 });
 
 const PreviousPage = ({ nextfn }) => {
   const [salesTurnover, setSalesTurnover] = useState("current");
+  const queryClient = useQueryClient();
 
   const {
     register,
@@ -76,6 +96,7 @@ const PreviousPage = ({ nextfn }) => {
     formState: { errors },
   } = useForm({
     defaultValues: {
+      capacity_type: "",
       name_of_company: "",
       cac_registration_number: "",
       tax_identification_number: "",
@@ -128,9 +149,6 @@ const PreviousPage = ({ nextfn }) => {
   const { fields, append, remove } = useFieldArray({
     control,
     name: "all_roduct_manufactured",
-    rules: {
-      required: "Please add atleast one manufactured product",
-    },
   });
 
   const {
@@ -140,9 +158,6 @@ const PreviousPage = ({ nextfn }) => {
   } = useFieldArray({
     control,
     name: "all_raw_materials_used",
-    rules: {
-      required: "Please add atleast one material used",
-    },
   });
 
   const {
@@ -155,14 +170,12 @@ const PreviousPage = ({ nextfn }) => {
     select: (data) => data.results[0],
   });
 
-  // if (formOneData) {
-  //   console.log(formOneData);
-  // }
-
   useEffect(() => {
+    window.scrollTo(0, 0);
     let defualts;
     if (formOneData) {
       defualts = {
+        capacity_type: formOneData?.capacity_type,
         name_of_company: formOneData?.name_of_company,
         cac_registration_number: formOneData?.cac_registration_number,
         tax_identification_number: formOneData?.tax_identification_number,
@@ -194,8 +207,6 @@ const PreviousPage = ({ nextfn }) => {
           formOneData?.total_value_of_building_asset,
         total_value_of_other_asset: formOneData?.total_value_of_building_asset,
         installed_capacity: formOneData?.installed_capacity,
-        current_sales_turnover: formOneData?.current_sales_turnover,
-        projected_sales_turnover: formOneData?.projected_sales_turnover,
         are_your_product_exported: formOneData?.are_your_product_exported,
         company_contact_infomation: formOneData?.company_contact_infomation,
         designation: formOneData?.designation,
@@ -203,7 +214,14 @@ const PreviousPage = ({ nextfn }) => {
         selectdate_of_registration: formOneData?.selectdate_of_registration,
         all_roduct_manufactured: formOneData?.all_roduct_manufactured,
         all_raw_materials_used: formOneData?.all_raw_materials_used,
+        current_sales_turnover: formOneData?.current_sales_turnover,
+        projected_sales_turnover: formOneData?.projected_sales_turnover,
       };
+      if (formOneData?.projected_sales_turnover.length > 1) {
+        setSalesTurnover("projected");
+      } else {
+        setSalesTurnover("current");
+      }
       reset(defualts);
     }
   }, [reset, formOneData]);
@@ -218,6 +236,7 @@ const PreviousPage = ({ nextfn }) => {
       toast.success("application details saved", {
         icon: false,
       });
+      queryClient.invalidateQueries("formone-details");
     },
     onError: () => {
       toast.error("couldnt svae application details", {
@@ -231,11 +250,19 @@ const PreviousPage = ({ nextfn }) => {
       upload_signature,
       all_raw_materials_used,
       all_roduct_manufactured,
+      current_sales_turnover,
+      projected_sales_turnover,
       ...payload
     } = data;
 
     upload_signature = upload_signature[0];
     const formData = new FormData();
+
+    if (salesTurnover === "current") {
+      formData.append("current_sales_turnover", current_sales_turnover);
+    }
+    formData.append("projected_sales_turnover", projected_sales_turnover);
+
     Object.keys(payload)?.forEach((key) => formData.append(key, payload[key]));
     formData.append("upload_signature", upload_signature);
     formData.append(
@@ -250,10 +277,12 @@ const PreviousPage = ({ nextfn }) => {
     mutate(formData);
   };
 
+  const signatureImage = formOneData?.upload_signature;
+
   return (
     <>
-      {formLoading || isFetching ? (
-        <h5>Loading...</h5>
+      {formLoading || isFetching || isLoading ? (
+        <Loader loading={formLoading || isLoading || isFetching} />
       ) : !isError ? (
         <form onSubmit={handleSubmit(onSubmitHandler)}>
           <div className="status-track">
@@ -439,7 +468,7 @@ const PreviousPage = ({ nextfn }) => {
             </section>
           ))}
           <h5 style={{ textAlign: "center" }}>
-            {errors?.all_roduct_manufactured?.root?.message}
+            {errors?.all_roduct_manufactured?.message}
           </h5>
           <div className="add-more">
             <img
@@ -489,7 +518,7 @@ const PreviousPage = ({ nextfn }) => {
             </section>
           ))}
           <h5 style={{ textAlign: "center" }}>
-            {errors?.all_raw_materials_used?.root?.message}
+            {errors?.all_raw_materials_used?.message}
           </h5>
           <div className="add-more">
             <img
@@ -507,7 +536,7 @@ const PreviousPage = ({ nextfn }) => {
 
           <div className="half-input">
             <label>
-              {errors?.number_of_male_permanent && <h5>Invalid input</h5>}
+              {errors?.number_of_male_permanent_staff && <h5>Invalid input</h5>}
               Number of Male Permanent Staff
               <input
                 type={"number"}
@@ -518,7 +547,9 @@ const PreviousPage = ({ nextfn }) => {
               />
             </label>
             <label>
-              {errors?.number_of_female_permanent && <h5>Invalid input</h5>}
+              {errors?.number_of_female_permanent_staff && (
+                <h5>Invalid input</h5>
+              )}
               Number of Female Permanent Staff
               <input
                 type={"number"}
@@ -634,14 +665,23 @@ const PreviousPage = ({ nextfn }) => {
             Select Installed Capacity Type
           </h4>
           <div className="installed-style">
+            {errors?.capacity_type && <h5>Invalid input</h5>}
             <label>
               KG
-              <input type="radio" value={"kg"} name="installed_type" />
+              <input
+                type="radio"
+                value={"kg"}
+                {...register("capacity_type", { required: true })}
+              />
             </label>
 
             <label>
               TON
-              <input type="radio" value={"ton"} name="installed_type" />
+              <input
+                type="radio"
+                value={"ton"}
+                {...register("capacity_type", { required: true })}
+              />
             </label>
           </div>
 
@@ -680,6 +720,7 @@ const PreviousPage = ({ nextfn }) => {
                 type="radio"
                 value={"current"}
                 name="installed_type"
+                checked={salesTurnover === "current"}
                 onChange={(e) => setSalesTurnover(e.target.value)}
               />
             </label>
@@ -690,6 +731,7 @@ const PreviousPage = ({ nextfn }) => {
                 type="radio"
                 value={"projected"}
                 name="installed_type"
+                checked={salesTurnover === "projected"}
                 onChange={(e) => setSalesTurnover(e.target.value)}
               />
             </label>
@@ -701,9 +743,10 @@ const PreviousPage = ({ nextfn }) => {
               Current Sales Turnover (As stated in your lastest audited account)
               <input
                 type={"number"}
-                min={0}
+                min={100000000}
                 disabled={salesTurnover === "current" ? false : true}
-                {...register("current_sales_turnover", { required: true })}
+                required={salesTurnover === "current" ? true : false}
+                {...register("current_sales_turnover")}
               />
             </label>
             <label>
@@ -711,8 +754,9 @@ const PreviousPage = ({ nextfn }) => {
               Projected Sales Turnover (As stated in your business plan)
               <input
                 type={"number"}
-                min={0}
+                min={100000000}
                 disabled={salesTurnover === "projected" ? false : true}
+                required={salesTurnover === "projected" ? true : false}
                 {...register("projected_sales_turnover", {
                   required: true,
                 })}
@@ -792,6 +836,7 @@ const PreviousPage = ({ nextfn }) => {
                 })}
               />
             </label>
+
             <label>
               {errors?.upload_signature && <h5>Invalid input</h5>}
               Upload Signature
@@ -803,6 +848,7 @@ const PreviousPage = ({ nextfn }) => {
               />
             </label>
           </div>
+          <SelectImage text={"signature"} image={signatureImage} />
           <h5 style={{ textAlign: "center" }}>
             {errors?.materails?.root?.message}
           </h5>

@@ -10,6 +10,7 @@ import Subscribe from "../Subscribe/Subscribe";
 
 import PreviousPage from "./PreviousPage";
 import { toast } from "react-toastify";
+import ApplicationNavBar from "./ApplicationNavBar";
 
 const ApplicationPortal = () => {
   useEffect(() => {
@@ -21,12 +22,7 @@ const ApplicationPortal = () => {
     setNext(!next);
   };
 
-  const deleteUseData = () => {
-    toast.info("User logged out", { icon: false });
-    localStorage.removeItem("token");
-  };
-
-  const user_data = JSON.parse(localStorage.getItem("token"));
+  const user_data = JSON.parse(localStorage.getItem("userdata"));
 
   if (!user_data || user_data.has_paid === false) {
     toast.error("Login to access this page");
@@ -44,19 +40,7 @@ const ApplicationPortal = () => {
         </div>
         <h1 className="header">Application Portal</h1>
         <div className="application-container">
-          <div className="side-navigation">
-            <Link to={"/app-portal"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn green">Application</div>
-            </Link>
-            <Link to={"/application-status"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn">Application Status</div>
-            </Link>
-            <Link to={"/"} style={{ textDecoration: "none" }}>
-              <div className="side-navigation-btn" onClick={deleteUseData}>
-                Log Out
-              </div>
-            </Link>
-          </div>
+          <ApplicationNavBar isFormPage={true} />
           {!next ? (
             <PreviousPage nextfn={setNextHandler} />
           ) : (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Article.scss";
-import Manufacturing from "../../images/new-images/NewHomeInsightImg.jpeg";
+// import Manufacturing from "../../images/new-images/NewHomeInsightImg.jpeg";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import {
 } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 
-function Article() {
+function Article({ data }) {
   const [insightData, setInsightData] = useState(null);
   useEffect(() => {
     Promise.all([
@@ -32,7 +32,7 @@ function Article() {
       <div className="news_main">
         <div className="cover">
           <div className="left">
-            <img src={Manufacturing} alt="" />
+            <img src={data.slider_image3} alt="" />
           </div>
           <div className="right">
             <h1 style={{ color: "#2b3513", marginBottom: "20px" }}>

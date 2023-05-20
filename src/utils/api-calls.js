@@ -97,3 +97,29 @@ export const buyForm = async (payload) => {
     throw new AxiosError(e);
   }
 };
+
+//SUBSCRIPTION SUMMARY
+export const getSubscriptionSummary = async () => {
+  try {
+    const res = await privateRequest.get(
+      "/tenant/prospectivemember/propective_member_manage_form_one/get_subscriptio_payment_breakdown"
+    );
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+//Membership payment
+export const getMembershipPaymentUrl = async (payload) => {
+  const randomNumber = 2;
+  try {
+    const res = await privateRequest.post(
+      `/tenant/dues/process_payment/man_prospective_subscription_payment/${randomNumber}/`,
+      payload
+    );
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
