@@ -9,6 +9,7 @@ import { faqList } from "./FAQData";
 import { useQuery } from "react-query";
 import { faqApi } from "../../utils/api-calls2";
 import Preloader from '../Preloader/Preloader'
+import Loader from "../Loader/Loader";
 const FAQ = () => {
   const [selectedQuest, setSelectedQuest] = useState({
     header: "",
@@ -22,7 +23,7 @@ const FAQ = () => {
       <div className="faq">
         <div className="faq-wrap">
           <div className="top">
-            <Preloader  loading={isLoading}/>
+            <Loader  loading={isLoading}/>
             <h1> Frequently Asked Questions (FAQ)</h1>
           </div>
           <div className="listt">

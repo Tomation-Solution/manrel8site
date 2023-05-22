@@ -27,6 +27,7 @@ import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
 import { getMPDCLApi } from "../../utils/api-calls2";
 import  Preloader from '../Preloader/Preloader'
+import Loader from "../Loader/Loader";
 function Mpdcl() {
   const {isLoading,data} = useQuery('getMPDCLApi',getMPDCLApi)
   
@@ -120,7 +121,7 @@ function Mpdcl() {
     <>
       <ThemeProvider theme={theme}>
         <UIProvider>
-          <Preloader loading={isLoading}/>
+          <Loader loading={isLoading}/>
           <div className="sectoral">
             <Subscribe />
             <NewNavBar />
