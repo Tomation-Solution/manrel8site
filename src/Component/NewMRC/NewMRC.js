@@ -9,11 +9,23 @@ import Wall from "../Wall/Wall";
 import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 
 import "./NewMRC.scss";
+import { useQuery } from "react-query";
+import { getMrcPageApi } from "../../utils/api-calls2";
+import Loader from "../Loader/Loader";
 
 const NewMRC = () => {
+  const  {isLoading,data} = useQuery('getMrcPageApi',getMrcPageApi)
+  const color ={
+    0:"aqua",
+    1:"#E36159",
+    2:"#2BAAB1" ,
+    3: "#383F48",
+    // 4:"#2b3513"
+  }
   return (
     <div className="new-mrc">
       <UIProvider>
+        <Loader loading={isLoading} />
         <Subscribe />
         <NewNavBar />
         <NewImageBanner
@@ -24,13 +36,13 @@ const NewMRC = () => {
           <h1 className="header">
             This is <span>Who We Are</span>
           </h1>
-          <p style={{ color: "#2b3513" }}>
-            The Manufacturers Resource Centre is the Business Solution Arm of
-            Manufacturers Association of Nigeria (MAN). The Manufacturers
-            Resource Centre prides herself as an entity dedicated to proffering
-            Business Solutions to MAN Members thus develop their Businesses,
-            increase Market share and Production Excellence.
-          </p>
+          {
+            data?.who_we_are.map((d,index)=>(
+              <p style={{ color: "#2b3513" }} key={index}>
+                {d}
+              </p>
+            ))
+          }
           <div className="text-btn">
             <span style={{ color: "#2b3513" }}>
               "Our Success is measured by the benefits of our clients"
@@ -50,15 +62,18 @@ const NewMRC = () => {
               Aid our Manufacturers expand their market reach beyond our shores.
             </span>
           </div>
-          <div className="obj-item">
-            <div></div>
-            <span style={{ color: "#2b3513" }}>
-              Proffer current manufacturing solutions to manufacturers in the
-              areas of Information Technology, Technology, Research &
-              Development etc.
-            </span>
-          </div>
-          <div className="obj-item">
+
+          {
+            data?.objectives.map((d,index)=>(
+              <div className="obj-item">
+              <div></div>
+              <span style={{ color: "#2b3513" }}>
+                {d}
+              </span>
+            </div>
+            ))
+          }
+          {/* <div className="obj-item">
             <div></div>
             <span style={{ color: "#2b3513" }}>
               Using Training, Business Support and Business Advisory as tools in
@@ -71,19 +86,25 @@ const NewMRC = () => {
             <span style={{ color: "#2b3513" }}>
               Build and increase Professional Capacity and Skills.
             </span>
-          </div>
+          </div> */}
         </div>
         <div className="cards">
-          <div className="card" style={{ borderTop: "2px solid aqua" }}>
-            <div style={{ backgroundColor: "aqua" }}></div>
-            <h1 style={{ color: "aqua" }}>Business Development Services</h1>
-            <p style={{ color: "#2b3513" }}>
-              Identify possible problems affecting SME‘s by preparing a detailed
-              technical due diligence report through review of their operations
-            </p>
-          </div>
-
-          <div className="card" style={{ borderTop: "2px solid #E36159" }}>
+         
+{
+  data?.objectives_card.map((d,index)=>(
+    <div className="card" 
+    key={index}
+    style={{ borderTop: "2px solid "+ color[index]?color[index]:'aqua'  }}>
+    <div style={{ backgroundColor: color[index]?color[index]:'aqua' }}></div>
+    <h1 style={{ color: color[index]?color[index]:'aqua'}}>Business Development Services</h1>
+    <p style={{ color: "#2b3513" }}>
+      Identify possible problems affecting SME‘s by preparing a detailed
+      technical due diligence report through review of their operations
+    </p>
+  </div>
+  ))
+}
+          {/* <div className="card" style={{ borderTop: "2px solid #E36159" }}>
             <div style={{ backgroundColor: "#E36159" }}></div>
             <h1 style={{ color: "#E36159" }}>Business Information Services</h1>
             <p style={{ color: "#2b3513" }}>
@@ -107,7 +128,7 @@ const NewMRC = () => {
               Investment and financial advisory services, Local and
               international business linkages
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="objectives">
           <h1 className="header">
