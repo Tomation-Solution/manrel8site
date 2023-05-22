@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Members.scss";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import NewNavBar from "../NewNavBar/NewNavBar";
+import Loader from '../Loader/Loader'
 // import { listOfMembers } from "./OurMembersList";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/MemberRequirement.png";
@@ -12,7 +13,9 @@ import { useQuery } from "react-query";
 import { getMembersApi } from "../../utils/api-calls2";
 
 function LatestMembers() {
-  const {isLoading,data} = useQuery('getMembersApi',getMembersApi)
+  const {isLoading,data} = useQuery('getMembersApi',getMembersApi,{
+    refetchOnWindowFocus:false
+  })
 
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
@@ -41,14 +44,16 @@ function LatestMembers() {
   const searchResult = searchHandler();
 
   const paginatedData = searchResult?.slice(firstPostIndex, lastPostIndex);
-  useState(()=>{
+  useEffect(()=>{
     if(data){
-      console.log(data)
       setListOfMembers(data)
     }
   },[data])
+  console.log({data})
+
   return (
     <UIProvider>
+      <Loader loading={isLoading} /> 
       <div className="members">
         <Subscribe />
         <NewNavBar />
@@ -72,7 +77,7 @@ function LatestMembers() {
             {paginatedData.length > 0 ? (
               <div className="flex">
                 {paginatedData.map((item, index) => (
-                  <div className="card" key={index} id={item?.name}>
+                  <div className="card" key={item?.name} id={item?.name}>
                     <div className="card-item">
                       {/* <span className="bold">Name:</span> */}
                       <span className="light">{item?.name}</span>
