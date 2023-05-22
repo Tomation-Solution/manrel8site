@@ -291,7 +291,7 @@ function Mpdcl() {
                   </p>
                 </div>
                 <div className="wrap-g">
-                  {data?.filter((d=>d.type==='RENEWABLE_ENERGY')).map((item) => (
+                  {data?.filter((d=>d.type==='RENEWABLE_ENERGY'||d.type==='OTHERS')).map((item) => (
                     <div className="card" key={item.id}>
                       <div className="flex">
                         <img src={Vector} alt="" />
