@@ -23,6 +23,7 @@ import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
 import { getSectoralApi } from "../../utils/api-calls2";
 import Preloader from '../Preloader/Preloader'
+import Loader from "../Loader/Loader";
 function Sectoral() {
   const sectoralList = [
     {
@@ -76,7 +77,7 @@ function Sectoral() {
         <div className="sectoral">
           <Subscribe />
           <NewNavBar />
-        <Preloader loading={isLoading}/>
+        <Loader loading={isLoading}/>
           <NewImageBanner
             image={backImage}
             header={"MAN Sectoral Group"}

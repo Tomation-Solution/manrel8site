@@ -25,11 +25,12 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
-import { getMPDCLApi } from "../../utils/api-calls2";
+import { getMPDCLApi, getMPDCLPageApi } from "../../utils/api-calls2";
 import  Preloader from '../Preloader/Preloader'
+import Loader from "../Loader/Loader";
 function Mpdcl() {
   const {isLoading,data} = useQuery('getMPDCLApi',getMPDCLApi)
-  
+  const {isLoading:loadingLandingContent,data:landingpageContent } = useQuery('getMPDCLPageApi',getMPDCLPageApi)
   const sectoralList = [
     {
       image: PowerFacilities1,
@@ -120,7 +121,7 @@ function Mpdcl() {
     <>
       <ThemeProvider theme={theme}>
         <UIProvider>
-          <Preloader loading={isLoading}/>
+          <Loader loading={isLoading}/>
           <div className="sectoral">
             <Subscribe />
             <NewNavBar />
@@ -134,17 +135,15 @@ function Mpdcl() {
               <div className="cover">
                 <div className="about">
                   <h1 style={{ color: "#2b3513" }}>Who We Are</h1>
-                  <p style={{ color: "#2b3513" }}>
-                    The Manufacturers Power Development Company Limited (MPDCL)
-                    is a 100% wholly owned company of the Manufacturers
-                    Association of Nigeria (MAN), as a Special Purpose Vehicle
-                    to channel efforts towards manufacturers energy advocacy and
-                    at the same time facilitate uninterrupted power supply and
-                    provide necessary intervention on energy related challenges
-                    members may be contending with.
-                  </p>
-
-                  <p style={{ color: "#2b3513" }}>
+                  {
+                    landingpageContent?.who_we_are?.map((d,index)=>(
+                      <p style={{ color: "#2b3513" }} key={index}>
+                        {d}
+                      </p>
+                    ))
+                  }
+                 
+                  {/* <p style={{ color: "#2b3513" }}>
                     MPDCL also assist power project developers’ to access
                     members for engagement in various power supply services
                     while also supporting members’ to transit from fossil fuel
@@ -153,44 +152,30 @@ function Mpdcl() {
                     to embrace the new world order of smart and green
                     manufacturing by deploying environmental friendly
                     technology.
-                  </p>
+                  </p> */}
                 </div>
                 <div className="objectives">
                   <h1>Our Objectives</h1>
                   <p className="obj-left-text">
-                    MPDCL achieves her objectives through action plans to
-                    cushion the unbaiting perennial power supply challenges;
+                    {landingpageContent?.our_objectives_header}
+                   
                   </p>
                   <div className="obj-items centered">
-                    <div className="flex">
+                
+                  {
+                    landingpageContent?.our_objectives_items?.map((d,index)=>(
+                      <div className="flex" key={index}>
                       <img src={Vector} alt="" />
                       <p>
-                        Initiatives and programmes that encourages members to
+                        {/* Initiatives and programmes that encourages members to
                         improve on good energy housekeeping and energy
                         management practices through energy efficiency as a way
-                        of conserving power and be more cost effective.
+                        of conserving power and be more cost effective. */}
+                        {d}
                       </p>
                     </div>
-
-                    <div className="flex">
-                      <img src={Vector} alt="" />
-                      <p>
-                        Partner with credible Independent Power Project
-                        Developers with financial well withal to establish
-                        captive and distributed power generation solutions to
-                        enable industrial clusters operate 24/7.
-                      </p>
-                    </div>
-
-                    <div className="flex">
-                      <img src={Vector} alt="" />
-                      <p>
-                        Initiate and organize trainings that will improve
-                        capacity and competence of personnel especially in
-                        energy management, energy efficiency, electrical,
-                        mechanical and smart manufacturing for industries.
-                      </p>
-                    </div>
+                    ))
+                  }
                   </div>
                 </div>
                 <h1 className="service-header">
@@ -216,7 +201,7 @@ function Mpdcl() {
                 </h1>
                 <img
                   alt=""
-                  src={CarbonizedEnergy}
+                  src={landingpageContent?.renewable_image}
                   style={{
                     marginBottom: "30px",
                     width: "100%",
@@ -224,51 +209,30 @@ function Mpdcl() {
                     objectFit: "cover",
                   }}
                 />
-                <p style={{ color: "#2b3513" }}>
-                  With globalization shifting focus to environmentally friendly
-                  technologies which now encourages smart and green
-                  manufacturing, MPDCL is technically positioned to support
-                  manufacturers to access cost effective renewable energy power
-                  supply solutions like; deploying Tier 1 Solar PV
-                  components/equipment with installation on, either their
-                  office/factory roof tops or ground mounted, with good quality
-                  inverters and Battery Storages Systems (BSS) which comes with
-                  the benefits of funding without members making any capital
-                  contributions especially if the project capacity is above 1MW.
-                  Such projects help to reduce member carbon print and Green
-                  House Gas emission (GHGE).{" "}
-                </p>
+                {
+                  landingpageContent?.renewable_desc?.map((d,index)=>(
+                    <p style={{ color: "#2b3513" }} key={index}>
+                      {d} {" "}
+                    </p>
+                  ))
+                }
 
-                <p style={{ color: "#2b3513" }}>
-                  MPDCL also partners and facilitates other renewable energy
-                  resources like;
-                </p>
-
-                <p style={{ color: "#2b3513" }}>
-                  a. Biomass (on waste-to-wealth scheme) to eliminate urban
-                  waste
-                </p>
-                <p style={{ color: "#2b3513" }}>
-                  b. Small Hydro Power Projects of about 1MW capacity to supply
-                  power to factories in good proximity to a flowing river.
-                </p>
 
                 <div className="thrust" style={{ color: "#2b3513" }}>
-                  <h3>MAN Annual Energy Secuity Summit</h3>
+                  {
+                    landingpageContent?.renewable_items?.map((d,index)=>(
+                      <>
+                        <h3>{d.header}</h3>
 
-                  <p style={{ color: "#2b3513" }}>
-                    This is MPDCL flagship annual event where players in NESI
-                    (including other Captive Power Solution providers and
-                    renewable energy solution provider and gas suppliers) will
-                    converge to brainstorm specifically on energy adequacy for
-                    manufacturers to explore guaranteeing electricity adequacy
-                    for industries in Nigeria. The objective is to act as
-                    accountability forum to measure how both GenCos and DisCos
-                    support industries access to steady and uninterrupted
-                    energy.
-                  </p>
+                        <p style={{ color: "#2b3513" }}>
+                          {d.description}
+                        </p>
+                      </>
+                    ))
+                  }
+                  
 
-                  <h3 style={{ color: "#2b3513" }}>
+                  {/* <h3 style={{ color: "#2b3513" }}>
                     Human Capacity Building Programmes
                   </h3>
 
@@ -288,7 +252,7 @@ function Mpdcl() {
                     production. The programmes will be supported with annual
                     training calendars with provision for in-plant training with
                     the following partners;
-                  </p>
+                  </p> */}
                 </div>
                 <div className="wrap-g">
                   {data?.filter((d=>d.type==='RENEWABLE_ENERGY'||d.type==='OTHERS')).map((item) => (

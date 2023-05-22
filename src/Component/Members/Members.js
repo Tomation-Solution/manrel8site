@@ -20,6 +20,7 @@ import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import { useQuery } from "react-query";
 import { whyJoinManApi } from "../../utils/api-calls2";
 import Preloader from "../Preloader/Preloader";
+import Loader from "../Loader/Loader";
 
 function Members() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ function Members() {
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <Preloader 
+        <Loader 
         loading={isLoading}
         />
         <div className="members">
