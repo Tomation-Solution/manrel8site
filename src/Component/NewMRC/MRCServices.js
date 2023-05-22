@@ -62,7 +62,7 @@ const MRCServices = () => {
                 them better their business strategizes and attain targeted business
                 growth. In addition, micro manufacturers enjoy discounted fee. */}
               </p>
-              <p>This service covers:</p>
+              <p> {d.small_text}:</p>
                 {
                   d.items.map((item,i)=>(
                     <div className="obj-item" key={i}>
@@ -71,13 +71,13 @@ const MRCServices = () => {
                     </div>
                   ))
                 }
-          <div className="who-are">
+          {/* <div className="who-are">
               <div className="text-btn">
                 <span style={{ color: "#2b3513" }}>
                   {d.small_text}
                 </span>
               </div>
-          </div>
+          </div> */}
             </div>
 
           ))
