@@ -19,18 +19,16 @@ import backImage from "../../images/new-images/TeamworkImg.jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import { useQuery } from "react-query";
 import { whyJoinManApi } from "../../utils/api-calls2";
-import Preloader from "../Preloader/Preloader";
+import Loader from "../Loader/Loader";
 
 function Members() {
   const navigate = useNavigate();
-  const {data,isLoading} = useQuery('whyJoinManApi',whyJoinManApi,)
-  console.log(data)
+  const { data, isLoading } = useQuery("whyJoinManApi", whyJoinManApi);
+  console.log(data);
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
-        <Preloader 
-        loading={isLoading}
-        />
+        <Loader loading={isLoading} />
         <div className="members">
           <Subscribe />
           <NewNavBar />
@@ -42,20 +40,17 @@ function Members() {
               <p>Here are reasons why you should join MAN.</p>
             </div>
             <div className="point">
-            {
-                data?.map((d,index)=>(
-                  <div className="card" key={index}>
+              {data?.map((d, index) => (
+                <div className="card" key={index}>
                   <div className="left">
                     <img src={Image2} alt="" />
                   </div>
                   <div className="right">
                     <h1>{d.header}</h1>
-                    <p>{d.description}
-                    </p>
+                    <p>{d.description}</p>
                   </div>
                 </div>
-                ))
-              }
+              ))}
             </div>
             {/* <div className="point">
               

@@ -7,76 +7,21 @@ import Footer from "../Footer/Footer";
 import Subscribe from "../Subscribe/Subscribe";
 import "./Sectoral.scss";
 import Vector from "../../images/Vector.png";
-import One from "../../images/NewSectoralImage (1).jpeg";
-import Two from "../../images/NewSectoralImage (2).jpeg";
-import Three from "../../images/three.png";
-import Four from "../../images/four.png";
-import five from "../../images/five.png";
-import six from "../../images/six.png";
-import seven from "../../images/seven.png";
-import eight from "../../images/eight.png";
-import nine from "../../images/nine.png";
-import ten from "../../images/NewSectoralImage.jpeg";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
 import { getSectoralApi } from "../../utils/api-calls2";
-import Preloader from '../Preloader/Preloader'
+import Loader from "../Loader/Loader";
 function Sectoral() {
-  const sectoralList = [
-    {
-      image: One,
-      content: "Food, Beverages & Tobacco Sectoral Group",
-    },
-    {
-      image: Two,
-      content: "Chemical & Pharmaceuticals Sectoral Group",
-    },
-    {
-      image: Three,
-      content: "Domestic & Industrial Plastics, Foam & Rubber Sectoral Group",
-    },
-    {
-      image: Four,
-      content:
-        "Basic Metal, Iron & Steel & Fabricated Metal Product Sectoral Group",
-    },
-    {
-      image: five,
-      content:
-        "Pulp, Paper & Paper Products, Printing & Publishing Sectoral Group",
-    },
-    {
-      image: six,
-      content: "Electrical/ Electronic Sectoral Group",
-    },
-    {
-      image: seven,
-      content: "Wood, Wood Products &Furniture Sectoral Group",
-    },
-    {
-      image: eight,
-      content: "Non Metallic Minerals Sectoral Group",
-    },
-    {
-      image: nine,
-      content:
-        "Textiles, Wearing Apparel, Carpet Leather & Leather Footwear Products Sectoral Group",
-    },
-    {
-      image: ten,
-      content: "Motor Vehicle & Miscellaneous Assembly Sectoral Group",
-    },
-  ];
-  const {isLoading,data} = useQuery('getSectoralApi',getSectoralApi)
+  const { isLoading, data } = useQuery("getSectoralApi", getSectoralApi);
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
         <div className="sectoral">
           <Subscribe />
           <NewNavBar />
-        <Preloader loading={isLoading}/>
+          <Loader loading={isLoading} />
           <NewImageBanner
             image={backImage}
             header={"MAN Sectoral Group"}
@@ -97,7 +42,7 @@ function Sectoral() {
                 located at the National Secretariat of the Association.
               </div>
               <div className="wrap-g">
-                {data?.map((item,index) => (
+                {data?.map((item, index) => (
                   <div className="card" key={item.header}>
                     <div className="flex">
                       <img src={Vector} alt="" />

@@ -12,7 +12,7 @@ import { useQuery } from "react-query";
 import { getMrcApi } from "../../utils/api-calls2";
 
 const MRCServices = () => {
-  const {isLoading,data} = useQuery('getMrcApi',getMrcApi)
+  const { data } = useQuery("getMrcApi", getMrcApi);
   return (
     <div className="mrc-services">
       <UIProvider>
@@ -46,43 +46,37 @@ const MRCServices = () => {
             </Link>
           </div>
         </div>
-        
-        {
-          data?.map((d,index)=>(
-            <div className="objectives" key={index}>
-              <h1 className="header">
-                 <span>{d.name}</span>
-              </h1>
 
-              <p style={{ color: "#2b3513" }}>
-                {d.description}
-                {/* With our brand, expertise and business leverages, valuable in
+        {data?.map((d, index) => (
+          <div className="objectives" key={index}>
+            <h1 className="header">
+              <span>{d.name}</span>
+            </h1>
+
+            <p style={{ color: "#2b3513" }}>
+              {d.description}
+              {/* With our brand, expertise and business leverages, valuable in
                 growing turnover volume, company customer base and production
                 capacity, companies engage us as their Business Consultant to aid
                 them better their business strategizes and attain targeted business
                 growth. In addition, micro manufacturers enjoy discounted fee. */}
-              </p>
-              <p>This service covers:</p>
-                {
-                  d.items.map((item,i)=>(
-                    <div className="obj-item" key={i}>
-                      <div></div>
-                      <span>{item}</span>
-                    </div>
-                  ))
-                }
-          <div className="who-are">
+            </p>
+            <p> {d.small_text}:</p>
+            {d.items.map((item, i) => (
+              <div className="obj-item" key={i}>
+                <div></div>
+                <span>{item}</span>
+              </div>
+            ))}
+            {/* <div className="who-are">
               <div className="text-btn">
                 <span style={{ color: "#2b3513" }}>
                   {d.small_text}
                 </span>
               </div>
+          </div> */}
           </div>
-            </div>
-
-          ))
-        }
-
+        ))}
 
         <div className="who-are">
           <h1 className="header">
