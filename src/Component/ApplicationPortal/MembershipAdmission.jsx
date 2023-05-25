@@ -59,8 +59,6 @@ const MembershipAdmission = () => {
     payMutationResult.mutate({});
   };
 
-  console.log(renderdata);
-
   if (!user_data || user_data.has_paid === false) {
     toast.error("Login to access this page");
     return <Navigate to={"/join-now-page"} />;
@@ -155,12 +153,13 @@ const MembershipAdmission = () => {
                   <div className="payment-summary">
                     <p>
                       <span className="darken">
-                        Annual Subscription Fee{" "}
+                        Annual Subscription Fee
                         <small>
                           (based on turnover as stated in application form two)
                         </small>
-                        :{" "}
+                        :
                       </span>
+                      {formatMoney(renderdata.annualSub)}
                     </p>
                   </div>
 
@@ -173,7 +172,9 @@ const MembershipAdmission = () => {
 
                   {formoneQueryResult.data.has_paid_subcription ? (
                     <div className="payment-summary no-bg">
-                      <button disabled>Payments Already Made</button>
+                      <button disabled>
+                        Payments already made, awaiting confirmation
+                      </button>
                     </div>
                   ) : (
                     <div className="payment-summary no-bg">

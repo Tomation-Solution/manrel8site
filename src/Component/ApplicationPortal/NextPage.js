@@ -9,24 +9,46 @@ import { ViewSubmittedDocument } from "../../utils/ExtraComponents";
 import Loader from "../Loader/Loader";
 
 const NextPage = ({ backfn }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm({ defaultValues: {} });
+  } = useForm({
+    defaultValues: {
+      corporate_affairs_commision: "",
+      first_year_of_buisness_plan: "",
+      letter_of_breakdown_of_payment_and_docs_attached: "",
+      second_year_of_buisness_plan: "",
+      photocopy_of_your_reciept_issued_on_purchase_of_applicant_form: "",
+    },
+  });
 
   const {
     isLoading: formTwoLoading,
     isFetching,
     isError,
     data,
-  } = useQuery("formtwo-details", getFormTwo, { refetchOnWindowFocus: false });
+  } = useQuery("formtwo-details", getFormTwo, {
+    refetchOnWindowFocus: false,
+    select: (data) => data.results[0],
+  });
 
-  console.log(data);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (data) {
+      const main_data = {
+        corporate_affairs_commision: data?.corporate_affairs_commision,
+        first_year_of_buisness_plan: data?.first_year_of_buisness_plan,
+        letter_of_breakdown_of_payment_and_docs_attached:
+          data?.letter_of_breakdown_of_payment_and_docs_attached,
+        second_year_of_buisness_plan: data?.second_year_of_buisness_plan,
+        photocopy_of_your_reciept_issued_on_purchase_of_applicant_form:
+          data?.photocopy_of_your_reciept_issued_on_purchase_of_applicant_form,
+      };
+      reset(main_data);
+    }
+  }, [reset, data]);
 
   const { mutate, isLoading } = useMutation((data) => submitFormTwo(data), {
     onMutate: () => {
@@ -55,26 +77,58 @@ const NextPage = ({ backfn }) => {
       photocopy_of_your_reciept_issued_on_purchase_of_applicant_form,
     } = data;
     const formData = new FormData();
-    formData.append(
-      "corporate_affairs_commision",
-      corporate_affairs_commision[0]
-    );
-    formData.append(
-      "first_year_of_buisness_plan",
-      first_year_of_buisness_plan[0]
-    );
-    formData.append(
-      "letter_of_breakdown_of_payment_and_docs_attached",
-      letter_of_breakdown_of_payment_and_docs_attached[0]
-    );
-    formData.append(
-      "second_year_of_buisness_plan",
-      second_year_of_buisness_plan[0]
-    );
-    formData.append(
-      "photocopy_of_your_reciept_issued_on_purchase_of_applicant_form",
-      photocopy_of_your_reciept_issued_on_purchase_of_applicant_form[0]
-    );
+
+    if (
+      typeof corporate_affairs_commision !== "string" &&
+      corporate_affairs_commision instanceof FileList
+    ) {
+      formData.append(
+        "corporate_affairs_commision",
+        corporate_affairs_commision[0]
+      );
+    }
+
+    if (
+      typeof first_year_of_buisness_plan !== "string" &&
+      first_year_of_buisness_plan instanceof FileList
+    ) {
+      formData.append(
+        "first_year_of_buisness_plan",
+        first_year_of_buisness_plan[0]
+      );
+    }
+
+    if (
+      typeof letter_of_breakdown_of_payment_and_docs_attached !== "string" &&
+      letter_of_breakdown_of_payment_and_docs_attached instanceof FileList
+    ) {
+      formData.append(
+        "letter_of_breakdown_of_payment_and_docs_attached",
+        letter_of_breakdown_of_payment_and_docs_attached[0]
+      );
+    }
+
+    if (
+      typeof second_year_of_buisness_plan !== "string" &&
+      second_year_of_buisness_plan instanceof FileList
+    ) {
+      formData.append(
+        "second_year_of_buisness_plan",
+        second_year_of_buisness_plan[0]
+      );
+    }
+
+    if (
+      typeof photocopy_of_your_reciept_issued_on_purchase_of_applicant_form !==
+        "string" &&
+      photocopy_of_your_reciept_issued_on_purchase_of_applicant_form instanceof
+        FileList
+    ) {
+      formData.append(
+        "photocopy_of_your_reciept_issued_on_purchase_of_applicant_form",
+        photocopy_of_your_reciept_issued_on_purchase_of_applicant_form[0]
+      );
+    }
     mutate(formData);
   };
 
@@ -111,7 +165,7 @@ const NextPage = ({ backfn }) => {
                 type="file"
                 id="file-input1"
                 hidden
-                {...register("corporate_affairs_commision", { required: true })}
+                {...register("corporate_affairs_commision")}
               />
             </div>
 
@@ -128,7 +182,7 @@ const NextPage = ({ backfn }) => {
                 type="file"
                 id="file-input2"
                 hidden
-                {...register("first_year_of_buisness_plan", { required: true })}
+                {...register("first_year_of_buisness_plan")}
               />
             </div>
           </div>
@@ -150,10 +204,7 @@ const NextPage = ({ backfn }) => {
                 id="file-input3"
                 hidden
                 {...register(
-                  "letter_of_breakdown_of_payment_and_docs_attached",
-                  {
-                    required: true,
-                  }
+                  "letter_of_breakdown_of_payment_and_docs_attached"
                 )}
               />
             </div>
@@ -172,9 +223,7 @@ const NextPage = ({ backfn }) => {
                 type="file"
                 id="file-input4"
                 hidden
-                {...register("second_year_of_buisness_plan", {
-                  required: true,
-                })}
+                {...register("second_year_of_buisness_plan")}
               />
             </div>
           </div>
@@ -194,8 +243,7 @@ const NextPage = ({ backfn }) => {
                 id="file-input5"
                 hidden
                 {...register(
-                  "photocopy_of_your_reciept_issued_on_purchase_of_applicant_form",
-                  { required: true }
+                  "photocopy_of_your_reciept_issued_on_purchase_of_applicant_form"
                 )}
               />
             </div>

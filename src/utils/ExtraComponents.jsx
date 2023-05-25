@@ -11,7 +11,14 @@ export const SelectImage = ({ image, text }) => (
 
 export const ViewSubmittedDocument = ({ link }) => (
   <div style={{ margin: "10px 0px" }}>
-    <a href={link} style={{ textDecoration: "underline", cursor: "pointer" }}>
+    <a
+      href={link}
+      style={{
+        textDecoration: "underline",
+        cursor: "pointer",
+        color: "#2b3513",
+      }}
+    >
       Click here to view document, if any submitted
     </a>
   </div>
