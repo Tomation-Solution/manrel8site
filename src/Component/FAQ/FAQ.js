@@ -5,10 +5,8 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import Wall from "../Wall/Wall";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import "./FAQ.scss";
-import { faqList } from "./FAQData";
 import { useQuery } from "react-query";
 import { faqApi } from "../../utils/api-calls2";
-import Preloader from '../Preloader/Preloader'
 import Loader from "../Loader/Loader";
 const FAQ = () => {
   const [selectedQuest, setSelectedQuest] = useState({
