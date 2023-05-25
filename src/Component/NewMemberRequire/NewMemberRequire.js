@@ -14,7 +14,7 @@ import { joinStepsApi } from "../../utils/api-calls2";
 const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
   const navigate = useNavigate();
-  const {isLoading,data} = useQuery('joinStepsApi',joinStepsApi)
+  const { data } = useQuery("joinStepsApi", joinStepsApi);
   const submitHandler = (e) => {
     e.preventDefault();
     if (check === "agree") {
@@ -35,17 +35,15 @@ const NewMemberRequire = () => {
             "The membership requirement steps below details the process of becoming a member of MAN",
           ]}
         />
-      {
-        data.map((d,index)=>(
-          <SectionRequire 
-          step_name={d.step_name}
-          step_list={d.step_list}
-          step_description={d.step_description}
-          step_extras={d.step_extras}
-          key={index}/>
-        ))
-      }
-      
+        {data.map((d, index) => (
+          <SectionRequire
+            step_name={d.step_name}
+            step_list={d.step_list}
+            step_description={d.step_description}
+            step_extras={d.step_extras}
+            key={index}
+          />
+        ))}
 
         <div className="join-us">
           <h1>Join Us!</h1>
@@ -94,38 +92,35 @@ const NewMemberRequire = () => {
 
 export default NewMemberRequire;
 
-
-
-const SectionRequire = ({step_name,step_list,step_description,step_extras})=>{
-
+const SectionRequire = ({
+  step_name,
+  step_list,
+  step_description,
+  step_extras,
+}) => {
   return (
     <section className="membreq-steps">
-    <h1>{step_name}</h1>
-    <div className="steps-items2">
-      <p>
-        {step_description}
-      </p>
-      {
-        step_extras?.map((d,index)=>(
+      <h1>{step_name}</h1>
+      <div className="steps-items2">
+        <p>{step_description}</p>
+        {step_extras?.map((d, index) => (
           <h1 key={index}>{d}</h1>
-        ))
-      }
-      <div className="gray-circle"></div>
-      
-      <div className="steps-items" style={{'border':'transparent','padding':'unset'}}>
-      {
-        step_list?.map((d,index)=>(
-<div className="step-item" style={{ backgroundColor: "#596d27" }}>
-        <div className="circled-num">
-          <p>{index+1}</p>
-        </div>
-        <p className="step-item-text">
-          {d}
-        </p>
-      </div>
-        ))
-      }
-      {/* <div className="step-item" style={{ backgroundColor: "#506223" }}>
+        ))}
+        <div className="gray-circle"></div>
+
+        <div
+          className="steps-items"
+          style={{ border: "transparent", padding: "unset" }}
+        >
+          {step_list?.map((d, index) => (
+            <div className="step-item" style={{ backgroundColor: "#596d27" }}>
+              <div className="circled-num">
+                <p>{index + 1}</p>
+              </div>
+              <p className="step-item-text">{d}</p>
+            </div>
+          ))}
+          {/* <div className="step-item" style={{ backgroundColor: "#506223" }}>
         <div className="circled-num">
           <p>2</p>
         </div>
@@ -151,9 +146,9 @@ const SectionRequire = ({step_name,step_list,step_description,step_extras})=>{
           FOR MEMBERSHIP OF THE ASSOCIATION
         </p>
       </div> */}
-      {/* <div className="gray-circle"></div> */}
-    </div>
-    </div>
-  </section>
-  )
-}
+          {/* <div className="gray-circle"></div> */}
+        </div>
+      </div>
+    </section>
+  );
+};
