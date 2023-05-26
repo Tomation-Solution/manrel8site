@@ -76,7 +76,7 @@ const NewAbout = () => {
                   <div className="bottom">
                     <h1>Our Vision</h1>
 
-                    {data.mission.map((item, index) => (
+                    {data.vision.map((item, index) => (
                       <p key={index}>{item}</p>
                     ))}
                   </div>
@@ -87,7 +87,7 @@ const NewAbout = () => {
                   </div>
                   <div className="bottom">
                     <h1>Our Mission</h1>
-                    {data.vision.map((item, index) => (
+                    {data.mission.map((item, index) => (
                       <p key={index}>{item}</p>
                     ))}
                   </div>

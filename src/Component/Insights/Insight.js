@@ -66,35 +66,37 @@ const Insight = () => {
                         <div className="card" key={index}>
                           <Link
                             to={`/${
-                              item.type === "free publications"
+                              item?.type === "free publications"
                                 ? "publications"
-                                : item.type
+                                : item?.type
                             }`}
                           >
                             <button
                               style={{ color: "#2b3513", cursor: "pointer" }}
                             >
                               <b>
-                                {item.type === "free publications"
+                                {item?.type === "free publications"
                                   ? "publications"
-                                  : item.type}
+                                  : item?.type}
                               </b>
                             </button>
                           </Link>
 
                           <div className="flex">
-                            <h3>{item?.data.name}</h3>
+                            <h3>{item?.data?.name}</h3>
                             {item.type === "free publications" ? (
                               <Link
-                                to={`/publications-details/${item?.data.id}`}
+                                to={`/publications-details/${item?.data?.id}`}
                               >
                                 <OpenInNewIcon />
                               </Link>
                             ) : (
                               <Link
                                 to={`/${
-                                  item.type === "reports" ? "report" : item.type
-                                }-details/${item?.data.id}`}
+                                  item.type === "reports"
+                                    ? "report"
+                                    : item?.type
+                                }-details/${item?.data?.id}`}
                               >
                                 <OpenInNewIcon />
                               </Link>

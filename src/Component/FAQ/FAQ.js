@@ -13,20 +13,20 @@ const FAQ = () => {
     header: "",
     content: [""],
   });
-  const {isLoading,data} = useQuery('faqApi',faqApi)
+  const { isLoading, data } = useQuery("faqApi", faqApi);
   return (
     <UIProvider>
       <NewNavBar />
-      
+
       <div className="faq">
         <div className="faq-wrap">
           <div className="top">
-            <Loader  loading={isLoading}/>
+            <Loader loading={isLoading} />
             <h1> Frequently Asked Questions (FAQ)</h1>
           </div>
           <div className="listt">
             <div className="list">
-              {data?.map((item,index) => (
+              {data?.map((item, index) => (
                 <div
                   className={
                     selectedQuest.header === item.header

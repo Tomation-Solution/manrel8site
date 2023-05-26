@@ -4,7 +4,7 @@ import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import NewNavBar from "../NewNavBar/NewNavBar";
-import Loader from '../Loader/Loader'
+import Loader from "../Loader/Loader";
 // import { listOfMembers } from "./OurMembersList";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/MemberRequirement.png";
@@ -13,9 +13,9 @@ import { useQuery } from "react-query";
 import { getMembersApi } from "../../utils/api-calls2";
 
 function LatestMembers() {
-  const {isLoading,data} = useQuery('getMembersApi',getMembersApi,{
-    refetchOnWindowFocus:false
-  })
+  const { isLoading, data } = useQuery("getMembersApi", getMembersApi, {
+    refetchOnWindowFocus: false,
+  });
 
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,7 +25,7 @@ function LatestMembers() {
   let pages = [];
 
   //SEARCH BAR
-  const [listOfMembers,setListOfMembers] = useState([])
+  const [listOfMembers, setListOfMembers] = useState([]);
   for (let i = 1; i <= Math.ceil(listOfMembers?.length / postsPerPage); i++) {
     pages.push(i);
   }
@@ -44,16 +44,16 @@ function LatestMembers() {
   const searchResult = searchHandler();
 
   const paginatedData = searchResult?.slice(firstPostIndex, lastPostIndex);
-  useEffect(()=>{
-    if(data){
-      setListOfMembers(data)
+  useEffect(() => {
+    if (data) {
+      setListOfMembers(data);
     }
-  },[data])
-  console.log({data})
+  }, [data]);
+  console.log({ data });
 
   return (
     <UIProvider>
-      <Loader loading={isLoading} /> 
+      <Loader loading={isLoading} />
       <div className="members">
         <Subscribe />
         <NewNavBar />
@@ -86,9 +86,7 @@ function LatestMembers() {
                       <span className="light">
                         {" "}
                         <a
-                          href={
-                            item?.website
-                          }
+                          href={item?.website}
                           target={"_blank"}
                           rel={"noreferrer"}
                         >
