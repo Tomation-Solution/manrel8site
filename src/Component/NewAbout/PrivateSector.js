@@ -64,7 +64,7 @@ const PrivateSector = () => {
                       className="core-values-item"
                       style={{ backgroundColor: "#596d27" }}
                     >
-                      <h3>1</h3>
+                      <h3>{index + 1}</h3>
                       <div className="right">
                         <p>{item}</p>
                       </div>

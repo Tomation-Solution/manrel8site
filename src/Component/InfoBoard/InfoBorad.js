@@ -47,7 +47,7 @@ function InfoBoard() {
           {data.map((item, index) => (
             <InfoItemContainer key={index}>
               <InfoItemImg src={item.image} />
-              <InfoItemTitle>{item.name}</InfoItemTitle>
+              <InfoItemTitle>{item.heading}</InfoItemTitle>
               <InfoItemDescription>{item.description}</InfoItemDescription>
             </InfoItemContainer>
           ))}
