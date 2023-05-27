@@ -29,7 +29,16 @@ const ReportsPreview = ({ render_data, isImage, no_title }) => {
         ) : null}
         {render_data.link ? (
           <a href={`${render_data.link}`} rel="noreferrer" target="_blank">
-            Click here to download or Read more
+            click here to download or Read more
+          </a>
+        ) : null}
+        {render_data.readmore_link ? (
+          <a
+            href={`${render_data.readmore_link}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            click here to download or Read more
           </a>
         ) : null}
       </div>
