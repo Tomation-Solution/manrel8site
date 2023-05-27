@@ -32,6 +32,15 @@ const PublicationsPreview = ({ render_data, isImage, no_title }) => {
             Click here to download or Read more
           </a>
         ) : null}
+        {render_data.readmore_link ? (
+          <a
+            href={`${render_data.readmore_link}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            click here to download or Read more
+          </a>
+        ) : null}
       </div>
     </div>
   );

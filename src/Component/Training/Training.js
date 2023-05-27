@@ -67,7 +67,7 @@ const Training = () => {
               <section key={index}>
                 <h1 className="events-header">{item.group_name}</h1>
                 <div className="event-items">
-                  {item.items.slice(0, 3).map((item, index) => (
+                  {item.items.map((item, index) => (
                     <SingleTraining
                       registerfn={trainingRegister}
                       data={item}
