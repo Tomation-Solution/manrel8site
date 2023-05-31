@@ -40,7 +40,7 @@ function Members() {
               <p>Here are reasons why you should join MAN.</p>
             </div>
             <div className="point">
-              {data?.map((d, index) => (
+              {data?.filter((d)=>d.type ==='REASONS').map((d, index) => (
                 <div className="card" key={index}>
                   <div className="left">
                     <img src={Image2} alt="" />
@@ -289,60 +289,19 @@ function Members() {
                   </p>
                 </div>
               </div>
-              <div className="card">
-                <div className="left">
-                  <img src={Image2} alt="" />
+              
+
+              {data?.filter((d)=>d.type !=='REASONS').map((d, index) => (
+                <div className="card" key={index}>
+                  <div className="left">
+                    <img src={Image2} alt="" />
+                  </div>
+                  <div className="right">
+                    <h1>{d.header}</h1>
+                    <p>{d.description}</p>
+                  </div>
                 </div>
-                <div className="right">
-                  <h1>General Financial Support of the Association</h1>
-                  <p>
-                    Members are required to give financial support including
-                    sponsorship of activities to the Association as at when
-                    requested.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="left">
-                  <img src={Image2} alt="" />
-                </div>
-                <div className="right">
-                  <h1>Supply of Data</h1>
-                  <p>
-                    Members should support the Association in all its
-                    undertakings by prompt provision of data/ information when
-                    requested and by effective participation in meetings with
-                    Government or its Agencies when required.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="left">
-                  <img src={Image2} alt="" />
-                </div>
-                <div className="right">
-                  <h1>Capacity Building for Members</h1>
-                  <p>
-                    Members are expected to participate in MAN training
-                    programmes with a view to improving their product quality
-                    and human capital stock.
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="left">
-                  <img src={Image2} alt="" />
-                </div>
-                <div className="right">
-                  <h1>Corporate Social Responsibility</h1>
-                  <p>
-                    Members of MAN should demonstrate responsible corporate
-                    citizenship at all times. <br />
-                    Members are therefore encouraged to support their host
-                    communities to the best of their activities.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="rquire">
