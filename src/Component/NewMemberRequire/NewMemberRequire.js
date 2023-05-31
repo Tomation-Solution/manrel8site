@@ -35,7 +35,7 @@ const NewMemberRequire = () => {
             "The membership requirement steps below details the process of becoming a member of MAN",
           ]}
         />
-        {data.map((d, index) => (
+        {data?.map((d, index) => (
           <SectionRequire
             step_name={d.step_name}
             step_list={d.step_list}
