@@ -94,6 +94,7 @@ const PreviousPage = ({ nextfn }) => {
     register,
     handleSubmit,
     watch,
+    setValue,
     control,
     reset,
     formState: { errors },
@@ -248,14 +249,6 @@ const PreviousPage = ({ nextfn }) => {
       });
     },
   });
-
-  // const onChangeHandler = (key, value) => {
-  //   setValue(key, value, {
-  //     shouldDirty: true,
-  //     shouldValidate: true,
-  //     shouldTouch: true,
-  //   });
-  // };
 
   const onSubmitHandler = (data) => {
     let {
@@ -757,7 +750,10 @@ const PreviousPage = ({ nextfn }) => {
                 value={"current"}
                 name="installed_type"
                 checked={salesTurnover === "current"}
-                onChange={(e) => setSalesTurnover(e.target.value)}
+                onChange={(e) => {
+                  setValue("projected_sales_turnover", "");
+                  setSalesTurnover(e.target.value);
+                }}
               />
             </label>
 
@@ -768,7 +764,10 @@ const PreviousPage = ({ nextfn }) => {
                 value={"projected"}
                 name="installed_type"
                 checked={salesTurnover === "projected"}
-                onChange={(e) => setSalesTurnover(e.target.value)}
+                onChange={(e) => {
+                  setValue("current_sales_turnover", "");
+                  setSalesTurnover(e.target.value);
+                }}
               />
             </label>
           </div>
