@@ -75,7 +75,7 @@ const ApplicationStatus = () => {
                 <div className="status-text-con">
                   <div
                     className={`status-item ${
-                      data === "final_apporval" ? "" : "dotted"
+                      data === "final_approval" ? "" : "dotted"
                     }`}
                   >
                     3
