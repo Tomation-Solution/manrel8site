@@ -11,6 +11,7 @@ import { useMutation } from "react-query";
 import { memberRegistration } from "../../../utils/csm-api-calls";
 import { toast } from "react-toastify";
 import Loader from "../../Loader/Loader";
+import numbro from "numbro";
 
 const VerifyMemberModal = ({ eventId, type, luncheonPrice }) => {
   const schema = yup.object({
@@ -94,7 +95,8 @@ const VerifyMemberModal = ({ eventId, type, luncheonPrice }) => {
         {submitData && (
           <small>
             <b style={{ marginRight: "5px" }}>NOTE:</b>
-            you're a subscribed member, therefore the payment of 10,000 for the
+            you're a subscribed member, therefore the payment of{" "}
+            {numbro(luncheonPrice).format({ thousandSeparated: true })} for the
             luncheon of a single participant is automatically covered.
           </small>
         )}

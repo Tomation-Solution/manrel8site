@@ -83,7 +83,7 @@ const NewEvents = () => {
         <NewNavBar />
         <NewImageBanner
           image={backImage}
-          header={"Consultancy,Events & Trainings"}
+          header={"Consultancy, Events & Trainings"}
           details={[
             "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",
           ]}

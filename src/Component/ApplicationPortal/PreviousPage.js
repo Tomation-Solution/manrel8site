@@ -8,6 +8,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { getFormOne, submitFormOne } from "../../utils/api-calls";
 import { SelectImage } from "../../utils/ExtraComponents";
 import Loader from "../Loader/Loader";
+import list_of_states from "../../constants/list_of_states";
+import states_with_lgas from "../../constants/states_with_lga";
 
 const schema = yup.object({
   capacity_type: yup.string().required(),
@@ -91,6 +93,7 @@ const PreviousPage = ({ nextfn }) => {
   const {
     register,
     handleSubmit,
+    watch,
     control,
     reset,
     formState: { errors },
@@ -128,6 +131,7 @@ const PreviousPage = ({ nextfn }) => {
       are_your_product_exported: "",
       company_contact_infomation: "",
       designation: "",
+      upload_signature: "",
       name_of_md_or_ceo_of_company: "",
       selectdate_of_registration: "",
       all_roduct_manufactured: [
@@ -245,6 +249,14 @@ const PreviousPage = ({ nextfn }) => {
     },
   });
 
+  // const onChangeHandler = (key, value) => {
+  //   setValue(key, value, {
+  //     shouldDirty: true,
+  //     shouldValidate: true,
+  //     shouldTouch: true,
+  //   });
+  // };
+
   const onSubmitHandler = (data) => {
     let {
       upload_signature,
@@ -256,6 +268,7 @@ const PreviousPage = ({ nextfn }) => {
     } = data;
 
     upload_signature = upload_signature[0];
+
     const formData = new FormData();
 
     if (salesTurnover === "current") {
@@ -264,7 +277,9 @@ const PreviousPage = ({ nextfn }) => {
     formData.append("projected_sales_turnover", projected_sales_turnover);
 
     Object.keys(payload)?.forEach((key) => formData.append(key, payload[key]));
-    formData.append("upload_signature", upload_signature);
+    if (!formOneData?.upload_signature) {
+      formData.append("upload_signature", upload_signature);
+    }
     formData.append(
       "all_roduct_manufactured",
       JSON.stringify(all_roduct_manufactured)
@@ -352,20 +367,41 @@ const PreviousPage = ({ nextfn }) => {
           </div>
           <div className="half-input">
             <label>
-              {errors?.office_lga && <h5>Invalid input</h5>}
-              Office LGA
-              <input
-                type={"text"}
-                {...register("office_lga", { required: true })}
-              />
-            </label>
-            <label>
               {errors?.office_state && <h5>Invalid input</h5>}
               Office State
-              <input
-                type={"text"}
+              <select
+                defaultValue=""
                 {...register("office_state", { required: true })}
-              />
+              >
+                <option disabled value="">
+                  select an option
+                </option>
+                {list_of_states.map((item, index) => (
+                  <option value={item} key={index}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              {errors?.office_lga && <h5>Invalid input</h5>}
+              Office LGA
+              <select
+                defaultValue=""
+                {...register("office_lga", { required: true })}
+              >
+                <option disabled value="">
+                  select an option
+                </option>
+                {states_with_lgas
+                  .find((item) => item.name === watch("office_state"))
+                  ?.lgas.map((item, index) => (
+                    <option key={index} value={item}>
+                      {item}
+                    </option>
+                  ))}
+              </select>
             </label>
           </div>
           <div className="half-input">
@@ -816,7 +852,7 @@ const PreviousPage = ({ nextfn }) => {
 
           <label>
             {errors?.name_of_md_or_ceo_of_company && <h5>Invalid input</h5>}
-            Name of MD/CEO of Comoany
+            Name of MD/CEO of Company
             <input
               type={"text"}
               {...register("name_of_md_or_ceo_of_company", {
@@ -843,7 +879,9 @@ const PreviousPage = ({ nextfn }) => {
               <input
                 type={"file"}
                 accept="image/*"
-                required
+                required={
+                  formOneData?.upload_signature?.length > 5 ? false : true
+                }
                 {...register("upload_signature", { required: true })}
               />
             </label>

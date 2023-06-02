@@ -7,7 +7,7 @@ import { InvitationVerification } from "../../../utils/csm-api-calls";
 import { toast } from "react-toastify";
 import Loader from "../../Loader/Loader";
 
-const MediaVerificationForm = () => {
+const MediaVerificationForm = (type) => {
   const [isValid, setIsValid] = useState(false);
 
   const {
@@ -34,7 +34,7 @@ const MediaVerificationForm = () => {
   });
 
   const onSubmitHandler = (data) => {
-    mutate(data);
+    mutate({ ...data, type });
   };
 
   const MediaVerificationFormComponent = (

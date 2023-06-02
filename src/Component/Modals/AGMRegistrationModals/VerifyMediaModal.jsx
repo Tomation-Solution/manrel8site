@@ -30,7 +30,8 @@ const VerifyMediaModal = ({ type }) => {
     console.log({ type, ...data });
   };
 
-  const { isValid, MediaVerificationFormComponent } = MediaVerificationForm();
+  const { isValid, MediaVerificationFormComponent } =
+    MediaVerificationForm(type);
 
   if (!isValid) {
     return <>{MediaVerificationFormComponent}</>;
