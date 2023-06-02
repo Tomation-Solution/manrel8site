@@ -27,6 +27,7 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
       .array()
       .of(yup.string())
       .typeError("must select a boot")
+      .min(1, "please select a boot to rent")
       .required(),
     participant: yup
       .array(
@@ -48,7 +49,7 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
   } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
-      luncheon_covered_participants: 0,
+      luncheon_covered_participants: "",
       company_name: "",
       company_address: "",
       email: "",
@@ -87,28 +88,33 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
     },
   });
 
-  const onSubmitHandler = (data) => {
-    let { boot, ...payload } = data;
-    boot = boot.map((item) => {
-      const bootdata = item.split(",");
-      return bootdata.id;
-    });
-    mutate({ event: eventId, boot, ...payload });
-  };
+  let numberOfLuncheonParticipants = watch("luncheon_covered_participants");
 
-  const participantsLength = watch("luncheon_covered_participants");
-  const totalLuncheon = participantsLength * luncheonPrice;
+  if (isNaN(numberOfLuncheonParticipants)) {
+    numberOfLuncheonParticipants = 0;
+  }
+
+  const totalLuncheon = numberOfLuncheonParticipants * luncheonPrice;
 
   const bootWatch = watch("boot", []);
   let bootprice = 0;
-  if (!(bootWatch.length <= 0)) {
+  if (bootWatch) {
     bootWatch.forEach((item) => {
       const bootinfo = item.split(",");
-      bootprice = bootprice + parseFloat(bootinfo.price);
+      bootprice = bootprice + parseFloat(bootinfo[1]);
     });
   }
 
   const sumTotal = bootprice + totalLuncheon;
+
+  const onSubmitHandler = (data) => {
+    let { boot, ...payload } = data;
+    boot = boot.map((item) => {
+      const bootdata = item.split(",");
+      return bootdata[0];
+    });
+    mutate({ event: eventId, boot, ...payload });
+  };
 
   if (exhibitionBoots.length <= 0) {
     return (
@@ -132,8 +138,8 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
             type="number"
             min={0}
             max={50}
+            onWheel={(e) => e.currentTarget.blur()}
             {...register("luncheon_covered_participants", {
-              required: true,
               valueAsNumber: true,
             })}
           />
@@ -143,7 +149,7 @@ const ExhibitorModal = ({ type, luncheonPrice, exhibitionBoots, eventId }) => {
           <FormError>{errors?.boot?.message}</FormError>
           <h4>Choose a boot to rent</h4>
           <small style={{ fontSize: "12px" }}>
-            on desktop you can hold ctrl to select multiple
+            on desktop you can hold ctrl to select multiple boots
           </small>
 
           <select

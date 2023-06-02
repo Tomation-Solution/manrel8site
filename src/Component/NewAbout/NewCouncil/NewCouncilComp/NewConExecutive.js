@@ -42,7 +42,8 @@ const NewConExecutive = ({ data }) => {
                   </div>
                 </div>
               );
-            })}
+            })
+            .reverse()}
         </div>
       </article>
 

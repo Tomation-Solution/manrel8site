@@ -52,7 +52,8 @@ const GeneralRegistrationForm = ({ eventId, type }) => {
     mutate({ type: type, event: eventId, ...data });
   };
 
-  const { isValid, MediaVerificationFormComponent } = MediaVerificationForm();
+  const { isValid, MediaVerificationFormComponent } =
+    MediaVerificationForm(type);
 
   if (!isValid && type !== "exhibitor-participant") {
     return <>{MediaVerificationFormComponent}</>;

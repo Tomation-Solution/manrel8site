@@ -3134,6 +3134,11 @@ big.js@^5.2.2:
   resolved "https://registry.npmjs.org/big.js/-/big.js-5.2.2.tgz"
   integrity sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
 
+bignumber.js@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.npmjs.org/bignumber.js/-/bignumber.js-8.1.1.tgz"
+  integrity sha512-QD46ppGintwPGuL1KqmwhR0O+N2cZUg8JG/VzwI2e28sM9TqHjQB10lI4QAaMHVbLzwVLLAwEglpKPViWX+5NQ==
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
@@ -6844,6 +6849,13 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
+numbro@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.npmjs.org/numbro/-/numbro-2.3.6.tgz"
+  integrity sha512-pxpoTT3hVxQGaOA2RTzXR/muonQNd1K1HPJbWo7QOmxPwiPmoFCFfsG9XXgW3uqjyzezJ0P9IvCPDXUtJexjwg==
+  dependencies:
+    bignumber.js "^8.1.1"
+
 nwsapi@^2.2.0:
   version "2.2.2"
   resolved "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.2.tgz"
@@ -7945,17 +7957,10 @@ react-dev-utils@^12.0.1:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-<<<<<<< HEAD
-"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", "react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>= 16.8.0 || 18.0.0", "react-dom@>=16", "react-dom@>=16.6.0", "react-dom@>=16.8":
-  "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
-  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
-  "version" "18.2.0"
-=======
 "react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", react-dom@^18.0.0, react-dom@^18.2.0, "react-dom@>= 16.8.0 || 18.0.0", react-dom@>=16, react-dom@>=16.6.0, react-dom@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
->>>>>>> 7eb799ec46a05fb44620235da25ee0e73434911d
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
@@ -8084,17 +8089,6 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-<<<<<<< HEAD
-"react-spinners@^0.13.8":
-  "integrity" "sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA=="
-  "resolved" "https://registry.npmjs.org/react-spinners/-/react-spinners-0.13.8.tgz"
-  "version" "0.13.8"
-
-"react-toastify@^9.1.2":
-  "integrity" "sha512-PBfzXO5jMGEtdYR5jxrORlNZZe/EuOkwvwKijMatsZZm8IZwLj01YvobeJYNjFcA6uy6CVrx2fzL9GWbhWPTDA=="
-  "resolved" "https://registry.npmjs.org/react-toastify/-/react-toastify-9.1.2.tgz"
-  "version" "9.1.2"
-=======
 react-spinners@^0.13.8:
   version "0.13.8"
   resolved "https://registry.npmjs.org/react-spinners/-/react-spinners-0.13.8.tgz"
@@ -8104,7 +8098,6 @@ react-toastify@^9.1.2:
   version "9.1.2"
   resolved "https://registry.npmjs.org/react-toastify/-/react-toastify-9.1.2.tgz"
   integrity sha512-PBfzXO5jMGEtdYR5jxrORlNZZe/EuOkwvwKijMatsZZm8IZwLj01YvobeJYNjFcA6uy6CVrx2fzL9GWbhWPTDA==
->>>>>>> 7eb799ec46a05fb44620235da25ee0e73434911d
   dependencies:
     clsx "^1.1.1"
 
@@ -8118,17 +8111,10 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-<<<<<<< HEAD
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0 || 18.0.0", "react@>=16", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0":
-  "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
-  "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
-  "version" "18.2.0"
-=======
 react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>= 16.8.0 || 18.0.0", react@>=16, react@>=16.6.0, react@>=16.8, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
->>>>>>> 7eb799ec46a05fb44620235da25ee0e73434911d
   dependencies:
     loose-envify "^1.1.0"
 

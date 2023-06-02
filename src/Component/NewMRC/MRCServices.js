@@ -61,7 +61,7 @@ const MRCServices = () => {
                 them better their business strategizes and attain targeted business
                 growth. In addition, micro manufacturers enjoy discounted fee. */}
             </p>
-            <p> {d.small_text}:</p>
+            <p> {d.small_text}</p>
             {d.items.map((item, i) => (
               <div className="obj-item" key={i}>
                 <div></div>

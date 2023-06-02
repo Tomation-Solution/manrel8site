@@ -20,6 +20,7 @@ import {
 } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
+import OurServiceImage from "../../images/new-images/OurServicesNewImage2.jpeg";
 
 function Services() {
   const schema = yup.object({
@@ -76,6 +77,7 @@ function Services() {
           <NewNavBar />
           <NewImageBanner
             header={"Services"}
+            image={OurServiceImage}
             details={[
               "     The only sector-specific Business Membership Organization (BMO) structured to render advocacy services to its members.",
             ]}
