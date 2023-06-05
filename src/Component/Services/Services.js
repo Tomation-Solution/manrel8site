@@ -116,12 +116,11 @@ function Services() {
               <div className="services-head">
                 <h1>Manufacturers Resource Centre (MRC) Services</h1>
                 <p>
-                  The Manufacturers Resource Centre is the Business Solution Arm
-                  of Manufacturers Association of Nigeria (MAN). The
-                  Manufacturers Resource Centre is dedicated to proffering
-                  Business Solutions to MAN Members, thus developing their
-                  Businesses, Increase their Market share and enhancing
-                  Production Excellence.
+                  The Manufacturers Resource Centre is the Business Solution arm
+                  of MAN. The Manufacturers Resource Centre is dedicated to
+                  proffering business solutions to MAN members, thus developing
+                  their businesses, increase their market share and enhancing
+                  production excellence.
                 </p>
               </div>
               <div className="services-wrap">

@@ -41,7 +41,7 @@ const HowWeWork = () => {
             ></div>
             <div className="new-about-content">
               <div className="how-work">
-                <h1>How we Work</h1>
+                <h1>How We Work</h1>
                 <div className="how-work-con">
                   {data.how_we_work.map((item, index) => (
                     <p key={index}>{item}</p>
@@ -57,11 +57,11 @@ const HowWeWork = () => {
                   style={{
                     color: "#2b3513",
                     fontWeight: "500",
-                    textAlign: "center",
+                    textAlign: "left",
                     fontSize: "25px",
                   }}
                 >
-                  The Standing Committees
+                  The Standing Committees Of The National Council
                 </h3>
                 <div className="core-values-items">
                   {data.committees.map((item, index) => (
@@ -84,33 +84,33 @@ const HowWeWork = () => {
               </div>
 
               <div className="ad-hoc">
-                <h1>AD-HOC COMMITTEES</h1>
+                <h1>AD-HOC Committees</h1>
                 {data.adhoc.map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
               </div>
 
               <div className="other-groups">
-                <h1>SPECIAL PURPOSE VEHICLES OF MAN</h1>
+                <h1>Special Purpose Vehicles Of MAN</h1>
                 {data.spvehicles.map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
               </div>
               <div className="other-groups">
-                <h1>SPECIAL PURPOSE GROUPS OF MAN</h1>
+                <h1>Special Purpose Groups Of MAN</h1>
                 {data.spgroups.map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
               </div>
 
               <div className="other-groups">
-                <h1>CODE OF CONDUCT</h1>
+                <h1>Code Of Conduct</h1>
                 {data.conduct.map((item, index) => (
                   <p key={index}>{item}</p>
                 ))}
               </div>
 
-              <h2 style={{ color: "#2b3513" }}>Members shall:</h2>
+              <h2 style={{ color: "#2b3513" }}>Members Shall:</h2>
               <div className="endeavour-items">
                 {data.conduct_listing.map((item, index) => (
                   <div className="endeavour-item" key={index}>

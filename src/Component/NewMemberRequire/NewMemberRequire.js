@@ -7,7 +7,8 @@ import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
 import { Link, useNavigate } from "react-router-dom";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import backImage from "../../images/new-images/MemberRequirement.png";
+// import backImage from "../../images/new-images/MemberRequirement.png";
+import backImage from "../../images/Rectangle.png";
 import { useQuery } from "react-query";
 import { joinStepsApi } from "../../utils/api-calls2";
 
@@ -24,7 +25,6 @@ const NewMemberRequire = () => {
     }
   };
 
-  
   return (
     <div className="member-require">
       <UIProvider>
@@ -36,15 +36,17 @@ const NewMemberRequire = () => {
             "The membership requirement steps below details the process of becoming a member of MAN",
           ]}
         />
-        {data?.map((d, index) => (
-          <SectionRequire
-            step_name={d.step_name}
-            step_list={d.step_list}
-            step_description={d.step_description}
-            step_extras={d.step_extras}
-            key={index}
-          />
-        ))}
+        {data
+          ?.sort((a, b) => a.id - b.id)
+          .map((d, index) => (
+            <SectionRequire
+              step_name={d.step_name}
+              step_list={d.step_list}
+              step_description={d.step_description}
+              step_extras={d.step_extras}
+              key={index}
+            />
+          ))}
 
         <div className="join-us">
           <h1>Join Us!</h1>
@@ -121,33 +123,6 @@ const SectionRequire = ({
               <p className="step-item-text">{d}</p>
             </div>
           ))}
-          {/* <div className="step-item" style={{ backgroundColor: "#506223" }}>
-        <div className="circled-num">
-          <p>2</p>
-        </div>
-        <p className="step-item-text">
-          CORPORATE AFFAIRS COMMISSION (CAC) FORMS C02 AND C07
-        </p>
-      </div>
-      <div className="step-item" style={{ backgroundColor: "#47571f" }}>
-        <div className="circled-num">
-          <p>3</p>
-        </div>
-        <p className="step-item-text">
-          COPIES OF DULY CERTIFIED AUDITED FINANCIAL STATEMENT FOR
-          PROCEEDING TWO (2) YEARS OR BUSINESS PLAN FOR NEW COMPANIES
-        </p>
-      </div>
-      <div className="step-item" style={{ backgroundColor: "#3e4c1b" }}>
-        <div className="circled-num">
-          <p>4</p>
-        </div>
-        <p className="step-item-text">
-          LETTER OF INTRODUCTION ON THE COMPANY'S LETTER-HEAD, APPLYING
-          FOR MEMBERSHIP OF THE ASSOCIATION
-        </p>
-      </div> */}
-          {/* <div className="gray-circle"></div> */}
         </div>
       </div>
     </section>

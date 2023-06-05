@@ -17,7 +17,7 @@ const NewCouncil = () => {
     "all-about-our-executives",
     getAboutOurExecutivesPVC,
     {
-      select: (data) => data.data,
+      select: (data) => data.data.sort((a, b) => a.id - b.id),
       refetchOnWindowFocus: false,
     }
   );
