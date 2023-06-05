@@ -82,9 +82,19 @@ function Mpdcl() {
                   The services below are offered by Manufacturers Power
                   Development Company Limited (MPDCL).
                 </h1>
-                <h2>Power Facilitation Activities</h2>
+                <h2
+                  style={{
+                    width: "100%",
+                    margin: "10px 0px",
+                    textAlign: "center",
+                    color: "#2b3513",
+                  }}
+                >
+                  Power Facilitation Activities
+                </h2>
                 <div className="wrap-g">
                   {data
+                    ?.sort((a, b) => a.id - b.id)
                     ?.filter((d) => d.type === "POWER_FACILITATION")
                     .map((item) => (
                       <div className="card" key={item.id}>

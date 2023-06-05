@@ -42,8 +42,7 @@ const NewConExecutive = ({ data }) => {
                   </div>
                 </div>
               );
-            })
-            .reverse()}
+            })}
         </div>
       </article>
 
@@ -168,6 +167,7 @@ const NewConExecutive = ({ data }) => {
                     <p className="header">{item?.name}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
+                    <p className="header">{item?.tenor}</p>
                   </div>
                 </div>
               );

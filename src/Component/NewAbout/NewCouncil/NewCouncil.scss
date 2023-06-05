@@ -92,7 +92,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 60px 0px;
+      margin: 60px 0px 20px 0px;
       gap: 30px;
 
       @include mobile-3 {
@@ -102,12 +102,10 @@
       .option_item {
         font-weight: 700;
         color: #717861;
-        cursor: pointer;
       }
       .option_item_active {
         font-weight: 700;
         color: #2b3513;
-        cursor: pointer;
         font-size: 30px;
       }
     }
@@ -119,11 +117,11 @@
         color: #2b3513;
         font-weight: 400;
         font-size: 35px;
-        margin: 20px 0px;
+        margin: 10px 0px;
         text-align: center;
       }
       .article-desc {
-        margin: 20px 0px;
+        margin: 10px 0px;
         font-size: 16px;
         color: #717861;
         text-align: center;
@@ -135,7 +133,7 @@
         // justify-items: center;
         align-items: center;
         gap: 40px;
-        margin: 100px 0px;
+        margin: 20px 0px;
         @include mobile-900px {
           grid-template-columns: 100%;
         }

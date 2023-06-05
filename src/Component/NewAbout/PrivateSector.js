@@ -46,7 +46,7 @@ const PrivateSector = () => {
             <div className="private-sector-content">
               <div className="overlapModal">
                 <h1 style={{ color: "#2b3513" }}>
-                  ORGANIZED PRIVATE SECTOR OF NIGERIA (OPSN) BODIES
+                  ORGANIZED PRIVATE SECTOR OF NIGERIA (OPSN)
                 </h1>
                 <p style={{ color: "#2b3513" }}>
                   The Organized Private Sector of Nigeria (OPSN) is an umbrella
