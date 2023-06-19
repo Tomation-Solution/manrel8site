@@ -39,7 +39,7 @@ function InfoBoard() {
         padding: "20px",
       }}
     >
-      <InfoHeader>Why we are Unique</InfoHeader>
+      <InfoHeader>Why we are unique</InfoHeader>
       {isLoading || isFetching ? (
         <Loader loading={isLoading || isFetching} />
       ) : !isError ? (
