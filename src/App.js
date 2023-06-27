@@ -38,8 +38,8 @@ function App() {
               <Subscribe />
               <NewNavBar />
               <HomeNewSlide data={data} />
-              <Section renderdata={data} />
               <Article data={data} />
+              <Section renderdata={data} />
               <InfoBoard />
               <Wall />
               <Footer />
