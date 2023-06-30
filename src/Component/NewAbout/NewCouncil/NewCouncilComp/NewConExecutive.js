@@ -156,6 +156,11 @@ const NewConExecutive = ({ data }) => {
           {/* <PastPresident /> */}
           {data
             .filter((item) => item.type === "LIFE_MEMBERS")
+            .sort((a, b) => {
+              return (
+                Number(a.tenor.split("-")[0]) - Number(b.tenor.split("-")[0])
+              );
+            })
             .map((item, index) => {
               return (
                 <div className="member_item" key={index}>

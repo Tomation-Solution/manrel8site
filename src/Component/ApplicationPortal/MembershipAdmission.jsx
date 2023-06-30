@@ -31,7 +31,7 @@ const MembershipAdmission = () => {
 
   const formoneQueryResult = useQuery("formone-details", getFormOne, {
     refetchOnWindowFocus: false,
-    select: (data) => data.results[0].prospective_member_payment_info,
+    select: (data) => data?.results[0]?.prospective_member_payment_info,
   });
 
   const payMutationResult = useMutation(getMembershipPaymentUrl, {
@@ -59,7 +59,7 @@ const MembershipAdmission = () => {
     payMutationResult.mutate({});
   };
 
-  if (!user_data || user_data.has_paid === false) {
+  if (!user_data || user_data?.has_paid === false) {
     toast.error("Login to access this page");
     return <Navigate to={"/join-now-page"} />;
   }
@@ -79,14 +79,14 @@ const MembershipAdmission = () => {
 
           {isFetching ||
           isLoading ||
-          formoneQueryResult.isFetching ||
-          formoneQueryResult.isLoading ? (
+          formoneQueryResult?.isFetching ||
+          formoneQueryResult?.isLoading ? (
             <Loader
               loading={
                 isLoading ||
                 isFetching ||
-                formoneQueryResult.isFetching ||
-                formoneQueryResult.isLoading
+                formoneQueryResult?.isFetching ||
+                formoneQueryResult?.isLoading
               }
             />
           ) : !isError || !formoneQueryResult ? (
@@ -105,14 +105,14 @@ const MembershipAdmission = () => {
                       <span className="darken">
                         Annual General Meeting Levy:
                       </span>
-                      {formatMoney(renderdata.AgmLevy)}
+                      {formatMoney(renderdata?.AgmLevy)}
                     </p>
                   </div>
 
                   <div className="payment-summary">
                     <p>
                       <span className="darken">Legal Levy:</span>
-                      {formatMoney(renderdata.legalLevy)}
+                      {formatMoney(renderdata?.legalLevy)}
                     </p>
                   </div>
 
@@ -121,11 +121,11 @@ const MembershipAdmission = () => {
                       <span className="darken">
                         Buy Made-in-Nigeria Products Advert Levy:{" "}
                       </span>
-                      {formatMoney(renderdata.madeInNgeiraProducts)}
+                      {formatMoney(renderdata?.madeInNgeiraProducts)}
                     </p>
                   </div>
 
-                  {renderdata.is_in_lagos ? (
+                  {renderdata?.is_in_lagos ? (
                     <div className="payment-summary">
                       <p>
                         <span className="darken">
@@ -146,7 +146,7 @@ const MembershipAdmission = () => {
                         </small>
                         :{" "}
                       </span>
-                      {formatMoney(renderdata.specialLevy)}
+                      {formatMoney(renderdata?.specialLevy)}
                     </p>
                   </div>
 
@@ -159,18 +159,18 @@ const MembershipAdmission = () => {
                         </small>
                         :
                       </span>
-                      {formatMoney(renderdata.annualSub)}
+                      {formatMoney(renderdata?.annualSub)}
                     </p>
                   </div>
 
                   <div className="payment-summary">
                     <p>
                       <span className="darken">Total: </span>
-                      {formatMoney(renderdata.amountToBePaid)}
+                      {formatMoney(renderdata?.amountToBePaid)}
                     </p>
                   </div>
 
-                  {formoneQueryResult.data.has_paid_subcription ? (
+                  {formoneQueryResult?.data?.has_paid_subcription ? (
                     <div className="payment-summary no-bg">
                       <button disabled>
                         Payments already made, awaiting confirmation
