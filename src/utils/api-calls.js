@@ -123,3 +123,16 @@ export const getMembershipPaymentUrl = async (payload) => {
     throw new AxiosError(e);
   }
 };
+
+//Verify Member
+export const verifyMemberByMembersgipNo = async (payload) => {
+  try {
+    const res = await axios.post(
+      `${BASE_URL}tenant/auth/ManageMemberValidation/`,
+      payload
+    );
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};

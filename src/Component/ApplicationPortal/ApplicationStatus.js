@@ -64,13 +64,59 @@ const ApplicationStatus = () => {
                 <div className="status-text-con">
                   <div
                     className={`status-item ${
-                      data === "approval_in_principle_granted" ? "" : "dotted"
+                      data === "acknowledgement_of_application" ? "" : "dotted"
                     }`}
                   >
                     2
                   </div>
-                  <p>Approval in Principle Granted</p>
+                  <p>Acknowledgement of Application</p>
                 </div>
+                <div className="status-separator"></div>
+                <div className="status-text-con">
+                  <div
+                    className={`status-item ${
+                      data === "inspection_of_factory_inspection"
+                        ? ""
+                        : "dotted"
+                    }`}
+                  >
+                    3
+                  </div>
+                  <p>Factory Inspection</p>
+                </div>
+
+                <div className="status-separator"></div>
+                <div className="status-text-con">
+                  <div
+                    className={`status-item ${
+                      data ===
+                      "review_of_factory_inspection_report_and_presentation_to_national_council"
+                        ? ""
+                        : "dotted"
+                    }`}
+                  >
+                    4
+                  </div>
+                  <p>
+                    Review of Factory Inspection Report and Presentation to
+                    National Council
+                  </p>
+                </div>
+
+                <div className="status-separator"></div>
+                <div className="status-text-con">
+                  <div
+                    className={`status-item ${
+                      data === "ready_for_presentation_of_national_council"
+                        ? ""
+                        : "dotted"
+                    }`}
+                  >
+                    5
+                  </div>
+                  <p>Presentation to National Council</p>
+                </div>
+
                 <div className="status-separator"></div>
                 <div className="status-text-con">
                   <div
@@ -78,7 +124,7 @@ const ApplicationStatus = () => {
                       data === "final_approval" ? "" : "dotted"
                     }`}
                   >
-                    3
+                    6
                   </div>
                   <p>Final Approval</p>
                 </div>
