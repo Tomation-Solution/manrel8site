@@ -95,9 +95,13 @@ const VerifyMemberModal = ({ eventId, type, luncheonPrice }) => {
         {submitData && (
           <small>
             <b style={{ marginRight: "5px" }}>NOTE:</b>
-            you're a subscribed member, therefore the payment of{" "}
+            {/* you're a subscribed member, therefore the payment of{" "}
             {numbro(luncheonPrice).format({ thousandSeparated: true })} for the
-            luncheon of a single participant is automatically covered.
+            luncheon of a single participant is automatically covered. */}
+            Payment of AGM luncheon (N
+            {numbro(luncheonPrice).format({ thousandSeparated: true })}) covers
+            one participant. Additional participant (s) attract extra N
+            {numbro(luncheonPrice).format({ thousandSeparated: true })} each.
           </small>
         )}
         <br />
