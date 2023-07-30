@@ -53,16 +53,13 @@ export const AGMRegistrationModal = ({ eventId, closefn }) => {
           <h2 style={{ textAlign: "center" }}>
             Annual General Meeting Registration
           </h2>
-          <p style={{ textAlign: "center" }}>
+          {/* <p style={{ textAlign: "center" }}>
             Let's start by entering your information.
-          </p>
+          </p> */}
 
           <div className="agm">
             <div className="agm-select-card">
-              <h4>Class of Participant</h4>
-              <small>
-                The form to be field will differ based on the participant type.
-              </small>
+              <h4>Select Participant Type</h4>
               <br />
 
               <select
