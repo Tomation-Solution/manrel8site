@@ -15,7 +15,7 @@ export const getPaidPublications = async () => {
 
 export const payForPublication = async (payload) => {
   try {
-    const res = await publicCmsRequest.post(`/payments/publications`, payload);
+    const res = await publicCmsRequest.post(`/payments/publications?payment_type=${payload.paymentGateWay}`, payload);
     return res.data;
   } catch (e) {
     throw new AxiosError(e);

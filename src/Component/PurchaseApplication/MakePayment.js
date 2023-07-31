@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation } from "react-router-dom";
 import { UIProvider } from "../../Ui";
@@ -20,6 +20,7 @@ import { toast } from "react-toastify";
 
 const MakePayment = () => {
   const location = useLocation();
+  const [paymentType,setPaymentType] = useState('paystack')
   const locationState = location.state;
   const { setValue, register, handleSubmit } = useForm({
     defaultValues: {
@@ -80,7 +81,13 @@ const MakePayment = () => {
   const onSubmitHandler = (data) => {
     const rewrittenRegno = `RC${data.cac_registration_number}`;
     data.cac_registration_number = rewrittenRegno;
-    mutate(data);
+    // data.payment_type =paymentType
+    // mutate({...data,'payment_type':paymentType});
+    console.log(
+      paymentType,
+      data
+    )
+    mutate({data,paymentType});
   };
 
   return (
@@ -187,7 +194,7 @@ const MakePayment = () => {
 
               <label className="image-label">
                 <div className="">
-                  <h5 style={{ textAlign: "center" }}>Not Available</h5>
+                  <h5 style={{ textAlign: "center" }}> Available</h5>
                   <img src={PaymentImg2} alt="" />
                 </div>
                 <input
@@ -195,6 +202,9 @@ const MakePayment = () => {
                   type={"radio"}
                   value="flutterwave"
                   className="image-radio"
+                  onClick={e=>{
+                    setPaymentType('flutterwave')
+                  }}
                 />
               </label>
               <label className="image-label">
