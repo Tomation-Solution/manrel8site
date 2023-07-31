@@ -27,7 +27,7 @@ const GeneralRegistrationForm = ({ eventId, type }) => {
     defaultValues: {
       company_name: "",
       name: "",
-      designation: "",
+      designation: "fill",
       email: "",
       phone_no: "",
     },
@@ -65,8 +65,8 @@ const GeneralRegistrationForm = ({ eventId, type }) => {
       <form onSubmit={handleSubmit(onSubmitHandler)}>
         <div className="card">
           <FormError>{errors.company_name?.message}</FormError>
-          <h4>Company Name</h4>
-          <small>if you dont have a company, fill with stand-alone</small>
+          <h4>Company / Individual Name</h4>
+          {/* <small>if you dont have a company, fill with stand-alone</small> */}
           <input
             type="text"
             {...register("company_name", { required: true })}
@@ -82,7 +82,7 @@ const GeneralRegistrationForm = ({ eventId, type }) => {
         <div className="card">
           <FormError>{errors.designation?.message}</FormError>
           <h4>Designation</h4>
-          <small>if you dont have a company, fill with stand-alone</small>
+          {/* <small>if you dont have a company, fill with stand-alone</small> */}
           <input type="text" {...register("designation", { required: true })} />
         </div>
 
@@ -99,7 +99,7 @@ const GeneralRegistrationForm = ({ eventId, type }) => {
         </div>
 
         <div className="card">
-          <button>Proceed To Pay</button>
+          <button>Submit</button>
         </div>
       </form>
     </>

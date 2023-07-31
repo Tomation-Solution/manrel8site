@@ -35,14 +35,14 @@
     background-position: center !important;
     background-repeat: no-repeat !important;
   }
-  &:hover {
-    @media (min-width: 800px) {
-      .parallax-bg {
-        background-repeat: repeat !important;
-        background-size: 50% !important;
-      }
-    }
-  }
+  // &:hover {
+  //   @media (min-width: 800px) {
+  //     .parallax-bg {
+  //       background-repeat: repeat !important;
+  //       background-size: 50% !important;
+  //     }
+  //   }
+  // }
   .narration-con {
     background-color: #fff;
     color: #2b3513;
