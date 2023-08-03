@@ -103,20 +103,40 @@ root.render(
             {/* MAKE THE LINKS SIMILAR WITH THIS */}
 
             <Route
-              path="/revamped-events/register"
+              // path="/revamped-events/register"
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "register"
+                ).link
+              }
               element={<RevampedEventRegister />}
             />
             <Route
-              path="/revamped-events/speaker"
+              // path="/revamped-events/speaker"
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "speaker(s)"
+                ).link
+              }
               element={<RevampedEventSpeaker />}
             />
 
             <Route
-              path="/revamped-events/general"
+              // path="/revamped-events/general"
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "programme"
+                ).link
+              }
               element={<RevampedEventGeneral />}
             />
             <Route
-              path="/revamped-events/exhibition"
+              // path="/revamped-events/exhibition"
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "exhibition"
+                ).link
+              }
               element={<RevampedEventExhibition />}
             />
 
@@ -141,7 +161,12 @@ root.render(
               element={<RevampedEventPublic />}
             />
             <Route
-              path="/revamped-events/venue"
+              // path="/revamped-events/venue"
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "venue"
+                ).link
+              }
               element={<RevampedEventVenue />}
             />
 
