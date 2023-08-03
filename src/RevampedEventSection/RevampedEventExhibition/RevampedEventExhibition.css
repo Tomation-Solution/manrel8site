@@ -1,0 +1,17 @@
+.Exhibitioncontainer{
+    width: 100%;
+}
+.Exhibitioncontainer .text{
+
+    width: 80%;
+    margin: 50px auto;
+}
+
+.Exhibitioncontainer .exhibitionimagecontainer{
+    width: 70%;
+    margin: 0 auto;
+
+}
+.Exhibitioncontainer .exhibitionimagecontainer img{
+    width: 100%;
+}

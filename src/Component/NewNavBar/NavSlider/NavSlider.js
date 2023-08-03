@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import "./NavSlider.scss";
 import BackDrop from "../../BackDrop/BackDrop";
+import { REVAMP_EVENTS_BASE_EVENT_URL } from "../../../constants/revamped_events_constants";
 
 const NavSlider = ({ clickfn }) => {
   return (
@@ -25,10 +26,10 @@ const NavSlider = ({ clickfn }) => {
               <Link to={"/about/how-we-work"}>How we Work</Link>
             </span>
             <span className="items-span">
-              <Link to={"/about/private-sector"}>Our Affiliates</Link>
+              <Link to={"/about/private-sector"}>Our Partners</Link>
             </span>
             <span className="items-span">
-              <Link to={"/about/council-members"}>Our Executives</Link>
+              <Link to={"/about/council-members"}>Our Leadership</Link>
             </span>
             <span className="items-span">
               <Link to={"/operate"}>Where we Operate</Link>
@@ -70,8 +71,13 @@ const NavSlider = ({ clickfn }) => {
             <span className="items-span">
               <Link to={"/reports"}>Reports</Link>
             </span>
+
             <span className="items-span">
               <Link to={"/event-training"}>Consultancy,Events & Trainings</Link>
+            </span>
+
+            <span className="items-span">
+              <Link to={REVAMP_EVENTS_BASE_EVENT_URL}>Revamped Events</Link>
             </span>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./DropDowns.scss";
+import { REVAMP_EVENTS_BASE_EVENT_URL } from "../../../constants/revamped_events_constants";
 
 export const AboutDropdown = () => {
   return (
@@ -16,7 +17,7 @@ export const AboutDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to={"/about/private-sector"}>Our Affiliates</Link>
+          <Link to={"/about/private-sector"}>Our Partners</Link>
         </span>
       </div>
       <div className="dropdown-item">
@@ -26,7 +27,7 @@ export const AboutDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to={"/about/council-members"}>Our Executives</Link>
+          <Link to={"/about/council-members"}>Our Leadership</Link>
         </span>
       </div>
       <div className="dropdown-item">
@@ -115,6 +116,12 @@ export const InsightDropdown = () => {
       <div className="dropdown-item">
         <span>
           <Link to="/event-training">Consultancy, Events & Trainings</Link>
+        </span>
+      </div>
+
+      <div className="dropdown-item">
+        <span>
+          <Link to={REVAMP_EVENTS_BASE_EVENT_URL}>Revamped Events</Link>
         </span>
       </div>
     </div>

@@ -71,7 +71,7 @@ const NewAbout = () => {
               <div className="missvis">
                 <div className="missvis-item">
                   <div className="top">
-                    <img alt="" src={data.mission_image} />
+                    <img alt="" src={data.vision_image} />
                   </div>
                   <div className="bottom">
                     <h1>Our Vision</h1>
@@ -83,7 +83,7 @@ const NewAbout = () => {
                 </div>
                 <div className="missvis-item">
                   <div className="top">
-                    <img alt="" src={data.vision_image} />
+                    <img alt="" src={data.mission_image} />
                   </div>
                   <div className="bottom">
                     <h1>Our Mission</h1>
@@ -116,6 +116,17 @@ const NewAbout = () => {
                 ))}
               </div>
             </div>
+
+            {/* Current Location Image */}
+            <div
+              className="topBg"
+              style={{
+                background: `url(${data.main_image})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            ></div>
           </>
         ) : (
           <FormError>Can't Fetch About History Data</FormError>

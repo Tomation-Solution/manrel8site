@@ -97,6 +97,7 @@ function Services() {
               </div>
               <div className="services-wrap diff">
                 {servicesQueryResult.data
+                  .reverse()
                   .filter((item) => item.type === "CORE")
                   .map((item, index) => (
                     <div

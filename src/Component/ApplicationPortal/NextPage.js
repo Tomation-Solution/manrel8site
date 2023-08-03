@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import UploadIcon from "../../images/new-images/UploadIcon.png";
-import SubscriptionRates from "../../images/new-images/SubscriptionRates.png";
+// import SubscriptionRates from "../../images/new-images/SubscriptionRates.png";
 import { useForm } from "react-hook-form";
 import { useMutation, useQuery } from "react-query";
 import { getFormTwo, submitFormTwo } from "../../utils/api-calls";
@@ -278,10 +278,14 @@ const NextPage = ({ backfn }) => {
       <p className="generic-text">
         All application process must be completed within the year of application
       </p>
-      <h1>REVISED SUBSCRIPTION RATES, EFFECTIVE JANUARY 1, 2021</h1>
+      {/* <h1>REVISED SUBSCRIPTION RATES, EFFECTIVE JANUARY 1, 2021</h1>
       <div className="subscription-rates">
         <img alt="" src={SubscriptionRates} />
-      </div>
+      </div> */}
+
+      <h3 style={{ color: "red", textAlign: "center" }}>
+        Submission of false information will lead to rejection
+      </h3>
 
       <div className="btn-con align-center">
         <button disabled={isLoading}>Complete</button>

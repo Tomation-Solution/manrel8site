@@ -58,7 +58,7 @@ const ApplicationStatus = () => {
                   >
                     1
                   </div>
-                  <p>Approval in Progress</p>
+                  <p>Approval in Process</p>
                 </div>
                 <div className="status-separator"></div>
                 <div className="status-text-con">
