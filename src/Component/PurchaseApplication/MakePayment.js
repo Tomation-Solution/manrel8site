@@ -79,14 +79,13 @@ const MakePayment = () => {
   });
 
   const onSubmitHandler = (data) => {
-    const rewrittenRegno = `RC${data.cac_registration_number}`;
+    const rewrittenRegno = `RC${locationState.cac_registration_number}`;
     data.cac_registration_number = rewrittenRegno;
-    // data.payment_type =paymentType
-    // mutate({...data,'payment_type':paymentType});
-    console.log(
-      paymentType,
-      data
-    )
+    data.name_of_company= locationState.name_of_company
+    data.email= locationState.email
+    data.corporate_office_addresse= locationState.corporate_office_addresse
+    data.telephone_number= locationState.telephone_number
+    data.website= locationState.website
     mutate({data,paymentType});
   };
 
