@@ -34,6 +34,7 @@ export const PublicationPayModal = ({ data, closefn }) => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -42,6 +43,7 @@ export const PublicationPayModal = ({ data, closefn }) => {
       email: "",
       phone_number: "",
       company_name: "",
+      paymentGateWay:'paystack'
     },
   });
 
@@ -103,6 +105,17 @@ export const PublicationPayModal = ({ data, closefn }) => {
               disabled
             />
           </div>
+          
+          
+          <select onChange={e=>{
+            setValue('paymentGateWay',e.target.value)
+          }}>
+            <option value='paystack'>select payment gateway</option>
+            <option value='paystack'>paystack</option>
+            <option value='flutterwave'>flutterwave</option>
+          </select>
+          <br />
+          <br />
           <div className="card">
             <button>Proceed To Pay</button>
           </div>

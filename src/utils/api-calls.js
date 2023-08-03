@@ -87,10 +87,11 @@ export const getStatus = async () => {
 
 //BUY FORM
 export const buyForm = async (payload) => {
+  console.log(payload)
   try {
     const res = await axios.post(
-      `${BASE_URL}tenant/prospectivemember/creation_of_prospective_member/`,
-      payload
+      `${BASE_URL}tenant/prospectivemember/creation_of_prospective_member/?payment_type=${payload.paymentType}`,
+      payload.data
     );
     return res.data;
   } catch (e) {
