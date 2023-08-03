@@ -16,9 +16,10 @@ const NewConExecutive = ({ data }) => {
     <>
       <article>
         <p className="article-desc" style={{ color: "#2b3513" }}>
-          The National Council is a group of experienced professionals duly
-          elected by MAN members and entrusted with the obligation to conduct
-          the affairs of the Association according to its constitution.
+          The National Council is a group of experienced professionals in the
+          manufacturing industry duly elected by MAN members and entrusted with
+          the obligation to conduct the affairs of the Association according to
+          its constitution.
         </p>
         <h1 className="article-header" style={{ marginTop: "30px" }}>
           Executive Committee Members
@@ -35,8 +36,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                   </div>
@@ -61,8 +62,8 @@ const NewConExecutive = ({ data }) => {
                       <img alt="" src={item?.image || NoPicture} />
                     </div>
                     <div className="right">
-                      <p className="header">{item?.title}</p>
                       <p className="header">{item?.name}</p>
+                      <p className="header">{item?.title}</p>
                       <p className="header">{item?.extra_title1}</p>
                       <p className="header">{item?.extra_title2}</p>
                     </div>
@@ -87,8 +88,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                   </div>
@@ -113,8 +114,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                   </div>
@@ -139,8 +140,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                   </div>
@@ -168,8 +169,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                     <p className="header">{item?.tenor}</p>
@@ -193,8 +194,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                   </div>
@@ -217,8 +218,8 @@ const NewConExecutive = ({ data }) => {
                     <img alt="" src={item?.image || NoPicture} />
                   </div>
                   <div className="right">
-                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.name}</p>
+                    <p className="header">{item?.title}</p>
                     <p className="header">{item?.extra_title1}</p>
                     <p className="header">{item?.extra_title2}</p>
                   </div>

@@ -1,0 +1,52 @@
+.Registercontainer {
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+}
+.Registercontainer .formcontainer {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.Registercontainer .formcontainer .container {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.Registercontainer .formcontainer .container h3 {
+  font-weight: 500;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.Registercontainer .top {
+  text-align: center;
+}
+.Registercontainer .top h1 {
+  color: #2b3513;
+  font-size: 50px;
+}
+.Registercontainer .top p {
+  font-size: 16px;
+}
+.Registercontainer .top h3 {
+  font-size: 29px;
+}
+
+@media screen and (max-width: 600px) {
+  .Registercontainer .top h1 {
+    color: #2b3513;
+    font-size: 30px;
+  }
+  .Registercontainer .top p {
+    font-size: 14px;
+  }
+  .Registercontainer .top h3 {
+    font-size: 20px;
+  }
+}

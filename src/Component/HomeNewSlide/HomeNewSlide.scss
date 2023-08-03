@@ -15,10 +15,10 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 40px 60px;
-    height: 500px !important;
+    height: 700px !important;
     @include mobile-6 {
       padding: 20px 30px;
-      height: auto;
+      height: 400px !important;
     }
   }
 
@@ -31,7 +31,7 @@
     // -webkit-background-size: cover;
     // background-size: cover !important;
     transition: all 1s ease-in-out !important;
-    background-size: 130% !important;
+    background-size: 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
   }

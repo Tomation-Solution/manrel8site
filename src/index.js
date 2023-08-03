@@ -3,8 +3,13 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import Reports from "./Component/Reports/Reports";
 import reportWebVitals from "./reportWebVitals";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { QueryClient, QueryClientProvider } from "react-query";
+// import { ReactQueryDevtools } from "react-query/devtools";
+
+import Reports from "./Component/Reports/Reports";
 import News from "./Component/News/News";
 import Members from "./Component/Members/Members";
 import ExistingMembers from "./Component/Members/ExistingMembers";
@@ -13,9 +18,7 @@ import Services from "./Component/Services/Services";
 import InsightMore from "./Component/InsightMore/App";
 import Gallery from "./Component/Gallery/App";
 import Events from "./Component/Events/Events";
-// import History from "./Component/History/History";
 import ScrollToTop from "./Scroll";
-// import MembRequire from "./Component/Members/MembRequire";
 import Sectoral from "./Component/Sectoral/Sectoral";
 import Operate from "./Component/Sectoral/Operate";
 import Mrc from "./Component/Sectoral/Mrc";
@@ -42,9 +45,6 @@ import PurchaseApplication from "./Component/PurchaseApplication/PurchaseApplica
 import MakePayment from "./Component/PurchaseApplication/MakePayment";
 import ApplicationPortal from "./Component/ApplicationPortal/ApplicationPortal";
 import ApplicationStatus from "./Component/ApplicationPortal/ApplicationStatus";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { DashBoard } from "./Component/DashBoard/DashBoard";
 import HowWeWork from "./Component/NewAbout/HowWeWork";
 import PaidPublications from "./Component/PaidPublications/PaidPublications";
@@ -52,7 +52,24 @@ import ProspectiveMemberLogin from "./Component/ProspectiveMemberLogin/Prospecti
 import SingleNews from "./Component/SingleNews/SingleNews";
 import MembershipAdmission from "./Component/ApplicationPortal/MembershipAdmission";
 import ScrollTooTop from "./Component/ScrollTooTop/ScrollTooTop";
-// import { ReactQueryDevtools } from "react-query/devtools";
+import RevampedEventPage from "./RevampedEventSection/RevampedEventPage";
+import {
+  REVAMP_EVENTS_BASE_EVENT_URL,
+  revampedEventNavigationItems,
+} from "./constants/revamped_events_constants";
+
+import RevampedEventFAQ from "./RevampedEventSection/RevampedEventFAQ/RevampedEventFAQ";
+import RevampEventHome from "./RevampedEventSection/RevampedEventHome/RevampEventHome";
+import RevampedEventRegister from "./RevampedEventSection/RevampedEventRegister/RevampedEventRegister";
+import RevampedEventGeneral from "./RevampedEventSection/RevampedEventGeneral/RevampedEventGeneral";
+import RevampedEventExhibition from "./RevampedEventSection/RevampedEventExhibition/RevampedEventExhibition";
+import RevampedEventSpecialGuest from "./RevampedEventSection/RevampedEventSpecialGuest/RevampedEventSpecialGuest";
+import RevampedEventSpeaker from "./RevampedEventSection/RevampedEventSpeaker/RevampedEventSpeaker";
+import RevampedEventHost from "./RevampedEventSection/RevampedEventHost/RevampedEventHost";
+import RevampedEventOpeningCeremony from "./RevampedEventSection/RevampedEventOpeniningCeremony/RevampedEventOpeningCeremony";
+import RevampedEventPrivate from "./RevampedEventSection/RevampedEventPrivate/RevampedEventPrivate";
+import RevampedEventPublic from "./RevampedEventSection/RevampedEventPublic/RevampedEventPublic";
+import RevampedEventVenue from "./RevampedEventSection/RevampedEventVenue/RevampedEventVenue";
 
 const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -64,9 +81,76 @@ root.render(
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          {/* REVAMPED EVENTS */}
+
+          <Route
+            path={REVAMP_EVENTS_BASE_EVENT_URL}
+            element={<RevampedEventPage />}
+          >
+            <Route index element={<RevampEventHome />} />
+
+            <Route
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "faqs"
+                ).link
+              }
+              element={<RevampedEventFAQ />}
+            />
+
+            {/* PUT ALL YOUR LINKS HERE*/}
+
+            {/* MAKE THE LINKS SIMILAR WITH THIS */}
+
+            <Route
+              path="/revamped-events/register"
+              element={<RevampedEventRegister />}
+            />
+            <Route
+              path="/revamped-events/speaker"
+              element={<RevampedEventSpeaker />}
+            />
+
+            <Route
+              path="/revamped-events/general"
+              element={<RevampedEventGeneral />}
+            />
+            <Route
+              path="/revamped-events/exhibition"
+              element={<RevampedEventExhibition />}
+            />
+
+            <Route
+              path="/revamped-events/specialguest"
+              element={<RevampedEventSpecialGuest />}
+            />
+            <Route
+              path="/revamped-events/host"
+              element={<RevampedEventHost />}
+            />
+            <Route
+              path="/revamped-events/openingceremony"
+              element={<RevampedEventOpeningCeremony />}
+            />
+            <Route
+              path="/revamped-events/private"
+              element={<RevampedEventPrivate />}
+            />
+            <Route
+              path="/revamped-events/public"
+              element={<RevampedEventPublic />}
+            />
+            <Route
+              path="/revamped-events/venue"
+              element={<RevampedEventVenue />}
+            />
+
+            {/* PUT ALL YOUR LINKS HERE*/}
+          </Route>
+
+          {/* REVAMPED EVENTS */}
+
           <Route path="/" element={<App />} />
-          {/* <Route path='About' element={<About />} /> */}
-          {/* <Route path="/exec-committee" element={<ExecutiveCommitee />} /> */}
           <Route path="/publications" element={<Publications />} />
           <Route
             path="/publications-details/:id"
@@ -113,7 +197,6 @@ root.render(
           <Route path="/mrc-services" element={<MRCServices />} />
           <Route path="/mrc-contact" element={<MRCContact />} />
 
-          {/* <Route path="/about" element={<History />} /> */}
           <Route path="/services" element={<Services />} />
           <Route path="/news" element={<News />} />
           <Route path="/events" element={<Events />} />

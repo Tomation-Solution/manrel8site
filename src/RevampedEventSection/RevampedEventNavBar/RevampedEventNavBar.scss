@@ -1,0 +1,26 @@
+@import "../../Styles/resources";
+
+.revamped-event-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  color: #2b3513;
+
+  .nav-items {
+    a {
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #2b3513;
+    }
+
+    &.active {
+      a {
+        color: lightgreen;
+        font-weight: 700;
+      }
+    }
+  }
+}
