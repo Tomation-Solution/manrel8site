@@ -12,6 +12,7 @@ import { useQuery } from "react-query";
 import { getAboutHistoryPVC } from "../../utils/csm-api-calls";
 import { FormError } from "../NewEvents/FormComponents";
 import Loader from "../Loader/Loader";
+import ManFirstAGM from "../../assets/ManFirstAGM.jpeg";
 
 const NewAbout = () => {
   const { isLoading, isError, isFetching, data } = useQuery(
@@ -36,7 +37,8 @@ const NewAbout = () => {
             <div
               className="topBg"
               style={{
-                background: `url(${data.main_image})`,
+                height: "400px",
+                background: `url(${ManFirstAGM})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",

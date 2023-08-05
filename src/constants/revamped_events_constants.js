@@ -7,7 +7,7 @@ const revampedEventNavigationItems = [
   { title: "speaker(s)", link: `${REVAMP_EVENTS_BASE_EVENT_URL}/speaker` },
   { title: "venue", link: `${REVAMP_EVENTS_BASE_EVENT_URL}/venue` },
   { title: "exhibition", link: `${REVAMP_EVENTS_BASE_EVENT_URL}/exhibition` },
-  { title: "faqs", link: `${REVAMP_EVENTS_BASE_EVENT_URL}/FAQ` },
+  { title: "FAQS", link: `${REVAMP_EVENTS_BASE_EVENT_URL}/FAQ` },
 ];
 
 export { REVAMP_EVENTS_BASE_EVENT_URL, revampedEventNavigationItems };

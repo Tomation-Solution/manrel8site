@@ -77,6 +77,12 @@
   font-weight: 700;
 }
 
+.homeheadertext p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 1200px) {
   /* .Homecontainer .homeheader .homeheaderpicture {
     height: 500px;
