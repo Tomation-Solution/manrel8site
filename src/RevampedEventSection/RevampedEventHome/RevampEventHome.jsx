@@ -1,14 +1,16 @@
 import "./RevampEventHome.css";
 
-import img1 from "../../assets/reusedimages/Homeimages/ChiefHost.svg";
-import img2 from "../../assets/reusedimages/Homeimages/GuestHonour.svg";
-import img3 from "../../assets/reusedimages/Homeimages/newspeaker.jpeg";
-import sidearrow from "../../assets/reusedimages/sidearrow.svg";
 import img4 from "../../assets/reusedimages/homereused.svg";
 import img5 from "../../assets/reusedimages/calendar.svg";
 import img6 from "../../assets/reusedimages/venue.svg";
-import { Link } from "react-router-dom";
 import Button from "../../Component/RevampEventComponents/Button/Button";
+import {
+  RevampAGMCountDown,
+  RevampHomepageCard,
+} from "../../Component/RevampEventComponents/RevampCustomComponents/RevampCustomComponents";
+
+import { Link } from "react-router-dom";
+import { event_speakers_details } from "../../constants/event_speakers_details";
 
 const RevampEventHome = () => {
   return (
@@ -18,8 +20,12 @@ const RevampEventHome = () => {
           <div className="homeheadertext">
             <h1>
               Setting the agenda for competitive manufacturing under the AfCFTA:
+              <br />
               What Nigeria needs to do.
             </h1>
+            <p>2023-05-10</p>
+
+            <p>Ikeja</p>
             <Link to="/revamped-events/register">
               <Button content="Register" variants="graysquarebackground" />
             </Link>
@@ -49,128 +55,40 @@ const RevampEventHome = () => {
         </p>
       </div>
       <div className="homeimages">
-        <div>
-          <img src={img1} alt="" className="images" />
-          <div
-            style={{
-              display: "flex",
-              width: "70%",
-              margin: "0 auto",
-              justifyContent: "space-between",
-            }}
-          >
-            <p style={{ fontWeight: "600" }}>Chief Host</p>
-
-            <Link to="/revamped-events/host">
-              <img src={sidearrow} alt="" />
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <img src={img2} alt="" className="images" />
-          <div
-            style={{
-              display: "flex",
-              width: "70%",
-              margin: "0 auto",
-              justifyContent: "space-between",
-            }}
-          >
-            <p style={{ fontWeight: "600" }}>Special Guest of Honour</p>
-            <button>
-              <Link to="/revamped-events/specialguest">
-                <img src={sidearrow} alt="" />
-              </Link>
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <img src={img3} alt="" className="images" />
-          <div
-            style={{
-              display: "flex",
-              width: "70%",
-              margin: "0 auto",
-              justifyContent: "space-between",
-            }}
-          >
-            <p style={{ fontWeight: "600" }}>Meet the Speaker</p>
-            <button>
-              <Link to="/revamped-events/speaker">
-                <img src={sidearrow} alt="" />
-              </Link>
-            </button>
-          </div>
-        </div>
+        {event_speakers_details.map((item, index) => (
+          <RevampHomepageCard
+            key={index}
+            image={item.speaker_image}
+            title={item.intro_text}
+            where={`/revamped-events/speaker/details/${item.id}`}
+          />
+        ))}
       </div>
+
       <div className="homeimages">
-        <div>
-          <img src={img4} alt="" className="images" />
+        <RevampHomepageCard
+          image={img4}
+          title={"Participate in the 3-day Exhibition"}
+          where={"/revamped-events/exhibition"}
+        />
 
-          <div
-            style={{
-              display: "flex",
-              width: "70%",
-              margin: "0 auto",
-              justifyContent: "space-between",
-            }}
-          >
-            <p style={{ fontWeight: "600" }}>
-              Participate in the 3-day Exhibition
-            </p>
+        <RevampHomepageCard
+          image={img5}
+          title={"Save The Date 17-19 October 2023"}
+          where={"/revamped-events"}
+        />
 
-            <button>
-              <Link to="/revamped-events/exhibition">
-                <img src={sidearrow} alt="" />
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div>
-          <img src={img5} alt="" className="images" />
-
-          <div
-            style={{
-              display: "flex",
-              width: "70%",
-              margin: "0 auto",
-              justifyContent: "space-between",
-            }}
-          >
-            <p style={{ fontWeight: "600" }}>
-              Save The Date 17-19 October 2023
-            </p>
-            <button>
-              <Link to="/">
-                <img src={sidearrow} alt="" />
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div>
-          <img src={img6} alt="" className="images" />
-          <div
-            style={{
-              display: "flex",
-              width: "70%",
-              margin: "0 auto",
-              justifyContent: "space-between",
-            }}
-          >
-            <p style={{ fontWeight: "600" }}>The Venue</p>
-
-            <button>
-              <Link to="/revamped-events/venue">
-                <img src={sidearrow} alt="" />
-              </Link>
-            </button>
-          </div>
-        </div>
+        <RevampHomepageCard
+          image={img6}
+          title={"The Venue"}
+          where={"/revamped-events/venue"}
+        />
 
         <br />
         <br />
+
+        <RevampAGMCountDown />
+
         <br />
         <br />
       </div>

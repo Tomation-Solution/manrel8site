@@ -1,0 +1,49 @@
+.revamp-homepage-card {
+  margin: 20px;
+  border: 2px solid transparent;
+  transition: all 0.5s;
+  border-radius: 10px;
+  padding: 10px;
+
+  img {
+    border-radius: 10px;
+  }
+
+  &:hover {
+    border: 2px solid #2b3513;
+  }
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 40px 0px;
+
+  .countdown-header {
+    font-weight: 400;
+    color: #2b3513;
+  }
+}
+
+.countdown-styled {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  span {
+    background-color: #2b3513;
+    padding: 10px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}

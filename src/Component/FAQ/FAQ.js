@@ -14,6 +14,7 @@ const FAQ = () => {
     content: [""],
   });
   const { isLoading, data } = useQuery("faqApi", faqApi);
+
   return (
     <UIProvider>
       <NewNavBar />

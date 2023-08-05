@@ -1,0 +1,72 @@
+@import "../../Styles/resources";
+
+.faq {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  .faq-wrap {
+    max-width: 1120px;
+    width: 100%;
+    padding: 50px 0;
+    @include mobile-1120px {
+      padding: 50px 20px;
+    }
+    .top {
+      text-align: center;
+      padding-bottom: 56px;
+      h1 {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 130%;
+        color: #555d42;
+        padding-bottom: 17px;
+        @include mobile-5 {
+          font-size: 30px;
+        }
+      }
+    }
+    .listt {
+      display: flex;
+      justify-content: center;
+      .list {
+        width: 100%;
+        max-width: 1000px;
+        .card {
+          height: 70px;
+          overflow: hidden;
+          &.active {
+            height: fit-content;
+            overflow: unset;
+          }
+          header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f1f1f1;
+            min-height: 70px;
+            align-items: center;
+            padding: 10px 0;
+            h2 {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 100%;
+              color: #141010;
+              @include mobile-5 {
+                font-size: 20px;
+              }
+            }
+          }
+          article {
+            padding: 10px 0;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 130%;
+            color: #141010;
+            @include mobile-5 {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

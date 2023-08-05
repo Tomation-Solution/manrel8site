@@ -1,55 +1,43 @@
-import "./RevampedEventFAQ.css";
-// import arrow from '../../assets/reusedimages/downarrow.svg'
-import arrow from "../../assets/reusedimages/downarrow.svg";
+import "./RevampedEventFAQ.scss";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import { useState } from "react";
+import { revamped_event_faqs } from "../../constants/event_faqs";
 
 const RevampedEventFAQ = () => {
-  return (
-    <div className="FAQcontainer">
-      <div className="heading">
-        <h3>Frequently Asked Questions</h3>
-        <h1>FAQs</h1>
-      </div>
+  const [selectedQuest, setSelectedQuest] = useState({
+    header: "",
+    content: [""],
+  });
 
-      <div className="questions">
-        <div className="insidequestions">
-          <h3>Lorem Ipsum?</h3>
-          <button
-            onClick={() => {
-              alert("View more FAQs");
-            }}
-          >
-            <img src={arrow} alt="" />
-          </button>
+  return (
+    <div className="faq">
+      <div className="faq-wrap">
+        <div className="top">
+          <h1> Frequently Asked Questions (FAQ)</h1>
         </div>
-        <div className="insidequestions">
-          <h3>Lorem Ipsum?</h3>
-          <button>
-            <img src={arrow} alt="" />
-          </button>
-        </div>
-        <div className="insidequestions">
-          <h3>Lorem Ipsum?</h3>
-          <button>
-            <img src={arrow} alt="" />
-          </button>
-        </div>
-        <div className="insidequestions">
-          <h3>Lorem Ipsum?</h3>
-          <button>
-            <img src={arrow} alt="" />
-          </button>
-        </div>
-        <div className="insidequestions">
-          <h3>Lorem Ipsum?</h3>
-          <button>
-            <img src={arrow} alt="" />
-          </button>
-        </div>
-        <div className="insidequestions">
-          <h3>Lorem Ipsum?</h3>
-          <button>
-            <img src={arrow} alt="" />
-          </button>
+        <div className="listt">
+          <div className="list">
+            {revamped_event_faqs?.map((item, index) => (
+              <div
+                className={
+                  selectedQuest.header === item.header ? "card active" : "card"
+                }
+                key={index}
+              >
+                <header onClick={() => setSelectedQuest(item)}>
+                  <h2>{item.header}</h2>
+                  {selectedQuest.header === item.header ? (
+                    <FaMinus />
+                  ) : (
+                    <FaPlus />
+                  )}
+                </header>
+                {item.content.map((data, index) => (
+                  <article key={index}>{data}</article>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

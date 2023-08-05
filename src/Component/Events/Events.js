@@ -7,11 +7,7 @@ import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
-import {
-  FreeEvents,
-  PaidEvents,
-  SpecialEvents,
-} from "../PaidEvents/PaidEvents";
+import { FreeEvents, PaidEvents } from "../PaidEvents/PaidEvents";
 import { getEvents } from "../../utils/csm-api-calls";
 import { useQuery } from "react-query";
 import Loader from "../Loader/Loader";
@@ -55,12 +51,12 @@ const Events = () => {
           >
             Paid Events
           </span>
-          <span
+          {/* <span
             className={options === "special" ? "span-active" : "span-inactive"}
             onClick={() => setOptions("special")}
           >
             Annual General Meeting
-          </span>
+          </span> */}
         </div>
 
         {eventFetching || eventLoading ? (
@@ -81,13 +77,13 @@ const Events = () => {
                 )}
               />
             ) : null}
-            {options === "special" ? (
+            {/* {options === "special" ? (
               <SpecialEvents
                 data={eventFetchData.filter(
                   (item) => item.is_agm === true && item.is_paid === false
                 )}
               />
-            ) : null}
+            ) : null} */}
           </>
         ) : (
           <FormError>Can't Fetch Event Data</FormError>

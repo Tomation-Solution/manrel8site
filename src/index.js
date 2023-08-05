@@ -66,10 +66,9 @@ import RevampedEventExhibition from "./RevampedEventSection/RevampedEventExhibit
 import RevampedEventSpecialGuest from "./RevampedEventSection/RevampedEventSpecialGuest/RevampedEventSpecialGuest";
 import RevampedEventSpeaker from "./RevampedEventSection/RevampedEventSpeaker/RevampedEventSpeaker";
 import RevampedEventHost from "./RevampedEventSection/RevampedEventHost/RevampedEventHost";
-import RevampedEventOpeningCeremony from "./RevampedEventSection/RevampedEventOpeniningCeremony/RevampedEventOpeningCeremony";
-import RevampedEventPrivate from "./RevampedEventSection/RevampedEventPrivate/RevampedEventPrivate";
-import RevampedEventPublic from "./RevampedEventSection/RevampedEventPublic/RevampedEventPublic";
+import RevampedEventHighlights from "./RevampedEventSection/RevampedEventHighlights/RevampedEventHighlights";
 import RevampedEventVenue from "./RevampedEventSection/RevampedEventVenue/RevampedEventVenue";
+import RevampEventSpeakerDetails from "./RevampedEventSection/RevampedEventSpeaker/RevampEventSpeakerDetails";
 
 const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -92,7 +91,7 @@ root.render(
             <Route
               path={
                 revampedEventNavigationItems.find(
-                  (item) => item.title === "faqs"
+                  (item) => item.title === "FAQS"
                 ).link
               }
               element={<RevampedEventFAQ />}
@@ -111,6 +110,7 @@ root.render(
               }
               element={<RevampedEventRegister />}
             />
+
             <Route
               // path="/revamped-events/speaker"
               path={
@@ -119,6 +119,16 @@ root.render(
                 ).link
               }
               element={<RevampedEventSpeaker />}
+            />
+
+            <Route
+              // path="/revamped-events/speaker"
+              path={
+                revampedEventNavigationItems.find(
+                  (item) => item.title === "speaker(s)"
+                ).link + "/details/:id"
+              }
+              element={<RevampEventSpeakerDetails />}
             />
 
             <Route
@@ -149,16 +159,8 @@ root.render(
               element={<RevampedEventHost />}
             />
             <Route
-              path="/revamped-events/openingceremony"
-              element={<RevampedEventOpeningCeremony />}
-            />
-            <Route
-              path="/revamped-events/private"
-              element={<RevampedEventPrivate />}
-            />
-            <Route
-              path="/revamped-events/public"
-              element={<RevampedEventPublic />}
+              path="/revamped-events/hightlight/:id"
+              element={<RevampedEventHighlights />}
             />
             <Route
               // path="/revamped-events/venue"
