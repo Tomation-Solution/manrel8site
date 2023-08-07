@@ -50,8 +50,8 @@ const RevampEventHome = () => {
           government officials, MAN member-companies, our friends from the
           international community, and thoughtful leaders. We invite all
           delegates to join us in this historic celebration and share their
-          insights and perspectives. We look forward to welcoming you
-          at the 51st AGM.
+          insights and perspectives. We look forward to welcoming you at the
+          51st AGM.
         </p>
       </div>
       <div className="homeimages">
@@ -86,12 +86,11 @@ const RevampEventHome = () => {
 
         <br />
         <br />
-
-        <RevampAGMCountDown />
-
-        <br />
-        <br />
       </div>
+
+      <br />
+      <br />
+      <RevampAGMCountDown />
 
       <div className="buttoncontainer">
         <Link to="/revamped-events/register">
