@@ -39,11 +39,24 @@
     font-weight: 600;
   }
 
-  span {
-    background-color: #2b3513;
-    padding: 10px;
-    color: #fff;
-    font-size: 25px;
-    font-weight: 600;
+  .date-value-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+    span {
+      color: #fff;
+      background-color: #2b3513;
+      width: 100px;
+      text-align: center;
+      padding: 10px 0px;
+      font-weight: 600;
+      font-size: 40px;
+    }
   }
 }

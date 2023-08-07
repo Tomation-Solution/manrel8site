@@ -43,13 +43,30 @@ export function RevampCountDown({ dateInMilliseconds, header }) {
       // Render a countdown
       return (
         <div className="countdown-styled">
-          <span>{data.days}</span>
+          <div className="date-value-name">
+            <p>Days</p>
+            <span>{data.days}</span>
+          </div>
           <p>:</p>
-          <span>{data.hours}</span>
+
+          <div className="date-value-name">
+            <p>Hours</p>
+            <span>{data.hours}</span>
+          </div>
+
           <p>:</p>
-          <span>{data.minutes}</span>
+
+          <div className="date-value-name">
+            <p>Minutes</p>
+            <span>{data.minutes}</span>
+          </div>
+
           <p>:</p>
-          <span>{data.seconds}</span>
+
+          <div className="date-value-name">
+            <p>Seconds</p>
+            <span>{data.seconds}</span>
+          </div>
         </div>
       );
     }
@@ -58,14 +75,19 @@ export function RevampCountDown({ dateInMilliseconds, header }) {
   return (
     <div className="countdown-container">
       <h1 className="countdown-header">{header}</h1>
-      <Countdown date={Date.now() + 432000000} renderer={renderer} />
+      <Countdown date={dateInMilliseconds} renderer={renderer} />
     </div>
   );
 }
 
 export function RevampAGMCountDown() {
-  const date = new Date("2023-10-04");
+  const date = new Date("2023-10-17");
   const ms = date.getTime();
 
-  return <RevampCountDown dateInMilliseconds={ms} header={"Count Down"} />;
+  return (
+    <RevampCountDown
+      dateInMilliseconds={ms}
+      header={"The 51st Annual General Meeting"}
+    />
+  );
 }
