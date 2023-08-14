@@ -57,15 +57,15 @@
   /* border: 1px solid red; */
 }
 
-.Homecontainer .homeheader .homeheaderpicture {
-  background-image: url("../../assets/reusedimages/Homeimages/homeheader.jpeg");
-  /* padding: 100px; */
-  background-repeat: no-repeat;
+/* .Homecontainer .homeheader .homeheaderpicture { */
+/* background-image: url("../../assets/reusedimages/Homeimages/homeheader.jpeg"); */
+/* padding: 100px; */
+/* background-repeat: no-repeat;
 
-  background-size: 100%;
-  /* max-width:  1508px; */
-  /* height: 804px; */
-}
+  background-size: 100%; */
+/* max-width:  1508px; */
+/* height: 804px; */
+/* } */
 .Homecontainer .homeheader .homeheadertext {
   padding: 40px;
   width: 70%;

@@ -77,7 +77,9 @@ const NavSlider = ({ clickfn }) => {
             </span>
 
             <span className="items-span">
-              <Link to={REVAMP_EVENTS_BASE_EVENT_URL}>Revamped Events</Link>
+              <Link to={REVAMP_EVENTS_BASE_EVENT_URL}>
+                Annual General Meeting
+              </Link>
             </span>
           </div>
         </div>

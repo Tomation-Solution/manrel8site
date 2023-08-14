@@ -46,6 +46,8 @@ const PaidPublications = () => {
         />
       )}
 
+      {/* <PaymentModalComponent /> */}
+
       <UIProvider>
         <div className="paid-publications">
           <Subscribe />

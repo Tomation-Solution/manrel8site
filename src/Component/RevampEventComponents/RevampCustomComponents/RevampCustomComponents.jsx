@@ -2,6 +2,10 @@ import "./RevampCustomComponents.scss";
 
 import { Link } from "react-router-dom";
 import Countdown from "react-countdown";
+import { useMemo } from "react";
+import { useCustomFetcher } from "../../../utils/customfetcher";
+import { getAgmHomepage } from "../../../utils/csm-api-calls";
+import EmptyState from "../../EmptyState/EmptyState";
 
 export function RevampHomepageCard({ image, where, title }) {
   return (
@@ -81,13 +85,37 @@ export function RevampCountDown({ dateInMilliseconds, header }) {
 }
 
 export function RevampAGMCountDown() {
-  const date = new Date("2023-10-17");
+  const { isError, loadingState, data } = useCustomFetcher(
+    "hompage-content2",
+    getAgmHomepage
+  );
+
+  const renderData = useMemo(() => data, [data]);
+
+  if (loadingState) {
+    return <EmptyState header="loading data" />;
+  }
+
+  if (data?.length <= 0) {
+    return <EmptyState header={`There seems to be nothing here`} />;
+  }
+
+  if (isError || !data) {
+    return (
+      <EmptyState
+        header="Oops something went wrong"
+        subHeader="try again later"
+      />
+    );
+  }
+
+  const date = new Date(renderData?.agm_start_date);
   const ms = date.getTime();
 
   return (
     <RevampCountDown
       dateInMilliseconds={ms}
-      header={"The 51st Annual General Meeting"}
+      header={renderData?.countdown_text}
     />
   );
 }

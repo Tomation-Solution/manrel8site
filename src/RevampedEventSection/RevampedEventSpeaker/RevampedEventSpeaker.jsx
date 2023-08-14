@@ -4,13 +4,37 @@ import {
   RevampAGMCountDown,
   RevampHomepageCard,
 } from "../../Component/RevampEventComponents/RevampCustomComponents/RevampCustomComponents";
-import { event_speakers_details } from "../../constants/event_speakers_details";
+import { getAllAgmSpeakers } from "../../utils/csm-api-calls";
+import { useCustomFetcher } from "../../utils/customfetcher";
+import EmptyState from "../../Component/EmptyState/EmptyState";
 
 const RevampedEventSpeaker = () => {
+  const { isError, loadingState, data } = useCustomFetcher(
+    "speakers-details",
+    getAllAgmSpeakers
+  );
+
+  if (loadingState) {
+    return <EmptyState header="loading data" />;
+  }
+
+  if (data?.length <= 0) {
+    return <EmptyState header={`There seems to be nothing here`} />;
+  }
+
+  if (isError || !data) {
+    return (
+      <EmptyState
+        header="Oops something went wrong"
+        subHeader="try again later"
+      />
+    );
+  }
+
   return (
     <>
       <div className="homeimages">
-        {event_speakers_details.map((item, index) => (
+        {data.reverse().map((item, index) => (
           <RevampHomepageCard
             key={index}
             image={item.speaker_image}

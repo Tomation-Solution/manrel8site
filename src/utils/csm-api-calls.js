@@ -15,7 +15,10 @@ export const getPaidPublications = async () => {
 
 export const payForPublication = async (payload) => {
   try {
-    const res = await publicCmsRequest.post(`/payments/publications?payment_type=${payload.paymentGateWay}`, payload);
+    const res = await publicCmsRequest.post(
+      `/payments/publications?gatewaytype=${payload.paymentGateWay}`,
+      payload
+    );
     return res.data;
   } catch (e) {
     throw new AxiosError(e);
@@ -83,7 +86,7 @@ export const getEvents = async () => {
 export const eventTrainingRegister = async (payload) => {
   try {
     const res = await publicCmsRequest.post(
-      `/payments/event-training-registration`,
+      `/payments/event-training-registration?gatewaytype=${payload.paymentGateWay}`,
       payload
     );
     return res.data;
@@ -326,5 +329,89 @@ export const getAboutWhereWeOfficesPVC = async () => {
     return res.data;
   } catch (e) {
     throw new AxiosError(e);
+  }
+};
+
+//AGM Revamped Section
+export const getAgmHomepage = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/homepage`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAgmProgrammePage = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/programme`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAgmVenuePage = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/venue`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAgmExhibitionPage = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/exhibition`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAllAgmPrograms = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/program-public`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAllAgmSpeakers = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/speakers-public`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAllAgmPreviousExhibitionImages = async () => {
+  try {
+    const res = await publicCmsRequest.get(
+      `/agmcms/previous-exhibition-images-public`
+    );
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAllAgmFaqs = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/agmcms/faq-public`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAGMEvent = async () => {
+  try {
+    const res = await publicCmsRequest.get(`events/get-agm-event`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
   }
 };

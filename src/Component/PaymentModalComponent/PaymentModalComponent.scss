@@ -1,0 +1,48 @@
+@import "../../Styles/resources";
+
+.payment-modal {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 500px;
+  width: 350px;
+  overflow-y: auto;
+  padding: 20px 10px;
+
+  .closebtn {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ddd;
+    top: 5px;
+    right: 5px;
+  }
+
+  .paymentTypes {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin: 10px 0px;
+
+    .paymentType {
+      border: 1px solid #352b15;
+      border-radius: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        height: 50px;
+        object-fit: contain;
+        width: 50px;
+      }
+    }
+  }
+}

@@ -1,15 +1,37 @@
 import "./RevampedEventSpeaker.css";
 
-import { Navigate, useParams } from "react-router-dom";
-import { event_speakers_details } from "../../constants/event_speakers_details";
+import { useParams } from "react-router-dom";
+import { useCustomFetcher } from "../../utils/customfetcher";
+import { getAllAgmSpeakers } from "../../utils/csm-api-calls";
+import EmptyState from "../../Component/EmptyState/EmptyState";
+import sanitize from "sanitize-html";
 
 function RevampEventSpeakerDetails() {
   const { id } = useParams();
 
-  const data = event_speakers_details.find((item) => item.id === id);
+  const { isError, loadingState, data } = useCustomFetcher(
+    "speakers",
+    getAllAgmSpeakers,
+    (data) => data.data.find((item) => item.id === Number(id))
+  );
 
-  if (!id || !data) {
-    return <Navigate to={"/revamped-events/speaker"} />;
+  console.log(data);
+
+  if (loadingState) {
+    return <EmptyState header="loading data" />;
+  }
+
+  if (data?.length <= 0) {
+    return <EmptyState header={`There seems to be nothing here`} />;
+  }
+
+  if (isError || !data || !id) {
+    return (
+      <EmptyState
+        header="Oops something went wrong"
+        subHeader="try again later"
+      />
+    );
   }
 
   return (
@@ -46,12 +68,9 @@ function RevampEventSpeakerDetails() {
       </div>
 
       <div className="Speakertext">
-        {data.speaker_words?.map((item, index) => (
-          <section key={index}>
-            <p>{item}</p>
-            <br />
-          </section>
-        ))}
+        <div
+          dangerouslySetInnerHTML={{ __html: sanitize(data?.speaker_words) }}
+        />
       </div>
     </div>
   );

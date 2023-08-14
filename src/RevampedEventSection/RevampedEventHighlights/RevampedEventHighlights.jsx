@@ -1,19 +1,38 @@
 import "./RevampedEventHighlights.css";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { event_programme_highlights } from "../../constants/event_programme_highlights";
+import { useNavigate, useParams } from "react-router-dom";
 import { ArrowBack } from "@mui/icons-material";
+import { getAllAgmPrograms } from "../../utils/csm-api-calls";
+import { useCustomFetcher } from "../../utils/customfetcher";
+import EmptyState from "../../Component/EmptyState/EmptyState";
 
 const RevampedEventHighlights = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const data = event_programme_highlights.find((item) => item.id === id);
+  const { isError, loadingState, data } = useCustomFetcher(
+    "programs1",
+    getAllAgmPrograms,
+    (data) => data?.data.find((item) => item.id === Number(id))
+  );
 
-  console.log(data?.video.length);
-
-  if (!id || !data) {
-    return <Navigate to={"/"} />;
+  if (loadingState) {
+    return <EmptyState header="loading data" />;
   }
+
+  if (data?.length <= 0) {
+    return <EmptyState header={`There seems to be nothing here`} />;
+  }
+
+  if (isError || !data || !id) {
+    return (
+      <EmptyState
+        header="Oops something went wrong"
+        subHeader="try again later"
+      />
+    );
+  }
+
+  console.log(data);
 
   return (
     <div className="Ceremonycontainer">
@@ -25,20 +44,39 @@ const RevampedEventHighlights = () => {
           </span>
         </div>
 
-        <h4>{data.title}</h4>
-        <h1>{data?.name}</h1>
+        <h4>See What Happened Last Year</h4>
+        <h1>{data?.program_title}</h1>
       </div>
 
       <div className="imagecontainer">
-        {data.video.map((item, index) => (
+        <video
+          style={{ backgroundColor: "#ddd" }}
+          src={data?.program_attached_file1}
+          autoPlay
+          loop
+        ></video>
+      </div>
+
+      {data?.program_attached_file2 ? (
+        <div className="imagecontainer">
           <video
             style={{ backgroundColor: "#ddd" }}
-            key={index}
-            src={item}
+            src={data?.program_attached_file2}
             autoPlay
             loop
           ></video>
-        ))}
+        </div>
+      ) : null}
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "20px 0px",
+        }}
+      >
+        <a href={data?.program_attached_file_link}>click to watch more</a>
       </div>
     </div>
   );
