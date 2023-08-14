@@ -11,6 +11,12 @@ import {
 } from "../../../utils/csm-api-calls";
 import Loader from "../../Loader/Loader";
 
+/**
+ * Component for agm registrations, uncomment the commented part of the return jsx to make it modal
+ * @param eventId the id of the agm event gotten from the database
+ * @param closefn a close function (not used in the revamped agm section)
+ * @returns React.JSX.Element
+ */
 export const AGMRegistrationModal = ({ eventId, closefn }) => {
   const [options, setoptions] = useState("member");
   const [lucheonExhibitorBoots, setLuncheonExihibitorBoots] = useState(null);

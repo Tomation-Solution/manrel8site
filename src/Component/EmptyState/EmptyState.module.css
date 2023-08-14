@@ -1,0 +1,17 @@
+.EmptyStateContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.EmptyStateContainer p {
+  color: #353535;
+}
+.EmptyStateContainer h1 {
+  font-weight: 500;
+  color: #353535;
+  font-size: 22px;
+}

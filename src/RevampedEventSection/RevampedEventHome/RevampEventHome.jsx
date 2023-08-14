@@ -1,8 +1,5 @@
 import "./RevampEventHome.css";
 
-import img4 from "../../assets/reusedimages/homereused.svg";
-import img5 from "../../assets/reusedimages/calendar.svg";
-import img6 from "../../assets/reusedimages/venue.svg";
 import Button from "../../Component/RevampEventComponents/Button/Button";
 import {
   RevampAGMCountDown,
@@ -10,22 +7,57 @@ import {
 } from "../../Component/RevampEventComponents/RevampCustomComponents/RevampCustomComponents";
 
 import { Link } from "react-router-dom";
-import { event_speakers_details } from "../../constants/event_speakers_details";
+import { useCustomFetcher } from "../../utils/customfetcher";
+import { getAgmHomepage, getAllAgmSpeakers } from "../../utils/csm-api-calls";
+import EmptyState from "../../Component/EmptyState/EmptyState";
+import sanitizeHtml from "sanitize-html";
 
 const RevampEventHome = () => {
+  const { isError, loadingState, data } = useCustomFetcher(
+    "hompage-content",
+    getAgmHomepage
+  );
+
+  const speakerData = useCustomFetcher("speakers", getAllAgmSpeakers);
+
+  if (loadingState || speakerData.loadingState) {
+    return <EmptyState header="loading data" />;
+  }
+
+  if (data?.length <= 0 || speakerData.data?.length <= 0) {
+    return <EmptyState header={`There seems to be nothing here`} />;
+  }
+
+  if (isError || !data || speakerData.isError || !speakerData.data) {
+    return (
+      <EmptyState
+        header="Oops something went wrong"
+        subHeader="try again later"
+      />
+    );
+  }
+
   return (
     <div className="Homecontainer">
       <div className="homeheader">
-        <div className="homeheaderpicture">
+        <div
+          className="homeheaderpicture"
+          style={{
+            backgroundImage: `linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0, 0.7)), url(${data?.main_image})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
           <div className="homeheadertext">
             <h1>
-              Setting the agenda for competitive manufacturing under the AfCFTA:
-              <br />
-              What Nigeria needs to do.
+              {data?.intro_text}
+              {/* <br />
+              What Nigeria needs to do. */}
             </h1>
-            <p>2023-05-10</p>
+            <p>{data?.agm_start_date}</p>
 
-            <p>Ikeja</p>
+            <p>{data?.location}</p>
             <Link to="/revamped-events/register">
               <Button content="Register" variants="graysquarebackground" />
             </Link>
@@ -34,28 +66,15 @@ const RevampEventHome = () => {
       </div>
 
       <div className="hometext">
-        <h2>The 51st Annual General Meeting</h2>
-        <p>
-          The 51st Annual General Meetings of the Manufacturers Association of
-          Nigeria will be held in Lagos at Oriental Hotel. In its usual
-          tradition, it will feature a three-day Made in Nigeria Exhibition, a
-          private session, and a public session. The 3rd Edition of the Adeola
-          Odutola Lecture will serve as the public session of the 51st AGM. This
-          year's theme is 'Setting the Agenda for Competitive Manufacturing
-          under the African Continental Free Trade Area (AfCFTA): What Nigeria
-          Needs to Do.' It is considered a critical discussion on the state of
-          the nation regarding manufacturing and the agenda for competitive
-          manufacturing under the AfCFTA. We are honored to have distinguished
-          speakers, panelists, and guests from various sectors, including top
-          government officials, MAN member-companies, our friends from the
-          international community, and thoughtful leaders. We invite all
-          delegates to join us in this historic celebration and share their
-          insights and perspectives. We look forward to welcoming you at the
-          51st AGM.
-        </p>
+        <h2>{data?.intro_title}</h2>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: sanitizeHtml(data?.intro_description),
+          }}
+        />
       </div>
       <div className="homeimages">
-        {event_speakers_details.map((item, index) => (
+        {speakerData?.data.reverse().map((item, index) => (
           <RevampHomepageCard
             key={index}
             image={item.speaker_image}
@@ -67,20 +86,20 @@ const RevampEventHome = () => {
 
       <div className="homeimages">
         <RevampHomepageCard
-          image={img4}
-          title={"Participate in the 3-day Exhibition"}
+          image={data?.exhibition_image}
+          title={data?.exhibition_text}
           where={"/revamped-events/exhibition"}
         />
 
         <RevampHomepageCard
-          image={img5}
-          title={"Save The Date 17-19 October 2023"}
+          image={data?.save_date_image}
+          title={data?.save_date_text}
           where={"/revamped-events"}
         />
 
         <RevampHomepageCard
-          image={img6}
-          title={"The Venue"}
+          image={data?.venue_text_image}
+          title={data?.venue_text}
           where={"/revamped-events/venue"}
         />
 

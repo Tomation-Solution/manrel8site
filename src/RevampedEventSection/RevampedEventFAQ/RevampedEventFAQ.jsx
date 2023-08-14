@@ -1,13 +1,38 @@
 import "./RevampedEventFAQ.scss";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { useState } from "react";
-import { revamped_event_faqs } from "../../constants/event_faqs";
+import EmptyState from "../../Component/EmptyState/EmptyState";
+import { getAllAgmFaqs } from "../../utils/csm-api-calls";
+import { useCustomFetcher } from "../../utils/customfetcher";
+import sanitize from "sanitize-html";
 
 const RevampedEventFAQ = () => {
   const [selectedQuest, setSelectedQuest] = useState({
     header: "",
     content: [""],
   });
+
+  const { isError, loadingState, data } = useCustomFetcher(
+    "all-agm-faqs",
+    getAllAgmFaqs
+  );
+
+  if (loadingState) {
+    return <EmptyState header="loading data" />;
+  }
+
+  if (data?.length <= 0) {
+    return <EmptyState header={`There seems to be nothing here`} />;
+  }
+
+  if (isError || !data) {
+    return (
+      <EmptyState
+        header="Oops something went wrong"
+        subHeader="try again later"
+      />
+    );
+  }
 
   return (
     <div className="faq">
@@ -17,7 +42,7 @@ const RevampedEventFAQ = () => {
         </div>
         <div className="listt">
           <div className="list">
-            {revamped_event_faqs?.map((item, index) => (
+            {data?.map((item, index) => (
               <div
                 className={
                   selectedQuest.header === item.header ? "card active" : "card"
@@ -32,9 +57,10 @@ const RevampedEventFAQ = () => {
                     <FaPlus />
                   )}
                 </header>
-                {item.content.map((data, index) => (
-                  <article key={index}>{data}</article>
-                ))}
+
+                <article
+                  dangerouslySetInnerHTML={{ __html: sanitize(item?.content) }}
+                />
               </div>
             ))}
           </div>
