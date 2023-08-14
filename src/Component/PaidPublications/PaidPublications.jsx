@@ -15,7 +15,6 @@ import { useQuery } from "react-query";
 import { getPaidPublications } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
-import PaymentModalComponent from "../PaymentModalComponent/PaymentModalComponent";
 
 const PaidPublications = () => {
   const [register, setRegister] = useState(false);
@@ -47,7 +46,7 @@ const PaidPublications = () => {
         />
       )}
 
-      <PaymentModalComponent />
+      {/* <PaymentModalComponent /> */}
 
       <UIProvider>
         <div className="paid-publications">

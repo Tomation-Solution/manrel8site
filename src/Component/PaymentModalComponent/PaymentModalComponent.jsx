@@ -4,6 +4,10 @@ import "./PaymentModalComponent.scss";
 import CloseIcon from "@mui/icons-material/Close";
 import BackDrop from "../BackDrop/BackDrop";
 
+/**
+ * this is a payment modal for 4 payment methods "UNUSED"
+ * @returns React.JSX.Element
+ */
 function PaymentModalComponent({
   closefn,
   paystackfn,

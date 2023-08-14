@@ -16,7 +16,7 @@ export const getPaidPublications = async () => {
 export const payForPublication = async (payload) => {
   try {
     const res = await publicCmsRequest.post(
-      `/payments/publications?payment_type=${payload.paymentGateWay}`,
+      `/payments/publications?gatewaytype=${payload.paymentGateWay}`,
       payload
     );
     return res.data;
@@ -86,7 +86,7 @@ export const getEvents = async () => {
 export const eventTrainingRegister = async (payload) => {
   try {
     const res = await publicCmsRequest.post(
-      `/payments/event-training-registration`,
+      `/payments/event-training-registration?gatewaytype=${payload.paymentGateWay}`,
       payload
     );
     return res.data;

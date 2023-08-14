@@ -104,6 +104,7 @@ export const RegisterTrainingModal = ({ data, closefn }) => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -112,6 +113,7 @@ export const RegisterTrainingModal = ({ data, closefn }) => {
       email: "",
       phone_number: "",
       company_name: "",
+      paymentGateWay: "paystack",
     },
   });
 
@@ -171,14 +173,28 @@ export const RegisterTrainingModal = ({ data, closefn }) => {
           </div>
 
           {renderData?.is_paid ? (
-            <div className="card">
-              <h4>Amount</h4>
-              <input
-                type="text"
-                value={formatMoney(renderData?.price)}
-                disabled
-              />
-            </div>
+            <>
+              <div className="card">
+                <h4>Amount</h4>
+                <input
+                  type="text"
+                  value={formatMoney(renderData?.price)}
+                  disabled
+                />
+              </div>
+
+              <select
+                onChange={(e) => {
+                  setValue("paymentGateWay", e.target.value);
+                }}
+              >
+                <option value="paystack">select payment gateway</option>
+                <option value="paystack">paystack</option>
+                <option value="flutterwave">flutterwave</option>
+              </select>
+              <br />
+              <br />
+            </>
           ) : null}
 
           <div className="card">
