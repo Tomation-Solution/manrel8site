@@ -409,7 +409,16 @@ export const getAllAgmFaqs = async () => {
 
 export const getAGMEvent = async () => {
   try {
-    const res = await publicCmsRequest.get(`events/get-agm-event`);
+    const res = await publicCmsRequest.get(`/events/get-agm-event`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getAllAdverts = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/membership/advertisement-public`);
     return res.data;
   } catch (error) {
     throw new AxiosError(error);
