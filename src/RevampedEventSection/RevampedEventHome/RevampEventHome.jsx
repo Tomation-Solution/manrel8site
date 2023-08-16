@@ -11,6 +11,7 @@ import { useCustomFetcher } from "../../utils/customfetcher";
 import { getAgmHomepage, getAllAgmSpeakers } from "../../utils/csm-api-calls";
 import EmptyState from "../../Component/EmptyState/EmptyState";
 import sanitizeHtml from "sanitize-html";
+import moment from "moment/moment";
 
 const RevampEventHome = () => {
   const { isError, loadingState, data } = useCustomFetcher(
@@ -50,14 +51,24 @@ const RevampEventHome = () => {
           }}
         >
           <div className="homeheadertext">
-            <h1>
-              {data?.intro_text}
-              {/* <br />
-              What Nigeria needs to do. */}
-            </h1>
-            <p>{data?.agm_start_date}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: sanitizeHtml(data?.intro_text),
+              }}
+            />
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                margin: "10px 0px",
+              }}
+            >
+              <p style={{ fontWeight: "300" }}>
+                {moment(data?.agm_start_date).format("LL")}
+              </p>
 
-            <p>{data?.location}</p>
+              <p style={{ fontWeight: "300" }}>{data?.location}</p>
+            </div>
             <Link to="/revamped-events/register">
               <Button content="Register" variants="graysquarebackground" />
             </Link>
@@ -94,7 +105,7 @@ const RevampEventHome = () => {
         <RevampHomepageCard
           image={data?.save_date_image}
           title={data?.save_date_text}
-          where={"/revamped-events"}
+          where={"/revamped-events/general"}
         />
 
         <RevampHomepageCard

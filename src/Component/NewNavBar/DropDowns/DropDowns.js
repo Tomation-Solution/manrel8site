@@ -17,7 +17,7 @@ export const AboutDropdown = () => {
       </div>
       <div className="dropdown-item">
         <span>
-          <Link to={"/about/private-sector"}>Our Partners</Link>
+          <Link to={"/about/private-sector"}>Our Associates</Link>
         </span>
       </div>
       <div className="dropdown-item">

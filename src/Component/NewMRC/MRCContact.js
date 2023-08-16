@@ -5,7 +5,7 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import Wall from "../Wall/Wall";
 import "./MRCContact.scss";
 
-import MrcContactImg from "../../images/new-images/MrcContactImg.png";
+// import MrcContactImg from "../../images/new-images/MrcContactImg.png";
 import Subscribe from "../Subscribe/Subscribe";
 import { Link } from "react-router-dom";
 import * as yup from "yup";
@@ -184,7 +184,7 @@ const MRCContact = () => {
               </div>
             </div>
 
-            <div className="image-banner">
+            {/* <div className="image-banner">
               <div>
                 <img alt="" src={MrcContactImg} />
               </div>
@@ -194,7 +194,7 @@ const MRCContact = () => {
               <div>
                 <img alt="" src={MrcContactImg} />
               </div>
-            </div>
+            </div> */}
 
             <div className="objectives no-btm-bd">
               <h1 className="header">

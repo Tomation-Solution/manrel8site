@@ -21,6 +21,7 @@ import { getNews } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
 import { dateformatter } from "../../utils/date-formatter";
+import { useState } from "react";
 
 function News() {
   const { isLoading, isFetching, isError, data } = useQuery(
@@ -31,6 +32,20 @@ function News() {
       select: (data) => data.data,
     }
   );
+
+  //PAGINATION LOGIC
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+
+  let pages = [];
+
+  for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
+    pages.push(i);
+  }
+
+  const paginatedData = data?.slice(firstPostIndex, lastPostIndex);
 
   return (
     <ThemeProvider theme={theme}>
@@ -56,16 +71,16 @@ function News() {
                     <Loader loading={isLoading || isFetching} />
                   ) : !isError ? (
                     <>
-                      {data.map((item) => {
+                      {paginatedData?.map((item) => {
                         return (
                           <div className="card" key={item.id}>
-                            <Link to={"/news"}>
+                            {/* <Link to={"/news"}>
                               <button
                                 style={{ color: "#2b3513", cursor: "pointer" }}
                               >
                                 <b>News</b>
                               </button>
-                            </Link>
+                            </Link> */}
                             <div className="flex">
                               <h3>{item.name}</h3>
                               <Link to={`/news-details/${item.id}`}>
@@ -102,7 +117,25 @@ function News() {
                     );
                   })} */}
                 </div>
-                <div className="bto"></div>
+                <div className="bto">
+                  <button
+                    onClick={() => {
+                      if (currentPage <= 1) return;
+
+                      setCurrentPage((oldState) => oldState - 1);
+                    }}
+                  >
+                    Previous
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (currentPage >= pages?.length) return;
+                      setCurrentPage((oldState) => oldState + 1);
+                    }}
+                  >
+                    Next
+                  </button>
+                </div>
               </div>
               <div className="left">
                 <img src={Articleimage} alt="" />

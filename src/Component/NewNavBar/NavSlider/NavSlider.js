@@ -26,7 +26,7 @@ const NavSlider = ({ clickfn }) => {
               <Link to={"/about/how-we-work"}>How we Work</Link>
             </span>
             <span className="items-span">
-              <Link to={"/about/private-sector"}>Our Partners</Link>
+              <Link to={"/about/private-sector"}>Our Associates</Link>
             </span>
             <span className="items-span">
               <Link to={"/about/council-members"}>Our Leadership</Link>

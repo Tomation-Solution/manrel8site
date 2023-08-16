@@ -56,7 +56,6 @@ const Publications = () => {
   if (data) {
     renderdata = getGroupedBy(data, "type");
   }
-  console.log(renderdata);
   return (
     <>
       <div>
@@ -107,7 +106,7 @@ const Publications = () => {
                                       </div>
                                     ) : null}
                                     <div className="card">
-                                      <Link to={"/publications"}>
+                                      {/* <Link to={"/publications"}>
                                         <button
                                           style={{
                                             color: "#2b3513",
@@ -116,7 +115,7 @@ const Publications = () => {
                                         >
                                           <b>Publications</b>
                                         </button>
-                                      </Link>
+                                      </Link> */}
                                       <div className="flex">
                                         <h3>{innerItem.name}</h3>
                                         <Link
@@ -141,6 +140,10 @@ const Publications = () => {
                     ) : (
                       <FormError>Can't Fetch Free Publications</FormError>
                     )}
+
+                    <br />
+                    <button>Next</button>
+                    <br />
 
                     {/* <div className="top">
                       <h4>Manufacturers CEO Confidence Index (MCCI)</h4>

@@ -23,6 +23,14 @@ const PrivateSector = () => {
     }
   );
 
+  // const location = data?.ops?.indexOf(
+  //     "Nigerian Association of Small Scale Industrialists (NASSI)"
+  //   ),
+  //   item_value = data?.ops?.at(location);
+  // data?.ops?.splice(location, 1);
+
+  // data?.ops.push(item_value);
+
   return (
     <div className="private-sector">
       <UIProvider>

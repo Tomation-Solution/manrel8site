@@ -18,6 +18,7 @@ import { useQuery } from "react-query";
 import { getReports } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
+import { useState } from "react";
 
 function App() {
   const { isLoading, isFetching, isError, data } = useQuery(
@@ -28,6 +29,20 @@ function App() {
       select: (data) => data.data,
     }
   );
+
+  //PAGINATION LOGIC
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+
+  let pages = [];
+
+  for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
+    pages.push(i);
+  }
+
+  const paginatedData = data?.slice(firstPostIndex, lastPostIndex);
 
   return (
     <ThemeProvider theme={theme}>
@@ -53,22 +68,44 @@ function App() {
                   <Loader loading={isLoading || isFetching} />
                 ) : !isError ? (
                   <div className="wrap">
-                    {data.map((item, index) => (
-                      <div className="card" key={index}>
-                        <Link to={"/reports"}>
-                          <button
-                            style={{ color: "#2b3513", cursor: "pointer" }}
-                          >
-                            <b>Reports</b>
-                          </button>
-                        </Link>
-                        <div className="flex">
-                          <h3>{item.name}</h3>
-                          <Link to={`/report-details/${item.id}`}>
-                            <OpenInNewIcon />
-                          </Link>
+                    {paginatedData.map((item, index) => (
+                      <>
+                        <div className="card" key={index}>
+                          {/* <Link to={"/reports"}>
+                            <button
+                              style={{ color: "#2b3513", cursor: "pointer" }}
+                            >
+                              <b>Reports</b>
+                            </button>
+                          </Link> */}
+                          <div className="flex">
+                            <h3>{item.name}</h3>
+                            <Link to={`/report-details/${item.id}`}>
+                              <OpenInNewIcon />
+                            </Link>
+                          </div>
                         </div>
-                      </div>
+
+                        <div className="bto">
+                          <button
+                            onClick={() => {
+                              if (currentPage <= 1) return;
+
+                              setCurrentPage((oldState) => oldState - 1);
+                            }}
+                          >
+                            Previous
+                          </button>
+                          <button
+                            onClick={() => {
+                              if (currentPage >= pages?.length) return;
+                              setCurrentPage((oldState) => oldState + 1);
+                            }}
+                          >
+                            Next
+                          </button>
+                        </div>
+                      </>
                     ))}
                   </div>
                 ) : (
