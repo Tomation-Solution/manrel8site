@@ -1,0 +1,21 @@
+.advert__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border: 1px solid #2b3515;
+  margin: 20px 0px;
+}
+
+.advert__container img {
+  border-radius: 10px;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.advert__container p {
+  font-size: 20px;
+}

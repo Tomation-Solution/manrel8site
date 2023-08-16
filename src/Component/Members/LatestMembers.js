@@ -11,6 +11,7 @@ import backImage from "../../images/new-images/MemberRequirement.png";
 import Subscribe from "../Subscribe/Subscribe";
 import { useQuery } from "react-query";
 import { getMembersApi } from "../../utils/api-calls2";
+import Adverts from "../Adverts/Adverts";
 
 function LatestMembers() {
   const { isLoading, data } = useQuery("getMembersApi", getMembersApi, {
@@ -49,7 +50,6 @@ function LatestMembers() {
       setListOfMembers(data);
     }
   }, [data]);
-  console.log({ data });
 
   return (
     <UIProvider>
@@ -63,6 +63,8 @@ function LatestMembers() {
           header={"Our Members"}
           details={["See our esteemed members across the country"]}
         />
+
+        <Adverts />
 
         <div className="wrapper">
           <div className="cover">
@@ -81,6 +83,16 @@ function LatestMembers() {
                     <div className="card-item">
                       {/* <span className="bold">Name:</span> */}
                       <span className="light">{item?.name}</span>
+                      <br />
+
+                      <span
+                        style={{
+                          fontWeight: "600",
+                        }}
+                      >
+                        Description
+                      </span>
+                      <span className="light">{item?.description}</span>
                     </div>
                     <div className="card-item">
                       <span className="light">
