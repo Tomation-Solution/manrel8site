@@ -50,7 +50,6 @@ function LatestMembers() {
       setListOfMembers(data);
     }
   }, [data]);
-
   return (
     <UIProvider>
       <Loader loading={isLoading} />
@@ -72,7 +71,7 @@ function LatestMembers() {
               <input
                 type={"text"}
                 value={searchValue}
-                placeholder={"Search by Company name"}
+                placeholder={"Search for company"}
                 onChange={(e) => setSearchValue(e.target.value)}
               />
             </div>
@@ -140,9 +139,10 @@ function LatestMembers() {
             )}
           </div>
         </div>
+
         {/* PAGINATION LOGIC */}
         <div className="pagination">
-          {pages.map((page, index) => {
+          {pages?.splice(0, 7)?.map((page, index) => {
             return (
               <span
                 key={index}
@@ -153,7 +153,19 @@ function LatestMembers() {
               </span>
             );
           })}
+
+          {currentPage >= 7 ? (
+            <button
+              onClick={() => {
+                if (currentPage >= pages?.length) return;
+                setCurrentPage((oldState) => oldState + 1);
+              }}
+            >
+              Next
+            </button>
+          ) : null}
         </div>
+
         <Wall />
         <Footer />
       </div>

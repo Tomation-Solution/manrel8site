@@ -57,24 +57,26 @@
   /* border: 1px solid red; */
 }
 
-/* .Homecontainer .homeheader .homeheaderpicture { */
-/* background-image: url("../../assets/reusedimages/Homeimages/homeheader.jpeg"); */
-/* padding: 100px; */
-/* background-repeat: no-repeat;
+.Homecontainer .homeheader .homeheaderpicture {
+  padding: 50px 0px;
+  /* background-image: url("../../assets/reusedimages/Homeimages/homeheader.jpeg"); */
+  /* padding: 100px; */
+  /* background-repeat: no-repeat;
 
   background-size: 100%; */
-/* max-width:  1508px; */
-/* height: 804px; */
-/* } */
+  /* max-width:  1508px; */
+  /* height: 804px; */
+}
 .Homecontainer .homeheader .homeheadertext {
   padding: 40px;
   width: 70%;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .Homecontainer .homeheader .homeheadertext h1 {
   color: #ffffff;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "cursive";
 }
 
 .homeheadertext p {

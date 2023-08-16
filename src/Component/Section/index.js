@@ -35,13 +35,13 @@ function Section({ renderdata }) {
               src={renderdata.slider_image2}
               style={{ objectFit: "contain", backgroundColor: "#2b3513" }}
             />
-            <SectionTitle style={{ textAlign: "center" }}>
+            <SectionTitle style={{ textAlign: "left" }}>
               Our Vision
             </SectionTitle>
             {renderdata.vision_intro.map((item, index) => (
               <SectionDescription
                 key={index}
-                sx={{ color: "#2b3513", textAlign: "center" }}
+                sx={{ color: "#2b3513", textAlign: "left" }}
               >
                 {item}
               </SectionDescription>
@@ -71,7 +71,7 @@ function Section({ renderdata }) {
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
             <div style={{ padding: "30px 0px" }}>
-              <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
+              <SectionTitle sx={{ color: Colors.white, textAlign: "left" }}>
                 Our Mission
               </SectionTitle>
               {renderdata.mission_intro.map((item, index) => (
@@ -82,7 +82,7 @@ function Section({ renderdata }) {
                     fontSize: "16px",
                     margin: "20px 0px",
                     fontFamily: "Poppins",
-                    textAlign: "center",
+                    textAlign: "left",
                   }}
                 >
                   {item}
@@ -115,8 +115,8 @@ function Section({ renderdata }) {
               alt=""
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
-            <div style={{ padding: "30px 0", textAlign: "center" }}>
-              <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
+            <div style={{ padding: "30px 0", textAlign: "left" }}>
+              <SectionTitle sx={{ color: Colors.white, textAlign: "left" }}>
                 Advocacy Achievements
               </SectionTitle>
 
@@ -127,7 +127,7 @@ function Section({ renderdata }) {
                     color: Colors.white,
                     fontSize: "14px",
                     fontFamily: "Poppins",
-                    textAlign: "center",
+                    textAlign: "left",
                   }}
                 >
                   {item}
@@ -143,10 +143,10 @@ function Section({ renderdata }) {
                     color: "#fff",
                     borderColor: "#fff",
                     marginTop: "21px",
-                    textTransform: "capitalize",
+                    textTransform: "none",
                   }}
                 >
-                  Continue to page
+                  Continue
                 </MyButton>
               </Link>
             </div>
@@ -157,29 +157,29 @@ function Section({ renderdata }) {
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
             <SectionImg src={sectionpic2} />
-            <SectionTitle sx={{ color: "#2b3513", textAlign: "center" }}>
+            <SectionTitle sx={{ color: "#2b3513", textAlign: "left" }}>
               Our History
             </SectionTitle>
 
             {renderdata.history_intro.map((item, index) => (
               <SectionDescription
                 key={index}
-                sx={{ color: "##2b3513", textAlign: "center" }}
+                sx={{ color: "##2b3513", textAlign: "left" }}
               >
                 {item}
               </SectionDescription>
             ))}
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "left" }}>
               <Link to="/about" style={{ textDecoration: "none" }}>
                 <MyButton
                   sx={{
                     color: "#2b3513",
                     borderColor: "#2b3513",
                     marginTop: "21px",
-                    textTransform: "capitalize",
+                    textTransform: "none",
                   }}
                 >
-                  See More
+                  See more
                 </MyButton>
               </Link>
             </div>
@@ -192,7 +192,7 @@ function Section({ renderdata }) {
               src={sectionpic3}
               style={{ objectFit: "contain", backgroundColor: "#ddd" }}
             />
-            <SectionTitle sx={{ color: "#2B3513", textAlign: "center" }}>
+            <SectionTitle sx={{ color: "#2B3513", textAlign: "left" }}>
               Why Join MAN?
             </SectionTitle>
             {renderdata.why_join_intro.map((item, index) => (
@@ -202,14 +202,14 @@ function Section({ renderdata }) {
                   color: "#2B3513",
                   fontSize: "14px",
                   fontFamily: "Poppins",
-                  textAlign: "center",
+                  textAlign: "left",
                 }}
               >
                 {item}
               </SectionDescription>
             ))}
 
-            <div style={{ margin: "60px 20px", textAlign: "center" }}>
+            <div style={{ margin: "60px 20px", textAlign: "left" }}>
               <Link
                 to="/become-membership"
                 style={{
@@ -224,7 +224,7 @@ function Section({ renderdata }) {
                     border: "1px solid #d3d3d3",
                     borderRadius: "10px",
                     fontWeight: "400",
-                    textTransform: "capitalize",
+                    textTransform: "none",
                   }}
                 >
                   Read more
@@ -257,7 +257,7 @@ function Section({ renderdata }) {
               style={{ height: "53px", width: "53px", alignSelf: "flex-end" }}
             />
             <div style={{ padding: "30px 0", fontFamily: "Poppins" }}>
-              <SectionTitle sx={{ color: Colors.white, textAlign: "center" }}>
+              <SectionTitle sx={{ color: Colors.white, textAlign: "left" }}>
                 Our Members
               </SectionTitle>
               {renderdata.members_intro.map((item, index) => (
@@ -267,23 +267,23 @@ function Section({ renderdata }) {
                     color: "#fff",
                     fontSize: "14px",
                     fontFamily: "Poppins",
-                    textAlign: "center",
+                    textAlign: "left",
                   }}
                 >
                   {item}
                 </SectionDescription>
               ))}
-              <div style={{ marginLeft: "30px", textAlign: "center" }}>
+              <div style={{ marginLeft: "30px", textAlign: "left" }}>
                 <Link to="/our-members" style={{ textDecoration: "none" }}>
                   <MyButton
                     sx={{
                       color: "#fff",
                       borderColor: "#fff",
                       marginTop: "30px",
-                      textTransform: "capitalize",
+                      textTransform: "none",
                     }}
                   >
-                    Meet Our Esteemed Members
+                    Meet our esteemed members
                   </MyButton>
                 </Link>
               </div>

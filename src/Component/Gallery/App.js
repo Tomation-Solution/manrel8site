@@ -22,6 +22,7 @@ import { useQuery } from "react-query";
 import { getGallery } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
+import { useState } from "react";
 
 /**
  * THIS IS BEING USED IN THE PUBLICATIONS, REPORTS, NEWS PAGES
@@ -108,6 +109,20 @@ function App() {
     }
   );
 
+  //PAGINATION LOGIC
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+
+  let pages = [];
+
+  for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
+    pages.push(i);
+  }
+
+  const paginatedData = data?.slice(firstPostIndex, lastPostIndex);
+
   return (
     <ThemeProvider theme={theme}>
       <div className="insight-more">
@@ -130,25 +145,46 @@ function App() {
                 {isLoading || isFetching ? (
                   <Loader loading={isLoading || isFetching} />
                 ) : !isError ? (
-                  <div className="wrap">
-                    {data.map((item) => (
-                      <div className="card" key={item.id}>
-                        <Link to={"/gallery"}>
-                          <button
-                            style={{ color: "#2b3513", cursor: "pointer" }}
-                          >
-                            <b>Gallery</b>
-                          </button>
-                        </Link>
-                        <div className="flex">
-                          <h3>{item.name}</h3>
-                          <Link to={`/gallery-details/${item.id}`}>
-                            <OpenInNewIcon />
-                          </Link>
+                  <>
+                    <div className="wrap">
+                      {paginatedData.map((item) => (
+                        <div className="card" key={item.id}>
+                          {/* <Link to={"/gallery"}>
+                            <button
+                              style={{ color: "#2b3513", cursor: "pointer" }}
+                            >
+                              <b>Gallery</b>
+                            </button>
+                          </Link> */}
+                          <div className="flex">
+                            <h3>{item.name}</h3>
+                            <Link to={`/gallery-details/${item.id}`}>
+                              <OpenInNewIcon />
+                            </Link>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                    <div className="bto">
+                      <button
+                        onClick={() => {
+                          if (currentPage <= 1) return;
+
+                          setCurrentPage((oldState) => oldState - 1);
+                        }}
+                      >
+                        Previous
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (currentPage >= pages?.length) return;
+                          setCurrentPage((oldState) => oldState + 1);
+                        }}
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </>
                 ) : (
                   <FormError>Can't Fetch Gallery Data</FormError>
                 )}
