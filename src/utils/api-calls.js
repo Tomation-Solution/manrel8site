@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 import { privateRequest } from "./axios-utils";
 
-const BASE_URL = `https://rel8-corporate-backend-production.up.railway.app/tenant/man/`;
+const BASE_URL = `https://web-production-81544.up.railway.app/tenant/man/`;
 
 //LOGIN
 export const loginUser = async (payload) => {

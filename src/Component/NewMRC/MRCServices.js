@@ -41,9 +41,9 @@ const MRCServices = () => {
           </p>
           <div className="text-btn">
             <span>We are "... the Manufacturers’ Solution Hub"</span>
-            <Link to={"/mrc-contact"}>
+            {/* <Link to={"/mrc-contact"}>
               <button>Contact Us</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

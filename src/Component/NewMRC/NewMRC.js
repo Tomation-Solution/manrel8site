@@ -47,9 +47,9 @@ const NewMRC = () => {
             <span style={{ color: "#2b3513" }}>
               "Our Success is measured by the benefits of our clients"
             </span>
-            <Link to={"/mrc-contact"}>
+            {/* <Link to={"/mrc-contact"}>
               <button>Contact Us</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="objectives">

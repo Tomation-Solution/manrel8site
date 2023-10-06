@@ -28,9 +28,9 @@ function Footer() {
       </FooterItemsContainer>
       <FooterItemsContainer style={{ textAlign: "center" }}>
         <FooterDescription>
-          <Link to={"/"} style={{ textDecoration: "none", color: "#2b3513" }}>
+          {/* <Link to={"/"} style={{ textDecoration: "none", color: "#2b3513" }}>
             Privacy Policy
-          </Link>
+          </Link> */}
         </FooterDescription>
         <FooterDescription>
           <a
