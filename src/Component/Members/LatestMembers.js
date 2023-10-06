@@ -50,6 +50,11 @@ function LatestMembers() {
       setListOfMembers(data);
     }
   }, [data]);
+  useEffect(()=>{
+    if(searchValue.length !=0){
+      setCurrentPage(1)
+    }
+  },[searchValue])
   return (
     <UIProvider>
       <Loader loading={isLoading} />
@@ -139,8 +144,9 @@ function LatestMembers() {
             )}
           </div>
         </div>
-
         {/* PAGINATION LOGIC */}
+              {
+                searchValue.length==0?
         <div className="pagination">
           {pages?.splice(0, 7)?.map((page, index) => {
             return (
@@ -164,7 +170,8 @@ function LatestMembers() {
               Next
             </button>
           ) : null}
-        </div>
+        </div>:''
+              }
 
         <Wall />
         <Footer />
