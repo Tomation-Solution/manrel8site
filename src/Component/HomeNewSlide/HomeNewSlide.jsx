@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomeNewSlide.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,8 +11,23 @@ import "swiper/css/navigation";
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
+import { getSlidersApi } from "../../utils/csm-api-calls";
+import {useQuery} from 'react-query'
 
-const HomeNewSlide = ({ data }) => {
+const HomeNewSlide = () => {
+
+
+  const [image,setImage] = useState([])
+  
+  const [index,setIndex] = useState(0)
+  
+  
+  const {data} = useQuery('getSlidersApi',getSlidersApi,{
+    refetchOnWindowFocus: false,
+    'onSuccess':(data)=>{
+      setImage(data.map((d)=>d.banner))
+    }
+  })
   return (
     <div className="home-new-slide">
       <Swiper
@@ -26,25 +41,51 @@ const HomeNewSlide = ({ data }) => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation]}
+        modules={[
+          // Parallax, 
+          Pagination, Navigation]}
         className="mySwiper"
+        onSlideChange={(e) => {
+          console.log(e?.activeIndex)
+          setIndex(e?.activeIndex)
+        }}
       >
         <div
           slot="container-start"
           className="parallax-bg"
           data-swiper-parallax="-23%"
-          style={{ background: `url(${data.slider_image1})` }}
+          // style={{ background: `url(${data.slider_image1})` }}
+          style={{ background: `url(${image[index]})` }}
         ></div>
-        <SwiperSlide>
-          <div className="narration-con">
-            <div className="narration-banner">
-              <p>Welcome To MAN</p>
+
+        {
+          data?.map((d,index)=>(
+            <SwiperSlide>
+            <div className="narration-con">
+              <div className="narration-banner">
+                <p>{d.title}</p>
+              </div>
+              <div className="narration-text">
+                <p>{d.content}</p>
+              </div>
             </div>
-            <div className="narration-text">
-              <p>{data.slider_welcome_message}</p>
+          </SwiperSlide>
+          ))
+        }
+
+
+{/* <SwiperSlide 
+
+>
+            <div className="narration-con">
+              <div className="narration-banner">
+                <p>Welcome To MAN</p>
+              </div>
+              <div className="narration-text">
+                <p>{data.slider_welcome_message}</p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
         <SwiperSlide>
           <div className="narration-con">
             <div className="narration-banner">
@@ -74,7 +115,7 @@ const HomeNewSlide = ({ data }) => {
               </Link>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

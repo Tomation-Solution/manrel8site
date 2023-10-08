@@ -224,6 +224,11 @@ export const getAllServicesPVC = async () => {
   }
 };
 
+
+export const getSlidersApi = async ()=>{
+  const resp = await publicCmsRequest.get('/homepage/add-slider/get_slider/')
+  return resp.data
+}
 //PVC-Homepage
 export const getHomepagePVC = async () => {
   try {
