@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 import { privateRequest } from "./axios-utils";
 
-const BASE_URL = `https://web-production-81544.up.railway.app/tenant/man/`;
+const BASE_URL = `https://rela8mancmsbackend-production.up.railway.app/tenant/man/`;
 // const BASE_URL = `http://localhost:8001/tenant/man/`;
 
 //LOGIN
