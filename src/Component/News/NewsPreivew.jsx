@@ -20,16 +20,18 @@ const NewsPreivew = ({ render_data, isImage, no_title }) => {
           <>
             {render_data.details.map((item, index) => (
               <section key={index}>
-                <h4 className="details-header">{item.header}</h4>
+                <h4 className="details-header">{item.header.length===1?'':item.header}</h4>
                 <p>{item.value}</p>
               </section>
             ))}
           </>
         ) : null}
         {render_data.link ? (
-          <a href={`${render_data.link}`} rel="noreferrer" target="_blank">
-            Click here to download or Read more
+          <div style={{'display':'flex','gap':'10px'}}>
+            <a href={`${render_data.link}`} rel="noreferrer" target="_blank">
+            Click here to Download 
           </a>
+          </div>
         ) : null}
       </div>
     </div>

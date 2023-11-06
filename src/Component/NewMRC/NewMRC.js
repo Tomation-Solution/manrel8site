@@ -143,6 +143,35 @@ const NewMRC = () => {
             </span>
           </h1>
         </div>
+
+        <div className="objectives">
+              <h1 className="header">
+                MAN <span>Resource Center</span>
+              </h1>
+
+              <div className="obj-item">
+                <div></div>
+                <span>
+                  Address:77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria.
+                </span>
+              </div>
+              <div className="obj-item">
+                <div></div>
+                <span>
+                  Phone: 081 666 75412, 01-4542700, 01-4542701, 01-4542702
+                </span>
+              </div>
+              <div className="obj-item">
+                <div></div>
+                <span>Email: mrc@manufacturersnigeria.org</span>
+              </div>
+              <div className="obj-item">
+                <div></div>
+                <span className="span-bold">
+                  MAN House, 1st Floor, Left Wing.
+                </span>
+              </div>
+            </div>
         <Wall />
         <Footer />
       </UIProvider>

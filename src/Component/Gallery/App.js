@@ -33,7 +33,7 @@ export const AboutList = [
     title: "News",
     description:
       "Catch up on details of latest activities of the Association, press releases and position documents shared for your information purposes.",
-    linkHead: "Procced to News",
+    linkHead: "Proceed to News",
     location: "news",
   },
   {
