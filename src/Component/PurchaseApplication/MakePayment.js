@@ -79,7 +79,8 @@ const MakePayment = () => {
   });
 
   const onSubmitHandler = (data) => {
-    const rewrittenRegno = `RC${locationState.cac_registration_number}`;
+    console.log({'Cac':locationState.cac_registration_number})
+    const rewrittenRegno = `${locationState.cac_registration_number}`;
     data.cac_registration_number = rewrittenRegno;
     data.name_of_company= locationState.name_of_company
     data.email= locationState.email
