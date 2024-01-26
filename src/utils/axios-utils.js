@@ -7,7 +7,7 @@ const TOKEN = user_data?.token;
 const BASE_URL = `https://rel8corporate.watchdoglogisticsng.com/tenant/man/`;
 // const BASE_URL = `http://localhost:8001/tenant/man/`;
 
-const CMS_BASE_URL ='https://manwebsitebackend.spnsng.com/api'
+const CMS_BASE_URL ='https://man.workplacestars.com/api'
 // const CMS_BASE_URL = `http://localhost:8000/api`;
 
 export const privateRequest = axios.create({
