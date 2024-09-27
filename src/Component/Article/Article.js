@@ -36,7 +36,7 @@ function Article({ data }) {
           </div>
           <div className="right">
             <h1 style={{ color: "#2b3513", marginBottom: "20px" }}>
-              Latest Updates
+              News & Updates
             </h1>
             <div className="wrap">
               {!insightData ? (
