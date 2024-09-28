@@ -1,7 +1,7 @@
 @import "../../Styles/resources";
 
 .publications-details {
-  min-height: 100vh; // Full page height
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -72,8 +72,8 @@
     justify-content: space-between;
     background-color: #f5f5f5;
     font-family: "Roboto";
-    flex: 1; // Ensures this section takes the remaining height
-    height: 100%; // Take up all the available height
+    flex: 1;
+    height: 100%;
 
     .cover {
       width: 100%;
@@ -88,15 +88,15 @@
       }
 
       .left {
-        width: 60%; // Make it wider on larger screens
+        width: 60%;
         background-color: #fff;
         padding: 30px;
-        //box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
-        max-height: 100vh; // Remove the height limit so it takes full space
+        max-height: 100vh;
+        min-height: 100vh;
         height: auto;
-        overflow-y: visible; // Ensure content isn't hidden
+        overflow-y: visible;
 
         @include mobile-1 {
           width: 100%;
@@ -135,7 +135,7 @@
       }
 
       .right {
-        width: 35%; // Adjust width for sidebar
+        width: 35%;
         display: flex;
         flex-direction: column;
         background-color: #f9f9f9;
