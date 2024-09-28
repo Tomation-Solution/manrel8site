@@ -9,30 +9,32 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-import { useQuery } from 'react-query';
+import { useQuery } from "react-query";
 import { getSlidersApi } from "../../utils/csm-api-calls";
 
 const HomeNewSlide = () => {
     const [images, setImages] = useState([]);
+    const [narrations, setNarrations] = useState([]);
     const [index, setIndex] = useState(0);
 
-    // Fetching images using react-query
-    const { data } = useQuery('getSlidersApi', getSlidersApi, {
+
+    useQuery("getSlidersApi", getSlidersApi, {
         refetchOnWindowFocus: false,
         onSuccess: (data) => {
-            setImages(data.map((d) => d.banner)); // Extracting banners from the fetched data
-        }
+            setImages(data.map((d) => d.banner));
+            setNarrations(data.map((d) => ({ title: d.title, content: d.content })));
+        },
     });
 
-    // Effect to change the image every second
+    // Effect to change the image and narration every 3 seconds
     useEffect(() => {
-        if (images.length === 0) return; // Prevent error if images are not yet loaded
+        if (images.length === 0 || narrations.length === 0) return;
         const interval = setInterval(() => {
-            setIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop through images
-        }, 3000); // Change image every second
+            setIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
 
-        return () => clearInterval(interval); // Cleanup interval on component unmount
-    }, [images]);
+        return () => clearInterval(interval);
+    }, [images, narrations]);
 
     return (
         <div className="home-new-slide">
@@ -49,20 +51,23 @@ const HomeNewSlide = () => {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
+                {/* Dynamic Background Image */}
                 <div
                     slot="container-start"
                     className="parallax-bg"
-                    style={{ backgroundImage: `url(${images[index]})` }} // Set dynamic background image
+                    style={{ backgroundImage: `url(${images[index]})` }}
                 ></div>
 
-                {data?.map((d, idx) => (
+                {/* Loop through Swiper slides for each image */}
+                {images.map((_, idx) => (
                     <SwiperSlide key={idx}>
+                        {/* Dynamic Narration */}
                         <div className="narration-con">
                             <div className="narration-banner">
-                                <p>{d.title}</p>
+                                <p>{narrations[index]?.title}</p>
                             </div>
                             <div className="narration-text">
-                                <p>{d.content}</p>
+                                <p>{narrations[index]?.content}</p>
                             </div>
                         </div>
                     </SwiperSlide>
