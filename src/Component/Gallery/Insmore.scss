@@ -82,12 +82,16 @@
 
     // Hero text and button styles
     .cover {
-      padding: 50px 0;
+      //padding: 50px 0;
       color: #fff;
       font-family: "Roboto", sans-serif;
-      max-width: 600px;
-      width: 100%;
-      padding: 50px 20px;
+      //max-width: 600px;
+      //width: 100%;
+      //padding: 50px 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
 
       // Hero title
       h1 {
@@ -143,6 +147,7 @@
       .left {
         width: 65%;
         height: 100%;
+        margin-top: 200px;
 
         // Image in the left section
         img {
@@ -299,4 +304,89 @@
       }
     }
   }
+}
+
+//.album-gallery {
+//  display: grid;
+//  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//  gap: 20px;
+//  padding: 20px;
+//  justify-items: center;
+//}
+.album-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px;
+  width: 100vw;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .album-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .album-gallery {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+.album {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width of its column */
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .album-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ddd;
+
+    .image-stack {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 90%;
+      height: 90%;
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transform: rotate(-2deg);
+    }
+  }
+
+  .album-title {
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+  }
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  padding-bottom: 10px;
 }

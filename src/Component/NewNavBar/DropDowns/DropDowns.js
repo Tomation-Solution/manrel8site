@@ -49,11 +49,22 @@ export const ServicesDropdown = () => {
   // const [specialised, setSpecialised] = useState(false);
   return (
     <div className="service-dropdown">
+       <div className="dropdown-item">
+        <span>
+          <Link to={"/about-mrc"}>MRC</Link>
+        </span>
+      </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to={"/mpdcl"}>MPDCL</Link>
+        </span>
+      </div>
       <div className="dropdown-item">
         <span>
           <Link to={"/services"}>Core Services</Link>
         </span>
       </div>
+
       {/* <div
         className="dropdown-item"
         onClick={() => setSpecialised(!specialised)}
@@ -174,7 +185,7 @@ export const StructureDropdown = () => {
           <Link to={"/sectoral"}>Sectoral Group</Link>
         </span>
       </div>
-      <div className="dropdown-item">
+      {/* <div className="dropdown-item">
         <span>
           <Link to={"/about-mrc"}>MRC</Link>
         </span>
@@ -183,7 +194,7 @@ export const StructureDropdown = () => {
         <span>
           <Link to={"/mpdcl"}>MPDCL</Link>
         </span>
-      </div>
+      </div> */}
       {/* <div
         className="dropdown-item"
         onClick={() => setShowService(!serviceShow)}

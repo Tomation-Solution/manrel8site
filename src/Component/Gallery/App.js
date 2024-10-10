@@ -122,82 +122,109 @@ function App() {
   }
 
   const paginatedData = data?.slice(firstPostIndex, lastPostIndex);
-
+  console.log({paginatedData, data})
+  const handleAlbumClick = (id) => {
+    window.location.href = `/gallery-details/${id}`;
+  };
+  const albums = [
+    { id: 1, title: 'Summer Vacation', imageUrl: '/images/summer-vacation.jpg' },
+    { id: 2, title: 'Family Reunion', imageUrl: '/images/family-reunion.jpg' },
+    { id: 3, title: 'Nature Walks', imageUrl: '/images/nature-walks.jpg' },
+    { id: 4, title: 'City Lights', imageUrl: '/images/city-lights.jpg' },
+    { id: 5, title: 'Beach Memories', imageUrl: '/images/beach-memories.jpg' },
+    { id: 6, title: 'Winter Wonderland', imageUrl: '/images/winter-wonderland.jpg' },
+  ];
   return (
     <ThemeProvider theme={theme}>
       <div className="insight-more">
         <UIProvider>
-          <Subscribe />
-          <NewNavBar />
+          <Subscribe/>
+          <NewNavBar/>
 
           <NewImageBanner
-            image={backImage}
-            header={"Gallery"}
-            details={["View images of past events at MAN"]}
+              image={backImage}
+              header={"Gallery"}
+              details={["View images of past events at MAN"]}
           />
           <div className="news_main">
             <div className="cover">
-              <div className="right">
-                <div className="top">
-                  <h2>Gallery</h2>
-                </div>
-
-                {isLoading || isFetching ? (
-                  <Loader loading={isLoading || isFetching} />
-                ) : !isError ? (
-                  <>
-                    <div className="wrap">
-                      {paginatedData.map((item) => (
-                        <div className="card" key={item.id}>
-                          {/* <Link to={"/gallery"}>
-                            <button
-                              style={{ color: "#2b3513", cursor: "pointer" }}
-                            >
-                              <b>Gallery</b>
-                            </button>
-                          </Link> */}
-                          <div className="flex">
-                            <h3>{item.name}</h3>
-                            <Link to={`/gallery-details/${item.id}`}>
-                              <OpenInNewIcon />
-                            </Link>
-                          </div>
-                        </div>
-                      ))}
+              {/*<h2 className="gallery-title">Gallery</h2>*/}
+              <div className="album-gallery">
+                {albums.map((album) => (
+                    <div
+                        key={album.id}
+                        className="album"
+                        onClick={() => handleAlbumClick(album.id)}
+                    >
+                      <div className="album-image" style={{backgroundImage: `url(${album.imageUrl})`}}>
+                        <div className="image-stack"></div>
+                      </div>
+                      <div className="album-title">{album.title}</div>
                     </div>
-                    <div className="bto">
-                      <button
-                        onClick={() => {
-                          if (currentPage <= 1) return;
-
-                          setCurrentPage((oldState) => oldState - 1);
-                        }}
-                      >
-                        Previous
-                      </button>
-                      <button
-                        onClick={() => {
-                          if (currentPage >= pages?.length) return;
-                          setCurrentPage((oldState) => oldState + 1);
-                        }}
-                      >
-                        Next
-                      </button>
-                    </div>
-                  </>
-                ) : (
-                  <FormError>Can't Fetch Gallery Data</FormError>
-                )}
+                ))}
               </div>
+              {/*<div className="right">*/}
+              {/*  <div className="top">*/}
+              {/*    <h2>Gallery</h2>*/}
+              {/*  </div>*/}
+
+              {/*  {isLoading || isFetching ? (*/}
+              {/*    <Loader loading={isLoading || isFetching} />*/}
+              {/*  ) : !isError ? (*/}
+              {/*    <>*/}
+              {/*      <div className="wrap">*/}
+              {/*        {paginatedData.map((item) => (*/}
+              {/*          <div className="card" key={item.id}>*/}
+              {/*            /!* <Link to={"/gallery"}>*/}
+              {/*              <button*/}
+              {/*                style={{ color: "#2b3513", cursor: "pointer" }}*/}
+              {/*              >*/}
+              {/*                <b>Gallery</b>*/}
+              {/*              </button>*/}
+              {/*            </Link> *!/*/}
+              {/*            <div className="flex">*/}
+              {/*              <h3>{item.name}</h3>*/}
+              {/*              <Link to={`/gallery-details/${item.id}`}>*/}
+              {/*                <OpenInNewIcon />*/}
+              {/*              </Link>*/}
+              {/*            </div>*/}
+              {/*          </div>*/}
+              {/*        ))}*/}
+              {/*      </div>*/}
+              {/*      <div className="bto">*/}
+              {/*        <button*/}
+              {/*          onClick={() => {*/}
+              {/*            if (currentPage <= 1) return;*/}
+
+              {/*            setCurrentPage((oldState) => oldState - 1);*/}
+              {/*          }}*/}
+              {/*        >*/}
+              {/*          Previous*/}
+              {/*        </button>*/}
+              {/*        <button*/}
+              {/*          onClick={() => {*/}
+              {/*            if (currentPage >= pages?.length) return;*/}
+              {/*            setCurrentPage((oldState) => oldState + 1);*/}
+              {/*          }}*/}
+              {/*        >*/}
+              {/*          Next*/}
+              {/*        </button>*/}
+              {/*      </div>*/}
+              {/*    </>*/}
+              {/*  ) : (*/}
+              {/*    <FormError>Can't Fetch Gallery Data</FormError>*/}
+              {/*  )}*/}
+              {/*</div>*/}
 
               <div className="left">
-                <img className="img" src={Articleimage} alt="" />
-                <InsightQuickNavigation />
+                {/*<img className="img" src={Articleimage} alt="" />*/}
+                <h2 className="gallery-title">Others</h2>
+                <InsightQuickNavigation/>
               </div>
             </div>
           </div>
-          <Wall />
-          <Footer />
+          <Wall/>
+          <Footer/>
         </UIProvider>
       </div>
     </ThemeProvider>

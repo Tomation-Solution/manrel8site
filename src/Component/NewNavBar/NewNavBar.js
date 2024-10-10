@@ -71,15 +71,23 @@ const NewNavBar = () => {
             //   setshowServices(!showServices);
             // }}
           >
-            <Link to={"/services"} style={{ textDecoration: "none" }}>
-              <span className="special-span">Services</span>
-            </Link>
-            {/* <KeyboardArrowDown /> */}
+            {/* <Link to={"/services"} style={{ textDecoration: "none" }}> */}
+              <span  onClick={() => {
+              closeAll();
+              setshowServices(!showServices);
+            }} className="special-span">Services</span>
+            {/* </Link> */}
+            <KeyboardArrowDown
+            onClick={() => {
+              closeAll();
+              setshowServices(!showServices);
+            }}
+            />
           </div>
 
           <div className="toggle-navitem">
             <Link to={"/insight"} style={{ textDecoration: "none" }}>
-              <span className="special-span">Insights</span>
+              <span className="special-span">Media and Events</span>
             </Link>
             <KeyboardArrowDown
               onClick={() => {

@@ -9,7 +9,7 @@ const NewImageBanner = ({ image, header, details }) => {
         <img alt="" src={image || DefaultImg} />
       </div>
       <section>
-        <p className="header">{header}</p>
+        <p className="header gallery-title">{header}</p>
         {details?.map((item, index) => (
           <p key={index}>{item}</p>
         ))}

@@ -431,3 +431,105 @@
     margin: 50px 0;
   }
 }
+
+.corporate-thrust {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 100vw;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  section {
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .vision,
+  .mission,
+  .core-values {
+    border-left: 4px solid #007bff;
+    padding-left: 20px;
+  }
+
+  .core-values {
+    border-color: #28a745;
+  }
+}
+
+.board {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+
+  h1 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .board-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .board-member {
+      display: flex;
+      align-items: center;
+      width: 48%;
+      margin-bottom: 40px;
+
+      &__image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &__placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: #e0e0e0;
+          border-radius: 50%;
+        }
+      }
+
+      &__info {
+        h3 {
+          margin: 0;
+          font-size: 1.2rem;
+          color: #4f6d41;
+        }
+
+        p {
+          margin: 5px 0 0;
+          font-size: 1rem;
+          color: #333;
+        }
+      }
+    }
+  }
+}
