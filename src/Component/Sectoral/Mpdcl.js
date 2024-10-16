@@ -69,6 +69,35 @@ function Mpdcl() {
     },
   ];
 
+  const services = [
+
+    {
+      title: "MAN Annual Energy Security Summit",
+      content: `
+      This is MPDCL flagship annual event where players in NESI (including other Captive Power Solution providers and renewable energy solution provider and gas suppliers) will converge to brainstorm specifically on energy adequacy for manufacturers and providing uninterrupted power supply to industries in Nigeria. The objective is to act as accountability forum to measure how both GenCos and DisCos support industries access to steady and uninterrupted energy.
+    `
+    },
+    {
+      title: "Capacity Building Programmes",
+      content: `
+      Good energy and electricity housekeeping leads to energy efficiency. To be up to speed with the latest technologies, there is need to close the gaps that is creating poor energy management especially now that energy cost is hitting the roof. MPDCL is therefore putting a place training programmes in partnership with leading training institutions and private entities. The trainings are structured to impart positively on engineers and technicians with quality capability building that will enable them offer in-house quality service delivery in relevant engineering, manufacturing or production for manufacturers after the attending the training courses and services. The programme will be supported with annual training calendars for interested members companies to incorporate them in their training budget and there will be provision for in-plant training. The partnerships are with:
+    `,
+      partners: [
+        {
+          name: "National Power Training Institute of Nigeria (NAPTIN)",
+          imgSrc: "/path/to/image10.jpg",
+        },
+        {
+          name: "Applied Engineering Technology Initiative Limited (AETI)",
+          imgSrc: "/path/to/image11.jpg",
+        },
+        {
+          name: "Nigerian Electricity Management Safety Agency (NEMSA)",
+          imgSrc: "/path/to/image12.jpg",
+        },
+      ]
+    },
+  ];
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -213,86 +242,44 @@ function Mpdcl() {
                     ))}
                   </div>
                 </div>
-                <h1 className="service-header">
-                  The services below are offered by Manufacturers Power
-                  Development Company Limited (MPDCL).
-                </h1>
-                <h2
-                    style={{
-                      width: "100%",
-                      margin: "10px 0px",
-                      textAlign: "center",
-                      color: "#2b3513",
-                    }}
-                >
-                  Power Facilitation Activities
-                </h2>
-                <div className="wrap-g">
-                  {data
-                      ?.sort((a, b) => a.id - b.id)
-                      ?.filter((d) => d.type === "POWER_FACILITATION")
-                      .map((item) => (
-                          <div className="card" key={item.id}>
-                            <div className="flex">
-                              <img src={Vector} alt=""/>
-                              <h2 style={{color: "#2b3513"}}>{item.header}</h2>
-                            </div>
-                            <p>{item.description}</p>
-                            <img className="main-img" src={item.image} alt=""/>
-                          </div>
-                      ))}
+                <div className="services">
+                  <h1>The services below are offered by MAN Power Development Company Limited (MPDCL).</h1>
+                  <div className="service-section">
+                    <h2>{services[0].title}</h2>
+                  </div>
                 </div>
-                <h1 className="service-header" style={{color: "#2b3513"}}>
-                  Renewable Energy Service and Members Decarbonization
-                  Initiatives
-                </h1>
-                <img
-                    alt=""
-                    src={landingpageContent?.renewable_image}
-                    style={{
-                      marginBottom: "30px",
-                      width: "100%",
-                      height: "50vh",
-                      objectFit: "cover",
-                    }}
-                />
-                {landingpageContent?.renewable_desc?.map((d, index) => (
-                    <p style={{color: "#2b3513"}} key={index}>
-                      {d}{" "}
-                    </p>
-                ))}
 
-                <div className="thrust" style={{color: "#2b3513"}}>
-                  {landingpageContent?.renewable_items?.map((d, index) => (
-                      <>
-                        <h3>{d.header}</h3>
+                {/*<div className="thrust" style={{color: "#2b3513"}}>*/}
+                {/*  {landingpageContent?.renewable_items?.map((d, index) => (*/}
+                {/*      <>*/}
+                {/*        <h3>{d.header}</h3>*/}
 
-                        <p style={{color: "#2b3513"}}>{d.description}</p>
-                      </>
-                  ))}
+                {/*        <p style={{color: "#2b3513"}}>{d.description}</p>*/}
+                {/*      </>*/}
+                {/*  ))}*/}
 
-                  {/* <h3 style={{ color: "#2b3513" }}>
-                    Human Capacity Building Programmes
-                  </h3>
+                {/*  /!* <h3 style={{ color: "#2b3513" }}>*/}
+                {/*    Human Capacity Building Programmes*/}
+                {/*  </h3>*/}
 
-                  <p style={{ color: "#2b3513" }}>
-                    Good energy and electricity housekeeping leads to energy
-                    efficiency. To be up to speed with the latest technologies,
-                    the need to close the gaps that is creating poor energy
-                    management has become imperative especially now that energy
-                    cost is hitting the roof. MPDCL is therefore supporting
-                    member industries with training programmes in partnership
-                    with leading training institutions and private entities.
-                  </p>
+                {/*  <p style={{ color: "#2b3513" }}>*/}
+                {/*    Good energy and electricity housekeeping leads to energy*/}
+                {/*    efficiency. To be up to speed with the latest technologies,*/}
+                {/*    the need to close the gaps that is creating poor energy*/}
+                {/*    management has become imperative especially now that energy*/}
+                {/*    cost is hitting the roof. MPDCL is therefore supporting*/}
+                {/*    member industries with training programmes in partnership*/}
+                {/*    with leading training institutions and private entities.*/}
+                {/*  </p>*/}
 
-                  <p style={{ color: "#2b3513" }}>
-                    The trainings are structured to attain in-house quality
-                    service delivery in relevant engineering, manufacturing or
-                    production. The programmes will be supported with annual
-                    training calendars with provision for in-plant training with
-                    the following partners;
-                  </p> */}
-                </div>
+                {/*  <p style={{ color: "#2b3513" }}>*/}
+                {/*    The trainings are structured to attain in-house quality*/}
+                {/*    service delivery in relevant engineering, manufacturing or*/}
+                {/*    production. The programmes will be supported with annual*/}
+                {/*    training calendars with provision for in-plant training with*/}
+                {/*    the following partners;*/}
+                {/*  </p> *!/*/}
+                {/*</div>*/}
                 <div className="wrap-g">
                   {data
                       ?.filter(
@@ -307,9 +294,58 @@ function Mpdcl() {
                             </div>
                             <p>{item.description}</p>
                             <img className="main-img" src={item.image} alt=""/>
+                            <button className="view-more-button" onClick>
+                              View More
+                            </button>
                           </div>
                       ))}
                 </div>
+
+                          <div className="card" >
+                            <div className="flex" style={{display: "flex", justifyContent: "space-between", width: "90%"}}>
+                              <img src={Vector} alt=""/>
+                              <h2>Exploring Carbon Credit for Members Benefit</h2>
+                            </div>
+                            <img className="main-img" src="https://res.cloudinary.com/du9oqsosk/image/upload/v1/media/PowerFr4_wsizo0" alt="Renewable Energy as Means of Reducing Members Carbon Footprint"/>
+                            <button className="view-more-button" onClick style={{display: 'block', borderRadius: '8px'}}>
+                              View More
+                            </button>
+                          </div>
+
+
+                {/*<div className="services">*/}
+                {/*  <div className="service-section">*/}
+                {/*    <div className="card">*/}
+                {/*      <div className="flex">*/}
+                {/*        <img src alt=""/>*/}
+                {/*        <h2>Renewable Energy as Means of Reducing Members Carbon Footprint</h2>*/}
+                {/*      </div>*/}
+                {/*      <img className="main-img"*/}
+                {/*           src="https://res.cloudinary.com/du9oqsosk/image/upload/v1/media/PowerFr4_wsizo0" alt=""/>*/}
+                {/*      <button className="view-more-button" onClick>*/}
+                {/*        View More*/}
+                {/*      </button>*/}
+                {/*    </div>*/}
+                {/*  </div>*/}
+                {/*  {services.map((section, index) => (*/}
+                {/*      <div key={index} className="service-section">*/}
+                {/*        <h2>{section.title}</h2>*/}
+
+                {/*        {section.content && <p className="service-content">{section.content}</p>}*/}
+                {/*        {section.partners && (*/}
+                {/*            <div className="partners">*/}
+                {/*              {section.partners.map((partner, idx) => (*/}
+                {/*                  <div key={idx} className="partner">*/}
+                {/*                    <img src={partner.imgSrc} alt={partner.name}/>*/}
+                {/*                    <p>{partner.name}</p>*/}
+                {/*                    <button className="view-more">View More</button>*/}
+                {/*                  </div>*/}
+                {/*              ))}*/}
+                {/*            </div>*/}
+                {/*        )}*/}
+                {/*      </div>*/}
+                {/*  ))}*/}
+                {/*</div>*/}
                 <div className="contact-info">
                   <h1 className="" style={{color: "#2b3513"}}>
                     Contact Us

@@ -148,76 +148,57 @@ function App() {
           />
           <div className="news_main">
             <div className="cover">
-              {/*<h2 className="gallery-title">Gallery</h2>*/}
-              <div className="album-gallery">
-                {albums.map((album) => (
-                    <div
-                        key={album.id}
-                        className="album"
-                        onClick={() => handleAlbumClick(album.id)}
-                    >
-                      <div className="album-image" style={{backgroundImage: `url(${album.imageUrl})`}}>
-                        <div className="image-stack"></div>
-                      </div>
-                      <div className="album-title">{album.title}</div>
+              {isLoading || isFetching ? (
+                  <Loader loading={isLoading || isFetching}/>
+              ) : !isError ? (
+                  <>
+                    <div className="album-gallery">
+                      {paginatedData.map((album) => {
+                        // Select a random image from the gallery_images array
+                        const randomImage = album.gallery_images[Math.floor(Math.random() * album.gallery_images.length)].image;
+                        return (
+                            <div
+                                key={album.id}
+                                className="album"
+                                onClick={() => handleAlbumClick(album.id)}
+                            >
+                              <div
+                                  className="album-image"
+                                  style={{backgroundImage: `url(${randomImage})`}}
+                              >
+                                <div className="image-stack"></div>
+                              </div>
+                              <div className="album-title">{album.name}</div>
+                            </div>
+                        );
+                      })}
                     </div>
-                ))}
-              </div>
-              {/*<div className="right">*/}
-              {/*  <div className="top">*/}
-              {/*    <h2>Gallery</h2>*/}
-              {/*  </div>*/}
-
-              {/*  {isLoading || isFetching ? (*/}
-              {/*    <Loader loading={isLoading || isFetching} />*/}
-              {/*  ) : !isError ? (*/}
-              {/*    <>*/}
-              {/*      <div className="wrap">*/}
-              {/*        {paginatedData.map((item) => (*/}
-              {/*          <div className="card" key={item.id}>*/}
-              {/*            /!* <Link to={"/gallery"}>*/}
-              {/*              <button*/}
-              {/*                style={{ color: "#2b3513", cursor: "pointer" }}*/}
-              {/*              >*/}
-              {/*                <b>Gallery</b>*/}
-              {/*              </button>*/}
-              {/*            </Link> *!/*/}
-              {/*            <div className="flex">*/}
-              {/*              <h3>{item.name}</h3>*/}
-              {/*              <Link to={`/gallery-details/${item.id}`}>*/}
-              {/*                <OpenInNewIcon />*/}
-              {/*              </Link>*/}
-              {/*            </div>*/}
-              {/*          </div>*/}
-              {/*        ))}*/}
-              {/*      </div>*/}
-              {/*      <div className="bto">*/}
-              {/*        <button*/}
-              {/*          onClick={() => {*/}
-              {/*            if (currentPage <= 1) return;*/}
-
-              {/*            setCurrentPage((oldState) => oldState - 1);*/}
-              {/*          }}*/}
-              {/*        >*/}
-              {/*          Previous*/}
-              {/*        </button>*/}
-              {/*        <button*/}
-              {/*          onClick={() => {*/}
-              {/*            if (currentPage >= pages?.length) return;*/}
-              {/*            setCurrentPage((oldState) => oldState + 1);*/}
-              {/*          }}*/}
-              {/*        >*/}
-              {/*          Next*/}
-              {/*        </button>*/}
-              {/*      </div>*/}
-              {/*    </>*/}
-              {/*  ) : (*/}
-              {/*    <FormError>Can't Fetch Gallery Data</FormError>*/}
-              {/*  )}*/}
-              {/*</div>*/}
+                    <div className="pagination-container">
+                      <button
+                          className="pagination-button"
+                          onClick={() => {
+                            if (currentPage <= 1) return;
+                            setCurrentPage((oldState) => oldState - 1);
+                          }}
+                      >
+                        Previous
+                      </button>
+                      <button
+                          className="pagination-button"
+                          onClick={() => {
+                            if (currentPage >= pages?.length) return;
+                            setCurrentPage((oldState) => oldState + 1);
+                          }}
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </>
+              ) : (
+                  <FormError>Can't Fetch Gallery Data</FormError>
+              )}
 
               <div className="left">
-                {/*<img className="img" src={Articleimage} alt="" />*/}
                 <h2 className="gallery-title">Others</h2>
                 <InsightQuickNavigation/>
               </div>

@@ -324,13 +324,13 @@
 
 @media (max-width: 768px) {
   .album-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .album-gallery {
-    grid-template-columns: 1fr; /* 1 column on very small screens */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -341,41 +341,41 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Full width of its column */
+  width: 100%;
   text-align: center;
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
+.album:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-  .album-image {
-    position: relative;
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    background-position: center;
-    border-bottom: 2px solid #ddd;
+.album-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid #ddd;
+}
 
-    .image-stack {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 90%;
-      height: 90%;
-      background: rgba(255, 255, 255, 0.3);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      transform: rotate(-2deg);
-    }
-  }
+.image-stack {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 90%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+}
 
-  .album-title {
-    padding: 15px 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    text-transform: capitalize;
-  }
+.album-title {
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
 }
 
 .gallery-title {
@@ -389,4 +389,27 @@
   border-bottom: 2px solid #333;
   display: inline-block;
   padding-bottom: 10px;
+}
+
+//.pagination-container {
+//  display: flex;
+//  justify-content: center;
+//  gap: 20px;
+//  margin-top: 20px;
+//}
+
+.pagination-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.pagination-button:hover {
+  background-color: #555;
 }
