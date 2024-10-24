@@ -15,6 +15,7 @@ import { getSectoralApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
 function Sectoral() {
   const { isLoading, data } = useQuery("getSectoralApi", getSectoralApi);
+  console.log({data})
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>

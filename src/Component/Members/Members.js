@@ -24,7 +24,7 @@ import Loader from "../Loader/Loader";
 function Members() {
   const navigate = useNavigate();
   const { data, isLoading } = useQuery("whyJoinManApi", whyJoinManApi);
-  console.log(data);
+  console.log({data});
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>

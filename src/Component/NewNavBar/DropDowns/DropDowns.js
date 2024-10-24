@@ -48,24 +48,28 @@ export const ServicesDropdown = () => {
   // const [serviceShow, setShowService] = useState(false);
   // const [specialised, setSpecialised] = useState(false);
   return (
-    <div className="service-dropdown">
-       <div className="dropdown-item">
+      <div className="service-dropdown">
+          <div className="dropdown-item">
         <span>
           <Link to={"/about-mrc"}>MRC</Link>
         </span>
-      </div>
-      <div className="dropdown-item">
+          </div>
+          <div className="dropdown-item">
         <span>
           <Link to={"/mpdcl"}>MPDCL</Link>
         </span>
-      </div>
-      <div className="dropdown-item">
+          </div>
+          <div className="dropdown-item">
         <span>
           <Link to={"/services"}>Core Services</Link>
         </span>
-      </div>
-
-      {/* <div
+          </div>
+          <div className="dropdown-item">
+        <span>
+          <Link to="/event-training">Consultancy, Events & Trainings</Link>
+        </span>
+          </div>
+          {/* <div
         className="dropdown-item"
         onClick={() => setSpecialised(!specialised)}
       >
@@ -97,14 +101,14 @@ export const ServicesDropdown = () => {
           </div>
         </>
       )} */}
-    </div>
+      </div>
   );
 };
 
 export const InsightDropdown = () => {
-  return (
-    <div className="insight-dropdown">
-      <div className="dropdown-item">
+    return (
+        <div className="insight-dropdown">
+            <div className="dropdown-item">
         <span>
           <Link to={"/publications"}>Publications</Link>
         </span>
@@ -124,11 +128,11 @@ export const InsightDropdown = () => {
           <Link to={"/reports"}>Reports</Link>
         </span>
       </div>
-      <div className="dropdown-item">
-        <span>
-          <Link to="/event-training">Consultancy, Events & Trainings</Link>
-        </span>
-      </div>
+      {/*<div className="dropdown-item">*/}
+      {/*  <span>*/}
+      {/*    <Link to="/event-training">Consultancy, Events & Trainings</Link>*/}
+      {/*  </span>*/}
+      {/*</div>*/}
 
       <div className="dropdown-item">
         <span>

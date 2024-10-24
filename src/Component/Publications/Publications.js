@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { ThemeProvider } from "@emotion/react";
 import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
@@ -43,6 +43,11 @@ const Publications = () => {
     },
   });
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+
   const { isLoading, isFetching, isError, data } = useQuery(
     "all-free-publications",
     getFreePublication,
@@ -52,10 +57,18 @@ const Publications = () => {
     }
   );
 
+
+
+  let pages = [];
+
+  for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
+    pages.push(i);
+  }
   let renderdata;
   if (data) {
     renderdata = getGroupedBy(data, "type");
   }
+  const paginatedData = renderdata?.slice(firstPostIndex, lastPostIndex);
   return (
     <>
       <div>
@@ -76,8 +89,8 @@ const Publications = () => {
                   <div className="right">
                     <p className="view-paid">
                       <Link
-                        to={"/paid-publications"}
-                        style={{ color: "#2b3513", textDecoration: "none" }}
+                          to={"/paid-publications"}
+                          style={{color: "#2b3513", textDecoration: "none"}}
                       >
                         Click to view paid publications
                       </Link>
@@ -87,26 +100,26 @@ const Publications = () => {
                     </div>
 
                     {isLoading || isFetching || typeLoading || typeFetching ? (
-                      <Loader
-                        loading={
-                          isLoading || isFetching || typeLoading || typeFetching
-                        }
-                      />
+                        <Loader
+                            loading={
+                                isLoading || isFetching || typeLoading || typeFetching
+                            }
+                        />
                     ) : !isError || typeError ? (
-                      <>
-                        {renderdata.map((item, index) => (
-                          <div key={index}>
-                            <div className="wrap">
-                              {item.map((innerItem, innerIndex) => {
-                                return (
-                                  <div key={innerIndex}>
-                                    {innerIndex === 0 ? (
-                                      <div className="top">
-                                        <h4>{typeData[innerItem.type]}</h4>
-                                      </div>
-                                    ) : null}
-                                    <div className="card">
-                                      {/* <Link to={"/publications"}>
+                        <>
+                          {paginatedData.map((item, index) => (
+                              <div key={index}>
+                                <div className="wrap">
+                                  {item.map((innerItem, innerIndex) => {
+                                    return (
+                                        <div key={innerIndex}>
+                                          {innerIndex === 0 ? (
+                                              <div className="top">
+                                                <h4>{typeData[innerItem.type]}</h4>
+                                              </div>
+                                          ) : null}
+                                          <div className="card">
+                                            {/* <Link to={"/publications"}>
                                         <button
                                           style={{
                                             color: "#2b3513",
@@ -116,34 +129,53 @@ const Publications = () => {
                                           <b>Publications</b>
                                         </button>
                                       </Link> */}
-                                      <div className="flex">
-                                        <h3>{innerItem.name}</h3>
-                                        <Link
-                                          to={`/publications-details/${innerItem.id}`}
-                                        >
-                                          <OpenInNewIcon />
-                                        </Link>
-                                      </div>
-                                      <p>
-                                        {dateformatter(
-                                          new Date(innerItem.created_at)
-                                        )}
-                                      </p>
-                                    </div>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        ))}
-                      </>
+                                            <div className="flex">
+                                              <h3>{innerItem.name}</h3>
+                                              <Link
+                                                  to={`/publications-details/${innerItem.id}`}
+                                              >
+                                                <OpenInNewIcon/>
+                                              </Link>
+                                            </div>
+                                            <p>
+                                              {dateformatter(
+                                                  new Date(innerItem.created_at)
+                                              )}
+                                            </p>
+                                          </div>
+                                        </div>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                          ))}
+                        </>
                     ) : (
-                      <FormError>Can't Fetch Free Publications</FormError>
+                        <FormError>Can't Fetch Free Publications</FormError>
                     )}
 
-                    <br />
-                    <button>Next</button>
-                    <br />
+                    <br/>
+                    <div className="bto">
+                      <button
+                          onClick={() => {
+                            if (currentPage <= 1) return;
+
+                            setCurrentPage((oldState) => oldState - 1);
+                          }}
+                      >
+                        Previous
+                      </button>
+                      <button
+                          onClick={() => {
+                            if (currentPage >= pages?.length) return;
+                            setCurrentPage((oldState) => oldState + 1);
+                          }}
+                      >
+                        Next
+                      </button>
+                    </div>
+                    {/*<button>Next</button>*/}
+                    <br/>
 
                     {/* <div className="top">
                       <h4>Manufacturers CEO Confidence Index (MCCI)</h4>
@@ -181,14 +213,14 @@ const Publications = () => {
                     </div> */}
                   </div>
                   <div className="left">
-                    <img src={Articleimage} alt="" />
-                    <InsightQuickNavigation />
+                    <img src={Articleimage} alt=""/>
+                    <InsightQuickNavigation/>
                   </div>
                 </div>
               </div>
 
-              <Wall />
-              <Footer />
+              <Wall/>
+              <Footer/>
             </div>
           </UIProvider>
         </ThemeProvider>

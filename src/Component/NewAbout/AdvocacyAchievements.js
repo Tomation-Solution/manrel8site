@@ -41,6 +41,8 @@ const CodeofConduct = () => {
               className="topBg"
               style={{
                 background: `url(${data.main_image})`,
+                  height: "100vh",
+                  width: "100vw",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",

@@ -68,10 +68,15 @@
         padding: 100px 20px;
       }
       .left {
-        width: 55%;
-        height: 600px;
+        width: 61%;
         background-color: #fff;
         padding: 30px;
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+        min-height: 100vh;
+        height: auto;
+        overflow-y: visible;
         @include mobile-1 {
           width: 100%;
           padding: 30px 10px;
@@ -108,7 +113,10 @@
         }
       }
       .right {
-        width: 30%;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        background-color: #f9f9f9;
         @include mobile-1 {
           width: 100%;
           padding-top: 50px;

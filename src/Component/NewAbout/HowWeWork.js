@@ -33,8 +33,17 @@ const HowWeWork = () => {
             <div
               className="topBg"
               style={{
+                  // minHeight: "100vh", width: "100vw",
+                  // height: "auto",
+                  // display: "flex",
+                  // justifyContent: "center",
+                  // alignItems: "center",
+                  height: "100vh",
+                  width: "100vw",
+                  objectFit: "cover",
                 background: `url(${data.main_image})`,
-                backgroundSize: "cover",
+                // backgroundSize: "cover",
+                  backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
               }}

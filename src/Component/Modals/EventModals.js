@@ -99,7 +99,7 @@ export const RegisterModal = ({ closefn, data }) => {
         toast.error("registration failed");
       },
       onSuccess: (data) => {
-        toast.success("registration successful");
+        toast.success("Your request has been successfully submitted. You will be contacted soon");
         if (data?.data?.data?.authorization_url) {
           const redirectUrl = data?.data?.data?.authorization_url;
           window.open(redirectUrl, "_blank");

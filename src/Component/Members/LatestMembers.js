@@ -17,7 +17,6 @@ function LatestMembers() {
   const { isLoading, data } = useQuery("getMembersApi", getMembersApi, {
     refetchOnWindowFocus: false,
   });
-
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);

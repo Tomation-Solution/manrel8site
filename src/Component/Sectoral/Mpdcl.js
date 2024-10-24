@@ -20,7 +20,7 @@ function Mpdcl() {
     "getMPDCLPageApi",
     getMPDCLPageApi
   );
-
+  console.log({data, landingpageContent})
   const boardMembers = [
     {
       name: "Engr. Ibrahim Usman",

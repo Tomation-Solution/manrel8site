@@ -39,9 +39,14 @@
     }
   }
   .hero_image {
-    min-height: 50vh;
+    //min-height: 50vh;
     background: url("../../../images/new-images/Peoplewithuhari.jpeg");
-    background-size: cover;
+    //background-size: cover;
+    background-size: contain;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    //objectFit: "cover"
     background-repeat: no-repeat;
     background-position: center;
     display: flex;

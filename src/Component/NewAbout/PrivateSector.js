@@ -45,6 +45,8 @@ const PrivateSector = () => {
               className="topBg"
               style={{
                 background: `url(${data.main_image})`,
+                  height: "95vh",
+                  width: "100vw",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",

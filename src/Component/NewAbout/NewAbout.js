@@ -37,7 +37,7 @@ const NewAbout = () => {
             <div
               className="topBg"
               style={{
-                height: "400px",
+                minHeight: "100vh", width: "100vw",
                 background: `url(${ManFirstAGM})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

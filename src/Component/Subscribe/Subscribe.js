@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "../../images/div-sub.png";
 import { useUIContext } from "../../Ui";
 import CloseIcon from "@mui/icons-material/Close";
@@ -12,14 +12,18 @@ import Loader from "../Loader/Loader";
 
 function Subscribe() {
   const { subscribe, setSubscribe } = useUIContext();
+  const [subscribeState, setSubscribeState] = useState("subscribed to MAN newsletter");
   const {
     register,
     handleSubmit,
+      reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
       email: "",
+      name: ""
     },
+
   });
 
   const { mutate, isLoading } = useMutation(postNewLetter, {
@@ -27,7 +31,9 @@ function Subscribe() {
       toast.info("subscribing to MAN newsletter");
     },
     onSuccess: () => {
-      toast.success("subscribed to MAN newsletter");
+      setSubscribeState("Subscribed successfully")
+      reset()
+      toast.success(subscribeState);
     },
     onError: (data) => {
       if (
@@ -60,14 +66,22 @@ function Subscribe() {
             </div>
             <div className="right">
               <div className="huo">
-                <h1>Subscribe to our Newsletter</h1>
+                <h1>{subscribeState}</h1>
                 <form onSubmit={handleSubmit(onSubmitHandler)}>
+                  <div>
+                    {errors?.name && <FormError>invalid input</FormError>}
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        {...register("name", {required: true})}
+                    />
+                  </div>
                   <div>
                     {errors?.email && <FormError>invalid input</FormError>}
                     <input
-                      type="email"
-                      placeholder="Email Address"
-                      {...register("email", { required: true })}
+                        type="email"
+                        placeholder="Email Address"
+                        {...register("email", {required: true})}
                     />
                   </div>
                   <button>SUBMIT</button>

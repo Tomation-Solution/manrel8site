@@ -42,6 +42,7 @@ function Services() {
   const {
     register,
     handleSubmit,
+      reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -58,7 +59,8 @@ function Services() {
       toast.info("submitting service request");
     },
     onSuccess: () => {
-      toast.success("service request submitted");
+      toast.success("Your request has been successfully submitted. You will be contacted soon");
+      reset();
     },
     onError: () => {
       toast.error("failed to submit service request");
