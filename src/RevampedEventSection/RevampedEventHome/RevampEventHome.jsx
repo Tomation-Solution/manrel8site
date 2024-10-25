@@ -19,6 +19,8 @@ const RevampEventHome = () => {
     getAgmHomepage
   );
 
+    console.log({data})
+
   const speakerData = useCustomFetcher("speakers", getAllAgmSpeakers);
 
   if (loadingState || speakerData.loadingState) {
