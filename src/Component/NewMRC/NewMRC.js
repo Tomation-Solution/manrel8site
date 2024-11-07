@@ -11,28 +11,28 @@ import { useQuery } from "react-query";
 import { getMrcPageApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
 
-const services = [
-  {
-    title: "BUSINESS DEVELOPMENT SERVICES",
-    description: "Identify possible problems affecting SMEs by preparing a detailed technical due diligence report through review of their operations.",
-    color: "#3B4424"
-  },
-  {
-    title: "BUSINESS INFORMATION SERVICES",
-    description: "Sourcing of raw materials, Machinery and equipment, Markets, Model business profiles etc.",
-    color: "#D3483C"
-  },
-  {
-    title: "ECONOMIC RESEARCH AND ANALYSIS",
-    description: "Provision of Economic research and analysis for manufacturers, government and the organized private sector.",
-    color: "#5AC2C0"
-  },
-  {
-    title: "BUSINESS CONSULTANCY",
-    description: "Investment and financial advisory services, Local and international business linkages.",
-    color: "#333333" 
-  }
-];
+// const services = [
+//   {
+//     title: "BUSINESS DEVELOPMENT SERVICES",
+//     description: "Identify possible problems affecting SMEs by preparing a detailed technical due diligence report through review of their operations.",
+//     color: "#3B4424"
+//   },
+//   {
+//     title: "BUSINESS INFORMATION SERVICES",
+//     description: "Sourcing of raw materials, Machinery and equipment, Markets, Model business profiles etc.",
+//     color: "#D3483C"
+//   },
+//   {
+//     title: "ECONOMIC RESEARCH AND ANALYSIS",
+//     description: "Provision of Economic research and analysis for manufacturers, government and the organized private sector.",
+//     color: "#5AC2C0"
+//   },
+//   {
+//     title: "BUSINESS CONSULTANCY",
+//     description: "Investment and financial advisory services, Local and international business linkages.",
+//     color: "#333333" 
+//   }
+// ];
 
 const NewMRC = () => {
   const  {isLoading,data} = useQuery('getMrcPageApi',getMrcPageApi)

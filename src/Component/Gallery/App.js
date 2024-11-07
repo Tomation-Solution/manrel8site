@@ -3,8 +3,8 @@ import React from "react";
 import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
 import "./Insmore.scss";
-import Articleimage from "../../images/new-images/InsightCardIMages (3).jpg";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+// import Articleimage from "../../images/new-images/InsightCardIMages (3).jpg";
+// import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Image1 from "../../images/new-images/InsightCardIMages (1).jpg";
 import Image2 from "../../images/new-images/InsightCardIMages (5).jpg";
 import Image3 from "../../images/new-images/InsightCardIMages (4).jpg";
@@ -126,14 +126,14 @@ function App() {
   const handleAlbumClick = (id) => {
     window.location.href = `/gallery-details/${id}`;
   };
-  const albums = [
-    { id: 1, title: 'Summer Vacation', imageUrl: '/images/summer-vacation.jpg' },
-    { id: 2, title: 'Family Reunion', imageUrl: '/images/family-reunion.jpg' },
-    { id: 3, title: 'Nature Walks', imageUrl: '/images/nature-walks.jpg' },
-    { id: 4, title: 'City Lights', imageUrl: '/images/city-lights.jpg' },
-    { id: 5, title: 'Beach Memories', imageUrl: '/images/beach-memories.jpg' },
-    { id: 6, title: 'Winter Wonderland', imageUrl: '/images/winter-wonderland.jpg' },
-  ];
+  // const albums = [
+  //   { id: 1, title: 'Summer Vacation', imageUrl: '/images/summer-vacation.jpg' },
+  //   { id: 2, title: 'Family Reunion', imageUrl: '/images/family-reunion.jpg' },
+  //   { id: 3, title: 'Nature Walks', imageUrl: '/images/nature-walks.jpg' },
+  //   { id: 4, title: 'City Lights', imageUrl: '/images/city-lights.jpg' },
+  //   { id: 5, title: 'Beach Memories', imageUrl: '/images/beach-memories.jpg' },
+  //   { id: 6, title: 'Winter Wonderland', imageUrl: '/images/winter-wonderland.jpg' },
+  // ];
   return (
     <ThemeProvider theme={theme}>
       <div className="insight-more">

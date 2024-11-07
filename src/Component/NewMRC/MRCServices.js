@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";

@@ -50,7 +50,7 @@ function LatestMembers() {
     }
   }, [data]);
   useEffect(()=>{
-    if(searchValue.length !=0){
+    if(searchValue.length !==0){
       setCurrentPage(1)
     }
   },[searchValue])
@@ -145,7 +145,7 @@ function LatestMembers() {
         </div>
         {/* PAGINATION LOGIC */}
               {
-                searchValue.length==0?
+                searchValue.length===0?
         <div className="pagination">
           {pages?.splice(0, 7)?.map((page, index) => {
             return (
