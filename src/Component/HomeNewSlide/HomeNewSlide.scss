@@ -1,121 +1,9 @@
-// @import "../../Styles/resources";
-
-// html, body {
-//   height: 100%; // Ensure html and body take full height
-//   margin: 0; // Remove default margin
-// }
-
-// .home-new-slide {
-//   margin-bottom: 80px;
-//   border-bottom: 10px solid #2b3513;
-
-//   height: 100vh; // Set the height of the hero section to 100% of the viewport height
-
-//   .swiper {
-//     width: 100%;
-//     height: 100%; // Make swiper full height
-//     background: #fff;
-//   }
-
-//   .swiper-slide {
-//     font-size: 18px;
-//     color: #fff;
-//     box-sizing: border-box;
-//     padding: 40px 60px;
-//     height: 100%; // Allow slide height to fill the parent
-
-//     @include mobile-6 {
-//       padding: 20px 30px;
-//       height: auto; // Let it be responsive on smaller screens
-//     }
-//   }
-
-//   .parallax-bg {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%; // Ensure it covers the full height
-//     background-size: cover; // Cover the entire area without distortion
-//     background-position: center; // Center the image
-//     background-repeat: no-repeat; // Prevent tiling
-//     transition: all 1s ease-in-out !important;
-//   }
-
-//   .narration-con {
-//     background-color: rgba(255, 255, 255, 0.9); // Semi-transparent background for better visibility
-//     color: #2b3513;
-//     display: flex;
-//     flex-direction: column;
-//     border-radius: 10px;
-//     overflow: hidden;
-//     width: 40%;
-//     position: absolute;
-//     left: 50px;
-//     bottom: 50px;
-//     opacity: 0.9;
-
-//     @include mobile-6 {
-//       width: 70%;
-//     }
-
-//     .narration-banner {
-//       background-color: #2b3513;
-//       color: #fff;
-//       font-size: 20px;
-//       padding: 5px;
-//       text-align: center;
-//     }
-
-//     .narration-text {
-//       padding: 10px;
-//       font-size: 16px;
-//       font-weight: 500;
-//       text-align: center;
-//       overflow: hidden;
-//       //white-space: nowrap;
-//       white-space: normal;
-//       word-wrap: break-word;
-//       overflow-wrap: break-word;
-//       @include mobile-4 {
-//         font-size: 12px;
-//       }
-
-//       // Scrolling text effect
-//       .scrolling-text {
-//         display: inline-block;
-//         position: relative;
-//         animation: scroll-text 10s linear infinite;
-//       }
-
-//       @keyframes scroll-text {
-//         0% {
-//           transform: translateX(100%);
-//         }
-//         100% {
-//           transform: translateX(-100%);
-//         }
-//       }
-//     }
-//   }
-// }
-// .parallax-bg {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   transition: background-image 0.5s ease-in-out; // Smooth transition for image change
-// }
-
 @import "../../Styles/resources";
 
 .home-new-slide {
   margin-bottom: 80px;
   border-bottom: 10px solid #2b3513;
+  
   .swiper {
     width: 100%;
     height: 100%;
@@ -125,10 +13,10 @@
   .swiper-slide {
     font-size: 18px;
     color: #fff;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 40px 60px;
     height: 700px !important;
+    
     @include mobile-6 {
       padding: 20px 30px;
       height: 400px !important;
@@ -141,21 +29,12 @@
     top: 0;
     width: 130%;
     height: 100%;
-    // -webkit-background-size: cover;
-    // background-size: cover !important;
-    transition: all 1s ease-in-out !important;
     background-size: 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+    transition: background-image 0.6s ease-in-out, transform 0.6s ease-in-out;
   }
-  // &:hover {
-  //   @media (min-width: 800px) {
-  //     .parallax-bg {
-  //       background-repeat: repeat !important;
-  //       background-size: 50% !important;
-  //     }
-  //   }
-  // }
+
   .narration-con {
     background-color: #fff;
     color: #2b3513;
@@ -168,7 +47,8 @@
     left: 50px;
     bottom: 50px;
     opacity: 0.9;
-
+    transition: transform 0.6s ease-in-out;
+    
     @include mobile-4 {
       left: 50px;
       bottom: 100px;
@@ -184,21 +64,27 @@
       font-size: 20px;
       padding: 5px;
       text-align: center;
+      transition: transform 0.6s ease-in-out;
     }
+    
     .narration-text {
       padding: 10px;
       font-size: 16px;
       font-weight: 500;
       text-align: center;
+      transition: transform 0.6s ease-in-out;
+      
       @include mobile-4 {
         font-size: 12px;
       }
     }
+    
     .centered-button {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 10px 0px;
+      
       button {
         border-radius: 5px;
         padding: 10px 20px;
@@ -207,6 +93,7 @@
         outline: none;
         border: none;
         cursor: pointer;
+        transition: transform 0.6s ease-in-out;
       }
     }
   }
