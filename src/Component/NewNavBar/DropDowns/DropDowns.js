@@ -51,7 +51,7 @@ export const ServicesDropdown = () => {
       <div className="service-dropdown">
           <div className="dropdown-item">
         <span>
-          <Link to={"/about-mrc"}>MRC</Link>
+          <Link to={"/mrc-services"}>MRC Services</Link>
         </span>
           </div>
           <div className="dropdown-item">
@@ -189,7 +189,7 @@ export const StructureDropdown = () => {
           <Link to={"/sectoral"}>Sectoral Group</Link>
         </span>
       </div>
-      {/* <div className="dropdown-item">
+      <div className="dropdown-item">
         <span>
           <Link to={"/about-mrc"}>MRC</Link>
         </span>
@@ -198,7 +198,7 @@ export const StructureDropdown = () => {
         <span>
           <Link to={"/mpdcl"}>MPDCL</Link>
         </span>
-      </div> */}
+      </div>
       {/* <div
         className="dropdown-item"
         onClick={() => setShowService(!serviceShow)}
