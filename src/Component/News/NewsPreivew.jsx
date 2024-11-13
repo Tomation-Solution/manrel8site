@@ -26,13 +26,14 @@ const NewsPreivew = ({ render_data, isImage, no_title }) => {
             ))}
           </>
         ) : null}
-        {render_data.link ? (
+        {/* The news can be downloaded */}
+        {/* {render_data.link ? (
           <div style={{'display':'flex','gap':'10px'}}>
             <a href={`${render_data.link}`} rel="noreferrer" target="_blank">
             Click here to Download 
           </a>
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );
