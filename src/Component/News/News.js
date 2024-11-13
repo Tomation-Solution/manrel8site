@@ -20,7 +20,7 @@ import { useQuery } from "react-query";
 import { getNews } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
-import { dateformatter } from "../../utils/date-formatter";
+// import { dateformatter } from "../../utils/date-formatter";
 import { useState } from "react";
 
 function News() {
@@ -87,7 +87,7 @@ function News() {
                                 <OpenInNewIcon />
                               </Link>
                             </div>
-                            <p>{dateformatter(new Date(item.created_at))}</p>
+                            {/* <p>{dateformatter(new Date(item.created_at))}</p> */}
                           </div>
                         );
                       })}
