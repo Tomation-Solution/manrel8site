@@ -56,7 +56,7 @@ export const ServicesDropdown = () => {
           </div>
           <div className="dropdown-item">
         <span>
-          <Link to={"/mpdcl"}>MPDCL</Link>
+          <Link to={"/mpdcl-services"}>MPDCL Services</Link>
         </span>
           </div>
           <div className="dropdown-item">

@@ -69,6 +69,7 @@ import RevampedEventHost from "./RevampedEventSection/RevampedEventHost/Revamped
 import RevampedEventHighlights from "./RevampedEventSection/RevampedEventHighlights/RevampedEventHighlights";
 import RevampedEventVenue from "./RevampedEventSection/RevampedEventVenue/RevampedEventVenue";
 import RevampEventSpeakerDetails from "./RevampedEventSection/RevampedEventSpeaker/RevampEventSpeakerDetails";
+import MPDCLServices from "./Component/Sectoral/MPDCLServices";
 
 const client = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -246,6 +247,7 @@ root.render(
           <Route path="/operate" element={<Operate />} />
           <Route path="/mrc" element={<Mrc />} />
           <Route path="/mpdcl" element={<Mpdcl />} />
+          <Route path="/mpdcl-services" element={<MPDCLServices />} />
         </Routes>
       </BrowserRouter>
       {/* <ReactQueryDevtools position="bottom-right" /> */}
