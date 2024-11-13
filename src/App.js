@@ -37,7 +37,7 @@ function App() {
             <div className="home">
               <Subscribe />
               <NewNavBar />
-              <HomeNewSlide />
+              <HomeNewSlide initialData={data}/>
               <Article data={data} />
               <Section renderdata={data} />
               <InfoBoard />

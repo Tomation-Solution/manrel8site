@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomeNewSlide.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -9,10 +9,11 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import { getSlidersApi } from "../../utils/csm-api-calls";
 import { useQuery } from 'react-query';
 
-const HomeNewSlide = () => {
+const HomeNewSlide = ({initialData}) => {
 
   const [image, setImage] = useState([]);
   const [index, setIndex] = useState(0);
+  const [loopMessageIndex, setLoopMessageIndex] = useState(0);
   
   const { data } = useQuery('getSlidersApi', getSlidersApi, {
     refetchOnWindowFocus: false,
@@ -20,6 +21,20 @@ const HomeNewSlide = () => {
       setImage(data.map((d) => d.banner));
     }
   });
+
+  const loopMessages = [
+    initialData.slider_welcome_message,
+    initialData.slider_vision_message,
+    initialData.slider_mission_message
+  ];
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setLoopMessageIndex((prevIndex) => (prevIndex + 1) % loopMessages.length);
+      }, 10000); // Match the scroll duration in CSS
+  
+      return () => clearInterval(interval);
+    }, [loopMessages.length]);
   
   return (
     <>
@@ -62,6 +77,13 @@ const HomeNewSlide = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      {/* Looping Message Section Below Slider */}
+      <div className="looping-message">
+        <div className="scrolling-message">
+          <p>{loopMessages[loopMessageIndex]}</p>
+        </div>
       </div>
     </>
   );
