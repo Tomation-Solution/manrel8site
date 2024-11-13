@@ -67,17 +67,11 @@ function App() {
                 {isLoading || isFetching ? (
                   <Loader loading={isLoading || isFetching} />
                 ) : !isError ? (
+                  data && data.length > 0 ? ( // Check if data is not empty
                   <div className="wrap">
                     {paginatedData.map((item, index) => (
                       <>
                         <div className="card" key={index}>
-                          {/* <Link to={"/reports"}>
-                            <button
-                              style={{ color: "#2b3513", cursor: "pointer" }}
-                            >
-                              <b>Reports</b>
-                            </button>
-                          </Link> */}
                           <div className="flex">
                             <h3>{item.name}</h3>
                             <Link to={`/report-details/${item.id}`}>
@@ -108,6 +102,9 @@ function App() {
                       </>
                     ))}
                   </div>
+                    ) : (
+                      <p>No Annual Reports available, please enjoy the silence</p> // Message for empty data array
+                    )
                 ) : (
                   <FormError>Can't Fetch Reports Data</FormError>
                 )}
