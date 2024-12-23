@@ -22,6 +22,20 @@ import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
 import OurServiceImage from "../../images/new-images/OurServicesNewImage2.jpeg";
 
+import Image1 from "../../images/download4.jpg";
+import Image2 from "../../images/download3.jpg";
+import Image3 from "../../images/download2.jpg";
+import Image4 from "../../images/images1.jpg";
+import Image5 from "../../images/images2.jpg";
+import Image6 from "../../images/download4.jpg";
+import Image7 from "../../images/download3.jpg";
+import Image8 from "../../images/download2.jpg";
+import Image9 from "../../images/images1.jpg";
+import Image10 from "../../images/images2.jpg";
+import Image11 from "../../images/download4.jpg";
+import Image12 from "../../images/download3.jpg";
+import Image13 from "../../images/download2.jpg";
+
 function Services() {
   const schema = yup.object({
     name: yup.string().required("fullname is a required field"),
@@ -71,6 +85,39 @@ function Services() {
     mutate(data);
   };
 
+  // const services = [
+  //   "Membership Services",
+  //   "Public Policy Advocacy",
+  //   "Specific intervention on Members and Sectoral Problems",
+  //   "Economic Research and Analysis",
+  //   "Monitoring and Analysing of Government Policies",
+  //   "Preparation of Memoranda on Topical Industrial and Economic Issues",
+  //   "Liaising Activities for Members",
+  //   "Promotion and Organisaton of Trade Mission",
+  //   "Promotion of Made-in-Nigeria Products",
+  //   "Reconciliation and Harmonisation of Diverse interest of Members",
+  //   "Industry Information Dissemination",
+  //   "Seminars and Conferences",
+  //   "Publications",
+  // ];
+
+  const services = [
+    { name: "Membership Services", image: Image1 },
+    { name: "Public Policy Advocacy", image: Image2 },
+    { name: "Specific intervention on Members and Sectoral Problems", image: Image3 },
+    { name: "Economic Research and Analysis", image: Image4 },
+    { name: "Monitoring and Analysing of Government Policies", image: Image5 },
+    { name: "Preparation of Memoranda on Topical Industrial and Economic Issues", image: Image6 },
+    { name: "Liaising Activities for Members", image: Image7 },
+    { name: "Promotion and Organisaton of Trade Mission", image: Image8 },
+    { name: "Promotion of Made-in-Nigeria Products", image: Image9 },
+    { name: "Reconciliation and Harmonisation of Diverse interest of Members", image: Image10 },
+    { name: "Industry Information Dissemination", image: Image11 },
+    { name: "Seminars and Conferences", image: Image12 },
+    { name: "Publications", image: Image13 },
+    // Add more services and images here
+  ];
+
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -97,7 +144,7 @@ function Services() {
               <div className="services-head">
                 <h1>Core Services</h1>
               </div>
-              <div className="services-wrap diff">
+              {/* <div className="services-wrap diff">
                 {servicesQueryResult.data
                   .reverse()
                   .filter((item) => item.type === "CORE")
@@ -115,7 +162,101 @@ function Services() {
                       </div>
                     </div>
                   ))}
+              </div> */}
+              {/* Working Div for General Image */}
+              {/* <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+                  gap: "20px",
+                  margin: "20px",
+                }}
+              >
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      position: "relative",
+                      backgroundImage: `url(${OurServiceImage})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      height: "300px",
+                      borderRadius: "10px",
+                      overflow: "hidden",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "20px",
+                        left: "20px",
+                        right: "20px",
+                        backgroundColor: "rgba(0, 0, 0, 0.6)",
+                        padding: "10px",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <h3
+                        style={{
+                          color: "white",
+                          fontSize: "18px",
+                          margin: "0",
+                        }}
+                      >
+                        {service}
+                      </h3>
+                    </div>
+                  </div>
+                ))}
+              </div> */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+                  gap: "20px",
+                  margin: "20px",
+                }}
+              >
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      position: "relative",
+                      backgroundImage: `url(${service.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      height: "300px",
+                      borderRadius: "5px",
+                      overflow: "hidden",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "20px",
+                        left: "20px",
+                        right: "20px",
+                        backgroundColor: "rgba(0, 0, 0, 0.6)",
+                        padding: "10px",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <h3
+                        style={{
+                          color: "white",
+                          fontSize: "18px",
+                          margin: "0",
+                        }}
+                      >
+                        {service.name}
+                      </h3>
+                    </div>
+                  </div>
+                ))}
               </div>
+              
               <div className="services-head">
                 <h1>Manufacturers Resource Centre (MRC) Services</h1>
                 <p>

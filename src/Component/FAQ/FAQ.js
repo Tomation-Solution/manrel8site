@@ -36,7 +36,7 @@ const FAQ = () => {
                   }
                   key={item.header}
                 >
-                  <header onClick={() => setSelectedQuest(item)}>
+                  <header onClick={() => setSelectedQuest(item)} style={{ fontSize: "1.5rem" }}>
                     <h2>{item.header}</h2>
                     {selectedQuest.header === item.header ? (
                       <FaMinus />
@@ -45,7 +45,7 @@ const FAQ = () => {
                     )}
                   </header>
                   {item.content.map((data, index) => (
-                    <article key={index}>{data}</article>
+                    <article style={{ fontSize: "1.25rem" }} key={index}>{data}</article>
                   ))}
                 </div>
               ))}
