@@ -31,7 +31,7 @@ const HomeNewSlide = ({initialData}) => {
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setLoopMessageIndex((prevIndex) => (prevIndex + 1) % loopMessages.length);
+        // setLoopMessageIndex((prevIndex) => (prevIndex + 1) % loopMessages.length);
       }, 10000); // Match the scroll duration in CSS
   
       return () => clearInterval(interval);
