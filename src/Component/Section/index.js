@@ -38,14 +38,17 @@ function Section({ renderdata }) {
             <SectionTitle style={{ textAlign: "left" }}>
               Our Vision
             </SectionTitle>
-            {renderdata.vision_intro.map((item, index) => (
+            {/* {renderdata.vision_intro.map((item, index) => (
               <SectionDescription
                 key={index}
                 sx={{ color: "#2b3513", textAlign: "left" }}
               >
                 {item}
               </SectionDescription>
-            ))}
+            ))} */}
+            <SectionDescription>
+              To be the key driver for Industrialization, sustainable Economic Growth and Development in  Nigeria.
+            </SectionDescription>
           </div>
         </SectionItemContainer>
         <SectionItemContainer
