@@ -67,17 +67,19 @@ const Banner = () => {
                 Our Mission
               </BannerTitle>
               <BannerDescription>
-                MAN promotes the interest of manufacturers by deepening its
+                {/* MAN promotes the interest of manufacturers by deepening its
                 advocacy and partnership with national and international
                 economic actors in Government, Organized Private Sector, host
                 communities and other stakeholders to foster its proactive role
-                in policy formulation and implementation.
+                in policy formulation and implementation. */}
+                MAN promotes the interest of manufacturers by deepening its advocacy and partnership with national and international economic actors in Government, Organized Private Sector, host communities and other stakeholders to foster its proactive role in policy formulation and implementation.
               </BannerDescription>
               <BannerDescription>
-                MAN promotes manufacturing sector competitiveness, contribution
+                {/* MAN promotes manufacturing sector competitiveness, contribution
                 to job creation and Gross Domestic Product through commitment to
                 research and development, new technologies and environmental
-                sustainability.
+                sustainability. */}
+                MAN promotes manufacturing sector competitiveness, job creation and Gross Domestic Product through commitment to research and development, new technologies and environmental sustainability.
               </BannerDescription>
               <BannerButtonContainer>
                 <Link to="/join-now-page" style={{ textDecoration: "none" }}>

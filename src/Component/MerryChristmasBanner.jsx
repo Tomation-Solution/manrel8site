@@ -23,13 +23,14 @@ function MerryChristmasBanner() {
       gradient={false}
       speed={50}
       style={{
-        backgroundColor: "#f00",
+        // backgroundColor: "#f00",
         padding: "10px",
-        color: '#fff'
+        color: '#000'
         // fontSize: "18px",
       }}
     >
-        Merry Christmas 🎄✨ Merry Christmas 🎄✨ Merry Christmas 🎄✨
+        {/* Merry Christmas 🎄✨ Merry Christmas 🎄✨ Merry Christmas 🎄✨ */}
+        MAN wishes her esteemed members and the general public a merry Christmas and a prosperous New Year 🎄✨
     </Marquee>
   );
 }

@@ -37,9 +37,9 @@ function App() {
           ) : !isError ? (
             <div className="home">
               <Subscribe />
-              <MerryChristmasBanner/>
               <NewNavBar />
               <HomeNewSlide initialData={data}/>
+              {/* <MerryChristmasBanner/> */}
               <Article data={data} />
               <Section renderdata={data} />
               <InfoBoard />

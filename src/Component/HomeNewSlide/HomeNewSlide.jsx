@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import { getSlidersApi } from "../../utils/csm-api-calls";
 import { useQuery } from 'react-query';
+import MerryChristmasBanner from "../MerryChristmasBanner";
 
 const HomeNewSlide = ({initialData}) => {
 
@@ -82,8 +83,9 @@ const HomeNewSlide = ({initialData}) => {
       {/* Looping Message Section Below Slider */}
       <div className="looping-message">
         <div className="scrolling-message">
-          <p>{loopMessages[loopMessageIndex]}</p>
+          {/* <p>{loopMessages[loopMessageIndex]}</p> */}
         </div>
+          <MerryChristmasBanner/>
       </div>
     </>
   );
