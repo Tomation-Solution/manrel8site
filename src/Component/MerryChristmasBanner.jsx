@@ -25,8 +25,8 @@ function MerryChristmasBanner() {
       style={{
         // backgroundColor: "#f00",
         padding: "10px",
-        color: '#000'
-        // fontSize: "18px",
+        color: '#000',
+        fontSize: "14px",
       }}
     >
         {/* Merry Christmas 🎄✨ Merry Christmas 🎄✨ Merry Christmas 🎄✨ */}
