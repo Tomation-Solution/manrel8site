@@ -14,7 +14,7 @@ const HomeNewSlide = ({initialData}) => {
 
   const [image, setImage] = useState([]);
   const [index, setIndex] = useState(0);
-  const [loopMessageIndex, setLoopMessageIndex] = useState(0);
+  // const [loopMessageIndex, setLoopMessageIndex] = useState(0);
   
   const { data } = useQuery('getSlidersApi', getSlidersApi, {
     refetchOnWindowFocus: false,

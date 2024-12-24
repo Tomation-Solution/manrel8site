@@ -16,7 +16,6 @@ import { useQuery } from "react-query";
 import { getHomepagePVC } from "./utils/csm-api-calls";
 import Loader from "./Component/Loader/Loader";
 import { FormError } from "./Component/NewEvents/FormComponents";
-import MerryChristmasBanner from "./Component/MerryChristmasBanner";
 
 function App() {
   const { isLoading, isError, isFetching, data } = useQuery(
@@ -39,7 +38,6 @@ function App() {
               <Subscribe />
               <NewNavBar />
               <HomeNewSlide initialData={data}/>
-              {/* <MerryChristmasBanner/> */}
               <Article data={data} />
               <Section renderdata={data} />
               <InfoBoard />
