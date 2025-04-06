@@ -48,14 +48,22 @@ const NavSlider = ({ clickfn }) => {
               Services
             </Link>
           </span>
+          <div className="items">
+            {/* <span className="items-span">
+              <Link to={"/services"}>Services</Link>
+            </span> */}
+            <span className="items-span">
+              <Link to={"/event-training"}>Consultancy,Events & Trainings</Link>
+            </span>
+          </div>
         </div>
         <div className="nav-slider-item">
           <span>
             <Link
-              to={"/insight"}
+              to={"/media_event"}
               style={{ textDecoration: "none", color: "skyblue" }}
             >
-              Insights
+              Media/Event
             </Link>
           </span>
           <div className="items">
@@ -70,10 +78,6 @@ const NavSlider = ({ clickfn }) => {
             </span>
             <span className="items-span">
               <Link to={"/reports"}>Reports</Link>
-            </span>
-
-            <span className="items-span">
-              <Link to={"/event-training"}>Consultancy,Events & Trainings</Link>
             </span>
 
             <span className="items-span">

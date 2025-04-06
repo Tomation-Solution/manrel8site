@@ -66,20 +66,21 @@ const NewNavBar = () => {
 
           <div
             className="toggle-navitem"
-            // onClick={() => {
-            //   closeAll();
-            //   setshowServices(!showServices);
-            // }}
+            onClick={() => {
+              closeAll();
+              setshowServices(!showServices);
+            }}
           >
-            <Link to={"/services"} style={{ textDecoration: "none" }}>
+            {/* <Link to={"/services"} style={{ textDecoration: "none" }}>
               <span className="special-span">Services</span>
-            </Link>
-            {/* <KeyboardArrowDown /> */}
+            </Link> */}
+            <span>Services</span>
+            <KeyboardArrowDown />
           </div>
 
           <div className="toggle-navitem">
-            <Link to={"/insight"} style={{ textDecoration: "none" }}>
-              <span className="special-span">Insights</span>
+            <Link to={"/media_event"} style={{ textDecoration: "none" }}>
+              <span className="special-span">Media/Event</span>
             </Link>
             <KeyboardArrowDown
               onClick={() => {

@@ -15,10 +15,7 @@ export const getPaidPublications = async () => {
 
 export const payForPublication = async (payload) => {
   try {
-    const res = await publicCmsRequest.post(
-      `/payments/publications?gatewaytype=${payload.paymentGateWay}`,
-      payload
-    );
+    const res = await publicCmsRequest.post(`/payments/initialize/`, payload);
     return res.data;
   } catch (e) {
     throw new AxiosError(e);
@@ -224,11 +221,13 @@ export const getAllServicesPVC = async () => {
   }
 };
 
+export const getSlidersApi = async () => {
+  const resp = await publicCmsRequest.get(
+    "/homepage/add-slider/get_slider/?page_size=20"
+  );
 
-export const getSlidersApi = async ()=>{
-  const resp = await publicCmsRequest.get('/homepage/add-slider/get_slider/')
-  return resp.data
-}
+  return resp.data.results;
+};
 //PVC-Homepage
 export const getHomepagePVC = async () => {
   try {

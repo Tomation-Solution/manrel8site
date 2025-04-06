@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HomeNewSlide.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,25 +9,37 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Parallax, Pagination, Navigation } from "swiper";
-import { Link } from "react-router-dom";
+import { Pagination, Navigation } from "swiper";
 import { getSlidersApi } from "../../utils/csm-api-calls";
-import {useQuery} from 'react-query'
+import { useQuery } from "react-query";
 
 const HomeNewSlide = () => {
+  const [image, setImage] = useState([]);
+  const [index, setIndex] = useState(0);
+  const swiperRef = useRef(null);
 
-
-  const [image,setImage] = useState([])
-  
-  const [index,setIndex] = useState(0)
-  
-  
-  const {data} = useQuery('getSlidersApi',getSlidersApi,{
+  const { data } = useQuery("getSlidersApi", getSlidersApi, {
     refetchOnWindowFocus: false,
-    'onSuccess':(data)=>{
-      setImage(data.map((d)=>d.banner))
+    onSuccess: (data) => {
+      setImage(data.map((d) => d.banner));
+    },
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev <= image.length - 2 ? prev + 1 : 0));
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [image.length]);
+
+  // Sync Swiper with index updates
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
     }
-  })
+  }, [index]);
+
   return (
     <div className="home-new-slide">
       <Swiper
@@ -42,39 +54,38 @@ const HomeNewSlide = () => {
         }}
         navigation={true}
         modules={[
-          // Parallax, 
-          Pagination, Navigation]}
+          // Parallax,
+          Pagination,
+          Navigation,
+        ]}
         className="mySwiper"
-        onSlideChange={(e) => {
-          console.log(e?.activeIndex)
-          setIndex(e?.activeIndex)
-        }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)} // Store Swiper instance
+        onSlideChange={(swiper) => setIndex(swiper.realIndex)} // Sync state with Swiper
       >
         <div
           slot="container-start"
           className="parallax-bg"
           data-swiper-parallax="-23%"
           // style={{ background: `url(${data.slider_image1})` }}
-          style={{ background: `url(${image[index]})` }}
+          style={{
+            background: `url(${image[index]})`,
+          }}
         ></div>
 
-        {
-          data?.map((d,index)=>(
-            <SwiperSlide>
+        {data?.map((d, index) => (
+          <SwiperSlide>
             <div className="narration-con">
               <div className="narration-banner">
                 <p>{d.title}</p>
               </div>
               <div className="narration-text">
-                <p>{d.content}</p>
+                <p dangerouslySetInnerHTML={{ __html: d.content }}></p>
               </div>
             </div>
           </SwiperSlide>
-          ))
-        }
+        ))}
 
-
-{/* <SwiperSlide 
+        {/* <SwiperSlide 
 
 >
             <div className="narration-con">

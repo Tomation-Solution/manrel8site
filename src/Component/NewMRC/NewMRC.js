@@ -14,14 +14,14 @@ import { getMrcPageApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
 
 const NewMRC = () => {
-  const  {isLoading,data} = useQuery('getMrcPageApi',getMrcPageApi)
-  const color ={
-    0:"aqua",
-    1:"#E36159",
-    2:"#2BAAB1" ,
+  const { isLoading, data } = useQuery("getMrcPageApi", getMrcPageApi);
+  const color = {
+    0: "aqua",
+    1: "#E36159",
+    2: "#2BAAB1",
     3: "#383F48",
     // 4:"#2b3513"
-  }
+  };
   return (
     <div className="new-mrc">
       <UIProvider>
@@ -36,13 +36,11 @@ const NewMRC = () => {
           <h1 className="header">
             This is <span>Who We Are</span>
           </h1>
-          {
-            data?.who_we_are.map((d,index)=>(
-              <p style={{ color: "#2b3513" }} key={index}>
-                {d}
-              </p>
-            ))
-          }
+          {data?.who_we_are.map((d, index) => (
+            <p style={{ color: "#2b3513" }} key={index}>
+              {d}
+            </p>
+          ))}
           <div className="text-btn">
             <span style={{ color: "#2b3513" }}>
               "Our Success is measured by the benefits of our clients"
@@ -56,23 +54,12 @@ const NewMRC = () => {
           <h1 className="header">
             Our <span>Objectives</span>
           </h1>
-          <div className="obj-item">
-            <div></div>
-            <span style={{ color: "#2b3513" }}>
-              Aid our Manufacturers expand their market reach beyond our shores.
-            </span>
-          </div>
-
-          {
-            data?.objectives.map((d,index)=>(
-              <div className="obj-item">
+          {data?.objectives.map((d, index) => (
+            <div className="obj-item">
               <div></div>
-              <span style={{ color: "#2b3513" }}>
-                {d}
-              </span>
+              <span style={{ color: "#2b3513" }}>{d}</span>
             </div>
-            ))
-          }
+          ))}
           {/* <div className="obj-item">
             <div></div>
             <span style={{ color: "#2b3513" }}>
@@ -89,21 +76,29 @@ const NewMRC = () => {
           </div> */}
         </div>
         <div className="cards">
-         
-{
-  data?.objectives_card.map((d,index)=>(
-    <div className="card" 
-    key={index}
-    style={{ borderTop: "2px solid "+ color[index]?color[index]:'aqua'  }}>
-    <div style={{ backgroundColor: color[index]?color[index]:'aqua' }}></div>
-    <h1 style={{ color: color[index]?color[index]:'aqua'}}>Business Development Services</h1>
-    <p style={{ color: "#2b3513" }}>
-      Identify possible problems affecting SME‘s by preparing a detailed
-      technical due diligence report through review of their operations
-    </p>
-  </div>
-  ))
-}
+          {data?.objectives_card.map((d, index) => (
+            <div
+              className="card"
+              key={index}
+              style={{
+                borderTop: "2px solid " + color[index] ? color[index] : "aqua",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: color[index] ? color[index] : "aqua",
+                }}
+              ></div>
+              <h1 style={{ color: color[index] ? color[index] : "aqua" }}>
+                Business Development Services
+              </h1>
+              <p style={{ color: "#2b3513" }}>
+                Identify possible problems affecting SME‘s by preparing a
+                detailed technical due diligence report through review of their
+                operations
+              </p>
+            </div>
+          ))}
           {/* <div className="card" style={{ borderTop: "2px solid #E36159" }}>
             <div style={{ backgroundColor: "#E36159" }}></div>
             <h1 style={{ color: "#E36159" }}>Business Information Services</h1>
@@ -145,33 +140,31 @@ const NewMRC = () => {
         </div>
 
         <div className="objectives">
-              <h1 className="header">
-                MAN <span>Resource Center</span>
-              </h1>
+          <h1 className="header">
+            MAN <span>Resource Center</span>
+          </h1>
 
-              <div className="obj-item">
-                <div></div>
-                <span>
-                  Address:77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria.
-                </span>
-              </div>
-              <div className="obj-item">
-                <div></div>
-                <span>
-                  Phone: 081 666 75412, 01-4542700, 01-4542701, 01-4542702
-                </span>
-              </div>
-              <div className="obj-item">
-                <div></div>
-                <span>Email: mrc@manufacturersnigeria.org</span>
-              </div>
-              <div className="obj-item">
-                <div></div>
-                <span className="span-bold">
-                  MAN House, 1st Floor, Left Wing.
-                </span>
-              </div>
-            </div>
+          <div className="obj-item">
+            <div></div>
+            <span>
+              Address:77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria.
+            </span>
+          </div>
+          <div className="obj-item">
+            <div></div>
+            <span>
+              Phone: 081 666 75412, 01-4542700, 01-4542701, 01-4542702
+            </span>
+          </div>
+          <div className="obj-item">
+            <div></div>
+            <span>Email: mrc@manufacturersnigeria.org</span>
+          </div>
+          <div className="obj-item">
+            <div></div>
+            <span className="span-bold">MAN House, 1st Floor, Left Wing.</span>
+          </div>
+        </div>
         <Wall />
         <Footer />
       </UIProvider>

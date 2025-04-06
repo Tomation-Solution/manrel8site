@@ -216,7 +216,7 @@ root.render(
           <Route path="/make-payment" element={<MakePayment />} />
           <Route path="/app-portal" element={<ApplicationPortal />} />
 
-          <Route path="/insight" element={<Insight />} />
+          <Route path="/media_event" element={<Insight />} />
           <Route path="/event-training" element={<NewEvents />} />
           <Route path="/training" element={<Training />} />
           <Route path="/faq" element={<FAQ />} />

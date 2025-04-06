@@ -38,6 +38,7 @@ const PublicationDetails = () => {
 
   if (data) {
     renderdata = data.find((item) => item.id === Number(id));
+    console.log(renderdata);
 
     otherPub = data.filter((item) => item.id !== Number(id));
   }

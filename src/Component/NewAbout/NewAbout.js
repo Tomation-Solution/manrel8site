@@ -13,6 +13,7 @@ import { getAboutHistoryPVC } from "../../utils/csm-api-calls";
 import { FormError } from "../NewEvents/FormComponents";
 import Loader from "../Loader/Loader";
 import ManFirstAGM from "../../assets/ManFirstAGM.jpeg";
+import { extractListItems } from "../../utils/extractListItes";
 
 const NewAbout = () => {
   const { isLoading, isError, isFetching, data } = useQuery(
@@ -23,6 +24,8 @@ const NewAbout = () => {
       refetchOnWindowFocus: false,
     }
   );
+
+  console.log({ data });
 
   return (
     <div className="new-about">
@@ -37,11 +40,12 @@ const NewAbout = () => {
             <div
               className="topBg"
               style={{
-                height: "400px",
+                // height: "400px",
                 background: `url(${ManFirstAGM})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
+                height: "100vh",
               }}
             ></div>
             <div className="new-about-content">
@@ -52,15 +56,17 @@ const NewAbout = () => {
                 <div className="right">
                   <h3>Our History</h3>
 
-                  {data.history_paragraphs.map((item, index) => (
-                    <p key={index}>{item}</p>
-                  ))}
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: data.history_paragraphs,
+                    }}
+                  ></p>
                 </div>
               </div>
               <div className="core-values">
                 <h1>Our Core Values</h1>
                 <div className="core-values-items">
-                  {data.core_values.map((item, index) => (
+                  {extractListItems(data.core_values).map((item, index) => (
                     <ServiceHelper
                       key={index}
                       others={item[0]}
@@ -78,9 +84,7 @@ const NewAbout = () => {
                   <div className="bottom">
                     <h1>Our Vision</h1>
 
-                    {data.vision.map((item, index) => (
-                      <p key={index}>{item}</p>
-                    ))}
+                    <p dangerouslySetInnerHTML={{ __html: data.vision }}></p>
                   </div>
                 </div>
                 <div className="missvis-item">
@@ -89,9 +93,9 @@ const NewAbout = () => {
                   </div>
                   <div className="bottom">
                     <h1>Our Mission</h1>
-                    {data.mission.map((item, index) => (
-                      <p key={index}>{item}</p>
-                    ))}
+                    <p
+                      dangerouslySetInnerHTML={{ __html: data.mission }}
+                    ></p>{" "}
                   </div>
                 </div>
               </div>
@@ -100,22 +104,21 @@ const NewAbout = () => {
                 <h4>The fundamental objectives of the Association are</h4>
 
                 <div className="our-obj-items">
-                  {data.objectives.map((item, index) => (
+                  {extractListItems(data.objectives).map((item, index) => (
                     <div
                       key={index}
                       className="our-obj-item"
                       style={{ backgroundColor: "#2b3513" }}
                     >
-                      <p>{item}</p>
+                      <p dangerouslySetInnerHTML={{ __html: item }}></p>
                     </div>
                   ))}
                 </div>
 
-                {data.extras.map((item, index) => (
-                  <p style={{ color: "#2b3513" }} key={index}>
-                    {item}
-                  </p>
-                ))}
+                <p
+                  style={{ color: "#2b3513" }}
+                  dangerouslySetInnerHTML={{ __html: data.extras }}
+                ></p>
               </div>
             </div>
 

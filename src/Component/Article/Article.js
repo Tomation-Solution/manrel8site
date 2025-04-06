@@ -16,10 +16,10 @@ function Article({ data }) {
   const [insightData, setInsightData] = useState(null);
   useEffect(() => {
     Promise.all([
-      getGallery(),
       getNews(),
-      getReports(),
       getFreePublication(),
+      getReports(),
+      getGallery(),
     ]).then((res) => {
       const alldata = res.map((item) => {
         return { type: item?.message, data: item?.data[0] };
@@ -31,12 +31,27 @@ function Article({ data }) {
     <div className="article">
       <div className="news_main">
         <div className="cover">
-          <div className="left">
-            <img src={data.slider_image3} alt="" />
+          <div
+            style={{
+              marginTop: "auto",
+              marginBottom: "auto",
+            }}
+            className="left"
+          >
+            <img
+              src={data.slider_image3}
+              style={{
+                width: "100%",
+                maxWidth: "800px",
+                aspectRatio: "16 / 10",
+                objectFit: "contain",
+              }}
+              alt=""
+            />
           </div>
           <div className="right">
             <h1 style={{ color: "#2b3513", marginBottom: "20px" }}>
-              Latest Updates
+              Recent News
             </h1>
             <div className="wrap">
               {!insightData ? (

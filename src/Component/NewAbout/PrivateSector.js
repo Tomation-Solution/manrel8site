@@ -12,6 +12,7 @@ import { getAboutSectorPVC } from "../../utils/csm-api-calls";
 import { useQuery } from "react-query";
 import { FormError } from "../NewEvents/FormComponents";
 import Loader from "../Loader/Loader";
+import { extractListItems } from "../../utils/extractListItes";
 
 const PrivateSector = () => {
   const { isLoading, isError, isFetching, data } = useQuery(
@@ -48,11 +49,15 @@ const PrivateSector = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
+                height: "100vh",
               }}
             ></div>
 
             <div className="private-sector-content">
-              <div className="overlapModal">
+              <div
+                style={{ position: "relative", top: "0rem" }}
+                className="overlapModal"
+              >
                 <h1 style={{ color: "#2b3513" }}>
                   ORGANIZED PRIVATE SECTOR OF NIGERIA (OPSN)
                 </h1>
@@ -66,7 +71,7 @@ const PrivateSector = () => {
 
               <div className="core-values">
                 <div className="core-values-items">
-                  {data.ops.map((item, index) => (
+                  {extractListItems(data.ops).map((item, index) => (
                     <div
                       key={index}
                       className="core-values-item"
@@ -74,7 +79,7 @@ const PrivateSector = () => {
                     >
                       <h3>{index + 1}</h3>
                       <div className="right">
-                        <p>{item}</p>
+                        <p dangerouslySetInnerHTML={{ __html: item }}></p>
                       </div>
                     </div>
                   ))}
@@ -90,12 +95,14 @@ const PrivateSector = () => {
               </p>
 
               <div className="achievements-items">
-                {data.international_partners.map((item, index) => (
-                  <div className="achievements-item" key={index}>
-                    <img alt="" src={AchieveBullet} />
-                    <h5>{item}</h5>
-                  </div>
-                ))}
+                {extractListItems(data.international_partners).map(
+                  (item, index) => (
+                    <div className="achievements-item" key={index}>
+                      <img alt="" src={AchieveBullet} />
+                      <h5 dangerouslySetInnerHTML={{ __html: item }}></h5>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </>

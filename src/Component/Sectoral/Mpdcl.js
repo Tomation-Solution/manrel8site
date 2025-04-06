@@ -128,13 +128,13 @@ function Mpdcl() {
                 ))}
 
                 <div className="thrust" style={{ color: "#2b3513" }}>
-                  {landingpageContent?.renewable_items?.map((d, index) => (
+                  {/* {landingpageContent?.renewable_items?.map((d, index) => (
                     <>
                       <h3>{d.header}</h3>
 
                       <p style={{ color: "#2b3513" }}>{d.description}</p>
                     </>
-                  ))}
+                  ))} */}
 
                   {/* <h3 style={{ color: "#2b3513" }}>
                     Human Capacity Building Programmes

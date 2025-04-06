@@ -14,9 +14,14 @@ import { payForPublication } from "../../utils/csm-api-calls";
 import { toast } from "react-toastify";
 import Loader from "../Loader/Loader";
 import PaidPublicationsPreview from "../PaidPublications/PaidPublicationPreview/PaidPublicationsPreview";
+import Paystack from "@paystack/inline-js";
+import PaymentSuccessModal from "./PaymentSuccessModal";
 
 export const PublicationPayModal = ({ data, closefn }) => {
   const [publicationData, setPublicationData] = useState(null);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [downloadLink, setDownloadLink] = useState("");
+  const [expiryTime, setExpiryTime] = useState("");
 
   useEffect(() => {
     setPublicationData(data);
@@ -35,6 +40,7 @@ export const PublicationPayModal = ({ data, closefn }) => {
     register,
     handleSubmit,
     setValue,
+    getValues,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -43,7 +49,7 @@ export const PublicationPayModal = ({ data, closefn }) => {
       email: "",
       phone_number: "",
       company_name: "",
-      paymentGateWay:'paystack'
+      paymentGateWay: "paystack",
     },
   });
 
@@ -54,8 +60,11 @@ export const PublicationPayModal = ({ data, closefn }) => {
     onSuccess: (data) => {
       toast.success("registration payment successful");
       if (data) {
-        const redirectUrl = data.data.data.authorization_url;
-        window.open(redirectUrl, "_blank");
+        setDownloadLink(data.download_url);
+        setExpiryTime(data.expires_at);
+        setTimeout(() => {
+          setShowSuccessModal(true);
+        }, 1000);
       }
     },
     onError: () => {
@@ -64,7 +73,74 @@ export const PublicationPayModal = ({ data, closefn }) => {
   });
 
   const onSubmitHandler = (dataInput) => {
-    mutate({ publication: publicationData.id, ...dataInput });
+    if (getValues("paymentGateWay") === "flutterwave") {
+      window.FlutterwaveCheckout({
+        public_key: process.env.REACT_APP_FLW_PUBLIC_KEY,
+        tx_ref: `txn_${Date.now()}_${Math.floor(Math.random() * 1000000)}`,
+        amount: Number(publicationData.price),
+        currency: "NGN",
+        payment_options: "card,mobilemoney,ussd",
+        customer: {
+          email: dataInput.email,
+          phone_number: dataInput.phone_number,
+          name: dataInput.fullname,
+        },
+        customizations: {
+          title: "MAN Paid Publication",
+          description: "Payment for publication",
+        },
+        callback: (response) => {
+          mutate({
+            publication: publicationData.id,
+            ...dataInput,
+            amount: Number(publicationData.price),
+            payment_response: response,
+          });
+        },
+        onclose: () => {},
+      });
+      return;
+    }
+
+    if (getValues("paymentGateWay") === "interswitch") {
+      window.webpayCheckout({
+        merchant_code: "MX6072",
+        pay_item_id: "9405967",
+        txn_ref: `txn_${Date.now()}_${Math.floor(Math.random() * 1000000)}`,
+        site_redirect_url: window.location.origin,
+        amount: Number(publicationData.price) * 100,
+        currency: 566,
+        onComplete: (response) => {
+          mutate({
+            publication: publicationData.id,
+            ...dataInput,
+            amount: Number(publicationData.price),
+            payment_response: response,
+          });
+        },
+        mode: "TEST",
+      });
+      return;
+    }
+
+    if (getValues("paymentGateWay") === "paystack") {
+      const popup = new Paystack();
+
+      popup.checkout({
+        key: process.env.REACT_APP_PAYSTACK_PUBLIC_KEY,
+        email: dataInput.email,
+        amount: Number(publicationData.price) * 100,
+        onSuccess: (transaction) => {
+          mutate({
+            publication: publicationData.id,
+            ...dataInput,
+            amount: Number(publicationData.price),
+            payment_response: transaction,
+          });
+        },
+      });
+      return;
+    }
   };
 
   return (
@@ -105,14 +181,17 @@ export const PublicationPayModal = ({ data, closefn }) => {
               disabled
             />
           </div>
-          
-          
-          <select onChange={e=>{
-            setValue('paymentGateWay',e.target.value)
-          }}>
-            <option value='paystack'>select payment gateway</option>
-            <option value='paystack'>paystack</option>
-            <option value='flutterwave'>flutterwave</option>
+
+          <select
+            onChange={(e) => {
+              setValue("paymentGateWay", e.target.value);
+            }}
+          >
+            <option value="paystack">select payment gateway</option>
+            <option value="paystack">paystack</option>
+            <option value="flutterwave">flutterwave</option>
+            {/* <option value="remita">Remita</option> */}
+            <option value="interswitch">Interswitch</option>
           </select>
           <br />
           <br />
@@ -124,6 +203,13 @@ export const PublicationPayModal = ({ data, closefn }) => {
           <CloseIcon />
         </div>
       </div>
+      {showSuccessModal && downloadLink && expiryTime && (
+        <PaymentSuccessModal
+          downloadUrl={downloadLink}
+          expiresAt={expiryTime}
+          onClose={() => setShowSuccessModal(false)}
+        />
+      )}
     </BackDrop>
   );
 };
