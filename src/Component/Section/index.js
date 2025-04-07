@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
-// import sectionpic from "../../images/new-images/LookintoFuture.png";
 import sectionpic2 from "../../images/div21.png";
 import sectionpic3 from "../../images/new-images/ContribNoBg.png";
 import Before from "../../images/div_before.png";
@@ -38,14 +37,11 @@ function Section({ renderdata }) {
             <SectionTitle style={{ textAlign: "left" }}>
               Our Vision
             </SectionTitle>
-            {renderdata.vision_intro.map((item, index) => (
-              <SectionDescription
-                key={index}
-                sx={{ color: "#2b3513", textAlign: "left" }}
-              >
-                {item}
-              </SectionDescription>
-            ))}
+            <SectionDescription sx={{ color: "#2b3513", textAlign: "left" }}>
+              <p
+                dangerouslySetInnerHTML={{ __html: renderdata.vision_intro }}
+              ></p>
+            </SectionDescription>
           </div>
         </SectionItemContainer>
         <SectionItemContainer
@@ -74,20 +70,19 @@ function Section({ renderdata }) {
               <SectionTitle sx={{ color: Colors.white, textAlign: "left" }}>
                 Our Mission
               </SectionTitle>
-              {renderdata.mission_intro.map((item, index) => (
-                <SectionDescription
-                  key={index}
-                  sx={{
-                    color: Colors.white,
-                    fontSize: "16px",
-                    margin: "20px 0px",
-                    fontFamily: "Poppins",
-                    textAlign: "left",
-                  }}
-                >
-                  {item}
-                </SectionDescription>
-              ))}
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "16px",
+                  margin: "20px 0px",
+                  fontFamily: "Poppins",
+                  textAlign: "left",
+                }}
+              >
+                <p
+                  dangerouslySetInnerHTML={{ __html: renderdata.mission_intro }}
+                ></p>
+              </SectionDescription>
             </div>
             <img src={After} alt="" style={{ height: "53px", width: "53px" }} />
           </div>
@@ -120,19 +115,20 @@ function Section({ renderdata }) {
                 Advocacy Achievements
               </SectionTitle>
 
-              {renderdata.advocacy_intro.map((item, index) => (
-                <SectionDescription
-                  key={index}
-                  sx={{
-                    color: Colors.white,
-                    fontSize: "14px",
-                    fontFamily: "Poppins",
-                    textAlign: "left",
+              <SectionDescription
+                sx={{
+                  color: Colors.white,
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "left",
+                }}
+              >
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: renderdata.advocacy_intro,
                   }}
-                >
-                  {item}
-                </SectionDescription>
-              ))}
+                ></p>
+              </SectionDescription>
               <Link
                 to={"/about/advocacy-achievements"}
                 state={{ from: "home" }}
@@ -156,19 +152,16 @@ function Section({ renderdata }) {
 
         <SectionItemContainer sx={{ Padding: 0 }}>
           <div>
-            <SectionImg src={sectionpic2} />
+            <SectionImg src={renderdata.history_image} />
             <SectionTitle sx={{ color: "#2b3513", textAlign: "left" }}>
               Our History
             </SectionTitle>
 
-            {renderdata.history_intro.map((item, index) => (
-              <SectionDescription
-                key={index}
-                sx={{ color: "##2b3513", textAlign: "left" }}
-              >
-                {item}
-              </SectionDescription>
-            ))}
+            <SectionDescription sx={{ color: "##2b3513", textAlign: "left" }}>
+              <p
+                dangerouslySetInnerHTML={{ __html: renderdata.history_intro }}
+              ></p>
+            </SectionDescription>
             <div style={{ textAlign: "left" }}>
               <Link to="/about" style={{ textDecoration: "none" }}>
                 <MyButton
@@ -189,25 +182,27 @@ function Section({ renderdata }) {
         <SectionItemContainer>
           <div>
             <SectionImg
-              src={sectionpic3}
+              src={renderdata.join_man_image}
               style={{ objectFit: "contain", backgroundColor: "#ddd" }}
             />
             <SectionTitle sx={{ color: "#2B3513", textAlign: "left" }}>
               Why Join MAN?
             </SectionTitle>
-            {renderdata.why_join_intro.map((item, index) => (
-              <SectionDescription
-                key={index}
-                sx={{
-                  color: "#2B3513",
-                  fontSize: "14px",
-                  fontFamily: "Poppins",
-                  textAlign: "left",
+
+            <SectionDescription
+              sx={{
+                color: "#2B3513",
+                fontSize: "14px",
+                fontFamily: "Poppins",
+                textAlign: "left",
+              }}
+            >
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: renderdata.why_join_intro,
                 }}
-              >
-                {item}
-              </SectionDescription>
-            ))}
+              ></p>
+            </SectionDescription>
 
             <div style={{ margin: "60px 20px", textAlign: "left" }}>
               <Link
@@ -260,19 +255,18 @@ function Section({ renderdata }) {
               <SectionTitle sx={{ color: Colors.white, textAlign: "left" }}>
                 Our Members
               </SectionTitle>
-              {renderdata.members_intro.map((item, index) => (
-                <SectionDescription
-                  key={index}
-                  sx={{
-                    color: "#fff",
-                    fontSize: "14px",
-                    fontFamily: "Poppins",
-                    textAlign: "left",
-                  }}
-                >
-                  {item}
-                </SectionDescription>
-              ))}
+              <SectionDescription
+                sx={{
+                  color: "#fff",
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  textAlign: "left",
+                }}
+              >
+                <p
+                  dangerouslySetInnerHTML={{ __html: renderdata.members_intro }}
+                ></p>
+              </SectionDescription>
               <div style={{ marginLeft: "30px", textAlign: "left" }}>
                 <Link to="/our-members" style={{ textDecoration: "none" }}>
                   <MyButton

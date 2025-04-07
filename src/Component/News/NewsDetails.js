@@ -38,6 +38,7 @@ const NewsDetails = () => {
 
   if (data) {
     renderdata = data.find((item) => item.id === Number(id));
+    // console.log({ renderdata });
 
     otherPub = data.filter((item) => item.id !== Number(id));
   }
@@ -68,7 +69,7 @@ const NewsDetails = () => {
                       <div className="left">
                         <NewsPreivew
                           isImage={true}
-                          no_title={false}
+                          no_title={renderdata?.title}
                           render_data={renderdata}
                         />
                       </div>

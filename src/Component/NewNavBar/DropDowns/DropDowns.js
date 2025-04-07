@@ -54,6 +54,11 @@ export const ServicesDropdown = () => {
           <Link to={"/services"}>Core Services</Link>
         </span>
       </div>
+      <div className="dropdown-item">
+        <span>
+          <Link to="/event-training">Consultancy, Events & Trainings</Link>
+        </span>
+      </div>
       {/* <div
         className="dropdown-item"
         onClick={() => setSpecialised(!specialised)}
@@ -111,11 +116,6 @@ export const InsightDropdown = () => {
       <div className="dropdown-item">
         <span>
           <Link to={"/reports"}>Reports</Link>
-        </span>
-      </div>
-      <div className="dropdown-item">
-        <span>
-          <Link to="/event-training">Consultancy, Events & Trainings</Link>
         </span>
       </div>
 

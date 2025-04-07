@@ -85,28 +85,38 @@ function App() {
                             </Link>
                           </div>
                         </div>
-
-                        <div className="bto">
-                          <button
-                            onClick={() => {
-                              if (currentPage <= 1) return;
-
-                              setCurrentPage((oldState) => oldState - 1);
-                            }}
-                          >
-                            Previous
-                          </button>
-                          <button
-                            onClick={() => {
-                              if (currentPage >= pages?.length) return;
-                              setCurrentPage((oldState) => oldState + 1);
-                            }}
-                          >
-                            Next
-                          </button>
-                        </div>
                       </>
                     ))}
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "10px",
+                      }}
+                      className="bto"
+                    >
+                      <button
+                        style={{ minWidth: "85px" }}
+                        disabled={currentPage <= 1}
+                        onClick={() => {
+                          if (currentPage <= 1) return;
+
+                          setCurrentPage((oldState) => oldState - 1);
+                        }}
+                      >
+                        Previous
+                      </button>
+                      <button
+                        style={{ minWidth: "85px" }}
+                        disabled={currentPage >= pages?.length}
+                        onClick={() => {
+                          if (currentPage >= pages?.length) return;
+                          setCurrentPage((oldState) => oldState + 1);
+                        }}
+                      >
+                        Next
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <FormError>Can't Fetch Reports Data</FormError>

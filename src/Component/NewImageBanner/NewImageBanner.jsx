@@ -5,9 +5,19 @@ import DefaultImg from "../../images/new-images/ManHouseMainImg.jpeg";
 const NewImageBanner = ({ image, header, details }) => {
   return (
     <div className="new-img-banner">
-      <div className="new-banner-img-con">
+      {/* <div style={{ height: "100vh" }} className="new-banner-img-con">
         <img alt="" src={image || DefaultImg} />
-      </div>
+      </div> */}
+      <div
+        className="topBg"
+        style={{
+          background: `url(${image || DefaultImg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          height: "100vh",
+        }}
+      ></div>
       <section>
         <p className="header">{header}</p>
         {details?.map((item, index) => (

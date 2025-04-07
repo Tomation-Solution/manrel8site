@@ -12,6 +12,7 @@ import { getAboutAdvocacyPVC } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
 import { useQuery } from "react-query";
+import { extractListItems } from "../../utils/extractListItes";
 
 const CodeofConduct = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const CodeofConduct = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
+                height: "100vh",
               }}
             ></div>
 
@@ -60,10 +62,10 @@ const CodeofConduct = () => {
 
             <div className="achievements">
               <div className="achievements-items">
-                {data.main_achievements.map((item, index) => (
+                {extractListItems(data.main_achievements).map((item, index) => (
                   <div className="achievements-item" key={index}>
                     <img alt="" src={AchieveBullet} />
-                    <h5>{item}</h5>
+                    <h5 dangerouslySetInnerHTML={{ __html: item }}></h5>
                   </div>
                 ))}
               </div>

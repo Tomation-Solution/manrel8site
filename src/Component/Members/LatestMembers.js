@@ -50,11 +50,11 @@ function LatestMembers() {
       setListOfMembers(data);
     }
   }, [data]);
-  useEffect(()=>{
-    if(searchValue.length !=0){
-      setCurrentPage(1)
+  useEffect(() => {
+    if (searchValue.length !== 0) {
+      setCurrentPage(1);
     }
-  },[searchValue])
+  }, [searchValue]);
   return (
     <UIProvider>
       <Loader loading={isLoading} />
@@ -145,33 +145,36 @@ function LatestMembers() {
           </div>
         </div>
         {/* PAGINATION LOGIC */}
-              {
-                searchValue.length==0?
-        <div className="pagination">
-          {pages?.splice(0, 7)?.map((page, index) => {
-            return (
-              <span
-                key={index}
-                onClick={() => setCurrentPage(page)}
-                style={page === currentPage ? { color: "red" } : { color: "" }}
-              >
-                {page}
-              </span>
-            );
-          })}
+        {searchValue.length === 0 ? (
+          <div className="pagination">
+            {pages?.splice(0, 7)?.map((page, index) => {
+              return (
+                <span
+                  key={index}
+                  onClick={() => setCurrentPage(page)}
+                  style={
+                    page === currentPage ? { color: "red" } : { color: "" }
+                  }
+                >
+                  {page}
+                </span>
+              );
+            })}
 
-          {currentPage >= 7 ? (
-            <button
-              onClick={() => {
-                if (currentPage >= pages?.length) return;
-                setCurrentPage((oldState) => oldState + 1);
-              }}
-            >
-              Next
-            </button>
-          ) : null}
-        </div>:''
-              }
+            {currentPage >= 7 ? (
+              <button
+                onClick={() => {
+                  if (currentPage >= pages?.length) return;
+                  setCurrentPage((oldState) => oldState + 1);
+                }}
+              >
+                Next
+              </button>
+            ) : null}
+          </div>
+        ) : (
+          ""
+        )}
 
         <Wall />
         <Footer />

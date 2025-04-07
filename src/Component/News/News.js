@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../Styles/theme/Theme";
 import { UIProvider } from "../../Ui";
@@ -36,16 +36,23 @@ function News() {
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
+  const [pages, setPages] = useState([]);
+  const [paginatedData, setPaginatedData] = useState([]);
 
-  let pages = [];
+  useEffect(() => {
+    const temp = [];
+    for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
+      temp.push(i);
+    }
 
-  for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
-    pages.push(i);
-  }
+    setPages(temp);
+  }, [data?.length, postsPerPage]);
 
-  const paginatedData = data?.slice(firstPostIndex, lastPostIndex);
+  useEffect(() => {
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+    setPaginatedData(data?.slice(firstPostIndex, lastPostIndex));
+  }, [currentPage, data, postsPerPage]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -117,19 +124,27 @@ function News() {
                     );
                   })} */}
                 </div>
-                <div className="bto">
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "10px",
+                  }}
+                  className="bto"
+                >
                   <button
+                    style={{ minWidth: "85px" }}
+                    disabled={currentPage <= 1}
                     onClick={() => {
-                      if (currentPage <= 1) return;
-
                       setCurrentPage((oldState) => oldState - 1);
                     }}
                   >
                     Previous
                   </button>
                   <button
+                    style={{ minWidth: "85px" }}
+                    disabled={currentPage >= pages?.length}
                     onClick={() => {
-                      if (currentPage >= pages?.length) return;
                       setCurrentPage((oldState) => oldState + 1);
                     }}
                   >

@@ -12,10 +12,11 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormError } from "../NewEvents/FormComponents";
 import * as yup from "yup";
-import { eventTrainingRegister } from "../../utils/csm-api-calls";
+import { payForPublication } from "../../utils/csm-api-calls";
 import { useMutation } from "react-query";
 import { toast } from "react-toastify";
 import Loader from "../Loader/Loader";
+import Paystack from "@paystack/inline-js";
 
 export const SingleEvent = ({ data, registerfn }) => {
   return (
@@ -77,6 +78,7 @@ export const RegisterModal = ({ closefn, data }) => {
     register,
     handleSubmit,
     setValue,
+    getValues,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -90,7 +92,8 @@ export const RegisterModal = ({ closefn, data }) => {
   });
 
   const { mutate, isLoading } = useMutation(
-    (data) => eventTrainingRegister(data),
+    // Same endpoint can handle both event and training registration and payment for publications
+    (data) => payForPublication(data),
     {
       onMutate: () => {
         toast.info("processing registration");
@@ -110,7 +113,91 @@ export const RegisterModal = ({ closefn, data }) => {
   );
 
   const onSubmitHandler = (dataInput) => {
-    mutate({ type: "EVENT", event: renderData.id, ...dataInput });
+    if (!renderData.is_paid) {
+      mutate({
+        event_type: "EVENT",
+        is_paid: renderData.is_paid,
+        event: renderData.id,
+        amount: "0.00",
+        ...dataInput,
+      });
+      return;
+    }
+
+    if (getValues("paymentGateWay") === "flutterwave") {
+      window.FlutterwaveCheckout({
+        public_key: process.env.REACT_APP_FLW_PUBLIC_KEY,
+        tx_ref: `txn_${Date.now()}_${Math.floor(Math.random() * 1000000)}`,
+        amount: Number(renderData.price),
+        currency: "NGN",
+        payment_options: "card,mobilemoney,ussd",
+        customer: {
+          email: dataInput.email,
+          phone_number: dataInput.phone_number,
+          name: dataInput.fullname,
+        },
+        customizations: {
+          title: "MAN Paid Publication",
+          description: "Payment for publication",
+        },
+        callback: (response) => {
+          mutate({
+            event_type: "EVENT",
+            event: renderData.id,
+            is_paid: renderData.is_paid,
+            ...dataInput,
+            amount: Number(renderData.price),
+            payment_response: response,
+          });
+        },
+        onclose: () => {},
+      });
+      return;
+    }
+
+    if (getValues("paymentGateWay") === "interswitch") {
+      window.webpayCheckout({
+        merchant_code: "MX6072",
+        pay_item_id: "9405967",
+        txn_ref: `txn_${Date.now()}_${Math.floor(Math.random() * 1000000)}`,
+        site_redirect_url: window.location.origin,
+        amount: Number(renderData.price) * 100,
+        currency: 566,
+        onComplete: (response) => {
+          mutate({
+            event_type: "EVENT",
+            event: renderData.id,
+            is_paid: renderData.is_paid,
+            ...dataInput,
+            amount: Number(renderData.price),
+            payment_response: response,
+          });
+        },
+        mode: "TEST",
+      });
+      return;
+    }
+
+    if (getValues("paymentGateWay") === "paystack") {
+      const popup = new Paystack();
+
+      popup.checkout({
+        key: process.env.REACT_APP_PAYSTACK_PUBLIC_KEY,
+        email: dataInput.email,
+        amount: Number(renderData.price) * 100,
+        onSuccess: (transaction) => {
+          mutate({
+            event_type: "EVENT",
+            event: renderData.id,
+            is_paid: renderData.is_paid,
+            ...dataInput,
+            amount: Number(renderData.price),
+            payment_response: transaction,
+          });
+        },
+      });
+      return;
+    }
   };
 
   return (
@@ -163,6 +250,8 @@ export const RegisterModal = ({ closefn, data }) => {
                 <option value="paystack">select payment gateway</option>
                 <option value="paystack">paystack</option>
                 <option value="flutterwave">flutterwave</option>
+                {/* <option value="remita">Remita</option> */}
+                <option value="interswitch">Interswitch</option>
               </select>
               <br />
               <br />

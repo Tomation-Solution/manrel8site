@@ -24,6 +24,7 @@ import {
 } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 
+// Now Media/Event
 const Insight = () => {
   const [insightData, setInsightData] = useState(null);
   useEffect(() => {
@@ -47,14 +48,14 @@ const Insight = () => {
       <div className="insight-more">
         <NewImageBanner
           image={backImage}
-          header={"Insight"}
+          header={"Media/Event"}
           details={["Read our latest news, reports and publications."]}
         />
         <div className="news_main">
           <div className="cover">
             <div className="right">
               <div className="top">
-                <h2>Insight</h2>
+                <h2>Media/Event</h2>
               </div>
               <div className="wrap">
                 {!insightData ? (

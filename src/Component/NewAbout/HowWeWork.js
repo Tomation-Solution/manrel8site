@@ -9,6 +9,7 @@ import { getAboutHowWeWorkPVC } from "../../utils/csm-api-calls";
 import { useQuery } from "react-query";
 import { FormError } from "../NewEvents/FormComponents";
 import Loader from "../Loader/Loader";
+import { extractListItems } from "../../utils/extractListItes";
 
 const HowWeWork = () => {
   const { isLoading, isError, isFetching, data } = useQuery(
@@ -37,21 +38,20 @@ const HowWeWork = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
+                height: "100vh",
               }}
             ></div>
             <div className="new-about-content">
               <div className="how-work">
                 <h1>How We Work</h1>
                 <div className="how-work-con">
-                  {data.how_we_work.map((item, index) => (
-                    <p key={index}>{item}</p>
-                  ))}
+                  <p dangerouslySetInnerHTML={{ __html: data.how_we_work }}></p>
                 </div>
               </div>
               <div className="nat-council">
-                {data.how_we_work_details.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+                <p
+                  dangerouslySetInnerHTML={{ __html: data.how_we_work_details }}
+                ></p>
 
                 <h3
                   style={{
@@ -64,7 +64,7 @@ const HowWeWork = () => {
                   The Standing Committees Of The National Council
                 </h3>
                 <div className="core-values-items">
-                  {data.committees.map((item, index) => (
+                  {extractListItems(data.committees).map((item, index) => (
                     <div
                       key={index}
                       className="core-values-item"
@@ -72,50 +72,42 @@ const HowWeWork = () => {
                     >
                       <h3>{index + 1}</h3>
                       <div className="right">
-                        <p>{item}</p>
+                        <p dangerouslySetInnerHTML={{ __html: item }}></p>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {data.committee_details.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+                <p
+                  dangerouslySetInnerHTML={{ __html: data.committee_details }}
+                ></p>
               </div>
 
               <div className="ad-hoc">
                 <h1>AD-HOC Committees</h1>
-                {data.adhoc.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+                <p dangerouslySetInnerHTML={{ __html: data.adhoc }}></p>
               </div>
 
               <div className="other-groups">
                 <h1>Special Purpose Vehicles Of MAN</h1>
-                {data.spvehicles.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+                <p dangerouslySetInnerHTML={{ __html: data.spvehicles }}></p>
               </div>
               <div className="other-groups">
                 <h1>Special Purpose Groups Of MAN</h1>
-                {data.spgroups.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+                <p dangerouslySetInnerHTML={{ __html: data.spgroups }}></p>
               </div>
 
               <div className="other-groups">
                 <h1>Code Of Conduct</h1>
-                {data.conduct.map((item, index) => (
-                  <p key={index}>{item}</p>
-                ))}
+                <p dangerouslySetInnerHTML={{ __html: data.conduct }}></p>
               </div>
 
               <h2 style={{ color: "#2b3513" }}>Members Shall:</h2>
               <div className="endeavour-items">
-                {data.conduct_listing.map((item, index) => (
+                {extractListItems(data.conduct_listing).map((item, index) => (
                   <div className="endeavour-item" key={index}>
                     <h1>{index + 1}</h1>
-                    <p>{item}</p>
+                    <p dangerouslySetInnerHTML={{ __html: item }}></p>
                   </div>
                 ))}
               </div>

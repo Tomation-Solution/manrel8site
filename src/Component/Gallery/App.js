@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import { UIProvider } from "../../Ui";
 import theme from "../../Styles/theme/Theme";
 import "./Insmore.scss";
@@ -74,7 +74,7 @@ export const InsightQuickNavigation = () => {
       <div className="coverr">
         {AboutList.filter(
           (itemx) => itemx.location !== pageLocation.pathname.replace("/", "")
-        ).map((item) => (
+        )?.map((item) => (
           <div className="card" key={item.title}>
             <img src={item.image} alt="" />
             <div className="text">
@@ -112,16 +112,23 @@ function App() {
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
+  const [pages, setPages] = useState([]);
+  const [paginatedData, setPaginatedData] = useState([]);
 
-  let pages = [];
+  useEffect(() => {
+    const temp = [];
+    for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
+      temp.push(i);
+    }
 
-  for (let i = 1; i <= Math.ceil(data?.length / postsPerPage); i++) {
-    pages.push(i);
-  }
+    setPages(temp);
+  }, [data?.length, postsPerPage]);
 
-  const paginatedData = data?.slice(firstPostIndex, lastPostIndex);
+  useEffect(() => {
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+    setPaginatedData(data?.slice(firstPostIndex, lastPostIndex));
+  }, [currentPage, data, postsPerPage]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -147,7 +154,7 @@ function App() {
                 ) : !isError ? (
                   <>
                     <div className="wrap">
-                      {paginatedData.map((item) => (
+                      {paginatedData?.map((item) => (
                         <div className="card" key={item.id}>
                           {/* <Link to={"/gallery"}>
                             <button
@@ -165,19 +172,27 @@ function App() {
                         </div>
                       ))}
                     </div>
-                    <div className="bto">
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        gap: "10px",
+                      }}
+                      className="bto"
+                    >
                       <button
+                        style={{ minWidth: "85px" }}
+                        disabled={currentPage <= 1}
                         onClick={() => {
-                          if (currentPage <= 1) return;
-
                           setCurrentPage((oldState) => oldState - 1);
                         }}
                       >
                         Previous
                       </button>
                       <button
+                        style={{ minWidth: "85px" }}
+                        disabled={currentPage >= pages?.length}
                         onClick={() => {
-                          if (currentPage >= pages?.length) return;
                           setCurrentPage((oldState) => oldState + 1);
                         }}
                       >

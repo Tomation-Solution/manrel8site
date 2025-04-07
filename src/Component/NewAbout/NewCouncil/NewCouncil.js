@@ -32,7 +32,7 @@ const NewCouncil = () => {
           <Loader loading={isLoading || isFetching} />
         ) : !isError ? (
           <>
-            <div className="hero_image"></div>
+            <div style={{ height: "100vh" }} className="hero_image"></div>
 
             <div className="members">
               <div className="options">
