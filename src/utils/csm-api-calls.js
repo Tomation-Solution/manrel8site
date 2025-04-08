@@ -138,6 +138,11 @@ export const postNewLetter = async (payload) => {
   }
 };
 
+export const newsletterUIGet = async () => {
+  const res = await publicCmsRequest.get("/services/newsletter-ui/");
+  return res.data;
+};
+
 //AGM API ENDPOINTS
 //Members Registration
 export const memberRegistration = async (payload) => {

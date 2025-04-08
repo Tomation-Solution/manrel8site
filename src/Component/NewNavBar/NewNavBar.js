@@ -30,6 +30,8 @@ const NewNavBar = () => {
     select: (data) => data.data.Logo,
   });
 
+  console.log(data);
+
   const showSlideHandler = () => {
     setShowSlide(!showSlide);
   };
