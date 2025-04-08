@@ -5,20 +5,26 @@ import CloseIcon from "@mui/icons-material/Close";
 import "./Subscribe.scss";
 import { useForm } from "react-hook-form";
 import { FormError } from "../NewEvents/FormComponents";
-import { useMutation } from "react-query";
-import { postNewLetter } from "../../utils/csm-api-calls";
+import { useMutation, useQuery } from "react-query";
+import { newsletterUIGet, postNewLetter } from "../../utils/csm-api-calls";
 import { toast } from "react-toastify";
 import Loader from "../Loader/Loader";
 
 function Subscribe() {
   const { subscribe, setSubscribe } = useUIContext();
+  const { data } = useQuery("newsletter-ui", newsletterUIGet, {
+    refetchOnWindowFocus: false,
+  });
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
       email: "",
+      name: "",
     },
   });
 
@@ -43,6 +49,7 @@ function Subscribe() {
 
   const onSubmitHandler = (data) => {
     mutate(data);
+    reset();
   };
 
   return (
@@ -56,15 +63,33 @@ function Subscribe() {
               style={{ position: "absolute", top: "10px", right: "10px" }}
             />
             <div className="left">
-              <img src={Image} alt="" />
+              <img src={data?.form_image || Image} alt="" />
             </div>
             <div className="right">
               <div className="huo">
                 <h1>Subscribe to our Newsletter</h1>
-                <form onSubmit={handleSubmit(onSubmitHandler)}>
+                <form
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
+                    width: "100%",
+                  }}
+                  onSubmit={handleSubmit(onSubmitHandler)}
+                >
+                  <div>
+                    {errors?.name && <FormError>invalid input</FormError>}
+                    <input
+                      style={{ width: "100%", fontSize: "14px" }}
+                      type="text"
+                      placeholder="Full Name"
+                      {...register("name", { required: true })}
+                    />
+                  </div>
                   <div>
                     {errors?.email && <FormError>invalid input</FormError>}
                     <input
+                      style={{ width: "100%", fontSize: "14px" }}
                       type="email"
                       placeholder="Email Address"
                       {...register("email", { required: true })}

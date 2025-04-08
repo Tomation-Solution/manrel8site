@@ -7,21 +7,31 @@ import {
   WallTitle,
 } from "../../Styles/Wall";
 import { useUIContext } from "../../Ui";
+import { useQuery } from "react-query";
+import { newsletterUIGet } from "../../utils/csm-api-calls";
+
 function Wall() {
   const { setSubscribe } = useUIContext();
+  const { data } = useQuery("newsletter-ui", newsletterUIGet, {
+    refetchOnWindowFocus: false,
+  });
+
   return (
     <WallContainer>
       <WallItemContainer>
-        <WallTitle>Stay Connected</WallTitle>
+        <WallTitle>{data?.header ? data.header : "Stay Connected"}</WallTitle>
         <WallDescription>
-          Get the latest Manufacturers news and information delivered to your
-          inbox.
+          {data?.description ? (
+            <p dangerouslySetInnerHTML={{ __html: data.description }}></p>
+          ) : (
+            "Get the latest Manufacturers news and information delivered to your inbox."
+          )}
         </WallDescription>
         <MyButton
           onClick={() => setSubscribe(true)}
           style={{ marginTop: "30px" }}
         >
-          SUBSCRIBE TO UPDATES
+          {data?.btn_text ? data.btn_text : "SUBSCRIBE TO UPDATES"}
         </MyButton>
       </WallItemContainer>
     </WallContainer>
