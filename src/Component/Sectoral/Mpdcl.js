@@ -14,6 +14,8 @@ import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
 import { getMPDCLApi, getMPDCLPageApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
+import { extractListItems } from "../../utils/extractListItes";
+
 function Mpdcl() {
   const { isLoading, data } = useQuery("getMPDCLApi", getMPDCLApi);
   const { data: landingpageContent } = useQuery(
@@ -39,11 +41,13 @@ function Mpdcl() {
               <div className="cover">
                 <div className="about">
                   <h1 style={{ color: "#2b3513" }}>Who We Are</h1>
-                  {landingpageContent?.who_we_are?.map((d, index) => (
-                    <p style={{ color: "#2b3513" }} key={index}>
-                      {d}
-                    </p>
-                  ))}
+
+                  <p
+                    style={{ color: "#2b3513" }}
+                    dangerouslySetInnerHTML={{
+                      __html: landingpageContent?.who_we_are,
+                    }}
+                  ></p>
 
                   {/* <p style={{ color: "#2b3513" }}>
                     MPDCL also assist power project developers’ to access
@@ -62,20 +66,19 @@ function Mpdcl() {
                     {landingpageContent?.our_objectives_header}
                   </p>
                   <div className="obj-items centered">
-                    {landingpageContent?.our_objectives_items?.map(
-                      (d, index) => (
-                        <div className="flex" key={index}>
-                          <img src={Vector} alt="" />
-                          <p>
-                            {/* Initiatives and programmes that encourages members to
+                    {extractListItems(
+                      landingpageContent?.our_objectives_items
+                    )?.map((d, index) => (
+                      <div className="flex" key={index}>
+                        <img src={Vector} alt="" />
+                        <p dangerouslySetInnerHTML={{ __html: d }}>
+                          {/* Initiatives and programmes that encourages members to
                         improve on good energy housekeeping and energy
                         management practices through energy efficiency as a way
                         of conserving power and be more cost effective. */}
-                            {d}
-                          </p>
-                        </div>
-                      )
-                    )}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <h1 className="service-header">
@@ -121,20 +124,24 @@ function Mpdcl() {
                     objectFit: "cover",
                   }}
                 />
-                {landingpageContent?.renewable_desc?.map((d, index) => (
-                  <p style={{ color: "#2b3513" }} key={index}>
-                    {d}{" "}
-                  </p>
-                ))}
+                {extractListItems(landingpageContent?.renewable_desc)?.map(
+                  (d, index) => (
+                    <p
+                      style={{ color: "#2b3513" }}
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: d }}
+                    ></p>
+                  )
+                )}
 
                 <div className="thrust" style={{ color: "#2b3513" }}>
-                  {/* {landingpageContent?.renewable_items?.map((d, index) => (
+                  {landingpageContent?.renewable_items?.map((d, index) => (
                     <>
                       <h3>{d.header}</h3>
 
                       <p style={{ color: "#2b3513" }}>{d.description}</p>
                     </>
-                  ))} */}
+                  ))}
 
                   {/* <h3 style={{ color: "#2b3513" }}>
                     Human Capacity Building Programmes
