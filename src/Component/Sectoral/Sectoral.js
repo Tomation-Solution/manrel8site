@@ -48,6 +48,9 @@ function Sectoral() {
                       <img src={Vector} alt="" />
                       <h2 style={{ color: "#2b3513" }}>{item.header}</h2>
                     </div>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
+                    ></p>
                     <img className="main-img" src={item.image} alt="" />
                   </div>
                 ))}

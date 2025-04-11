@@ -12,6 +12,7 @@ import "./NewMRC.scss";
 import { useQuery } from "react-query";
 import { getMrcPageApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
+import { extractListItems } from "../../utils/extractListItes";
 
 const NewMRC = () => {
   const { isLoading, data } = useQuery("getMrcPageApi", getMrcPageApi);
@@ -36,11 +37,12 @@ const NewMRC = () => {
           <h1 className="header">
             This is <span>Who We Are</span>
           </h1>
-          {data?.who_we_are.map((d, index) => (
-            <p style={{ color: "#2b3513" }} key={index}>
-              {d}
-            </p>
-          ))}
+
+          <p
+            style={{ color: "#2b3513" }}
+            dangerouslySetInnerHTML={{ __html: data?.who_we_are }}
+          ></p>
+
           <div className="text-btn">
             <span style={{ color: "#2b3513" }}>
               "Our Success is measured by the benefits of our clients"
@@ -54,10 +56,13 @@ const NewMRC = () => {
           <h1 className="header">
             Our <span>Objectives</span>
           </h1>
-          {data?.objectives.map((d, index) => (
+          {extractListItems(data?.objectives).map((d, index) => (
             <div className="obj-item">
               <div></div>
-              <span style={{ color: "#2b3513" }}>{d}</span>
+              <span
+                style={{ color: "#2b3513" }}
+                dangerouslySetInnerHTML={{ __html: d }}
+              ></span>
             </div>
           ))}
           {/* <div className="obj-item">
