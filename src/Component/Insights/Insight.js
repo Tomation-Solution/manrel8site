@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import { AboutList } from "../Gallery/App";
 // import { gallerydata } from "../Gallery/GalleryDetails/GalleryData";
 // import { newsdata } from "../News/NewsData";
 // import { newPubData } from "../Publications/PublicationsData";
@@ -21,8 +20,10 @@ import {
   getNews,
   getReports,
   getGallery,
+  eventAndMediaGet,
 } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
+import { useQuery } from "react-query";
 
 // Now Media/Event
 const Insight = () => {
@@ -41,13 +42,62 @@ const Insight = () => {
     });
   }, []);
 
+  const eventAndMediaResult = useQuery("event-and-media", eventAndMediaGet, {
+    // select: (data) => data.data,
+    refetchOnWindowFocus: false,
+  });
+
+  const AboutList = useMemo(() => {
+    const data = eventAndMediaResult.data;
+
+    if (!data) return [];
+
+    return [
+      {
+        image: data?.news_image,
+        title: data?.news_title,
+        description: data?.news_description,
+        linkHead: data?.news_link_text,
+        location: "news",
+      },
+      {
+        image: data?.event_image,
+        title: data?.event_title,
+        description: data?.event_description,
+        linkHead: data?.event_link_text,
+        location: "event-training",
+      },
+      {
+        image: data?.report_image,
+        title: data?.report_title,
+        description: data?.report_description,
+        linkHead: data?.report_link_text,
+        location: "reports",
+      },
+      {
+        image: data?.gallery_image,
+        title: data?.gallery_title,
+        description: data?.gallery_description,
+        linkHead: data?.gallery_link_text,
+        location: "gallery",
+      },
+      {
+        image: data?.publication_image,
+        title: data?.publication_title,
+        description: data?.publication_description,
+        linkHead: data?.publication_link_text,
+        location: "publications",
+      },
+    ];
+  }, [eventAndMediaResult.data]);
+
   return (
     <UIProvider>
       <Subscribe />
       <NewNavBar />
       <div className="insight-more">
         <NewImageBanner
-          image={backImage}
+          image={eventAndMediaResult?.data?.banner_image || backImage}
           header={"Media/Event"}
           details={["Read our latest news, reports and publications."]}
         />
@@ -114,10 +164,10 @@ const Insight = () => {
             <div className="left">
               <img
                 className="img"
-                src={Articleimage}
+                src={eventAndMediaResult?.data?.main_image || Articleimage}
                 alt=""
                 height={"500px"}
-                style={{ objectFit: "contain" }}
+                style={{ objectFit: "cover", aspectRatio: "20/5" }}
               />
 
               {/* <InsightQuickNavigation /> */}
@@ -131,7 +181,7 @@ const Insight = () => {
               <img src={item.image} alt="" />
               <div className="text">
                 <h2>{item.title}</h2>
-                <p>{item.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
                 {Object.keys(item).includes("location") ? (
                   <Link to={`/${item.location}`}>
                     <h3 style={{ fontWeight: 500 }}>

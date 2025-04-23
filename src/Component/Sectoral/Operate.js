@@ -89,64 +89,85 @@ function Operate() {
               ></iframe>
               <div className="sect-body">
                 <div className="cover">
-                  <div>
-                    <h1 className="head-h1" style={{ color: "#2b3513" }}>
-                      The Association has a National Secretariat
-                    </h1>
+                  {operateResult.data.national_secretariat_header && (
+                    <div>
+                      <h1 className="head-h1" style={{ color: "#2b3513" }}>
+                        {operateResult.data.national_secretariat_header}
+                      </h1>
 
-                    <p
-                      className="head"
-                      style={{ margin: "20px 0px", color: "#2b3513" }}
-                    >
-                      {operateResult.data.national_secretariat}
-                    </p>
-                  </div>
-                  <div className="corpor">
-                    <div className="flex">
-                      <img src={Vector} alt="" />
-                      <h2 style={{ margin: "20px 0px", color: "#2b3513" }}>
-                        MAN Corporate Offices
-                      </h2>
+                      <p
+                        className="head"
+                        style={{ margin: "20px 0px", color: "#2b3513" }}
+                        dangerouslySetInnerHTML={{
+                          __html: operateResult.data.national_secretariat,
+                        }}
+                      ></p>
                     </div>
-                    <p style={{ color: "#2b3513" }}>
-                      {operateResult.data.coorprate_office}
-                    </p>
-                  </div>
-                  <div className="house">
-                    {officeQueryResult.data.map((item, index) => (
-                      <div className="card" key={index}>
-                        <h1>{item?.name}</h1>
-                        <p>{item?.address}</p>
-                        <p>{item?.email}</p>
-                        <p>{item?.phone_no}</p>
-                        <p>{item?.website}</p>
+                  )}
+                  {operateResult.data.coorprate_office_header && (
+                    <>
+                      <div className="corpor">
+                        <div className="flex">
+                          <img src={Vector} alt="" />
+                          <h2 style={{ margin: "20px 0px", color: "#2b3513" }}>
+                            {operateResult.data.coorprate_office_header}
+                          </h2>
+                        </div>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: operateResult.data.coorprate_office,
+                          }}
+                          style={{ color: "#2b3513" }}
+                        ></p>
                       </div>
-                    ))}
-                  </div>
-                  <div className="corpor">
-                    <div className="flex">
-                      <img src={Vector} alt="" />
-                      <h2 style={{ color: "#2b3513" }}>Branch Offices</h2>
-                    </div>
-                    <p style={{ color: "#2b3513" }}>
-                      {operateResult.data.branch_text}
-                    </p>
-                  </div>
-                  <div className="house">
-                    {branchQueryResult.data.map((item, index) => (
-                      <div className="card" key={index}>
-                        <h1>{item.name}</h1>
-                        <p style={{ wordBreak: "break-word" }}>
-                          {item.manager_name}
-                        </p>
-                        <p style={{ wordBreak: "break-word" }}>{item.title}</p>
-                        <p style={{ wordBreak: "break-word" }}>{item.email}</p>
-                        <p style={{ wordBreak: "break-word" }}>
-                          {item.address}
+                      <div className="house">
+                        {officeQueryResult.data.map((item, index) => (
+                          <div className="card" key={index}>
+                            <h1>{item?.name}</h1>
+                            <p>{item?.address}</p>
+                            <p>{item?.email}</p>
+                            <p>{item?.phone_no}</p>
+                            <p>{item?.website}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+
+                  {operateResult.data.branch_text_header && (
+                    <>
+                      <div className="corpor">
+                        <div className="flex">
+                          <img src={Vector} alt="" />
+                          <h2 style={{ color: "#2b3513" }}>
+                            {operateResult.data.branch_text_header}
+                          </h2>
+                        </div>
+                        <p style={{ color: "#2b3513" }}>
+                          {operateResult.data.branch_text}
                         </p>
                       </div>
-                    ))}
-                  </div>
+                      <div className="house">
+                        {branchQueryResult.data.map((item, index) => (
+                          <div className="card" key={index}>
+                            <h1>{item.name}</h1>
+                            <p style={{ wordBreak: "break-word" }}>
+                              {item.manager_name}
+                            </p>
+                            <p style={{ wordBreak: "break-word" }}>
+                              {item.title}
+                            </p>
+                            <p style={{ wordBreak: "break-word" }}>
+                              {item.email}
+                            </p>
+                            <p style={{ wordBreak: "break-word" }}>
+                              {item.address}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </>

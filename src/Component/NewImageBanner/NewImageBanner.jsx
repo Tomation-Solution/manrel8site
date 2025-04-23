@@ -15,7 +15,8 @@ const NewImageBanner = ({ image, header, details }) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          height: "100vh",
+          aspectRatio: "16/7",
+          width: "100%",
         }}
       ></div>
       <section>

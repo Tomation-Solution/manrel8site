@@ -8,5 +8,6 @@ export function extractListItems(html) {
   const listItems = tempDiv.querySelectorAll("li");
 
   // Map them into an array of text content
-  return Array.from(listItems).map((item) => item.textContent.trim());
+  const itemsArray = Array.from(listItems).map((li) => li.innerHTML);
+  return itemsArray.length > 0 ? itemsArray : [html]; // Return the array or the original HTML if no <li> found
 }

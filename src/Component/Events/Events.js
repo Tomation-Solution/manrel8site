@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import { FreeEvents, PaidEvents } from "../PaidEvents/PaidEvents";
-import { getEvents } from "../../utils/csm-api-calls";
+import { getEventBanner, getEvents } from "../../utils/csm-api-calls";
 import { useQuery } from "react-query";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
@@ -26,12 +26,16 @@ const Events = () => {
     select: (data) => data.data,
   });
 
+  const eventBanner = useQuery("event-banner", getEventBanner, {
+    refetchOnWindowFocus: false,
+  });
+
   return (
     <div className="new-events">
       <UIProvider>
         <NewNavBar />
         <NewImageBanner
-          image={backImage}
+          image={eventBanner?.data?.banner_image || backImage}
           header={"Events"}
           details={[
             "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",

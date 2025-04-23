@@ -18,6 +18,7 @@ import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (4).jpg";
 import { useQuery } from "react-query";
 import {
+  eventAndMediaGet,
   getFreePublication,
   getPublicationType,
 } from "../../utils/csm-api-calls";
@@ -43,6 +44,11 @@ const Publications = () => {
     },
   });
 
+  const eventAndMediaResult = useQuery("event-and-media", eventAndMediaGet, {
+    // select: (data) => data.data,
+    refetchOnWindowFocus: false,
+  });
+
   const { isLoading, isFetching, isError, data } = useQuery(
     "all-free-publications",
     getFreePublication,
@@ -66,7 +72,9 @@ const Publications = () => {
               <NewNavBar />
 
               <NewImageBanner
-                image={backImage}
+                image={
+                  eventAndMediaResult?.data?.publication_image || backImage
+                }
                 header={"Publications"}
                 details={["Read our latest publications."]}
               />
@@ -181,7 +189,12 @@ const Publications = () => {
                     </div> */}
                   </div>
                   <div className="left">
-                    <img src={Articleimage} alt="" />
+                    <img
+                      src={
+                        eventAndMediaResult?.data?.main_image || Articleimage
+                      }
+                      alt=""
+                    />
                     <InsightQuickNavigation />
                   </div>
                 </div>

@@ -17,7 +17,7 @@ import {
 import { FormError } from "../NewEvents/FormComponents";
 import Loader from "../Loader/Loader";
 import { useQuery } from "react-query";
-import { getTrainings } from "../../utils/csm-api-calls";
+import { getTrainingBanner, getTrainings } from "../../utils/csm-api-calls";
 import { groupTrainings } from "../../utils/groupby-value";
 
 const Training = () => {
@@ -34,6 +34,10 @@ const Training = () => {
     select: (data) => {
       return groupTrainings(data.data);
     },
+  });
+
+  const TrainingBanner = useQuery("training-banner", getTrainingBanner, {
+    refetchOnWindowFocus: false,
   });
 
   const trainingRegister = (data) => {
@@ -53,7 +57,7 @@ const Training = () => {
         <Subscribe />
         <NewNavBar />
         <NewImageBanner
-          image={backImage}
+          image={TrainingBanner?.data?.banner_image || backImage}
           header={"Tranings"}
           details={[
             "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",

@@ -15,7 +15,7 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (2).jpg";
 import { useQuery } from "react-query";
-import { getReports } from "../../utils/csm-api-calls";
+import { eventAndMediaGet, getReports } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
 import { useState } from "react";
@@ -29,6 +29,11 @@ function App() {
       select: (data) => data.data,
     }
   );
+
+  const eventAndMediaResult = useQuery("event-and-media", eventAndMediaGet, {
+    // select: (data) => data.data,
+    refetchOnWindowFocus: false,
+  });
 
   //PAGINATION LOGIC
   const [currentPage, setCurrentPage] = useState(1);
@@ -52,7 +57,7 @@ function App() {
           <NewNavBar />
 
           <NewImageBanner
-            image={backImage}
+            image={eventAndMediaResult?.data?.report_image || backImage}
             header={"Annual Reports"}
             details={["Read our latest reports."]}
           />
@@ -125,7 +130,10 @@ function App() {
                 <div className="bto"></div>
               </div>
               <div className="left">
-                <img src={Articleimage} alt="" />
+                <img
+                  src={eventAndMediaResult?.data?.main_image || Articleimage}
+                  alt=""
+                />
                 <InsightQuickNavigation />
               </div>
             </div>
