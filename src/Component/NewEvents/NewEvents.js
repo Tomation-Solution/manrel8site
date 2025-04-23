@@ -14,7 +14,11 @@ import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import Subscribe from "../Subscribe/Subscribe";
 
 import { useQuery } from "react-query";
-import { getEvents, getTrainings } from "../../utils/csm-api-calls";
+import {
+  getEventBanner,
+  getEvents,
+  getTrainings,
+} from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 
 import { SingleEvent, RegisterModal } from "../Modals/EventModals";
@@ -39,6 +43,10 @@ const NewEvents = () => {
   } = useQuery("all-events", getEvents, {
     refetchOnWindowFocus: false,
     select: (data) => data.data,
+  });
+
+  const eventBanner = useQuery("event-banner", getEventBanner, {
+    refetchOnWindowFocus: false,
   });
 
   const {
@@ -82,7 +90,7 @@ const NewEvents = () => {
         <Subscribe />
         <NewNavBar />
         <NewImageBanner
-          image={backImage}
+          image={eventBanner?.data?.banner_image || backImage}
           header={"Consultancy, Events & Trainings"}
           details={[
             "Conferences, seminars, workshops, certified courses and more for manufacturers at all levels in every role.",

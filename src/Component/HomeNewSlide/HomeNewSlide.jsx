@@ -28,7 +28,7 @@ const HomeNewSlide = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev <= image.length - 2 ? prev + 1 : 0));
-    }, 5000);
+    }, 7500);
 
     return () => clearInterval(interval);
   }, [image.length]);
@@ -73,7 +73,7 @@ const HomeNewSlide = () => {
         ></div>
 
         {data?.map((d, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className="narration-con">
               <div className="narration-banner">
                 <p>{d.title}</p>

@@ -13,8 +13,18 @@ import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
 import { getSectoralApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
+
 function Sectoral() {
   const { isLoading, data } = useQuery("getSectoralApi", getSectoralApi);
+  // const structureBannerResult = useQuery(
+  //   "structure-banner",
+  //   structureBannerGet,
+  //   {
+  //     // select: (data) => data.data,
+  //     refetchOnWindowFocus: false,
+  //   }
+  // );
+
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>

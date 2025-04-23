@@ -16,6 +16,7 @@ import { FormError } from "../NewEvents/FormComponents";
 import { useMutation, useQuery } from "react-query";
 import {
   getAllServicesPVC,
+  getServicesBanner,
   postServiceRequest,
 } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
@@ -38,6 +39,15 @@ function Services() {
       refetchOnWindowFocus: false,
     }
   );
+
+  const servicesBannerResult = useQuery("service-banner", getServicesBanner, {
+    select: (data) => {
+      console.log(data);
+
+      return data;
+    },
+    refetchOnWindowFocus: false,
+  });
 
   const {
     register,
@@ -77,7 +87,7 @@ function Services() {
           <NewNavBar />
           <NewImageBanner
             header={"Services"}
-            image={OurServiceImage}
+            image={servicesBannerResult.data?.banner_image || OurServiceImage}
             details={[
               "     The only sector-specific Business Membership Organization (BMO) structured to render advocacy services to its members.",
             ]}
@@ -94,6 +104,11 @@ function Services() {
             <div className="services-newservices">
               <div className="services-head">
                 <h1>Core Services</h1>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: servicesBannerResult.data.core_desc,
+                  }}
+                ></p>
               </div>
               <div className="services-wrap diff">
                 {servicesQueryResult.data
@@ -116,13 +131,11 @@ function Services() {
               </div>
               <div className="services-head">
                 <h1>Manufacturers Resource Centre (MRC) Services</h1>
-                <p>
-                  The Manufacturers Resource Centre is the Business Solution arm
-                  of MAN. The Manufacturers Resource Centre is dedicated to
-                  proffering business solutions to MAN members, thus developing
-                  their businesses, increase their market share and enhancing
-                  production excellence.
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: servicesBannerResult.data.mrc_desc,
+                  }}
+                ></p>
               </div>
               <div className="services-wrap">
                 {servicesQueryResult.data
@@ -149,6 +162,11 @@ function Services() {
               </div>
               <div className="services-head">
                 <h1>MAN Power Development Company Limited (MPDCL).</h1>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: servicesBannerResult.data.mpdcl_desc,
+                  }}
+                ></p>
               </div>
               <div className="services-wrap dit">
                 {servicesQueryResult.data

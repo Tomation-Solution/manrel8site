@@ -42,75 +42,106 @@ const HowWeWork = () => {
               }}
             ></div>
             <div className="new-about-content">
-              <div className="how-work">
-                <h1>How We Work</h1>
-                <div className="how-work-con">
-                  <p dangerouslySetInnerHTML={{ __html: data.how_we_work }}></p>
-                </div>
-              </div>
-              <div className="nat-council">
-                <p
-                  dangerouslySetInnerHTML={{ __html: data.how_we_work_details }}
-                ></p>
-
-                <h3
-                  style={{
-                    color: "#2b3513",
-                    fontWeight: "500",
-                    textAlign: "left",
-                    fontSize: "25px",
-                  }}
-                >
-                  The Standing Committees Of The National Council
-                </h3>
-                <div className="core-values-items">
-                  {extractListItems(data.committees).map((item, index) => (
-                    <div
-                      key={index}
-                      className="core-values-item"
-                      style={{ backgroundColor: "#596d27" }}
-                    >
-                      <h3>{index + 1}</h3>
-                      <div className="right">
-                        <p dangerouslySetInnerHTML={{ __html: item }}></p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <p
-                  dangerouslySetInnerHTML={{ __html: data.committee_details }}
-                ></p>
-              </div>
-
-              <div className="ad-hoc">
-                <h1>AD-HOC Committees</h1>
-                <p dangerouslySetInnerHTML={{ __html: data.adhoc }}></p>
-              </div>
-
-              <div className="other-groups">
-                <h1>Special Purpose Vehicles Of MAN</h1>
-                <p dangerouslySetInnerHTML={{ __html: data.spvehicles }}></p>
-              </div>
-              <div className="other-groups">
-                <h1>Special Purpose Groups Of MAN</h1>
-                <p dangerouslySetInnerHTML={{ __html: data.spgroups }}></p>
-              </div>
-
-              <div className="other-groups">
-                <h1>Code Of Conduct</h1>
-                <p dangerouslySetInnerHTML={{ __html: data.conduct }}></p>
-              </div>
-
-              <h2 style={{ color: "#2b3513" }}>Members Shall:</h2>
-              <div className="endeavour-items">
-                {extractListItems(data.conduct_listing).map((item, index) => (
-                  <div className="endeavour-item" key={index}>
-                    <h1>{index + 1}</h1>
-                    <p dangerouslySetInnerHTML={{ __html: item }}></p>
+              {data.how_we_work_header && (
+                <div className="how-work">
+                  <h1>{data.how_we_work_header}</h1>
+                  <div className="how-work-con">
+                    <p
+                      dangerouslySetInnerHTML={{ __html: data.how_we_work }}
+                    ></p>
                   </div>
-                ))}
+                </div>
+              )}
+              <div className="nat-council">
+                {data.how_we_work_header && (
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: data.how_we_work_details,
+                    }}
+                  ></p>
+                )}
+
+                {data.committees_header && (
+                  <>
+                    <h3
+                      style={{
+                        color: "#2b3513",
+                        fontWeight: "500",
+                        textAlign: "left",
+                        fontSize: "25px",
+                      }}
+                    >
+                      {data.committees_header}
+                    </h3>
+                    <div className="core-values-items">
+                      {extractListItems(data.committees).map((item, index) => (
+                        <div
+                          key={index}
+                          className="core-values-item"
+                          style={{ backgroundColor: "#596d27" }}
+                        >
+                          <h3>{index + 1}</h3>
+                          <div className="right">
+                            <p dangerouslySetInnerHTML={{ __html: item }}></p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                {data.committees_header && (
+                  <p
+                    dangerouslySetInnerHTML={{ __html: data.committee_details }}
+                  ></p>
+                )}
               </div>
+
+              {data.adhoc_header && (
+                <div className="ad-hoc">
+                  <h1>{data.adhoc_header}</h1>
+                  <p dangerouslySetInnerHTML={{ __html: data.adhoc }}></p>
+                </div>
+              )}
+
+              {data.spvehicles_header && (
+                <div className="other-groups">
+                  <h1>{data.spvehicles_header}</h1>
+                  <p dangerouslySetInnerHTML={{ __html: data.spvehicles }}></p>
+                </div>
+              )}
+
+              {data.spgroups_header && (
+                <div className="other-groups">
+                  <h1>{data.spgroups_header}</h1>
+                  <p dangerouslySetInnerHTML={{ __html: data.spgroups }}></p>
+                </div>
+              )}
+
+              {data.conduct_header && (
+                <div className="other-groups">
+                  <h1>{data.conduct_header}</h1>
+                  <p dangerouslySetInnerHTML={{ __html: data.conduct }}></p>
+                </div>
+              )}
+
+              {data.conduct_listing_header && (
+                <>
+                  <h2 style={{ color: "#2b3513" }}>
+                    {data.conduct_listing_header}
+                  </h2>
+                  <div className="endeavour-items">
+                    {extractListItems(data.conduct_listing).map(
+                      (item, index) => (
+                        <div className="endeavour-item" key={index}>
+                          <h1>{index + 1}</h1>
+                          <p dangerouslySetInnerHTML={{ __html: item }}></p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           </>
         ) : (

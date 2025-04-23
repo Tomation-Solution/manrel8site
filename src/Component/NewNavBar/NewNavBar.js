@@ -1,5 +1,4 @@
 import { KeyboardArrowDown } from "@mui/icons-material";
-import Translate from "@mui/icons-material/Translate";
 import React, { useState } from "react";
 import Logo from "../../images/manlogo2.png";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -15,6 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getHomepagePVC } from "../../utils/csm-api-calls";
+import GoogleTranslate from "../../googleTranslate";
 
 const NewNavBar = () => {
   const [showSlide, setShowSlide] = useState(false);
@@ -29,8 +29,6 @@ const NewNavBar = () => {
     refetchOnWindowFocus: false,
     select: (data) => data.data.Logo,
   });
-
-  console.log(data);
 
   const showSlideHandler = () => {
     setShowSlide(!showSlide);
@@ -135,7 +133,8 @@ const NewNavBar = () => {
             </a>
           </div>
           <div className="translate-icon">
-            <Translate />
+            {/* <Translate /> */}
+            <GoogleTranslate />
           </div>
 
           <div className="join-now">

@@ -1,8 +1,6 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import { Colors } from "../../Styles/theme/Theme";
-import sectionpic2 from "../../images/div21.png";
-import sectionpic3 from "../../images/new-images/ContribNoBg.png";
 import Before from "../../images/div_before.png";
 import After from "../../images/div_after.png";
 import theme from "../../Styles/theme/Theme";

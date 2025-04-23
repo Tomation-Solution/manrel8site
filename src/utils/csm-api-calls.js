@@ -71,6 +71,15 @@ export const getGallery = async () => {
 };
 
 //EVENTS
+export const getEventBanner = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/events/event-banner/`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
 export const getEvents = async () => {
   try {
     const res = await publicCmsRequest.get(`/events/public`);
@@ -93,6 +102,15 @@ export const eventTrainingRegister = async (payload) => {
 };
 
 //TRAININGS
+export const getTrainingBanner = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/trainings/training-banner/`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
 export const getTrainings = async () => {
   try {
     const res = await publicCmsRequest.get(`/trainings/public`);
@@ -142,6 +160,14 @@ export const newsletterUIGet = async () => {
   const res = await publicCmsRequest.get("/services/newsletter-ui/");
   return res.data;
 };
+
+// EVENT AND MEDIA
+export const eventAndMediaGet = async () => {
+  const res = await publicCmsRequest.get("/events/event-media/");
+  return res.data;
+};
+
+// BANNERS
 
 //AGM API ENDPOINTS
 //Members Registration
@@ -217,6 +243,15 @@ export const InvitationVerification = async (payload) => {
 };
 
 //PVC-Services
+export const getServicesBanner = async () => {
+  try {
+    const res = await publicCmsRequest.get(`services/service-banner/`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
 export const getAllServicesPVC = async () => {
   try {
     const res = await publicCmsRequest.get(`services/all-services/public`);

@@ -17,7 +17,7 @@ import NewNavBar from "../NewNavBar/NewNavBar";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (1).jpg";
 import { useQuery } from "react-query";
-import { getNews } from "../../utils/csm-api-calls";
+import { eventAndMediaGet, getNews } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
 import { dateformatter } from "../../utils/date-formatter";
@@ -54,6 +54,11 @@ function News() {
     setPaginatedData(data?.slice(firstPostIndex, lastPostIndex));
   }, [currentPage, data, postsPerPage]);
 
+  const eventAndMediaResult = useQuery("event-and-media", eventAndMediaGet, {
+    // select: (data) => data.data,
+    refetchOnWindowFocus: false,
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -62,7 +67,7 @@ function News() {
           <NewNavBar />
 
           <NewImageBanner
-            image={backImage}
+            image={eventAndMediaResult?.data?.news_image || backImage}
             header={"News"}
             details={["Read our latest news."]}
           />
@@ -153,7 +158,10 @@ function News() {
                 </div>
               </div>
               <div className="left">
-                <img src={Articleimage} alt="" />
+                <img
+                  src={eventAndMediaResult?.data?.main_image || Articleimage}
+                  alt=""
+                />
                 <InsightQuickNavigation />
               </div>
             </div>
