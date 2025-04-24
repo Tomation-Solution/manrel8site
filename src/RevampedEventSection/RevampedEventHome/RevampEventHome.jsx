@@ -52,6 +52,9 @@ const RevampEventHome = () => {
         >
           <div className="homeheadertext">
             <div
+              style={{
+                color: "white",
+              }}
               dangerouslySetInnerHTML={{
                 __html: sanitizeHtml(data?.intro_text),
               }}

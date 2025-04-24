@@ -136,7 +136,22 @@ export const postServiceRequest = async (payload) => {
 //Contact Us
 export const postContactRequest = async (payload) => {
   try {
-    const res = await publicCmsRequest.post(`/aboutus/contact`, payload);
+    const res = await publicCmsRequest.post(`/aboutus/contact`, {
+      ...payload,
+      frontend_url: window.location.href,
+    });
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
+export const postEmailVerification = async ({ token, email }) => {
+  try {
+    const res = await publicCmsRequest.post(`/aboutus/contact/verify`, {
+      token,
+      email,
+    });
     return res.data;
   } catch (e) {
     throw new AxiosError(e);
@@ -271,9 +286,11 @@ export const getServicesBanner = async () => {
   }
 };
 
-export const getAllServicesPVC = async () => {
+export const getAllServicesPVC = async (params) => {
   try {
-    const res = await publicCmsRequest.get(`services/all-services/public`);
+    const res = await publicCmsRequest.get(`services/all-services/public`, {
+      params,
+    });
     return res.data;
   } catch (e) {
     throw new AxiosError(e);
@@ -473,6 +490,15 @@ export const getAllAgmFaqs = async () => {
 export const getAGMEvent = async () => {
   try {
     const res = await publicCmsRequest.get(`/events/get-agm-event`);
+    return res.data;
+  } catch (error) {
+    throw new AxiosError(error);
+  }
+};
+
+export const getMrcContactPageDetails = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/structure/mrc-contact`);
     return res.data;
   } catch (error) {
     throw new AxiosError(error);
