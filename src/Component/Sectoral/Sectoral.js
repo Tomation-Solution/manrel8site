@@ -13,17 +13,18 @@ import backImage from "../../images/new-images/SectoralBackGroundImage.jpeg";
 import { useQuery } from "react-query";
 import { getSectoralApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
+import { sectorialBannerGet } from "../../utils/csm-api-calls";
 
 function Sectoral() {
   const { isLoading, data } = useQuery("getSectoralApi", getSectoralApi);
-  // const structureBannerResult = useQuery(
-  //   "structure-banner",
-  //   structureBannerGet,
-  //   {
-  //     // select: (data) => data.data,
-  //     refetchOnWindowFocus: false,
-  //   }
-  // );
+  const structureBannerResult = useQuery(
+    "sectorial-banner",
+    sectorialBannerGet,
+    {
+      // select: (data) => data.data,
+      refetchOnWindowFocus: false,
+    }
+  );
 
   return (
     <ThemeProvider theme={theme}>
@@ -33,7 +34,7 @@ function Sectoral() {
           <NewNavBar />
           <Loader loading={isLoading} />
           <NewImageBanner
-            image={backImage}
+            image={structureBannerResult?.data?.banner_image || backImage}
             header={"MAN Sectoral Group"}
             details={[
               " The Groups are serviced by full-time Sectoral Executives located at the National Secretariat of the Association.",

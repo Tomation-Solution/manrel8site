@@ -11,6 +11,7 @@ import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/Rectangle.png";
 import { useQuery } from "react-query";
 import { joinStepsApi } from "../../utils/api-calls2";
+import { joinStepBannerGet } from "../../utils/csm-api-calls";
 
 const NewMemberRequire = () => {
   const [check, setCheck] = useState("");
@@ -25,12 +26,17 @@ const NewMemberRequire = () => {
     }
   };
 
+  const joinStepBannerResult = useQuery("join-step-banner", joinStepBannerGet, {
+    // select: (data) => data.data,
+    refetchOnWindowFocus: false,
+  });
+
   return (
     <div className="member-require">
       <UIProvider>
         <NewNavBar />
         <NewImageBanner
-          image={backImage}
+          image={joinStepBannerResult?.data?.banner_image || backImage}
           header={"Membership Requirements"}
           details={[
             "The membership requirement steps below details the process of becoming a member of MAN",

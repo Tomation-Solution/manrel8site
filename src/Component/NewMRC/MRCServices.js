@@ -8,10 +8,12 @@ import Wall from "../Wall/Wall";
 import "./MRCServices.scss";
 import backImage from "../../images/Group 61.png";
 import { useQuery } from "react-query";
-import { getMrcApi } from "../../utils/api-calls2";
+import { getMrcApi, getMrcPageApi } from "../../utils/api-calls2";
 
 const MRCServices = () => {
   const { data } = useQuery("getMrcApi", getMrcApi);
+  const { data: pageData } = useQuery("getMrcPageApi", getMrcPageApi);
+
   return (
     <div className="mrc-services">
       <UIProvider>
@@ -19,7 +21,7 @@ const MRCServices = () => {
         <NewNavBar />
 
         <NewImageBanner
-          image={backImage}
+          image={pageData?.banner_image || backImage}
           header={"Manufacturers Resource Centre (MRC)"}
           details={[
             "The Manufacturers Resource Centre is the Business Solution Arm of Manufacturers Association of Nigeria (MAN). The Manufacturers Resource Centre prides herself as an entity dedicated to proffering Business Solutions to MAN Members thus develop their Businesses, increase Market share and Production Excellence.",

@@ -168,6 +168,25 @@ export const eventAndMediaGet = async () => {
 };
 
 // BANNERS
+export const whyJoinBannerGet = async () => {
+  const res = await publicCmsRequest.get("/membership/why-join-banner/");
+  return res.data;
+};
+
+export const joinStepBannerGet = async () => {
+  const res = await publicCmsRequest.get("/membership/join-step-banner/");
+  return res.data;
+};
+
+export const ourMembersBannerGet = async () => {
+  const res = await publicCmsRequest.get("/membership/our-members-banner/");
+  return res.data;
+};
+
+export const sectorialBannerGet = async () => {
+  const res = await publicCmsRequest.get("/structure/sectorial-banner/");
+  return res.data;
+};
 
 //AGM API ENDPOINTS
 //Members Registration

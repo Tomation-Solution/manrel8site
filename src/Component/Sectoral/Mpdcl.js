@@ -32,7 +32,7 @@ function Mpdcl() {
             <Subscribe />
             <NewNavBar />
             <NewImageBanner
-              image={backImage}
+              image={landingpageContent?.banner_image || backImage}
               header={
                 "Manufacturers Power Development Company Limited (MPDCL)."
               }

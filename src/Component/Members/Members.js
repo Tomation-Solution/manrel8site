@@ -20,11 +20,17 @@ import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import { useQuery } from "react-query";
 import { whyJoinManApi } from "../../utils/api-calls2";
 import Loader from "../Loader/Loader";
+import { whyJoinBannerGet } from "../../utils/csm-api-calls";
 
 function Members() {
   const navigate = useNavigate();
   const { data, isLoading } = useQuery("whyJoinManApi", whyJoinManApi);
-  console.log(data);
+
+  const whyJoinBannerResult = useQuery("why-join-banner", whyJoinBannerGet, {
+    // select: (data) => data.data,
+    refetchOnWindowFocus: false,
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <UIProvider>
@@ -32,7 +38,10 @@ function Members() {
         <div className="members">
           <Subscribe />
           <NewNavBar />
-          <NewImageBanner image={backImage} header={"Membership"} />
+          <NewImageBanner
+            image={whyJoinBannerResult?.data?.banner_image || backImage}
+            header={"Membership"}
+          />
 
           <div className="why">
             <div className="man">
@@ -40,17 +49,19 @@ function Members() {
               <p>Here are reasons why you should join MAN.</p>
             </div>
             <div className="point">
-              {data?.filter((d)=>d.type ==='REASONS').map((d, index) => (
-                <div className="card" key={index}>
-                  <div className="left">
-                    <img src={Image2} alt="" />
+              {data
+                ?.filter((d) => d.type === "REASONS")
+                .map((d, index) => (
+                  <div className="card" key={index}>
+                    <div className="left">
+                      <img src={Image2} alt="" />
+                    </div>
+                    <div className="right">
+                      <h1>{d.header}</h1>
+                      <p>{d.description}</p>
+                    </div>
                   </div>
-                  <div className="right">
-                    <h1>{d.header}</h1>
-                    <p>{d.description}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
             {/* <div className="point">
               
@@ -289,19 +300,20 @@ function Members() {
                   </p>
                 </div>
               </div>
-              
 
-              {data?.filter((d)=>d.type !=='REASONS').map((d, index) => (
-                <div className="card" key={index}>
-                  <div className="left">
-                    <img src={Image2} alt="" />
+              {data
+                ?.filter((d) => d.type !== "REASONS")
+                .map((d, index) => (
+                  <div className="card" key={index}>
+                    <div className="left">
+                      <img src={Image2} alt="" />
+                    </div>
+                    <div className="right">
+                      <h1>{d.header}</h1>
+                      <p>{d.description}</p>
+                    </div>
                   </div>
-                  <div className="right">
-                    <h1>{d.header}</h1>
-                    <p>{d.description}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
           <div className="rquire">

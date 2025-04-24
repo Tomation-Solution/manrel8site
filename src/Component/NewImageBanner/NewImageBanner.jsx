@@ -11,7 +11,7 @@ const NewImageBanner = ({ image, header, details }) => {
       <div
         className="topBg"
         style={{
-          background: `url(${image || DefaultImg})`,
+          backgroundImage: `url(${image || DefaultImg})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
