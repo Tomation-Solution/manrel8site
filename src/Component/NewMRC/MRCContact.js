@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { UIProvider } from "../../Ui";
 import Footer from "../Footer/Footer";
 import NewNavBar from "../NewNavBar/NewNavBar";
@@ -10,12 +10,17 @@ import Subscribe from "../Subscribe/Subscribe";
 import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
-import { postContactRequest } from "../../utils/csm-api-calls";
+import { useMutation, useQuery } from "react-query";
+import {
+  getMrcContactPageDetails,
+  postContactRequest,
+  postEmailVerification,
+} from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
 import { FormError } from "../NewEvents/FormComponents";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { extractListItems } from "../../utils/extractListItes";
 
 const MRCContact = () => {
   const schema = yup.object({
@@ -29,6 +34,7 @@ const MRCContact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -40,6 +46,36 @@ const MRCContact = () => {
       message: "",
     },
   });
+
+  const { mutate: verifyEmail } = useMutation(postEmailVerification, {
+    onMutate: () => {
+      toast.info("Verifying Email");
+    },
+    onSuccess: () => {
+      toast.success(
+        "Email Verified Successfully. Your request has been submitted, you will be contacted soon"
+      );
+    },
+    onError: () => {
+      toast.error(
+        "Something went wrong, please fill the contact form and submit again"
+      );
+    },
+  });
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const token = queryParams.get("token");
+    const email = queryParams.get("email");
+
+    if (token && email) {
+      verifyEmail({ token, email });
+
+      // Remove token and email from URL without reloading
+      const newUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, newUrl);
+    }
+  }, [verifyEmail]);
 
   const { mutate, isLoading } = useMutation(postContactRequest, {
     onMutate: () => {
@@ -55,7 +91,13 @@ const MRCContact = () => {
 
   const onSubmitHandler = (data) => {
     mutate(data);
+    reset();
   };
+
+  const { data: pageData } = useQuery(
+    "getEventContactPageDetails",
+    getMrcContactPageDetails
+  );
 
   return (
     <div className="mrc-contact">
@@ -114,33 +156,50 @@ const MRCContact = () => {
           <div className="right">
             <div className="objectives">
               <h1 className="header">
-                Get in <span>Touch</span>
+                {/* Get in <span>Touch</span> */}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: pageData?.get_in_touch_header,
+                  }}
+                ></span>
               </h1>
 
-              <p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: pageData?.get_in_touch_desc,
+                }}
+              ></p>
+              {/* <p>
                 We would love to hear from you! Kindly send us a message or an
                 enquiry and we will get in touch with you as soon as possible.
-              </p>
+              </p> */}
             </div>
 
             <div className="objectives">
               <h1 className="header">
-                National <span>Secretariat</span>
+                {/* National <span>Secretariat</span> */}
+                <span
+                  dangerouslySetInnerHTML={{ __html: pageData?.address_header }}
+                ></span>
               </h1>
 
               <div className="obj-item">
                 <div></div>
-                <span>
-                  Address:77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria.
+                <span dangerouslySetInnerHTML={{ __html: pageData?.address }}>
+                  {/* Address:77, Obafemi Awolowo Way, Ikeja, Lagos State, Nigeria. */}
                 </span>
               </div>
               <div className="obj-item">
                 <div></div>
-                <span>Phone :01-4542700, 01-4542701</span>
+                <span dangerouslySetInnerHTML={{ __html: pageData?.phone }}>
+                  {/* Phone :01-4542700, 01-4542701 */}
+                </span>
               </div>
               <div className="obj-item">
                 <div></div>
-                <span>Email: info@manufacturersnigeria.org</span>
+                <span dangerouslySetInnerHTML={{ __html: pageData?.email }}>
+                  {/* Email: info@manufacturersnigeria.org */}
+                </span>
               </div>
               <div className="obj-item">
                 <div></div>
@@ -148,15 +207,13 @@ const MRCContact = () => {
                   <Link
                     to={"/operate"}
                     style={{ textDecoration: "none", color: "#2b3513" }}
+                    dangerouslySetInnerHTML={{ __html: pageData?.link_text }}
                   >
-                    View Our Branches
+                    {/* View Our Branches */}
                   </Link>
                 </span>
               </div>
             </div>
-
-
-
 
             {/* <div className="image-banner">
               <div>
@@ -172,21 +229,34 @@ const MRCContact = () => {
 
             <div className="objectives no-btm-bd">
               <h1 className="header">
-                Business <span>Hours</span>
+                {/* Business <span>Hours</span> */}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: pageData?.business_hours_header,
+                  }}
+                ></span>
               </h1>
 
-              <div className="obj-item">
-                <div></div>
-                <span className="span-light">Monday - Friday - 8am to 5pm</span>
-              </div>
-              <div className="obj-item">
+              {extractListItems(pageData?.business_hours).map((text, index) => {
+                return (
+                  <div className="obj-item">
+                    <div></div>
+                    <span
+                      className="span-light"
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    ></span>
+                    {/* <span className="span-light">Monday - Friday - 8am to 5pm</span> */}
+                  </div>
+                );
+              })}
+              {/* <div className="obj-item">
                 <div></div>
                 <span className="span-light">Saturday - Closed</span>
               </div>
               <div className="obj-item">
                 <div></div>
                 <span className="span-light">Sunday - Closed</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

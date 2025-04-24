@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../Styles/theme/Theme";
 import { UIProvider } from "../../Ui";
@@ -24,16 +24,30 @@ import { toast } from "react-toastify";
 import OurServiceImage from "../../images/new-images/OurServicesNewImage2.jpeg";
 
 function Services() {
+  const [search, setSearch] = useState("");
+  const [type, setType] = useState("");
+
   const schema = yup.object({
     name: yup.string().required("fullname is a required field"),
     email: yup.string().email().required(),
+    type: yup.string().required("type is a required field"),
+    service: yup.string().required("service is a required field"),
     company_name: yup.string().required("company name is a required field"),
     message: yup.string().required(),
   });
 
   const servicesQueryResult = useQuery(
-    "all-service-request",
-    getAllServicesPVC,
+    ["all-service-request"],
+    () => getAllServicesPVC({}),
+    {
+      select: (data) => data.data,
+      refetchOnWindowFocus: false,
+    }
+  );
+
+  const servicesDropdownResult = useQuery(
+    ["dropdown-service-request", search, type],
+    () => getAllServicesPVC({ search, type }),
     {
       select: (data) => data.data,
       refetchOnWindowFocus: false,
@@ -51,6 +65,7 @@ function Services() {
 
   const {
     register,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -77,6 +92,12 @@ function Services() {
 
   const onSubmitHandler = (data) => {
     mutate(data);
+  };
+
+  const handleTypeChange = (e) => {
+    const selected = e.target.value;
+    setType(selected);
+    setValue("type", selected);
   };
 
   return (
@@ -220,6 +241,69 @@ function Services() {
                   <h4>Company Name</h4>
                   <input type="text" {...register("company_name")} />
                 </div>
+
+                <div className="services-card">
+                  <FormError>{errors.type?.message}</FormError>
+                  <h4>Service Type</h4>
+                  <select
+                    style={{
+                      width: "100%",
+                      padding: "1rem",
+                      borderRadius: "5px",
+                    }}
+                    onChange={handleTypeChange}
+                    value={type}
+                  >
+                    <option value="">Select Type</option>
+                    <option value="CORE">CORE</option>
+                    <option value="MRC">MRC</option>
+                    <option value="MPDCL">MPDCL</option>
+                  </select>
+                  {/* <input type="text" {...register("type")} /> */}
+                </div>
+
+                <div className="services-card">
+                  <FormError>{errors.service?.message}</FormError>
+                  <h4>Service</h4>
+                  <input
+                    type="text"
+                    {...register("service")}
+                    onChange={(e) => {
+                      setSearch(e.target.value);
+                      setValue("service", e.target.value);
+                    }}
+                    placeholder="Search for a service"
+                  />
+                  <div
+                    style={{
+                      position: "relative",
+                      background: "white",
+                      border: "1px solid #ddd",
+                      borderRadius: "4px",
+                      maxHeight: "200px",
+                      overflowY: "auto",
+                    }}
+                  >
+                    {servicesDropdownResult?.data?.map((item) => (
+                      <div
+                        key={item.id}
+                        onClick={() => {
+                          setValue("service", item.name);
+                          setSearch(item.name);
+                        }}
+                        style={{
+                          padding: "0.5rem",
+                          borderBottom: "1px solid #eee",
+                          cursor: "pointer",
+                          backgroundColor: "#fff",
+                        }}
+                      >
+                        {item.name}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="services-card">
                   <FormError>{errors.message?.message}</FormError>
                   <h4>Request Service</h4>
