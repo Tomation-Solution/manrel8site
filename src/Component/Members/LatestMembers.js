@@ -12,6 +12,7 @@ import Subscribe from "../Subscribe/Subscribe";
 import { useQuery } from "react-query";
 import { getMembersApi } from "../../utils/api-calls2";
 import Adverts from "../Adverts/Adverts";
+import { ourMembersBannerGet } from "../../utils/csm-api-calls";
 
 function LatestMembers() {
   const { isLoading, data } = useQuery("getMembersApi", getMembersApi, {
@@ -30,6 +31,7 @@ function LatestMembers() {
   for (let i = 1; i <= Math.ceil(listOfMembers?.length / postsPerPage); i++) {
     pages.push(i);
   }
+
   //PAGINATION LOGIC
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
@@ -41,6 +43,15 @@ function LatestMembers() {
     );
     return result;
   };
+
+  const ourMembersBannerResult = useQuery(
+    "our-members-banner",
+    ourMembersBannerGet,
+    {
+      // select: (data) => data.data,
+      refetchOnWindowFocus: false,
+    }
+  );
 
   const searchResult = searchHandler();
 
@@ -63,7 +74,7 @@ function LatestMembers() {
         <NewNavBar />
 
         <NewImageBanner
-          image={backImage}
+          image={ourMembersBannerResult?.data?.banner_image || backImage}
           header={"Our Members"}
           details={["See our esteemed members across the country"]}
         />

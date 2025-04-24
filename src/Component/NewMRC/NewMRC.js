@@ -23,6 +23,7 @@ const NewMRC = () => {
     3: "#383F48",
     // 4:"#2b3513"
   };
+
   return (
     <div className="new-mrc">
       <UIProvider>
@@ -30,7 +31,7 @@ const NewMRC = () => {
         <Subscribe />
         <NewNavBar />
         <NewImageBanner
-          image={backImage}
+          image={data?.banner_image || backImage}
           header={"Manufacturers Resource Centre (MRC)"}
         />
         <div className="who-are">
