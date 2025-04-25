@@ -127,7 +127,7 @@ function Services() {
                 <h1>Core Services</h1>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: servicesBannerResult.data.core_desc,
+                    __html: servicesBannerResult.data?.core_desc,
                   }}
                 ></p>
               </div>
@@ -154,7 +154,7 @@ function Services() {
                 <h1>Manufacturers Resource Centre (MRC) Services</h1>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: servicesBannerResult.data.mrc_desc,
+                    __html: servicesBannerResult.data?.mrc_desc,
                   }}
                 ></p>
               </div>
@@ -185,7 +185,7 @@ function Services() {
                 <h1>MAN Power Development Company Limited (MPDCL).</h1>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: servicesBannerResult.data.mpdcl_desc,
+                    __html: servicesBannerResult.data?.mpdcl_desc,
                   }}
                 ></p>
               </div>
