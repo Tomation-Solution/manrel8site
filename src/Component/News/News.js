@@ -8,7 +8,6 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Footer from "../Footer/Footer";
 import Wall from "../Wall/Wall";
 import Subscribe from "../Subscribe/Subscribe";
-// import { newsdata } from "./NewsData";
 import { Link } from "react-router-dom";
 
 import Articleimage from "../../images/new-images/InsightCardIMages (1).jpg";
@@ -20,7 +19,6 @@ import { useQuery } from "react-query";
 import { eventAndMediaGet, getNews } from "../../utils/csm-api-calls";
 import Loader from "../Loader/Loader";
 import { FormError } from "../NewEvents/FormComponents";
-import { dateformatter } from "../../utils/date-formatter";
 import { useState } from "react";
 
 function News() {
@@ -99,7 +97,7 @@ function News() {
                                 <OpenInNewIcon />
                               </Link>
                             </div>
-                            <p>{dateformatter(new Date(item.created_at))}</p>
+                            {/* <p>{dateformatter(new Date(item.created_at))}</p> */}
                           </div>
                         );
                       })}

@@ -82,7 +82,9 @@ const MRCContact = () => {
       toast.info("submitting contact message");
     },
     onSuccess: () => {
-      toast.success("contact message submitted");
+      toast.success(
+        "contact message submitted.\nPlease check your email for a verification mail"
+      );
     },
     onError: () => {
       toast.error("failed to submit contact message");

@@ -71,13 +71,21 @@ const Training = () => {
               <section key={index}>
                 <h1 className="events-header">{item.group_name}</h1>
                 <div className="event-items">
-                  {item.items.map((item, index) => (
-                    <SingleTraining
-                      registerfn={trainingRegister}
-                      data={item}
-                      key={index}
-                    />
-                  ))}
+                  {item.items.length > 0 ? (
+                    item.items
+                      .slice(0, 3)
+                      .map((trainingItem, idx) => (
+                        <SingleTraining
+                          registerfn={trainingRegister}
+                          data={trainingItem}
+                          key={idx}
+                        />
+                      ))
+                  ) : (
+                    <p className="empty-message">
+                      No upcoming trainings at the moment.
+                    </p>
+                  )}
                 </div>
               </section>
             ))}

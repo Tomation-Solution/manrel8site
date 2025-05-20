@@ -21,7 +21,13 @@ import Paystack from "@paystack/inline-js";
 export const SingleTraining = ({ registerfn, data }) => {
   return (
     <div className="event-card">
-      <img src={data.image} alt="" />
+      <img
+        src={data.image}
+        style={{
+          aspectRatio: "16/7",
+        }}
+        alt=""
+      />
       <div style={{ margin: "10px" }}>
         <h2>{data.name}</h2>
         <div className="icons">
