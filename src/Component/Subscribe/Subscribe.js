@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "../../images/div-sub.png";
 import { useUIContext } from "../../Ui";
 import CloseIcon from "@mui/icons-material/Close";
@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import Loader from "../Loader/Loader";
 
 function Subscribe() {
+  const [btnText, setBtnText] = useState("Submit");
   const { subscribe, setSubscribe } = useUIContext();
   const { data } = useQuery("newsletter-ui", newsletterUIGet, {
     refetchOnWindowFocus: false,
@@ -31,9 +32,13 @@ function Subscribe() {
   const { mutate, isLoading } = useMutation(postNewLetter, {
     onMutate: () => {
       toast.info("subscribing to MAN newsletter");
+      setBtnText("subscribing...");
     },
     onSuccess: () => {
-      toast.success("subscribed to MAN newsletter");
+      toast.success(
+        "subscribed to MAN newsletter.\nPlease check your email for verification"
+      );
+      setBtnText("Subscribed Successfully");
     },
     onError: (data) => {
       if (
@@ -44,6 +49,7 @@ function Subscribe() {
       } else {
         toast.error("failed to subscribe to MAN newsletter");
       }
+      setBtnText("Submit");
     },
   });
 
@@ -67,7 +73,7 @@ function Subscribe() {
             </div>
             <div className="right">
               <div className="huo">
-                <h1>Subscribe to our Newsletter</h1>
+                <h1>Subscribe to our monthly updates</h1>
                 <form
                   style={{
                     display: "flex",
@@ -95,7 +101,7 @@ function Subscribe() {
                       {...register("email", { required: true })}
                     />
                   </div>
-                  <button>SUBMIT</button>
+                  <button>{btnText}</button>
                 </form>
               </div>
             </div>

@@ -7,8 +7,6 @@ import Wall from "../Wall/Wall";
 import Footer from "../Footer/Footer";
 
 import { Link } from "react-router-dom";
-// import { mpdclTrainings, trainingData } from "../Training/TrainingData";
-// import { eventData } from "../Events/EventData";
 import NewImageBanner from "../NewImageBanner/NewImageBanner";
 import backImage from "../../images/new-images/InsightCardIMages (5).jpg";
 import Subscribe from "../Subscribe/Subscribe";
@@ -56,9 +54,7 @@ const NewEvents = () => {
     data: trainingFetchData,
   } = useQuery("all-trainings", getTrainings, {
     refetchOnWindowFocus: false,
-    select: (data) => {
-      return groupTrainings(data.data);
-    },
+    select: (data) => groupTrainings(data.data),
   });
 
   const eventRegister = (data) => {
@@ -86,6 +82,7 @@ const NewEvents = () => {
           closefn={() => setRegisterTraining(!registerTraining)}
         />
       )}
+
       <UIProvider>
         <Subscribe />
         <NewNavBar />
@@ -97,14 +94,16 @@ const NewEvents = () => {
           ]}
         />
 
+        {/* EVENTS */}
         {eventFetching || eventLoading ? (
           <Loader loading={eventFetching || eventLoading} />
         ) : !eventError ? (
           <div className="event-container">
             <h1 className="events-header">Events</h1>
             <div className="event-items">
-              <>
-                {eventFetchData
+              {eventFetchData.filter((item) => item.is_agm === false).length >
+              0 ? (
+                eventFetchData
                   .filter((item) => item.is_agm === false)
                   .slice(0, 3)
                   .map((item) => (
@@ -113,8 +112,12 @@ const NewEvents = () => {
                       key={item.id}
                       data={item}
                     />
-                  ))}
-              </>
+                  ))
+              ) : (
+                <p className="empty-message">
+                  No upcoming events at the moment.
+                </p>
+              )}
             </div>
 
             <div className="btn-center">
@@ -127,24 +130,39 @@ const NewEvents = () => {
           <FormError>Can't Fetch Events</FormError>
         )}
 
+        {/* TRAININGS */}
         {trainingLoading || trainingFetching ? (
           <Loader loading={trainingLoading || trainingFetching} />
         ) : !trainingError ? (
           <div className="event-container">
-            {trainingFetchData.map((item, index) => (
-              <section key={index}>
-                <h1 className="events-header">{item.group_name}</h1>
-                <div className="event-items">
-                  {item.items.slice(0, 3).map((item, index) => (
-                    <SingleTraining
-                      registerfn={trainingRegister}
-                      data={item}
-                      key={index}
-                    />
-                  ))}
-                </div>
-              </section>
-            ))}
+            {trainingFetchData.length > 0 ? (
+              trainingFetchData.map((item, index) => (
+                <section key={index}>
+                  <h1 className="events-header">{item.group_name}</h1>
+                  <div className="event-items">
+                    {item.items.length > 0 ? (
+                      item.items
+                        .slice(0, 3)
+                        .map((trainingItem, idx) => (
+                          <SingleTraining
+                            registerfn={trainingRegister}
+                            data={trainingItem}
+                            key={idx}
+                          />
+                        ))
+                    ) : (
+                      <p className="empty-message">
+                        No upcoming trainings at the moment.
+                      </p>
+                    )}
+                  </div>
+                </section>
+              ))
+            ) : (
+              <p className="empty-message">
+                No upcoming trainings at the moment.
+              </p>
+            )}
 
             <div className="btn-center">
               <Link to="/training">
