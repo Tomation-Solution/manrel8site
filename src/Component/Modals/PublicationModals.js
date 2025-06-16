@@ -104,8 +104,8 @@ export const PublicationPayModal = ({ data, closefn }) => {
 
     if (getValues("paymentGateWay") === "interswitch") {
       window.webpayCheckout({
-        merchant_code: "MX6072",
-        pay_item_id: "9405967",
+        merchant_code: process.env.REACT_APP_INTERSWITCH_MERCHANT_CODE,
+        pay_item_id: process.env.REACT_APP_INTERSWITCH_PAY_ITEM_ID,
         txn_ref: `txn_${Date.now()}_${Math.floor(Math.random() * 1000000)}`,
         site_redirect_url: window.location.origin,
         amount: Number(publicationData.price) * 100,
@@ -118,7 +118,7 @@ export const PublicationPayModal = ({ data, closefn }) => {
             payment_response: response,
           });
         },
-        mode: "TEST",
+        mode: process.env.REACT_APP_INTERSWITCH_MODE || "TEST",
       });
       return;
     }
@@ -230,7 +230,26 @@ export const SinglePublication = ({ registerfn, data }) => {
         />
       )}
       <div className="event-card">
-        <img src={data.image} alt="" />
+        <img
+          src={data.image}
+          alt=""
+          style={{
+            aspectRatio: "16/9",
+            width: "100%",
+            objectFit: "cover",
+            minWidth: "100%",
+            objectPosition: "center",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            transition: "transform 0.3s ease",
+            cursor: "pointer",
+            ":hover": {
+              transform: "scale(1.05)",
+            },
+            ":active": {
+              transform: "scale(0.95)",
+            },
+          }}
+        />
         <div style={{ margin: "10px" }}>
           <h2>{data.name}</h2>
           <div className="icons">

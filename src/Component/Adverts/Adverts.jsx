@@ -15,7 +15,7 @@ function Adverts({ image, text }) {
     return <EmptyState header={"Loading data"} />;
   }
 
-  if (data.length <= 0) {
+  if (data?.length <= 0) {
     return <EmptyState header={"Oops there seems to be nothing here"} />;
   }
 

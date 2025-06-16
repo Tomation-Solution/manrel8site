@@ -82,14 +82,34 @@ const Publications = () => {
               <div className="news_main">
                 <div className="cover">
                   <div className="right">
-                    <p className="view-paid">
+                    <div className="view-paid">
                       <Link
                         to={"/paid-publications"}
-                        style={{ color: "#2b3513", textDecoration: "none" }}
+                        style={{
+                          color: "#2b3513",
+                          textDecoration: "none",
+                          display: "inline-block",
+                          padding: "12px 20px",
+                          border: "2px solid #2b3513",
+                          borderRadius: "5px",
+                          fontWeight: "bold",
+                          fontSize: "16px",
+                          transition: "all 0.3s ease",
+                          backgroundColor: "transparent",
+                          marginBottom: "20px",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.backgroundColor = "#2b3513";
+                          e.target.style.color = "white";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.backgroundColor = "transparent";
+                          e.target.style.color = "#2b3513";
+                        }}
                       >
-                        Click to view paid publications
+                        📄 View Paid Publications →
                       </Link>
-                    </p>
+                    </div>
                     <div className="top">
                       <h2>Publications</h2>
                     </div>
@@ -184,7 +204,7 @@ const Publications = () => {
                     <br />
                     <div>
                       <div className="top">
-                        <h4>MAN News Magazine</h4>
+                        <h4>MAN News Magazine</h4>
                       </div>
                     </div> */}
                   </div>
