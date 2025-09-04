@@ -7,8 +7,8 @@ const TOKEN = user_data?.token;
 // const BASE_URL = `https://rel8corporate.watchdoglogisticsng.com/tenant/man/`;
 const BASE_URL = `http://localhost:8001/tenant/man/`;
 
-const CMS_BASE_URL = "https://api.manufacturersnigeria.org/api";
-// const CMS_BASE_URL = `http://localhost:8000/api`;
+// const CMS_BASE_URL = "https://api.manufacturersnigeria.org/api";
+const CMS_BASE_URL = `http://localhost:8000/api`;
 
 const ORIGIN = window.location.origin;
 

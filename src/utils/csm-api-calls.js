@@ -297,6 +297,16 @@ export const getAllServicesPVC = async (params) => {
   }
 };
 
+//FOOTER CONTENT
+export const getFooterContentPublic = async () => {
+  try {
+    const res = await publicCmsRequest.get(`/homepage/footer/content/`);
+    return res.data;
+  } catch (e) {
+    throw new AxiosError(e);
+  }
+};
+
 export const getSlidersApi = async () => {
   const resp = await publicCmsRequest.get(
     "/homepage/add-slider/get_slider/?page_size=20"
